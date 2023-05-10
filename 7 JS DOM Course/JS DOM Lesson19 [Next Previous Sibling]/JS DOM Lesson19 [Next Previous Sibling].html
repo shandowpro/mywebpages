@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS DOM Lesson19 [Next Previous Sibling] </title>
+    <link rel="stylesheet" href="JS DOM Lesson19 [Next Previous Sibling].css" media="all">
+    <style>
+        .hidden {
+            visibility: hidden;
+        }
+
+    </style>
+    
+    <script>        
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main" >
+        JS DOM Lesson19 [Next Previous Sibling]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS DOM main Topics">
+                JS DOM Lesson19 [Next Previous Sibling/ElementSibling]  Main Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to JS DOM [Next Previous Sibling ] Concept">
+                JS DOM Lesson19 [Next Previous Sibling/ElementSibling]  Concept </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to JS DOM [Next Previous Sibling ] Importance & Benefits">
+                JS DOM Lesson19 [Next Previous Sibling/ElementSibling]  Importance & Benefits </a> </li>
+
+            <li> <a href=#JSDOMSyntx title="Go to JS DOM [Next Previous Sibling ] Syntax">
+                JS DOM Lesson19 [Next Previous Sibling/ElementSibling] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to JS DOM [Next Previous Sibling ] Practical Applications">
+                JS DOM Lesson19 [Next Previous Sibling/ElementSibling]  Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS DOM Course <span> JS DOM [Next Previous Sibling/ElementSibling]  </span>
+    </main>
+
+    
+    <div class="Post" id=post>
+        <Section  id="MainC" class="MainC">
+
+            <header>
+                JS DOM [Next Previous Sibling/ElementSibling] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS DOM [Next Previous Sibling/ElementSibling] Concept. </li>                    
+                    
+                    <li> JS DOM [Next Previous Sibling/ElementSibling]  Importance & Benefits. </li>
+
+                    <li> JS DOM [Next Previous Sibling/ElementSibling] Syntax . </li>
+                    
+                    <li> JS DOM [Next Previous Sibling/ElementSibling] Practical Application. </li>
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                
+                <ul>                                                                                                        
+                    <li> [Next Previous Sibling/Element Sibling] : </li>                    
+                        <ol type =A>                                                    
+                            <li>  [Next Node Sibling] => {ElementVar.nextSibling} </li>
+                            <li>  [Next Element Sibling] => {ElementVar.nextElementtSibling} </li>
+                            <li>  [Previous Node Sibling] => {ElementVar.previousSibling} </li>
+                            <li>  [Previous Element Sibling] => {ElementVar.previousElementtSibling} </li>
+                        </ol>
+                </ul>
+                                    
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> JS DOM [Next Previous Sibling]  Concept: </h3>
+            </header>
+                                                        
+            <p> =&gt; JS HTML DOM [(next\previous Sibling) & (next\previous Element Sibling) ] of a Element inside a Parent => will help to reach to certain Node/element inside a certain parent  .
+            
+            <p> =&gt; JS HTML DOM [(next\previous Sibling) & (next\previous Element Sibling) ] of a Element inside a Parent => will help to set certain : text Content|| attribute || property to specfied child Node or Element.                                            
+                                                                                                                                                                                            
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> JS DOM [Next Previous Sibling] Importance & Benefits : </h3>
+            </header>
+
+            <p> JS DOM [Elements Node  Name Value Type] gives us the Following Features : <br>
+                <ul>                                                 
+                    <li> Providing another critical controing Tool of Element's Parent [Nodes || Element]</li>        
+                    
+                    <li> Providing a specific accessibility to the parent Element or Node </li>        
+                    
+                    <li> Can be Combined with Event Function or other programming function </li>                                                
+
+                </ul>
+                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+
+
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> JS DOM [Next Previous Sibling] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS HTML DOM [Next Previous Sibling} by {several methods} as following Conceptual Syntax as following : </p>
+            
+            <div id="Code" class="Code">
+                
+                [*] {HTML file} (parent element) example: <br>
+                
+                <span class= one></span> &lt;div id='main' class= "main"&gt; <br>                     
+
+                    <span class= two></span> &lt;p id ='idP' class ='classP'&gt; This is  a Paragraph &lt;/p&gt; <br>                     
+                    
+                <span class= one></span> &lt;/div&gt; <br> <br>
+                
+
+                <span class= one></span> &lt;div id='newId' class= "newClass"&gt; <br>                     
+                                    
+                <span class= one></span> &lt;/div&gt; <br>
+                    
+                //=========================================================== <br> <br>                    
+                                
+                [A]// {JS file} Accessing a Element's Sibling Nodes/Element with in it's Parent's {by [(4) different Methods] } : <br>
+                    
+                    [1] Accessing Element's (Next/Previous) Element & Node {by Following methods} with using it's index :<br>                                                
+                    1] Reaching the Element's Next + Previous Node <br>
+                        <span class= one></span> myMianElem = document.getElementById('main').childNodes[x].nextSibling <br>
+                        <span class= one></span> myMianElem = document.getElementById('main').childNodes[x].prevoiusSibling <br>
+                    
+                    2] Reaching the Element's Next + Prevoius Node <br>
+                        <span class= one></span> myMianElem = document.getElementById('main').childNodes[x].nextElementSibling <br>
+                        <span class= one></span> myMianElem = document.getElementById('main').childNodes[x].prevoiusElementSibling <br>
+                                                                    
+                //=========================================================== <br> <br>                                                                    
+                //=========================================================== <br> <br>                                                        
+                //=========================================================== <br> <br>                                                        
+            
+            <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMPract" id="JSDOMPract">
+            <header>
+                <h3> JS DOM [Next Previous Sibling]  General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here one Major Application will include following main [2 paths] of the :  &gt;&gt; <br>
+                
+                <ul>                                    
+                    <li> {Path 1} => [Next/Prevoius Sibling Node] =>  including Following (2) Main Methods :  <br>
+                        <ol>
+                            <li> {Method 1}-[Next Sibling Node ] => {elem.nextSibling} 
+                            <li> {Method 2}-[Previous Sibling Node ] => {elem.PrevoiusSibling}
+                        </ol>
+                    </li0>
+                
+                    <li> {Path 2} => [Next/Prevoius Sibling Element] => including Following (2) Main Methods :  <br>
+                        <ol>
+                            <li> {Method 1}-[Next Sibling Node ] => {elem.nextElementSibling}
+                            <li> {Method 2}-[Previous Sibling Node ] => {elem.PreviousElementSibling}
+                        </ol>
+                    </li>                
+                    
+                </ul>
+                
+            <br>            
+
+            
+            <section id=sec class=secClass>
+                First Text 
+                <h2 id="elem1"> This is heading 2 </h2>
+                Second Text
+                <div id="elem2"> This is Main div </div>
+                Third Text
+                <p id="elem3"> This is child paragarph </p>
+                Fourth Text                
+            </section> <br>
+ 
+
+            <!-- <div id=txtareaTest > 
+                Here To Display your Result of [Parent Element] [Parent Node]
+            </div><br>                                  -->
+            
+            <textarea id=txtarea class=txtarea> </textarea><br>                                  
+
+            
+            <script  src="NextPreviousSibling.js">
+            </script>
+
+            <button class=btn onclick="test()"> Click to Start JS DOM [ Next Previous Sibling ]  Application    
+            </button> 
+                                    
+            <br>    
+                                          
+        <hr>
+                <button id=btn class="btn" onclick="display()">Display JS Code</button>
+                
+                <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Testing JS DOM [Parent Element]  Application  <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                                                        
+                        
+                        <span class=one></span> &lt;script src=".js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JS DOM [Parent Element]  */ <br>                    
+                        template-string-converter.enable; <br><br>
+                                                
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div>
+                
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+        
+        <section class="VideoSection">
+            <h3> Lesson 19 Video File:</h3>
+
+           <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+            preload="yes"
+          src="https://www.youtube.com/embed/watch?v=p4KX6LJ3vBo&list=PLDoPjvoNmBAxx97QDMOCpzxbu1ZHJ4i7i&index=19&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe> 
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\HTML JS Dom\19 JS HTML Dom Elements  Next Previous Sibling.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS DOM Lesson19 [Next Previous Sibling]  ");
+    </script>
+    
+
+</body>
+
+</html>       

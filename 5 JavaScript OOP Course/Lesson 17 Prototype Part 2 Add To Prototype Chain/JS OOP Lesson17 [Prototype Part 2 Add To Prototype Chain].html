@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS OOP Lesson 17 [Prototype {Part 2} Add to Prototype Chain] </title>
+    <link rel="stylesheet" href="JS OOP Lesson17 [Prototype Part 2 Add To Prototype Chain].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JS OOP Lesson 17 [Add To Prototype Chain {Part 2}]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS OOP main Topics">
+                JS OOP Lesson17 [Add To Prototype Chain ] Main Topics </a> </li>
+
+            <li> <a href=#JSOOPCon title="Go to JS OOP [Add To Prototype Chain ] Concept">
+                JS OOP Lesson17 [Add To Prototype Chain ] Concept </a> </li>
+
+            <li> <a href=#JSOOPImp title="Go to JS OOP [Add To Prototype Chain ] Importance & Benefits">
+                JS OOP Lesson17 [Add To Prototype Chain ] Importance & Benefits </a> </li>
+
+            <li> <a href=#JSOOPSyntx title="Go to JS OOP [Add To Prototype Chain ] Syntax">
+                JS OOP Lesson17 [Add To Prototype Chain ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSOOPPract title="Go to JS OOP [Add To Prototype Chain ] Practical Applications">
+                JS OOP Lesson17 [Add To Prototype Chain ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS OOP Course <span> JS OOP Lesson 17 [Add To Prototype Chain ] {Part 2}  </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                JS OOP [Add To Prototype Chain ] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS OOP [Add To Prototype Chain ] Concept. </li>
+
+                    <li> JS OOP [Add To Prototype Chain ] Importance & Benefits. </li>
+
+                    <li> JS OOP [Add To Prototype Chain ] Syntax [Define + Access]. </li>
+
+                    <li> JS OOP [Add To Prototype Chain ] Practical Application. </li>
+                </ol>
+                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPCon" id="JSOOPCon">
+            <header>
+                <h3> JS OOP [Add To Prototype Chain ] Concept: </h3>
+            </header>
+            
+            <p> =&gt; JS OOP [Add To Prototype Chain ]: This lessson will provide the Method of adding methods and Properites to the Constructor function's Protptype to be accesed by the constructor function and all it's Extracted functions .
+            
+            <p> =&gt; JS OOP [Add To Prototype Chain ]: The Prototype Will be Generated autumatically once the constructor functions (of any type) is being created.
+            
+            <p> =&gt; JS OOP [Add To Prototype Chain ]: The Prototype is also being created to any Variable or Object (to it's Built in Constructor Function).
+            
+            <p> =&gt; JS OOP [Add To Prototype Chain ]: We can Add new Methods and Properties to the Prototype of the Constructor Function.            
+                        
+            <p> =&gt; JS OOP [Add To Prototype Chain ]: The Prototype can Access the new added Methods and Properties (as it in the Extracted Objects) .
+                       
+            <p> =&gt; JS OOP [Add To Prototype Chain ]: The (Prototype / Extracted Object / Constructor Function) is reading Any Defined Property or Method inside the Constructor Function upon certain Mechanism [Chain] as following:
+                
+                <ol>
+                    <li> [ Main Constructor Function ] =&lt; </li>                        
+                        <p> Reading propteies & Methods of the Main Constructor Function is the First thing the Prototype/Object is reading, if it has been found , it will be access  </p>
+                    
+                    <li> [ Main Constructor Function's Prototype] =&lt; </li>                    
+                        </p> Reading the Propeties and Methods of First Prototype in the Constructor Function, if the Prototype/Object has been found , it will be access </p>
+                
+                    <li> [Built in Constructor Function Prototype] =&lt; </li>                    
+                        </p> Reading the Propeties and Methods of Next Prototype in the Constructor Function, if the Prototype/Object has been found , it will be access </p>
+                </ol>                                                 
+        
+            <p> =&gt; JS OOP [Add To Prototype Chain ]: If any Method/Property has been added to the Prototype of the Built in Constructor Function , it will be accessed by any new same Data type Variable / Object will be defined (as it's the Built in Constructor Function)</p>
+        
+                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSOOPImp" id="JSOOPImp">
+            <header>
+                <h3> JS OOP [Add To Prototype Chain ] Importance & Benefits: </h3>
+            </header>
+
+            <p> [Add To Prototype Chain ] gives us the Following Features : <br>
+                <ul>
+                    <li> More advanced tools to extract objects from Funcitons Wether it's type was [Constructor Function , Normal Function, Specified Data type Built In Constructor function ]. </li>                    
+                    <li> Ability to inherate all certain Function's properites and Methods = &lt; as an Automated generated Object (with all Inhratance abitlies). </li>                    
+                    <li> Limitless number of automated Generated Chained Prototypes which is being created to any Function / Variable's Built in Constructor Function (with all the constructor Function Properites and mehtods). </li>                    
+                    <li> The Ability to Full Controling of the Prototypes by : </li>                    
+                    <ul>
+                        <li> Adding new Properites and Methods </li>
+                        <li> Deleting new Properites and Methods </li>
+                        <li> Accessing to any Property or Method (In the Main Constructor Function - in one of it's Prototype ) </li>
+                    </ul>
+                </ul>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPSyntx" id="JSOOPSyntx">
+            <header>
+                <h3> JS OOP [Add To Prototype Chain ] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS OOP Defining Object by [Add To Prototype Chain ] Conceptual Examples as following : </p>
+            
+            <div id="Code" class="Code">
+            // A) Main Syntax adding new (Property or Method) to the Prototype :<br><br>
+            <span class= one></span> ConstructorFunctionName.prototype.NewMethod/PropertyName = "value" / function() {} <br>            
+            //=========================================================== <br> <br>                    
+            //=========================================================== <br> <br>                    
+            
+            // B) Conceptual Example Syntax of adding new (Property or Method) to the Prototype :<br><br>
+                
+                <span class=one></span> // (a) Defining Conceptual Main Constructor function : <br>                                        
+
+                    <span class=two></span> function ConstFuncName(par1) { <br>
+                        <span class=three></span>this.par1= par1; <br>
+                        <span class=three></span>this.Method1 = () => {<br>
+                            <span class=four></span>return 'par1'; <br>
+                        <span class=three></span> } <br>                                                                         
+                    <span class=two></span> } <br> <br>                 
+            
+                <span class = one></span>//=========================================================== <br> <br>                    
+                
+            <span class=one></span> // (b) Adding new [Property] to a Prototype of a Constructor Function : <br> <br>                                        
+                <span class= two></span> ConstructorFunctionName.prototype.NewPropName = 'Value'; <br>
+            <span class = one></span>//=========================================================== <br> <br>                    
+                
+            <span class=one></span> // (c) Adding new [Method] to a Prototype of a Constructor Function : <br> <br>                                        
+                <span class= two></span> ConstructorFunctionName.prototype.NewMethName = function() { <br>
+                    <span class= three></span>return 'value ${this.par1}'; <br>
+                <span class= two></span>}; <br>
+            <span class = one></span>//=========================================================== <br> <br>                    
+                        
+            <span class=one></span> // (d) Accessing & Printing new [Method] & [Property] added to Constructor Function's Prototype : <br> <br>                                        
+                     
+                <span class = two></span>// (*) Accessing through the main Constructor Function :  <br><br>
+                        
+                <span class = two></span>// d1) Accessing the New Method : <br>   
+                    <span class= three></span> console.log(ConstructorFunctionName.NewMethName()); <br>                                                    
+                <span class = two></span>//=========================================================== <br> <br>                    
+                    
+                <span class = two></span>// d2) Accessing the New Property : <br>   
+                    <span class= three></span> console.log(ConstructorFunctionName.NewPropName); <br>                                                    
+                <span class = two></span>//=========================================================== <br> 
+                <span class = two></span>//=========================================================== <br> <br>                    
+                        
+                <span class = two></span>// (*) Accessing through the main Constructor Function's Prototype :  <br><br>
+                        
+                <span class = two></span>// d1) Accessing the New Method : <br>   
+                    <span class= three></span> console.log(ConstructorFunctionName.prototype.NewMethName()); <br>                                                    
+                <span class = two></span>//=========================================================== <br> <br>                    
+                    
+                <span class = two></span>// d2) Accessing the New Property : <br>   
+                    <span class= three></span> console.log(ConstructorFunctionName.prototype.NewPropName); <br>                                                    
+                <span class = two></span>//=========================================================== <br> <br>                    
+                        
+            <span class = one></span>//=========================================================== <br> <br>                    
+            <span class = one></span>//=========================================================== <br> <br>                    
+                                        
+            <span class=one></span> // (e) Defining Extracted Object form the main Conceptual Main Constructor function + Accessing the new Properties and Methods through it's Prototype: <br> <br>                                        
+            
+                <span class = two></span>//(e1) Defining the new Extracted Object : <br>
+                    <span class=three></span> const newObj = new ConstFuncName();<br>
+                <span class = two></span>//=========================================================== <br> <br>
+                
+                <span class = two></span>//(e2) Accessing the new Properties and Methods through the new Extracted Object: <br>
+                    
+                <span class = two></span> //(*) Accessing the new Properties and Methods through the Main Extracted Object :<br>
+                    <span class=three></span> console.log(newObj.NewPropName);<br>
+                    <span class=three></span> console.log(newObj.NewMethName);<br>
+            <span class = one></span>//=========================================================== <br> <br>                    
+                        
+                <span class = two></span> //(*) Accessing the new Properties and Methods through the Prototype of Extracted Object :<br>
+                    <span class=three></span> console.log(newObj.prototype.NewPropName);<br>
+                    <span class=three></span> console.log(newObj.prototype.NewMethName);<br>
+            <span class = one></span>//=========================================================== <br> <br>                    
+                                        
+            <span class = one></span>//=========================================================== <br> <br>                    
+                                                                
+            //=========================================================== <br> <br>                    
+            //=========================================================== <br> <br>                                                        
+            <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPPract" id="JSOOPPract">
+            <header>
+                <h3> JS OOP [Prototype Function] General Practical Applications : </h3>
+            </header>
+
+            
+            <p> =&gt; Here one Major Application will include following Function/Tasks :  &gt;&gt; <br>
+
+                <ol>                    
+                    <li> Creating Default Main Constructor Funciton [Assumed function] and its Prototype  </li> 
+                    
+                    <li> Creaing new Properties (Names + Values) by two Modes [Single Property , Multiple Properties] </li> 
+                    
+                    <li> Creaing new Methods (Assumed Methods) by two Modes [Single Property , Multiple Properties] </li> 
+                    
+                    <li> Adding new Properties to the Main Default Prototype of main Constructor Function.</li> 
+                    
+                    <li> Adding new Methods to the Main Default Prototype of main Constructor Function.</li> 
+                                            
+                </ol>                
+
+            <br>
+
+            <textarea id=txtarea class=txtarea> </textarea><br>
+                        
+            <button class=btn onclick="test()"> Click to Start First Application [Testing Add To Prototype Chain ]    
+            </button> 
+            
+            <br>
+
+            <textarea id=txtarea1 class=txtarea1> </textarea><br>
+                        
+            <button class=btn onclick="Display1()"> Click to Display JS Code of [Testing Add To Prototype Chain ] Application    
+            </button> 
+
+            <script src="JSOOPPrototypeAdd.js">
+            </script>
+                          
+            <br> <hr> <br>
+            <!--  ==================================================================================== -->
+            
+            <button class=btn onclick="testPro()"> Click to Start Second Application [Testing]  </button> 
+
+            <textarea id=txtarea2 class=txtarea2> </textarea><br>
+                        
+            <button class=btn onclick="Display2()"> Click to Display JS Code of [Testing] Application    
+            </button> 
+                        
+            <script src="testPrototypeAdd.js">
+            </script>
+                
+            <br>    
+                                          
+        <hr>
+                
+        <!-- <div class=JSOOPObjConstTraining >                                        
+            
+            <code>
+                
+                // HTML Codes: <br>
+                <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                <span class=one></span> &lt;/textarea&gt; <br><br>
+                
+                <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                    <span class=two></span> Click to Start [Constructor function + One Exctracted object - Testing <br>
+                        <span class=three></span> (Additional Internal Functions)] Application<br>         
+                <span class=one></span> &lt;/button&gt; <br><br>                            
+                
+                <span class=one></span> &lt;button class="btn" onclick="testPro()"&gt;<br>                           
+                    <span class=two></span> Click to Start [Constructor function + Multiple Exctracted objects - Testing <br>
+                        <span class=three></span> Additional Internal Functions)] Application <br>         
+                <span class=one></span> &lt;/button&gt; <br><br>                            
+                
+                <span class=one></span> &lt;script src="JSOOPPrototypeAdd.js"&gt;<br>                            
+                <span class=one></span> &lt;/script&gt; <br><br>
+                
+                =======================================================<br><br>
+                
+                /* global document, alert, prompt */ <br>                    
+                /* JSOOP [Add To Prototype Chain {Part 2}] */ <br>                    
+                template-string-converter.enable; <br>
+
+                function test() { <br>
+                    
+                    <span class=one></span>var a = prompt("Welcome to [Prototype-Add to Chain] Application <br>
+                        <span class=two></span>\n Press (1) to start the application \n Press any other key to Exit...");<br>
+
+                    <span class=one></span>if (a != "1") { <br><br>
+                        <span class=two></span>alert("Good Bye!"); <br>
+                    
+                    <span class=one></span>} else { <br><br>
+                        
+                        <span class=two></span>do {<br><br>
+                            
+                            <span class=three></span>alert("Welcome to [Prototype Add to Chain] Application ..."); <br>             
+                                                                
+                            <span class=three></span>function constFunc(name) {  <br><br>
+                                <span class=four></span>this.name = name;  <br>
+                                <span class=four></span>this.welcome =  function() { <br>
+                                    <span class=five></span>return `Welcome ${this.name}`;<br>
+                                <span class=four></span> } <br>
+                            <span class=three></span>} <br> <br>
+            
+                            <span class=three></span>var strAll = ""; <br>
+
+                            <span class=three></span>var uName = prompt("Enter Value of the default Parameter (Name) of Constructor Function:");  <br>
+                            
+                            <span class=three></span>var nObj = new constFunc(uName); <br>
+
+                            <span class=three></span>a0 = prompt("Press (1) to Display main Constructor Function + Extracted Object\n <br>
+                                <span class=four></span>Press (2) to display the Prototype of Constructor Function \n <br>
+                                <span class=four></span> (3) for Adding new Properties to the main Constructor Function \n <br>
+                                <span class=four></span>Press (4) to add new Methods to Main Contructor Function\n<br>
+                                    <span class=five></span> Press any other key to Exit..."); <br><br>
+                            
+                            <span class=three></span>if (a0 == "1") { <br><br>               
+        
+                                <span class=four></span>alert("The [Main Default Constructor Function] as following ... "); <br> <br>                
+                                <span class=four></span>alert(constFunc);  <br> <br>
+        
+                                <span class=four></span>console.log("The [Main Default Constructor Function] as following ... "); <br> <br>
+                                <span class=four></span>console.log(constFunc);<br> <br>
+
+                                <span class=four></span>alert("The [Main Default Extracted <br>
+                                    <span class=five></span> Object of the Constructor Function] as following ... "); <br><br>                                                        
+                                
+                                <span class=four></span>alert(nObj);<br> <br>
+        
+                                <span class=four></span>console.log("The [Main Default Extracted Object of the Constructor Function]<br> 
+                                    <span class=five></span>as following ... "); <br> <br>
+
+                                <span class=four></span>console.log(nObj);<br> <br>
+        
+                            <span class=three></span>} else if (a0 == "2"){ <br><br>
+
+                                <span class=four></span>alert("The [Main Prototype of the Default Constructor Function] as following:"); <br>                
+                                <span class=four></span>alert(constFunc.prototype); <br> <br>
+
+                                <span class=four></span>console.log("The [Main Prototype of the Default Constructor Function] <br>
+                                    <span class=five></span> as following..."); <br> <br>
+                                
+                                <span class=four></span>console.log(constFunc.prototype);<br>
+                                <span class=four></span>console.log("======================================="); <br> <br>                                               
+
+                            <span class=three></span>} else if (a0 == "3"){ <br><br>
+
+                                <span class=four></span>alert("Welcome to [Adding new Propreties] to Prototype..."); <br> <br>
+                                
+                                <span class=four></span>a3 = prompt("Press (1) to [add Single Property] \n <br>
+                                    <span class=five></span>Press (2) to [add Multiple Properties]....  ");<br> <br>                
+
+                                <span class=four></span>switch (a3) { <br><br>
+
+                                    <span class=five></span>case "1" : <br><br>
+            
+                                        <span class=six></span>do { <br>                            
+                
+                                            <span class=seven></span>var propName = prompt("Enter the New Property Name to <br>
+                                                <span class=eight></span>Add to the Prototype of the Main Constructor Function:"), <br><br>
+                                                    
+                                            <span class=seven></span>propValue = prompt("Enter the New Property's Value"); <br> <br>
+                                            
+                                            <span class=seven></span>constFunc.prototype[propName] = propValue; <br><br>
+                    
+                                            <span class=seven></span>alert(`The [Pototype] of the consturctor Function after <br>
+                                                <span class=eight></span>adding new Property [${propName}] as Following :`); <br> <br>
+                                            
+                                            <span class=seven></span>alert(constFunc.prototype); <br> <br>
+                
+                                            <span class=seven></span>console.log(`The [Pototype of the consturctor Function] after <br>
+                                                <span class=eight></span>adding new Property [${propName}] as Following :`); <br><br>
+                
+                                            <span class=seven></span>console.log(constFunc.prototype); <br>
+                                            <span class=seven></span>console.log("======================================="); <br><br>
+            
+                                            <span class=seven></span>alert(`The [Main consturctor Function] after adding new<br>
+                                                <span class=eight></span> Property [${propName}] to the Prototype as Following :'); <br> <br>
+                                            
+                                            <span class=seven></span>alert(constFunc); <br> <br>
+            
+                                            <span class=seven></span>console.log(`The [Main consturctor Function] after adding <br>
+                                                <span class=eight></span> new Property [${propName}] to the Prototype as Following :'); <br><br>
+
+                                            <span class=seven></span>console.log(constFunc); <br>
+                                            <span class=seven></span>console.log("=======================================" ); <br> <br>
+                
+                                            <span class=seven></span>alert(`The [Main Default Extracted Object] of the<br>
+                                                <span class=eight></span>  Constructor Function After Adding new Property [${propName}] <br>
+                                                <span class=eight></span> to the Prototype as Following :`); <br> <br>
+                                            
+                                            <span class=seven></span>alert(nObj); <br> <br>
+
+                                            <span class=seven></span>console.log(`The [Main Default Extracted Object] of the <br>
+                                                <span class=eight></span> Constructor Function After Adding new Property <br>
+                                                <span class=eight></span>[${propName}] to the Prototype as Following :`); <br> <br>
+                                            
+                                            <span class=seven></span>console.log(nObj); <br>                                                         
+                                            <span class=seven></span>console.log("=======================================" ); <br> <br>                                             
+
+                                            <span class=seven></span>var z0 = prompt("Press (1) to [Add new Property] to the Prototype <br>
+                                                <span class=eight></span> of the Main Constructor Function \n <br>
+                                                <span class=eight></span> or Press any other key to Exit"); <br><br>
+                                        
+                                        <span class=six></span> } while (z0 == "1"); <br> <br>
+                                    
+                                        <span class=six></span>break; <br> <br>
+
+                                    <span class=five></span>case "2" : <br> <br>
+                                    
+                                        <span class=six></span>do { <br> <br>                              
+                
+                                            <span class=seven></span>var propNames = [], <br>
+                                            <span class=seven></span>propValues = [], <br>
+                                            <span class=seven></span>count = parseInt(prompt("Enter Number of Properties to add to the<br>
+                                                <span class=eight></span> Prototype :")); <br> <br>
+
+                                            <span class=seven></span>for (i= 0; i &lt; count; i++) {  <br> <br>
+
+                                                <span class=eight></span>propNames[i] = prompt("Enter new Property name Number " + (i+1) + <br>
+                                                    <span class=nine></span> " :"); <br><br>
+                                                
+                                                <span class=eight></span>propValues[i] = prompt("Enter the Value of new Property [" + <br>
+                                                    <span class=nine></span> propNames[i] + "] Number " + (i+1) + " :"); <br> <br>
+                    
+                                                <span class=eight></span> constFunc.prototype[propNames[i]] = propValues[i]; <br><br>
+                                                
+                                                <span class=eight></span> strAll += "New Property Number " + (i+1) + " as following:\n [" <br>
+                                                    <span class=nine></span>  + propNames[i] + "] : \"" + propValues[i] + <br>
+                                                    <span class=nine></span> "\"\n -------------------------------\n"; <br> <br>
+                                                    
+                                            <span class=seven></span> } <br> <br>
+
+                                            <span class=seven></span>alert("All New Properties as following :"); <br>
+                                            <span class=seven></span>alert(strAll); <br> <br>
+                                            
+                                            <span class=seven></span>console.log("All New Properties as following :"); <br>
+                                            <span class=seven></span>console.log(strAll + "\n =======================================");<br> <br>
+
+                                            <span class=seven></span>alert("Your [Prototype] after adding all New properties as following:"); <br>
+                                            <span class=seven></span>alert(constFunc.prototype); <br> <br>                            
+                
+                                            <span class=seven></span>console.log("Your Prototype after adding all New properties <br>
+                                                <span class=eight></span> as following:"); <br> <br>                            
+                                        
+                                            <span class=seven></span>console.log(constFunc.prototype); <br>
+                                            <span class=seven></span>console.log(" ========================================="); <br>  <br>
+                                            
+                                            <span class=seven></span> alert("Your [Main Constructor Function] after adding all New properties <br>
+                                                <span class=eight></span>as following:");<br> <br>
+                                            
+                                            <span class=seven></span>alert(constFunc); <br> <br>
+                                        
+                                            <span class=seven></span> console.log("Your [Main Constructor Function] after adding all  <br>
+                                                <span class=eight></span>New properties as following:"); <br> <br>
+
+                                            <span class=seven></span>console.log(constFunc);<br>
+                                            <span class=seven></span>console.log("========================================="); <br><br>
+                                            
+                                            <span class=seven></span> alert("The [Main Default Extracted Object] of the Constructor Function <br>
+                                                <span class=eight></span> After Adding new Property to Prototype as following ... "); <br> <br>                
+                                            
+                                            <span class=seven></span> alert(nObj); <br><br>
+                
+                                            <span class=seven></span>console.log("The [Main Default Extracted Object] of the <br>
+                                                <span class=eight></span> Constructor Function Adding new Property to Prototype <br>
+                                                <span class=eight></span> as following ... "); <br><br>
+                
+                                            <span class=seven></span>console.log(nObj); <br> <br>
+
+                                            <span class=seven></span>var z00 = prompt("Press (1) to [Add new Properties] to the Prototype <br> 
+                                                <span class=eight></span> of the Main Constructor Function \n <br>
+                                                <span class=eight></span> of the Mainor Press any other key to Exit ..."); <br><br>
+
+                                        <span class=five></span>} while (z00 == "1"); <br><br>
+                                        
+                                        <span class=five></span> break; <br><br>
+        
+                                    <span class=four></span>default: <br>
+                                        <span class=five></span>alert("Error Entry !"); <br>
+                                        <span class=five></span>break; <br>
+
+                                <span class=three></span>} <br> <br>
+
+                            <span class=two></span>} else if (a0 == "4"){ <br><br>
+
+                                <span class=three></span>do {  <br><br>
+
+                                    <span class=four></span> alert("Welcome to [Adding new Methods] to Prototype..."); <br><br>
+
+                                    <span class=four></span> alert("There will be (3) Default Methods to add to Prototype of <br>
+                                        <span class=five></span> Constructor function as Follwing:\n<br>
+                                        <span class=five></span> (1) Full Name Method \n (2) Age Method \n <br>
+                                        <span class=five></span> (3) Full Address Method "); <br> <br>
+
+                                    <span class=four></span> a4 = prompt("Press (1) to add Single Method \n <br>
+                                        <span class=five></span>Press (2) to add Multiple Methods...."); <br><br>                
+
+                                    <span class=four></span>if (a4 == "1") { <br><br>
+            
+                                        <span class=five></span>alert("Welcome to [Add new single Method] to the Prototype of<br>
+                                            <span class=six></span> Constructor Function..."); <br> <br>
+            
+                                        <span class=five></span>mthd = prompt("Press (1) to Add Full Name Method \n <br>
+                                            <span class=six></span> Press (2) Age Method \n Press (3) Full Address Method"); <br> <br>
+
+                                        <span class=five></span>switch (mthd) { <br><br>
+                                            
+                                            <span class=six></span>case "1" : <br> <br>
+                    
+                                                <span class=seven></span>var ufullName = prompt("Enter Your Full Name:");  <br> <br>     
+
+                                                <span class=seven></span>constFunc.prototype.fullName = () => ` Welcome ${ufullName}`; <br><br>
+
+                                                <span class=seven></span>alert("The [Pototype of the consturctor Function] <br>
+                                                    <span class=eight></span>adding new Method as Following :");<br><br>
+
+                                                <span class=seven></span>alert(constFunc.prototype); <br> <br>
+                    
+                                                <span class=seven></span>console.log("The [Pototype of the consturctor Function] <br>
+                                                    <span class=eight></span> after adding new Method as Following :"); <br> <br>
+
+                                            <span class=seven></span>console.log(constFunc.prototype); <br>
+                                            <span class=seven></span>console.log("======================================="); <br> <br>
+                    
+                                            <span class=seven></span>alert("The [Main consturctor Function ] <br>
+                                                <span class=eight></span>after adding new Method as Following :"); <br> <br>
+                                        
+                                            <span class=seven></span>alert(constFunc); <br> <br>
+                    
+                                            <span class=seven></span>console.log("The [Main consturctor Function] <br>
+                                                <span class=eight></span>after adding new Method as Following :"); <br> <br>
+                                            
+                                            <span class=seven></span>console.log(constFunc);<br>
+                                            <span class=seven></span>console.log("=======================================" );<br> <br>
+        
+                                            <span class=seven></span>alert("The [Main Default Extracted Object of the Constructor Function] <br>
+                                                <span class=eight></span> After Adding new Method to Prototype as following ... "); <br> <br>                
+                                            
+                                            <span class=seven></span>alert(nObj); <br> <br>
+                    
+                                            <span class=seven></span>console.log("The [Main Default Extracted Object of the<br>
+                                                <span class=eight></span> Constructor Function] Adding new Method to Prototype <br>
+                                                <span class=eight></span>  as following ... "); <br> <br>
+
+                                            <span class=seven></span>console.log(nObj); <br> <br>
+
+                                            <span class=seven></span>break;<br> <br>
+            
+                                        <span class=six></span>case "2" : <br><br>
+
+                                            <span class=seven></span>var uAge = prompt("Enter Your Age:"); <br> <br>    
+
+                                            <span class=seven></span>constFunc.prototype.age = () => `Welcome ${uAge}`; <br><br>
+                            
+                                            <span class=seven></span>alert("The [Pototype of the consturctor Function] <br>
+                                                <span class=eight></span> adding new Method as Following :");<br><br>
+                        
+                                            <span class=seven></span>alert(constFunc.prototype); <br> <br>
+                        
+                                            <span class=seven></span>console.log("The [Pototype of the consturctor Function] <br>
+                                                <span class=eight></span>after adding new Method as Following :"); <br> <br>
+                                            
+                                            <span class=seven></span>console.log(constFunc.prototype); <br>                                
+                                            <span class=seven></span> console.log("======================================="); <br> <br>
+                        
+                                            <span class=seven></span>alert("The [Main consturctor Function] after  <br>
+                                                <span class=eight></span> adding new Method as Following :"); <br> <br>
+                                            
+                                            <span class=seven></span>alert(constFunc); <br> <br>
+                        
+                                            <span class=seven></span>console.log("The [Main consturctor Function] <br>
+                                                <span class=eight></span>after adding new Method as Following :"); <br><br>
+                                            
+                                            <span class=seven></span>console.log(constFunc); <br>
+                                            <span class=seven></span>console.log("=======================================" ); <br><br>
+            
+                                            <span class=seven></span>alert("The [Main Default Extracted Object of the  <br>
+                                                <span class=eight></span> Constructor Function] After Adding new Method to Prototype <br>
+                                                <span class=eight></span> as following ... "); <br> <br>               
+                                            
+                                            <span class=seven></span>alert(nObj); <br><br>
+                        
+                                            <span class=seven></span>console.log("The [Main Default Extracted Object of the  <br>
+                                                <span class=eight></span>[Constructor Function] new Method to Prototype as following ... "); <br> <br>
+                                            
+                                            <span class=seven></span>console.log(nObj); <br><br>
+                                        
+                                            <span class=seven></span>break; <br> <br>
+
+                                        <span class=six></span>case "3" :<br><br>
+                                            
+                                            <span class=seven></span>var uFullAdd = prompt("Enter Your full Address:");  <br><br>
+
+                                            <span class=seven></span>constFunc.prototype.fullAdd = () => `Welcome ${uFullAdd}`; <br> <br>
+
+                                            <span class=seven></span>alert("The [Pototype of the consturctor Function] after <br> 
+                                                <span class=eight></span>adding new Method as Following :"); <br> <br>
+                        
+                                            <span class=seven></span>alert(constFunc.prototype); <br><br>
+                        
+                                            <span class=seven></span>console.log("The [Pototype of the consturctor Function] after <br>
+                                                <span class=eight></span>adding new Method as Following :");  <br><br>
+
+                                            <span class=seven></span>console.log(constFunc.prototype); <br>
+                                            <span class=seven></span>console.log("======================================="); <br><br>
+                        
+                                            <span class=seven></span>alert("The [Main consturctor Function] after <br>
+                                                <span class=eight></span>adding new Method as Following :"); <br> <br>
+                                            
+                                            <span class=seven></span>alert(constFunc); <br><br>
+                        
+                                            <span class=seven></span>console.log("The [Main consturctor Function] after <br>
+                                                    <span class=eight></span> new Method as Following :"); <br><br>
+                                            
+                                            <span class=seven></span>console.log(constFunc); <br>
+                                            <span class=seven></span>console.log("=======================================" );  <br><br>
+            
+                                            <span class=seven></span>alert("The [Main Default Extracted Object of the  <br>
+                                                <span class=eight></span> [Constructor Function] Adding new Method to Prototype <br>
+                                                <span class=eight></span> as following ... "); <br> <br>
+                                            
+                                            <span class=seven></span>alert(nObj); <br> <br>
+                        
+                                            <span class=seven></span>console.log("The [Main Default Extracted Object of the <br> 
+                                                <span class=eight></span> Constructor Function] Adding new Method to Prototype <br>
+                                                <span class=eight></span>as following ... "); <br> <br>
+                                            
+                                            <span class=seven></span>console.log(nObj);<br><br>
+
+                                            <span class=seven></span>break; <br>                            
+
+                                        <span class=six></span>default: <br> <br>
+                                            <span class=seven></span>alert("Error Entry!"); <br>
+                                            <span class=seven></span>break; <br> <br>
+
+                                    <span class=five></span>} <br><br>
+                                    
+                                    <span class=five></span> } else if (a4 == "2") { <br>
+
+                                        <span class=six></span>alert("Welcome to [add new Multiple Methods] to the Prototype of<br>
+                                            <span class=seven></span> Constructor Function..."); <br><br>
+                
+                                        <span class=six></span>var uFullName = prompt("Enter Your Full Name:"); <br> <br>   
+
+                                        <span class=six></span>constFunc.prototype.fullName = () => ` Welcome ${uFullName}`; <br><br>                         
+                
+                                        <span class=six></span>var uAge = prompt("Enter Your Age:"); <br> <br>
+
+                                        <span class=six></span>constFunc.prototype.age = () => ` Welcome ${uAge}`; <br> <br>
+
+                                        <span class=six></span>var uFullAdd = prompt("Enter Your full Address:"); <br> <br>   
+
+                                        <span class=six></span>constFunc.prototype.fullAdd = () => ` Welcome ${uFullAdd}`; <br><br>
+                
+                                        <span class=six></span>alert("The [Pototype of the consturctor Function] after adding <br>
+                                            <span class=seven></span> new Methods as Following :"); <br><br>
+                                        
+                                        <span class=six></span>alert(constFunc.prototype); <br><br>
+                
+                                        <span class=six></span>console.log("The [Pototype of the consturctor Function] after adding <br>
+                                            <span class=seven></span>new Methods as Following :"); <br> <br>
+                                        
+                                        <span class=six></span>console.log(constFunc.prototype); <br>
+                                        <span class=six></span>console.log("======================================="); <br><br>
+                
+                                        <span class=six></span>alert("The [Main consturctor Function] after adding <br>
+                                            <span class=seven></span>new Methods as Following :"); <br>
+                                        <span class=six></span>alert(constFunc); <br> <br>
+                
+                                        <span class=six></span>console.log("The [Main consturctor Function] after <br>
+                                            <span class=seven></span>adding new Methods as Following :"); <br><br>
+                                        
+                                        <span class=six></span> console.log(constFunc);<br>
+                                        <span class=six></span>console.log("=======================================" ); <br><br>
+
+                                        <span class=six></span>alert("The [Main Default Extracted Object] of the Constructor Function<br>
+                                            <span class=seven></span> After Adding new Methods to Prototype as following ... "); <br> <br>                
+                                        
+                                        <span class=six></span>alert(nObj); <br><br>
+                
+                                        <span class=six></span>console.log("The [Main Default Extracted Object] of the Constructor Function After <br>
+                                            <span class=seven></span>Adding new Methods to Prototype as following ... "); <br><br>
+                
+                                        <span class=six></span>console.log(nObj); <br> <br>
+
+                                        <span class=five></span>} else  { <br> <br>
+                                            <span class=six></span>alert("Error Entry!"); <br>
+                                        <span class=five></span>} <br><br>
+            
+                                    <span class=five></span>var z000 = prompt("Press (1) to Restart the Application\n <br>
+                                        <span class=six></span> or Press any other key to Exit... "); <br><br>
+                                
+                                <span class=four></span>} while (z000 == "1"); <br><br>
+        
+                            <span class=three></span>} else { <br><br>
+                                <span class=four></span>alert("Error Entry!"); <br><br>
+                            <span class=three></span>} <br> <br>
+
+                        <span class=two></span>var z = prompt("Press (1) to Restart the Application \n <br>
+                            <span class=three></span>Press any other key to Exit.... "); <br> <br>
+
+                        <span class=two></span>} while (z == "1"); <br> <br>
+                    <span class=one></span>} <br>
+                } <br>
+
+            </code>                    
+        </div> -->
+
+        <!--<script type="text/Javascript" src= "JSOOPPrototypeIntro.js"></script> -->
+        
+    </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 17 Video File:</h3>
+
+            <iframe
+                width="100%"
+                height="100%"
+                allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"
+                frameborder="0"
+                preload="yes"
+                src="https://www.youtube.com/embed/watch?v=4mcxUUNUR3Q&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=17&controls=0&loop=1&autoplay=1&fs=1"
+            >
+            </iframe>
+
+
+            <!-- <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\17 JavaScript OOP  Prototype Part 2 Add To Prototype Chain.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS OOP Lesson 17 [Prototype {Part 2} Add to Prototype Chain ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>     

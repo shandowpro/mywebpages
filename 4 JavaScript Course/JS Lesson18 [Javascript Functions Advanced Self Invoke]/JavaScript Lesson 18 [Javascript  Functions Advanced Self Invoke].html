@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      JavaScript Lesson 18 [Javascript Function Advanced Self Invoke]
+    </title>
+    <link
+      rel="stylesheet"
+      href="JavaScript [Javascript Functions Advanced Self Invoke].css"
+      media="all"
+    />
+
+    <script src="Functions Advanced Self InvokeGen.js"></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JavaScript Lesson 18 [Javascript Function Advanced Self Invoke]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to Javascript main Topics">
+            JavaScript [ Function Advanced Self Invoke ] Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSInvFunCon"
+            title="Go to Javascript Function Advanced Self Invoke Concept"
+          >
+            Javascript [ Function Advanced Self Invoke ] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSBasFunProps"
+            title="Go to Javascript Basic Function Properties"
+          >
+            Javascript [ Basic Function ] Properties
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSInvFunUsgs"
+            title="Go to Javascript Function Advanced Self Invoke Usages & Benefits"
+          >
+            Javascript [ Function Advanced Self Invoke ] Usages & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSInvFunSynx"
+            title="Go to Javascript Self Invoke Function Advanced  Syntax"
+          >
+            Javascript [ Self Invoke Function ] Syntax
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSInvFunExps"
+            title="Go to Javascript Function Advanced Self Invoke Examples"
+          >
+            Javascript [ Function Advanced Self Invoke ] Examples
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#BCurrencyConvExp"
+            title="Go to Javascript Basic Function Input Field (Input+If Confs)"
+          >
+            Javascript [ Currency Converter Application ] (Basic Function
+            Input+If Confs)
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#MultCurrencyConvExp"
+            title="Go to Javascript Function Self Invoke Currency Converter (If Confirmations)"
+          >
+            Javascript [ Multiple Currencies Converter Application ] (Invoke
+            Function Input+If Confs)
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#InvCurrencyConvExp"
+            title="Go to Javascript Invoke Function Input Field (Input+If Confs)"
+          >
+            Javascript [ Currency Converter Application ] (Invoke Function
+            Input+If Confs)
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JavaScript Course
+      <span>
+        JavaScript Lesson 18 [Javascript Advanced Function and Self Invoke]
+      </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>JavaScript [Advanced Function & Self Invoke]</header>
+
+        <article>
+          <p>&gt; The New object in this lesson as following :</p>
+          <ol type="A">
+            <li>Main Function Advanced Self Invoke Concept .</li>
+            <li>Basic Function Properties in JS:</li>
+            <ol>
+              <li>Basic Function Syntax .</li>
+              <li>Main Types of Basic Functions .</li>
+            </ol>
+
+            <li>Function Advanced Self Invoke Usages & Benifits.</li>
+            <li>Self Invoke Function Syntax in JS .</li>
+            <li>Function Advanced Self Invoke Examples:</li>
+            <ol>
+              <li>
+                Currency Converter Application [Simple Self Invoke Function +
+                Div Element]
+              </li>
+              <li>
+                Currency Converter Application [Simple Self Invoke Function +
+                Input Field]
+              </li>
+              <li>
+                Currency Converter Application [Self Invoke Function + Input
+                Field + If Statement Confirmations]
+              </li>
+            </ol>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSInvFunCon" id="JSInvFunCon">
+        <header>
+          <h3>Main Concept of Function Advanced Self Invoke :</h3>
+        </header>
+        <p>
+          =&gt; [JS Function Advanced Self Invoke] is a way to Code the Function
+          and Invoke it without a need to write the Invoke (Calling) Code or
+          Create an Element Event on page to Invoke the function .
+        </p>
+        <p>
+          =&gt; [JS Function Advanced Self Invoke] will be Invoked automatically
+          by opeining the page by itself.
+        </p>
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSBasFunProps" id="JSBasFunProps">
+        <header>
+          <h3>Basic Function Properties:</h3>
+        </header>
+
+        <p>=&gt; [JS Basic Function ] Properties can be as following :</p>
+        <ol type="A">
+          <li>[Basic Functions Main Types] :</li>
+          <ol>
+            <li>
+              [Built-In Functions] =&gt; &nbsp; They are Functions Built in the
+              main Javascript Syntax Code , and it has certain Programatical
+              task(s), For Example : [Math.random(); =&gt; to write a random
+              Number].
+            </li>
+
+            <li>
+              [Defiened Functions] =&gt; &nbsp; They are Customized Functions
+              which built by the developer to implement specefic Code(s) or
+              Procedure(s).
+            </li>
+          </ol>
+
+          <li>[Basic Functions Syntax Rules] :</li>
+          <ol>
+            <li>
+              Javascript is [ Irrelevant Programing Language ] which is meaning
+              that
+              <mark
+                >(Codes Syntax Should Not be according to a Logic
+                arrangement)</mark
+              >
+            </li>
+
+            <li>
+              The Following Example will be written in (2) Methods (Relavent &
+              Irrelavent) and the <mark>[both are Correct in Javascript]</mark>:
+            </li>
+            <p>
+              [Method 1 (Defualt Logic/Relvant Method)] =&gt; [Defining the
+              Function First then Invoke it] :
+            </p>
+
+            <div>
+              <code>
+                funtction myFun(parameters ) { //[Function May Not has any
+                Parameters] <br />
+                &nbsp; &nbsp; Funtction's Codes & procedures.<br />
+                &nbsp; &nbsp; return ; //[Function May Not has Return] <br />
+                } <br /><br />
+
+                myFun(); //[This is the Default Invoke to the Function to
+                Process]
+              </code>
+            </div>
+
+            <br />
+            <hr />
+
+            <p>
+              [Method 2 (Defualt Not Logic/Irrelavent Method)] =&gt; [Invoke the
+              Function First then Defining it]:
+            </p>
+
+            <div>
+              <code>
+                myFun(); //[This is the Default Invoke to the Function to
+                Process] <br /><br />
+                funtction myFun(parameters) { //[Function May Not has any
+                Parameters] <br />
+                &nbsp; &nbsp; Funtction's Codes & procedures.<br />
+                &nbsp; &nbsp; return ; //[Function May Not has Return] <br />
+                }
+              </code>
+            </div>
+
+            <li>
+              Function in other languages Must be Relevant Such as PHP. Which is
+              meaning that it's Syntax codes must be written according to Logic
+              Arrangement.
+            </li>
+
+            <li>
+              The Following Example in PHP (Which is a Relevant P.Language):
+            </li>
+            <p>The following Method is Only the correct Method in PHP...</p>
+            <div>
+              <code>
+                &lt;?php <br />
+                $name = "Shadi"; [Defining Variable in PHP] <br />
+                echo $name; [Calling Variable in PHP]
+              </code>
+            </div>
+          </ol>
+        </ol>
+      </section>
+      <!----------------------------------------------------------------------------------------------------------->
+      <section class="JSInvFunUsgs" id="JSInvFunUsgs">
+        <header>
+          <h3>
+            Javascript [ Function Advanced Self Invoke ] Usages & Benefits :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; [ Function Advanced Self Invoke ] Properties can be as following
+          :
+        </p>
+        <ol type="A">
+          <li>
+            It very usful specially in advanced programaticaly Auto Calculation
+            processes (self activated Functions )
+          </li>
+
+          <li>
+            It can be invoked or implemented just when the page loaded, which is
+            very helpful in some functions in applications which depending on
+            just a {API} Address or User Country which the browser get when just
+            the page is loaded.
+          </li>
+
+          <li>
+            It can be used as a programable reactions to certain events (such as
+            inserting input in specific fields in webpage Which will be self
+            invoked just when any or certain input is inserted ).
+          </li>
+        </ol>
+      </section>
+      <!----------------------------------------------------------------------------------------------------------->
+      <section class="JSInvFunSynx" id="JSInvFunSynx">
+        <header>
+          <h3>Function Advanced Self Invoke Syntax :</h3>
+        </header>
+        <p>
+          =&gt; Function Self Invoked Syntax can be by (2) ways as follwing:
+        </p>
+
+        <ol>
+          <li>First way:</li>
+          <div>
+            (function myfun() { <br />
+            Function Codes & procedures ... <br />
+            }()); <br />
+          </div>
+
+          <li>Second way:</li>
+          <div>
+            (function myfun() { <br />
+            Function Codes & procedures ... <br />
+            })(); <br />
+          </div>
+        </ol>
+      </section>
+      <!----------------------------------------------------------------------------------------------------------->
+      <section class="JSInvFunExps" id="JSInvFunExps">
+        <header>
+          <h3>Function Advanced Self Invoke Practical Examples:</h3>
+        </header>
+        <p>
+          =&gt; In Following there are (3) Practical Examples in using Invoke
+          Functions:
+        </p>
+
+        <ol>
+          <li class="BCurrencyConvExp" id="BCurrencyConvExp">
+            <h3>[Currency Converter Application]:</h3>
+          </li>
+
+          <p>
+            Following Example will Show how to Convert the Inserted Amount of
+            Value to Certain Currency which will be selected by User from
+            Available list:
+          </p>
+          <input id="Price" /><br />
+
+          <button onclick="ConvToEp()">Convert</button
+          ><br />
+
+          <script src="ConToEp.js"></script>
+
+          <div class="Show0" id="Show0"></div>
+
+          <input id="Show" class="Show" readonly />
+
+          <hr />
+
+          <div id="BasicCurrencyConvExp1" class="BasicCurrencyConvExp1">
+            <button class="btn" onclick="display()">
+              Click to Show [Currency Converter Application ] Function JS Code
+            </button>
+
+            <code>
+              //HTML File :<br />
+              &lt; input id="Price" &gt; <br />
+              &lt;button onclick="ConvToEp()"&gt; Convert &lt;/button&gt;<br />
+              &lt;script src="ConToEp.js"&gt; &nbsp;&nbsp; &lt;/script&gt;<br />
+              &lt;div class="Show0" id="Show0" &gt; &nbsp;&nbsp; &lt;/div&gt;<br />
+              &lt; input id="Show" class="Show" readonly &gt; <br /><br />
+
+              //JS File :<br /><br />
+              // Basic Currency Converter Application:<br />
+              function ConvToEp(){ <br />
+              &nbsp; &nbsp; "use strict"<br />
+              &nbsp; &nbsp; var price = document.getElementById("Price").value,
+              <br />
+              &nbsp; &nbsp; &nbsp; &nbsp; result = price * 3.75, <br />
+              &nbsp; &nbsp; &nbsp; &nbsp; show =
+              document.getElementById("Show"),<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; show0 =
+              document.getElementById("Show0"); <br />
+              &nbsp; &nbsp; show.value = "" ;<br />
+              &nbsp; &nbsp; show0.value = "" ; <br /><br />
+
+              &nbsp; &nbsp; if (price == "" ){<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; show0.innerHTML = "Can Not Accept
+              Empty Field!" ;<br />
+              &nbsp; &nbsp; } else if (isNaN(price)) {<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; show0.innerHTML = "Can Not Accept Text
+              Value here , Only Numbers are accepted!" ;<br />
+              &nbsp; &nbsp; } else if (price &gt; 10000) {<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; show0.innerHTML = "Over Accepted
+              Limit!" ;<br />
+              &nbsp; &nbsp; } else if (price == "0") {<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; show0.innerHTML = "Can Not Accept Zero
+              Value !" ;<br />
+              &nbsp; &nbsp; } else if (price &lt; 0) {<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; show0.innerHTML = "Can Not Accept
+              Negative Value !" ;<br />
+              &nbsp; &nbsp; } else {<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; show0.innerHTML = "Can Not Accept
+              Negative Value !" ;<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; show0.innerHTML = ""; <br />
+              &nbsp; &nbsp; &nbsp; &nbsp; show.value = result;<br />
+              &nbsp; &nbsp; }<br />
+              }<br />
+            </code>
+
+            <textarea id="SourceCode" readonly></textarea>
+          </div>
+          <!------------------------------------------------------------------------------------------------>
+          <li class="MultCurrencyConvExp" id="MultCurrencyConvExp">
+            <h3>[Multiple Currencies Converter Application]:</h3>
+          </li>
+
+          <p>
+            Following Example will Show how to Convert the Inserted Amount of
+            Value to Certain Currency which will be selected by User from
+            Available list:
+          </p>
+          <div class="MultCurrencyConv">
+            <!--- This app need some Modification-->
+            Choose your Currency:<br />
+
+            <input type="radio" id="1" /> Egyptian Pound <br />
+            <input type="radio" id="2" /> Saudi Riyal <br />
+            <input type="radio" id="3" /> Euro <br />
+            <input type="radio" id="4" /> Kuwaiti Dinar <br />
+            <input type="radio" id="5" /> Egyptian Pound <br />
+            <input type="radio" id="6" /> Russian Robel <br />
+
+            <!--<input list="Currencies" >
+                            <datalist id="Currencies">
+                                <option value="Egyptian Pound">
+                                <option value="Saudi Riyal">
+                                <option value="Euro">
+                                <option value="Kuwaiti Dinar">
+                                <option value="Japanese Yen">
+                                <option value="Russian Robel">
+                            </datalist> <br>-->
+
+            Enter your Price :
+
+            <input id="Price1" /><br />
+
+            <button onclick="MulConToEp()">Convert</button> <br />
+
+            <input id="Show1" readonly /><br />
+
+            <!----<div class="Show11" id="Show11">                            
+                            </div>-->
+
+            <script src="MulCons.js"></script>
+          </div>
+
+          <div id="BasicCurrencyConvExp1" class="BasicCurrencyConvExp1">
+            <button class="btn" onclick="display()">
+              Click to Show [Multiple Currencies Converter Application ]
+              Function JS Code
+            </button>
+
+            <code>
+              //HTML File :<br />
+              Choose your Currency:<br />
+              &lt; input type="radio" id=1 &gt; Egyptian Pound <br />
+              &lt; input type="radio" id=2 &gt; Saudi Riyal <br />
+              &lt; input type="radio" id=3 &gt; Euro <br />
+              &lt; input type="radio" id=4 &gt; Kuwaiti Dinar <br />
+              &lt; input type="radio" id=5 &gt; Egyptian Pound <br />
+              &lt; input type="radio" id=6 &gt; Russian Robel <br /><br />
+
+              &lt;button onclick="processMultPars()"&gt; Click to Activate the
+              Function <br />
+              &lt;/button&gt;<br />
+
+              &lt;script src=".Js"&gt; &nbsp;&nbsp; &lt;/script&gt;<br /><br />
+
+              //JS File :[MulCons.js] <br />
+              // Multiple Currencies Converter Application :<br />
+
+              function MulConToEp() {<br />
+              &nbsp; &nbsp; "use strict"<br />
+
+              &nbsp; &nbsp; var price =
+              document.getElementById("Price1").value,<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; show =
+              document.getElementById("Show1"),<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; show0 =
+              document.getElementById("Show11");<br />
+
+              &nbsp; &nbsp; &nbsp; &nbsp; //Curr =
+              document.getEelementById("Currencies").value,<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; //show.value = "" ;<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; //show0.value = "" ;<br />
+
+              &nbsp; &nbsp; if (price == "" ){<br />
+              &nbsp; &nbsp;&nbsp; &nbsp; show0.innerHTML = "Can Not Accept Empty
+              Field!" ;<br />
+              &nbsp; &nbsp; } else if (isNaN(price)) {<br />
+              &nbsp; &nbsp;&nbsp; &nbsp;show0.innerHTML = "Can Not Accept Text
+              Value here , Only Numbers are accepted!" ;<br />
+              &nbsp; &nbsp; } else if (price > 10000) {<br />
+              &nbsp; &nbsp;&nbsp; &nbsp;show0.innerHTML = "Over Accepted Limit!"
+              ;<br />
+              &nbsp; &nbsp;} else if (price == "0") {<br />
+              &nbsp; &nbsp;&nbsp; &nbsp;show0.innerHTML = "Can Not Accept Zero
+              Value !" ;<br />
+              &nbsp; &nbsp;} else if (price &lt; 0) {<br />
+              &nbsp; &nbsp;&nbsp; &nbsp; show0.innerHTML = "Can Not Accept
+              Negative Value !" ;<br />
+              &nbsp; &nbsp;} else {<br />
+              &nbsp; &nbsp;&nbsp; &nbsp; if ( == "Egyptian Pound") {<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;result = price * 16;<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;show0.innerHTML = "";<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;show.value = result;<br />
+              &nbsp; &nbsp;&nbsp; &nbsp; } else if (Curr == "Saudi Riyal") {<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;result = price * 3.75;<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;show0.innerHTML = "";<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;show.value = result;<br />
+              &nbsp; &nbsp;&nbsp; &nbsp; } else if (Curr == "Euro") {<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;result = price * 4;<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;show0.innerHTML = "";<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;show.value = result;<br />
+              &nbsp; &nbsp;&nbsp; &nbsp; } else if (Curr == "Kuwaiti Dinar")
+              {<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;result = price * 15;<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;show0.innerHTML = "";<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;show.value = result;<br />
+              &nbsp; &nbsp;&nbsp; &nbsp; } else if (Curr == "Japanese Yen") {<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;result = price * 20;<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;show0.innerHTML = "";<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;show.value = result;<br />
+              &nbsp; &nbsp;&nbsp; &nbsp;} else (Curr == "Russian Robel") {<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;result = price * 25;<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;show0.innerHTML = "";<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;show.value = result;<br />
+              &nbsp; &nbsp;&nbsp; &nbsp; }<br />
+              &nbsp; &nbsp;}<br />
+              }
+            </code>
+
+            <textarea id="SourceCode1" readonly></textarea>
+          </div>
+        </ol>
+
+        <!---------------------------------------------------------------------------->
+      </section>
+    </div>
+
+    <!------------------------------------------------------------------------------------------------------>
+
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Intro</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="200"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="365" />
+          <input type="hidden" name="months" value="22" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to get basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num2" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg" />
+          Your browser Does Not Support the Audio file format...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 18 Video File:</h3>
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=8ZTm8bNuZcc&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=18"
+        >
+        </iframe>
+        <!-- <video controls width="300" height="300" >
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/18 Function - Advanced And Self Invoke.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                           -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert(
+        "Welcome to JavaScript : Lesson 18 [Javascript Function Advanced Self Invoke]"
+      );
+    </script>
+
+    <!--
+    <script src="Logical Operator.js"></script>
+    -->
+  </body>
+</html>

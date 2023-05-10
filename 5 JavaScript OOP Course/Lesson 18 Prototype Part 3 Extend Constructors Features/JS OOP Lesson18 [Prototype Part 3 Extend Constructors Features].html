@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS OOP Lesson 18 [Prototype {Part 3} Extend Constructors Features] </title>
+    <link rel="stylesheet" href="JS OOP Lesson18 [Prototype Part 3 Extend Constructors Features].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JS OOP Lesson 18 [Extend Constructors Features {Part 3}]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS OOP main Topics">
+                JS OOP Lesson18 [Extend Constructors Features ] Main Topics </a> </li>
+
+            <li> <a href=#JSOOPCon title="Go to JS OOP [Extend Constructors Features ] Concept">
+                JS OOP Lesson18 [Extend Constructors Features ] Concept </a> </li>
+
+            <li> <a href=#JSOOPImp title="Go to JS OOP [Extend Constructors Features ] Importance & Benefits">
+                JS OOP Lesson18 [Extend Constructors Features ] Importance & Benefits </a> </li>
+
+            <li> <a href=#JSOOPSyntx title="Go to JS OOP [Extend Constructors Features ] Syntax">
+                JS OOP Lesson18 [Extend Constructors Features ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSOOPPract title="Go to JS OOP [Extend Constructors Features ] Practical Applications">
+                JS OOP Lesson18 [Extend Constructors Features ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS OOP Course <span> JS OOP Lesson 18 [Extend Constructors Features ] {Part 3}  </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                JS OOP [Extend Constructors Features ] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS OOP [Extend Constructors Features ] Concept. </li>
+
+                    <li> JS OOP [Extend Constructors Features ] Importance & Benefits. </li>
+
+                    <li> JS OOP [Extend Constructors Features ] Syntax [Define + Access]. </li>
+
+                    <li> JS OOP [Extend Constructors Features ] Practical Application. </li>
+                </ol>
+                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPCon" id="JSOOPCon">
+            <header>
+                <h3> JS OOP [Extend Constructors Features ] Concept: </h3>
+            </header>
+            
+            <p> =&gt; JS OOP [Extend Constructors Features ]: This lessson will provide Extra practical training and more Method to be added to prototpe of built in Contructor Function [String].
+            
+            <p> =&gt; JS OOP [Extend Constructors Features ]: This Lesson will give more Experience about handle - Add new Methods in to  [Built in Constructor Function's propototype]  specially [zFill Mtethod]  .
+            
+            <p> =&gt; JS OOP [Extend Constructors Features ]: This Lesson will Provide Extended Trainging in Prototype's Methods [this + parameters] with in  Built in Constructor Function.                                                                   
+        
+            <p> =&gt; JS OOP [Extend Constructors Features ]: The Added Methods to a Built in Constructor Function will be accessed with any same dataype belongs to it automatically {through [this] syntax} </p>
+        
+                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSOOPImp" id="JSOOPImp">
+            <header>
+                <h3> JS OOP [Extend Constructors Features ] Importance & Benefits: </h3>
+            </header>
+
+            <p> [Extend Constructors Features ] gives us the Following Features : <br>
+                <ul>
+                    <li> More advanced tools to extract objects from Funcitons Wether it's type was [Constructor Function , Normal Function, Specified Data type Built In Constructor function ]. </li>                    
+                    <li> Ability to inherate all certain built in Constructor Function's properites and Methods = &lt; as an Automated generated Object (with all Inhratance abitlies). </li>                    
+                    <li> Limitless number of automated Generated Chained Prototypes which is being created to any Function / Variable's Built in Constructor Function (with all the constructor Function Properites and mehtods). </li>                    
+                    <li> The Ability to Full Controling of the Prototypes by : </li>                    
+                    <ul>
+                        <li> Adding new Properites and Methods </li>
+                        <li> Deleting new Properites and Methods </li>
+                        <li> Accessing to any Property or Method (In the Main Constructor Function - in one of it's Prototype ) </li>
+                        <li> Full Access with unlimited time to the added Method(s) to a Built in Prototype of A constructor Function   </li>
+                    </ul>
+                </ul>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPSyntx" id="JSOOPSyntx">
+            <header>
+                <h3> JS OOP [Extend Constructors Features ] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS OOP Defining Object by [Extend Constructors Features ] Conceptual Examples as following : </p>
+            
+            <div id="Code" class="Code">
+            // A) Main Syntax adding new (Property or Method) to the Prototype :<br><br>
+            <span class= one></span> ConstructorFunctionName.prototype.NewMethod/PropertyName = "value" / function() {} <br>            
+            //=========================================================== <br> <br>                    
+            //=========================================================== <br> <br>                    
+            
+            // B) Conceptual Example Syntax of adding new (Method) to the Prototype of a Constructor Function:<br><br>
+                
+                <span class=one></span> // (a) Adding Certain Method to Built in Constructor function's Prototype <br>
+                    <span class=two></span>[using {this} Parameter + Defined Variable] : <br> <br>                                         
+                
+                    <span class=two></span> BuiltInConstFunction.prototype.NewMethodName() { <br>
+                        <span class=three></span>VaraibleName = this; =&gt;  [Defining Certaing Variable by this Parameter]<br>                        
+                        <span class=three></span>return 'Texual Value ${VariableName}'; =&gt; <br>
+                            <span class=four></span>[Returning combined value of simple text + defined Value] <br>
+                    <span class=two></span> } <br>                                                                                                         
+                <span class = one></span>//=========================================================== <br> <br>                    
+                        
+                        
+                <span class=one></span> // (b) Adding Certain Method to Built in Constructor function's Prototype [using {this} Parameter + <br>
+                    <span class=two></span>  Defined Variable + Default Parameter + Conditional If] : <br> <br>                                        
+                        
+                    <span class=two></span> BuiltInConstFunction.prototype.NewMethodName = function(Par) { <br>
+                        <span class=three></span>VaraibleName = this; =&gt;  [Defining Certaing Variable by this Parameter]<br> <br>                                                
+                        
+                        <span class=three></span>if (VariableName &lt;/&gt;/= Par){ &nbsp;&nbsp; =&gt;[using condintional statement with <br>
+                            <span class=four></span>Defined Certain Variable and this Parameter]<br>                                                    
+                            <span class=four></span>return 'Texual Value ${VariableName}'; =&gt; [Returning combined value of simple text +<br>
+                                <span class=five></span> defined Value] <br>                        
+                        <span class=three></span> } <br>                                                                                                         
+                    
+                        <span class=two></span> } <br>                                                                                                         
+                <span class = one></span>//=========================================================== <br> <br>                    
+                
+                <span class=one></span> // (C) Adding Certain Method to Built in Constructor function's Prototype [using {this} Parameter <br>
+                    <span class=two></span>+ Defined Variable + Default Parameter + While Statement] : <br> <br>                
+                        
+                    <span class=two></span> BuiltInConstFunction.prototype.NewMethodName = function(Par) { <br>                       
+                         <span class=three></span>let VaraibleName = this; =&gt;  [Defining Certaing Variable by {this} Parameter]<br> <br>                                                
+                         
+                         <span class=three></span>while (VariableName &lt;/&gt;/= Par){  &nbsp;&nbsp; =&gt;  [using condintional statement [while] with Defined <br>
+                            <span class=four></span>Certain Variable and this Parameter]<br> <br>
+                            
+                            <span class=four></span>let VariableName = 'Texual Value ${VariableName}'; =&gt; [Returning Re-Defining value of defined Value] <br>                        
+                        <span class=three></span> } <br>                                                                                                         
+                            
+                    <span class=two></span> } <br>                                                                                                         
+                <span class = one></span>//=========================================================== <br> <br>                    
+                            
+                <span class=one></span> // (D) Adding Certain zFill Method to String Built-in Constructor function's Prototype [using {this} Parameter + <br>
+                    <span class=two></span> Defined Variable + Default Parameter + While Statement] : <br> <br>                                         
+                            
+                    <span class=two></span> String.prototype.zFill = function(width) { =&gt; [width Parameter is the Length of the diven String]  <br>                        
+                                
+                        <span class=three></span>let VaraibleName = this; =&gt;  [Defining Certaing Variable by {this} Parameter]<br> <br>                                                
+                
+                        <span class=three></span>while (VariableName &lt;/&gt;/= Par){ =&gt;  [using condintional statement [while] with Defined <br>
+                            <span class=four></span> Certain Variable and this Parameter]<br> <br>                                                    
+                            
+                            <span class=four></span>let VariableName = 'Texual Value ${VariableName}'; =&gt; [ Re-Defined by the value <br>
+                                <span class=five></span>of defined Value] <br>                        
+                        <span class=three></span> } <br>                                                                                                         
+                        
+                        <span class=three></span> return VariableName.toString(); &gt;=  [Returing Redifined Varaible Value After Converting it to String Format ]  <br>                                                                                                         
+                        
+                <span class=two></span> } <br>                                                                                                         
+            <span class = one></span>//=========================================================== <br> <br>                    
+            
+
+
+            <span class=one></span> // (E) Accessing & Persuing new [Method] on a value of same Datatype [Text] of Constructor Function's Prototype [String]: <br> <br>                                        
+                                                                              
+                <span class= two></span> console.log("Texual Value".zFill(#NumericValue)); <br>                                                    
+                <span class = two></span>//=========================================================== <br> <br>                                                                                                        
+            //=========================================================== <br> <br>                    
+            //=========================================================== <br> <br>                                                        
+            <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPPract" id="JSOOPPract">
+            <header>
+                <h3> JS OOP [Prototype Function] General Practical Applications : </h3>
+            </header>
+
+            
+            <p> =&gt; Here one Major Application will include following Function/Tasks :  &gt;&gt; <br>
+
+                <ol>                    
+                    <li> Creating Default Main Constructor Funciton [Assumed function] and its Prototype  </li> 
+                                                            
+                    <li> Creaing new Methods (zFill) by two Modes [Solo , Multiple] & Adding it to the Prototype of [String Built in Constructor Function] </li> 
+                    
+                    <li> Creaing new Methods (zFill) by two Modes [Solo , Multiple] & Adding it to the Prototype of [Asssumed Constructor Function] </li> 
+                    
+                    <li> Creaing new Methods (sayYouLoveMe) by two Modes [Solo , Multiple] & Adding it to the Prototype of [String Built in Constructor Function] </li> 
+                    
+                    <li> Creaing new Methods (sayYouLoveMe) by two Modes [Solo , Multiple] & Adding it to the Prototype of [Asssumed Constructor Function] </li>                                                                                     
+                </ol>                
+
+            <br>
+
+            <textarea id=txtarea class=txtarea> </textarea><br>
+                        
+            <button class=btn onclick="test()"> Click to Start [Testing Extend Constructors Features ] Application    
+            </button> 
+            
+            <!-- <button class=btn onclick="testPro()"> Click to Start [Testing Extend Constructors Features for Number constructor Fucntion ] Application    
+            </button>  -->
+
+            <br> <hr> <br>
+            
+            <!--=====================================================================================================  -->
+            <textarea id=txtarea1 class=txtarea1> </textarea><br>
+            
+            <button class=btn onclick="Display1()"> Click to Display JS Code of (First application) [Testing Extend Constructors Features ] Application    
+            </button> 
+            
+            <script src="JSOOPPrototypeCostExt.js">
+            </script>
+            
+            <hr> <br>
+            <!--=====================================================================================================  -->
+            
+            
+            <!-- <textarea id=txtarea2 class=txtarea2> </textarea><br>
+            
+            <button class=btn onclick="Display2()"> Click to Display JS Code of (Second application) [Testing Extend Constructors Features for Number constructor Fucntion  ] Application    
+            </button> 
+             -->
+            
+            <!--=====================================================================================================  -->
+                                        
+            <br>    
+                                          
+        <hr>
+                
+        <!-- <div class=JSOOPObjConstTraining >                                        
+            
+            <code>
+                
+                // HTML Codes: <br>
+                <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                <span class=one></span> &lt;/textarea&gt; <br><br>
+                
+                <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                    <span class=two></span> Click to Start [Constructor function + One Exctracted object - Testing <br>
+                        <span class=three></span> (Additional Internal Functions)] Application<br>         
+                <span class=one></span> &lt;/button&gt; <br><br>                            
+                
+                <span class=one></span> &lt;button class="btn" onclick="testPro()"&gt;<br>                           
+                    <span class=two></span> Click to Start [Testing Extend Constructors Features]<br>
+                <span class=one></span> &lt;/button&gt; <br><br>                            
+                
+                <span class=one></span> &lt;script src="JSOOPPrototypeCostExt.js"&gt;<br>                            
+                <span class=one></span> &lt;/script&gt; <br><br>
+                
+                =======================================================<br><br>
+                
+                /* global document, alert, prompt */ <br>                    
+                /* JSOOP [Extend Constructors Features {Part 3}] */ <br>                    
+                template-string-converter.enable; <br>
+
+                function test() { <br>
+                    
+                    <span class=one></span> var a = prompt("Welcome to [Prototype- Extend Constructor Function Features ] Application \n <br>
+                        <span class=two></span>Press (1) to start the application \n Press any other key to Exit..."); <br><br>
+
+                    <span class=one></span>if (a != "1") { <br>
+                        <span class=two></span>alert("Good Bye!"); <br>
+                
+                    <span class=one></span>} else { <br> <br>
+                        
+                        <span class=two></span>do { <br>
+                            
+                            <span class=three></span> alert("Welcome to [Prototype- Extend Constructor Function Features] Application ..."); <br>            
+                            
+                            <span class=three></span>function constFunc(name) { <br>
+                                <span class=four></span>this.name = name;  <br>
+                                <span class=four></span>this.welcome =  function() { <br>
+                                    <span class=five></span>return `Welcome ${this.name}`; <br>
+                                <span class=four></span>}; <br>                                        
+                            <span class=three></span>} <br> <br>
+                                                        
+                            <span class=three></span>var strAll = ""; <br><br>
+
+                            <span class=three></span>var uName = prompt("Enter Value of the default Parameter (Name) of Constructor Function:"); <br>
+                            <span class=three></span>var nObj = new constFunc(uName); <br>
+                
+                            <span class=three></span>a0 = prompt("Press (1) to Add [zFill] Method to Prototype of Built In [String] Constructor Function [Solo-Mult]... \n <br>
+                                <span class=four></span> Press (2) to add [sayYouLoveMe] Method to Prototype of [String Built in Constructor Function] \n <br>
+                                <span class=four></span>Press (3) to Add [zFill] Method to [Prototype Customized Constructor Function]... \n  <br>
+                                <span class=four></span>Press (4) to add [sayYouLoveMe] Method to Prototype of Customized Constructor Function \n <br>
+                                <span class=four></span>Press (5) to Add [zFill] Method to Prototype of [Extracted Object] of Customized Constructor Function\n <br>
+                                <span class=four></span>Press (6) to add [sayYouLoveMe] Method to Prototype of [Extracted Object] of Customized Constructor Function \n <br>
+                                <span class=four></span> Press any other key to Exit...");   <br><br>
+                            
+                            <span class=three></span> if (a0 == "1") { <br><br>
+                                                        
+                                <span class=four></span>alert(" Welcome to Add [zFill] Method to Prototype of [String] Constructor Function ... "); <br> <br>                
+                                                                    
+                                <span class=four></span>String.prototype.zFill= function(width){ <br><br>
+                                    
+                                    <span class=five></span>let uResult = this; <br>
+                                    
+                                    <span class=five></span> while (uResult.length < width){ <br>                                                
+                                        <span class=six></span>uResult = `0${uResult}`;<br>                      
+                                    <span class=five></span>} <br> <br>
+                                        
+                                    <span class=five></span>return uResult.toString(); <br>
+                                    
+                                <span class=four></span>}; <br> <br>
+                                
+                                <span class=four></span>alert("Prototype of String Built In Function after Adding new Method [zFill] <br>
+                                    <span class=five></span> as follwing :"); <br>
+
+                                <span class=four></span>alert(String.prototype); <br> <br>
+                                
+                                <span class=four></span>console.log("Prototype of String Built In Function after Adding <br>
+                                    <span class=five></span> new Method [zFill] as follwing :"); <br> <br>
+
+                                <span class=four></span>console.log(String.prototype); <br> <br>
+                                
+                                <span class=four></span>var meth = prompt("Press (1) for [Solo Mode] Processing \n <br>
+                                    <span class=five></span> Press (2) for [Multiple Mode] Processing  ..."); <br> <br>
+                                
+                                <span class=four></span>if (meth == "1"){ <br> <br>
+                                
+                                    <span class=five></span>alert("Welcome to Adding [zFill] method to Prototype of String Built in<br>
+                                        <span class=six></span> Constructor Function  [Solo Mode] ..."); <br> <br>
+                                
+                                    <span class=five></span>do { <br> <br>
+                                        
+                                        <span class=six></span>var uValue = prompt("Enter a String Value.."), <br>
+                                            <span class=seven></span>uWidth = prompt("Enter Your Width limit.."); <br> <br>
+                                    
+                                        <span class=six></span>alert("Your Result as follwing :"); <br>
+                                        <span class=six></span>alert(uValue.zFill(uWidth)); <br> <br>
+                                
+                                        <span class=six></span>console.log("Your Result as follwing :"); <br>
+                                        <span class=six></span>console.log(uValue.zFill(uWidth)); <br>
+                                        <span class=six></span>console.log("======================================="); <br><br>                                                                        
+                                
+                                        <span class=six></span>var z = prompt("Press (1) to Process [Z-Fill] Method on a new Solo String Value \n <br> 
+                                            <span class=seven></span>or Press any other key to Exit..."); <br>
+
+                                    <span class=five></span>} while(z=="1"); <br> <br>
+                                                                            
+                                <span class=four></span>} else if (meth == "2") { <br><br>
+                                
+                                    <span class=five></span>alert("Welcome to Adding [zFill] method to Prototype of String [Multiple Mode] ..."); <br>
+            
+                                    <span class=five></span>do { <br><br>
+                    
+                                        <span class=six></span>var count = prompt("Enter the Count of Values to Persue the [zFill] Mehtod on it..."), <br>
+                                            <span class=seven></span>uWidth = prompt("Enter the required width: "); <br><br>
+                                        
+                                        <span class=six></span>var arr = []; <br>
+                                    
+                                        <span class=six></span> for (a=0; a &lt; count; a++) { <br> <br>                                                        
+                                            <span class=seven></span>arr[a] = prompt("Enter String Value Number(" + (a+1) + ")"); <br>
+                                            <span class=seven></span>arr[a].zFill(uWidth); <br>
+                                            <span class=seven></span>strAll += (arr[a].zFill(uWidth)) + "\n"; <br>                                                        
+                                        <span class=six></span>} <br> <br>
+                                                                                                                        
+                                        <span class=six></span>alert("Your Result [Multiple Mode] as follwing :"); <br>
+                                        <span class=six></span>alert(strAll); <br>
+                                            
+                                        <span class=six></span>console.log("Your Result [Multiple Mode] as follwing :"); <br>
+                                        <span class=six></span>console.log(strAll); <br>
+                                        <span class=six></span>console.log("======================================="); <br>                                                                        
+                                        <span class=six></span>strAll =""; <br>          
+                                            
+                                        <span class=six></span>var z = prompt("Press (1) to Process [Z-Fill] Method on [new Multiple String Values] \n <br>
+                                            <span class=seven></span>or Press any other key to Exit..."); <br> <br>
+                                    
+                                    <span class=five></span>} while(z=="1"); <br>                                
+                                    
+                                <span class=four></span>}  <br>
+                                
+                                <span class=four></span>//------------------------------------------------------------0--------------------------<br> <br>
+
+                            <span class=three></span>} else if (a0 == "2"){ <br> <br>
+                                
+                                <span class=four></span>alert("Welcome to add [sayYouLoveMe] Method to Prototype of Built in <br>
+                                    <span class=five></span> [String] Constructor Function... "); <br> <br>                
+
+                                <span class=four></span>var mthd = prompt("Press (1) for  [Solo Mode] \n <br>
+                                    <span class=five></span> Press (2) for [Multiply Mode]\n press any other dkey to Exit.."); <br> <br>
+                                    
+                                <span class=four></span>if (mthd == "1") { <br><br>
+                                    <span class=five></span>alert("Welcome to [Solo Mode] {Persuing [sayyouloveMe] to a one single String value}"); <br>
+                                    <span class=five></span>var uName = prompt("Enter your name :"); <br> <br>                        
+                                        
+                                    <span class=five></span>// Adding new Method to the String Built in Constructor Function Prototype:<br>
+                                    <span class=five></span>String.prototype.sayYouLoveMe = function(){ <br><br> 
+                                        <span class=six></span>return `I Love you ${this}`; <br>
+                                    <span class=five></span>}; <br> <br>
+                                                                                    
+                                    <span class=five></span>// Persuing the [New Method] to a String Value: <br>                                                                                
+                                    <span class=five></span>alert("The [Result of String Constructor Funciton Prototype Method] <br>
+                                        <span class=six></span> {sayYouLoveMe} as following ... "); <br> <br>                 
+                                    
+                                    <span class=five></span>alert(uName.sayYouLoveMe()); <br> <br>
+                                        
+                                    <span class=five></span>console.log("The [Result of String Constructor Funciton Prototype Method] <br>
+                                        <span class=six></span> {sayYouLoveMe} as following ..."); <br> <br>
+                                        
+                                    <span class=five></span>console.log(uName.sayYouLoveMe());  <br><br>
+                    
+                                    <span class=five></span>alert("The [Prototype of String Constructor Function] After Adding new Method<br>
+                                        <span class=six></span> [sayYouLoveMe] as following ... "); <br><br>
+
+                                    <span class=five></span>alert(String.prototype); <br></br>
+                                        
+                                    <span class=five></span>console.log("The [Prototype of String Constructor Function] After Adding <br>
+                                        <span class=six></span> new Method [sayYouLoveMe] as following ..."); <br> <br>
+                                        
+                                    <span class=five></span>console.log(String.prototype); <br>
+                                    <span class=five></span>console.log("======================================="); <br> <br>                                                                        
+                                        
+                                <span class=four></span>} else if (mthd == "2") { <br> <br>
+                                        
+                                    <span class=five></span>alert("Welcome to [Multiple Mode] {Persuing [sayyouloveMe] <br>
+                                        <span class=six></span>to a multiple String values}"); <br> <br>
+                                        
+                                    <span class=five></span>// Adding new Method [sayYouloveMe] to the String Built in Constructor Function Prototype:<br>
+                                    <span class=five></span>String.prototype.sayYouLoveMe = function(){ <br><br>
+                                        <span class=six></span>return `I Love you ${this}`; <br>                                                
+                                    <span class=five></span>}; <br> <br>
+                                        
+                                    <span class=five></span>var arr =[], <br>
+                                        <span class=six></span>count = prompt ("Enter your Count :"), <br>
+                                        <span class=six></span>strAll = ""; <br> <br>                                                    
+                
+                                    <span class=five></span>for (i=0; i &lt; count; i++) { <br> <br>
+                                        <span class=six></span>arr[i] = prompt("Enter your String Value nunmber " + (i+1)); <br>
+                                        <span class=six></span>arr[i].sayYouLoveMe(); <br>
+                                        <span class=six></span>strAll+= (arr[i].sayYouLoveMe()) + "\n ------------------ \n"; <br>
+                                    <span class=five></span>} <br></br>
+                                                                                                                    
+                                    <span class=five></span>alert("The [Result of String Constructor Funciton Prototype Method]  <br>
+                                        <span class=six></span> {sayYouLoveMe} on [Multiple Mode] as following ... "); <br> <br>                
+                                    
+                                    <span class=five></span>alert(strAll); <br>
+                                        
+                                    <span class=five></span>console.log("The [Result of String Constructor Funciton Prototype Method] <br>
+                                        <span class=six></span> {sayYouLoveMe} on [Multiple Mode] as following ..."); <br> <br>
+                                    
+                                    <span class=five></span>console.log(strAll);<br> <br>
+                        
+                                    <span class=five></span>alert("The [Prototype of String Constructor Function] After Adding<br> 
+                                        <span class=six></span>new Method [sayYouLoveMe] as following ... "); <br><br>                
+                                    
+                                    <span class=five></span>alert(String.prototype); <br>
+                                        
+                                    <span class=five></span>console.log("The [Prototype of String Constructor Function] After Adding <br>
+                                        <span class=six></span>new Method [sayYouLoveMe] as following ..."); <br><br>
+
+                                    <span class=five></span>console.log(String.prototype); <br>
+                                    <span class=five></span>strAll = ""; <br>
+                                    <span class=five></span>console.log("======================================="); <br> <br>                                                                        
+                                        
+                                <span class=four></span>} else { <br>
+                                    <span class=five></span>alert("Good Bye!");<br>
+                                <span class=four></span>} <br>                                                
+                                <span class=four></span>//------------------------------------------------------<br><br>
+                                
+                            <span class=three></span> } else if (a0 == "3"){ <br> <br>
+                                
+                                <span class=four></span>alert("Welcome to Add [zFill] Method to Prototype Customized Constructor Function... "); <br><br>
+                                
+                                <span class=four></span>constFunc.prototype.zFill = function(width) { <br>
+                                    <span class=five></span>let uResult = this;  <br>                                            
+                                    <span class=five></span>while (uResult.length &lt; width) { <br>                                                
+                                        <span class=six></span>uResult = `0${uResult}`;<br>
+                                    <span class=five></span>} <br>                                            
+                                    <span class=five></span>return uResult.toString(); <br>
+                                <span class=four></span>}; <br> <br>
+                                                        
+                                <span class=four></span>alert("The New Method (zFill) as Following ... "); <br>
+                                <span class=four></span>alert(constFunc.prototype.zFill); <br> <br>
+                                
+                                <span class=four></span>console.log("The New Method (zFill) as Following ..."); <br>
+                                <span class=four></span>console.log(constFunc.prototype.zFill); <br>
+                                <span class=four></span>console.log("======================================="); <br> <br>                                                                        
+                                                                                                                
+                                <span class=four></span>alert("[Prototype of Customized Construcrtor Function] <br>
+                                    <span class=five></span>after Adding new Method (zFill) as Following ... "); <br>                
+                                    <span class=five></span>alert(constFunc.prototype); <br><br>
+                                
+                                <span class=four></span>console.log("[Prototype of Customized Construcrtor Function] after <br>
+                                    <span class=five></span>Adding new Method (zFill) as following ... "); <br>
+
+                                <span class=four></span> console.log(constFunc.prototype); <br>
+                                <span class=four></span> console.log("======================================="); <br> <br>
+                                
+                                <span class=four></span>alert("[Main Customized Construcrtor Function] <br>
+                                <span class=four></span>after Adding new Method (zFill) as Following ... "); <br>                
+                                <span class=four></span>alert(constFunc); <br>
+                                
+                                <span class=four></span>console.log("[Main Customized Construcrtor Function] <br>
+                                    <span class=five></span> after Adding new Method (zFill) as following ... "); <br>
+
+                                <span class=four></span>console.log(constFunc); <br>
+                                <span class=four></span>console.log("======================================="); <br>
+                                <span class=four></span>//-------------------------------------------------------<br></br>
+                                
+                            <span class=three></span>} else if (a0 == "4"){ <br> <br>
+                                
+                                <span class=four></span>alert("Welcome to add [sayYouLoveMe] Method to Prototype of [Customized Constructor Function]... "); <br><br>                
+                                
+                                <span class=four></span>var uName = prompt("Enter your name :");  <br> <br>
+                                
+                                <span class=four></span>constFunc.prototype.sayYouLoveMe = function(){ <br> <br>
+                                    <span class=five></span>return `I Love you ${this}`; <br>
+                                <span class=four></span>};  <br> <br>
+                                                                                        
+                                <span class=four></span> alert("The New Method (sayYouLoveMe) as Following ... "); <br> <br>
+                                
+                                <span class=four></span>console.log("The New Method (sayYouLoveMe) as Following ..."); <br>
+                                <span class=four></span>console.log(constFunc.prototype.sayYouLoveMe); <br>
+                                <span class=four></span>console.log("======================================="); <br><br>                                                                        
+                                
+                                
+                                <span class=four></span>alert("The [Prototype of Customized Constructor Function] After <br>
+                                    <span class=five></span>Adding new Method [sayYouLoveMe] as following ... "); <br> <br>                  
+                                
+                                <span class=four></span>alert(constFunc.prototype);<br>
+                                
+                                <span class=four></span>console.log("The [Prototype of Customized Constructor Function] <br>
+                                    <span class=five></span>After Adding new Method [sayYouLoveMe] as following ...");<br>
+                                <span class=four></span>console.log(constFunc.prototype); <br>
+                                <span class=four></span>console.log("======================================="); <br> <br>                                                                        
+                                
+                                <span class=four></span>alert("[Main Customized Construcrtor Function] after Adding new Method (zFill) as Following ... "); <br>                
+                                <span class=four></span>alert(constFunc);<br> <br>
+                                
+                                <span class=four></span>console.log("[Main Customized Construcrtor Function] <br>
+                                    <span class=five></span> after Adding new Method (zFill) as following ... "); <br><br>
+
+                                <span class=four></span>console.log(constFunc); <br>
+                                <span class=four></span>console.log("======================================="); <br><br>
+                                <span class=four></span>//--------------------------------------------------------------<br><br>
+                                
+                    
+                                <span class=three></span>} else { <br>
+                                    <span class=four></span>alert("Error Entry!"); <br>                        
+                                <span class=three></span>} <br>
+                
+                                <span class=three></span>var z = prompt("Press (1) to Restart the Application \n <br>
+                                    <span class=four></span> Press any other key to Exit.... "); <br> <br>
+                
+                            <span class=two></span>} while (z == "1"); <br> <br>
+                
+                        <span class=one></span>} <br>                        
+                    } <br>
+
+            </code>                    
+        </div> -->
+
+        <!--<script type="text/Javascript" src= "JSOOPPrototypeIntro.js"></script> -->
+        
+    </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 18 Video File:</h3>
+            
+            <iframe
+                width="100%"
+                height="100%"
+                allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"
+                frameborder="0"
+                preload="yes"
+                src="https://www.youtube.com/embed/watch?v=ShmVl6Khpz8&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=19&controls=0&loop=1&autoplay=1&fs=1"
+            >
+            </iframe>
+
+            <!-- <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\18 JavaScript OOP  Prototype Part 3 Extend Constructors Features.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS OOP Lesson 18 [Extend Constructors Features {Part 3}] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>      

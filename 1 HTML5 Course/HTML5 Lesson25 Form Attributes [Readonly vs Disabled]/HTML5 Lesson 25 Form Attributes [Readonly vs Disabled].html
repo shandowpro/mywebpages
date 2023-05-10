@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 25 Form Input Attributes [Readonly vs Disabled] </title>
+    <link rel="stylesheet" href="HTML5 Form Attributes [Readonly vs Disabled].css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">  </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 25 Form Input Attributes [Readonly vs Disabled]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="HTML5 Form Input Attributes [Readonly vs Disabled] Main Concept" >                       HTML5 Form Input Attributes [Readonly vs Disabled] Main Concept" </a> </li>            
+            <li> <a href=#InputReadonlyNTag  title="Go to Form Input Attribute / Readonly" >
+                    Form Input Attribute => Readonly  </a> </li>     
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> HTML5 Lesson 25 Form Input Attributes [Readonly vs Disabled]                        </span> 
+    </main>
+<!-------------------------------------------------------------------------------------------------------------->                        
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>                 
+                HTML5 Lesson 25 Form Input Attributes [Readonly vs Disabled]
+            </header>
+            
+            <article>                                                
+                <p> &gt; The New HTML5 Form' Input new Attributes in this lesson as following :</p>
+                <ol>                    
+                    <li> Form =&gt; &nbsp; &lt; input &nbsp;&nbsp; Readonly &nbsp; &gt;  </li>           
+                    <li> Form =&gt; &nbsp; &lt; input &nbsp;&nbsp; Disabled &nbsp; &gt;  </li>                       
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>       
+                
+
+        <section class="InputReadonlyNTag" id="InputReadonlyNTag">
+            <header>                
+                Form => Input Attribute [ &lt; input &nbsp; Readonly &nbsp; &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Input Attribute [Readonly] Concept: </h1>
+                    <p> =&gt; Input [Readonly Attribute] is one of the old HTML5 Form's Input Attributes, and it is               commonly used <span class="FixSpace">by every programing language.</span> 
+                    <p> =&gt; Input [Readonly Attribute] is to set the input feild as only able to be read, and NOT               allowed to be <span class="FixSpace">Edited or Deleted.</span>                              
+                    <p> =&gt; Input [Readonly Attribute] can be allocated for more than allowed types of Input outside             or inside the <span class="FixSpace">form with the page.</span>       
+                    <p> =&gt; Input [Readonly Attribute] can NOT work with following Input types:
+                        <ul>
+                            <li> Hidden </li>
+                            <li> Color </li>
+                            <li> Submit </li>
+                            <li> File </li>
+                            <li> Checkbox </li>
+                            <li> RadioButton </li>
+                            <li> Range </li>
+                        </ul>                    
+                    <p> =&gt; Input [Readonly Attribute] must has the <mark>{Value}</mark> Attribute to guarantee that             there are a contet to be <span class="FixSpace">displayed inside the input</span> feild.       
+                    <p> =&gt; Input [Readonly Attribute] is allowing the input content to be sent to the server with               other types of <span class="FixSpace">input</span> in the form (Except Disabled Input               feilds), inspite of its content is only can be readed and not 
+                              <span class="FixSpace">able</span> any Editing or deleting process by user.               
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Input Attribute [Readonly Attribute] Usages: </h1>                    
+                    <p> =&gt; It mainly designed to prevent any ability of Editing or Deleting by user, and allowing               each Copy <span class="FixSpace">process</span> or just Reading it's contents.
+                    <p> =&gt; It is a common way to display an Instant readable message to the user that can Not be               deleted or Edited .
+                    <p> =&gt; It allows to sending specific Content to the server with out any modification                       could made by user.
+                </header>
+                
+                <header>
+                    <h1> Main Differences between [Readonly] & [Disabled] Attributes: </h1>                             
+                    <div class="table">
+                        <table>
+                            <caption> Comparison between [Readonly] & [Disabled] Attributes </caption>
+                            <th> Description </th>
+                            <th> Readonly </th>
+                            <th> Disabled </th>
+                            <tr>
+                                <td>Sending with Form input to Server</td>
+                                <td> Yes </td>
+                                <td> No </td>                            
+                            </tr>                            
+                            <tr>
+                                <td>Copy Ability</td>
+                                <td> Yes </td>
+                                <td> No </td>                            
+                            </tr>                            
+                            <tr>
+                                <td>Focus</td>
+                                <td> Yes </td>
+                                <td> No </td>                            
+                            </tr>                            
+                            <tr>
+                                <td>Appearance</td>
+                                <td> Normal </td>
+                                <td> Gray </td>                            
+                            </tr>                            
+                        </table>                                            
+                    </div>                                        
+                </header>
+                
+                <header class="InputReadonlyExp">
+                    <h1>Example:</h1>
+                    <p> Fulfilling all Input Feilds guiding with the <mark>Readonly</mark> Input fields.</p>
+                    <section>
+                        <h3> Insert all following Form's Input Feilds according its Guiding Messages: </h3> <br>
+                                                                                                        
+                        <form action="process.php" method="get" autocomplete >
+                                                        
+                            <input type="text" name="notice1" value="   Fill Part 1 of personal info." readonly>
+                            
+                            <label> Enter your username: </label>
+                            <input type="text" name="username1" placeholder="Enter your Username (Required)" 
+                                   pattern="[A-Za-z]{5-10}" required>                                             
+                            <input type="text" value="   min=5 , max=10 letters" readonly> 
+                                                        
+                            <label> Enter your ID: </label>
+                            <input type="number" name="number" min="1111" max="9999" step="1" > 
+                            <input type="text" value="min=1111 , max=9999 letters" readonly> 
+                            <br>
+                            <input type="search" name="searchDis" value="Disabled input Feild" disabled> 
+                            <br>
+                            <input type="submit" value="Send Default">                                               
+                            
+                        </form>
+                    </section>
+                    
+                    <div class="InputReadonlyExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Insert all following Form's Input Feilds according its Guiding<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; Messages: &lt;/h3&gt; <br>
+                            &nbsp;&nbsp; &lt;form &nbsp; action="process.php" &nbsp; method = "get" autocomplete&gt; <br><br>         
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt; Enter your Username: &lt;/label&gt;<br> 
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type="text"&nbsp; name="username1"&nbsp;&nbsp; placeholder = "Enter your<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Username (Required)" &nbsp; pattern="([A-Z]|[a-z]){5}" &nbsp; required &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type="text"&nbsp; value="min=5 , max=10 letters"&nbsp;&nbsp; readonly&gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt; Enter your ID: &lt;/label&gt;<br> 
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input type="number"&nbsp;name="number"&nbsp;min="1111"&nbsp; max="9999"&nbsp; step="1"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type="text"&nbsp; value="min=1111 , max=9999 letters"&nbsp;&nbsp; readonly&gt;<br><br>
+                                                        
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type="sumbit"&nbsp; value="send Default"  &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br><br>                            
+                            &lt;/section&gt; <br> 
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+
+    <!------------------------------------------------------------------------------------------------------>                                
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="12">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num1">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 25 Video File:</h3>
+                <video controls width="300" height="300" autoplay>
+                    <source src="C:/Users/hp/Videos/pLanguages/web/1 Web Designing Front End/A HTML/2 HTML 5/HTML 5/25 Form Attributes - Readonly vs Disabled.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                          
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Lesson 43 [JS String Methods - General Practise]</title>
+    <link
+      rel="stylesheet"
+      href="JavaScript [ String Methods - General Practise].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JavaScript Lesson 43 [ Javascript String Methods - General Practise ]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to Javascript main Topics">
+            [Javascript String Methods - General Practise ] Main Topics
+          </a>
+        </li>
+        <li>
+          <a
+            href="#JsStrGenRevCon"
+            title="Go to [Javascript String Method - General Practise Concept"
+          >
+            [Javascript String Methods - General Practise ] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsStrGenRevImp"
+            title="Go to [Javascript String Methods - General Practise] 
+                    Importance & Benefits"
+          >
+            [Javascript String Methods - General Practise ] Importance &
+            Benefits
+          </a>
+        </li>
+        <li>
+          <a
+            href="#JsStrGenRevMthds"
+            title="Go to [Javascript String Methods - General Practise ] 
+                    main Methods"
+          >
+            [Javascript String Methods - General Practise ] Main Methods
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsStrGenRevCat1"
+            title="Go to [Javascript String Methods - General Practise ] Method Syntax -           Basic Category"
+          >
+            [Basic Category] ( Special Signs - Data Type of Variable / Typeof()
+            )</a
+          >
+        </li>
+
+        <li>
+          <a
+            href="#JsStrGenRevCat2"
+            title="Go to [Javascript String Methods - General Practise] Method Syntax -           Non-String to String Category"
+          >
+            [Converting Non-String to String Category] (.toString() -
+            .toLocaleSting() - .string() )
+          </a>
+        </li>
+        <li>
+          <a
+            href="#JsStrGenRevCat3"
+            title="Go to [Javascript String Methods - General Practise] Method Syntax -           Getting Index by Searching it's Value Category"
+          >
+            [Getting Index by Searching it's Value Category] ( .indexOf("", ) -
+            .lastIndexOf("", ) - .search("") )
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsStrGenRevCat4"
+            title="Go to [Javascript String Methods - General Practise] Method Syntax -           Getting Value, Unicode of Elements by it's Index Category"
+          >
+            [Getting Value, Unicode of Elements by it's Index Category ] (
+            .charAt(Index) - .charCodeAt(Index) )</a
+          >
+        </li>
+
+        <li>
+          <a
+            href="#JsStrGenRevCat5"
+            title="Go to [Javascript String Methods - General Practise] Method Syntax -           Splition Slicing Category"
+          >
+            [ Splition Slicing Category] ( split("", ) - slice( , ) - substr( ,
+            ) - substring( , ) )
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsStrGenRevCat6"
+            title="Go to [Javascript String Methods - General Practise] Method Syntax -           Converting Letter Case to Lower & Upper Case Category"
+          >
+            [ Converting Letter Case to Lower & Upper Case Category] (
+            .toLowerCase() - .toUpperCase() )
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsStrGenRevCat7"
+            title="Go to [Javascript String Methods - General Practise] Method Syntax -           Replacement Category"
+          >
+            [Replacement Category] ( .replace() )
+          </a>
+        </li>
+        <li>
+          <a
+            href="#JsStrGenRevCat8"
+            title="Go to [Javascript String Methods - General Practise] Method Syntax -           Concatenation And Merging Category"
+          >
+            [Concatenation And Merging Category] ( .concat() )
+          </a>
+        </li>
+        <li>
+          <a
+            href="#JsStrGenRevCat9"
+            title="Go to [Javascript String Methods - General Practise] Method Syntax -           Other Category"
+          >
+            [Other Category] ( trim() - link("") )
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsStrGenRevCat10"
+            title="Go to [Javascript String Methods - General Practise] Method Syntax -          (Chain)"
+          >
+            [(Chain) Coding Style: (Creating Multiple function of a var in One
+            Code Line)]
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsStrGenRevExp0"
+            title="Go to [Javascript String Methods - General Practise] Method Syntax -           (General Practical Application)"
+          >
+            [General Practical Application]
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JavaScript Course
+      <span>
+        JavaScript Lesson 43 [Javascript String Methods - General Revision
+        (Practise) ]
+      </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          [Javascript String Methods - String General Practise ] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>[Javascript String Methods - General Practise ] Concept.</li>
+
+            <li>
+              [Javascript String Methods - General Practise ] Importance &
+              Benefits.
+            </li>
+
+            <li>
+              [Javascript String Methods - General Practise ] Methods & Syntaxes
+              :
+            </li>
+            <ol>
+              <li>[Using Special Signs within String Syntax]</li>
+
+              <li>[Getting the Index of Element by it's Value] (3) Methods:</li>
+              <ul>
+                <li>StrVar.indexOf("Text Search", index Number);</li>
+                <li>StrVar.lastIndexOf("Text Search",index Number);</li>
+                <li>StrVar.search("Text of Search");</li>
+              </ul>
+
+              <li>[Converting to String] (3) Methods:</li>
+              <ul>
+                <li>{StringVar.toString();}</li>
+                <li>{StringVar.toLocaleString();}</li>
+                <li>{string(StringVar);}</li>
+              </ul>
+
+              <li>Getting The Datatype of Variable {typeof (Var);}</li>
+
+              <li>(Splition/ Slicing/ Sustraction) (4) Methods</li>
+              <ul>
+                <li>Spliting Method { split("Separator", Limit); }</li>
+                <li>Slicing Method { slice(Start Index, End Index); }</li>
+                <li>SubStr Method { substr(Start Index, Count); }</li>
+                <li>SubString Method { substring(Start Index, End Index); }</li>
+              </ul>
+
+              <li>Getting Value, Unicode of Elements by it's Index:</li>
+              <ul>
+                <li>
+                  Getting the Element's Value by it's Index: { charAt(Index); }
+                </li>
+                <li>
+                  Getting The Element's Unicode's Value by it's Index: {
+                  charCodeAt(Index); }
+                </li>
+              </ul>
+
+              <li>Replacment Function {.replace("Old Value", "New Value");}</li>
+
+              <li>
+                Concatenation and Merging Function {StringVar.concat(String
+                Var/Text);}
+              </li>
+              <li>Converting to Lower And Upper Case Function Methods:</li>
+              <ul>
+                <li>
+                  (Convert All Letters to Lower Case) :
+                  {StringVar.toLowerCase(); }
+                </li>
+                <li>
+                  (Convert All Letters to Upper Case) :
+                  {StringVar.toUpperCase(); }
+                </li>
+              </ul>
+
+              <li>[Trim] Function {StrinVar.trim();}</li>
+
+              <li>
+                [Link] (Creating Hyperlink on Certain Text) Function {String
+                Var.link("URl");}
+              </li>
+              <li>
+                [Chain] (Creating Multiple function of a var in One Code Line ):
+                {VarName.Function1().Function2().Functon3();}
+              </li>
+            </ol>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsStrGenRevCon" id="JsStrGenRevCon">
+        <header>
+          <h3>[ Javascript String Methods - General Practise ] Concept:</h3>
+        </header>
+        <p>
+          =&gt; [ String Methods - General Practise ] : This Lesson Will Present
+          a general Revision about String Methods Gategorized by Funtional
+          Segmentations or Classification, Which will be Taken in Following.
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsStrGenRevImp" id="JsStrGenRevImp">
+        <header>
+          <h3>
+            [ Javascript String Methods - General Practise ] Importance &
+            Benefits:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; [ String Methods - General Practise ] : Is very useful to link
+          and have completer Awareness all and Each type of methods in one
+          Lesson to have the Great benfits of controling and Using Codes <br />
+        </p>
+
+        <p>
+          =&gt; [ String Methods - (General Practise)] : Using all Methods in
+          the Application will Allow to implement great performance and raise
+          the effecincy of Coding And Script . <br />
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsStrGenRevMthds" id="JsStrGenRevMthds">
+        <header>
+          <h3>[ Javascript String Methods General Practise ] Mains Methods:</h3>
+        </header>
+        <p>
+          =&gt; [ String Methods - General Practise ] : This Lesson Will Present
+          a general Revision about String Methods Gategorized by Funtional
+          Segmentations which are: <br />
+        </p>
+        <ul>
+          <li id="JsStrGenRevCat1" class="JsStrGenRevCat1">
+            Basic Functions Category:
+          </li>
+          <ul>
+            <li>Special Signs</li>
+            <li>Typeof</li>
+          </ul>
+
+          <li id="JsStrGenRevCat2" class="JsStrGenRevCat2">
+            Converting Non-String to String Category:
+          </li>
+          <ul>
+            <li>.toString(NonStringVar)</li>
+            <li>.toLocaleSting(NonStringVar)</li>
+            <li>.string(NonStringvar)</li>
+          </ul>
+
+          <li id="JsStrGenRevCat3" class="JsStrGenRevCat3">
+            Getting The Index of Element in the String Category:
+          </li>
+          <ul>
+            <li>.indexOf("Searching Text", Index)</li>
+            <li>.lastIndexOf("Searching Text", Index)</li>
+            <li>.search("Searching Text")</li>
+          </ul>
+
+          <li id="JsStrGenRevCat4" class="JsStrGenRevCat4">
+            Getting the Value/ Unicode of Element in A String Category:
+          </li>
+          <ul>
+            <li>.charAt(Index);</li>
+            <li>.charCodeAt(Index);</li>
+          </ul>
+
+          <li>(Splition/ Slicing/ Sustraction) (4) Methods Category</li>
+          <ul>
+            <li>Spliting Method { split("Separator", Limit); }</li>
+            <li>Slicing Method { slice(Start Index, End Index); }</li>
+            <li>SubStr Method { substr(Start Index, Count); }</li>
+            <li>SubString Method { substring(Start Index, End Index); }</li>
+          </ul>
+
+          <li>Converting the Letter Case Category:</li>
+          <ul>
+            <li>Convert to Lower Case: {.toLowerCase();}</li>
+            <li>Convert to Upper Case: {.toUpperCase();}</li>
+          </ul>
+
+          <li id="JsStrGenRevCat10" class="JsStrGenRevCat10">
+            Other Functions Category:
+          </li>
+          <ul>
+            <li>Concatenation Merging : {.concat();}</li>
+
+            <li>Trim Removing The before And after Spaces : {.trim();}</li>
+
+            <li>Assinging Hyperlink to A String : {String.link("Url");}</li>
+
+            <li>
+              Chain Style: {Writing Multiple Codes in One line of Script of
+              Single Variable}
+            </li>
+          </ul>
+        </ul>
+
+        <p>
+          =&gt; The following includes Syntax Examples on [General Practise
+          multiple Functions and Methods]:
+        </p>
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+      <section id="JsStrGenRevExp0" class="JsStrGenRevExp0">
+        <h3>General String Methods Practical Application</h3>
+
+        <p>
+          = &gt; The Following Application Will Include the Whole String
+          Functions and Methods in one Application..
+        </p>
+
+        <label>
+          This Following Section will Display the First Group of Functions
+          [Fixed Functons]
+        </label>
+
+        <div id="Mthd1" class="JsArrSC">
+          Here Will the Display of First Group of Functions Result
+        </div>
+
+        <label>
+          This Following Section will Display the Second Group of Functions
+          [Flexible Functions]
+        </label>
+
+        <div id="Mthd2" class="JsArrSC">
+          Here Will the Display of Second Group of Functions Result
+        </div>
+
+        <button class="btn" onclick="mthd1()">
+          Click to Start the Appliction
+        </button>
+
+        <script src="StringGenRev.js"></script>
+      </section>
+
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to get basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num2" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg" />
+          Your browser Does Not Support the Audio file format...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 43 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          src="https://www.youtube.com/embed/watch?v=9zhexPOJZYM&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=43&controls=0&loop=1&autoplay=1&fs=1"
+          preload="yes"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+          <source
+            src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/43 Strings Methods - Practice.mp4"
+            type="video/mp4"
+          />
+          Your browser Does Not Support the Video file format...
+        </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JavaScript");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

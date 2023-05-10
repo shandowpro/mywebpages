@@ -1,0 +1,577 @@
+    
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 30 PHP 5 In Arabic - Function Advanced </title>
+    <link rel="stylesheet" href="30 PHP 5 In Arabic - Function Advanced.css" media="all">
+    
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        30 PHP 5 In Arabic - Function Advanced
+    </header>
+<!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to PHP main Topics">
+                30 PHP 5 In Arabic - Function Advanced Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to PHP [20 PHP 5 In Arabic - Data Type Overview] Concept">
+                30 PHP 5 In Arabic - Function Advanced Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to PHP [20 PHP 5 In Arabic - Data Type Overview] Importance & Benefits">
+                30 PHP 5 In Arabic - Function Advanced Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to PHP [20 PHP 5 In Arabic - Data Type Overview] Syntax">
+                30 PHP 5 In Arabic - Function Advanced Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to PHP [20 PHP 5 In Arabic - Data Type Overview] Practical Applications">
+                30 PHP 5 In Arabic - Function Advanced Practical Applications </a> </li>
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to PHP Course <span> 30 PHP 5 In Arabic - Function Advanced </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                PHP [30 PHP 5 In Arabic - Function Advanced] Main Topics :
+            </header>
+            
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+
+                <ol type="A">                                                            
+                    <li>  Assinging function Rerturn Value into a Normal Variable => {for easier using function return value in another Processing}</li>
+                    <li>  Assinging default values of the function Parameter , with :
+                        <ol>
+                            <li> Calling Function with missing parameter value(s) => Displaying it's default values </li>
+                            <li> Calling Function with all parameter values => Displaying it's given values </li>                            
+                        </ol>                        
+                    </li>
+                    <li> PHP [30 PHP 5 In Arabic - Function Advanced] Assinging function Rerturn Value into another function for Processing <br>
+                        + adding span element for return value to be auto Formated by CSS 
+                    </li>                    
+                    <li> Using the following Function old Techniques in this Lesson: <br>
+                        <ol>
+                            <li> Function with Parameters/Arguments </li>
+                            <li> Function inside Function </li>
+                            <li> If Condition {if - else} inside Function </li>
+                            <li> Comparison Operators { &gt;= } </li>
+                            <li> Concatenation { . } </li>
+                            <li> String Operator { .= } </li>
+                            <li> Function Return {of single Variable || of other Function Return } </li>
+                            <li> Random Built-in Function => {rand(min, max)} => [for generating a random number] </li>
+                        </ol>                        
+                    </li>
+                </ol>                                                
+            </article>
+        </Section>        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> PHP [30 PHP 5 In Arabic - Function Advanced] main  : </h3>
+            </header>
+                        
+            <h2> PHP [30 PHP 5 In Arabic - Function Advanced] main Concept: </h2>
+                
+                <p> [Function Advanced]  => How to Assgning paramteres with defaulted values [to be displayed alternatively in case of not written in calling function ].  </p> 
+                
+                <p> [Function Advanced]  => How to Assigning paramteres of a function with a return of another function [for being reprocessd by a nother function ].  </p> 
+
+                <p> [Function Advanced]  => How to formating a processed return as a Function return [by given class name to this element inside variable returned ].  </p>                                                 
+               
+                <br> <br> <hr>
+                <!-------------------------------------------  -->                                                                                                                                                                                                                              
+            </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> PHP [30 PHP 5 In Arabic - Function Advanced] Importance & Benefits: </h3>
+            </header>
+            
+                <ul> 
+                    <li> Advanced funciton will provide an ability to sequanced processing data of function as return value </li>
+                    <li> Assinging the return in to a variable will provide an easy method to reprocessing the value inside a nother function   </li>
+                    <li> Providing the formating for element(s) {which will be as parameter inside a function } by giving a [span] element with in returned  </li>
+                </ul>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ 30 PHP 5 In Arabic - Function Advanced ] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; In this after setting up the application => We will create a simple PHP File && Running it by [Local Server] </p>
+            
+            <p> =&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} : <br>
+                <p> Using [Function with Echo vs Return] => has following (2) Examples : </p>                
+                    <h1> A) PHP General Declerations of Variables & Function  : </h1>
+                        
+                        <h2> 1) [Function Advanced ] => 
+                            First Example =>  a] : [Function with Argunments with default Values]  <br>
+                            (Calling function with all available Parameters values) => :  </h2>
+                            
+                            <P> 1] Variables Declerations => :
+                                <span class='one'> &lt;? php  </span> <br>
+                                    <span class='two'> $h11 = "Function Advanced First Example a] : </span> <br> 
+                                        <span class='three'> [Function with Argunments with default Values] as following :"; </span> <br> <br>
+                                    
+                                    <span class='two'> $p11 = "Function Advanced First Example a] : </span>  <br>
+                                        <span class='three'> [Printing Result of function with Arguments with default values] </span> <br>
+                                        <span class="three"> (Calling function with all available Parameters values) ..." ; </span> 
+                                    <br> <br><br><hr>
+                                    
+                                    <span class='two'> $h12 = "Function Advanced First Example b] : </span> <br> 
+                                        <span class='three'> [Function with Argunments with default Values] as following :"; </span> <br> <br>
+                                    
+                                    <span class='two'> $p12 = "Function Advanced First Example b] : </span>  <br>
+                                        <span class='three'> [Printing Result of function with Arguments with default values] </span> <br>
+                                        <span class="three"> (Calling function with all available Parameters values) ..." ; </span> 
+                                    <br> <br><br><hr>
+                                                                                                
+                                <span class='one'> &lt; ?>  </span> <br> <br>
+                                                                                            
+                            <br> <br> <br>                         
+                            
+                        <h2> / 1) [Function Advanced ] => 
+                            First Example =>  b] : [Function with Argunments with default Values]  <br>
+                            (Calling function with some un available (optional) Parameters values)  =>: <br> </h2>
+                                
+                            <P> 2] Function Declerations => : <br>                                
+                                <span class='one'> &lt;? php  </span> <br>
+                                    <span class='two'> function sayHello ($name, $age="unknown") { </span> <br>
+                                        <span class='three'> $result = 'Hello ' . $name . '&lt;br&gt;' . 'Your age is ' . $age ;  </span> <br>
+                                        <span class='three'> return $result; </span> <br>
+                                    <span class='two'> } </span> <br> <br>
+                                        
+                                    <span class='two'> [Assinging function datatype into a variable (using Default Values) && (Using Actual Values)] : </span> <br>
+                                    <span class='two'> $resultDef = sayHello('Shadi'); // (using Default Values)  </span> <br> 
+                                    <span class='two'> $resultAll = sayHello('Shadi', 30); // (Using Actual Values) </span> <br> 
+                                <span class='one'> ?&gt; </span> <br> <br>
+                            </P>                                                        
+                            <br> <br><br><hr>                        
+                            <!-- ----------------------------------------------------------------- -->
+                        <!-- 2) [Function with Return ] =>
+                            Second Example => Function With Return => : -->
+                        <h2>  2) [Function with Return ] =>
+                            Second Example => [Function + Arguments + {random generating built-in Function} ] => :
+                        </h2>
+                            <P> 1] Variables Declerations => : <br>
+                                <span class='one'> &lt;? php  </span> <br>                                    
+                                    <span class='two'> $h2 = "Function Advanced Second Example: [Function + Argunments </span> <br> 
+                                        <span class='three'> + {random generating built-in Function} ] as following : " ; </span> <br>
+                                    <span class='two'> $p2 = "Function Advanced Second Example: [Printing Result of function </span> <br>
+                                        <span class='three'>  {Displaying Result of accepted visitor &Generating ID number || not }]  ..." ; </span> <br>
+                                <span class='one'> &lt; ?>  </span> <br> <br>                                                                                                                                
+                            <br> <br> <br>                        
+                            
+                            <P> Function Declerations => : <br>
+                                <span class='one'> &lt;? php  </span> <br>
+                                <span class='one'> function getTicket ($name, $age) { </span> <br>
+                                    <span class='two'> $ticket = rand(5000 , 100000); </span> <br>
+                                    <span class='two'> if ($age >= 30 ) { </span> <br>
+                                        <span class='three'> $msg = 'Hello ' . $name . 'Your Age is ' . $age . ' Gongratz your are allowed to get a ticket' . '&lt;br&gt;' . 'Your ticket number is &lt;span&gt; ['  . $ticket . '] &lt;/span&gt;' . '&lt;br&gt;' ; </span> <br>
+                                    <span class='two'> } else { </span> <br>
+                                        <span class='three'> $msg = 'Hello ' . $name . 'Your Age is ' . $age . ' Sorry your are Not allowed to get a ticket' . '&lt;br&gt;'  ; </span> <br>                     
+                                    <span class='two'> } </span> <br> <br>                                    
+                                    <span class='two'> return $msg ; </span> <br> <br>
+                                <span class='one'> } </span> <br> <br>
+                                
+                                <span class='one'> [Assinging function datatype into a variable] : </span> <br>
+                                    <span class='two'> $id = getTicket('Shadi' , 33);  </span> <br> 
+                                <span class='one'> ?&gt; </span> <br> <br>
+                            </P>                                                        
+                            <br> <br>                                                    
+                        <!-- ============================================================================== -->
+                        
+                            <h2> 3) [Function Advanced ] => 
+                                Third Example =>  a] : [Function with Argunments with default Values]  <br>
+                                (Calling function with all available Parameters values) => :  </h2>
+                                
+                                <P> 1] Variables Declerations => :
+                                                                    
+                                    <span class='one'> &lt;? php  </span> <br>
+                                        <span class='two'> $h31 = "Function Advanced Third Example  [a] : <br> </span>
+                                            <span class='three'> [Passing Function return value through as it's (parameter) variable element <br> </span>
+                                            <span class='three'> + with class formated CSS ]  as following : " ;</span> <br>
+                                        
+                                        <span class='two'>$p31 = "Function Advanced Third Example [a] : </span> <br>
+                                            <span class='three'> [Printing Result function after being processed & Formated ]  ..." ;  </span>  <br>
+                                        <br> <br><br><hr>
+                                        
+                                        <span class='two'> $h32 = "Function Advanced Third Example  [b] : <br> </span>
+                                            <span class='three'> [Passing Function return value through another function as it's (parameter) variable element  <br> </span>
+                                            <span class='three'> + with class formated CSS ]  as following : " ;</span> <br>
+                                                                                    
+                                        <span class='two'> $p32 = "Function Advanced Third Example [b] : </span> <br>
+                                            <span class='three'> [Printing Result Second Function after being processed in First Function & Formated ]  ..." ; </span>  <br>
+                                    <span class='one'> &lt; ?>  </span> 
+                                </P>
+                                <br> <br><br><hr><br><br>                                                                                                                                            
+                            
+                                <h2> / 3) [Function Advanced ] => <br>
+                                    Third Example =>  b] : [Function with Argunments with default Values]  <br>
+                                    (Calling function with some un available (optional) Parameters values)  =>: <br> </h2>
+
+                                <P> Function Declerations => : <br>
+                                    <span class='one'> &lt;? php  </span> <br>
+                                        <span class='two'> function makeFrame ($element) { </span> <br>
+                                            <span class='three'> $frame = "&lt;div class='nice-frame'&gt;" . $element . "&lt;/div&gt;" ; </span> <br>
+                                            <span class='three'> return $frame; </span> <br>
+                                        <span class='two'> } </span> <br><br>
+                                                                                                                                                                                                                
+                                        <span class='two'> [Assinging function datatype into a variable] : </span> <br>
+                                        <span class='two'> // Porcessing the [makeFrame()] function by normal single string parameter Value </span> <br>
+                                        <span class='two'> $myElement = makeFrame("Shadi"); </span> <br>
+                                        
+                                        <span class='two'> // Processing the [ makeFrame(getTicket("shadi", 33)) ] function by return of [getTicket("shadi", 33)] function value </span> <br>
+                                        <span class='two'> $myElement2 = makeFrame($id); </span> <br>
+                                    <span class='one'> ?&gt; </span> <br> <br>
+                                </P>                               
+                                <br> <br> <br>                                                 
+                        <!-- ---------------------------------------------------------------------- -->
+                            <br> <br> <hr>                            
+                    <!-- ===================================================================================== -->
+                    <h2>  B)  Html page :  </h2> <br>                    
+                        <span class='one'> &lt; !DOCTYPE html &gt; </span> <br>
+                            <span class='two'> &lt; html &gt; </span> <br>
+                                <span class='three'> &lt; /head &gt;</span> <br>
+                                    <span class='four'> &lt; title &gt; &lt;? php echo $title; ?&gt;  &lt; /title &gt;  </span> <br>
+                                    <span class='four'> &lt; link rel="stylesheet" href="30 PHP 5 In Arabic - Function Advanced" media="all" &gt;  </span> <br>
+                                <span class='three'> &lt; /head &gt; </span>  <br> <br>                                
+                                <span class='three'>&lt; body &gt; </span> <br>
+                                
+                                <!-- 1) [Function Advanced] =>
+                                    First Example => Function Advanced => :  -->
+                                    <span class='four'>&lt; header &gt; </span> <br>
+                                        <span class='five'>  1) [Function Advanced ] => <br>
+                                            <span class='six'> First Example => [a] : [Function with Argunments with default Values] : [Calling function with all available Parameters values]  =>: </span> <br>: 
+                                    <span class='four'>&lt; /header &gt; </span> <br>                                                                        
+                                    
+                                    <!-- a ) Printing the fucntion result value by { Calling function with all available Parameters values } -->
+                                    <span class='four'> &lt; div &gt; </span> <br>
+                                        <span class='five'>&lt; h1 &gt; </span> <br>
+                                            <span class='six'> &lt; ?php echo $h11 ?&gt; </span> <br>
+                                        <span class='five'> &lt; /h1 &gt; </span>  <br> <br>
+                                        
+                                        <span class='five'> &lt; p  &gt; </span> <br>
+                                            <span class='six'> &lt; ?php echo $p11 ?&gt; </span> <br>
+                                        <span class='five'> &lt; /p  &gt; </span> <br> <br>
+                                    <span class='four'> &lt; div &gt; </span> <br> 
+                                                                                    
+                                    <span class='four'> &lt; ?php </span> <br>
+                                        <span class='five'> echo $resultDef; // sayHello('Shadi'); </span> <br> 
+                                    <span class='four'> ?&gt; </span> <br>                                
+                                    
+
+                                    <span class='four'>&lt; header &gt; </span> <br>
+                                        <span class='five'>  1) [Function Advanced ] => <br>
+                                            <span class='six'> First Example => [b] : [Function with Argunments with default Values] : [Calling function with some un available (optional) Parameters values] =>: </span> <br>: 
+                                    <span class='four'>&lt; /header &gt; </span> <br>                                                                        
+                                
+                                <!-- b ) [Calling function with some un available (optional) Parameters values] -->
+                                    <span class='four'> &lt; div &gt; </span> <br>
+                                        <span class='five'>&lt; h1 &gt; </span> <br>
+                                            <span class='six'> &lt; ?php echo $h12 ?&gt; </span> <br>
+                                        <span class='five'> &lt; /h1 &gt; </span>  <br> <br>
+                                        
+                                        <span class='five'> &lt; p  &gt; </span> <br>
+                                            <span class='six'> &lt; ?php echo $p12 ?&gt; </span> <br>
+                                        <span class='five'> &lt; /p  &gt; </span> <br> <br>
+                                    <span class='four'> &lt; div &gt; </span> <br> 
+                                                                                    
+                                    <span class='four'> &lt; ?php </span> <br>
+                                        <span class='five'> echo $resultAll;  // sayHello('Shadi', 30); </span> <br> 
+                                    <span class='four'> ?&gt; </span> <br>                                
+                                 ---------------------------------------------------------------------------- <br>
+                                
+                                 <!--  2) [Function with Return ] =>
+                                    Second Example => Function With Return => :  -->
+                                    <span class='four'>&lt; header &gt; </span> <br>                                                        
+                                        <span class='five'>  2) [Function advanced ] => <br>
+                                            <span class='six'> Second Example => [Function + Arguments + {random generating built-in Function} ] => :  </span> <br>: 
+                                    <span class='four'>&lt; /header &gt; </span> <br>                                                                        
+                                    
+                                    <!-- [Function + Arguments + {random generating built-in Function} ] -->
+                                    <span class='four'> &lt; div &gt; </span> <br>
+                                        <span class='five'>&lt; h1 &gt; </span> <br>
+                                            <span class='six'> &lt; ?php echo $h2 ?&gt; </span> <br>
+                                        <span class='five'> &lt; /h1 &gt; </span>  <br> <br>
+                                        
+                                        <span class='five'> &lt; p  &gt; </span> <br>
+                                            <span class='six'> &lt; ?php echo $p2 ?&gt; </span> <br>
+                                        <span class='five'> &lt; /p  &gt; </span> <br> <br>
+                                    <span class='four'> &lt; div &gt; </span> <br> 
+                                                                                    
+                                    <span class='four'> &lt; ?php </span> <br>
+                                        <span class='five'>   echo $id; //  $id = getTicket('Shadi' , 33); </span> <br> 
+                                    <span class='four'> ?&gt; </span> <br>                                                                    
+                                 ---------------------------------------------------------------------------- <br>
+                                    
+                                 <!-- 3) [Function Advanced] =>
+                                    Third Example => Function Advanced => :  -->
+                                    <span class='four'>&lt; header &gt; </span> <br>
+                                        <span class='five'>  3) [Function Advanced ] => <br>
+                                            <span class='six'> Third Example => [a] : [Passing Function return value through as it's (parameter) variable element + with class formated CSS ] => : </span> <br>: 
+                                    <span class='four'>&lt; /header &gt; </span> <br>                                                                        
+                                    
+                                    <!--  a) [Passing Function return value through as it's (parameter) variable element + with class formated CSS ] : =>  -->
+                                    <span class='four'> &lt; div &gt; </span> <br>
+                                        <span class='five'>&lt; h1 &gt; </span> <br>
+                                            <span class='six'> &lt; ?php echo $h31 ?&gt; </span> <br>
+                                        <span class='five'> &lt; /h1 &gt; </span>  <br> <br>
+                                        
+                                        <span class='five'> &lt; p  &gt; </span> <br>
+                                            <span class='six'> &lt; ?php echo $p31 ?&gt; </span> <br>
+                                        <span class='five'> &lt; /p  &gt; </span> <br> <br>
+                                    <span class='four'> &lt; div &gt; </span> <br> 
+                                                                                    
+                                    <span class='four'> &lt; ?php </span> <br>
+                                        <span class='five'> echo $resultDef; // sayHello('Shadi'); </span> <br> 
+                                    <span class='four'> ?&gt; </span> <br> <br> <hr>                               
+                                <!-- ===================================================================== -->
+
+                                <span class='four'>&lt; header &gt; </span> <br>
+                                    <span class='five'>  2) [Function Advanced ] => <br>
+                                        <span class='six'> Third Example => [b]: [Passing Function return value through another function as it's (parameter) variable element + with class formated CSS ] => :  </span> <br>: 
+                                <span class='four'>&lt; /header &gt; </span> <br>                                                                        
+                                
+                                <!-- b ) [Calling function with some un available (optional) Parameters values] -->
+                                    <span class='four'> &lt; div &gt; </span> <br>
+                                        <span class='five'>&lt; h1 &gt; </span> <br>
+                                            <span class='six'> &lt; ?php echo $h13 ?&gt; </span> <br>
+                                        <span class='five'> &lt; /h1 &gt; </span>  <br> <br>
+                                        
+                                        <span class='five'> &lt; p  &gt; </span> <br>
+                                            <span class='six'> &lt; ?php echo $p13 ?&gt; </span> <br>
+                                        <span class='five'> &lt; /p  &gt; </span> <br> <br>
+                                    <span class='four'> &lt; div &gt; </span> <br> 
+                                                                                    
+                                    <span class='four'> &lt; ?php </span> <br>
+                                        <span class='five'> echo $myElement2; //  makeFrame($id) || makeFrame(getTicket("Shadi", 33)) ; </span> <br> 
+                                    <span class='four'> ?&gt; </span> <br>                                
+                                 ---------------------------------------------------------------------------- <br>                                                                                                                                                                                            
+                                <span class="three"></span> ---------------------------------------------------------------------------- <br>                                                                                                
+                                                                
+                                <span class='three'>&lt; /body &gt; </span> <br>
+                            <span class='two'>&lt;/html &gt; </span> <br>
+                                                                                                                                                                                                                                                                     
+                    <!--  ========================================================================================= --> <br> <br>                                                            
+                   <br><br> <hr>                                                                                                                  
+                <!-- ---------------------------------------------------------------------------- -->                            
+            <br><br>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+         <section class="PHPPract" id="PHPPract"> 
+            <header>
+                <h3> PHP [30 PHP 5 In Arabic - Function Advanced] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here (3) Major Applications PHP [Function Advanced ] as following =>  <br>
+                
+                <ol>
+                    <li> First Example => (2) sub Exmples [a]/[b] : <br>
+                        <ul>
+                            <li> [a] : [Function with Arguments with default Values] : [Calling function with all available Parameters values] : =>  </li> <br>                        
+                            <li> [b] : [Function with Argunments with default Values] : [Calling function with some un available (optional) Parameters values] : => </li> <br>                        
+                        </ul>    
+                    </li>   
+                    
+                    <li> Second Example => (1) sub Exmples : <br>
+                        <ul>
+                            <li> [Function + Arguments + {Random generating built-in Function} ] => : <br>
+                                [Printing Result of function {Displaying Result of accepted visitor &Generating ID number || not }]  </li>
+                            </ul>    
+                    </li>   
+                        
+                    <li> Third Example => (2) sub Exmples [a]/[b] : <br>
+                        <ul>
+                            <li> [a] : [Passing Function return value through as it's (parameter) variable element + with class formated CSS ]  </li> <br>                        
+                            <li> [b] : [Passing Function return value through another function as it's (parameter) variable element + with class formated CSS ] </li> <br>                        
+                        </ul>    
+                    </li>                                               
+                </ol>
+                <br>
+                    
+             <!-- <section id=sec class=txtarea >                                  
+                 <a href="http://localhost/PHP%20Course/30%20PHP%205%20In%20Arabic%20-%20Function%20Advanced/30%20PHP%205%20In%20Arabic%20-%20Function%20Advanced.php">  
+                    {30 PHP 5 In Arabic - Function Advanced} => Lesson30 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+            <section id=sec class=txtarea >                                  
+                <a class=btn href="http://localhost/PHP%20Course/30%20PHP%205%20In%20Arabic%20-%20Function%20Advanced/30%20PHP%205%20In%20Arabic%20-%20Function%20Advanced.php">  
+                   {Main Page} [Display] => {30 PHP 5 In Arabic - Function Advanced} => Lesson30 PHP File Webpage by Localhost
+               </a> <br> <br>             
+               
+               <a class=btn href="30 PHP 5 In Arabic - Function Advanced.php">  
+                   {Main Page} [Source Code] => {30 PHP 5 In Arabic - Function Advanced} => Lesson30 PHP File Webpage by Localhost
+               </a>             
+           </section> <br>  
+            
+            <!-- <script  src="14 PHP 5 In Arabic - Comparison Operators.php">
+            </script>
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea> -->
+                
+        </section>                 
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson30 Video File:</h3>
+
+            <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=vsXpy4aUbZA&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=30&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\30 PHP 5 In Arabic - Function Advanced.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shandow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 30 PHP 5 In Arabic - Function Advanced ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

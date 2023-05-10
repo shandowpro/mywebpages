@@ -1,0 +1,84 @@
+ 	<html>
+    <head>	
+		<title>Welcome to Eng Shadi Profile page</title>	
+		<meta charset="utf-8">
+		<meta content="discreption" title=""   >
+		<link rel='stylesheet' href="MyPage.css">
+		<style></style>
+		<script></script>
+    </head>
+	
+	<body>
+	
+		<div class=main>Eng.Shadi's Profile </div>	
+
+		<h1> Introduction {Intro}: </h1>
+
+			<div id='name' class='name'>
+				<label > Name: </label>  
+	
+				<input type="text" id="txt" placeholder="Enter you name/Click" > <br>
+			</div>
+			
+			<input type='button' value= "click" onclick="window.txt.value='Shadi Sayed Mohammed'; window.txt.style.color='blue'"/>
+
+			<input type='submit' onclick="window.txt.style.color='red'"/> <br>
+			
+
+			<div id='age' class='age'>
+				<label> Age: </label>   	
+				<input value= "33" > 
+			</div>
+
+
+			<div id='gender' class='gender'>
+				<label> Gender </label> 	
+				<input placeholder='MALE' readonly> 
+			</div>
+
+	
+		<h1> Qualifications: </h1>
+		
+			<ol type=A>
+				<li> (A) Education:</li>							
+					<ul>
+						<li> Programing Languages:</li>						
+							<ul>		
+								<li id="v1">  Visual Basic.Net </li> <br> 
+								<li id="v2">  HTML </li> <br>
+								<li id="v3">  CSS </li> <br>
+								<li id="v4">  JAVA </li> <br>
+								<li id="v5">  KOTLIN </li> <br>
+								<li id="v6">  FLUTTER </li> <br> 					
+							</ul>
+					</ul>
+			</ol>
+
+			<input type="button" value="Change Color" onclick="window.v1.style.color='blue';
+				window.v2.style.color='blue';
+				window.v3.style.color='blue';
+				window.v2.style.color='blue';
+				window.v3.style.color='blue';
+				window.v4.style.color='blue';
+				window.v5.style.color='blue';
+				window.v6.style.color='blue'">			
+
+		<h1> Images: </h1>
+
+			<marquee onmouseover="this.stop();" onmouseout="this.start();">
+					<img src ='Natural images\Flowers\Flower1.jpg' width=200 height=200>
+					<img src ='Natural images\Flowers\Flower2.jpg' width=200 height=200>
+					<img src ='Natural images\Flowers\Flower3.jpg' width=200 height=200>
+					<img src ='Natural images\Flowers\Flower4.jpg' width=200 height=200>
+			</marquee>
+
+		<br> <hr>
+	
+		<input type = checkbox /> <br> 
+		<input type = radio /> <br>
+		<input type = time /> <br>
+		<input type = date /> <br>
+		<input type = number /> <br>
+		<input type=button value="WELCOME!" onclick="window.alert('WELCOME!');">
+    </body>
+</html>

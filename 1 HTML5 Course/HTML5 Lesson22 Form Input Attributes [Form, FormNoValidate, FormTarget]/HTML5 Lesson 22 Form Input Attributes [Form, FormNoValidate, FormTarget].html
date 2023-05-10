@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 22 Form Input Attributes [Form, FormNoValidate, FormTarget] </title>
+    <link rel="stylesheet" href="HTML5 Form Input Attributes [Form, FormNoValidate, FormTarget].css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">  </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 22 Form Input Attributes [Form, FormNoValidate, FormTarget]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="HTML5 Form Input Attributes [Form, FormNoValidate, FormTarget] Main Concept" >           HTML5 Form Input Attributes [Form, FormNoValidate, FormTarget] Main Concept" </a> </li>            
+            <li> <a href=#InputFormNTag   title="Go to Form Attribute / AutoComplete" > Form Input Attribute =>                 Form            </a> </li>     
+            <li> <a href=#InputFormNoValidateNTag   title="Go to Input Attribute / AutoFocus" > Form Input Attribute =>         FormNoValidate  </a> </li>     
+            <li> <a href=#InputFormTargetNTag   title="Go to Form Attribute / NoValidate" > Form Input Attribute =>             FormTarget      </a> </li>   
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> HTML5 Lesson 22 Form Input Attributes [Form, FormNoValidate,                        FormTarget] </span> 
+    </main>
+
+<!-------------------------------------------------------------------------------------------------------------->                        
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>                 
+                HTML5 Lesson 22 Form Input Attributes [Form, FormNoValidate, FormTarget]
+            </header>
+            
+            <article>                                                
+                <p> &gt; The New HTML5 Form' Input new Attributes in this lesson as following :</p>
+                <ol>                    
+                    <li> Form =&gt; &nbsp; &lt; input &nbsp;&nbsp; form="" &nbsp; &gt;  </li>           
+                    <li> Form =&gt; &nbsp; &lt; input &nbsp; type= "submit" &nbsp;&nbsp; formNoValidate &nbsp; &gt;  </li>   
+                    <li> Form =&gt; &nbsp; &lt; input &nbsp; type="submit" &nbsp;&nbsp; formTarget="" &nbsp; &gt;  </li>       
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>
+        
+        <section class="InputFormNTag" id="InputFormNTag">
+            <header>                
+                Form => Input Attribute [ &lt; input &nbsp; form = "" &nbsp; &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Input Attribute [Form] Concept: </h1>
+                    <p> =&gt; Input [Form Attribute] is one of the new HTML5 Form's Input Attributes.
+                    <p> =&gt; Input [Form Attribute] is to make a linked Input with other form Away in the page, which             will send its <span class="FixSpace">data</span> with the form when submiting.          
+                    <p> =&gt; Input [Form Attribute] requiring a Form attribute value Equaled with Form's ID Attribute.       
+                    <p> =&gt; Input [Form Attribute] can be allocated for more than one Input Tag outside the form with           the page.       
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Input Attribute [Form Attribute] Usages: </h1>                    
+                    <p> =&gt; It mainly designed to Establish a link between the main Form and any other outside Input             feild with in <span class="FixSpace">page.</span> </p>                         
+                    <p> =&gt; This Attribute can work with any Type of Input Feilds located any where in page outside             the form. </p>             
+                </header>
+                
+                <header class="InputFormExp">
+                    <h1>Example:</h1>
+                    <p> Filling Main Form Inputs Fields and outer Inputs Fields linked to the main form .</p>
+                    <section>
+                        <h3> Fulfill all inputs feilds inside and outside the form and Sending it the same form data:</h3>
+                        <form action="process.php" method="get" id="MainForm">
+                            
+                            <label>Enter your Username: </label>
+                            <input type="text" name="username1" > <br>                           
+                            
+                            <label>Enter your password: </label>
+                            &nbsp;<input type="password" name="password1" > <br>                           
+                            
+                            <input type="submit" value="Send Default">
+                            <input type="submit" value="Send Other" formaction="other.php">                            
+                        </form>
+                        <label>Enter your Nick Name: </label>
+                        <input type="text" name="nickname" form="MainForm"><br>                                             
+                        
+                        <label>Enter your Email: </label>
+                        <input type="email" name="mail1" form="MainForm"><br>                                             
+                        
+                        <input type="submit" value="OutFormSubmit" form="MainForm">                                     
+                    </section>
+                    
+                    <div class="InputFormExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Fulfill all inputs feilds inside and outside the form and Sending<br>&nbsp;&nbsp;&nbsp;&nbsp; it the same form data: &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form &nbsp; action="process.php" &nbsp; method="get" &nbsp; id="MainForm" &gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt; Enter your Username: &lt;label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type="text"&nbsp; name="username1"&nbsp; &gt;<br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt; Enter your password: &lt;label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type="password"&nbsp; name="password"&nbsp; &gt;<br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type="sumbit"&nbsp; value="send Default"  &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type="sumbit"&nbsp; value="send Other" &nbsp;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; formaction="other.php"  &gt;<br><br>     
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br><br>                            
+                            
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;label&gt; Enter your Nickname: &lt;/label&gt; <br>                     
+                            &nbsp;&nbsp;&nbsp;&lt;input &nbsp; type="text"&nbsp; name="nickname"&nbsp; &nbsp; form="MainForm"&nbsp; &gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;input &nbsp; type="sumbit"&nbsp; value="OutFormSubmit"  &gt;<br>
+                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+    <!------------------------------------------------------------------------------------------------------>
+        
+        <section class="InputFormNoValidateNTag" id="InputFormNoValidateNTag">
+            <header>                
+                Input override Attribute [ &lt; input &nbsp;type="submit" &nbsp; formNoValidate &nbsp; &gt; ]       
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Input Attribute [FormNoValidate] Concept: </h1>
+                    <p> =&gt; Input [FormNoValidate Attribute] is one of the new HTML5 Form's Input Attributes.
+                    <p> =&gt; Input [FormNoValidate Attribute] is to override the [NoValidate] property in specific               input (type= <span class="FixSpace">"Submit"),</span> to allocate this specified submit             button with [NoValidate] property.          
+                    <p> =&gt; Input [FormNoValidate Attribute] is to activate [NoValidate] property only to this Submit           Button <span class="FixSpace">Regardless</span> of this property in Main Form.       
+                    <p> =&gt; Input [FormNoValidate Attribute] can be allocated for multiple Input fields (Submit Type)           form with <span class="FixSpace">the page.</span>       
+                    <p> =&gt; Input [FormNoValidate Attribute] Not supported by (Safari) browser.       
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Input Attribute [FormNoValidate Attribute] Usages: </h1>                    
+                    <p> =&gt; It provides the ability to allocate multiple input feild submit type with [NoValidate]               property separetly <span class="FixSpace">from</span> the main Form, even it was outer the           form and linked with it.</p> 
+                </header>
+                                
+                <header class="InputFormNoValidateExp">
+                    <h1>Example:</h1>
+                    <p> The next form has two different Submit input fields , one by default properties of the main form, and the <span class="FixSpace">second</span> Submit is specified with novalidate property (formNoValidate).</p>
+                    <section>
+                        <h3> Fulfill your data within the form and Send it by (2) different validation property Submit        Buttons : </h3>
+                        
+                        <form action="process.php" method="get" name="FormValidate">
+                            
+                            <label>Enter your Username: </label>
+                            <input type="text" name="username2" > <br><br>                           
+                            
+                            <label>Enter your Email: </label>
+                            <input type="email" name="mail2" > <br><br>                           
+                            
+                            <input type="submit" value="SubmitDefault">
+                            <input type="submit" value="SubmitWithoutValidation" formnovalidate>                         
+                        </form>
+                    </section>
+                    
+                    <div class="InputFormNoValidateExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Fulfill your data within the form and Send it by (2) different<br> &nbsp;&nbsp;&nbsp;&nbsp; validation property Submit Buttons :<br> 
+                            &nbsp;&nbsp; &lt;form &nbsp; action="process.php" &nbsp; method = "get" &nbsp; name = "FormValidate"&gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt; Enter your Username: &lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "text"&nbsp; name="username2"&gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt; Enter your password: &lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "email"&nbsp; name="mail2"&gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "SubmitDefault"  &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "SubmitwithnoValidation"&nbsp; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; formnovalidate  &gt;<br>     
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br> 
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+    <!-------------------------------------------------------------------------------------------------------------->
+        
+        <section class="InputFormTargetNTag" id="InputFormTargetNTag">
+            <header>                
+                Input override Attribute [ &lt; input &nbsp;type="submit" &nbsp; formTarget="" &nbsp; &gt; ]       
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Input Attribute [FormTarget] Concept: </h1>
+                    <p> =&gt; Input [FormTarget Attribute] is one of the new HTML5 Form's Input Attributes.
+                    <p> =&gt; Input [FormTarget Attribute] is to determine the [Target] property of specific                       input (type= "Submit"), to <span Class="FixSpace">allocate</span> this specified submit             button with [Target] property regardless of the same property of the main 
+                              <span Class="FixSpace">allocate</span>From.          
+                    <p> =&gt; Input [FormTarget Attribute] has the same values of Target property of &lt;a&gt; Tag which           are:       
+                        <ul>
+                            <li> _blank => To Submit the form Input fields in new Web-Page. </li>
+                            <li> _self => To Submit the form Input fields in new Web-Page.  </li>
+                            <li> _top => To Submit the form Input fields in  Web-Page. </li>
+                            <li> _parent => To Submit the form Input fields in  Web-Page. </li>
+                        </ul>
+                    <p> =&gt; Input [FormTarget Attribute] can be allocated for multiple Input fields (Submit Type)           form with the <span Class="FixSpace">page.</span>       
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Input Attribute [FormTarget Attribute] Usages: </h1>                    
+                    <p> =&gt; It provides the ability to allocate multiple input feild submit type with [Target]               property separatly from <span Class="FixSpace">the</span> main Form, even it was outer the form and linked with it.</p> 
+                </header>
+                
+                <header class="InputFormTargetExp">
+                    <h1>Example:</h1>
+                    <p> Using Different types of Target Property of Form's input Submit fields</p>
+                    <section>
+                        <h3> Submit the form's input fields with different (4) Target property types: </h3> <br>
+                        <form action="process.php" method="get">
+                            
+                            <label> Enter your Username: </label>
+                            <input type="text" name="username3" autocomplete> <br><br>   
+                            
+                            <label> Enter your Password: </label>
+                            <input type="password" name="password3" autocomplete> <br><br>                               
+                            
+                            <input type="submit"  name="SubmitTarget1" value="SubmitTargetBlank" formtarget="_blank">
+                            <input type="submit"  name="SubmitTarget2" value="SubmitTargetSelf" formtarget="_self">
+                            <input type="submit"  name="SubmitTarget3" value="SubmitTargetParent" formtarget="_parent">
+                            <input type="submit"  name="SubmitTarget4" value="SubmitTargetTop" formtarget="_top"><br>   
+                            <br class="Clear">
+                        </form>
+                    </section>
+                    
+                    <div class="InputFormTargetExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Submit the form's input fields with different (4) Target property &nbsp;&nbsp;&nbsp; &nbsp; types: &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form &nbsp; action="process.php" &nbsp; method = "get"&gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt; Enter your Username: &lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "text"&nbsp; name="username3" autocomplete&gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt; Enter your password: &lt;/label&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "password"&nbsp; name="password3" autocomplete &gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "SubmitTargetBlank" <br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;formtarget="_blank"&gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "SubmitTargetSelf"<br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;formtarget="_self"&gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "SubmitTargetTop" <br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;formtarget="_top"&gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "SubmitTargetParent" <br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;formtarget="_parent"&gt;<br>
+                                                        
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                             
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+    <!------------------------------------------------------------------------------------------------------>
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="12">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num1">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 21 Video File:</h3>
+                <video controls width="300" height="300" autoplay>
+                    <source src="C:/Users/hp/Videos/pLanguages/web/1 Web Designing Front End/A HTML/2 HTML 5/HTML 5/22 Form Attributes - Form [ NoValidate, Target ].mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                          
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

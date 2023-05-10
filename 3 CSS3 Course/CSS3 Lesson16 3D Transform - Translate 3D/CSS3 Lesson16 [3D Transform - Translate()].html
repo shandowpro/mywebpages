@@ -1,0 +1,669 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 16 [3D Transform - Translate3D()] </title>
+    <link rel="stylesheet" href="CSS3 Lesson16 [3D Transform - Translate()].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 16 [3D Transform - Translate3D()]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 3D Transform - Translate3D() main Topics">
+                [ 3D Transform - Translate3D() ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to 3D Transform - Translate3D() [3D Transform - Translate3D() ] Concept">
+                [ 3D Transform - Translate3D() ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to 3D Transform - Translate3D() [3D Transform - Translate3D() ] Importance & Benefits">
+                [ 3D Transform - Translate3D() ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to 3D Transform - Translate3D() [3D Transform - Translate3D() ] Syntax">
+                [ 3D Transform - Translate3D() ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to 3D Transform - Translate3D() [3D Transform - Translate3D() ] Practical Applications">
+                [ 3D Transform - Translate3D() ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 16 [3D Transform - Translate3D() ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                3D Transform - Translate3D() Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [3D Transform - Translate3D()] Concept. </li>                       
+                    
+                    <li> [3D Transform - Translate3D()] Importance & Benefits. </li>
+
+                    <li> [3D Transform - Translate3D()] Syntax [Exmaple]. </li>
+                    
+                     <li> [3D Transform - Translate3D()] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    
+                    <ul>
+                        <li> Basic concept about 3D translating property as a advanced method to control all 3 dimensions Properties of translating Element  </li> 
+                    </ul>                   
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [3D Transform - Translate3D()] Concept: </h3>
+            </header>
+                        
+            <p> =&gt; [3D Transform - Translate3D()] : This is one of CSS3 advancd Properties to control the translating Element by assinging all 3 dimension of with X , Y , Z . <br>
+                                
+            <p> =&gt; [3D Transform - Translate3D()] => It is containing following {3} aspects/values/sub propeties [one each Time / two each / All]  . <br> 
+
+                <ul>                    
+                    <li> [X]  => [ translateX : Horizontal translating value => (+/-): translating over the Horizontal Axie (X left to Right / vise versa) ] </li>
+                    <li> [Y]  => [ translateY : Vertical translating value => (+/-): translating over the Vertical Axie (Y Up to down or down to Up) ] </li>
+                    <li> [Z]  => [ translateZ : 3D (Zooming) translating value => (+/-): translating over the the Third Axie (Z Zooming in / Zooming out ): Need Perspective Property Effect ] </li>
+                    
+                </ul>
+                
+                                                
+            <p> =&gt; {3D translating proepty can be assing by one of the translating value or more at once  }   <br>                
+    
+            <p> =&gt; {3D translating proepty {X,Y,Z} for properly activation => it needs  (Perspective property in the parent element) }   <br>                
+                            
+            </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+            <section class="CSS3Imp" id="CSS3Imp">
+                <header>
+                    <h3> [3D Transform - Translate3D() ] Importance & Benefits: </h3>
+                </header>
+                
+                <p> =&gt; [3D Transform - Translate3D() ] : This Advanced property enabling the following features : <br>            
+                    <ul>                                                                
+                        <li> This Matrix property's will gives great effect [sensivity] when using with transition property</li>
+                        <li> This Matrix property's will gives great effect [great animation effects- Zooming Effect ] when using with animation property  </li>  
+                        <li> Using the [3D property() will gives a control of all Dimensions of translating at the same time , so it is better than the ordinary 2D translating</li>   
+                        <li> 3D translating property will provide unique effects specilaly when merged with other 3D Transform properties animations effects {which will be studied will later lessons}  </li>
+                        <li> This Property is will be great in Designing nice Templates specilaly when using with ( Other 2d Properties - Animation Property- will be taken in future) <li>
+                    </ul>                                
+                 
+            </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ 3D Transform - Translate3D()] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [3D Transform - Translate3D()] Syntax as following :<br><br>                                                    
+                
+                    <span class=two></span> //a)  [HTML] file  : <br>                                          
+                
+                        <span class=three></span> &lt; img src='' alt='' &gt;  
+                       
+                        <br> <br>                                        
+                // ------------------------------------------------------------------------------ <br><br>
+                
+                <span class= one></span> // A) [3D - translate3d()] => [One X-dimension only] Syntaxes:  <br>                                                              
+                    <span class=two></span> // A1) [ translateX(+Value] : {Example1} / [translating over Horizontal (X) Axe from left to right ]=> Syntax: <br>                                  
+                        
+                        <span class=three></span> .container {  <br>                                                  
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> Perspective: 600px ; <br>                                                                                                                              
+                        <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img {  <br>                                                  
+                            <span class=four></span> margin: 40px; <br>                                                                          
+                            <span class=four></span> padding: 3px; <br>                                                                          
+                            <span class=four></span> width: 400px; <br>                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> transition: all 1s ease-in-out; <br>
+                            <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: translate3d(+ValueDeg, 0 , 0); <br>                        
+                        <span class=three></span>  }  <br>                                              
+                        // ------------------------------------------------------------------------------ <br><br>                                                            
+                    <span class=two></span> // A2) [ translateX(-Value] : {Example2} / [translating over Horizontal (X) Axe from right to left ]=> Syntax: <br>                                                      
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: translate3d(-ValueDeg, 0 , 0); <br>                        
+                        <span class=three></span>  }  <br>                                                                  
+                // ------------------------------------------------------------------------------ <br><br>                                                                                                                
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                
+                <span class= one></span> // B) [3D - translate3d()] => [One Y-dimension only] Syntaxes:  <br>                                                              
+                    <span class=two></span> // B1) [ translateY(+Value] : {Example3} / [translating over vertical (Y) Axe from top to bottom ]=> Syntax: <br>                                  
+                        
+                        <span class=three></span> .container {  <br>                                                  
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> Perspective: 600px ; <br>                                                                                                                              
+                        <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img {  <br>                                                  
+                            <span class=four></span> margin: 40px; <br>                                                                          
+                            <span class=four></span> padding: 3px; <br>                                                                          
+                            <span class=four></span> width: 400px; <br>                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> transition: all 1s ease-in-out; <br>
+                            <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: translate3d( 0 , +ValueDeg , 0); <br>                        
+                        <span class=three></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>                                                            
+                    
+                    <span class=two></span> // B2) [ translateY(-Value] : {Example4} / [translating over Vertical() Axe from bottom to top ]=> Syntax: <br>                                                      
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: translate3d( 0 , -ValueDeg , 0); <br>                        
+                        <span class=three></span>  }  <br>                                                                  
+                // ------------------------------------------------------------------------------ <br><br>                                                                                                                
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                
+                <span class= one></span> // C) [3D - translate3d()] => [One Z-dimension only] Syntaxes:  <br>                                                              
+                    <span class=two></span> // C1) [ translateZ(+Value] : {Example5} / [translating over (Z) Axe { Zooiming In} ]=> Syntax: <br>                                  
+                    
+                        <span class=three></span> .container {  <br>                                                  
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> Perspective: 600px ; <br>                                                                                                                              
+                        <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img {  <br>                                                  
+                            <span class=four></span> margin: 40px; <br>                                                                          
+                            <span class=four></span> padding: 3px; <br>                                                                          
+                            <span class=four></span> width: 400px; <br>                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> transition: all 1s ease-in-out; <br>
+                            <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: translate3d( 0 , 0 , +ValueDeg); <br>                        
+                        <span class=three></span>  }  <br>                                              
+                        // ------------------------------------------------------------------------------ <br><br>                                                            
+                    <span class=two></span> // C2) [ translateZ(-Value] : {Example6} / [translating over  (Z) Axe {Zooimg Out} ]=> Syntax: <br>                                                      
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: translate3d( 0 , 0 , -ValueDeg); <br>                        
+                        <span class=three></span>  }  <br>                                                                  
+            //=========================================================== <br> <br>                                    
+            //=========================================================== <br> <br>                                                                
+                <span class= one></span> // D) [3D - translate3d()] => [Translating Element All dimensions {in all 3D Dimensions at th e same property}] Syntaxes:  <br>                                                              
+                    <span class=two></span> // D1) [translate3d(+x, -y, +z] : {Example7} / [translating(x,y,z) } ]=> Syntax: <br>                                  
+                    
+                        <span class=three></span> .container {  <br>                                                  
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> Perspective: 600px ; <br>                                                                                                                              
+                        <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img {  <br>                                                  
+                            <span class=four></span> margin: 40px; <br>                                                                          
+                            <span class=four></span> padding: 3px; <br>                                                                          
+                            <span class=four></span> width: 400px; <br>                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> transition: all 1s ease-in-out; <br>
+                            <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: translate3d( +100px , -100px , +100px); <br>                        
+                        <span class=three></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>                                                            
+                   
+                    <span class=two></span> // D2) [translate3d(-x, +y, -z] : {Example8} / [translating3d(x,y,z) } ]=> Syntax: <br>                                                                          
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: translate3d( -100px , +100px , -100px); <br>                        
+                        <span class=three></span>  }  <br>                                                                                                                
+                //=========================================================== <br> <br>                                         
+
+                    <span class=two></span> // D3) [translate3d(-x, -y, -z] : {Example9} / [translating3d(x,y,z) } ]=> Syntax: <br>                                                                          
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: translate3d( -100px , -100px , -100px); <br>                        
+                        <span class=three></span>  }  <br>                                                                                                                
+                //=========================================================== <br> <br>                                         
+
+                    <span class=two></span> // D4) [translate3d(+x, +y, +z] : {Example10} / [translating3d(x,y,z)} ]=> Syntax: <br>                                                                          
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: translate3d( +100px , +100px , +100px); <br>                        
+                        <span class=three></span>  }  <br>                                                                                                                
+                //=========================================================== <br> <br>                                         
+                    <span class=two></span> // D5) [translate3d(-x, -y, +z] : {Example10} / [translating3d(x,y,z) } ]=> Syntax: <br>                                                                          
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: translate3d( -100px , -100px , +100px); <br>                        
+                        <span class=three></span>  }  <br>                                                                                                                
+                //=========================================================== <br> <br>                                         
+                    
+                    <span class=two></span> // D6) [translate3d(+x, +y, -z] : {Example11} / [translating3d(x,y,z) } ]=> Syntax: <br>                                                                          
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: translate3d( +100px , +100px , -100px); <br>                        
+                        <span class=three></span>  }  <br>                                                                                                                
+                //=========================================================== <br> <br>                                         
+                    
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="JSDOMPract">
+
+            <header>
+                <h3> [3D Transform - Translate3D()] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following is the Applied example of [3D-Transform: translateX,Y,Z(+/-Value px)] syntax : &gt;&gt; <br>
+                <ul>
+                    <li> (3) Fieldsets contain (2-6) section (each section is by Certain by animation Methods) for each as following:  </li> 
+                    
+                    <ol>
+                        <li> First Fieldset [translate3d(+/-X , 0 , 0)] :</li>
+                            <ul>
+                                <li> First Section => +Value px {Horizontal translating Left to Right}   </li>                                         
+                                <li> Second Section => -Value px {Horizontal 3D translating Right to Left}   </li>                                                                         
+                            </ul>
+                        
+                        <li> Second Fieldset [translate3d(0, +/-Y , 0)] :</li>
+                            <ul>
+                                <li> First Section => +Value px {Vertical translating Up to bottom }   </li>                                         
+                                <li> Second Section => -Value Degree {Veritcal 3D translating bottom to top}   </li>                                                                        
+                            </ul>
+                            
+                        <li> Third Fieldset [translate3d(0 , 0 , +/-Z)] :</li>
+                            <ul>
+                                <li> First Section => +Value px {3D- translating - Zooming in }   </li>                                         
+                                <li> Second Section => -Value Degree {3D- translating - Zooming out }   </li>                                                                                                                                         
+                            </ul>                                                
+                            
+                        <li> Fourth Fieldset [translate3d(+/-X , +/-Y , +/-Z )] :</li>
+                            <ul>
+                                <li> First Section => 3D-translating {All + Values}   </li>                                         
+                                <li> Second Section => 3D-translating { All - Values}   </li>                                                                                                                                         
+                                <li> Third Section => 3D- translating { X+, Y+, Z-}   </li>                                                                                                                                         
+                                <li> Fourth Section => 3D- translating { X+, Y-, Z-}    </li>                                                                                                                                         
+                                <li> Fifth Section => 3D- translating { X-, Y-, Z+}    </li>                                                                                                                                         
+                                <li> Sixth Section => 3D- translating { X-, Y+, Z+}    </li>                                                                                                                                         
+                            </ul>                                                
+                    </ol>                    
+                </ul>                
+                <br>
+                <hr>
+        <!-- ========================================================================= -->
+        
+            <fieldset class='translateX'>  
+                <legend> 3D-Transform: translate3d(+/-X , 0 , 0) => First Mode {translating by only X dimenison Mode} </legend>
+                        
+                <section class='positiveValue'>                
+                    <h3> Following sections will be X-translated property by [positive value Degree]  </h3>
+                    
+                    <div class='pValue1'>
+                        <h4> This Section will be {translated} into Horizontal dimension {right => left} by [by Positive Value: 100px]</h4>                 
+                    </div> <br>                                                                            
+                    
+                    <div class='pValue2'>
+                        <h4> This Section will be {translated} into Horizontal dimension {right => left} by [by Positive Value: 200px]</h4>                                     
+                    </div> <br>
+                                        
+                </section>                                
+                
+                <hr><br> <br>                                    
+                
+                <section class='negativeValue'>
+                    
+                    <h3> Following sections will be X-translated property by [Negative value Degree]  </h3>
+                                                                                                                              
+                    <div class='nValue1'>
+                        <h4> This Section will be {translated} into Horizontal dimension { left => right} by [by Negative Value: -100px]</h4>                                         
+                    </div> <br>                                                                            
+                    
+                    <div class='nValue2'>
+                        <h4> This Section will be {translated} into Horizontal dimension { left => right} by [by Negative Value: -200px]</h4>                                     
+                    </div> <br>                                                                                                                                    
+                                                                                                                                                                            
+                </section>                
+                <hr>                
+                <hr>                
+            </fieldset>                                                                
+            <hr>
+            <hr>
+        <!-- ========================================================================= -->                                              
+        <!-- ========================================================================= -->                                                                      
+            
+            <fieldset class='translateY'>  
+                <legend> 3D-Transform: translate3d(0 , +/-Y , 0 ) => Second Mode {translating by only Y dimenison Mode} </legend>
+                        
+                <section class='positiveValue'>                
+                    <h3> Following sections will be Y-translated property by [positive value Degree]  </h3>
+                    
+                    <div class='pValue1'>
+                        <h4> This Section will be {translated} into Veritcal dimension {top => bottom} by [by Positive Value: 100px]</h4>                 
+                    </div> <br>                                                                            
+                    
+                    <div class='pValue2'>
+                        <h4> This Section will be {translated} into Veritcal dimension { top => bottom } by [by Positive Value: 200px]</h4>                                     
+                    </div> <br>
+                    
+                </section>                                
+                
+                <hr><br> <br>                                    
+                
+                <section class='negativeValue'>
+                    
+                    <h3> Following sections will be Y-translated property by [Negative value Degree]  </h3>
+                    
+                    <div class='nValue1'>
+                        <h4> This Section will be {translated} into Veritcal dimension {bottom => top} by [by Positive Value: -100px]</h4>                                         
+                    </div> <br>                                                                            
+                    
+                    <div class='nValue2'>
+                        <h4> This Section will be {translated} into Veritcal dimension {bottom => top} by [by Positive Value: -200px]</h4>                                                             
+                    </div> <br>                                                                                                                                    
+                                                                                                                                                                            
+                </section>                
+                <hr>                
+                <hr>                
+            </fieldset>                                                                
+            <hr>
+            <hr>            
+        <!-- ========================================================================= -->                                              
+        <!-- ========================================================================= -->                                              
+            
+            <fieldset class='translateZ'>  
+                    <legend> 3D-Transform: translate3d(0 , 0 , +/-Z ) => Third Mode {translating by only Z dimenison Mode} </legend>
+                            
+                    <section class='positiveValue'>                
+                        <h3> Following sections will be Z-translated 3D property by [positive value Degree]  </h3>
+                        
+                        <div class='pValue1'>
+                            <h4> This Section will be {translated 3D} into Zooming dimension {Zooming In} by [by Positive Value: 100px]</h4>                 
+                        </div> <br>                                                                            
+                        
+                        <div class='pValue2'>
+                            <h4> This Section will be {translated 3D} into Zooming dimension { Zooming In } by [by Positive Value: 200px]</h4>                                     
+                        </div> <br>
+                        
+                    </section>                                
+                    
+                    <hr><br> <br>                                    
+                    
+                    <section class='negativeValue'>
+                        
+                        <h3> Following sections will be Z-translated property by [Negative value Degree]  </h3>
+                        
+                        <div class='nValue1'>
+                            <h4> This Section will be {translated 3D} into Zooming dimension {Zooming Out} by [by Positive Value: -100px]</h4>                                         
+                        </div> <br>                                                                            
+                        
+                        <div class='nValue2'>
+                            <h4> This Section will be {translated 3D} into Zooming dimension {Zooming Out} by [by Positive Value: -200px]</h4>                                                             
+                        </div> <br>                                                                                                                                    
+                                                                                                                                                                                
+                    </section>                
+                    <hr>                
+                    <hr>                
+                </fieldset>                                                                
+            <hr>
+            <hr>            
+        <!-- ========================================================================= -->                                              
+        <!-- ========================================================================= -->                                              
+
+            
+            <fieldset class='translateAll'>  
+                    <legend> 3D-Transform: translate3d(+/-X , +/-Y , +/-Z ) => Fourth Mode {translating by only  dimenison Mode} </legend>
+                            
+                    <section class='AllPValue'>                
+                        <h3> Following sections will be translated - 3d property by [all dimensions values +]  </h3>
+                        
+                        <div class='AllPValue1'>
+                            <h4> This Section will be {translated3d} into [right + bottom +  Zooming in] dimension {Zooming In} by [by Positive Value: 100px]</h4>                 
+                        </div> <br>                                                                            
+                                                                
+                    </section>                                
+                    <!-- ------------------------------------------------------------------------ -->
+                    
+                    <section class='AllNValue'>                
+                        <h3> Following sections will be translated - 3d property by [all dimensions values -]  </h3>
+                        
+                        <div class='AllNValue1'>
+                            <h4> This Section will be {translated 3D} into [left + top +  Zooming out] dimension {Zooming In} by [by Negetive Value: -100px]</h4>                 
+                        </div> 
+                    </section>                                
+                    <br> <br>                                                                                                                                       
+                    
+                    <!-- ------------------------------------------------------------------------ -->                
+                    
+                    <section class='PNP'>                
+                        <h3> Following sections will be translated - 3d property by [+X, -Y, +Z]  </h3>
+                        
+                        <div class='PNPValue1'>
+                            <h4> This Section will be {translated 3D} into [right + top +  Zooming in] dimension [by Value:100px]</h4>                 
+                        </div> <br>                                                                                                                                      
+                    </section>                                
+                    <br> <br>
+                    <!-- ------------------------------------------------------------------------ -->
+                    
+                    <section class='NPN'>                
+                        <h3> Following sections will be translated - 3d property by [-X, +Y, -Z]  </h3>
+                        
+                        <div class='NPNValue1'>
+                            <h4> This Section will be {translated 3D} into [left + bottom +  Zooming out] dimension [by Value:100px]</h4>                 
+                        </div> <br>                                                                                                                                      
+                    </section>                                
+                    <!-- ------------------------------------------------------------------------ -->
+                                    
+                    <br> <br>                                    
+                    
+                    <section class='PPN'>                
+                        <h3> Following sections will be translated - 3d property by [+X, +Y, -Z]  </h3>
+                        
+                        <div class='PPNValue1'>
+                            <h4> This Section will be {translated 3D} into [right + bottom +  Zooming out] dimension [by Value:100px]</h4>                 
+                        </div> <br>                                                                                                                                      
+                    </section>                                
+                    <!-- ------------------------------------------------------------------------ -->
+                                    
+                    <br> <br>                                    
+                    
+                    <section class='NNP'>                
+                        <h3> Following sections will be translated - 3d property by [-X, -Y, +Z]  </h3>
+                        
+                        <div class='NNPValue1'>
+                            <h4> This Section will be {translated 3D} into [left + bottom +  Zooming out] dimension [by Value:100px]</h4>                 
+                        </div> <br>                                                                                                                                      
+                    </section>                                
+                    <!-- ------------------------------------------------------------------------ -->
+                                    
+                    <section class='PNN'>                
+                        <h3> Following sections will be translated - 3d property by [+X, -Y, -Z]  </h3>
+                        
+                        <div class='PNNValue1'>
+                            <h4> This Section will be {translated 3D} into [right + top +  Zooming out] dimension [by Value:100px]</h4>                 
+                        </div> <br>                                                                                                                                      
+                    </section>                                
+                    <!-- ------------------------------------------------------------------------ -->
+                                    
+                    <br> <br>                                    
+                    
+                    <hr>                
+                    <hr>                
+                </fieldset>                                                                
+            <hr>
+            <hr>            
+        <!-- ========================================================================= -->                                              
+        <!-- ========================================================================= -->                                                                                     
+            <hr>
+            <hr>                                           
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 16 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=AnQ7um7Vmjs&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=16&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\16  Css3 - 3D Transform - Translate3D() 3D.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 16 [3D Transform - Translate3D() ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

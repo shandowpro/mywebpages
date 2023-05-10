@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Lesson 26 [Javascript Array Check]</title>
+    <link rel="stylesheet" href="JavaScript [Array Check].css" media="all" />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JavaScript Lesson 26 [JavaScript Array Check]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to Javascript main Topics">
+            [Javascript Array Check ] Main Topics
+          </a>
+        </li>
+        <li>
+          <a
+            href="#JsArrChkCon"
+            title="Go to [Javascript Array Check ] Concept"
+          >
+            [Javascript Array Check] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsArrChkImp"
+            title="Go to [Javascript Array Check] Importance & Benefits"
+          >
+            [Javascript Array Check] Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsArrChkSynx"
+            title="Go to [Javascript Array Check] Syntax Methods"
+          >
+            [Javascript Array Check] Syntax Methods & Ways
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsArrChkPrac"
+            title="Go to [Javascript Array Check] Practical Application"
+          >
+            [Javascript Array Check] Practical Application
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JavaScript Course
+      <span> JavaScript Lesson 26 [Javascript Array Check] </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>[ Javascript Array] Main Topics :</header>
+
+        <article>
+          <p>&gt; New Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>[Javascript Array Check] Concept.</li>
+
+            <li>[Javascript Array Check] Importance & Benefits .</li>
+
+            <li>[Javascript Array Check] Syntax Methods.</li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrChkCon" id="JsArrChkCon">
+        <header>
+          <h3>[Javascript Array Check] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; [Array Check] : Is a method to check if the varaible is the type
+          of (Special Variable of Array or not) as a prestage of dealing with it
+          even by (Adding, Editing or Deleting).
+        </p>
+
+        <p>
+          =&gt; [Array Check] : Usaually we use if Statement Function to test
+          the type of Variable if it Array of ordinary Variable
+        </p>
+
+        <p>
+          =&gt; [Array Check] : There are (2) major Built-in functions in JS
+          Language to use it inside the Conditional Statement , and will be
+          expalained in following
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrChkImp" id="JsArrChkImp">
+        <header>
+          <h3>[Javascript Array Check] Importance & Benefits:</h3>
+        </header>
+
+        <p>=&gt; [Array Check] : Is Essential to avoid any Error in Script.</p>
+
+        <p>
+          =&gt; [Array Check] : Can be The first Step of Array Processeing
+          Script with the right logic and assure the perfect method
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrChkSynx" id="JsArrChkSynx">
+        <header>
+          <h3>[Javascript Array Check] Syntax Methods:</h3>
+        </header>
+        <ol>
+          <li><h3>=&gt; [JS Array First Method (Better Way)] :</h3></li>
+
+          <p>=&gt; This Method is Recommended to use</p>
+
+          <p>This Method Array Check will be as following:</p>
+          <div>
+            if (Array.isArray(arrayName)) { <br />
+            &nbsp;&nbsp;console.log("Confirmation Scentense"); <br />
+            } else { <br />
+            &nbsp;&nbsp;console.log("Dis Confirmation Scentense"); <br />
+            }
+          </div>
+
+          <p>Following Practical Example:</p>
+
+          <div class="JsArrChkSynxExp">
+            // Js (2) Variables will be Tested one is ordinary Variable and the
+            other is Array:
+
+            <code>
+              var friend = "Shadi",<br />
+              &nbsp;&nbsp;friends = ["Shadi", "Sayed", "Mohammed", "Ahmed"];<br /><br />
+
+              // Testing First Variable in Console Frame Work by [First Method]
+              :<br />
+
+              if (Array.isArray(friend)) { <br />
+              &nbsp;&nbsp;console.log("This is Array");<br />
+              } else <br />
+              &nbsp;&nbsp;console.log("This is Not Array"); <br />
+              } <br /><br />
+
+              // Testing Second Variable in Console Frame Work by [First Method]
+              :<br />
+              if (Array.isArray(friend)) {<br />
+              &nbsp;&nbsp;console.log("This is Array"); <br />
+              } else { <br />
+              &nbsp;&nbsp;console.log("This is Not Array");<br />
+              }
+            </code>
+          </div>
+
+          <li><h3>=&gt; [JS Array Second Method (Other Way)] :</h3></li>
+
+          <p>=&gt; This Method is less Recommended to use</p>
+
+          <p>This Method Array Check will be as following:</p>
+          <div>
+            if (arrayName.Constractor === Array) { <br />
+            &nbsp;&nbsp;console.log("Confirmation Scentense"); <br />
+            } else { <br />
+            &nbsp;&nbsp;console.log("Dis Confirmation Scentense"); <br />
+            }
+          </div>
+
+          <hr />
+
+          <p>Following Practical Example on Second Method:</p>
+          <div class="JsArrChkSynxExp">
+            // Js (2) Variables will be Tested, one is ordinary Variable and the
+            other is Array:
+
+            <code>
+              var friend = "Shadi",<br />
+              &nbsp;&nbsp;friends = ["Shadi", "Sayed", "Mohammed", "Ahmed"];<br /><br />
+
+              // Testing First Variable in Console Frame Work by [Second Method]
+              :<br />
+
+              if (friend.Constractor === Array) { <br />
+              &nbsp;&nbsp;console.log("This is Array");<br />
+              } else <br />
+              &nbsp;&nbsp;console.log("This is Not Array"); <br />
+              } <br /><br />
+
+              // Testing Second Variable in Console Frame Work by [First Method]
+              :<br />
+              if (friends.Constractor === Array) {<br />
+              &nbsp;&nbsp;console.log("This is Array"); <br />
+              } else { <br />
+              &nbsp;&nbsp;console.log("This is Not Array");<br />
+              }
+            </code>
+          </div>
+        </ol>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrChkPrac" id="JsArrChkPrac">
+        <header>
+          <h3>[Javascript Array Check] Practical Application:</h3>
+        </header>
+
+        <h3>
+          =&gt; Following Application is an Array Input and Output Processing:
+        </h3>
+
+        <button id="btn" class="btn" onclick="pro()">
+          Click to Start the [Array Input & Output] + Array Check Application
+        </button>
+        <br /><br />
+
+        <!--<button id="btn0" onclick="pro1()"> Click to Start the [Array + looping] Application  </button><br>            
+                        <script src="Arraytest.js" ></script>-->
+
+        <div id="Display"></div>
+
+        <script src="ArrayInputOutputApp.js"></script>
+
+        <hr />
+
+        <div class="JsArrChkSynxExp">
+          // Js (2) Variables will be Tested one is ordinary Variable and the
+          other is Array:<br />
+
+          <code>
+            // HTML Codes:<br />
+            &lt;button id="btn" onclick="pro()"&gt;<br />
+            &nbsp; &nbsp; Click to Start the [Array Input & Output] + [Array
+            Check] Application <br />
+            &lt;/button&gt;<br /><br />
+
+            &lt;div id="Display"&gt; &lt;/div&gt; <br /><br />
+
+            &lt;script src="ArrayInputOutputApp.js"&gt; &lt;/script&gt;<br /><br />
+
+            // JS Codes:<br />
+            /* global alert, document, prompt */<br />
+
+            // Array Input & Output Applciation :<br />
+            <br />
+
+            function pro() { <br />
+
+            &nbsp; &nbsp; alert("Welcome to [Array Input & Output (3)Elements
+            Application] ");<br /><br />
+
+            &nbsp; &nbsp; var pass = prompt("Press Enter to start the
+            application \n Or<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; press any other key to End the
+            application");<br /><br />
+            &nbsp; &nbsp; if (pass == "") { <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; var name1 = prompt("Enter Name 1: "),
+            <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; name2 = prompt("Enter Name
+            2: "),<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; name3 = prompt("Enter Name
+            3: ");<br /><br />
+            &nbsp; &nbsp; &nbsp; &nbsp; var names = [<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; name1,<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; name2,<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; name3<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; ];<br />
+            <br />
+
+            &nbsp; &nbsp; &nbsp; &nbsp; alert("Your Array as following :");<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; if (Array.isArray(names)) {<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+            document.getElementById("Display").innerHTML =<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "Your Array as
+            following :" + "&lt;br&gt;" + names + "&lt;br&gt;" +<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "This Variable is
+            an Array";<br />
+            &nbsp; &nbsp; &nbsp; &nbsp;} else { <br />
+            &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            document.getElementById("Display").innerHTML =<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "Variable is not
+            Array !";<br />
+            &nbsp; &nbsp; &nbsp; &nbsp;} <br />
+            &nbsp; &nbsp; } else {<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; alert("Good bye!"); <br />
+            &nbsp; &nbsp; } <br />
+            } <br />
+          </code>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="260"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="365" />
+          <input type="hidden" name="months" value="26" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to get basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num2" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg" />
+          Your browser Does Not Support the Audio file format...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 26 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=HrLD2uXRm8M&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=26&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+        <!-- <video controls width="300" height="300">
+          <source
+            src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\26 Array Check.mp4"
+            type="video/mp4"
+          />
+          Your browser Does Not Support the Video file format...
+        </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JavaScript");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

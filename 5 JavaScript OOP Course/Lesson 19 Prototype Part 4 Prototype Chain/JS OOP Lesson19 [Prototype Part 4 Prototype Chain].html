@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS OOP Lesson 19 [Prototype {Part 4} Prototype Chain] </title>
+    <link rel="stylesheet" href="JS OOP Lesson19 [Prototype Part 4 Prototype Chain].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JS OOP Lesson 19 [Prototype Chain {Part 4}]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS OOP main Topics">
+                JS OOP Lesson19 [Prototype Chain ] Main Topics </a> </li>
+
+            <li> <a href=#JSOOPCon title="Go to JS OOP [Prototype Chain ] Concept">
+                JS OOP Lesson19 [Prototype Chain ] Concept </a> </li>
+
+            <li> <a href=#JSOOPImp title="Go to JS OOP [Prototype Chain ] Importance & Benefits">
+                JS OOP Lesson19 [Prototype Chain ] Importance & Benefits </a> </li>
+
+            <li> <a href=#JSOOPSyntx title="Go to JS OOP [Prototype Chain ] Syntax">
+                JS OOP Lesson19 [Prototype Chain ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSOOPPract title="Go to JS OOP [Prototype Chain ] Practical Applications">
+                JS OOP Lesson19 [Prototype Chain ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS OOP Course <span> JS OOP Lesson 19 [Prototype Chain ] {Part 4}  </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                JS OOP [Prototype Chain ] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS OOP [Prototype Chain ] Concept. </li>
+
+                    <li> JS OOP [Prototype Chain ] Importance & Benefits. </li>
+
+                    <li> JS OOP [Prototype Chain ] Syntax [Define + Access]. </li>
+
+                    <li> JS OOP [Prototype Chain ] Practical Application. </li>
+                </ol>
+                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPCon" id="JSOOPCon">
+            <header>
+                <h3> JS OOP [Prototype Chain ] Concept: </h3>
+            </header>
+            
+            <p> =&gt; JS OOP [Prototype Chain ]: This lessson will provide Extra Advanced concept of the prototype & Constructor function  .
+            
+            <p> =&gt; JS OOP [Prototype Chain ]: Each [Constructor Function] has a [Prototype]. 
+                
+            <p> =&gt; JS OOP [Prototype Chain ]: Each [Object] has a [Prototype] (becasuse the Object has a Constructor Function ) . 
+                
+            <p> =&gt; JS OOP [Prototype Chain ]: Each [Varaible] has a [Prototype] (becasuse any Varialble has a Built in Constructor Function ) . 
+
+            <p> =&gt; JS OOP [Prototype Chain ]: Prototype is an [Object] , which is displaying all it's (Object/Variable/Function)'s Constructor Funciton as one of It's Properites and Values .
+        
+            <p> =&gt; JS OOP [Prototype Chain ]: Prototype's Chain is about the Sequence of created Prototypes (because Constructor Function has a prototype & Prototype (Object) has a Prototype also)</p>
+            
+            <p> =&gt; JS OOP [Prototype Chain ]: Prototype's Chain ends with [Prototype of Object Built in Constructor Function (Prototype.Object function)] </p>
+            
+            <p> =&gt; JS OOP [Prototype Chain ]: Each Defiend Variable is an Extracted Object from it's [Built in Consturctor Function] of it's Data type, so it has [Prototype]</p>
+            
+            <p> =&gt; JS OOP [Prototype Chain ]: The [Prototype] of the {Prototype} is a built in Object Constructor Function.</p>
+
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSOOPImp" id="JSOOPImp">
+            <header>
+                <h3> JS OOP [Prototype Chain ] Importance & Benefits: </h3>
+            </header>
+
+            <p> [Prototype Chain ] gives us the Following Features : <br>
+                <ul>
+                    <li> Great understanding of OOP of Prototype gives great abilities for more advanced programing features. </li>                    
+                    <li> More advanced tools to extract objects from Funcitons Wether it's type was [Constructor Function , Normal Function, Specified Data type Built In Constructor function ]. </li>                    
+                    <li> Limitless number of automated Generated Chained Prototypes which is being created to any Function / Variable's Built in Constructor Function (with all the constructor Function Properites and mehtods). </li>                    
+                    <li> The Ability to Full Controling of the Prototypes by : </li>                    
+                    <ul>
+                        <li> Adding new Properites and Methods </li>
+                        <li> Deleting new Properites and Methods </li>
+                        <li> Accessing to any Property or Method (In the Main Constructor Function - in one of it's Prototype ) </li>
+                        <li> Full Access with unlimited time to the added Method(s) to a Built in Prototype of A constructor Function   </li>
+                    </ul>
+                </ul>
+                
+            <p> [Prototype Chain ] Operational Proccess of Extracting new Object from Consturctor Functions as following : <br>
+                
+                <ol>
+                    <li> Creating a new Empty Object </li>
+                    
+                    <li> Assinging {this} Contax to the [new Empty Object] =&lt; this ={};</li>
+                   
+                    <li> Assinging [_proto_] contax of {this}(which is belongs to empty Ojbect) to [_proto_] contax of {Constructor function} : <br>
+                        this._proto_ =  ConstructorFunction._proto_; </li>
+
+                    <li> Linking between _proto_ of new extrated Object with _proto_ of Constructor Function <br>
+                        User._proto_  = user1._proto_ ;</li>
+
+                </ol>
+
+
+
+
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPSyntx" id="JSOOPSyntx">
+            <header>
+                <h3> JS OOP [Prototype Chain ] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS OOP Defining Object by [Prototype Chain ] Conceptual Examples as following : </p>
+            
+            <div id="Code" class="Code">
+            // A) Defining a Default Constructro Function :<br><br>
+            <span class= one></span> function User(name) { <br>            
+                <span class=two></span> this.name = name;<br>            
+            <span class=one></span> }<br>            
+
+            //=========================================================== <br> <br>                    
+            //=========================================================== <br> <br>                    
+            
+            // B) Extracting a new Object from constructor Function [Instace & Not Instance Object ]:<br><br>
+            
+            <span class=one></span>// 1] Creating an Instance Object using [new keyword]: <br>
+                <span class=two></span> let user1 = new User("TextValue"); <br><br>
+            
+            <span class=one></span>// 2] Creating same Object without using [new keyword]: <br>
+                <span class=two></span> let user2 = User("TextValue"); <br><br>
+            //--------------------------------------------------------------------------------------------------<br><br>
+            
+            // C) Accessing to Prototype of new Extracted Object :<br><br>
+            <span class=two></span>console.log(user1.prototype);<br> <br>                                         
+
+            //--------------------------------------------------------------------------------------------------<br><br>
+            
+            // D) Accessing to Prototype of Main Constructor Function :<br><br>
+            <span class=two></span>console.log(User.prototype);<br> <br>                                         
+            //--------------------------------------------------------------------------------------------------<br><br>
+            
+            // E) Checking if the Defined object by using [new Keyword] or not : <br>            
+            
+            <span class=one></span>// First Method [Checking by instanceof keyword] :<br>                            
+                <span class=two></span>if (!(this instanceof User)) {<br>                                        
+                    <span class=three></span>throw new Error("The Extracted Object is not by (new Keyword)");<br>                            
+                    <span class=three></span>console.log("The Extracted Object is not by (new Keyword)");<br>                            
+                <span class=two></span>}<br>                                                                                        
+                //=========================================================== <br> <br> 
+                
+            <span class=one></span>// Second Method [Checking by ES6 (Ecma Script 2015)] :<br>                            
+                <span class=two></span>if (!new.target) {<br>                                        
+                    <span class=three></span>throw new Error("The Extracted Object is not by (new Keyword)");<br>                            
+                    <span class=three></span>console.log("The Extracted Object is not by (new Keyword)");<br>                            
+                <span class=two></span>}<br>                                                                                        
+            
+            //=========================================================== <br> <br>                                                        
+            <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPPract" id="JSOOPPract">
+            <header>
+                <h3> JS OOP [Prototype Chain] General Practical Applications : </h3>
+            </header>
+
+            
+            <p> =&gt; Here one Major Application will include following Function/Tasks :  &gt;&gt; <br>
+
+                <ol>                    
+                    <li> Creating Default Main Constructor Funciton [Assumed function] and its Prototype  </li> 
+                                                            
+                    <li> Creating Extracted object from Constructor Function {using each (2) methods [using new keyword & without]}.  </li> 
+                    
+                    <li> Creating various Variables of Different Data type as an Extracted object from it's Built in Constructor Function.  </li> 
+            
+                    <li> Accessing to Prototype of each Constructor Function and it's Extracted Object</li> 
+                    
+                    <li> Accessing to Prototype of each Variable as an Object Constructed by it's Data Type Built in Constructor Function  </li> 
+                    
+                    <li> Checking of new Object's Extraction method (by using new or not) [using (2) Checking Methods]</li> 
+                                    
+                </ol>                
+
+            <br>
+
+            <textarea id=txtarea class=txtarea> </textarea><br>
+                        
+            <button class=btn onclick="test()"> Click to Start [Testing Prototype Chain ] Application    
+            </button> 
+            
+            <br>
+  
+            <textarea id=txtarea1 class=txtarea1> </textarea><br>
+                        
+            <button class=btn onclick="Display1()"> Click to Display JS Code of first Application [Testing Prototype Chain ] 
+            </button> 
+  
+            
+            <script src="JSOOPPrototypeChain.js">
+            </script>
+                      
+            <br> <hr> <br>
+
+
+            <button class=btn onclick="test2()"> Click to Start Second Application [Testing Prototype Chain for Number constructor Fucntion ] 
+            </button> 
+
+            <br>
+
+            <textarea id=txtarea2 class=txtarea2> </textarea><br>
+                        
+            <button class=btn onclick="Display2()"> Click to Display JS Code of Second Application [Testing Prototype Chain for Number constructor Fucntion ] 
+            </button> 
+
+            <script src="ProtoChainTest.js">
+            </script>
+                
+            <br>    
+                                          
+            <hr>
+                
+            <!-- <div class=JSOOPObjConstTraining >                                        
+                    
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                            <span class=two></span> Click to Start [Testing Prototype Chain ] Application <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                            
+                        
+                        <span class=one></span> &lt;button class="btn" onclick="testPro()"&gt;<br>                           
+                            <span class=two></span> Click to Start [Testing Prototype Chain]<br>
+                        <span class=one></span> &lt;/button&gt; <br><br>                            
+                        
+                        <span class=one></span> &lt;script src="JSOOPPrototypeChain.js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JSOOP [Prototype Chain {Part 4}] */ <br>                    
+                        template-string-converter.enable; <br>
+
+                        function test() { <br>
+                            
+                            <span class=one></span>var a = prompt("Welcome to [Prototype- Chain ] Application \n <br>
+                                <span class=two></span> Press (1) to start the application \n Press any other key to Exit..."); <br> <br>
+        
+                                <span class=one></span>if (a != "1") { <br>
+                                    <span class=two></span>alert("Good Bye!"); <br>
+                                
+                                <span class=one></span>} else { <br>
+                                    <span class=two></span>do { <br>
+                                        <span class=three></span>alert("Welcome to [Prototype- chain] Application ..."); <br>   
+                                        <span class=three></span>console.log("Welcome to [Prototype- chain] Application ..."); <br>    
+                                    
+                                        <span class=three></span>var uName = prompt("Enter Value of the default Parameter (Name) of <br>
+                                            <span class=four></span>Constructor Function:");  <br> <br>
+                        
+                                        <span class=three></span>function constFunc(name) { <br>
+                                            <span class=four></span>this.name = name;  <br>                
+                                        <span class=three></span>}  <br> <br>
+                        
+                                        <span class=three></span> alert("The Following is a Default Constructor Function :"); <br>
+                                        <span class=three></span>console.log("The Following is a Default Constructor Function :"); <br> <br>
+                                    
+                                        <span class=three></span>alert(constFunc); <br>
+                                        <span class=three></span>console.log(constFunc);<br> <br>
+                                                                        
+                                        <span class=three></span>a0 = prompt("Press (1) to Display the (Prototype of Default Constructor Function)... \n <br>
+                                            <span class=four></span>Press (2) to Extract a new Object + performing Prototypes & Cheking of Creation Method ... \n <br>
+                                            <span class=four></span> Press (3) to Defining a new Variable as Extracted object from built in Constructor Function [Array] ..\n <br>
+                                            <span class=four></span> Press (4) to Defining a new Variable as Extracted Object from built in Constructor Function [String] ... \n<br>
+                                            <span class=four></span> Press (5) to Defining a new Variable as Extracted Object from built in Constructor Function [Nubmer] ... \n <br>
+                                            <span class=four></span> Press (6) to Defining a new Variable as Extracted Object from built in Constructor Function [Boolean] ... \n <br>
+                                            <span class=four></span> Press any other key to Exit..."); <br><br>
+                                    
+                                        <span class=three></span>if (a0 == "1") { <br> <br>               
+                                        
+                                        
+                                            <span class=four></span>alert("The Prototype of Default Constructor function as follwing :"); <br>
+                                            <span class=four></span>alert(constFunc.prototype); <br>
+                                        
+                                            <span class=four></span>console.log("The Prototype of Default Constructor function as follwing :"); <br>
+                                            <span class=four></span>console.log(constFunc.prototype); <br> <br>
+                                        
+                                        
+                                <span class=one></span>//-------------------------------------------------------------------------------------- <br>
+                                        <span class=three></span>} else if (a0 == "2"){ <br>
+                                        
+                                            <span class=four></span>alert("Welcome to Extracting new Object from [Constructor Function]... "); <br> <br>                
+                                        
+                                            <span class=four></span>var mthd = prompt("Press (1) for [Extracting a new Object {using (new keyword)}] ... \n<br>
+                                                <span class=five></span>Press (2) for [Extracting a new Object {without using (new keyword)}] \n <br>
+                                                <span class=five></span> press any other key to Exit.."); <br> <br>
+                                                
+                                            <span class=four></span>if (mthd == "1") { <br><br>
+                                            
+                                                <span class=five></span>alert("Welcome to [Extracting a new Object {using (new keyword)}]"); <br>
+                                                <span class=five></span>var uName = prompt("Enter your name new Object of Parameter :"); <br> <br>                        
+                            
+                                                <span class=five></span>// Extracting-Defining new Object from Default Constructor Function <br>
+                                                    <span class=six></span> [ConstFunc] using {new keyword}: <br>
+
+                                                <span class=five></span>let user1 = new constFunc(uName); <br><br>
+                                            
+                                                <span class=five></span>// Displaying new Extracted Object: <br>                                
+                                                <span class=five></span>alert("The [New object] as following ... ");  <br>               
+                                                <span class=five></span>alert(user1); <br><br>
+                                            
+                                                <span class=five></span>console.log("The [New object] as following ... ") ; <br>                
+                                                <span class=five></span>console.log(user1); <br>                                            
+                                                <span class=five></span>console.log("======================================="); <br><br>                                                                        
+                                            
+                                                <span class=five></span>// Displaying new Object's Prototype: <br>                                
+                                                <span class=five></span>alert("The [New object Prototype] as following ... "); <br>               
+                                                <span class=five></span>alert(user1.prototype); <br> <br>
+                                            
+                                                <span class=five></span>console.log("The [New object Prototype] as following ... ");  <br>               
+                                                <span class=five></span>console.log(user1.prototype);  <br>                                                                
+                                                <span class=five></span>console.log("======================================="); <br>                   
+                                            
+                                                <span class=five></span>// Checking of Creation Method of new Object : <br><br>
+                                                <span class=five></span>var check = prompt("Press (1) for [instanceof] Method... \n <br>
+                                                    <span class=six></span> Press (2) for [ES6] Method...\n press any other key to exit ..."); <br> <br>
+                                            
+                                                <span class=five></span>if (check == "1") { <br>
+                                                    <span class=six></span>alert("Welcome to [instanceof] Checking Method "); <br>                
+                                                    <span class=six></span>alert("Checking Result as following :");  <br> <br>               
+                        
+                                                    <span class=six></span>if (!(user1 instanceof constFunc)){ <br>
+                                                        <span class=seven></span>alert('The Created Object is [Not by (new keyword)]'); <br>
+                                                        <span class=seven></span>console.log("The Created Object is [Not by (new keyword)]"); <br>
+                                                        <span class=seven></span>throw new Error('The Created Object is [Not by (new keyword)]'); <br><br>                        
+                                                    
+                                                    <span class=six></span> } else { <br>
+                                                        <span class=seven></span>alert('The Created Object is [by new keyword]');<br>
+                                                        <span class=seven></span>console.log("The Created Object is [by new keyword]"); <br>
+                                                        <span class=seven></span>throw new Error('The Created Object is [by new keyword]'); <br>                                                    
+                                                    <span class=six></span>} <br> <br>
+                                                
+                                                <span class=five></span>} else if (check == "2") { <br>
+                                                
+                                                    <span class=six></span>alert("Welcome to [ES6] Checking Method "); <br>                 
+                                                    <span class=six></span>alert("Checking Result as following :");  <br>               
+                        
+                                                    <span class=six></span>if (!new.target){ <br>
+                                                        <span class=seven></span>alert('The Created Object is [Not by (new keyword)]'); <br>
+                                                        <span class=seven></span>console.log("The Created Object is [Not by (new keyword)]"); <br>
+                                                        <span class=seven></span>throw new Error('The Created Object is [Not by (new keyword)]'); <br> <br>                        
+                                                    
+                                                    <span class=six></span>} else { <br>
+                                                        <span class=seven></span>alert('The Created Object is [by new keyword]'); <br>
+                                                        <span class=seven></span>console.log("The Created Object is [by new keyword]"); <br>
+                                                        <span class=seven></span>throw new Error('The Created Object is [by new keyword]'); <br>                                                    
+                                                    <span class=six></span>} <br></br>
+                        
+                                                <span class=five></span>} else { <br>
+                                                    <span class=six></span>alert("Error Entry!"); <br>
+                                                <span class=five></span>} <br>
+                                                                                    
+                        
+                                            <span class=four></span>// ======================================================================= <br>
+
+                                            <span class=four></span>} else if (mthd == "2") { <br><br>
+                                        
+                                                <span class=five></span>alert("Welcome to [Extracting a new Object {Without using <br>
+                                                <span class=five></span>var uName = prompt("Enter your name new Object of Parameter :"); <br>                        
+                                                    <span class=six></span>(new keyword)}]");<br>
+
+                                                <span class=five></span>var uName = prompt("Enter your name new Object of Parameter :"); <br>                        
+                            
+                                                <span class=five></span>// Extracting-Defining new Object from Default Constructor Function<br>
+                                                    <span class=six></span> [ConstFunc] {without using new keyword}: <br> <br>
+                                                
+                                                <span class=five></span>let user2 = constFunc(uName); <br> <br>
+                                            
+                                                <span class=five></span>// Displaying new Extracted Object: <br>                                
+                                                <span class=five></span>alert("The [New object] as following ... "); <br>                
+                                                <span class=five></span>alert(user2); <br> <br>
+                                            
+                                                <span class=five></span>console.log("The [New object] as following ... "); <br>                
+                                                <span class=five></span>console.log(user2); <br>                                            
+                                                <span class=five></span>console.log("======================================="); <br> <br>                                                                        
+                                            
+                                                <span class=five></span>// Displaying new Object's Prototype: <br>                                
+                                                <span class=five></span>alert("The [New object Prototype] as following ... "); <br>                
+                                                <span class=five></span>alert(user2.prototype); <br> <br>
+                                            
+                                                <span class=five></span>console.log("The [New object Prototype] as following ... "); <br>                
+                                                <span class=five></span>console.log(user2.prototype); <br>                                                                
+                                                <span class=five></span>console.log("======================================="); <br> <br>                  
+                                            
+                                                <span class=five></span>// Checking of Creation Method of new Object : <br>                                                    
+                                                <span class=five></span>var check = prompt("Press (1) for [instanceof] Method... \n  <br>
+                                                    <span class=six></span>Press (2) for [ES6] Method...\n press any other key to exit ..."); <br> <br>
+                                            
+                                            
+                                                    <span class=five></span>if (check == "1") { <br>
+                                                        <span class=six></span>alert("Welcome to [instanceof] Checking Method "); <br>               
+                                                        <span class=six></span>alert("Checking Result as following :"); <br> <br>                
+                        
+                                                        <span class=six></span>if (!(user2 instanceof constFunc)){ <br><br>
+                                                            <span class=seven></span>alert('The Created Object is [Not by (new keyword)]'); <br>
+                                                            <span class=seven></span>console.log("The Created Object is [Not by (new keyword)]"); <br>
+                                                            <span class=seven></span>throw new Error('The Created Object is [Not by (new keyword)]'); <br> <br>                        
+                                                    
+                                                        <span class=six></span>} else { <br>
+                                                            <span class=seven></span>alert('The Created Object is [by new keyword]'); <br>
+                                                            <span class=seven></span>console.log("The Created Object is [by new keyword]"); <br>
+                                                            <span class=seven></span>throw new Error('The Created Object is [by new keyword]'); <br>
+                                                        <span class=six></span>} <br> <br>
+                                                
+                                                    <span class=five></span>} else if (check == "2") { <br><br>
+                                                
+                                                        <span class=six></span>alert("Welcome to [ES6] Checking Method "); <br>                
+                                                        <span class=six></span>alert("Checking Result as following :");  <br> <br>               
+                        
+                                                        <span class=six></span>if (!new.target){ <br>
+                                                            <span class=seven></span>alert('The Created Object is [Not by (new keyword)]');<br>
+                                                            <span class=seven></span>console.log("The Created Object is [Not by (new keyword)]"); <br>
+                                                            <span class=seven></span>throw new Error('The Created Object is [Not by (new keyword)]'); <br> <br>                       
+                                                    
+                                                        <span class=six></span>} else { <br>
+                                                            <span class=seven></span>alert('The Created Object is [by new keyword]'); <br>
+                                                            <span class=seven></span>console.log("The Created Object is [by new keyword]"); <br>
+                                                            <span class=seven></span>throw new Error('The Created Object is [by new keyword]'); <br>                                                    
+                                                        <span class=six></span>} <br> <br>
+                        
+                                                    <span class=five></span>} else { <br>
+                                                        <span class=six></span>alert("Error Entry!"); <br>
+                                                    <span class=five></span>} <br>  <br>
+                                                                                                                                            
+                                                <span class=four></span>} else { <br>
+                                                    <span class=five></span>alert("Good Bye!"); <br>
+                                                <span class=four></span>} <br>
+                        
+                                                <span class=four></span>//----------------------------------------------------------------------------<br><br>
+
+                                            <span class=three></span>} else if (a0 == "3") { <br> <br>
+
+                                                <span class=four></span>alert("Welcome to Defining a new Variable as Extracted object<br>
+                                                    <span class=five></span>from built in Constructor Function [Array] ..."); <br> <br>
+                                        
+                                                <span class=four></span>var arr = [],  <br>
+                                                <span class=four></span>strAll = "", <br>
+                                                <span class=four></span>count = prompt("Enter the Array Count");<br> <br>
+                        
+                                                <span class=four></span>alert("Lets Enter your Array elements Below: "); <br>
+                                                
+                                                <span class=four></span>for (i=0 ; i &lt; count; i++){ <br>
+                                                    <span class=five></span>arr[i] = prompt("Enter Array Value nubmer " + (i+1)); <br>
+                                                    <span class=five></span>strAll += arr[i] + "\n ---------------------------\n"; <br>
+                                                <span class=four></span>} <br> <br>
+                        
+                                                <span class=four></span>alert('Your Array Elements as Following :'); <br>                 
+                                                <span class=four></span>alert(strAll); <br>
+                                        
+                                                <span class=four></span>console.log('Your Array Elements as Following :'); <br>                
+                                                <span class=four></span>console.log(strAll); <br>
+                                                <span class=four></span>console.log("--------------------------------------------"); <br><br>
+                                        
+                                        
+                                                <span class=four></span>alert('Your Array [Prototype] as Following :'); <br>                
+                                                <span class=four></span>alert(arr); <br>
+                                        
+                                                <span class=four></span>console.log('Your Array [Prototype] as Following  :'); <br>                
+                                                <span class=four></span>console.log(arr); <br>
+                                                <span class=four></span>console.log("--------------------------------------------"); <br>
+                                                                                
+                                                <span class=three></span>//------------------------------------------------------------------------------------------------<br>
+                                
+                                                <span class=three></span>} else if (a0 == "4") { <br>
+                                                    <span class=four></span>alert("Welcome to Defining a new Variable as Extracted object <br>
+                                                        <span class=five></span>from built in Constructor Function [String] ..."); <br> <b1r>
+                                        
+                                                    <span class=four></span>var str = prompt("Enter your String value ..."); <br>
+                                                                                        
+                                                    <span class=four></span>alert('Your String [Prototype] as Following :'); <br>                 
+                                                    <span class=four></span>alert(str); <br>
+                                        
+                                                    <span class=four></span>console.log('Your String [Prototype] as Following :'); <br>                
+                                                    <span class=four></span>console.log(str); <br>
+                                                    <span class=four></span>console.log("--------------------------------------------"); <br>                                                                        
+                                                <span class=three></span>//---------------------------------------------------------------------------------------------------------<br>
+
+                                            <span class=three></span>} else if (a0 == "5") { <br>
+                                                <span class=four></span>alert("Welcome to Defining a new Variable as <br>
+                                                    <span class=five></span>Extracted object from built in Constructor Function [Number] ..."); <br> <br>
+                                        
+                                                <span class=four></span>var num = parseInt(prompt("Enter your Nubmer value ...")); <br>
+                                                                                        
+                                                <span class=four></span>alert('Your Number [Prototype] as Following :'); <br>                
+                                                <span class=four></span>alert(num.); <br>
+                                        
+                                                <span class=four></span>console.log('Your String [Prototype] as Following :'); <br>                 
+                                                <span class=four></span>console.log(num); <br>
+                                                <span class=four></span>console.log("--------------------------------------------"); <br>
+                                                
+                                            <span class=three></span>//------------------------------------------------------------------------<br><br>
+
+                                    <span class=three></span>} else if (a0 == "6") { <br>
+                                        <span class=four></span>alert("Welcome to Defining a new Variable as Extracted object <br>
+                                            <span class=five></span> from built in Constructor Function [Boolean] ..."); <br>
+                                        
+                                        <span class=four></span>var bol = prompt("Enter your Boolean value ...");  <br>
+                                                                                    
+                                        <span class=four></span>alert('Your Boolean [Prototype] as Following :'); <br>                
+                                        <span class=four></span>alert(bol); <br>
+                                    
+                                        <span class=four></span>console.log('Your Boolean [Prototype] as Following :'); <br>
+                                        <span class=four></span>console.log(bol); <br>
+                                        <span class=four></span>console.log("--------------------------------------------"); <br>                                                
+
+                                    <span class=three></span>//-------------------------------------------------------------------------------------------------<br>
+                                
+                                    <span class=three></span>} else { <br>
+                                        <span class=four></span>alert("Error Entry!"); <br>                        
+                                    <span class=three></span>} <br>  <br>
+                                            
+                                <span class=three></span>var z = prompt("Press (1) to Restart the Application \n <br>
+                                    <span class=four></span> Press any other key to Exit.... "); <br> <br>
+                                            
+                            <span class=two></span>} while (z == "1"); <br>
+                        <span class=one></span>} <br>                                                        
+                        } <br>
+
+                    </code>                    
+                </div> -->
+
+            <!--<script type="text/Javascript" src= "JSOOPPrototypeIntro.js"></script> -->
+
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 19 Video File:</h3>
+
+            <iframe
+                width="100%"
+                height="100%"
+                allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"
+                frameborder="0"
+                preload="yes"
+                src="https://www.youtube.com/embed/watch?v=ShmVl6Khpz8&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=19&controls=0&loop=1&autoplay=1&fs=1"
+            >
+            </iframe>
+
+            <!-- <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\19 JavaScript OOP  Prototype Part 4 Prototype Chain.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS OOP Lesson 19 [Prototype {Part 4} Prototype Chain] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

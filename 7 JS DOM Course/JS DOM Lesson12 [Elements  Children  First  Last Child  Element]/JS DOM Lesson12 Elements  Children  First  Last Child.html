@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS OOP Lesson 12 [Element First Last Child/ Element child]</title>
+    <link
+      rel="stylesheet"
+      href="JS DOM Lesson12 Elements  Children  First  Last Child.css"
+      media="all"
+    />
+    <style>
+      .hidden {
+        visibility: hidden;
+      }
+    </style>
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JS DOM Lesson 12 [Element First Last Child / Element Child]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS OOP main Topics">
+            JS DOM Lesson12 [Element First Last Child / Element Child ] Main
+            Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMCon"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Concept"
+          >
+            JS DOM Lesson12 [Element First Last Child / Element Child] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMImp"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Importance & Benefits"
+          >
+            JS DOM Lesson12 [Element First Last Child/ Element Child] Importance
+            & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMSyntx"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Syntax"
+          >
+            JS DOM Lesson12 [Element First Last Child/ Element Child] Syntax &
+            Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMPract"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Practical Applications"
+          >
+            JS DOM Lesson12 [Element First Last Child/ Element Child] Practical
+            Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS DOM Course
+      <span> JS DOM [Element First Last Child / Element Child] </span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          JS DOM [Element First Last Child / Element Child] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>JS DOM [Element First Last Child/ Element Child ] Concept.</li>
+
+            <li>
+              JS DOM [Element First Last Child / Element Child ] Importance &
+              Benefits.
+            </li>
+
+            <li>JS DOM [Element First Last Child / Element Child ] Syntax .</li>
+
+            <li>
+              JS DOM [Element First Last Child / Element Child ] Practical
+              Application.
+            </li>
+          </ol>
+
+          <p>&gt; Main new Methods in this lesson are as following :</p>
+          <ul>
+            <li>Controling Child Nodes:</li>
+            <ol>
+              <li>{elem.firstChild}; == {elem.childNodes[0]}</li>
+
+              <li>{elem.lastChild};</li>
+            </ol>
+
+            <li>Controling Child Elements :</li>
+            <ol>
+              <li>{elem.firstElementChild}; == {elem.children[0]}</li>
+
+              <li>{elem.lastElementChild};</li>
+              s
+            </ol>
+          </ul>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMCon" id="JSDOMCon">
+        <header>
+          <h3>JS DOM [Element First Last Child] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [Element First Last Child/ Element Child]: There are
+          much more Method to Control each Parent element's children &
+          ChildNodes .
+        </p>
+
+        <p>
+          =&gt; JS HTML DOM [Element First Last Child/ Element Child]:
+          Differeneces between {first/last child} & {first/last element child}
+          as following: <br />
+        </p>
+        <ul>
+          <li>
+            {first/last child} => to Control Parent Element's first/last [Child
+            Nodes]
+          </li>
+
+          <li>
+            {first/last element child} => to Control Parent Element's first/last
+            [Element Child] only
+          </li>
+
+          <li>
+            => {first child/elemnt child} has simmiler previous methods as
+            following:
+          </li>
+          <ol>
+            <li>
+              [elem.firstChild;] => can be resached by {elem.childNodes[0]}
+              Method
+            </li>
+            <li>
+              [elem.firstChildElement;] => can be reached by {elem.children[0]}
+              Method
+            </li>
+          </ol>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSDOMImp" id="JSDOMImp">
+        <header>
+          <h3>JS DOM [Element First Last Child] Importance & Benefits :</h3>
+        </header>
+
+        <p>
+          JS DOM [ElementsClassList Add Remove Toggle] gives us the Following
+          Features : <br />
+        </p>
+        <ul>
+          <li>
+            It is very Helpful when dealing with parent element's child elements
+            & Child Nodes by several Functions of (get -set) full Control
+          </li>
+
+          <li>
+            gives more advanced features to pragrmaing functions speacially in
+            Events & Conditional Functions
+          </li>
+
+          <li>
+            An Additional Methods for dealing with specific children with more
+            specific child Node & Child elment index.
+          </li>
+
+          <li>
+            Great Benefits specially when dealing with the {last index of
+            Children - last child Nodes} (in case of unknown length of Children)
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMSyntx" id="JSDOMSyntx">
+        <header>
+          <h3>
+            JS DOM [Element First Last Child / Element child] Syntax & Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [Children & childNodes} by {several methods} as
+          following Conceptual Syntax as following :
+        </p>
+
+        <div id="Code" class="Code">
+          [*] HTML file (parent element , children elements, child Nodes)
+          example: <br />
+
+          <span class="one"></span> &lt;div id='main' class= "main"&gt; <br />
+          <span class="two"></span> This is a Text Node <br />
+          <span class="two"></span> &lt;h2&gt; This is heading Element
+          &lt;/h2&gt; <br />
+          <span class="two"></span> &lt;p&gt; This is Paragragh Element
+          &lt;/p&gt; <br />
+          <span class="two"></span> This is a Text Node <br />
+          <span class="two"></span> &lt;! -- This is a Commment Node --&gt;
+          <br />
+          <span class="one"></span> &lt;/div&gt; <br />
+
+          //=========================================================== <br />
+          <br />
+
+          [*]// Defining a variable with Parent Element [to get it's Childrens,
+          child Nodes] {by Different methods}: <br />
+
+          <span class="one"></span>var PElementVar =
+          document.querrySelector('div'); <br />
+          <span class="one"></span>var PElementVar =
+          document.getElementsByTagName('div'); <br />
+          <span class="one"></span>var PElementVar =
+          document.getElementById('main'); <br />
+          <span class="one"></span>var PElementVar =
+          document.getElementsClassName('main'); <br />
+
+          //=========================================================== <br />
+          <br />
+
+          [*]// Dealing with First - Last Child(child Nodes) {by firstChild -
+          lastChild }: <br />
+
+          // [A] Get Parent element's first Childeren element :<br />
+          <br />
+          // 1) using {elem.firstChild}; new method : <br />
+          <span class="one"></span> PElementVar.firstChild; <br />
+          <br />
+
+          // 2) using {elem.childNodes[0]}; old Method: <br />
+          <span class="one"></span> PElementVar.childNodes[0]; <br />
+          <br />
+
+          //=========================================================== <br />
+          <br />
+
+          // [B] Get Parent element's last Childeren element :<br />
+          <br />
+          // *) using {elem.lastChild}; : <br />
+          <span class="one"></span> PElementVar.lastChild; <br />
+          <br />
+
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          [*]// Dealing with First - Last Element Child(child Element) {by
+          firstElmentChild - lastElementChild }: <br />
+
+          // [A] Get Parent element's first Element Child :<br />
+          <br />
+          // 1) using {elem.firstElementChild}; new method : <br />
+          <span class="one"></span> PElementVar.firstElementChild; <br />
+          <br />
+
+          // 2) using {elem.children[0]}; : <br />
+          <span class="one"></span> PElementVar.children[0]; <br />
+          <br />
+
+          //=========================================================== <br />
+          <br />
+
+          // [B] Get Parent element's last Element Child :<br />
+          <br />
+          // *) using {elem.lastElementChild}; : <br />
+          <span class="one"></span> PElementVar.lastElementChild; <br />
+          <br />
+
+          //=========================================================== <br />
+          <br />
+
+          <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMPract" id="JSDOMPract">
+        <header>
+          <h3>
+            JS DOM [Element First Last Child - element child] General Practical
+            Applications :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Here one Major Application will include following main [ 2
+          Paths] of the : &gt;&gt; <br />
+        </p>
+
+        <ul>
+          <li>
+            {Path 1} => Dealing with [Child Element]: including Following (2)
+            Metods:
+          </li>
+          <ol>
+            <li>{Get access to (First Children Elements)} by (2) Methods :</li>
+            <ul>
+              <li>New Method => {element.firstElementChild};</li>
+              <li>Old Method => {element.children[0]};</li>
+            </ul>
+
+            <li>
+              {Get access to (Last Children Elements)} by (1) Method only :
+            </li>
+            <ul>
+              <li>New Method => {element.lastElementChild};</li>
+            </ul>
+          </ol>
+
+          <li>
+            {Path 2} => Dealing with [Child Nodes]: including Following (2)
+            methods:
+          </li>
+          <ol>
+            <li>{Get access to (First Child Nodes)} by (2) Methods :</li>
+            <ul>
+              <li>New Method => {element.firstChild};</li>
+              <li>Old Method => {element.childNodes[0]};</li>
+            </ul>
+
+            <li>{Get access to (Last Child Nodes)} by (1) Method only :</li>
+            <ul>
+              <li>New Method => {element.lastChild};</li>
+            </ul>
+          </ol>
+        </ul>
+
+        <br />
+
+        <section id="sec" class="secClass">
+          <h2>Heading</h2>
+
+          <div>This is Main div</div>
+
+          <p id="pId" class="class1 hidden">This is the text of Paragaraph</p>
+
+          <!-- This is a child Node comment of HTML-->
+
+          <button id="btn0" class="btn" onclick="test1()">
+            Show/hide Paragraph
+          </button>
+        </section>
+        <br />
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <script src="ElemChildrenFirstLastChild.js"></script>
+
+        <button class="btn" onclick="test()">
+          Click to Start [Elements child - child Nodes] Application
+        </button>
+
+        <br />
+
+        <hr />
+        <button id="btn" class="btn" onclick="display()">
+          Display JS Code
+        </button>
+
+        <div class="JSOOPObjConstTraining">
+          <code>
+            // HTML Codes: <br />
+            <span class="one"></span> &lt;textarea id="txtarea"
+            class="txtarea"&gt;<br />
+            <span class="one"></span> &lt;/textarea&gt; <br /><br />
+
+            <span class="one"></span> &lt;button class="btn"
+            onclick=test"()"&gt;<br />
+            <span class="two"></span> Click to Start [Testing JS DOM [child
+            (Child Nodes) - child element ] Application <br />
+            <span class="one"></span> &lt;/button&gt; <br /><br />
+
+            <span class="one"></span> &lt;script src=".js"&gt;<br />
+            <span class="one"></span> &lt;/script&gt; <br /><br />
+
+            =======================================================<br /><br />
+
+            /* global document, alert, prompt */ <br />
+            /* JS DOM [Element First Last (Child - child element) ] */ <br />
+            template-string-converter.enable; <br /><br />
+
+            <textarea id="SourceCode" readonly></textarea>
+          </code>
+        </div>
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 12 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=BB4gtzqj6Z8&list=PLDoPjvoNmBAxx97QDMOCpzxbu1ZHJ4i7i&index=12&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\HTML JS Dom\12 JS HTML Dom Elements  Children  First  Last Child  Element.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert(
+        "Welcome to JS DOM Lesson12 [Element First Last (Child - child Element)]  "
+      );
+    </script>
+  </body>
+</html>

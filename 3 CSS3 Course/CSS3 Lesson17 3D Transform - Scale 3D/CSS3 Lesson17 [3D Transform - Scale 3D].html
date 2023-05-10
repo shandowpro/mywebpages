@@ -1,0 +1,654 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 17 [3D Transform - Scale3D()] </title>
+    <link rel="stylesheet" href="CSS3 Lesson17 [3D Transform - Scale 3D].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 17 [3D Transform - Scale3D()]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 3D Transform - Scale3D() main Topics">
+                [ 3D Transform - Scale3D() ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to 3D Transform - Scale3D() [3D Transform - Scale3D() ] Concept">
+                [ 3D Transform - Scale3D() ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to 3D Transform - Scale3D() [3D Transform - Scale3D() ] Importance & Benefits">
+                [ 3D Transform - Scale3D() ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to 3D Transform - Scale3D() [3D Transform - Scale3D() ] Syntax">
+                [ 3D Transform - Scale3D() ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to 3D Transform - Scale3D() [3D Transform - Scale3D() ] Practical Applications">
+                [ 3D Transform - Scale3D() ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 17 [3D Transform - Scale3D() ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                3D Transform - Scale3D() Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [3D Transform - Scale3D()] Concept. </li>                       
+                    
+                    <li> [3D Transform - Scale3D()] Importance & Benefits. </li>
+
+                    <li> [3D Transform - Scale3D()] Syntax [Exmaple]. </li>
+                    
+                     <li> [3D Transform - Scale3D()] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    
+                    <ul>
+                        <li> Basic concept about 3D Scaling property as a advanced method to control all 3 dimensions Properties of Scaling Element  </li> 
+                    </ul>                   
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [3D Transform - Scale3D()] Concept: </h3>
+            </header>
+                        
+            <p> =&gt; [3D Transform - Scale3D()] : This is one of CSS3 advancd Properties to control the Scaling Element by assinging all 3 dimension of with X , Y , Z . <br>
+                                
+            <p> =&gt; [3D Transform - Scale3D()] => It is containing following {3} aspects/values/sub propeties [one each Time / two each / All]  . <br> 
+
+                <ul>                    
+                    <li> [X]  => [ ScaleX : Horizontal Scaling value => (+/-): Scaling over the Horizontal Axie ( ) ] </li>
+                    <li> [Y]  => [ ScaleY : Vertical Scaling value => (+/-): Scaling over the Vertical Axie (  ) ] </li>
+                    <li> [Z]  => [ ScaleZ : 3D (stretching ) Scaling value => (+/-): Scaling over the the Third Axie (  ) ] </li>
+                    
+                </ul>
+                
+                                                
+            <p> =&gt; {3D Scaling proepty can be assing by one of the Scaling value or more at once  }   <br>                
+    
+            <p> =&gt; {3D Scaling property {X,Y,Z} for properly activation => needs following cosiders  }
+                <ol>
+                    <li>  Parent Element Container : Perspective property  </li>
+                    <li>  Another Transform property {Rotatng , Transition}  </li>
+                </ol>
+                
+                <br>                
+                            
+            </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+            <section class="CSS3Imp" id="CSS3Imp">
+                <header>
+                    <h3> [3D Transform - Scale3D() ] Importance & Benefits: </h3>
+                </header>
+                
+                <p> =&gt; [3D Transform - Scale3D() ] : This Advanced property enabling the following features : <br>            
+                    <ul>                                                                
+                        <li> This Scale3D property's will gives great effect [sensivity] when using with another Transforming properties </li>
+                        <li> This Scale3D property's will gives great effect [great animation effects- stretching Effect ] when using with animation property  </li>  
+                        <li> Using the [3D property() will gives a control of all Dimensions of Scaling at the same time , so it is better than the ordinary 2D Scaling</li>   
+                        <li> 3D Scaling property will provide unique effects specilaly when merged with other 3D Transform properties animations effects {which will be studied will later lessons}  </li>
+                        <li> This Property is will be great in Designing nice Animated Templates specilaly when using with ( Other 2d Properties - Animation Property- will be taken in future) <li>
+                    </ul>                                
+                 
+            </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ 3D Transform - Scale3D()] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [3D Transform - Scale3D()] Syntax as following :<br><br>                                                    
+                
+                    <span class=two></span> //a)  [HTML] file  : <br>                                          
+                
+                        <span class=three></span> &lt; img src='' alt='' &gt;  
+                       
+                        <br> <br>                                        
+                // ------------------------------------------------------------------------------ <br><br>
+                
+                <span class= one></span> // A) [3D - Scale3D()] with Rotating Effect {+} => [One X-dimension only] Syntaxes:  <br>
+                    <span class=two></span> // A1) [ ScaleX(+Value] : {Example1} / [Scaling over Horizontal (X) by 1.5 times + Rotating 60deg ]=> Syntax: <br>                                  
+                        
+                        <span class=three></span> .container {  <br>                                                  
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> Perspective: 600px ; <br>                                                                                                                              
+                        <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img {  <br>                                                  
+                            <span class=four></span> margin: 40px; <br>                                                                          
+                            <span class=four></span> padding: 3px; <br>                                                                          
+                            <span class=four></span> width: 400px; <br>                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> transition: all 1s ease-in-out; <br>
+                            <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: Scale3D(+X, 0 , 0) rotate(60deg); <br>                        
+                            <span class=three></span>  }  <br>                                              
+                            // ------------------------------------------------------------------------------ <br><br>                                                            
+                    <span class=two></span> // A2) [ ScaleX(-Value] : {Example1} / [Scaling over Horizontal (X) by 1.5 times + Rotating 60deg ]=> Syntax: <br>
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: Scale3D(-X, 0 , 0) rotate(60deg); <br>                                                        
+                        <span class=three></span>  }  <br>                                                                  
+                // ------------------------------------------------------------------------------ <br><br>                                                                                                                
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                                
+                <span class= one></span> // B) [3D - Scale3D()] with Rotating Effect {+} => [One Y-dimension only] Syntaxes:  <br>
+                    <span class=two></span> // B1) [ ScaleY(+Value] : {Example3} / [Scaling over Vertical (Y) by 1.5 times + Rotating 60deg ]=> Syntax: <br> 
+                        
+                        <span class=three></span> .container {  <br>                                                  
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> Perspective: 600px ; <br>                                                                                                                              
+                        <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img {  <br>                                                  
+                            <span class=four></span> margin: 40px; <br>                                                                          
+                            <span class=four></span> padding: 3px; <br>                                                                          
+                            <span class=four></span> width: 400px; <br>                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> transition: all 1s ease-in-out; <br>
+                            <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: Scale3D(0 , +Y , 0) rotate(60deg); <br>                        
+                            <span class=three></span>  }  <br>                                              
+                            // ------------------------------------------------------------------------------ <br><br>                                                            
+                    <span class=two></span> // B2) [ ScaleY(-Value] : {Example4} / [Scaling over Horizontal (Y) by 1.5 times + Rotating 60deg ]=> Syntax: <br>
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: Scale3D(0 , -Y , 0) rotate(60deg); <br>                                                        
+                        <span class=three></span>  }  <br>                                                                  
+                // ------------------------------------------------------------------------------ <br><br>                                                                                                                
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                                
+                <span class= one></span> // C) [3D - Scale3D()] with Rotating Effect {+} => [One Z-dimension only] Syntaxes:  <br>
+                    <span class=two></span> // C1) [ ScaleZ(+Value] : {Example5} / [Scaling over stretching (Z) by 1.5 times + Rotating 60deg ]=> Syntax: <br> 
+                        
+                        <span class=three></span> .container {  <br>                                                  
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> Perspective: 600px ; <br>                                                                                                                              
+                        <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img {  <br>                                                  
+                            <span class=four></span> margin: 40px; <br>                                                                          
+                            <span class=four></span> padding: 3px; <br>                                                                          
+                            <span class=four></span> width: 400px; <br>                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> transition: all 1s ease-in-out; <br>
+                            <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: Scale3D(0 , 0 , +Z) rotate(60deg); <br>                        
+                            <span class=three></span>  }  <br>                                              
+                            // ------------------------------------------------------------------------------ <br><br>                                                            
+                    <span class=two></span> // C2) [ ScaleY(-Value] : {Example6} / [Scaling over stretching (Z) by 1.5 times + Rotating 60deg ]=> Syntax: <br>
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: Scale3D(0 , 0 ,-Z) rotate(60deg); <br>                                                        
+                        <span class=three></span>  }  <br>                                                                  
+                // ------------------------------------------------------------------------------ <br><br>                                                                                                                
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                
+                <span class= one></span> // D) [3D - Scale3D(+X , +Y , +Z)] with Rotating Effect {+} => [All 3D-dimension only] Syntaxes:  <br>
+                    <span class=two></span> // D1) [ Scale3d(+Value] : {Example7} / [Scaling over All (3D) by 1.5 times + Rotating 60deg ]=> Syntax: <br> 
+                        
+                        <span class=three></span> .container {  <br>                                                  
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> Perspective: 600px ; <br>                                                                                                                              
+                        <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img {  <br>                                                  
+                            <span class=four></span> margin: 40px; <br>                                                                          
+                            <span class=four></span> padding: 3px; <br>                                                                          
+                            <span class=four></span> width: 400px; <br>                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> transition: all 1s ease-in-out; <br>
+                            <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: Scale3D(+X , +Y , +Z) rotate(60deg); <br>                        
+                        <span class=three></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>                                                            
+                    <span class=two></span> // D2) [ Scale3d(-X, -Y, -Z] : {Example8} / [Scaling over All (3D) by 1.5 times + Rotating 60deg ]=> Syntax: <br>
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform: Scale3D(-X , -Y ,-Z) rotate(60deg); <br>                                                        
+                        <span class=three></span>  }  <br>                                                                  
+                // ------------------------------------------------------------------------------ <br><br>                                                                                                                
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                
+                    
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="JSDOMPract">
+
+            <header>
+                <h3> [3D Transform - Scale3D()] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following is the Applied example of [3D-Transform: ScaleX,Y,Z(+/-Value px)] syntax : &gt;&gt; <br>
+                <ul>
+                    <li> (3) Fieldsets contain (2-6) section (each section is by Certain by animation Methods) for each as following:  </li> 
+                    
+                    <ol>
+                        <li> First Fieldset [Scale3D(+/-X , 0 , 0)] + [Rotating +60 deg] :</li>
+                            <ul>
+                                <li> First Section => +Value px {Horizontal Scaling [+Width] }   </li>                                         
+                                <li> Second Section => -Value px {Horizontal Scaling [-Width]}   </li>                                                                         
+                            </ul>
+                        
+                        <li> Second Fieldset [Scale3D(0, +/-Y , 0)] + [Rotating +60 deg] :</li>
+                            <ul>
+                                <li> First Section => +Value px {Vertical Scaling [+Height] }   </li>                                         
+                                <li> Second Section => -Value px {Vertical Scaling [-Height]}   </li>                                                                                
+                            </ul>
+                            
+                        <li> Third Fieldset [Scale3D(0 , 0 , +/-Z)] + [Rotating +60 deg] :</li>
+                            <ul>
+                                <li> First Section => +Value px {3D- Scaling - Stretching in }   </li>                                         
+                                <li> Second Section => -Value Degree {3D- Scaling - Stretching out }   </li>                                                                                                                                         
+                            </ul>                                                
+                            
+                        <li> Fourth Fieldset [Scale3D(+/-X , +/-Y , +/-Z )] + [Rotating +60 deg] :</li>
+                            <ul>
+                                <li> First Section => 3D-Scaling {All + Values}   </li>                                         
+                                <li> Second Section => 3D-Scaling { All - Values}   </li>                                                                                                                                         
+                                <li> Third Section => 3D- Scaling { X+, Y+, Z-}   </li>                                                                                                                                         
+                                <li> Fourth Section => 3D- Scaling { X+, Y-, Z-}    </li>                                                                                                                                         
+                                <li> Fifth Section => 3D- Scaling { X-, Y-, Z+}    </li>                                                                                                                                         
+                                <li> Sixth Section => 3D- Scaling { X-, Y+, Z+}    </li>                                                                                                                                         
+                            </ul>                                                
+                    </ol>                    
+                </ul>                
+                <br>
+                <hr>
+        <!-- ========================================================================= -->
+        
+            <fieldset class='ScaleX'>  
+                <legend> 3D-Transform: Scale3D(+/-X , 0 , 0) => First Mode {Scaling by only X dimenison Mode} + [Rotating: 60 deg ] </legend>
+                        
+                <section class='positiveValue'>                
+                    <h3> Following sections will be X-Scaled property by [positive value Degree] + [Rotating: 60 deg ]  </h3>
+                    
+                    <div class='pValue1'>
+                        <h4> This Section will be {Scaled} into Horizontal dimension {Width} [{Scale:1.5X, 0Y , 0Z} + rotate(60deg)] </h4>                 
+                    </div> <br>                                                                            
+                    
+                    <div class='pValue2'>
+                        <h4> This Section will be {Scaled} into Horizontal dimension {Width} by [{Scale:1.7X, 0Y , 0Z} + rotate(-60deg)] </h4>                                     
+                    </div> <br>
+                                        
+                </section>                                
+                
+                <hr><br> <br>                                    
+                
+                <section class='negativeValue'>
+                    
+                    <h3> Following sections will be X-Scaled property by [Negative value Degree] + [Rotating: 60 deg ] </h3>
+                                                                                                                              
+                    <div class='nValue1'>
+                        <h4> This Section will be {Scaled} into Horizontal dimension { -Width } by [{Scale:-1.5X, 0Y , 0Z} + rotate(60deg)] </h4>                                         
+                    </div> <br>                                                                            
+                    
+                    <div class='nValue2'>
+                        <h4> This Section will be {Scaled} into Horizontal dimension { -Width } by [{Scale:-1.7X, 0Y , 0Z} + rotate(-60deg)] </h4>                                     
+                    </div> <br>                                                                                                                                    
+                                                                                                                                                                            
+                </section>                
+                <hr>                
+                <hr>                
+            </fieldset>                                                                
+            <hr>
+            <hr>
+        <!-- ========================================================================= -->                                              
+        <!-- ========================================================================= -->                                                                      
+            
+            <fieldset class='ScaleY'>  
+                <legend> 3D-Transform: Scale3D(0 , +/-Y , 0 ) => Second Mode {Scaling by only Y dimenison Mode} + [Rotating: 60 deg ] </legend>
+                        
+                <section class='positiveValue'>                
+                    <h3> Following sections will be Y-Scaled property by [positive value Degree] + [Rotating: 60 deg ] </h3>
+                    
+                    <div class='pValue1'>
+                        <h4> This Section will be {Scaled} into Veritcal dimension { +Height } by [{Scale:0X, 1.5Y , 0Z} + rotate(60deg)] </h4>                 
+                    </div> <br>                                                                            
+                    
+                    <div class='pValue2'>
+                        <h4> This Section will be {Scaled} into Veritcal dimension { +Height } by [{Scale:0X, 1.7Y , 0Z} + rotate(-60deg)] </h4>                                     
+                    </div> <br>
+                    
+                </section>                                
+                
+                <hr><br> <br>                                    
+                
+                <section class='negativeValue'>
+                    
+                    <h3> Following sections will be Y-Scaled property by [Negative value Degree] + [Rotating: 60 deg ] </h3>
+                    
+                    <div class='nValue1'>
+                        <h4> This Section will be {Scaled} into Veritcal dimension { -Height } by [{Scale:0X, -1.5Y , 0Z} + rotate(60deg)] </h4>                                         
+                    </div> <br>                                                                            
+                    
+                    <div class='nValue2'>
+                        <h4> This Section will be {Scaled} into Veritcal dimension { -Height } by [{Scale:0X, -1.7Y , 0Z} + rotate(-60deg)]</h4>                                                             
+                    </div> <br>                                                                                                                                    
+                                                                                                                                                                            
+                </section>                
+                <hr>                
+                <hr>                
+            </fieldset>                                                                
+            <hr>
+            <hr>            
+        <!-- ========================================================================= -->                                              
+        <!-- ========================================================================= -->                                              
+            
+            <fieldset class='ScaleZ'>  
+                    <legend> 3D-Transform: Scale3D(0 , 0 , +/-Z ) => Third Mode {Scaling by only Z dimenison Mode} + [Rotating: 60 deg ]  </legend>
+                            
+                    <section class='positiveValue'>                
+                        <h3> Following sections will be Z-Scaled 3D property by [positive value Degree]  </h3>
+                        
+                        <div class='pValue1'>
+                            <h4> This Section will be {Scaled 3D} into Stretching dimension {Stretching In} by [{Scale:0X, 0Y , 1.5Z} + rotate(60deg)] </h4>                 
+                        </div> <br>                                                                            
+                        
+                        <div class='pValue2'>
+                            <h4> This Section will be {Scaled 3D} into Stretching dimension { Stretching In } by [{Scale:0X, 0Y , 1.7Z} + rotate(-60deg)] </h4>                                     
+                        </div> <br>
+                        
+                    </section>                                
+                    
+                    <hr><br> <br>                                    
+                    
+                    <section class='negativeValue'>
+                        
+                        <h3> Following sections will be Z-Scaled property by [Negative value Degree]  </h3>
+                        
+                        <div class='nValue1'>
+                            <h4> This Section will be {Scaled 3D} into Stretching dimension {Stretching out} by [{Scale:0X, 0Y , -1.5Z} + rotate(60deg)]  </h4>                                     
+                        </div> <br>                                                                            
+                        
+                        <div class='nValue2'>
+                            <h4> This Section will be {Scaled 3D} into Stretching dimension {Stretching Out} by [{Scale:0X, 0Y , -1.7Z} + rotate(-60deg)]  </h4>                                                             
+                        </div> <br>                                                                                                                                    
+                                                                                                                                                                                
+                    </section>                
+                    <hr>                
+                    <hr>                
+                </fieldset>                                                                
+            <hr>
+            <hr>            
+        <!-- ========================================================================= -->                                              
+        <!-- ========================================================================= -->                                              
+
+            
+            <fieldset class='ScaleAll'>  
+                    <legend> 3D-Transform: Scale3D(+/-X , +/-Y , +/-Z ) => Fourth Mode {Scaling by only 3D dimenison Mode} </legend>
+                            
+                    <section class='AllPValue'>                
+                        <h3> Following sections will be Scaled - 3d property by [all dimensions values +]  </h3>
+                        
+                        <div class='AllPValue1'>
+                            <h4> This Section will be {Scaled 3d} into [+Width +height +Stretching in] dimension [{Scale:1.5X, 1.5Y , 1.5Z} + rotate(60deg)] </h4>                 
+                        </div> <br>                                                                            
+                                                                
+                    </section>                                
+                    <!-- ------------------------------------------------------------------------ -->
+                    
+                    <section class='AllNValue'>                
+                        <h3> Following sections will be Scaled - 3d property by [all dimensions values -]  </h3>
+                        
+                        <div class='AllNValue1'>
+                            <h4> This Section will be {Scaled 3D} into [-Width -height  -Stretching out] dimension  by [{Scale:-1.5X, -1.5Y , -1.5Z} + rotate(60deg)] </h4>                 
+                        </div> 
+                    </section>                                
+                    <br> <br>                                                                                                                                       
+                    
+                    <!-- ------------------------------------------------------------------------ -->                
+                    
+                    <section class='PNP'>                
+                        <h3> Following sections will be Scaled - 3d property by [+X, -Y, +Z]  </h3>
+                        
+                        <div class='PNPValue1'>
+                            <h4> This Section will be {Scaled 3D} into [+Width -height  +Stretching in] by dimension [{Scale:+1.5X, -1.5Y , +1.5Z} + rotate(60deg)] </h4>                 
+                        </div> <br>                                                                                                                                      
+                    </section>                                
+                    <br> <br>
+                    <!-- ------------------------------------------------------------------------ -->
+                    
+                    <section class='NPN'>                
+                        <h3> Following sections will be Scaled - 3d property by [-X, +Y, -Z]  </h3>
+                        
+                        <div class='NPNValue1'>
+                            <h4> This Section will be {Scaled 3D} into [-Width +height  -Stretching Out] by dimension [{Scale:-1.5X, +1.5Y , -1.5Z} + rotate(60deg)] </h4>                 
+                        </div> <br>                                                                                                                                      
+                    </section>                                
+                    <!-- ------------------------------------------------------------------------ -->
+                                    
+                    <br> <br>                                    
+                    
+                    <section class='PPN'>                
+                        <h3> Following sections will be Scaled - 3d property by [+X, +Y, -Z]  </h3>
+                        
+                        <div class='PPNValue1'>
+                            <h4> This Section will be {Scaled 3D} into [+Width +height  -Stretching out] by dimension [{Scale:+1.5X, +1.5Y , -1.5Z} + rotate(60deg)]</h4>                 
+                        </div> <br>                                                                                                                                      
+                    </section>                                
+                    <!-- ------------------------------------------------------------------------ -->
+                                    
+                    <br> <br>                                    
+                    
+                    <section class='NNP'>                
+                        <h3> Following sections will be Scaled - 3d property by [-X, -Y, +Z]  </h3>
+                        
+                        <div class='NNPValue1'>
+                            <h4> This Section will be {Scaled 3D} into [-Width -height  +Stretching in] by dimension [{Scale:-1.5X, -1.5Y , +1.5Z} + rotate(60deg)] </h4>                 
+                        </div> <br>                                                                                                                                      
+                    </section>                                
+                    <!-- ------------------------------------------------------------------------ -->
+                                    
+                    <section class='PNN'>                
+                        <h3> Following sections will be Scaled - 3d property by [+X, -Y, -Z]  </h3>
+                        
+                        <div class='PNNValue1'>
+                            <h4> This Section will be {Scaled 3D} into [+Width -height  -Stretching out] by dimension [{Scale: +1.5X, -1.5Y , -1.5Z} + rotate(60deg)] </h4>                 
+                        </div> <br>                                                                                                                                      
+                    </section>                                
+                    <!-- ------------------------------------------------------------------------ -->
+                                    
+                    <br> <br>                                    
+                    
+                    <hr>                
+                    <hr>                
+                </fieldset>                                                                
+            <hr>
+            <hr>            
+        <!-- ========================================================================= -->                                              
+        <!-- ========================================================================= -->                                                                                     
+            <hr>
+            <hr>                                           
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 17 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=YdB5E98b9qY&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=17&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\17  Css3  - 3D Transform - Scale 3D.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 17 [3D Transform - Scale3D() ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

@@ -1,0 +1,1004 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 29 [CSS3 Lesson29 Align Items ¦ Align Content] </title>
+    <link rel="stylesheet" href="CSS3 Lesson29 Align Items ¦ Align Content.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 29 [CSS3 Align Items ¦ Align Content]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to CSS3 Align Items ¦ Align Content main Topics">
+                [ CSS3 Align Items ¦ Align Content ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to CSS3  Align Items ¦ Align Content [CSS3  Align Items ¦ Align Content ] Concept">
+                [ CSS3 Align Items ¦ Align Content ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to CSS3  Align Items ¦ Align Content [CSS3 Align Items ¦ Align Content ] Importance & Benefits">
+                [ CSS3 Align Items ¦ Align Content ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to CSS3  Align Items ¦ Align Content [CSS3  Align Items ¦ Align Content ] Syntax">
+                [ CSS3 Align Items ¦ Align Content ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to CSS3  Align Items ¦ Align Content [CSS3 Align Items ¦ Align Content ] Practical Applications">
+                [ CSS3 Align Items ¦ Align Content ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 29 [CSS3 Align Items ¦ Align Content ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                CSS3 Lesson29 Align Items ¦ Align Content Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [CSS3 Lesson29 Align Items ¦ Align Content] Concept. </li>                       
+                    
+                    <li> [CSS3 Lesson29 Align Items ¦ Align Content] Importance & Benefits. </li>
+
+                    <li> [CSS3 Lesson29 Align Items ¦ Align Content] Syntax [Example]. </li>
+                    
+                     <li> [CSS3 Lesson29 Align Items ¦ Align Content] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>                    
+                    <ul>
+                        <li> Basic concept about {align-items: stretch , center , flex-start, flex-end , baseline} </li> 
+                        <li> Basic concept about {align-content: stretch , center , flex-start, flex-end , space-between ,  space-around} </li>
+                    </ul>                   
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class=CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [CSS3 Lesson29 Align-Items ¦ Align-Content] Concept: </h3>
+            </header>
+                      
+                <p> {Align-Items ¦ Align-Content}: These properties are allocated to the parent Container (Parent container => part:3) <br>
+                                                                                                    
+                <ul>
+                    <li>  First (Align-Items) :  <br>
+                                        
+                        <p> [Align-Items] => This property  to align the elements inside the parent container {Vertically}, with taking consideration of {child element max-Height  }     <br>
+                                    
+                        <p> [Align-Items] => The default value is : {stretch} <br>
+                        
+                        <p> [Align-Items] => This property will make childern show as their content height {different in height}  <br>
+                            
+                        <p> [Align-Items] => This property is Requiring following conditions:  <br>
+                            <ol>
+                                <li>  Parent Container => {display: flex} to be activated  . </li>                         
+                                <li>  Child element => {max-height: #Value} To not filling the whole Container height . </li>
+                            </ol>
+                            
+                        <p> [Align-Items] => This property can be assinged wtih one following values : <br>
+                            <ol>
+                                <li> {Stretch} : To make children Elements Stretching thrugh it's entire height  </li>
+                                <li> {flex-start} : To make children Elements Stretching thrugh it's entire height  </li>
+                                <li> {flex-end} : To make children Elements Stretching thrugh it's entire height  </li>
+                                <li> {center} : To make children Elements Stretching through it's entire height  </li>
+                                <li> {baseline} : To make children Elements Stretching according (Items baseline)  </li>                           
+                            </ol>                
+                    </li>
+                    <!-- ------------------------------------------------------ -->
+
+                    <li>  Second (Align-Content) :  <br>
+
+                        <p> [Align-Content] => Is one of the (Parent container => part:3)   <br>
+                            
+                        <p> [Align-Content] => This property to align the elements inside the parent container {Vertically}, with taking consideration of {child element Height + wraping Effect }  <br>
+                                
+                        <p> [Align-Content] => The default value is : {stretch} <br>
+                            
+                        <p> [Align-Content] => This property is Requiring following conditions:  <br>
+                            <ol>
+                                <li>  Parent Container => {display: flex} to be activated  . </li>                         
+                                <li>  Parent Container => {flex-wrap: warp} To make children element wraping to display the aligning content effect. </li>
+                                <li>  Max children Elements Width => must less (&lt;) than the parent container width . </li>
+                            </ol>
+                                
+                        <p> [Align-Items] => This property can be assinged wtih one following values : <br>
+                            <ol>
+                                <li> {Stretch} : To make children Elements Stretching thrugh it's entire height  </li>
+                                <li> {flex-start} : To make children Elements Stretching thrugh it's entire height  </li>
+                                <li> {flex-end} : To make children Elements Stretching thrugh it's entire height  </li>
+                                <li> {center} : To make children Elements Stretching thrugh it's entire height  </li>                                
+                                <li> {space-between} : To make Vertical equaled spaces between the children Elements inside the Parent container </li>                                
+                                <li> {space-around} : To make Vertical equaled spaces between + before + After the children Elements inside the Parent container  </li>                                
+                            </ol>                                        
+                    </li>
+                </ul>
+                <!-- ------------------------------------------------------ -->                                                                                                                        
+                
+                <p> Differences between {Justify-Content ¦ Align-Content}:  <br>
+                    <ol>
+                        <li> [Justify-content] => Taking in consideration Following conditions : <br>
+                            <ul>                                
+                                <li> Horizontal Aligning is the main focus of this property   </li>
+                                <li> Page direction & items direction  </li>
+                            </ul>                                                                                
+                        </li>
+                        
+                        <li> [Align-content] =>  Taking in consideration Vertical Aligning   <br>
+                            <ul>                                
+                                <li> Vertical Aligning is the main focus of this property   </li>
+                                <li> Wraping Activating property is a Must </li>
+                                <li> Total Width of Children must be Less than Overall parent container => to make assuranace of wrap property Activation  </li>
+                            </ul>                                                                                                           
+                        </li>
+                    </ol>
+
+                        
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+        <section class="CSS3Imp" id="CSS3Imp">
+            <header>
+                <h3> [CSS3 Lesson29 Align Items ¦ Align Content ] Importance & Benefits: </h3>
+            </header>
+            
+            <p> =&gt; [CSS3 Lesson29 Align Items ¦ Align Content ] : This Advanced property enabling the following features & imporatance : <br>            
+                <ul>                                                                
+                    <li> Providing better, easier, practical, shortcut and profficent Renposive Desiging [Specially Mobile Scalls], Much more easier way than old methods </li>                    
+                    <li> Using {align-content} & {Justify-content} togther => Provides very easy method & tools for controling children inside the parent contaier (in both two Dimensions) in comparison with the old methods  </li>
+                </ul>                                                 
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ CSS3 Align Items ¦ Align Content] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // (*) [CSS3 Align Items ¦ Align Content] Syntax as following :<br><br>                                                    
+                <span class='one'></span> //a)  [HTML] file  : <br>                                          
+                    <!-- A) Align-Items -->
+                    <span class=two></span> &lt; div class='Align-Items'  &gt; <br>                                                
+                    
+                        <span class=three></span> &lt; section class='Align-Items-Default'  &gt; <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 1  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                                                            
+                        <span class=three></span> &lt; section class='Align-Items-Stretch'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                            
+                                                            
+                        <span class=three></span> &lt; section class='Align-Items-Flex-Start'  &gt; <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                                                            
+                        <span class=three></span> &lt; section class='Align-Items-Flex-End'  &gt; <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                
+                        
+                        <span class=three></span> &lt; section class='Align-Items-Center'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                
+                        
+                        <span class=three></span> &lt; section class='Align-Items-Baseline'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                
+                    <br> <br>  <hr>                                       
+                    // ------------------------------------------------------------------------------ <br><br>                    
+                    // ------------------------------------------------------------------------------ <br><br>                    
+                    // ------------------------------------------------------------------------------ <br><br>                    
+                                                            
+                    <!-- A) Align-Content -->
+                    <span class=two></span> &lt; div class='Align-Content'  &gt; <br>                                                
+                    
+                        <span class=three></span> &lt; section class='Align-Content-Default'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 1  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                                                            
+                        <span class=three></span> &lt; section class='Align-Content-Stretch'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                            
+                                                            
+                        <span class=three></span> &lt; section class='Align-Content-Flex-Start'  &gt; <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                                                            
+                        <span class=three></span> &lt; section class='Align-Content-Flex-End'  &gt; <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                
+                        
+                        <span class=three></span> &lt; section class='Align-Content-Center'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                
+                        
+                        <span class=three></span> &lt; section class='Align-Content-Space-Between'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+
+                        <span class=three></span> &lt; section class='Align-Content-Space-Around'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                
+                    <br> <br>  <hr>                                       
+                    // ------------------------------------------------------------------------------ <br><br>
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                                                                                                                                                                        
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                
+                        <br> <br>  <hr>                                                           
+                    <span class='one'></span> //b)  [CSS3] file  : <br>                                          
+                        <!-- Setting main Containers  -->
+                        <span class=two></span> .Align-Items section {  <br>                            
+                            <span class=three></span> display: flex; <br>
+                            <span class=three></span> margin: 50px auto ; <br>
+                            <span class=three></span> width: 800px; <br>
+                            <span class=three></span> height: 400px; <br>
+                            <span class=three></span> border: 3px solid #EEE; <br>                            
+                            <span class=three></span> border-radius: 20px ; <br>                            
+                        <span class=two></span> }  <br> <br>
+                        
+                        <span class=two></span> .Align-Content section {  <br>                            
+                            <span class=three></span> display: flex; <br>
+                            <span class=three></span> margin: 50px auto ; <br>
+                            <span class=three></span> width: 180px; <br>
+                            <span class=three></span> height: 500px; <br>
+                            <span class=three></span> border: 3px solid #EEE; <br>                            
+                            <span class=three></span> border-radius: 20px ; <br>                            
+                        <span class=two></span> }  <br> <br>
+                        
+                        <!-- Setting public Children Elements  -->
+                        <span class=two></span> .Align-Items section div, .Align-Content section div {  <br>                                                        
+                            <span class=three></span> margin: 50px auto ; <br>
+                            <span class=three></span> width: 180px; <br>
+                            <span class=three></span> max-height: 100px; <br>
+                            <span class=three></span> border: 1px solid #ccc; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+
+                        <!-- Setting First Child of each Container in both 2 Sectors  -->                        
+                        <span class=two></span> .Align-Items section:first-of-type, .Align-content section:first-of-type {  <br>                                 
+                            <span class=three></span> background-color: #080; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+
+                        <!-- Setting Second Child of each Container in both 2 Sectors -->                        
+                        <span class=two></span> .Align-Items section:nth-of-type(2), .Align-content section:nth-of-type(2) {  <br>                                 
+                            <span class=three></span> background-color: #f00; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        
+                        <!-- Setting Last Child of each Container in both 2 Sectors-->                        
+                        <span class=two></span> .Align-Items section:last-of-type, .Align-content section:last-of-type {  <br>                                 
+                            <span class=three></span> background-color: #00f; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>
+
+                        <!-- Setting Sector's customized Children for each / First Sector -->                        
+                        <!-- <span class=two></span>   .Align-Items-Default {  <br>                                 
+                            <span class=three></span> align-items: row nowrap; <br>                                                        
+                        <span class=two></span> }  <br> <br> -->
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>   .Align-Items-Stretch {  <br>                                 
+                            <span class=three></span> align-items: stretch <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>   .Align-Items-Flex-Start {  <br>                                 
+                            <span class=three></span> align-items: flex-start; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>   .Align-Items-Flex-End {  <br>                                 
+                            <span class=three></span> align-items: flex-start; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>   .Align-Items-Center {  <br>                                 
+                            <span class=three></span> align-items: center; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+
+                        <span class=two></span>   .Align-Items-Baseline {  <br>                                 
+                            <span class=three></span> align-items: baseline; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                
+                        // ------------------------------------------------------------------------------ <br><br>                        
+                                                
+                        <!-- Setting Sector's customized Children for each / Second Sector -->                        
+                        <!-- <span class=two></span>  .Align-Content-Default{  <br>                                 
+                            <span class=three></span> align-content: flex-start ; <br>                                                        
+                        <span class=two></span> }  <br> <br> -->
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>  .Align-Content-Flex-Start {  <br>                                 
+                            <span class=three></span> align-content: flex-start ; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>  .Align-Content-Flex-End {  <br>                                 
+                            <span class=three></span> align-content: flex-end ; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                        
+                        
+                        <span class=two></span>  .Align-Content-Center {  <br>                                 
+                            <span class=three></span> align-content: center ; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                        
+                        
+                        <span class=two></span>  .Align-Content-Space-Between {  <br>                                 
+                            <span class=three></span> align-content: space-between ; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>  .Align-Content-Space-Around {  <br>                                 
+                            <span class=three></span> align-content: space-around ; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                    
+                    // ------------------------------------------------------------------------------ <br><br>
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="CSS3Pract" >
+
+            <header>
+                <h3> [CSS3 Align-Items ¦ Align-Content] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following are Applied examples of {Align Items ¦ Align Content} new feature/ property with all it's all Values} : <br>
+                
+            <p> (2) Fieldsets Multiple as following:  </p>                        
+                <ul>
+                    <li> A) First Fieldset: {align-items} property, and contain the following Sections (5) [each parent section contain (3) divs]  </li>
+                        <ol>
+                            <li> First Section => align-items:  Stretch  </li>
+                            <li> Second Section =>align-items: flex-start </li>
+                            <li> Third Section => align-items: flex-end  </li>                            
+                            <li> Fourth Section => align-items: center  </li>                            
+                            <li> Fifth Section => align-items: baseline  </li>                            
+                        </ol>
+                        
+                    <li> B) Second Fieldset: {align-content} property, and contain the following Sections (6) [each parent section contain (3) divs]  </li>
+                        <ol>
+                            <li> First Section => align-content: stretch </li>
+                            <li> Second Section => align-content: flex-start </li>
+                            <li> Third Section => align-content: flex-end </li>
+                            <li> Fourth Section => align-content: center </li>
+                            <li> Fifth Section => align-content: space-between </li>
+                            <li> Sixth Section => align-content: space-around </li>
+                        </ol>                                    
+                <!-- ========================================================================= -->                                                
+                <!-- ========================================================================= -->                
+                </ul>                                                
+            <hr><br><br>
+            <!-- ========================================================================= -->                                                        
+                <!-- A)  {Align-Content} Application1  -->
+                    <fieldset class='Align-Items'>                                                  
+                        <legend> First Sector => Align-Items </legend>
+                        
+                        <header>  1) Aling Items : [Default] </header>
+                        
+                        <section class='Align-Items-Default'>                                                                    
+                            <div class='div1'>                     
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2 This div 2 This div 2 This div 2
+                                This div 2 This div 2 This div 2 This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                
+                                            
+                        <header>  2) Align-Items : Flex-Start </header>
+                        
+                        <section class='Align-Items-Flex-Start'>                            
+                            <div class='div1'>                     
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2 This div 2 This div 2 This div 2
+                                This div 2 This div 2 This div 2 This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                                        
+                        </section>
+                        <!-- ------------------------------------------------------------------------- -->                
+                        <!-- ------------------------------------------------------------------------- -->                
+                      
+                        <header>  3) Align-Items : Flex-End </header>
+                        
+                        <section class='Align-Items-Flex-End'>                                                                    
+                            <div class='div1'>                     
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2 This div 2 This div 2 This div 2
+                                This div 2 This div 2 This div 2 This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                
+                                            
+                        <header>  4) Align-Items: Center </header>
+                        
+                        <section class='Align-Items-Center'>                            
+                            <div class='div1'>                     
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2 This div 2 This div 2 This div 2
+                                This div 2 This div 2 This div 2 This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>
+                        <!-- ------------------------------------------------------------------------- -->                                                                                      
+                        
+                        <header>  5) Align-Items : Baseline  </header>
+                        
+                        <section class='Align-Items-Baseline'>                            
+                            <div class='div1'>                     
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                                This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2 This div 2 This div 2 This div 2
+                                This div 2 This div 2 This div 2 This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>
+                        <!-- ------------------------------------------------------------------------- -->                                                                        
+                        <!-- ------------------------------------------------------------------------- -->                                                                                                                                      
+                        <!-- --------------------------------------------------------------------- -->                            
+                    </fieldset>
+                    <!-- --------------------------------------------------------------------- -->                                            
+                    <br><hr> <br>        
+
+                <!-- B)  { Justify-Content } Application2  -->
+
+                <fieldset class='Align-Content'>                                                  
+                    <legend> Second Sector => Align-Content </legend>
+                    
+                    <header>  2) Align Content : [Default] </header>
+                    
+                    <section class='Align-Content-Default'>                                                                    
+                        <div class='div1'>                     
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                        </div>                        
+                        
+                        <div class='div2'>                     
+                            This div 2 This div 2 This div 2 This div 2
+                            This div 2 This div 2 This div 2 This div 2
+                        </div>                        
+                        
+                        <div class='div3'>                     
+                            This div 3
+                        </div>                        
+                    </section>                      
+                    <!-- ------------------------------------------------------------------------- -->                
+                                        
+                    <header>  2) Align-Content : Flex-Start </header>
+                    
+                    <section class='Align-Content-Flex-Start'>                            
+                        <div class='div1'>                     
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                        </div>                        
+                        
+                        <div class='div2'>                     
+                            This div 2 This div 2 This div 2 This div 2
+                            This div 2 This div 2 This div 2 This div 2
+                        </div>                        
+                        
+                        <div class='div3'>                     
+                            This div 3
+                        </div>                        
+                    </section>
+                    <!-- ------------------------------------------------------------------------- -->                
+                    <!-- ------------------------------------------------------------------------- -->                
+                  
+                    <header>  3) Align-Content : Flex-End </header>
+                    
+                    <section class='Align-Content-Flex-End'>                                                                    
+                        <div class='div1'>                     
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                        </div>                        
+                        
+                        <div class='div2'>                     
+                            This div 2 This div 2 This div 2 This div 2
+                            This div 2 This div 2 This div 2 This div 2
+                        </div>                        
+                        
+                        <div class='div3'>                     
+                            This div 3
+                        </div>                        
+                    </section>                      
+                    <!-- ------------------------------------------------------------------------- -->                
+                                        
+                    <header>  4) Align-Content: Center </header>
+                    
+                    <section class='Align-Content-Center'>                            
+                        <div class='div1'>                     
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                        </div>                        
+                        
+                        <div class='div2'>                     
+                            This div 2 This div 2 This div 2 This div 2
+                            This div 2 This div 2 This div 2 This div 2
+                        </div>                        
+                        
+                        <div class='div3'>                     
+                            This div 3
+                        </div>                        
+                    </section>
+                    <!-- ------------------------------------------------------------------------- -->                                                                                      
+                    
+                    <header>  5) Align-Content : Space between  </header>
+                    
+                    <section class='Align-Content-Space-Between'>                            
+                        <div class='div1'>                     
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                        </div>                        
+                        
+                        <div class='div2'>                     
+                            This div 2 This div 2 This div 2 This div 2
+                            This div 2 This div 2 This div 2 This div 2
+                        </div>                        
+                        
+                        <div class='div3'>                     
+                            This div 3
+                        </div>                        
+                    </section>
+                    <!-- ------------------------------------------------------------------------- -->                                                                        
+                    
+                    <header>  6) Align-Content : Space around  </header>
+                    
+                    <section class='Align-Content-Space-Around'>                            
+                        <div class='div1'>                     
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                        </div>                        
+                        
+                        <div class='div2'>                     
+                            This div 2 This div 2 This div 2 This div 2
+                            This div 2 This div 2 This div 2 This div 2
+                        </div>                        
+                        
+                        <div class='div3'>                     
+                            This div 3
+                        </div>                        
+                    </section>
+                    
+                    <!-- ------------------------------------------------------------------------- -->                                                                        
+                    <!-- ------------------------------------------------------------------------- -->                                                                                                                                      
+                    <!-- --------------------------------------------------------------------- -->                            
+                </fieldset>
+                <!-- --------------------------------------------------------------------- -->                                                            
+                <br><hr> <br>        
+                <!-- --------------------------------------------------------------------- -->                                                            
+                
+                <!-- C)  {Align-Content} && {Justify-Content} Application3  -->
+
+                <fieldset class='Align-Content-Justify-Content'>                                                  
+                    
+                    <legend> Third Sector => Align-Content && Justify-Content </legend>
+                    
+                    <header>  3) Align Content && Justify Content : [Default] && [Default] </header>
+                    
+                    <section class='Mix-Default'>                                                                    
+                        <div class='div1'>                     
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                        </div>                        
+                        
+                        <div class='div2'>                     
+                            This div 2 This div 2 This div 2 This div 2
+                            This div 2 This div 2 This div 2 This div 2
+                        </div>                        
+                        
+                        <div class='div3'>                     
+                            This div 3
+                        </div>                        
+                    </section>                      
+                    <!-- ------------------------------------------------------------------------- -->                
+                                        
+                    <header>  3) Align Content && Justify Content :  Flex-Start & Flex-Start </header>
+                    
+                    <section class='Mix-Flex-Start'>                            
+                        <div class='div1'>                     
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                        </div>                        
+                        
+                        <div clas4s='div2'>                     
+                            This div 2 This div 2 This div 2 This div 2
+                            This div 2 This div 2 This div 2 This div 2
+                        </div>                        
+                        
+                        <div class='div3'>                     
+                            This div 3
+                        </div>                        
+                    </section>
+                    <!-- ------------------------------------------------------------------------- -->                
+                    <!-- ------------------------------------------------------------------------- -->                
+                  
+                    <header>  3) Align Content && Justify Content : Flex-End && Flex-End </header>
+                    
+                    <section class='Mix-Flex-End'>                                                                    
+                        <div class='div1'>                     
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                        </div>                        
+                        
+                        <div class='div2'>                     
+                            This div 2 This div 2 This div 2 This div 2
+                            This div 2 This div 2 This div 2 This div 2
+                        </div>                        
+                        
+                        <div class='div3'>                     
+                            This div 3
+                        </div>                        
+                    </section>                      
+                    <!-- ------------------------------------------------------------------------- -->                
+                                        
+                    <header>  3) Align Content && Justify Content : Center && Center </header>
+                    
+                    <section class='Mix-Center'>                            
+                        <div class='div1'>                     
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                        </div>                        
+                        
+                        <div class='div2'>                     
+                            This div 2 This div 2 This div 2 This div 2
+                            This div 2 This div 2 This div 2 This div 2
+                        </div>                        
+                        
+                        <div class='div3'>                     
+                            This div 3
+                        </div>                        
+                    </section>
+                    <!-- ------------------------------------------------------------------------- -->                                                                                      
+                    
+                    <header>  3) Align Content && Justify Content : Space-between && Space-between   </header>
+                    
+                    <section class='Mix-Space-Between'>                            
+                        <div class='div1'>                     
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                        </div>                        
+                        
+                        <div class='div2'>                     
+                            This div 2 This div 2 This div 2 This div 2
+                            This div 2 This div 2 This div 2 This div 2
+                        </div>                        
+                        
+                        <div class='div3'>                     
+                            This div 3
+                        </div>                        
+                    </section>
+                    <!-- ------------------------------------------------------------------------- -->                                                                        
+                    
+                    <header> 3) Align Content && Justify Content : Space-around &&  Space around  </header>
+                    
+                    <section class='Mix-Space-Around'>                            
+                        <div class='div1'>                     
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                            This div 1 This div 1 This div 1 This div 1 This div 1  This div 1
+                        </div>                        
+                        
+                        <div class='div2'>                     
+                            This div 2 This div 2 This div 2 This div 2
+                            This div 2 This div 2 This div 2 This div 2
+                        </div>                        
+                        
+                        <div class='div3'>                     
+                            This div 3
+                        </div>                        
+                    </section>
+                    <!-- ------------------------------------------------------------------------- -->                                                                        
+                    <!-- ------------------------------------------------------------------------- -->                                                                                                                                      
+                    <!-- --------------------------------------------------------------------- -->                            
+                </fieldset>
+                <!-- --------------------------------------------------------------------- -->                                            
+                <br><hr> <br>        
+                
+
+            <!-- --------------------------------------------------------------------- -->                                            
+            <br><hr> <br>                        
+            <br><hr> <br>        
+            <!-- --------------------------------------------------------------------- -->                            
+        <!-- --------------------------------------------------------------------- -->                                                    
+        </section>                    
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 29 Video File:</h3>
+            
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=MFEvqO_7i0Y&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=29&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\29 Css3 - Align Items ¦ Align Content.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 29 [CSS3 Align Items ¦ Align Content ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

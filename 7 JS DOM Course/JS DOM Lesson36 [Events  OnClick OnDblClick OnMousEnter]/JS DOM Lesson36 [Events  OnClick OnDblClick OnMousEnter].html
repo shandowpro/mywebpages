@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 36 JS HTML Dom Events  OnClick OnDblClick OnMousEnter </title>
+    <link rel="stylesheet" href="JS DOM Lesson36 [Events  OnClick OnDblClick OnMousEnter].css" media="all">
+    
+    <style>        
+       .custom {
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            margin: 10px auto;
+            border: 5px solid gray;    
+            background-color: #ccc;
+            text-align: center;
+        } 
+         
+        .dis {
+            border: 3px solid red;
+            border-radius: 30px;
+            width: 100%;
+            /* height: 200px; */
+            text-align: center;
+            line-height: 2em;
+        }
+
+        .item{
+            color: red;
+            font-size: 30px;
+            font-family: monospace;
+            background-color: blue;
+        }
+        
+    </style>
+    
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main" >
+        36 JS HTML Dom Events  OnClick OnDblClick OnMousEnter
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS DOM main Topics">
+                36 JS HTML Dom Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu  Main Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to 36 JS HTML Dom Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu Concept">
+                36 JS HTML Dom Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu  Concept </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to 36 JS HTML Dom Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu Importance & Benefits">
+                36 JS HTML Dom Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu  Importance & Benefits </a> </li>
+
+            <li> <a href=#JSDOMSyntx title="Go to 36 JS HTML Dom Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu Syntax">
+                36 JS HTML Dom Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to 36 JS HTML Dom Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu Practical Applications">
+                36 JS HTML Dom Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu  Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+4    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS DOM Course <span> 36 JS HTML Dom Events  OnClick OnDblClick OnMousEnter  </span>
+    </main>
+
+    
+    <div class="Post" id=post>
+        <Section  id="MainC" class="MainC">
+
+            <header>
+                JS DOM [Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS DOM [Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu] Concept. </li>
+                    
+                    <li> JS DOM [Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu]  Importance & Benefits. </li>
+
+                    <li> JS DOM [Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu] Syntax . </li>
+                    
+                    <li> JS DOM [Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu] Practical Application. </li>
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                
+                <ul>                                                                                                        
+                    <li> [Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu] : </li>
+                        <ol type =A>                                                    
+                            <li> This lesson will include =>  (5 Events) of most common Event in JSDOM , as following : <br>
+                                <ol> 
+                                    <li> { elem.onclick } => Single Left Click on the Element Event </li>
+                                    <li> { elem.ondblclick} =  Double Click on the Element Event </li>
+                                    <li> { elem.oncontextmenu} => Right Click on the Element Event </li>
+                                    <li> { elem.onmouseenter} => Hover on from the Element Event </li>
+                                    <li> { elem.onmouseleave} => Hover off from the Element Event </li>
+                                </ol>                            
+                             </li>
+                        </ol>
+                </ul>
+                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> JS DOM [Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu]  Concept: </h3>
+            </header>
+                                                        
+            <p> =&gt; [ Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu ] Events => All are joined the { Mouse } Group of Events as following : <br>
+                <ol>
+                    <li> {onclick} => <br>                        
+                        <p> To Single Left click on the Element </p>
+                        <p> Useges => In multiple uses </p>
+
+                    </li>
+                    
+                    <li> {ondblclick} => <br>
+                        <p>To Double Left click on the Element </p>
+                        <p> Useges => In multiple uses </p>
+                    </li>
+
+
+                    <li> {oncontextmenu} => <br>
+                        <p> To Right click on the Element </p> 
+                        <p> Usges: <br>
+                            <ul>
+                                <li> To Cancel the Display of the Right Menu of certain Element OR Full window or page  </li>
+                                <li> In Advanced application used to Display custome context menu instead of the browser  </li>
+                            </ul>                         
+                    </li>
+                    
+                    <li> {onmouseenter} => <br>
+                        <p> To Hover on the Element </p>
+                        <p> Useges => In multiple uses </p>
+                     </li>
+                    
+                    <li> {onmouseleave} => <br>
+                        <p> To Hover off the Element 
+                        <p> Useges => In multiple uses </p>
+                    </li>                    
+                </ol>  <br>
+                            
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> JS DOM [Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu] Importance & Benefits : </h3>
+            </header>
+
+            <p> JS DOM [Elements Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu] gives us the Following Features : <br>
+                <ul>                                                 
+                    <li> {onclick} =>  Useges => In multiple uses , and the most event to be used in any application </li>
+                                    
+                    <li> {ondblclick} => To Double Left click on the Element , and In multiple uses  </li>                        
+
+                    <li> {oncontextmenu} => To Right click on the Element , To Cancel the Display of the Right Menu of certain Element OR Full window or page and used In Advanced application used to Display custome context menu instead of the browser </li>
+                                                                                                      
+                    <li> {onmouseenter} =>  To Hover on the Element Useges , and used In multiple uses [similer to the CSS hover, with advanced application with js] </li>                                        
+                    
+                    <li> {onmouseleave} => To Hover off the Element , and used In multiple uses </li>                    
+                </ul>                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> JS DOM [Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS HTML DOM [Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu} by following Conceptual Syntax as following : </p>
+            
+            <div id="Code" class="Code">
+                
+                [*] {HTML file} (Element's Style) example: <br>
+                             
+                <!-- <span class= one></span> &lt;div id='main'&gt; <br> 
+                                    
+                <span class= one></span> &lt;/div&gt; <br> <br> -->
+                                                    
+                //=========================================================== <br> <br>                    
+                                
+                [A]// {JS file} Getting Document Information about [main Methods used to create and process the Events and Functions ] } : <br>                                                                                                                   
+                
+                    [1] Setting certain Function to be implemented by {onclick} Event to the Window / Page / Element: <br>
+                        <span class= one></span> &lt; elem.onclick = funcName() {Function Script} ; &gt; <br> <br>
+                    
+                    [2] Setting certain Function to be implemented by {ondblclick} Event to the Window / Page / Element: <br>
+                        <span class= one></span> &lt; elem.ondblclick = funcName() {Function Script} ; &gt; <br> <br>
+                        
+                    [3] Setting certain Function to be implemented by {onnmouseenter} Event to the Window / Page / Element: <br>
+                        <span class= one></span> &lt; elem.onnmouseenter = funcName() {Function Script} ; &gt; <br> <br>
+
+                    [4] Setting certain Function to be implemented by {onnmouseenter} Event to the Window / Page / Element: <br>
+                        <span class= one></span> &lt; elem.onnmouseenter = funcName() {Function Script} ; &gt; <br> <br>
+                    
+                    [5] Setting certain Function to be implemented by {onmouseleave} Event to the Window / Page / Element: <br>
+                        <span class= one></span> &lt; elem.onmouseleave = funcName() {Function Script} ; &gt; <br> <br>
+                    
+                                          
+                //=========================================================== <br> <br>                                                                    
+                //=========================================================== <br> <br>                                                                
+            
+            <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMPract" id="JSDOMPract">
+            <header>
+                <h3> JS DOM [Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu] => General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt ; Here 1 Major Application will include creating [5 Events] to be Created and Processed with specific Functions => as following :  &gt;&gt; <br>
+                <ol> 
+                    <li> The First Event {onclick} => [HTML Event Calling Function from the JS File] , as Following: <br>
+                        <p> When Single Left Click on the Element {myElem} =>  Writing certain Messeage in display element {myNote}  </p>
+                    </li>
+
+                    <li> The Second Event {ondblclick} => [HTML Event Calling Function from the JS File] , as Following: <br>
+                        <p> When Double Left Click on the Element {myElem} =>  Writing certain Messeage in display element {myNote}  </p>
+                    </li>
+
+                    <li> The Third Event {oncontextmenu} => [HTML Event Calling Function from the JS File] , as Following: <br>
+                        <p> When Rigth Click on the Element {myElem} =>  Prevent the Browser Default Right Menu to be displayed && and Writing certain Messeage in display element {myNote}  </p>
+                    </li>
+
+                    <li> The Fourth Event {onmouseenter} => [HTML Event Calling Function from the JS File] , as Following: <br>
+                        <p> When Hover on the Element {myElem} =>  Writing certain Messeage in display element {myNote}  </p>
+                    </li>
+
+                    <li> The Fifth Event {onmouseleave} => [HTML Event Calling Function from the JS File] , as Following: <br>
+                        <p> When Hover off the Element {myElem} =>  Writing certain Messeage in display element {myNote}  </p>
+                    </li>
+
+                </ol>                
+            <br> <br>
+            
+            
+            <!-- <form id="formT" class="custom">                                                 
+                <label> Enter your Username : </label>
+                <input id="username" type="text"> <br><br>
+                
+                <label> Enter your Password : </label>
+                <input id="password"  type="text"> <br><br>
+                
+                <label> Notes : </label>
+                <input id="note"  type="text"> <br><br>
+
+                <input id="btnSubmit" type="submit" value="Submit"> <br>                
+            </form> <br>  -->
+
+            <div class="btn" id="elem"> Element </div> <br>             
+                                    
+            
+            <div id="note" class="dis"></div> <br>
+                                
+            <hr> <br> <br>
+            <!-- ========================================================= -->
+
+            
+
+            <button class=btn onclick="test()"> Click to Start JS DOM [ Events  onclick ondblclick onmouseenter onmouseleave oncontextmenu ]  Application    
+            </button> 
+            
+            
+            <script  src="EventsOnClickOnDblClickOnMousEnter.js">
+            </script>
+                                    
+            <br>    
+                                          
+        <hr>
+                <button id=btn class="btn" onclick="display()">Display JS Code</button>
+                
+                <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Testing JS DOM [Parent Element]  Application  <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                                                        
+                        
+                        <span class=one></span> &lt;script src=".js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JS DOM [Parent Element]  */ <br>                    
+                        template-string-converter.enable; <br><br>
+                                                
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div>
+                
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection">
+            <h3> Lesson 36 Video File: </h3>
+            
+            
+            <iframe
+            width="100%"
+            height="100%"
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=CGRTZAss3WQ&list=PLDoPjvoNmBAxx97QDMOCpzxbu1ZHJ4i7i&index=36&controls=0&loop=1&autoplay=1&fs=1"
+            >
+            </iframe>
+
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\HTML JS Dom\36 JS HTML Dom Events  OnClick OnDblClick OnMousEnter.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+        
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <!-- <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section> -->
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 36 JS HTML Dom Events  OnClick OnDblClick OnMousEnter");
+    </script>
+    
+
+</body>
+
+</html>       

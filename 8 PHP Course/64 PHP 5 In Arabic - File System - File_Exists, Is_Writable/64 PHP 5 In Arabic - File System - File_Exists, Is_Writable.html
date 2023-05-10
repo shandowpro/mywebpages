@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>64 PHP 5 In Arabic - File System - File_Exists, Is_Writable</title>
+    <link
+      rel="stylesheet"
+      href="64 PHP 5 In Arabic - File System - File_Exists, Is_Writable.css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      64 PHP 5 In Arabic - File System - File_Exists, Is_Writable ,
+      dirname(__File__), file_put_contents
+    </header>
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to PHP main Topics">
+            64 PHP 5 In Arabic - File System - File_Exists, Is_Writable Main
+            Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPCon"
+            title="Go to PHP [Control Structure - Switch] Concept"
+          >
+            64 PHP 5 In Arabic - File System - File_Exists, Is_Writable Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPImp"
+            title="Go to PHP [Control Structure - Switch] Importance & Benefits"
+          >
+            64 PHP 5 In Arabic - File System - File_Exists, Is_Writable
+            Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPSyntx"
+            title="Go to PHP [Control Structure - Switch] Syntax"
+          >
+            64 PHP 5 In Arabic - File System - File_Exists, Is_Writable Syntax &
+            Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPPract"
+            title="Go to PHP [Control Structure - Switch] Practical Applications"
+          >
+            64 PHP 5 In Arabic - File System - File_Exists, Is_Writable
+            Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <main class="Welcome">
+      Welcome to PHP Course
+      <span>
+        64 PHP 5 In Arabic - File System - File_Exists, Is_Writable ,
+        dirname(__File__), file_put_contents
+      </span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          PHP5 [ File System Function - [ 64 PHP 5 In Arabic - File System -
+          File_Exists, Is_Writable , dirname(__File__), file_put_contents ] Main
+          Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+
+          <ol>
+            File System Function / File Functions :
+            <br />
+            <li>file_exists</li>
+            <li>is_writable || is_writeable</li>
+            <li>
+              file_put_contents [will be studied in details in the next lesson]
+            </li>
+            <li>
+              dirname(__File__) [common function to use to get a (full path of
+              the current php file location on the system)]
+            </li>
+          </ol>
+          <hr />
+        </article>
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="PHPCon" id="PHPCon">
+        <header>
+          <h3>
+            PHP [64 PHP 5 In Arabic - File System - File_Exists, Is_Writable ,
+            dirname(__File__), file_put_contents ]
+          </h3>
+        </header>
+
+        <h2>
+          [PHP - File System Function - [ 64 PHP 5 In Arabic - File System -
+          File_Exists, Is_Writable , dirname(__File__), file_put_contents ] ] =>
+          Concept:
+        </h2>
+
+        <ol>
+          <li>
+            [PHP - File System Function/methods syntax & concept as following :
+            <br />
+            <ul>
+              <li>
+                file_exists : <br />
+                <ul>
+                  <li>Checking if the File is existed Or not</li>
+                  <li>Usually used with the if condition</li>
+                  <li>
+                    Can be used for checking for a file before dealing with it
+                    [Including || Editing || Adding contents ]
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                is_writable || is_writeable : <br />
+                <ul>
+                  <li>
+                    Checking if the type of permission File [writable ||
+                    readonly} ]
+                  </li>
+                  <li>
+                    Usually used before adding new contents to an exited &
+                    writable file
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                file_put_contents : <br />
+                <ul>
+                  <li>
+                    To Put/Write inside the file {even the file is existed or
+                    not}
+                  </li>
+                  <li>
+                    Usually used with {file_exists} to add new content to an
+                    existed file, but {file_put_contents} can add new contents
+                    to an unexisted file
+                  </li>
+                  <li>
+                    If the file asked to put new contents is not existed => The
+                    fuction will create it first & add new contents inside
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                dirname(__File__) : <br />
+                <ul>
+                  <li>To get the full path of the current php file</li>
+                  <li>
+                    Usually used to declare new file variable with full path
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <br />
+
+          <li>
+            There are built in Functions in php pLanguage To get the full path
+            of file in the server [documnent root] || [server root] => will be
+            studied in later lessons
+          </li>
+        </ol>
+
+        <br />
+        <br />
+        <hr />
+        <!-------------------------------------------  -->
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPImp" id="PHPImp">
+        <header>
+          <h3>
+            PHP [64 PHP 5 In Arabic - File System - File_Exists, Is_Writable ,
+            dirname(__File__), file_put_contents ] Importance & Benefits:
+          </h3>
+        </header>
+
+        <ul>
+          <li>
+            [File System Functions - {file_exists} ] method => This Methods are
+            very useful & common in checking for the file before using it
+          </li>
+
+          <li>
+            [File System Functions - {is_writeable} || {is_writable} ] method =>
+            This method is nesseccery to check about the type of permission of
+            file
+          </li>
+
+          <li>
+            [File System Functions - {file_put_contents} ] method => This method
+            is write inside determined file which has the permission of writing
+            [writable] || And the ability to create it before then write inside
+            it [in case of non existance]
+          </li>
+
+          <li>
+            [File System Functions - {dirname(__File__)} ] method => This method
+            to get the path of the current directory {php file}
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPSyntx" id="PHPSyntx">
+        <header>
+          <h3>
+            [ 64 PHP 5 In Arabic - File System - File_Exists, Is_Writable ,
+            dirname(__File__), file_put_contents ] Syntax & Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; In this after setting up the application => We will create a
+          simple PHP File && Running it by [Local Server]
+        </p>
+
+        <p>=&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} :</p>
+        <br />
+        <p>
+          Using [File System Function ] -> This lesson has several Practical
+          Examples bout some file mangager system about {file}
+        </p>
+
+        <ol type="A">
+          <li>
+            [PHP - 5) First Example => File System - [file_exists($File Name
+            with full path)] => {Simple testing} => Testing of Existed file :
+            <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [really
+                    existed]
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - 5) Second Example => File System - [file_exists($File Name
+            with full path)] => {Simple testing} => Testing of UnExisted file :
+            <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [Dont
+                    existed]
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - 5) Third Example => File System - [is_writable($file name
+            with full path)] => {Simple testing} => Testing of Existed &
+            writable file : <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [Really
+                    existed existed]
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - 5) Fourth Example => File System - [is_writable($File Name
+            with full path)] => {Simple testing} => Testing of Existed &
+            Un-writable file : <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [Dont
+                    existed]
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - 5) Fifth Example => File System - [file_exists($File Name
+            with full path)] & [file_put_contents($File Name with full path,
+            "content to be added")] => {Combined testing (2)} => {Existed File}
+            : Testing of Existed file & write contents inside file {in case the
+            file is existed only} : <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [Is
+                    already existed]
+                  </li>
+                  <li>
+                    [ Text contents ] => The text will be added inside the file
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - 5) Sixth Example => File System - [file_exists($File Name
+            with full path)] & [file_put_contents($File Name with full path,
+            "Content to be added" )] => {Combined testing (2)} => {Existed File}
+            : Testing of Existed file & write contents inside file {in case the
+            file is existed || NOT} : <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [Dont
+                    existed , but will be added to current file path]
+                  </li>
+                  <li>
+                    [ Text contents ] => The text will be added inside the file
+                    [but after creation the file with current declared]
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - 5) Seventh Example => File System - [file_exists($File Name
+            with full path)] & [is_writable($File Name with full path)] &
+            [file_put_contents($File Name with full path, "Content to be
+            added")] => {Combined testing (3)} => {Existed File} : Testing of
+            Existed file & Writable file & write contents Inside file {in case
+            of existed file only} : <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [Dont
+                    existed , but will be added to current file path]
+                  </li>
+                  <li>
+                    [ Text contents ] => The text will be added inside the file
+                    [but after creation the file with current declared]
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - 5) Eighth Example => File System - [file_exists] &
+            [is_writable] & [file_put_contents] => {Combined testing (3)} =>
+            {Existed File} : Testing of Existed file && Writable file && write
+            contents inside file {in case of existed || NOT } : <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [Dont
+                    existed , but will be added to current file path]
+                  </li>
+                  <li>
+                    [ Text contents ] => The text will be added inside the file
+                    [but after creation the file with current declared]
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <!-- ================================================================= -->
+
+        <h2>B) Html page :</h2>
+        <br />
+        <span class="one"> &lt; !DOCTYPE html &gt; </span> <br />
+        <span class="two"> &lt; html &gt; </span> <br />
+        <span class="three"> &lt; /head &gt;</span> <br />
+        <span class="four">
+          &lt; title &gt; &lt;? php echo $title; ?&gt; &lt; /title &gt;
+        </span>
+        <br />
+        <span class="four">
+          &lt; link rel="stylesheet" href="64 PHP 5 In Arabic - File System -
+          File_Exists, Is_Writable" media="all" &gt;
+        </span>
+        <br />
+        <span class="three"> &lt; /head &gt; </span> <br />
+        <br />
+        <span class="three">&lt; body &gt; </span> <br />
+
+        <span class="three">&lt; /body &gt; </span> <br />
+        <span class="two">&lt;/html &gt; </span> <br />
+        ----------------------------------------------------------------------------
+        <br />
+        ----------------------------------------------------------------------------
+        <br />
+        <br /><br />
+        <hr />
+        <br /><br />
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPPract" id="PHPPract">
+        <header>
+          <h3>
+            PHP [ 64 PHP 5 In Arabic - File System - File_Exists, Is_Writable ,
+            dirname(__File__), file_put_contents ] General Practical
+            Applications :
+          </h3>
+        </header>
+
+        <p>
+          Using [File System Function ] -> This lesson is just an intro and has
+          not any Practical Examples
+        </p>
+
+        <!-- <p> =&gt; Here (8) Major Applications PHP [ 64 PHP 5 In Arabic - File System - File_Exists, Is_Writable ] as following =>  <br><br> -->
+
+        <ol type="A">
+          <li>
+            [PHP - 5) First Example => File System - [file_exists($File Name
+            with full path)] => {Simple testing} => Testing of Existed file :
+            <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [really
+                    existed]
+                  </li>
+                </ul>
+              </li>
+              <li>
+                This Example Including the following steps : <br />
+                <ul>
+                  <li>
+                    Getting the Full Path of the Existing [PHP file] + print the
+                    file's path
+                  </li>
+                  <li>
+                    Declaring File Variable upon the Full Path of the Existing
+                    file
+                  </li>
+                  <li>Testing by [if condition] declared file is Existed</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - 5) Second Example => File System - [file_exists($File Name
+            with full path)] => {Simple testing} => Testing of UnExisted file :
+            <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [Dont
+                    existed]
+                  </li>
+                </ul>
+              </li>
+              <li>
+                This Example Including the following steps : <br />
+                <ul>
+                  <li>
+                    Getting the Full Path of the Existing [PHP file] + print the
+                    file's path
+                  </li>
+                  <li>
+                    Declaring File Variable upon the Full Path of the UnExisting
+                    file
+                  </li>
+                  <li>Testing by [if condition] declared file is UnExisted</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - 5) Third Example => File System - [is_writable($file name
+            with full path)] => {Simple testing} => Testing of Existed &
+            writable file : <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [Really
+                    existed existed]
+                  </li>
+                </ul>
+              </li>
+              <li>
+                This Example Including the following steps : <br />
+                <ul>
+                  <li>
+                    Getting the Full Path of the Existing [PHP file] + print the
+                    file's path
+                  </li>
+                  <li>
+                    Declaring File Variable upon the Full Path of the Existing
+                    file
+                  </li>
+                  <li>
+                    Testing by [if condition] if the declared file is writable
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - 5) Fourth Example => File System - [is_writable($File Name
+            with full path)] => {Simple testing} => Testing of Existed &
+            Un-writable file : <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [Dont
+                    existed]
+                  </li>
+                </ul>
+              </li>
+              <li>
+                This Example Including the following steps : <br />
+                <ul>
+                  <li>
+                    Getting the Full Path of the Existing [PHP file] + print the
+                    file's path
+                  </li>
+                  <li>
+                    Declaring File Variable upon the Full Path of the Existing
+                    file
+                  </li>
+                  <li>
+                    Testing by [if condition] if the declared file is writable
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - 5) Fifth Example => File System - [file_exists($File Name
+            with full path)] & [file_put_contents($File Name with full path,
+            "content to be added")] => {Combined testing (2)} => {Existed File}
+            : Testing of Existed file & write contents inside file {in case the
+            file is existed only} : <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [Is
+                    already existed]
+                  </li>
+                  <li>
+                    [ Text contents ] => The text will be added inside the file
+                  </li>
+                </ul>
+              </li>
+              <li>
+                This Example Including the following steps : <br />
+                <ul>
+                  <li>
+                    Getting the Full Path of the Existing [PHP file] + print the
+                    file's path
+                  </li>
+                  <li>
+                    Declaring File Variable upon the Full Path of the Existing
+                    file
+                  </li>
+                  <li>
+                    Testing by [if condition] if the declared file is existed &
+                    Put contents
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - 5) Sixth Example => File System - [file_exists($File Name
+            with full path)] & [file_put_contents($File Name with full path,
+            "Content to be added" )] => {Combined testing (2)} => {Existed File}
+            : Testing of Existed file & write contents inside file {in case the
+            file is existed || NOT} : <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [Dont
+                    existed , but will be added to current file path]
+                  </li>
+                  <li>
+                    [ Text contents ] => The text will be added inside the file
+                    [but after creation the file with current declared]
+                  </li>
+                </ul>
+              </li>
+              <li>
+                This Example Including the following steps : <br />
+                <ul>
+                  <li>
+                    Getting the Full Path of the Existing [PHP file] + print the
+                    file's path
+                  </li>
+                  <li>
+                    Declaring File Variable upon the Full Path of the Existing
+                    file
+                  </li>
+                  <li>
+                    Testing by [if condition] if the declared file is existed &
+                    Put contents
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - 5) Seventh Example => File System - [file_exists($File Name
+            with full path)] & [is_writable($File Name with full path)] &
+            [file_put_contents($File Name with full path, "Content to be
+            added")] => {Combined testing (3)} => {Existed File} : Testing of
+            Existed file & Writable file & write contents Inside file {in case
+            of existed file only} : <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [Dont
+                    existed , but will be added to current file path]
+                  </li>
+                  <li>
+                    [ Text contents ] => The text will be added inside the file
+                    [but after creation the file with current declared]
+                  </li>
+                </ul>
+              </li>
+              <li>
+                This Example Including the following steps : <br />
+                <ul>
+                  <li>
+                    Getting the Full Path of the Existing-writable [PHP file]
+                  </li>
+                  <li>
+                    Declaring File Variable upon the Full Path of the Existing
+                    file
+                  </li>
+                  <li>
+                    Testing by [if condition] if the declared file is existed &
+                    writable & Put contents [write contents Inside file - in
+                    case of existance only ]
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - 5) Eighth Example => File System - [file_exists] &
+            [is_writable] & [file_put_contents] => {Combined testing (3)} =>
+            {Existed File} : Testing of Existed file && Writable file && write
+            contents inside file {in case of existed || NOT } : <br />
+            <ul>
+              <li>
+                This method Including the following elements : <br />
+                <ul>
+                  <li>
+                    [ dirname(__FILE__) ] => The full Path name of current php
+                    file directory [before the file name]
+                  </li>
+                  <li>
+                    [ File name ] => The full Path name of certain file [Dont
+                    existed , but will be added to current file path]
+                  </li>
+                  <li>
+                    [ Text contents ] => The text will be added inside the file
+                    [but after creation the file with current declared]
+                  </li>
+                </ul>
+              </li>
+              <li>
+                This Example Including the following steps : <br />
+                <ul>
+                  <li>
+                    Getting the Full Path of the Existing-writable [PHP file]
+                  </li>
+                  <li>
+                    Declaring File Variable upon the Full Path of the Existing
+                    file
+                  </li>
+                  <li>
+                    Testing by [if condition] if the declared file is existed &
+                    writable & Put contents [write contents Inside file - in
+                    case of existance || Not ]
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+
+        <!-- <section id=sec class=txtarea >                                  
+                 <a href="http://localhost/PHP%20Course/64%20PHP%205%20In%20Arabic%20-%20File%20System%20-%20File_Exists,%20Is_Writable/64%20PHP%205%20In%20Arabic%20-%20File%20System%20-%20File_Exists,%20Is_Writable.php">  
+                    {64 PHP 5 In Arabic - File System - File_Exists, Is_Writable , dirname(__File__), file_put_contents } => Lesson 64 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+        <section id="sec" class="txtarea">
+          <a
+            class="btn"
+            href="http://localhost/PHP%20Course/64%20PHP%205%20In%20Arabic%20-%20File%20System%20-%20File_Exists,%20Is_Writable/64%20PHP%205%20In%20Arabic%20-%20File%20System%20-%20File_Exists,%20Is_Writable.php"
+          >
+            {Main Page} [Display] => {64 PHP 5 In Arabic - File System -
+            File_Exists, Is_Writable , dirname(__File__), file_put_contents } =>
+            Lesson 64 PHP File Webpage by Localhost
+          </a>
+          <br />
+          <br />
+
+          <a
+            class="btn"
+            href="64 PHP 5 In Arabic - File System - File_Exists, Is_Writable.php"
+          >
+            {Main Page} [Source Code] => {64 PHP 5 In Arabic - File System -
+            File_Exists, Is_Writable , dirname(__File__), file_put_contents } =>
+            Lesson 64 PHP File Webpage by Localhost
+          </a>
+        </section>
+        <br />
+
+        <!-- <script  src="14 PHP 5  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="VideoSection">
+        <h3>Lesson 64 Video File:</h3>
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=s_bRuDiLxtU&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=64&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\64 PHP 5 In Arabic - File System - File_Exists, Is_Writable.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shandow &trade;
+    </footer>
+
+    <script>
+      alert(
+        "Welcome to 64 PHP 5 In Arabic - File System - File_Exists, Is_Writable "
+      );
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

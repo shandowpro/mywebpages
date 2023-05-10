@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> Lesson52 Selectors - Only-Child, Only-Of-Type, Selection  </title>
+    <link rel="stylesheet" href="CSS3 Lesson52 Selectors - Only-Child, Only-Of-Type, Selection.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson52 Selectors - [Only-Child || Only-Of-Type || Selection]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+     <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to CSS3 Lesson52 Selectors - Only-Child, Only-Of-Type, Selection main Topics">
+                [ CSS3 Lesson52 Selectors - Only-Child, Only-Of-Type, Selection ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to CSS3 Lesson52 Selectors - Only-Child, Only-Of-Type, Selection Concept">
+                [ CSS3 Lesson52 Selectors - Only-Child, Only-Of-Type, Selection ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to CSS3 Lesson52 Selectors - Only-Child, Only-Of-Type, Selection ] Importance & Benefits">
+                [ CSS3 Lesson52 Selectors - Only-Child, Only-Of-Type, Selection ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to  CSS3 Lesson52 Selectors - Only-Child, Only-Of-Type, Selection  ] Syntax">
+                [ CSS3 Lesson52 Selectors - Only-Child, Only-Of-Type, Selection ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to CSS3 Lesson52 Selectors - Only-Child, Only-Of-Type, Selection ] Practical Applications">
+                [ CSS3 Lesson52 Selectors - Only-Child, Only-Of-Type, Selection ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> CSS3 Lesson52 Selectors - [Only-Child, Only-Of-Type, Selection] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header> CSS3 Lesson52 Selectors - [Only-Child  || Only-Of-Type || Selection ] Main Topics : </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                
+                <p>  Selectors with different types following:  <br></p>                    
+                    <ol>
+                        <li> [Not()] Selector  => [:Only-Child()]  <br>
+                        <li> [Last-Child] Selector  => [:Only-Of-Type]  <br>
+                        <li> [First-Of-Type] Selector  => [::Selection]  <br>                    
+                    </ol>                                                                                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class=CSS3Con id="CSS3Con">
+            <header>
+                <header> CSS3 Lesson52 Selectors - [Only-Child  || Only-Of-Type || Selection ] Main Topics : </header>
+            </header>
+                                    
+            <p> { These Selector => is rarely to use in the CSS3 , but we might need it some time ] => </p>  <br>                
+
+            <p> {Selector- [:Only-Child()] =>  <br>                
+                <ul>                    
+                    <li> This selector to select a Certain Child that is existed alone in it's Parent container  </li>                    
+                </ul>
+            </p>
+            
+            <p> {Selector- [:Only-Of-Type()] =>  <br>                
+                <ul>                                        
+                    <li> This selector to select a Certain Type Child that is one of it's type existed in it's Parent container  </li>                    
+                </ul>
+            </p>
+            
+            <p> {Selector- [::Selection]  =>  <br>                
+                <ul>                    
+                    <li> This selector to control the text Selection in the browser [color , backgrond-color, text-shadow ]  </li>                    
+                    <li> This selector will not respond to non textual properties  [margin, pading ]  </li>                    
+                </ul>
+            </p>                                                        
+                                                            
+        <!-- ------------------------------------------------------ -->
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+        <section class="CSS3Imp" id="CSS3Imp">
+            <header>
+                <h3> [Only-Child, Only-Of-Type, Selection] Importance & Benefits: </h3>
+            </header>
+            
+            <p> =&gt; [ Only-Child, Only-Of-Type, Selection] : This Advanced Selectors providing the following features & imporatance : <br>            
+                <ul>                                                                                                        
+                    <li> It can access only a certain element(s) in some cases </li>                    
+                    <li> It is rarely to use but might be useful in some cases </li>                    
+                    <li> [::Selection]  => It is the only property to control the browser Selection  </li>                    
+                </ul>                                                 
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ CSS3 Lesson52 Selectors - Only-Child, Only-Of-Type, Selection, Last-Of-Type] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // (*) [Only-Child, Only-Of-Type, Selection ] Syntax as following : <br><br>
+                <span class='one'></span> //First)  [HTML] file  : <br>
+                
+                    <span class=two></span> &lt; fieldset class='ContainerForm' &gt; <br> 
+                
+                    <!-- *) 1) [:Only-Child] Selector  -->                                                            
+                        <span class=three></span> &lt; section class='Only-Child' &gt; <br> <br>                                                                                    
+                            <span class=four></span>  &lt; p &gt; This is the only child in it's parent container  &lt; /p &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                        <!-- ---------------------------------------------------------------------------- -->
+                        
+                    <!-- *) 2) [:Only-Of-Type] Selector  -->                                                            
+                        <span class=three></span> &lt; section class='Only-Of-Type' &gt; <br> <br>                                                                                    
+                            <span class=four></span>  &lt; p &gt; This is the only child in it's parent container  &lt; /p &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; This is the only child in it's parent container  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                        <!-- ---------------------------------------------------------------------------- -->
+                    
+                    <!-- *) 3) [::Selection] Selector  -->                                                            
+                        <span class=three></span> &lt; section class='Selection' &gt; <br> <br>                                                                                    
+                            <span class=four></span>  &lt; p &gt; This is the only child in it's parent container  &lt; /p &gt; <br>                             
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                        <!-- ---------------------------------------------------------------------------- -->
+                        
+                        <!-- ---------------------------------------------------------------------------- -->                                                                        
+            // ------------------------------------------------------------------------------ <br><br>                    
+            // ------------------------------------------------------------------------------ <br><br> <br> <br>  <hr>                                                           
+                    
+            <!-- Im Here >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+                <span class='one'></span> // Second)  [CSS3] file  : <br>                                          
+                                            
+                    <!-- CSS3 General Settings of parent container {.} :
+                        (A) General Main parent Container Settings :  -->
+                        <!-- ----------------------------------------------------------------------- -->
+                        <span class=two></span> .ContainerForm {  <br>
+                            <span class=three></span> position: relative; <br>                        
+                            <span class=three></span> height: 50px; <br>
+                            <span class=three></span> width: 200px ; <br>
+                            <span class=three></span> margin: 50px auto ; <br>                                                                                
+                        <span class=two></span> }  <br> <br>                                                
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- (B) Accessing certain Element(s) using Selectors -->
+                        
+                        <!-- /(B) / a) Only-Child Selector (:Only-Child) : 
+                            Accessing Certain Child that is existed alone in it's Parent container  using [:Only-Child] Selector -->                        
+
+                        <span class=two></span> .Only-Child :Only-Child {  <br>                                                        
+                            <span class=three></span> background-color: red; <br>                            
+                            <span class=three></span> color: Yellow <br>                              
+                        <span class=two></span> }  <br> <hr>                        
+                        <!-- ----------------------------------------------------------------------- -->
+                        
+                        <!-- /(B) / b) Only-Child Selector (:Only-Of-Type) : 
+                            Accessing Certain Type Child that is one of it's type existed in it's Parent container using [:Only-Of-Type] Selector -->                        
+
+                        <span class=two></span> .Only-Of-Type :Only-Of-Type {  <br>                                                        
+                            <span class=three></span> background-color: red; <br>                            
+                            <span class=three></span> color: Yellow <br>                              
+                        <span class=two></span> }  <br> <hr>                        
+                        <!-- ----------------------------------------------------------------------- -->
+                        
+                        <!-- /(B) / c) Selection Selector (::Selection) : 
+                            Accessing Certain Type Child that is one of it's type existed in it's Parent container using [::Selection] Selector -->                        
+
+                        <span class=two></span> .Selection ::Selection {  <br>                                                        
+                            <span class=three></span> background-color: #333; <br>                            
+                            <span class=three></span> color: #fff <br>                              
+                        <span class=two></span> }  <br> <hr>                        
+                        <!-- ----------------------------------------------------------------------- -->
+                                                                        
+                        <!-- ----------------------------------------------------------------------- -->                                                                                                                                                                    
+                        <!-- ------------------------------------------------------------- -->                        
+                        <!-- ------------------------------------------------------------- -->                            
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="CSS3Pract" >
+
+            <header>
+                <h3> [CSS3 Lesson52 Selectors -  [ Only-Child || Only-Of-Type || ::Selection] General Practical Applications : </h3>
+            </header>
+         
+            <h4> 
+                =&gt; Following is Applied example (Selectors) by following types [ Only-Child || Only-Of-Type || ::Selection] : 
+            </h4>                            
+                <ol>                    
+                    <li>  First Container => [ Only-Child ] => Has (1) Examples </li>  <br>
+                        <ul>
+                            <li> Accessing a certain child that is alone in it's in parent container & applying the following properties  => <br>
+                                <ol>
+                                    <li> backgournd Coloring :> {red} </li>                    
+                                    <li> color:> {Yellow}  </li>                                                     
+                                </ol>                            
+                            </li>
+                        </ul>                                                                                             
+                                                                                             
+                    <li>  Second Container : [:Only-Of-Type] => Has (1) Examples </li>  <br>
+                        <ul>
+                            <li> select a Certain Type Child that is one of it's type existed in it's Parent container & Applying the following properties  => <br>
+                                <ol>
+                                    <li> backgournd Coloring :> {red} </li>                    
+                                    <li> color:> {Yellow}  </li>                                                     
+                                </ol>                            
+                            </li>
+                        </ul>                                                                                             
+                                                                                             
+                    <li>  Third Container : [::Selection ] => Has (1) Examples </li>  <br>
+                        <ul>
+                            <li> Setting the text selection property in cetain Parent container & Applying the following properties  => <br>
+                                <ol>
+                                    <li> backgournd Coloring :> {#333} </li>                    
+                                    <li> color:> {#fff}  </li>                                                     
+                                </ol>                            
+                            </li>
+                        </ul>                                                                                                                                                                                                              
+                </ol>                                   
+                <!-- --------------------------------------------------------------- -->            
+            <br><br><br>
+            <!-- ========================================================================= -->                                                        
+                        
+            <header> There is only (1) main Parent Containers => with (3) different section (one section : for each selector ) </header>
+            
+            <fieldset class='ContainerForm'>                                                                  
+                
+                <!-- First Container [.Only-Child] => 
+                    Accessing a certain child that is alone in it's in parent container using [:Only-Child] Selector  -->                        
+                    
+                    <header>  A) Accessing a certain child that is alone in it's in parent container :  </header>
+                    
+                    <section class="Only-Child">                        
+                        <p> This is the only child in it's Parent container  </p>                                                                        
+                    </section>
+                    <br> <br> <br>                    
+                    <!-- ----------------------------------------------------------- -->
+                    
+                <!-- Second Container [.Only-Of-Type] => 
+                    Accessing a certain child that is alone in it's in parent container using [:Only-Of-Type] Selector  -->                        
+                        
+                    <header>  B) Accessing a certain child that is one of it's type in it's in parent container :  </header>
+                            
+                    <section class="Only-Of-Type">                        
+                        <p> This is the only {P} element in it's Parent container  </p>                                                                        
+                        <div> This is the only {div} element in it's Parent container  </div>                                                
+                    </section>
+                    <br> <br> <br>                    
+                    <!-- ----------------------------------------------------------- -->
+                    
+                    <!-- Third Container [.Selection] => 
+                        Accessing a certain child that is alone in it's in parent container using [::Selection ] Selector  -->                        
+                    
+                    <header>  C)  Setting the text selection property in cetain Parent container & Applying the following properties :  </header>
+                    
+                    <section class="Selection">                        
+                        <p> This is {P} with different Text-Selection settings </p>                                                
+                    </section>
+                <br> <br> <br>                    
+                <!-- ----------------------------------------------------------- -->
+                
+                <br> <br> <br>                                    
+                <!-- ---------------------------------------------------------------------------------- -->                
+           <!-- --------------------------------------------------------------------- -->                                                
+            
+        </section>                    
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 52 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=da5J0EEh7Mc&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=52&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\52 Css3 - Selectors - Only-Child, Only-Of-Type, Selection.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson52 Selectors - Only-Child, Only-Of-Type, Selection ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

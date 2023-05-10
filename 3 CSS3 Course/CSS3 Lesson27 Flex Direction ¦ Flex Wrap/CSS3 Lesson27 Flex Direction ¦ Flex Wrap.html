@@ -1,0 +1,606 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 27 [CSS3 Lesson27 Flex Direction ¦ Flex Wrap] </title>
+    <link rel="stylesheet" href="CSS3 Lesson27 Flex Direction ¦ Flex Wrap.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 27 [CSS3 Flex Direction ¦ Flex Wrap]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to CSS3 Flex Direction ¦ Flex Wrap main Topics">
+                [ CSS3 Flex Direction ¦ Flex Wrap ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to CSS3  Flex Direction ¦ Flex Wrap [CSS3  Flex Direction ¦ Flex Wrap ] Concept">
+                [ CSS3 Flex Direction ¦ Flex Wrap ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to CSS3  Flex Direction ¦ Flex Wrap [CSS3 Flex Direction ¦ Flex Wrap ] Importance & Benefits">
+                [ CSS3 Flex Direction ¦ Flex Wrap ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to CSS3  Flex Direction ¦ Flex Wrap [CSS3  Flex Direction ¦ Flex Wrap ] Syntax">
+                [ CSS3 Flex Direction ¦ Flex Wrap ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to CSS3  Flex Direction ¦ Flex Wrap [CSS3 Flex Direction ¦ Flex Wrap ] Practical Applications">
+                [ CSS3 Flex Direction ¦ Flex Wrap ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 27 [CSS3 Flex Direction ¦ Flex Wrap ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                CSS3 Lesson27 Flex Direction ¦ Flex Wrap Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [CSS3 Lesson27 Flex Direction ¦ Flex Wrap] Concept. </li>                       
+                    
+                    <li> [CSS3 Lesson27 Flex Direction ¦ Flex Wrap] Importance & Benefits. </li>
+
+                    <li> [CSS3 Lesson27 Flex Direction ¦ Flex Wrap] Syntax [Example]. </li>
+                    
+                     <li> [CSS3 Lesson27 Flex Direction ¦ Flex Wrap] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>                    
+                    <ul>
+                        <li> Basic concept about {display: flex} </li> 
+                        <li> Basic concept about {Flex Direction} , and it's values [ row || row-reverse || coloumn || coloumn-reverse] </li> 
+                        <li> Basic concept about {Flex Wrap} , and it's values [ nowrap || wrap || wrap-reverse] </li>
+                    </ul>                   
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class=CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [CSS3 Lesson27 Flex Direction ¦ Flex Wrap] Concept: </h3>
+            </header>
+                      
+                <p> These properties are allocated to the parent Container Element.
+                
+                <p> This property is requiring from (4-5) lessons to covered</p>
+                
+                <p> This property is seperated to main (2) sectors : </p>
+                    <ul>
+                        <li> Parent => There are Flex properties specialized for parent Container such as {flex-direction} || {flex-wrap} </li>
+                        <li> Children => There are Flex properties specialized for Children Elements inside the Parent Container {will be taken in later lessons} </li>
+                    </ul>
+    
+                <p> This property is required {display: flex} first to be activated to the parent Element .
+
+                <ol>                
+                    <li> {CSS3 Flex Direction } :</li>                
+                        <p> It is the property to make children element sorted in order flexilbe (according to certain mode & direction) </p> 
+                        
+                        <p> This property is providing the Abilty to assign a certain direction of Flexing-sorting Children Elements) </p> 
+                        
+                        <p> This property has the following Values :</p> 
+                            <ul>
+                                <li> [flex-direcion: row] => To sort Children Elements in row </li>
+                                <li> [flex-direcion: row-reverse] => To sort Children Elements in row, but in opposite directions of the page direction (rtl- ltr)</li>
+                                <li> [flex-direcion: coloumn] => To sort Children Elements in coloumn </li>
+                                <li> [flex-direcion: coloumn-reverse] => To sort Children Elements in coloumn, but in opposite directions of the page direction (rtl- ltr) </li>
+                            </ul>
+                                                
+                    <li> {CSS3 Flex Wrap } :</li>                
+                        <p> It is the property to control the wraping property inside the Flexable parent container </p> 
+                        <p> It is the property to make children element sorted in order flexilbe (according to certain mode & direction) </p> 
+
+                        <p> This property has the following Values :</p> 
+                            <ul>
+                                <li> [flex-wrap: nowrap] => This is the default value of this property, and it will make no wraping childre Wraping inside the parent container  </li>
+                                <li> [flex-: wrap] => This will make the Children Elements wraping inside the parent container (according to the flex-direction & page direction </li>
+                                <li> [flex-wrap: wrap-reverse] => This will make the Children Elements wraping inside the parent container (Oppositally to the flex-direction & page direction   </li>                                
+                            </ul>
+                </ol>            
+                        
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+        <section class="CSS3Imp" id="CSS3Imp">
+            <header>
+                <h3> [CSS3 Lesson27 Flex Direction ¦ Flex Wrap ] Importance & Benefits: </h3>
+            </header>
+            
+            <p> =&gt; [CSS3 Lesson27 Flex Direction ¦ Flex Wrap ] : This Advanced property enabling the following features & imporatance : <br>            
+                <ul>                                                                
+                    <li> Providing better, easier, practical, profficent Renposive Desiging , Much more easier way than old methods </li>
+                </ul>                                                 
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ CSS3 Flex Direction ¦ Flex Wrap] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [CSS3 Flex Direction ¦ Flex Wrap] Syntax as following :<br><br>                                                    
+                <span class='one'></span> //a)  [HTML] file  : <br>                                          
+                    <!-- A) Flex-direction -->
+                    <span class=two></span> &lt; div class='Flex-Direction'  &gt; <br>                                                
+                    
+                        <span class=three></span> &lt; section class='Flex-Direction-Row'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                                                            
+                        <span class=three></span> &lt; section class='Flex-Direction-Row-Reverse'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                                                            
+                        <span class=three></span> &lt; section class='Flex-Direction-Column'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                                                            
+                        <span class=three></span> &lt; section class='Flex-Direction-Column-Reverse'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                
+                    <br> <br>  <hr>                                       
+                    // ------------------------------------------------------------------------------ <br><br>                    
+                    // ------------------------------------------------------------------------------ <br><br>                    
+                                        
+                    
+                    <!-- B) Flex-Wrap -->
+                    <span class=two></span> &lt; div class='Flex-Wrap'  &gt; <br>                                                
+                    
+                        <span class=three></span> &lt; section class='Flex-Wrap-nowarp'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                                                            
+                        <span class=three></span> &lt; section class='Flex-Wrap-Warp'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                                                            
+                        <span class=three></span> &lt; section class='Flex-Wrap-Wrap-Reverse'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                                                                                                                                                                        
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                
+                    <br> <br>  <hr>                                       
+                    // ------------------------------------------------------------------------------ <br><br>                    
+                    // ------------------------------------------------------------------------------ <br><br>                                                            
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                            
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                            
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="CSS3Pract" >
+
+            <header>
+                <h3> [CSS3 Flex Direction ¦ Flex Wrap] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following are Applied examples of {Flex Direction ¦ Flex Wrap} new feature/ property with all it's all Values} : <br>
+                
+            <p> (2) Fieldsets Multiple as following:  </p>                        
+                <ul>
+                    <li> A) First Fieldset: {Flex Direction} property, and contain the following Sections (4) [each parent section contain (3) divs]  </li>
+                        <ol>
+                            <li> First Section => flex-direction: row </li>
+                            <li> flex-direction: row-reverse </li>
+                            <li> flex-direction: column </li>
+                            <li> flex-direction: column-reverse </li>
+                        </ol>
+                        
+                    <li> B) Second Fieldset: {Flex Wrap} property, and contain the following Sections (3) [each parent section contain (3) divs]  </li>
+                        <ol>
+                            <li> First Section => flex-wrap: nowrap </li>
+                            <li> Seocnd Section => flex-wrap: warp </li>
+                            <li> Third Section => flex-warp: wrap-reverse </li>
+                        </ol>                                    
+                <!-- ========================================================================= -->                                                
+                <!-- ========================================================================= -->                
+                </ul>                                                
+            <hr><br><br>
+            <!-- ========================================================================= -->                                                        
+                <!-- A)  {Flex Direction} Application1  -->
+                    <fieldset class='Flex-Direction'>                                                  
+                        <legend> First => Flex Direction </legend>
+                        
+                        <header>  Flex Direction : Row </header>
+                        
+                        <section class='Flex-Direction-Row'>                                                                    
+                            <div class='div1'>                     
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                
+                                            
+                        <header>  Flex Direction : Row-Reverse </header>
+                        
+                        <section class='Flex-Direction-Row-Reverse'>                            
+                            <div class='div1'>                     
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>
+                        <!-- ------------------------------------------------------------------------- -->                
+                        <!-- ------------------------------------------------------------------------- -->                
+                      
+                        <header>  Flex Direction : Column </header>
+                        
+                        <section class='Flex-Direction-Column'>                                                                    
+                            <div class='div1'>                     
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                
+                                            
+                        <header>  Flex Direction : Column-Reverse </header>
+                        
+                        <section class='Flex-Direction-Column-Reverse'>                            
+                            <div class='div1'>                     
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>
+                        <!-- ------------------------------------------------------------------------- -->                                      
+                        <!-- --------------------------------------------------------------------- -->                            
+                    </fieldset>
+                    <!-- --------------------------------------------------------------------- -->                                            
+                    <br><hr> <br>        
+
+                <!-- B)  { Flex Wrap - defualt Flex direction } Application2  -->
+                    <fieldset class='Flex-Wrap'>                                                  
+                        <legend>  Second => Flex Wrap - with default flex-direction(row) </legend>
+                        
+                        <header>  Flex Wrap : nowrap </header>
+                        
+                        <section class='Flex-Wrap-Nowarp'>                                                                    
+                            <div class='div1'>                    
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                
+                                            
+                        <header>  Flex Wrap : Wrap </header>
+                        
+                        <section class='Flex-Wrap-Warp'>                                                                    
+                            <div class='div1'>                    
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                
+                                            
+                        <header>  Flex Wrap: Wrap-Reverse </header>
+                        
+                        <section class='Flex-Wrap-Wrap-Reverse'>                            
+                            <div class='div1'>                     
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>
+                        <!-- ------------------------------------------------------------------------- -->                
+                        <!-- ------------------------------------------------------------------------- -->                                    
+                        <!-- ------------------------------------------------------------------------- -->                                      
+                        <!-- --------------------------------------------------------------------- -->                            
+                    </fieldset>
+            <!-- --------------------------------------------------------------------- -->                                            
+            <br><hr> <br>        
+
+                <!-- C)  { Flex Wrap - Column Flex direction } Application3  -->
+                    <fieldset class='Flex-Wrap'>                                                  
+                        <legend> Third => Flex Wrap - [with Flex-direction : column] </legend>
+                        
+                        <header>  Flex Wrap : nowrap </header>
+                        
+                        <section class='Flex-Wrap-Nowarp-C'>                                                                    
+                            <div class='div1'>                    
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                
+                                            
+                        <header>  Flex Wrap : Wrap [with Flex-direction : column] </header>
+                        
+                        <section class='Flex-Wrap-Warp-C'>                                                                    
+                            <div class='div1'>                    
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                
+                                            
+                        <header>  Flex Wrap: Wrap-Reverse [with Flex-direction : column] </header>
+                        
+                        <section class='Flex-Wrap-Wrap-Reverse-C'>                            
+                            <div class='div1'>                     
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>
+                        <!-- ------------------------------------------------------------------------- -->                
+                        <!-- ------------------------------------------------------------------------- -->                                                        
+                    </fieldset>
+            <!-- --------------------------------------------------------------------- -->                                            
+            <br><hr> <br>        
+            <!-- --------------------------------------------------------------------- -->                            
+        <!-- --------------------------------------------------------------------- -->                                                    
+        </section>                    
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 27 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=R0c911HMb9w&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=27&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\27 Css3 - Flex Direction ¦ Flex Wrap.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 27 [CSS3 Flex Direction ¦ Flex Wrap ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

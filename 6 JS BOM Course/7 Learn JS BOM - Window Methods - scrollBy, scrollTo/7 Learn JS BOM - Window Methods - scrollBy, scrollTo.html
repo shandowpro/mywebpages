@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 7 Learn JS BOM - Window Methods - scrollBy, scrollTo </title>
+    <link rel="stylesheet" href="7 Learn JS BOM - Window Methods - scrollBy, scrollTo.css" media="all">
+    
+    <style>        
+       body{height:4000px; width:1500px;}
+       
+       .custom {
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            margin: 10px auto;
+            border: 5px solid gray;    
+            background-color: #ccc;
+            text-align: center;
+        } 
+         
+        .dis {
+            border: 3px solid red;
+            border-radius: 30px;
+            width: 100%;
+            /* height: 200px; */
+            text-align: center;
+            line-height: 2em;
+        }
+
+        .item{
+            color: red;
+            font-size: 30px;
+            font-family: monospace;
+            background-color: blue;
+        }
+
+
+        .Home0 {
+            position: fixed;
+            border: 3px solid #080;
+            padding: 5px;
+            background: lightblue;
+            color: #100;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            top: 20px;
+            left: 20px
+        }
+
+        .Home0:hover {
+            background: #080;
+            border-color: lightgreen;
+            color: #FFF
+        }
+
+        .End0 {
+            position: fixed;
+            border: 3px solid #080;
+            padding: 5px;
+            background: lightblue;
+            color: #100;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            top: 70px;
+            left: 20px
+        }
+
+        .End0:hover {
+            background: #080;
+            border-color: lightgreen;
+            color: #FFF
+        }
+        
+    </style>
+    
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main" >
+        7 Learn JS BOM - Window Methods - scrollBy, scrollTo
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS HTML BOM main Topics">
+                7 Learn JS BOM - Window Methods - scrollBy, scrollTo  Main Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to 7 Learn JS BOM - Window Methods - scrollBy, scrollTo Concept">
+                7 Learn JS BOM - Window Methods - scrollBy, scrollTo  Concept </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to 7 Learn JS BOM - Window Methods - scrollBy, scrollTo Importance & Benefits">
+                7 Learn JS BOM - Window Methods - scrollBy, scrollTo  Importance & Benefits </a> </li> 
+
+            <li> <a href=#JSDOMImp title="Go to 7 Learn JS BOM - Window Methods - scrollBy, scrollTo Syntax ">
+                7 Learn JS BOM - Window Methods - scrollBy, scrollTo main Information</a> </li>            
+
+            <li> <a href=#JSDOMPract title="Go to 7 Learn JS BOM - Window Methods - scrollBy, scrollTo Practical Applications">
+                7 Learn JS BOM - Window Methods - scrollBy, scrollTo  Practical Applications </a> </li>
+
+        </ol>
+
+        <!-- Scrolling through by using [Directly href link]  -->
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+        
+        <!-- Scrolling through by using [scrollBy() && scrollTo() function]  -->
+        <button id="home0" class="Home0"  title="Go to page header"> Home </button>
+        <button id="end0" class="End0"  title="Go to page footer"> End </button>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS HTML BOM Course <span> 7 Learn JS BOM - Window Methods - scrollBy, scrollTo  </span>
+    </main>
+
+    
+    <div class="Post" id=post>
+        <Section  id="MainC" class="MainC">
+
+            <header>
+                7 Learn JS BOM - Window Methods - scrollBy, scrollTo Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> Window Methods - scrollBy(X,Y) => To move BY certian amount of pixels to certain directons  </li>
+                    <li> Window Methods - scrollTo(X,Y); => To move TO a certain location coordination  </li>
+                    <li> Window Methods - scrollX; => To Get the current left Scorlled Total amount  </li>
+                    <li> Window Methods - scrollY; => To Get the current top Scorlled Total amount  </li>                
+                </ol>                                                
+                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> 7 Learn JS BOM - Window Methods - scrollBy, scrollTo  Concept: </h3>
+            </header>
+                                                        
+            <p> =&gt; [ window Methods ] : <br>
+                <ol>
+                    <li> Main concept of {window Methods} => <br>
+                        <ol>
+                            <li> {scrollBy()} Method => <br> 
+                                <p> To Set a certain amount of pixels and position [x & y] to move the current window towoard  </p>
+                                <p> This method does Not depends on current window to be process </p>
+                                <p> This method keep moving the Element each time the fuhnction is being processed , until reaching the Edge of the Curren Page</p>
+                                <p> Using the egative value with the heigth and width => will give a result only witjh the following Conditions: <br>
+                                    <ul> 
+                                        <li> The current page position is not at the Edge of the Page </li>
+                                        <li> The current page Width and Heigth has a free to move and navigate through  </li>
+                                    </ul> 
+                                </p>
+                            </li>
+                            
+                            <li> {scrollTo()} Method => <br>
+                                <p> To Set a certain amount of pixels and position [x & y] to move the current window towoard  </p>
+                                <p> This method depends on current window to be process -> and will be implemented only the element is NOT in the assigned location  </p>
+                                <p> This method move the Element to the assigned location coordination , and stop working if the elmement has reached it's destination </p>
+                                <p> Using the Negative value with the heigth and width => will give a result only witjh the following Conditions: <br>
+                                    <ul> 
+                                        <li> The current page position is not at the Edge of the Page </li>
+                                        <li> The current page Width and Heigth has a free to move and navigate through  </li>
+                                    </ul> 
+                                </p>
+                            </li>                            
+                        </ol>                                                                                                         
+                                                
+                </ol>  <br>
+                            
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> 7 Learn JS BOM - Window Methods - scrollBy, scrollTo Importance & Benefits : </h3>
+            </header>
+
+            <p> 7 Learn JS BOM - Window Methods - scrollBy & scrollTo() gives us the Following Features : <br>
+                <ul>                                                 
+                    <li> {scrollBy() || scrollTo()} => Each are usful tool to move the element to/by certain location by Pixels </li>
+                    <li> {scrollBy() || scrollTo()} => Using them can create an awesome Navigation Applications, such as [move to top of the Screen] </li>
+                </ul>                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> 7 Learn JS BOM - Window Methods - scrollBy, scrollTo Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; {JS BOM - Window Metods: scrollBy(), scrollTo() } by following Conceptual Syntax as following : </p>
+            
+            <div id="Code" class="Code">
+                
+                [A]// {JSBOM file} : <br> <br>
+
+                [1] {BOM} ( scrollBy() ) Examples: <br>                
+                
+                    <span class= one></span> a)  Moving the Element by certian amount of Pixels  => scrollBy() Method , using  [Positive / Nagatiove Values] : <br> <br>
+                        
+                        <span class= two></span> // Defining the Button Variable [wich will be used in Scrolling Function ] : <br> 
+                        <span class= two></span> var btn = document.getElementByID('btn'); <br> <br> 
+                        
+                        
+                        <span class= two></span> // Defining onclick event => to scrollTo() : <br>
+                        <span class= two></span> btn.onclick = function {  <br>
+                            <span class=three></span> 'use strict' ; <br>
+                    
+                            <span class=three></span> Using Positive Values <br>                    
+                            <span class=three></span> window.scrollBy(x , y) ; <br>
+                            <span class=three></span> console.log('Window scrolled to the left by: ' + scrollX ); <br>
+                            <span class=three></span> console.log('Window scrolled to the top by: ' + scrollY ); <br><br>
+                            
+                            <span class=three></span> Using Negative Values <br>                    
+                            <span class=three></span> window.scrollBy(-x , -y) ; <br>
+                            <span class=three></span> console.log('Window scrolled to the left by: ' + scrollX ); <br>
+                            <span class=three></span> console.log('Window scrolled to the top by: ' + scrollY ); <br>
+                        <span class=two></span>  }; <br> <br> 
+                //=========================================================== <br> <br>                    
+                                                            
+                    <span class= one></span>  b)  Moving the Element TO certian Location of coordinations   => scrollTo() Method , using  [Positive / Nagatiove Values] : <br> <br>
+                        
+                        <span class= two></span> // Defining the Button Variable [wich will be used in Scrolling Function ] : <br> 
+                        <span class= two></span> var btn = document.getElementByID('btn'); <br> <br> 
+                        
+                        
+                        <span class= two></span> // Defining onclick event => to scrollTo() : <br>
+                        <span class= two></span> btn.onclick = function {  <br>
+                            <span class=three></span> 'use strict' ; <br>
+                    
+                            <span class=three></span> Using Positive Values <br>                    
+                            <span class=three></span> window.scrollTo(x , y) ; <br>
+                            <span class=three></span> console.log('Window scrolled to the left by: ' + scrollX ); <br>
+                            <span class=three></span> console.log('Window scrolled to the top by: ' + scrollY ); <br><br>
+                            
+                            <span class=three></span> Using Negative Values <br>                    
+                            <span class=three></span> window.scrollTo(-x , -y) ; <br>
+                            <span class=three></span> console.log('Window scrolled to the left by: ' + scrollX ); <br>
+                            <span class=three></span> console.log('Window scrolled to the top by: ' + scrollY ); <br>
+                        <span class=two></span>  }; <br> <br> 
+                //=========================================================== <br> <br>                                                                                                
+                //=========================================================== <br> <br>                                                                
+            
+            <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMPract" id="JSDOMPract">
+            <header>
+                <h3> 7 Learn JS BOM - Window Methods - scrollBy, scrollTo => General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt ; Here 2 Major Applications as following :  &gt;&gt; <br>
+                <ol> 
+                    <li> The First Application =>  window Functions and Methods Example  {scrollBy()} , as Following: <br> 
+                        <p>  Getting all Required Variables </p>                                                
+                        <p>  Displaying the {Time Inserted value}  </p>                                                
+                        <p>  Declaring the Function to be called  </p>                                                
+                        <p>  Defining the Declared scrollBy() Function inside the Variable  </p>                                                
+                    </li>                    
+                    
+                    <li> The Second Application =>  window Functions and Methods Example {scrollTo()}, as Following: <br> 
+                        <p> Creating A Button to Stop Working with the scrollBy() Function => by scrollTo() </p>                                            
+                    </li>                    
+                </ol>                
+                                    
+            <br> <br>                                    
+
+            <!-- <div id="elem" class="btn" ></div> <br> -->            
+                        
+            
+            <button  id="btn" class=btn> Scroll page by {scrollBy()} => Positive Values [left , top] </button> 
+            <button  id="btn1" class=btn> Scroll page by {scrollBy()} => Negative Values [left , top] </button>  <br>
+            <button  id="btn2" class=btn> Scroll page by {scrollTo()} => Positive Values [left , top] </button> 
+            <button  id="btn3" class=btn> Scroll page by {scrollTo()} => Negative Values [left , top]  </button>  <br>
+            
+            <!-- <button  id="btn4" class=btn> Setting the Current Page to a cetain  [left:0 , top:0] </button>  -->
+            <!-- <div id="note" class="dis"></div> <br> -->
+                                
+            <hr> <br> <br>
+            <!-- ========================================================= -->
+
+            
+
+            <button class=btn onclick="test()"> Click to Start JS HTML BOM [ window ]  Application    
+            </button> 
+            
+            
+            <script  src="WindowMethodsScrollByScrollTo.js">
+            </script>
+                                    
+            <br>    
+                                          
+        <hr>
+                <button id=btn class="btn" onclick="display()">Display JS Code</button>
+                
+                <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Testing JS HTML BOM [Parent Element]  Application  <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                                                        
+                        
+                        <span class=one></span> &lt;script src=".js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JS HTML BOM [Parent Element]  */ <br>                    
+                        template-string-converter.enable; <br><br>
+                                                
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div>
+                
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection">
+            <h3> Lesson 7 Video File: </h3>
+
+            <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=HgE0X9mDQd4&list=PLDoPjvoNmBAy9nFRJgVYgEID8xE2a6q6V&index=7&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JS BOM\7 Learn JS BOM - Window Methods - scrollBy, scrollTo.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="Links">
+            <h3>Course Reaquirments : </h3>
+            <ul>
+                <li> JS </li>
+                <li> JSDOM </li>                
+            </ul>
+        </section>
+        
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <!-- <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section> -->
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 7 Learn JS BOM - Window Methods - scrollBy, scrollTo");
+    </script>
+    
+
+</body>
+
+</html>       

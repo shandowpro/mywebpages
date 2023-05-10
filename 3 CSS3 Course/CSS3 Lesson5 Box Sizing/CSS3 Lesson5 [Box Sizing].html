@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 5 [Box Sizing] </title>
+    <link rel="stylesheet" href="CSS3 Lesson5 [Box Sizing].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 5 [Box Sizing]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to Box Sizing main Topics">
+                Box Sizing Lesson5 [ Box Sizing ] Main Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to Box Sizing [Box Sizing ] Concept">
+                Box Sizing Lesson5 [ Box Sizing ] Concept </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to Box Sizing [Box Sizing ] Importance & Benefits">
+                Box Sizing Lesson5 [ Box Sizing ] Importance & Benefits </a> </li>
+
+            <li> <a href=#JSDOMSyntx title="Go to Box Sizing [Box Sizing ] Syntax">
+                Box Sizing Lesson5 [ Box Sizing ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to Box Sizing [Box Sizing ] Practical Applications">
+                Box Sizing Lesson5 [ Box Sizing ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to Box Sizing Course <span> Box Sizing Lesson 5 [Box Sizing ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                Box Sizing Property Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [Box Sizing] Concept. </li>                    
+                    
+                    <li> [Box Sizing] Importance & Benefits. </li>
+
+                    <li> [Box Sizing] Syntax [Exmaple]. </li>
+                    
+                     <li> [Box Sizing] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    <ul>
+                        <li> Main General Syntax of {box-Sizing} with Vendor Prefix & without vendor Prefix </li>
+                        <li> Main General Syntax of {box-Sizing} Main Modes </li>
+                        <li> Partial Syntax of {box-Sizing} (of each specifications & Properties) </li>
+                        <!-- <li> Multiple Shadows with the same Element </li>  -->
+                    </ul> 
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> [Box Sizing] Concept: </h3>
+            </header>
+                        
+            <p> =&gt; [Box Sizing] : It is one of most important properties of desiging Elements in CSS3, due to it's Critical Features.
+                                
+            
+            <p> =&gt; Main Properties of {Box Sizing} as following: <br>
+            
+                <ul>                                        
+                    <li>Only Google Chorme & Modziela Web Browsers are Supporting , and it not supportedi by each Modzella and opera </li>
+                    
+                    <li> This Property has Solven Many Deigning problems specaily in Percetntage Equilibrium between Childen Elemenets and their Parent Element  </li>
+                    
+                    <li> This Property has (2) main Modes [contain-box] {Default Mode} & [border-box]   </li>
+                                        
+                </ul>
+
+            
+            <p> =&gt; {box-sizing} Main Concept: It is a unique tool to control the width sizing of each Chiledren elements and their Percentage between there and their Parent Width  <br>
+                
+                
+            <p> =&gt; {box-sizing : contain-box} [Default Mode]: The Most properties of this mode as following : <br>                
+                <ul>
+                    <li> It is the Default mode of {box-sizing} of Controling the Percentage of Children Elements & Their Parent/container.</li>
+                    <li> this Mode is counting on the total dimensions of the intenal children Elements's Wiidth of any kind (Width, height, padding, border), and that is way it doest Not do Nothing to Percenatge adjusting.</li>                    
+                    <li> This Mode does not Solve any problems practically.</li>
+                </ul>
+                
+                
+            <p> =&gt; {box-sizing : border-box} : The Most properties of this mode as following : <br>                
+                
+                    
+                <ul>
+                    <li> It is the Magic mode of Controling the Percentage of Children Elements & Their Parent/container, and this Mode Solves Manu problems in percentage Desinging practically , due it is Cancel any considerations of addiontional  Children Elements width like (padding , border , width)  .</li>
+                    <li> this Mode is counting on the overall Parent's dimension regadless of any of intenal children Elements's Width of any kind (Width, height, padding, border) .</li>                    
+                    <li> This Mode has Solven many problems practically, specially in Percenatge adjusting.</li>
+                </ul>
+                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> Box Sizing [Box Sizing ] Importance & Benefits: </h3>
+            </header>
+
+            <p> [Box Sizing] gives us the Following Features : <br>
+                <ul>                                                 
+                    <li> It provides designing beautiful percentage Harmony between Parent Element's Dimension and it's Childeren Elements 's Dimensions</li>        
+                    
+                    <li>  It provide higher control of Element's Sizing via (2) Modes [border-box] [content-box]</li>        
+                    
+                    <li> New And Advanced Desings is using this property as basically in their Preifxex {* {} / *.:before{} / *.:after{} }</li>        
+                                    
+                </ul>
+                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> [ Box Sizing ] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [Box-sizing]  Syntax as following :<br><br>
+                    
+                    <span class= one></span> //1) {Default Mode} [content-box] Mode Syntax:  <br>                                          
+                        
+                        <span class=two></span> //a)  [content-box] Mode with available Vendor prefixes : <br>                                          
+                        
+                            <span class=three></span> -webkit-box-sizing: content-box  <br>                                                  
+                            <span class=three></span> -moz-box-sizing: content-box  <br>                                                  
+                            
+                    // ------------------------------------------------------------------------------ <br><br>
+                        <span class=two></span> //b)  [content-box] Mode as all of Page Contents Properties : <br>                                          
+                        
+                            <span class=three></span> *{  <br>                                                  
+                                <span class=four></span> box-sizing: content-box; <br>                                                                          
+                            <span class=three></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>
+                        <span class=two></span> //c)  [content-box] Mode as all of certain Parent Element property: <br>                                          
+                        
+                            <span class=three></span> .parentElementClassName {  <br>                                                  
+                                <span class=four></span> box-sizing: content-box; <br>                                                                          
+                            <span class=three></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>
+                    // ------------------------------------------------------------------------------ <br><br>
+                        
+                    <span class= one></span> //2) [border-box] Mode Syntax:  <br>                                          
+                        
+                        <span class=two></span> //a)  [border-box] Mode with available Vendor prefixes : <br>                                          
+                        
+                            <span class=three></span> -webkit-box-sizing: border-box  <br>                                                  
+                            <span class=three></span> -moz-box-sizing: border-box  <br>                                                  
+                            
+                    // ------------------------------------------------------------------------------ <br><br>
+                        <span class=two></span> //b)  [content-box] Mode as all of Page Contents Properties : <br>                                          
+                        
+                            <span class=three></span> *{  <br>                                                  
+                                <span class=four></span> box-sizing: border-box; <br>                                                                          
+                            <span class=three></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>
+                        <span class=two></span> //c)  [content-box] Mode as all of certain Parent Element property: <br>                                          
+                        
+                            <span class=three></span> .parentElementClassName {  <br>                                                  
+                                <span class=four></span> box-sizing: border-box; <br>                                                                          
+                            <span class=three></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>                                                                        
+                //=========================================================== <br> <br>                                    
+                //=========================================================== <br> <br>                                                      
+                //=========================================================== <br> <br>                                                                                    
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="JSDOMPract">
+
+            <header>
+                <h3> [Box Sizing] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Following are some examples of box-sizing Modes [content-box && border-box], and each mode containg of : &gt;&gt; <br>
+                <ul>
+                    <li>Section of (2) divs are diveded equally in their Parent (Section) </li> 
+                    
+                    <li> Each children Elemnets (div)s  has a (percentage || Value) width divided percentagly of the parent [section] Width => {With No Any Addtional Width}   </li> 
+                    
+                    <li> Each children Elemnets (div)s  has a (percentage || Value) width divided percentagly of the parent [section] Width  => {With mulitple Addtional Width [padding, border, unequalled Width]}    </li> 
+
+                </ul>
+                
+            <fieldset class='Con-box-siz'>  
+                <legend> First Mode Section {box-sizing : content-box}</legend>
+
+                <h4> First case {full Equalled children Elements (Divs)}</h4>
+                
+                <section class='eql-mod'>
+                    <div class='leftE'> First Div {Left} </div>
+                    <div class='rightE'> Second Div {Right} </div>                            
+                </section>
+                //================================================================================== <br><br>
+                
+                
+                <h4> Second case {Not Equalled children Elements (Divs)}</h4>
+                
+                <section class='nonEql-mod'>
+                    <div class='leftN'> First Div {Left} </div>
+                    <div class='rightN'> Second Div {Right} </div>                            
+                </section>
+            </fieldset>                                    
+                <br>            
+                <hr>
+                //================================================================================== <br><br>                
+                //================================================================================== <br><br>
+
+            <fieldset class='bor-box-siz'>  
+                <legend> Second Mode Section {box-sizing : border-box}</legend>
+
+                <h4> First case {full Equalled children Elements (Divs)}</h4>
+                
+                <section class='eql-mod'>
+                    <div class='leftE'> First Div {Left} </div>
+                    <div class='rightE'> Second Div {Right} </div>                            
+                </section>
+                //================================================================================== <br><br>
+                
+                
+                <h4> Second case {Not Equalled children Elements (Divs)}</h4>
+                
+                <section class='nonEql-mod'>
+                    <div class='leftN'> First Div {Left} </div>
+                    <div class='rightN'> Second Div {Right} </div>                            
+                </section>
+            </fieldset>
+            
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+    
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 5 Video File:</h3>
+            
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=9cOq6lyHt44&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=5&index=4&index=3&index=2&controls=0&loop=1&autoplay=1&fs=1" 				
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\5 Css3 - Box Sizing.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 5 [Box Sizing ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

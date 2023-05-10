@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS OOP Lesson 24 [JavaScript Object Meta Data And Descriptor]</title>
+    <link
+      rel="stylesheet"
+      href="JS OOP Lesson24 [Object Meta Data And Descriptor].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JS OOP Lesson 24 [JavaScript Object Meta Data And Descriptor]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS OOP main Topics">
+            JS OOP Lesson24 [JavaScript Object Meta Data And Descriptor ] Main
+            Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPCon"
+            title="Go to JS OOP [JavaScript Object Meta Data And Descriptor ] Concept"
+          >
+            JS OOP Lesson24 [JavaScript Object Meta Data And Descriptor ]
+            Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPImp"
+            title="Go to JS OOP [JavaScript Object Meta Data And Descriptor ] Importance & Benefits"
+          >
+            JS OOP Lesson24 [JavaScript Object Meta Data And Descriptor ]
+            Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPSyntx"
+            title="Go to JS OOP [JavaScript Object Meta Data And Descriptor ] Syntax"
+          >
+            JS OOP Lesson24 [JavaScript Object Meta Data And Descriptor ] Syntax
+            & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPPract"
+            title="Go to JS OOP [JavaScript Object Meta Data And Descriptor ] Practical Applications"
+          >
+            JS OOP Lesson24 [JavaScript Object Meta Data And Descriptor ]
+            Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS OOP Course
+      <span>
+        JS OOP Lesson 24 [JavaScript Object Meta Data And Descriptor ]
+      </span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          JS OOP [Class Static Properties and Methods ] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>
+              JS OOP [JavaScript Object Meta Data And Descriptor ] Concept.
+            </li>
+
+            <li>
+              JS OOP [JavaScript Object Meta Data And Descriptor ] Importance &
+              Benefits.
+            </li>
+
+            <li>
+              JS OOP [JavaScript Object Meta Data And Descriptor ] Syntax
+              [Definition + Access].
+            </li>
+
+            <li>
+              JS OOP [JavaScript Object Meta Data And Descriptor ] Practical
+              Application.
+            </li>
+          </ol>
+
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ul>
+            <li>
+              General Method of Defining new Object's Property with full
+              Property Meta Data { Object.defineProperty(objName, propertyName,
+              {Meta Data}); }
+            </li>
+            <li>
+              General Method of Calling All Object's Properties's Names {
+              Object.getOwnPropertyNames(objName); }
+            </li>
+            <li>
+              General Method of Deleting Object's Property { delete
+              Object.propertyName; }
+            </li>
+            <li>
+              General For in Looping Statament { for (let prop in objName) {} }
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPCon" id="JSOOPCon">
+        <header>
+          <h3>JS OOP [JavaScript Object Meta Data And Descriptor ] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JS OOP [JavaScript Object Meta Data And Descriptor ]: It is one
+          of Powerful points of Object Controling Features.
+        </p>
+
+        <p>
+          =&gt; JS OOP [JavaScript Object Meta Data And Descriptor ]: It
+          provides more Accurate controling Features with the Object's
+          Properties and their Attributes.
+        </p>
+
+        <p>
+          =&gt; JS OOP [ Object Meta Data (Descriptors) ]: This Definition is
+          about the information of the information of Properties of Object's
+          Properoies , or we call it {Proprerties 's Attributes} [Descriptors].
+        </p>
+
+        <p>
+          =&gt; JS OOP [Main object's Meta Data]: The Main Object's Properties's
+          Attributes (Meta Data) [Object's properties Descriptors] as following:
+        </p>
+        <ul>
+          <li>
+            {writable} =&gt; This Property Attribute Detect if the Propterty's
+            Value is [Editable] (can be Changed), and it has (2) Probabilities:
+          </li>
+          <ul>
+            <li>{writable: true} =&gt; The Property's Value Can be Edited</li>
+            <li>
+              {writable: false} =&gt; The Property's Value Can NOT be Edited
+            </li>
+          </ul>
+
+          <li>
+            {enumerable} =&gt; This Property Attribute Detect if the Propterty
+            can respond to {Looping} statements {for each loop}, and it has (2)
+            Probabilities:
+          </li>
+          <ul>
+            <li>
+              {true} =&gt; The Property's Value Can be printed within Loop
+              statements {specially for-in Loop}
+            </li>
+            <li>
+              {false} =&gt; The Property's Value Can NOT be printed with in Loop
+              statements {specially for-in Loop}, without persenting Error
+            </li>
+          </ul>
+
+          <li>
+            {configurable} =&gt; This Property Attribute Detect (2) Property's
+            Aspects :
+          </li>
+          <ol type="1">
+            <li>If the configurated Property can be {deleted}</li>
+            <li>
+              If the configurated Property can be {Re-Configurated} in later
+              Configration
+            </li>
+          </ol>
+          =&gt; And and it has (2) Probabilities:
+          <br />
+          <ul>
+            <li>
+              {configruable: true} =&gt; The Property {can be Deleted from it's
+              Object} + {can be Reconfigurated with all the property's Meta Data
+              [writable, enumerable, configurable, value]}
+            </li>
+            <li>
+              {configruable: false} =&gt; The Property {can NOT be Deleted from
+              it's Object} + {can NOT be Reconfigurated with all the property's
+              Meta Data [writable, enumerable, configurable, value]}
+            </li>
+          </ul>
+
+          <li>{value} =&gt; The Value of Object's Property</li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSOOPImp" id="JSOOPImp">
+        <header>
+          <h3>
+            JS OOP [JavaScript Object Meta Data And Descriptor ] Importance &
+            Benefits:
+          </h3>
+        </header>
+
+        <p>
+          [JavaScript Object Meta Data And Descriptor ] gives us the Following
+          Features : <br />
+        </p>
+        <ul>
+          <li>
+            It will gives more accurate mechanism to Control the Object's
+            Properties, with different controling Aspects {[writable,
+            enumerable, configurable, value]}
+          </li>
+
+          <li>
+            Accurate Object's Propeties controling provides greater chance for
+            securing Object's Data {due to the advanced programable functions
+            can be implemented by Mete Data}.
+          </li>
+
+          <li>
+            The Separate Controling of Object's property Meta Data gives great
+            advanced feature for greater accurate Controling for each property .
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPSyntx" id="JSOOPSyntx">
+        <header>
+          <h3>
+            JS OOP [JavaScript Object Meta Data And Descriptor ] Syntax &
+            Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; JS OOP Defining-Declaring [Class] Conceptual Syntax as following
+          :
+        </p>
+
+        <div id="Code" class="Code">
+          // A) JS OOP General Method Defining/Editing New Object's Property
+          Syntax as following :<br /><br />
+          <span class="one"></span
+          >object.defineProperty(objectName,PropertyName, { <br />
+          <span class="two"></span> writable: true-false,<br />
+          <span class="two"></span> enumerable: true-false,<br />
+          <span class="two"></span> configruable: true-false,<br />
+          <span class="two"></span> value: #/"value"<br />
+          <span class="one"></span> }); <br /><br />
+
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+          //B) General Method of Calling All Object's Propeties Names: <br />
+          <span class="one"></span> Object.getOwnPropertyNames(objectName);
+          <br />
+
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          // C) Genereal Method of Deleting Object's Property : <br />
+          <span class="one"></span> delete objName.propertyName; <br />
+
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          // D) Gerenral Looping Statament (for-in):<br />
+          // Printing all Object's Properties [Names + Values]: <br />
+          <span class="one"></span> for (let prop in ObjName){ <br />
+          console.log(prop, objName[prop]); } <br />
+
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPPract" id="JSOOPPract">
+        <header>
+          <h3>
+            JS OOP [JavaScript Object Meta Data And Descriptor] General
+            Practical Applications :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Here one Major Application will include following Function/Tasks
+          : &gt;&gt; <br />
+        </p>
+        <ol>
+          <li>
+            Initiating (Default Class) containing the Followoing Elements:
+          </li>
+          <ul>
+            <li>
+              Static Method & Parameter {count Variable + show Count Method}
+            </li>
+
+            <li>Normal [Set & Get] Methods , with followoing Features:</li>
+            <ol>
+              <li>
+                {Normal Set Metod} =&gt; Parameter: (Defining of New Value [New
+                Password]), Functoinality: (Reset Password by user - with Age
+                Restriction)
+              </li>
+              <li>
+                {Normal Get Metod} =&gt; Functoinality: (Show Password to user -
+                with Age Restriction)
+              </li>
+            </ol>
+
+            <li>Accessors [Set & Get] Methods , with followoing Features:</li>
+            <ol>
+              <li>
+                {Accessor Set Metod} =&gt; Parameter: (Defining of New Value
+                [New Password]), Functoinality: (Reset Password by user - with
+                Age Restriction)
+              </li>
+              <li>
+                {Accessor Get Metod} =&gt; Functoinality: (Show Password to user
+                - with Age Restriction)
+              </li>
+            </ol>
+          </ul>
+
+          <li>
+            Extracting new Object(s) from each(Default Class) by count upon User
+            request.
+          </li>
+
+          <li>
+            Ability to Extract Multiple Object from each [Default Class]
+            according user's Desired Count with Following Functions for each
+            Exracted Object:
+          </li>
+
+          <ol>
+            <li>
+              Displaying the main [Default Class] Syntax {in Console + Alert
+              Message + Displaying textarea box}.
+            </li>
+
+            <li>
+              Choosing from available Methods to Execute to Display + Checking
+              for the Constructor Function Name (by (10) available Methods)
+            </li>
+
+            <li>
+              Displaying all Extracted Object(s) in Text Area field in the web
+              page + other Displaying result from Selected Functions.
+            </li>
+          </ol>
+        </ol>
+
+        <br />
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <button class="btn" onclick="test()">
+          Click to Start [Testing JavaScript Object Meta Data And Descriptor ]
+          Application
+        </button>
+
+        <textarea id="txtarea1" class="txtarea1"> </textarea><br />
+
+        <button id="btn" class="btn" onclick="display()">
+          Display JS Code [Testing JavaScript Object Meta Data And Descriptor ]
+        </button>
+
+        <script src="JSOOPMetaData&Descriptor.js"></script>
+
+        <br />
+        <hr />
+
+        <!-- <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Testing JavaScript Object Meta Data And Descriptor Properties & Methods ] Application  <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                                                        
+                        
+                        <span class=one></span> &lt;script src="JSOOPClassIntro.js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JSOOP [JavaScript Object Meta Data And Descriptor] */ <br>                    
+                        template-string-converter.enable; <br><br>
+                                                
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div> -->
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 24 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=xIj9qBVXHhc&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=24&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\24 JavaScript OOP  Object Meta Data And Descriptor.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert(
+        "Welcome to JS OOP Lesson 24 [JavaScript Object Meta Data And Descriptor ] "
+      );
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

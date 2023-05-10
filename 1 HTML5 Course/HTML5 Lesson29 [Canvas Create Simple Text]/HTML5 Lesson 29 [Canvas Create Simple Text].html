@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 29 HTML5 New Tags [Canvas - Create Simple Text] {Part 4} </title>
+    <link rel="stylesheet" href="HTML5  [Canvas Create Simple Text].css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">  </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 29 HTML5 New Tags [Canvas Create Simple Text]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="HTML5 [Canvas Create Simple Text] Main Concept" > HTML5 [Canvas Create Simple Text] Main Concept" </a> </li>            
+            <li> <a href=#CanvasNTag  title="Go to Canvas Create Simple Text" >
+                    Canvas Create Simple Text  </a> </li>     
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> HTML5 Lesson 29 HTML5 New Tags [Canvas Create Simple Text] {Part 4}</span> 
+    </main>
+<!-------------------------------------------------------------------------------------------------------------->                        
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>                 
+                HTML5 Lesson 29 [Canvas Create Simple Text]
+            </header>
+            
+            <article>                                                
+                <p> &gt; The New HTML5 New Tags in this lesson as following :</p>
+                <ol>                    
+                    
+                    <li> context.font = 'Font-size Font-name'; </li>                   
+                    <li> context.fillStyle = 'Fill font color'; </li>                   
+                    <li> context.strokeStyle = 'Stroke font color'; </li>                   
+                    <li> context.fillText("Text", x, y, Max-Width (Optional)); </li>                   
+                    <li> context.strokeText("Text", x, y, Max-Width (Optional)); </li>                   
+                                                            
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>       
+        <section class="CanvasSimpleT" id="CanvasSimpleT">
+            <header>                
+                &lt; canvas &gt; &nbsp; &lt; /canvas &gt;
+            </header>
+            
+            <article>
+                <header>
+                    <h1> HTML5 New Tag [Canvas Create Simple Text] Concept: </h1>                                                         
+                </header>
+                                        
+                
+                <header>
+                    <h1>[Canvas - Text] new Syntax:</h1>
+                        <p> Following there the Js Codes related with Canvas Text Tag Properties :</p>
+                        <div>
+                            <p> A) [Determining Font Size And Type Property in JS]:</p>
+                                &nbsp;&nbsp; ContextName.font = "(Font Size by px)  (Font family type)",<br>
+                            ===========================================================<br>
+                            =========================================================== <br>     
+                                                                                    
+                            <p> B) [Determining Font Color]:</p>
+                                1) Assiging Color of Fill Style Font : <br>
+                                &nbsp;&nbsp; ContextName.fillStyle = "Color (by RGB or Name)";<br><br>                                                            
+                                2) Assiging Color of Stroke Style Font : <br>
+                                &nbsp;&nbsp; ContextName.strokeStyle = "Color (by RGB or Name)";<br>                                                            
+                            
+                            =========================================================== <br>
+                            =========================================================== <br>
+                            <br><br>
+                            
+                            <p> C) [Assigning Font Contents] :</p>
+                                1) Assiging Contents of Fill Style Font : <br>
+                                &nbsp;&nbsp; ContextName.fillText("Text Contents", x, y, Font-Width);<br><br>
+                            
+                                2) Assiging Contents of Stroke Style Font : <br>                            
+                                &nbsp;&nbsp; ContextName.strokeText("Text Contents", x, y, Font-Width);<br><br>
+                            
+                            <p> F) Showing the line in the Canvas : </p>
+                            &nbsp;&nbsp; ContextName.stroke();<br>
+                            =========================================================== <br>                            
+                            =========================================================== <br>
+                            =========================================================== <br>                             
+                            <br><br>                                                                                        
+                        </div>                                            
+                </header>    
+                
+                <header>
+                    <h3> HTML5 [ Canvas Create Simple Text] Practical Applications :  </h3>                     
+                    <p> This Application will provide multiple Simple Text / Letter Drawer Mode + multiple Color & Size & Font-family </p>
+                    
+                </header>                                                
+                    
+                    <br>
+                    
+                <textarea id=txtarea class=txtarea > </textarea><br>    
+
+                <canvas id="c" class="c"> </canvas>                        
+                
+                <button class=btn onclick="Canv()"> Click to Start [Canvas - Multiple Simple Text / Letters + Multiple Different properties ] Application
+                </button> <br>
+                
+                <button class=btn onclick=Clear()> Click to Clear All Texts in the Canvas </button>
+                
+
+                <script src="CanvasSimpleT.js"> </script>                                        
+            <hr>
+
+                <div class=CanvSimpL >
+                    <code>
+                        // HTML Codes: <br>
+                        &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        &lt;/textarea&gt; <br><br>
+
+                        &lt;button class="btn" onclick="Canv()"&gt;<br>                            
+                        &nbsp;&nbsp; Click to Start [Canvas - Simple Text] Main Number part4 Application <br>                               
+                        &lt;/button&gt; <br><br>                            
+
+                        &lt;script src="CanvSimpleT.js"&gt;<br>                            
+                        &lt;/script&gt; <br><br>
+
+                        =======================================================<br><br>
+
+                        // JS Codes [CanvSimpleT.js] : <br><br>
+                        /* global alert, document, prompt, console */<br>
+                        /* jslint plusplus: true evil: true */ <br>
+                        /* [Canvas Create Simple Text] Application {Part 4} */ <br><br>                        
+
+                        function Canv () { <br> <br>                        
+    
+                        <span class=one ></span> alert("Welcome to Creating Single - Complicated Text Drawer Application..."); <br><br>
+
+                        <span class=one ></span> var myCanvas = document.getElementById('c'), <br>
+                        <span class=two ></span> myContext = myCanvas.getContext('2d'), <br>
+                        <span class=two></span> txt = document.getElementById("txtarea"); <br> <br>
+
+                        <span class=one ></span> alert("Lets set your Canvas properties >>>"); <br><br>
+
+                        <span class=one ></span> var CanvWidth = prompt("Enter your Canvas width ..."), <br>
+                        <span class=two ></span> CanvHeight = prompt("Enter your Canvas Height ..."); <br><br>         
+
+                        <span class=one ></span> myCanvas.width = CanvWidth; <br><br>
+                        
+                        <span class=two ></span> myCanvas.height = CanvHeight; <br><br>
+
+
+                        <span class=one ></span> var mthd = prompt("Choose your Mehtod... \n <br> 
+                        <span class=two ></span> Press 1 for [Fill Drawer] ... \n <br>
+                        <span class=two ></span> Press 2 for [Stroke Drawer] Mode...\n Or Press any other key to Exit... ");<br> <br>
+
+                        <span class=one ></span> if (mthd == "1") { <br>
+
+                        <span class=two ></span> alert("Welcome to [Fill Drawer] ..."); <br><br>
+
+                        <span class=two ></span> alert("Lets set your Text properties >>>"); <br><br>
+
+                        <span class=two ></span> var TCont = prompt("Enter your Text contents..."),<br>            
+                        <span class=three ></span> TSizeType = prompt("Insert your Text Size with px + Font Type Family ..."),<br>            
+                        <span class=three ></span> TColor = prompt("Choose you Text Color by RGB System - Name ..."), <br>
+                        <span class=three ></span> TX = parseInt(prompt("Insert Text Start point X Coordinate ...")), <br>
+                        <span class=three ></span> TY = parseInt(prompt("Insert Text Start point Y Coordinate ...")); <br><br>            
+
+                        <span class=three ></span> myContext.fillStyle = TColor; <br><br>
+
+                        <span class=three ></span> myContext.font = TSizeType; <br><br>
+
+                        <span class=three ></span> myContext.fillText(TCont, TX, TY); <br> <br>                    
+
+                        <span class=three ></span> txt.innerHTML = "Your Fill Mode Text has been drawn Succesfully!"; <br>
+
+                        <span class=one ></span> } else if (mthd == "2") { <br><br>
+                        <span class=two ></span> alert("Welcome to [Stroke Drawer] Mode..."); <br> <br>
+
+                        <span class=two ></span> alert("Lets set your Text properties >>>"); <br> <br>
+
+                        <span class=two ></span> var TCont1 = prompt("Enter your Text contents..."), <br>            
+                        <span class=three ></span> TSizeType1 = prompt("Choose your Text Size ..."), <br>            
+                        <span class=three ></span> TColor1 = prompt("Choose you Text Color by RGB System - Name ..."), <br>
+                        <span class=three ></span> TX1 = parseInt(prompt("Insert Text Start point X Coordinate ...")), <br>
+                        <span class=three ></span> TY1 = parseInt(prompt("Insert Text Start point Y Coordinate ...")); <br> <br>             
+
+                        <span class=two ></span> myContext.fillStyle = TColor1; <br> <br>
+
+                        <span class=two ></span> myContext.font = TSizeType1; <br> <br>
+
+                        <span class=two ></span> myContext.fillText(TCont1, TX1, TY1); <br> <br>
+                        
+                        <span class=two ></span> txt.innerHTML = "Your Stroke Mode Text has been drawn Succesfully!"; <br> <br>
+
+                        <span class=one ></span> } else { <br>
+                        <span class=two ></span> alert("Error Entry!"); <br>
+                        <span class=one ></span> }<br>
+                        }
+ 
+                    //============================================================================================== <br><br>
+                    
+                        
+                    function Clear() { <br><br>
+
+                    <span class= one></span> var myCanvas = document.getElementById('c'), <br>
+                    <span class= two ></span> myContext = myCanvas.getContext('2d'), <br>
+                    <span class= two></span> txt = document.getElementById("txtarea"); <br> <br>
+
+                    <span class= one></span>  myContext.clearRect(0, 0, 800, 400); <br><br>
+
+                    <span class= one></span>  txt.innerHTML = "All Shapes have been deleted!"; <br> <br>
+
+                    <span class= one></span>  alert("All Shapes have been Deleted!"); <br>
+
+                    }
+
+                    </code>                 
+                    
+                </div>
+                    
+            </article>                
+        </section>
+
+    <!------------------7------------------------------------------------------------------------------------>                                
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Create Simple Canvas </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="12">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num1">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 29 Video File:</h3>
+                <video controls width="300" height="300" autoplay>
+                    <source src="C:/Users/hp/Videos/pLanguages/web/1 Web Designing Front End/A HTML/2 HTML 5/HTML 5/29 Canvas - Create Simple Text.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video> 
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

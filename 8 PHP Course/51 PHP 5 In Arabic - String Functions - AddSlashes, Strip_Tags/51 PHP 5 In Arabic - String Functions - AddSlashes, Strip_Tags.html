@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags() </title>
+    <link rel="stylesheet" href="51 PHP 5 In Arabic - String Functions - AddSlashes, Strip_Tags.css" media="all">
+    
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags()
+    </header>
+<!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to PHP main Topics">
+                51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags() Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to PHP [String Functions - AddSlashes, Strip_Tags] Concept">
+                51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags() Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to PHP [String Functions - AddSlashes, Strip_Tags] Importance & Benefits">
+                51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags() Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to PHP [String Functions - AddSlashes, Strip_Tags] Syntax">
+                51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags() Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to PHP [String Functions - AddSlashes, Strip_Tags] Practical Applications">
+                51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags() Practical Applications </a> </li>
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+        
+    <main class="Welcome"> Welcome to PHP Course <span> 51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags() </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                PHP5 [ String Functions - [ AddSlashes(), StripSlashes(), Strip_Tags() ] Main Topics :
+            </header>
+            
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                
+                    <p>  String Functions - Methods as following : </p>
+                        <ol> 
+                            <li> $var = addslashes(String variable); => Adding Slashes before every special symbols with in the string value </li>
+                            <li> $var = stripslashes(String variable); => Stripping or Removing Slashes before any special symbols with in the string value </li>
+                            <li> $var = strip_tags(String variable, allow); => Stripping or Removing HTML Tags from the string value , with featrues to except certain tags </li>                            
+                        </ol>
+                    <hr>                                                                                                    
+            </article>
+        </Section>        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> PHP [51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags() ] </h3>
+            </header>`
+                        
+            <h2> [PHP - String Functions - AddSlashes(), StripSlashes(), Strip_Tags()] ] => Concept: </h2>
+                                                        
+                <p> [PHP - String functions [ AddSlashes(), StripSlashes(), Strip_Tags() ] method syntax & concept as following : <br>
+                    <ol> 
+                        <li> AddSlashes(String Variable); => Adding Slashes before every special symbols with in the string value , and syntax includes the following elements :<br>
+                             <ol> 
+                                 <li> [String Variable] => The String variable/ Text to process the method in it's content  => {Obligated} </li> 
+                            </ol>                                                                                                    
+                        </li>
+
+                        
+                        <li> StripSlashes(); => Stripping or Removing Slashes before any special symbols with in the string value  , and syntax includes the following elements :<br>
+                             <ol> 
+                                 <li> [String Variable] => The String variable/ Text to be process the method in it's content  => {Obligated} </li>
+                            </ol>                                                                                                    
+                        </li>
+                        
+                        <li> Strip_Tags(); => Stripping or Removing HTML Tags from the string value , and syntax includes the following elements :<br>
+                             <ol> 
+                                 <li> [String Variable] => The String variable/ Text to process the method in => {Obligated} </li>
+                            </ol>                                                                                                    
+                        </li>
+                                                
+                    </ol>
+                </p>
+            
+                <br> <br> <hr>
+                <!-------------------------------------------  -->                                                                                                                                                                                                                              
+            </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> PHP [51 PHP 5 In Arabic - String Functions - AddSlashes, Strip_Tags] Importance & Benefits: </h3>
+            </header>
+            
+            <ul> 
+                <li> [String Functions - addslashes() ] methods => This method is very critical in securing data that input by user with in form to the database , to prevent hackers form destroying the database, by adding previous backslashes before the special symbols, whcih can  acess to the database coding </li>
+
+                <li> [String Functions - stripslashes() ] method => Can provide readable and clean text to the user of the recieved data from the database,by Removing the backslashes which has been puty before any special symbols ,when input to the database </li>
+                
+                <li> [String Functions - strip_tags() ] method => This method is very critical to use by the developer, by providing the protection against Hackers attacking to the database due to the ability to destroy the scripting, in case of not using this method </li>
+                                
+            </ul>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ 51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags()] Syntax & Methods: </h3>
+            </header>        
+
+            <p> =&gt; In this after setting up the application => We will create a simple PHP File && Running it by [Local Server] </p>
+            
+            <p> =&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} : <br>
+                <p> Using [String Functions - AddSlashes(), StripSlashes(), Strip_Tags() ] => has following ( 3 ) main Examples : </p> 
+                                
+                    <ol type="A">        
+                        <li> First Example => String Functions -  {addslashes(string variable/text value)} Method : contains (1) Exps : <br>
+                            <ol>   
+                                <li> {addslashes(string variable/text value)} => Adding backslashes before every special charachter [symbols] </li>
+                            </ol>
+                        </li>                        
+                        
+
+
+                        <li> Second Example => String Functions -  {stripslashes(String variable)} Method : contains (1) Exps :  <br>
+                            <ol>   
+                                <li> {stripslashes(String variable)} Method => Removing any backslashes before every special character </li>
+                            </ol>
+                        </li>                                                                        
+                                
+                        
+                        <li> Third Example => String Functions - {strip_tags(string variable)} Method : contains (2) Exps : <br>
+                            <ol>
+                                <li> {strip_tags(string variable)} => [Removing-stripping] All {HTML Tags} without [using allow] feature </li>
+                                <li> {strip_tags(string variable)} => [Removing-stripping] All {HTML Tags} with [using allow (2) elements] feature </li>
+                            </ol>
+                        </li>                                            
+                    </ol>
+                </P>                                                            
+                <!-- ================================================================= -->
+                                               
+                <h2>  B)  Html page :  </h2> <br>                    
+                        <span class='one'> &lt; !DOCTYPE html &gt; </span> <br>
+                            <span class='two'> &lt; html &gt; </span> <br>
+                                <span class='three'> &lt; /head &gt;</span> <br>
+                                    <span class='four'> &lt; title &gt; &lt;? php echo $title; ?&gt;  &lt; /title &gt;  </span> <br>
+                                    <span class='four'> &lt; link rel="stylesheet" href="51 PHP 5 In Arabic - String Functions - AddSlashes, Strip_Tags" media="all" &gt;  </span> <br>
+                                <span class='three'> &lt; /head &gt; </span>  <br> <br>                                
+                                <span class='three'>&lt; body &gt; </span> <br>                            
+                                
+                                <span class='three'>&lt; /body &gt; </span> <br>
+                                <span class='two'>&lt;/html &gt; </span> <br>
+                                ---------------------------------------------------------------------------- <br>
+                                ---------------------------------------------------------------------------- <br>                      
+                   <br><br> <hr>                                                                                                                                  
+            <br><br>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+         <section class="PHPPract" id="PHPPract"> 
+            <header>
+                <h3> PHP [51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags()] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here (3) Major Applications PHP [ String Functions - AddSlashes(), StripSlashes(), Strip_Tags() ] as following =>  <br><br>
+                                
+                <ol type="A">        
+                    
+                    <li>  First Example => String Functions -  {addslashes(string variable/text value)} Method : contains (1) Exps : <br>
+                        <ol>   
+                            <li> {stripslashes()}  Method [Removing any backslashes before every special character ]: <br>                                
+                                <p> Each Example Include the follwing steps : <br>
+                                    <ol>    
+                                        <li> printing the string variable before adding back slashes before every special charachter [symbols] </li>
+                                        <li> Processing [addding back slashes before every special charachter [symbols] ] </li>
+                                        <li> printing the string variable after adding back slashes </li>                                    
+                                    </ol>
+                                </p>
+                            </li>                                
+                        </ol>
+                    </li>                        
+                    
+                    <li> Second Example => String Functions -  {stripslashes(String variable)} Method : contains (1) Exps : <br>
+                        <ol>   
+                            <li> {stripslashes(String variable)} Method => Removing any backslashes before every special character:  <br>
+
+                                <p> Each Example Include the follwing steps : <br>
+                                    <ol>    
+                                        <li> printing the string variable before [Removing-stripping] back slashes before every special charachter [symbols]  </li>
+                                        <li> Processing  [Removing-Stripping back slashes before every special charachter [symbols] ] </li>
+                                        <li> printing the string variable after Stripping-Removing back slashes </li>
+                                    </ol>
+                                </p>
+
+                            </li>
+                        </ol>
+                    </li>                                                                        
+                                        
+                    <li> Third Example => String Functions - {strip_tags(string variable)} Method : contains (2) Exps : <br>
+                        <ol>
+                            <li> {strip_tags(string variable)} => [Removing-stripping] All {HTML Tags} without [using allow] feature <br>
+
+                                <p> Each Example Include the follwing steps : <br>
+                                    <ol>    
+                                        <li> printing the string variable (before) [Removing-stripping] All {HTML Tags} without [using allow] feature from string variable </li>
+                                        <li> Processing  [Removing-stripping] All {HTML Tags} without [using allow] feature from string variable] </li>
+                                        <li> printing the string variable (after) [Removing-stripping] All {HTML Tags} without [using allow] feature from string variable </li>                                        
+                                    </ol>
+                                </p>
+
+                            </li>
+                            
+                            <li> {strip_tags(string variable)} => [Removing-stripping] All {HTML Tags} with [using allow (2) elements] feature  <br>
+
+                                <p> Each Example Include the follwing steps : <br>
+                                    <ol>    
+                                        <li> printing the string variable (before) [Removing-stripping] All {HTML Tags} with [using allow (bold)||(italic) elements] feature from string variable </li>
+                                        <li> Processing  [Removing-stripping] All {HTML Tags} with [using allow (bold)||(italic) elements] feature from string variable] </li>
+                                        <li> printing the string variable (after) [Removing-stripping] All {HTML Tags} with [using allow (bold)||(italic) elements] feature from string variable </li>                                        
+                                    </ol>
+                                </p>
+
+                            </li>
+                        </ol>
+                    </li>                                                                                                                                                        
+                                    
+                    <br> <br> <hr> <br>
+                </ol>
+
+             <!-- <section id=sec class=txtarea >                                  
+                 <a href="http://localhost/PHP%20Course/51%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20AddSlashes,%20Strip_Tags/51%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20AddSlashes,%20Strip_Tags.php">  
+                    {51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags() } => Lesson 51 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+            <section id=sec class=txtarea >                                  
+                <a class=btn href="http://localhost/PHP%20Course/51%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20AddSlashes,%20Strip_Tags/51%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20AddSlashes,%20Strip_Tags.php">  
+                   {Main Page} [Display] => {51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags() } => Lesson 51 PHP File Webpage by Localhost
+               </a> <br> <br>             
+               
+               <a class=btn href="51 PHP 5 In Arabic - String Functions - AddSlashes, Strip_Tags.php">  
+                   {Main Page} [Source Code] => {51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags() } => Lesson 51 PHP File Webpage by Localhost
+               </a>             
+           </section> <br> 
+            
+             <!-- <script  src="14 PHP 5  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+                
+        </section>                           
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="VideoSection">
+            <h3> Lesson 51 Video File:</h3>
+            
+            <iframe
+            width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=Vb4bZrWxXqw&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=51&controls=0&loop=1&autoplay=1&fs=1"    
+        >   
+        </iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\51 PHP 5 In Arabic - String Functions - AddSlashes, Strip_Tags.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shandow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 51 PHP 5 In Arabic - String Functions - AddSlashes(), StripSlashes(), Strip_Tags() ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

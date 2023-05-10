@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Css lesson 14 [Dimensions (Width-Height)]</title>
+    <link rel="stylesheet" href="Dimensions.css">
+</head>
+
+<body>
+    
+    <div class="main">
+        <h1 class="title"> CSS/ Lesson (14): [Width + Height] of an element </h1>
+        <fieldset class="index">
+            <legend>Lesson Index</legend>
+            <h2 class="containing"> This lesson contain following: </h2>    
+            <ol type="A">
+                <li> [Width] Dimension Property of an element:
+                    <ol>
+                        <li> <a href="#wdefv" alt="Go Width Default Value" title="Width Default Value">Default Value</a></li>
+                        <li> <a href="#wminv" alt="Go Min Width" title="Min Width">[Min-width] property</a></li>
+                        <li> <a href="#wmaxv" alt="Go Max Width" title="Max Width">[Max-width] property</a></li>
+                        <li> <a href="#wperv" alt="Go Width Percentage Value" title="Width Percentage Value">[Percentage Value] of Width property</a></li>
+                    </ol>                    
+                </li>
+                <li> [Height] Dimension Property of an element:
+                    <ol>
+                        <li> <a href="#hdefv" alt="Go Height Default Value" title="Height Default Value">Default Value</a></li>
+                        <li> <a href="#hminv" alt="Go Min Height" title="Min Height">[Min-height] property</a></li>
+                        <li> <a href="#hmaxv" alt="Go Max Height" title="Max Height">[Max-height] property</a></li>
+                        <li> <a href="#hperv" alt="Go Height Percentage Value" title="Max Height">[Percentage Value] of Height property</a></li>
+                    </ol>                    
+                </li>
+                <li> <a href="#app" alt="Go Practical Application" title="Practical Application">Practical Application </a> </li>
+            </ol>        
+        </fieldset>
+    <!----------------------------------------------------------------------------------------------------------------->                
+        <fieldset class="width">
+            <legend>(A)[Width] Dimension Property</legend>
+            <div class="wdefv" id="wdefv">
+                <h2> (1) Width Default Value:</h2>
+                <p> The defualt value of [Width] dimension of element is [auto].</br>
+                    And this is mean that the element width will be as its parent container element width.
+                </p>                
+            </div>
+            <div class="wminv" id="wminv">
+                <h2> (2) [Min-width] property:</h2>
+                <p> The defualt value of [Min-Width] property is [auto].</br>
+                    Default value of min-height means that the element minimum width will automaitcally stretch to fit its container width.</br>
+                    A specific value of [min-width] means that element will start its widht with this value,
+                    even if it empty or its containings were less than min-height.
+                </p>                
+            </div>
+            <div class="wmaxv" id="wmaxv">
+                <h2> (3) Width [Max-width] property:</h2>
+                <p> The defualt value of [Max-Width] property is [auto].</br>
+                    Default value of max-width means that the element maximum width will be as much as its parent container element width value.</br>
+                    A specific value of [Max-width] means that the element maximum width will not exceed this value
+                    even if its containings is longer than its width.<br>
+                    (And here we can use [over-flow] property to control item's containings over flow -hidden/scroll- to maintain the acceptable design)
+                </p>                
+            </div>
+            <div class="wperv" id="wperv">
+                <h2> (4) [Percentage Value] of Width property:</h2>
+                <p> The defualt value of width dimension of element is [100%].</br>
+                    And this is mean that the element width will be as ALL its parent container element width.</br>
+                    Usage this type of value requires a pre determined value of element's parent width value to be calculated upon it.
+                </p>                
+            </div>
+        </fieldset>
+    <!----------------------------------------------------------------------------------------------------------------->        
+        <fieldset class="height">
+            <legend>(B)[Height] Dimension Property</legend>
+            <div class="hdefv" id="hdefv">
+                <h2> (1) Height Default Value:</h2>
+                <p> The defualt value of [Height] dimension of element is [auto].</br>
+                    And this is mean that the element height will automatically fit its containing vertically.
+                </p>                
+            </div>
+            <div class=hminv id="hminv">
+                <h2> (2) [Min-height] property:</h2>
+                <p> The defualt value of [Min-height] property is [auto].</br>
+                    Default value of min-height means that the element height will be nothing if its containings was empty, and
+                    will keep stretching until reaching its max height.</br>                    
+                    A specific value of [Min-height] means that the element start height will initiate with this value of height
+                    even if the item was empty or its containing is less than its min-height value.
+                </p>                
+            </div>
+            <div class="hmaxv" id="hmaxv">
+                <h2> (3) [Max-height] property:</h2>
+                <p> The defualt value of [Max-Height] property is [auto].</br>
+                    Default value of max-height means that the element height will keep stretching until reach this value of [max-height].</br>
+                    A specific value of [Max-height] means that the element maximum height will not exceed this value
+                    even if its containings is longer than its height.<br>
+                    (And here we can use [over-flow] property to control item's containings over flow -hidden/scroll- to maintain the acceptable design)
+                </p>                
+            </div>
+            <div class="hperv" id="hperv">
+                <h2> (4) [Percentage Value] of Height property:</h2>
+                <p> The defualt value of width dimension of element is [100%].</br>
+                    And this is mean that the element height will be as ALL its parent container element height value.</br>
+                    Usage this type of value requires a pre determined value of element's parent height value to calculate its percentage upon parent height value.
+                </p>                
+            </div>
+        </fieldset>
+    <!----------------------------------------------------------------------------------------------------------------->
+        <fieldset class="app" id="app">
+            <legend>(C)Practical application</legend>
+                            
+                <p> In this section we will display an applied subject of dimension different properties. </br>
+                    This applicaion will show two different containers of two users with different amount of data.
+                </p>                
+                
+                <div class="user1">
+                    <h3 class="usertitle">User 1 Data <br> {overflow:auto} / {float:left} </h3>
+                    <p>User Name: Shadi Sayed Mohammd </p>
+                    <p>Age: 33 years </p>
+                    <p>Address: Egypt </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                </div>
+                
+                <!-- <br class=clear-left>  -->
+                
+                <!--<br class=clear> -->
+                
+                <div class="user2">
+                    <h3 class="usertitle">User 2 Data <br> {overflow:scroll} / {float:right} </h3>
+                    <p>User Name: Shadi Sayed Mohammd </p>
+                    <p>Age: 33 years </p>
+                    <p>Address: Egypt </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                </div>           
+                
+                <br class=clear-both> 
+                
+                <div class="user3">
+                    <h3 class="usertitle">User 3 Data <br> {overflow:visible} / {float:left}</h3>
+                    <p>User Name: Shadi Sayed Mohammd </p>
+                    <p>Age: 33 years </p>
+                    <p>Address: Egypt </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                </div>           
+                
+                <!-- <br class=clear-left>  -->
+                
+                <div class="user4">
+                    <h3 class="usertitle">User 4 Data <br> {overflow:hidden} / {float:right} </h3>
+                    <p>User Name: Shadi Sayed Mohammd </p>
+                    <p>Age: 33 years </p>
+                    <p>Address: Egypt </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                    <p>E-mail: shadisayed.34235@yahhoo.com  </p>
+                </div>           
+                
+                <br class=clear-both>
+                
+            </fieldset>
+            
+        </div>    
+        
+        <br class=clear-both>
+        <footer>
+            <p>This is the footer of the page</p>
+
+        </footer>        
+    </body>
+    </html>
+    

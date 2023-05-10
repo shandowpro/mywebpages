@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> JavaScript Lesson 4 [Where to put Javascript Code] </title>
+    <link rel="stylesheet" href="JavaScript [Where to put Javascript Code].css" media="all" >
+    
+    <script src="Test.js"> </script>
+    
+    </head>
+
+<body>
+    <header class="Main" id="Main">
+        JavaScript Lesson 4 [Where to put Javascript code]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="JavaScript [Chrome Console] Main Concept" > JavaScript [Where to put Javascript code] Main Concept" </a> </li>            
+            <li> <a href=#JSCodePlace Console  title="Go to JavaScript Chrome Console" >
+                    Where to put Javascript code  </a> </li>     
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to JavaScript Course <span> JavaScript Lesson 4 [Where to put Javascript code] </span> 
+    </main>
+<!-------------------------------------------------------------------------------------------------------------->                        
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>                 
+                JavaScript Lesson 4 [Where to put Javascript code]
+            </header>
+            
+            <article>                                                
+                <p> &gt; The New Topics in this lesson as following :</p>
+                <ol type="A">                    
+                    <li> Main Styles JavaScript Code in HTML File + Examples. </li>
+                    <li> JS Style Priority and Notes. </li>                                        
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>       
+        <section class="JSCodePlace" id="JSCodePlace">
+            <header>                
+                Where to put Javascript code
+            </header>
+            
+            <article>
+                <header>
+                    <h2> Main Styles to writing JavaScript: </h2>
+                    <p> =&gt; There are (3) main Ways to write Javascript Codes:                                  
+                    <ol type="A">
+                        <li> <h3> Internal Style </h3> </li>
+                            
+                            <p> =&gt; [Internal Style] is to write the main Javascript Code directly inside the main html Page between the Script Tag [ &lt; script &gt; &nbsp; Javascript Codes &nbsp; &lt; /script &gt; ]
+                            </p>                            
+                        
+                            <p> =&gt; [Internal Style] Can be written with in (2) different positions:</p>                            
+                                <ol type="1">
+                                   <li>                                       
+                                       <h4>[Internal Style] With in Head Tag [ &lt; head &gt; &nbsp; &lt; /head &gt; ] 
+                                       </h4> 
+                                   </li>
+                                        
+                                        <p>
+                                            This position will run First Javascript code before any other HTML Tag with in Body Tag, And this preferred to be just <mark>AFTER</mark> Link Tag [ &lt; link &nbsp; rel = "stylesheet" &nbsp; href = "file.css" /&gt; ] due to following reason:
+                                        </p>
+                                            <ul>
+                                                <li> 
+                                                    To prevent any loading page stunning in Style and Link Tags which has imported CSS Files, due to probable error in Javascript code with in Script Tag in case if script Tag is before each Link Tag and Style Tag.
+                                                    And this happeninig becuase the Webpage browser regularly reading codes depending on it's First written priority on html page.
+                                                </li>
+                                                
+                                            </ul>                                                                 
+                                      
+                                    
+                                    <li>
+                                       <h4>[Internal Style] With in Body Tag [ &lt; body &gt; &nbsp; &lt; /body &gt; ]</h4>       
+                                    </li>     
+                                        
+                                        <p>
+                                            In this position it is recomended to write the Javascript codes with in Script Tag just <mark>BEFORE</mark> the closing of Body Tag [ &lt; /body &gt; ] due to following reason:                     
+                                        </p>                
+                                        <ul>
+                                            <li>
+                                                Gurrantee a Proper loading of html Tags and Codes in case Script tag has any errors in it's Javascript codes.                     
+                                            </li>                                        
+                                        </ul>                                        
+                                </ol>
+                           
+                        <header class="JSCodePlaceExp">
+                            <h1> A/ [ Script Tag Internal Style ] (With in Head Tag) Example:</h1>                            
+                            <section>
+                                <h3> Following codes is about using Script Tag and Javascript Codes in Optimal Position with in Head Tag: </h3>
+                            </section>
+                                
+                            <div class="JSCodePlaceExp1">                                            
+                                <code> 
+                                    &lt;!DOCTYPE html&gt; <br>                            
+                                    &lt;html&gt; <br>                            
+
+                                    &nbsp;&nbsp; &lt;head&gt;<br>
+
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;meta &nbsp; charset = "utf-8"&nbsp; /&gt;<br>
+                                    
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;link &nbsp; rel = "styleSheet"&nbsp; href = "File.css"&nbsp; /&gt;<br>
+
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;script&gt;&nbsp; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; alert("Hello Shadi"); <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; document.write("&lt;p&gt;This Paragraph from Javascript <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; code&lt;/p&gt;"); <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;/script&gt; <br>
+                                    &nbsp;&nbsp; &lt;/head&gt; <br>
+                                    &lt;/html&gt; <br>                            
+                                </code>                    
+                            </div>
+                        </header>             
+
+                        
+                        <header class="JSCodePlaceExp">
+                            <h1> B/ [ Script Tag Internal Style ] (With in Body Tag) Example:</h1>               
+                            
+                            <section>
+                                <h3> Following codes is about using Script Tag and Javascript Codes in Optimal Position with in Body Tag: </h3>
+                            </section>
+                                
+                            <div class="JSCodePlaceExp1">                                            
+                                <code> 
+                                    &lt;!DOCTYPE html&gt; <br>                            
+                                    &lt;html&gt; <br>                            
+
+                                    &nbsp;&nbsp; &lt;head&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;meta &nbsp; charset = "utf-8"&nbsp; /&gt;<br>   
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;link &nbsp; rel = "styleSheet"&nbsp; href = "File.css"&nbsp; /&gt;<br>
+                                    &nbsp;&nbsp; &lt;/head&gt; <br>
+                                    
+                                    &nbsp;&nbsp; &lt;body&gt; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;&nbsp;&lt;/div&gt; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;&nbsp;&lt;/h3&gt; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;&nbsp;&lt;/p&gt; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;script&gt;&nbsp; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; alert("Hello Shadi"); <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; document.write("&lt;p&gt;This Paragraph from Javascript <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; code&lt;/p&gt;"); <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;/script&gt; <br>
+                                    
+                                    &nbsp;&nbsp; &lt;/body&gt; <br>
+                                    
+                                    &lt;/html&gt; <br>                            
+                                </code>                    
+                            </div>
+                        </header>             
+<!------------------------------------------------------------------------------------------------------------->                        
+                        <li> <h3> External Style</h3> </li>
+                            <p> =&gt; [Externl Style] is to import an External Javascript File from other Path, and allocate it to the current html File, with in [Script Tag] in (Src Attribute) </p>
+                            
+                            <p> =&gt; [Externl Style] is most likely to use when importing any External Code Source file wether it was JS or any other type, and Not using [Internal Style] except in case of certain Code for specific Page Element(s). </p>
+                            
+                            <div>  
+                                &lt; Script &nbsp; src = "File.js" &gt; &nbsp; &lt; /Script &gt;
+                            </div>
+                        
+                        
+                            <p> =&gt; [External Style] Can be written with in (2) different positions:</p>                                                    
+                            <ol>
+                                <li> <h4>[External Style] With in Head Tag [&lt; Head &gt; &nbsp; &lt; /Head &gt;] </h4>
+                                </li>     
+                                    <p>
+                                        This position will run First Javascript code before any other HTML Tag with in Body Tag, And this preferred to be just <mark>AFTER</mark> Link Tag [ &lt; link &nbsp; rel = "stylesheet" &nbsp; href = "file.css" /&gt; ] due to following reasons:
+                                    </p>
+                                        <ul>
+                                            <li> 
+                                                To prevent any loading page stunning in Style and Link Tags which has imported CSS Files, due to probable error in Javascript code with in Script Tag in case if script Tag is before each Link Tag and Style Tag.
+                                                And this happening becuase the Webpage browser regularly reading codes depending on it's First written priority on html page.
+                                            </li>
+                                                
+                                            <li>
+                                                Also this position is better for page opening performance due to the faster saving External JS or any other file type in cache in comparison with if the codes were Internal Style.   
+                                            </li>
+                                        </ul>                                                                                                     
+                                <li><h4>[External Style] With in Body Tag [ &lt; body &gt;&nbsp; &lt; /body &gt;]     </h4>
+                                </li>     
+                                    <p>
+                                        In this position it is recomended to write the Javascript codes with in Script Tag just <mark>BEFORE</mark> the closing of Body Tag [ &lt; /body &gt; ] due to following reason:                     
+                                    </p>                
+                                        <ul>
+                                            <li>
+                                                Gurrantee a Proper loading of html Tags and Codes in case Script tag has any errors in it's Javascript codes.                     
+                                            </li>                                        
+                                        </ul>                                        
+                            </ol>                                    
+                        
+                        
+                        <header class="JSCodePlaceExp">
+                            <h1> A/ [ Script Tag External Style ] (With in Head Tag) Example:</h1>                            
+                            <section>
+                                <h3> Following codes is about using Script Tag and Javascript file Source in Optimal Position with in Head Tag: </h3>
+                            </section>
+                                
+                            <div class="JSCodePlaceExp1">                                            
+                                <code> 
+                                    &lt;!DOCTYPE html&gt; <br>                            
+                                    &lt;html&gt; <br>                            
+
+                                    &nbsp;&nbsp; &lt;head&gt;<br>
+
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;meta &nbsp; charset = "utf-8"&nbsp; /&gt;<br>
+                                    
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;link &nbsp; rel = "styleSheet"&nbsp; href = "File.css"&nbsp; /&gt;<br>
+
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;script &nbsp;src="File.js" &gt;&nbsp;     
+                                    &lt;/script&gt; <br>
+                                    &nbsp;&nbsp; &lt;/head&gt; <br>
+                                    &lt;/html&gt; <br>                            
+                                </code>                    
+                            </div>
+                        </header>             
+
+                        
+                        <header class="JSCodePlaceExp">
+                            <h1> B/ [ Script Tag Internal Style ] (With in Body Tag) Example:</h1>               
+                            
+                            <section>
+                                <h3> Following codes is about using Script Tag and Javascript Codes in Optimal Position with in Body Tag: </h3>
+                            </section>
+                                
+                            <div class="JSCodePlaceExp1">                                            
+                                <code> 
+                                    &lt;!DOCTYPE html&gt; <br>                            
+                                    &lt;html&gt; <br>                            
+
+                                    &nbsp;&nbsp; &lt;head&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;meta &nbsp; charset = "utf-8"&nbsp; /&gt;<br>   
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;link &nbsp; rel = "styleSheet"&nbsp; href = "File.css"&nbsp; /&gt;<br>
+                                    &nbsp;&nbsp; &lt;/head&gt; <br>
+                                    
+                                    &nbsp;&nbsp; &lt;body&gt; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;&nbsp;&lt;/div&gt; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;&nbsp;&lt;/h3&gt; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;&nbsp;&lt;/p&gt; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;script &nbsp;src="File.js" &gt;&nbsp;     
+                                    &lt;/script&gt; <br>
+                                    
+                                    &nbsp;&nbsp; &lt;/body&gt; <br>
+                                    
+                                    &lt;/html&gt; <br>                            
+                                </code>                    
+                            </div>
+                        </header>             
+<!----------------------------------------------------------------------------------------------------------->                        
+                        <li><h3> Inline Style</h3> </li>
+                            <p> =&gt; [Inline Style] is to Write Javascript code Directly with in html Tag with it's Attribute (function's name="") </p>                                            
+
+                            <p> =&gt; [Inline Style] is rarely to use for Optimal Performance </p> 
+                        
+                            <div class="InlineJS" onclick="alert('Hello This is div');">
+                                &lt; div &nbsp; onclick="alert('Hello This is Div');" &gt; <br>
+                                &lt; div /&gt; 
+                            </div>
+                        
+                    </ol>                                                                   
+                </header>
+<!----------------------------------------------------------------------------------------------------------->                        
+<!----------------------------------------------------------------------------------------------------------->   
+                
+                <header> 
+                    <h2> JS Style Priority and Notes:</h2>                    
+                        
+                    <p> =&gt; The priority and commonly to use JS codes Style in HTML Documents even if it was an imported Javascript File(s) or direct codes, as following:
+                        <ol type="1">
+                            <li>[External Style]</li>
+                            <li>[Internal Style]</li>
+                            <li>[Inline Style]</li>
+                        </ol>
+                </header>                                                                                         
+            </article>       
+        </section>
+
+    <!------------------------------------------------------------------------------------------------------>                                
+    </div>    
+    
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="200"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="22">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num2">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 4 Video File:</h3>
+                <iframe			
+				width="100%"
+				height="100%"											
+				allowfullscreen
+				allowfullscreen="allowfullscreen"
+				mozallowfullscreen="mozallowfullscreen"
+				msallowfullscreen="msallowfullscreen"
+				oallowfullscreen="oallowfullscreen"
+				webkitallowfullscreen="webkitallowfullscreen"
+				frameborder="0"				
+				preload="yes"
+				src="https://www.youtube.com/embed/watch?v=kdqhkfDPlXA&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=4&controls=0&loop=1&autoplay=1&fs=1" 				
+				>
+			</iframe>
+                <!-- <video controls width="300" height="300" autoplay>
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/4  Where To Put JavaScript Code.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                           -->
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>
+    
+    
+    <script>
+        alert("Welcome to JavaScript: Lesson 4 [Where to put Javascript Code]");
+        document.write("<p> This paragraph from Iternal Script code");
+    </script>
+</body>
+</html>

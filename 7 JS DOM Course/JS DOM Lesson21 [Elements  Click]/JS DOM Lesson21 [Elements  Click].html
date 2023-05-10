@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS DOM Lesson21 [Elements Click]</title>
+    <link
+      rel="stylesheet"
+      href="JS DOM Lesson21 [Elements  Click].css"
+      media="all"
+    />
+    <style>
+      /* .hidden {
+            visibility: hidden;
+        } */
+    </style>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">JS DOM Lesson21 [Elements Click]</header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS DOM main Topics">
+            JS DOM Lesson21 [Elements Click] Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a href="#JSDOMCon" title="Go to JS DOM [Elements  Click ] Concept">
+            JS DOM Lesson21 [Elements Click] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMImp"
+            title="Go to JS DOM [Elements  Click ] Importance & Benefits"
+          >
+            JS DOM Lesson21 [Elements Click] Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a href="#JSDOMSyntx" title="Go to JS DOM [Elements  Click ] Syntax">
+            JS DOM Lesson21 [Elements Click] Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMPract"
+            title="Go to JS DOM [Elements  Click ] Practical Applications"
+          >
+            JS DOM Lesson21 [Elements Click] Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS DOM Course <span> JS DOM [Elements Click] </span>
+    </main>
+
+    <div class="Post" id="post">
+      <section id="MainC" class="MainC">
+        <header>JS DOM [Elements Click] Main Topics :</header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>JS DOM [Elements Click] Concept.</li>
+
+            <li>JS DOM [Elements Click] Importance & Benefits.</li>
+
+            <li>JS DOM [Elements Click] Syntax .</li>
+
+            <li>JS DOM [Elements Click] Practical Application.</li>
+          </ol>
+
+          <p>&gt; Main new Methods in this lesson are as following :</p>
+
+          <ul>
+            <li>[Elements Click] :</li>
+            <ol type="A">
+              <li>[Click Element] => {ElementVar.click()}</li>
+              <li>[ٍonclick Element] => {ElementVar.blur()}</li>
+            </ol>
+          </ul>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMCon" id="JSDOMCon">
+        <header>
+          <h3>JS DOM [Elements Click] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [Element click() ] Of Elements => Is a built in
+          function not just an Event , and can be activated automaticllay
+        </p>
+        <p>
+          =&gt; JS HTML DOM [Element click() ] Of Elements => Can be set to any
+          Element not just a Button
+        </p>
+        <p>
+          =&gt; JS HTML DOM [Element click() ] Of Elements => Can be an inner
+          function not the main function wether [Normal Function ||
+          SetTimeoiut() :{will be studied in the BOM} ]
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSDOMImp" id="JSDOMImp">
+        <header>
+          <h3>JS DOM [Elements Click] Importance & Benefits :</h3>
+        </header>
+
+        <p>JS DOM [Elements Click] gives us the Following Features : <br /></p>
+        <ul>
+          <li>Can be used in Presentation application , Auto Reponding</li>
+          <li>Can be used in Presentation application , Auto Reponding</li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSDOMSyntx" id="JSDOMSyntx">
+        <header>
+          <h3>JS DOM [Elements Click] Syntax & Methods:</h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [Elements Click} by following Conceptual Syntax as
+          following :
+        </p>
+
+        <div id="Code" class="Code">
+          [*] {HTML file} (parent element) example: <br />
+
+          <span class="one"></span> &lt;div id='main' class= "main"&gt; <br />
+
+          <span class="two"></span> &lt;p id ='idP' class ='classP'&gt; This is
+          a Paragraph &lt;/p&gt; <br />
+
+          <span class="one"></span> &lt;/div&gt; <br />
+          <br />
+
+          <span class="one"></span> &lt;div id='newId' class= "newClass"&gt;
+          <br />
+
+          <span class="one"></span> &lt;/div&gt; <br />
+
+          //=========================================================== <br />
+          <br />
+
+          [A]// {JS file} Implementing Element's with in it's Parent's {by [(2)
+          different Function] } : <br />
+
+          [1] Direct function of the [Hiding the Parent Element] by clicking on
+          the Button : <br />
+          <span class="one"></span> var myMainElem =
+          document.getElementById('main').parentElement, <br />
+          <br />
+          <span class="one"></span> myBtn = myMainElem.lastElement; <br />
+          <br />
+
+          <span class="one"></span> myBtn.onclick = function() { <br />
+          <span class="two"></span> myMainElem.style.display = 'none' <br />
+          <br />
+          <span class="one"></span> } <br />
+          <br />
+          <hr />
+
+          [2] Event function of the [Hiding the Parent Element] by When the
+          {Window Load} : <br />
+
+          <span class="one"></span> var myMainElem =
+          document.getElementById('main').parentElement, <br />
+          <br />
+          <span class="one"></span> myBtn = myMainElem.lastElement; <br />
+          <br />
+
+          <span class="one"></span> myBtn.onclick = function() { <br />
+          <span class="two"></span> myMainElem.style.display = 'none' <br />
+          <br />
+          <span class="one"></span> } <br />
+          <br />
+
+          <span class="one"></span> window.onload = function() { <br />
+          <span class="two"></span> myBtn.click(); <br />
+          <br />
+          <span class="one"></span> } <br />
+          <br />
+          <hr />
+
+          [3] Event function of the [Hiding the Parent Element] by When the
+          {After 2 of Window Load} + {setTimeout()} : <br />
+
+          <span class="one"></span> var myMainElem =
+          document.getElementById('main').parentElement, <br />
+          <br />
+          <span class="one"></span> myBtn = myMainElem.lastElement; <br />
+          <br />
+
+          <span class="one"></span> myBtn.onclick = function() { <br />
+          <span class="two"></span> myMainElem.style.display = 'none' <br />
+          <br />
+          <span class="one"></span> } <br />
+          <br />
+
+          <span class="one"></span> window.onload = function() { <br />
+
+          <span class="two"></span> 'use strict'; <br />
+          <br />
+          <span class="two"></span> setTimeout( <br />
+          <span class="three"></span> function() { <br />
+          <span class="four"></span> myBtn.click(); <br />
+          <span class="three"></span> }, 2000 ); <br />
+          <br />
+          <span class="one"></span> } <br />
+          <br />
+          <hr />
+
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMPract" id="JSDOMPract">
+        <header>
+          <h3>JS DOM [Elements Click] => General Practical Applications :</h3>
+        </header>
+
+        <p>
+          =&gt; Here one Major Application will include following main [2
+          Methods] of the following : &gt;&gt; <br />
+        </p>
+
+        <ul>
+          <li>
+            {Focus} => [elem.focus()] => Including Following (2) Main Methods
+            {Directly - External} : <br />
+            <ol>
+              <li>{Onclick Event Method} -> [ onclick ="this.focus();" ]</li>
+              <li>
+                {Window.load Event Method in External File } => window.load =
+                function() {elem.focus();}
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            {Blur} => [elem.blur()] => Including Following (2) Main Methods
+            {Directly - External} : <br />
+            <ol>
+              <li>{Onclick Event Method} -> [ onclick ="this.blur();" ]</li>
+              <li>
+                {Window.load Event Method in External File } => window.load =
+                function() {elem.blur();}
+              </li>
+            </ol>
+          </li>
+        </ul>
+        <br />
+
+        <form id="formS">
+          <label> This is a label </label>
+          <button id="btnT">Hide Parent</button>
+        </form>
+
+        <button class="btn" onclick="test()">
+          Click to Start JS DOM [ Elements Click ] Application
+        </button>
+
+        <script src="ElementsClick.js"></script>
+
+        <br />
+
+        <hr />
+        <button id="btn" class="btn" onclick="display()">
+          Display JS Code
+        </button>
+
+        <div class="JSOOPObjConstTraining">
+          <code>
+            // HTML Codes: <br />
+            <span class="one"></span> &lt;textarea id="txtarea"
+            class="txtarea"&gt;<br />
+            <span class="one"></span> &lt;/textarea&gt; <br /><br />
+
+            <span class="one"></span> &lt;button class="btn"
+            onclick=test"()"&gt;<br />
+            <span class="two"></span> Click to Start [Testing JS DOM [Parent
+            Element] Application <br />
+            <span class="one"></span> &lt;/button&gt; <br /><br />
+
+            <span class="one"></span> &lt;script src=".js"&gt;<br />
+            <span class="one"></span> &lt;/script&gt; <br /><br />
+
+            =======================================================<br /><br />
+
+            /* global document, alert, prompt */ <br />
+            /* JS DOM [Parent Element] */ <br />
+            template-string-converter.enable; <br /><br />
+
+            <textarea id="SourceCode" readonly></textarea>
+          </code>
+        </div>
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="VideoSection">
+        <h3>Lesson 21 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=kfKvE6k7Q1Q&list=PLDoPjvoNmBAxx97QDMOCpzxbu1ZHJ4i7i&index=21&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\HTML JS Dom\21 JS HTML Dom Elements  Click.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <!-- <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section> -->
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JS DOM Lesson21 [Elements  Click]  ");
+    </script>
+  </body>
+</html>

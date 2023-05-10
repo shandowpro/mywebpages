@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Css Lesson 15 [Display]</title>
+    <link rel="stylesheet" href="Display.css">
+    <!-- <link rel="stylesheet" href="Display - test.css"> -->
+</head>
+
+<body>
+    <div class="main">
+
+        <h1 class="title">Css/ Lesson 15 [Display (Inline, Block, Inline-Block ,None) ]</h1>
+        <fieldset class="index">
+            <legend class="index">Lesson Index</legend>
+            <ol>
+                <li> <a href="#inline" title="Go to Display:Inline">Display: Inline</a></li>
+                <li> <a href="#block" title="Go to Display:Block">Display: Block</a></li>
+                <li> <a href="#inline-block" title="Go to Display:Inline-Block">Display: Inline-block</a></li>
+                <li> <a href="#none" title="Go to Display:None">Display: None</a></li>
+            </ol>
+        </fieldset>
+        
+        <fieldset id="inline">
+            <legend>(A)Display: Inline</legend>    
+            
+            <h2 class="subtitle">(1)Default Inline Tags Examples:</h2>            
+            <p>There are Tags that their Default Display Property are [Inline] , such as:</p>
+            
+            <ol>
+                <li>Links Tag: &lt;a&gt; &lt;/a&gt;</li>
+                <li>Image Tag: &lt;img/&gt;</li>
+                <li>Span Tag: &lt;span&gt; &lt;/span&gt; </li>
+            </ol>
+            
+            <h2 class="subtitle">(2)Here some examples of [Inline] Display:</h2>
+            <div class="expinline">
+                <h3 class="subtitle0">Link Examples:</h3>
+                <a class="ai" href="http://google.com">Google</a>    
+                <a class="ai" href="http://facebook.com">Facebook</a>
+                <a class="ai" href="http://youtube.com">Youtube</a>    <hr>
+                
+                <h3 class="subtitle0">Image Examples:</h3>
+                <img class="imgi" src="Shadi.jpg">
+                <img class="imgi" src="Shadi.jpg">
+                <img class="imgi" src="Shadi.jpg">   <hr>
+                    
+                <h3 class="subtitle0">Span Examples:</h3>
+                <span class="spani">[This is Span 1]</span>
+                <span class="spani">[This is Span 2]</span>
+                <span class="spani">[This is Span 3]</span> <hr>
+            </div>
+            
+            <h2 class="subtitle">(3)Changing default [Inline] Tags to [Block] Display Examples:</h2>
+            <div class="expinlinev">
+                <h3 class="subtitle0">Link Changing from [Inline] to [Block] Examples:</h3>
+                <a class="aiv" href="http://google.com">Google</a>    
+                <a class="aiv" href="http://facebook.com">Facebook</a>
+                <a class="aiv" href="http://youtube.com">Youtube</a>    <hr>
+                
+                <h3 class="subtitle0">Image Changing from [Inline] to [Block] Examples:</h3>
+                <img class="imgiv" src="Shadi.jpg">
+                <img class="imgiv" src="Shadi.jpg">
+                <img class="imgiv" src="Shadi.jpg">   <hr>
+                    
+                <h3 class="subtitle0">Span Changing from [Inline] to [Block] Examples:</h3>
+                <span class="spaniv">[This is Span 1]</span>
+                <span class="spaniv">[This is Span 2]</span>
+                <span class="spaniv">[This is Span 3]</span>
+            </div>                            
+        </fieldset>
+    <!----------------------------------------------------------------------------------------------->        
+        <fieldset id="block">
+            <legend>(B)Display: Block</legend>    
+            <h2 class="subtitle">(1)Default Block Tags Examples:</h2>            
+            <p>There are Tags that their Display Property are [Block] as Default, such as:</p>
+            
+            <ol>
+                <li>Heading Tags: &lt;h1&gt; &lt;/h1&gt; &nbsp; &lt;h2&gt; &lt;/h2&gt; .....</li>
+                <li>Div Tag: &lt;div&gt; &lt;/div&gt;</li>
+                <li>Paragraph Tag: &lt;p&gt; &lt;/p&gt; </li>
+            </ol>
+            
+            <h2 class="subtitle">(2)Here some examples of [Block] Display:</h2>
+            
+            <div class="expblock">
+                <h3 class="subtitle0">Headings Examples:</h3>
+                <h1 class="hb">This is Heading 1</h1>
+                <h2 class="hb">This is Heading 2</h2>
+                <h3 class="hb">This is Heading 3</h3>    <hr>
+                
+                <h3 class="subtitle0">Div Examples:</h3>
+                <div class="divb">This is Div 1</div>
+                <div class="divb">This is Div 2</div>
+                <div class="divb">This is Div 3</div>       <hr>
+                    
+                <h3 class="subtitle0">Paragraph Examples:</h3>
+                <p class="pb">[This is Paragraph 1]</p>
+                <p class="pb">[This is Paragraph 2]</p>
+                <p class="pb">[This is Paragraph 3]</p>
+            </div>
+            
+            <h2 class="subtitle">(3)Changing default [Block] Tags to [Inline] Display Examples:</h2>
+            <div class="expblockv">
+                <h3 class="subtitle0">Headings Changing from [Block] to [Inline] Examples:</h3>
+                <h1 class="hbv">This is Heading 1</h1>
+                <h2 class="hbv">This is Heading 2</h2>
+                <h3 class="hbv">This is Heading 3</h3>    <hr>
+                
+                <h3 class="subtitle0">Div Changing from [Block] to [Inline] Examples:</h3>
+                <div class="divbv">This is Div 1</div>
+                <div class="divbv">This is Div 2</div>
+                <div class="divbv">This is Div 3</div>       <hr>
+                    
+                <h3 class="subtitle0">Paragraph Changing from [Block] to [Inline] Examples:</h3>
+                <span class="pbv">[This is Paragraph 1]</span>
+                <span class="pbv">[This is Paragraph 2]</span>
+                <span class="pbv">[This is Paragraph 3]</span>
+            </div>                
+        </fieldset>
+        
+    <!----------------------------------------------------------------------------------------------->        
+        <fieldset id="inline-block">
+            <legend>(C)Display: Inline-Block</legend>    
+            <h2 class="subtitle">(1)Concept of [Inilne-block] value of Display property:</h2>            
+            <p>The meaning of [Inline-block] value of display of property is to make element in a line as [Inline] Value,
+                But to maintain the [Block] Properties and ability to include other Defaulted [Block] elements within it.
+            </p>
+            
+            <h2 class="subtitle">(2)Here are some examples of [Inline-Block] Display:</h2>
+            <div class="expinlineblock">
+                <h3 class="subtitle0">[Inline-block] Divs containers Examples:</h3>
+                                
+                <div class="div1">
+                    This is Div 1
+                    <div>This is a child Div</div>
+                    <h4>This is heading element</h4>
+                    <p>This is paragraph element</p>                
+                </div>
+                
+                <div class="div2">
+                    This is Div 2
+                    <div>This is a child Div</div>
+                    <h4>This is heading element</h4>
+                    <p>This is paragraph element</p>                
+                </div>
+                
+                <div class="div3">
+                    This is Div 3
+                    <div>This is a child Div</div>
+                    <h4>This is heading element</h4>
+                    <p>This is paragraph element</p>                
+                </div>                                       
+            </div>                    
+        </fieldset>
+        
+    <!----------------------------------------------------------------------------------------------->        
+    <fieldset id="none">
+        <legend>(D)Display: None</legend>    
+        <h2 class="subtitle">Concept of [None] Value of Display Property:</h2>            
+        <p>The [None] value of Display property is to hide the element from webpage.</p>
+        <p>This Property is very useful in programing webpages and Web Applications.</p>                            
+    </fieldset>                
+</div>
+
+<!----------------------------------------------------------------------------------------------->        
+    <section>
+
+        <div class='testDiv' id='testDiv'>
+            <p>
+                This is a paregargh of test Div
+                This is a paregargh of test Div
+                This is a paregargh of test Div
+                This is a paregargh of test Div
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

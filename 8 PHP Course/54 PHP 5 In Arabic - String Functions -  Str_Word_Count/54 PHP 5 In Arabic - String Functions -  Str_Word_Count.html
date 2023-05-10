@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 54 PHP 5 In Arabic - String Functions -  Str_Word_Count </title>
+    <link rel="stylesheet" href="54 PHP 5 In Arabic - String Functions -  Str_Word_Count.css" media="all">
+    
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        54 PHP 5 In Arabic - String Functions -  Str_Word_Count
+    </header>
+<!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to PHP main Topics">
+                54 PHP 5 In Arabic - String Functions -  Str_Word_Count Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to PHP [String Functions - StrToLower, StrToUpper] Concept">
+                54 PHP 5 In Arabic - String Functions -  Str_Word_Count Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to PHP [String Functions - StrToLower, StrToUpper] Importance & Benefits">
+                54 PHP 5 In Arabic - String Functions -  Str_Word_Count Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to PHP [String Functions - StrToLower, StrToUpper] Syntax">
+                54 PHP 5 In Arabic - String Functions -  Str_Word_Count Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to PHP [String Functions - StrToLower, StrToUpper] Practical Applications">
+                54 PHP 5 In Arabic - String Functions -  Str_Word_Count Practical Applications </a> </li>
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+        
+    <main class="Welcome"> Welcome to PHP Course <span> 54 PHP 5 In Arabic - String Functions -  Str_Word_Count </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                PHP5 [ String Functions - [ str_word_count(string , format , charlist) ] Main Topics :
+            </header>
+            
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                
+                    <p>  String Functions / str_word_count(string , format , charlist) - Methods as following : </p>
+                        <ol> 
+                            <li> $var = str_word_count(); => [Default Word Count, Default Format, Default Charlist]  </li>
+                            <li> $var = str_word_count(String variable , 0); => [Default Format, Default Charlist]  </li>
+                            <li> $var = str_word_count(String variable , 1); => [Customized Format(Indexed Array), Default Charlist]  </li>
+                            <li> $var = str_word_count(String variable , 2); => [Customized Format(Associative Array), Default Charlist]  </li>
+                            <li> $var = str_word_count(String variable , 0 , "Customized Charlist"); => [Default Format, Customized Charlist]  </li>
+                            <li> $var = str_word_count(String variable , 1 , "Customized Charlist"); => [Customized Format(Indexed Array), Customized Charlist]  </li>
+                            <li> $var = str_word_count(String variable , 2 , "Customized Charlist"); => [Customized Format(Associative Array), Customized Charlist]  </li>                                                                                                            
+                        </ol>
+                    <hr>                                                                                                    
+            </article>
+        </Section>        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> PHP [54 PHP 5 In Arabic - String Functions -  str_word_count(string , format , charlist) ] </h3>
+            </header>`
+                        
+            <h2> [PHP - String Functions - [ str_word_count(string , format , charlist) ] ] => Concept: </h2>
+                                                        
+                <p> [PHP - String functions [ str_word_count(string , format , charlist) ] method syntax & concept as following : <br>
+                    <ol> 
+                        <li> To count the Sring words && controling the format of display the words && controling inlcuding the special characters with the count ,  and syntax includes the following elements :<br>
+                             <ol> 
+                                <li> [String Variable] => The String variable/ Text to process the method in it's words  => {Obligated} </li> 
+                                <li> [Format] => The Shape or format type of displaying the String words => {Optionanl} || {Default value =  0 , 1 , 2 ]} </li>
+                                <li> [Charlist] => The default character & symbols , which to be lncluded or not with in word counting  => {Optionanl} </li>
+                             </ol>
+                        </li>                                                 
+                    </ol>
+                </p>
+            
+                <br> <br> <hr>
+                <!-------------------------------------------  -->                                                                                                                                                                                                                              
+            </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> PHP [54 PHP 5 In Arabic - String Functions -  str_word_count(string , format , charlist)] Importance & Benefits: </h3>
+            </header>
+            
+            <ul> 
+                <li> [String Functions - str_word_count(string , format , charlist) ] methods => This method very helpful in advanced functoinality in advanced scripting   </li>                
+                <li> [String Functions - str_word_count(string , format , charlist) ] method => Can provide progrmatic advantage in reading string of files names and data properly to send it to the database || with special customization or setting  </li>                                 
+            </ul>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ 54 PHP 5 In Arabic - String Functions -  Str_Word_Count] Syntax & Methods: </h3>
+            </header>        
+
+            <p> =&gt; In this after setting up the application => We will create a simple PHP File && Running it by [Local Server] </p>
+            
+            <p> =&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} : <br>
+                <p> Using [String Functions - StrToLower, StrToUpper ] => has following ( 2 ) main Examples : </p> 
+                                
+                    <ol type="A">        
+                        <li> First Example => String Functions -  {trim(string variable/text value, charlist)} Method : contains (4) Exps: <br>
+                            <ol>   
+                                <li> {Default Trim()} Method  </li>
+                                <li> {Advanced Trim()} [Trim from Front] Method </li>
+                                <li> {Advanced Trim()} [Trim from Back] Method </li>
+                                <li> {Advanced Trim()} [Trim from Both Sides] Method </li>
+                            </ol>
+                        </li>                        
+                        
+                        <li> Second Example => String Functions -  {rtrim(string variable/text value, charlist)} || {ltrim(string variable/text value, charlist)} Method : contains (4) Exps: <br>
+                            <ol>   
+                                <li> {Default rTrim()} Method </li>
+                                <li> {Default lTrim()} Method </li>
+                                <li> {Advanced rTrim()} Method </li>
+                                <li> {Advanced lTrim()} Advanced Method </li>
+                            </ol>
+                        </li>                                                                        
+                                                                            
+                    </ol>
+                </P>                                                            
+                <!-- ================================================================= -->
+                                               
+                <h2>  B)  Html page :  </h2> <br>                    
+                        <span class='one'> &lt; !DOCTYPE html &gt; </span> <br>
+                            <span class='two'> &lt; html &gt; </span> <br>
+                                <span class='three'> &lt; /head &gt;</span> <br>
+                                    <span class='four'> &lt; title &gt; &lt;? php echo $title; ?&gt;  &lt; /title &gt;  </span> <br>
+                                    <span class='four'> &lt; link rel="stylesheet" href="54 PHP 5 In Arabic - String Functions -  Str_Word_Count" media="all" &gt;  </span> <br>
+                                <span class='three'> &lt; /head &gt; </span>  <br> <br>                                
+                                <span class='three'>&lt; body &gt; </span> <br>                            
+                                
+                                <span class='three'>&lt; /body &gt; </span> <br>
+                                <span class='two'>&lt;/html &gt; </span> <br>
+                                ---------------------------------------------------------------------------- <br>
+                                ---------------------------------------------------------------------------- <br>                      
+                   <br><br> <hr>                                                                                                                                  
+            <br><br>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+         <section class="PHPPract" id="PHPPract"> 
+            <header>
+                <h3> PHP [54 PHP 5 In Arabic - String Functions -  Str_Word_Count] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here (2) Major Applications PHP [ String Functions - StrToLower, StrToUpper ] as following =>  <br><br>
+
+                <ol type="A">        
+                    <li> First Example => String Functions -  {trim(string variable/text value, charlist)} Method : contains (4) Exps: <br>
+                        <ol>   
+                            <li> {Default Trim()} Method , include the following steps : <br>                                
+                                <ol>
+                                    <li> Printing the string variable [Before] {Default Trim} </li>
+                                    <li> Processing [Default Trim] </li>
+                                    <li> printing the string variable || Datatype || String Letter count [After] {Default Trim} </li>                                                                                                        
+                                </ol>
+                            </li>
+
+
+
+                            <li> {Advanced Trim()} [Trim from Front] , Method include the following steps :  <br>                                
+                                <ol>
+                                    <li> printing the string variable [Before] {Advanced Trim - Letter form front} </li>
+
+                                    <li> Processing [Default Trim] - advanced </li>
+
+                                    <li> Printing the string variable || Datatype || String Letter count [After] {Advanced Trim - Letter form front} </li>
+                                </ol>                            
+                            </li>
+                                                        
+                            
+                            <li> {Advanced Trim()} [Trim from Back] Method , Method include the following steps : <br> 
+                                <ol>
+                                    <li> Printing the string variable [Before] {Advanced Trim - Letter form Back} </li>
+
+                                    <li> Processing [Default Trim] - advanced   </li>
+
+                                    <li> Printing the string variable || Datatype || String Letter count [After] {Advanced Trim - Letter form Back}  </li>
+                                </ol>                            
+                            </li>
+                            
+
+                            <li> {Advanced Trim()} [Trim from Both Sides] Method , include the following steps : <br>                                  
+                                <ol>
+                                    <li> Printing the string variable [Before] {Advanced Trim - Letter form Both Sides} </li>
+
+                                    <li> Processing [Default Trim]- advanced  </li>
+
+                                    <li> printing the string variable || Datatype || String Letter count [After] {Advanced Trim - Letter form Both Sides} </li>
+                                </ol>                                                                                
+                            </li>
+                        </ol>
+                    </li>                        
+                    <!-- -================================================================================== -->
+
+
+                    <li> Second Example => String Functions -  {rtrim(string variable/text value, charlist)} || {ltrim(string variable/text value, charlist)} Method : contains (4) Exps: <br>
+                        <ol>   
+                            <li> {Default rTrim()} Method, and include the following steps : <br> 
+                                <ol>
+                                    <li> Printing the string variable [Before] {Default Right Trim}  </li>
+
+                                    <li> Processing [Default Right Trim] Processing [Default Right Trim] </li>
+
+                                    <li> Printing the string variable || Datatype || String Letter count [After] {Default Right Trim}  </li>
+                                </ol>                                                                                                            
+                            </li>                            
+                            
+                            <li> {Default lTrim()} Method , and include the following steps : <br> 
+                                <ol>
+                                    <li> printing the string variable [Before] {Default Left Trim}  </li>
+                                    <li> Processing [Default Left Trim] </li>
+                                    <li> Printing the string variable || Datatype || String Letter count [After] {Default Left Trim} </li>                                    
+                                </ol>                            
+                            </li>
+                            
+                            
+                            
+                            <li> {Advanced rTrim()} Method , and include the following steps :  <br>                                                                
+                                <ol>
+                                    <li> printing the string variable [Before] {Advanced Right Trim}  </li>
+                                    <li> Processing [Adavnced Right Trim]  </li>
+                                    <li> Printing the string variable || Datatype || String Letter count [After] {Advanced Right Trim} </li>         
+                                </ol>                            
+                            </li>
+                            
+                            <li> {Advanced lTrim()} Advanced Method , and include the following steps : <br>
+                                <ol>  
+                                    <li> Printing the string variable [Before] {Advanced Left Trim}  </li>
+                                    <li> Processing [Advanced Left Trim]  </li>
+                                    <li> Printing the string variable || Datatype || String Letter count [After] {Advanced Left Trim}  </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>                                                                        
+                                                                        
+                </ol>
+                      
+
+             <!-- <section id=sec class=txtarea >                                  
+                 <a href=" href="http://localhost/PHP%20Course/52%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20StrToLower,%20StrToUpper/52%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20StrToLower,%20StrToUpper.php">  
+                    {54 PHP 5 In Arabic - String Functions -  Str_Word_Count } => Lesson 54 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+            <section id=sec class=txtarea >                                  
+                <a class=btn href="http://localhost/PHP%20Course/54%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20%20Str_Word_Count/54%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20%20Str_Word_Count.php">  
+                   {Main Page} [Display] => {54 PHP 5 In Arabic - String Functions -  Str_Word_Count } => Lesson 54 PHP File Webpage by Localhost
+               </a> <br> <br>             
+               
+               <a class=btn href="54 PHP 5 In Arabic - String Functions -  Str_Word_Count.php">  
+                   {Main Page} [Source Code] => {54 PHP 5 In Arabic - String Functions -  Str_Word_Count } => Lesson 54 PHP File Webpage by Localhost
+               </a>             
+           </section> <br> 
+            
+             <!-- <script  src="14 PHP 5  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+                
+        </section>                           
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="VideoSection">
+            <h3> Lesson 54 Video File:</h3>
+            <iframe
+            width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=OJzooAjSqqI&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=54&controls=0&loop=1&autoplay=1&fs=1"    
+        >   
+        </iframe>
+            
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\54 PHP 5 In Arabic - String Functions -  Str_Word_Count.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shandow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 54 PHP 5 In Arabic - String Functions -  Str_Word_Count ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

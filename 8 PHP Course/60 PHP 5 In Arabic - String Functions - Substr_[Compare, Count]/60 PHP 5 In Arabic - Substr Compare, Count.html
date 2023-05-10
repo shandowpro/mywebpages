@@ -1,0 +1,727 @@
+.
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      60 PHP 5 In Arabic - String Functions - Substr_[Compare, Count]
+    </title>
+    <link
+      rel="stylesheet"
+      href="60 PHP 5 In Arabic - String Functions - Substr_[Compare, Count].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      60 PHP 5 In Arabic - String Functions - Substr_[Compare, Count]
+    </header>
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to PHP main Topics">
+            60 PHP 5 In Arabic - String Functions - Substr_[Compare, Count] Main
+            Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPCon"
+            title="Go to PHP [String Functions - substr()] Concept"
+          >
+            60 PHP 5 In Arabic - String Functions - Substr_[Compare, Count]
+            Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPImp"
+            title="Go to PHP [String Functions - substr()] Importance & Benefits"
+          >
+            60 PHP 5 In Arabic - String Functions - Substr_[Compare, Count]
+            Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPSyntx"
+            title="Go to PHP [String Functions - substr()] Syntax"
+          >
+            60 PHP 5 In Arabic - String Functions - Substr_[Compare, Count]
+            Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPPract"
+            title="Go to PHP [String Functions - substr()] Practical Applications"
+          >
+            60 PHP 5 In Arabic - String Functions - Substr_[Compare, Count]
+            Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <main class="Welcome">
+      Welcome to PHP Course
+      <span>
+        60 PHP 5 In Arabic - String Functions - Substr_Compare() ,
+        substr_Count()
+      </span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          PHP5 [ String Functions - [ 60 PHP 5 In Arabic - String Functions -
+          Substr_Compare() , substr_Count() ] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+
+          <ol>
+            <li>
+              String Functions / substr_count(Main String , Sub String , Start
+              Index, Length) - Methods as following :
+              <ol>
+                <li>[Main String , Sub String] => Default (Obligatory)</li>
+                <li>[+Start Index , +Lenght] => Advanced (Optional)</li>
+                <li>[-Start Index , -Lenght] => Advanced (Optional)</li>
+                <li>[+Start Index , -Lenght] => Advanced (Optional)</li>
+                <li>[-Start Index , +Lenght] => Advanced (Optional)</li>
+              </ol>
+            </li>
+
+            <li>
+              String Functions / substr_compare(String1 , String2 , Start Index,
+              Length , Letter Case ) - Methods as following :
+              <ol>
+                <li>
+                  [Main String , Sub String , Start Index] => Default
+                  (Obligatory)
+                </li>
+                <li>[Lenght] => Advanced (Optional)</li>
+                <li>[Lenght , Case] => Advanced (Optional)</li>
+              </ol>
+            </li>
+          </ol>
+          <hr />
+        </article>
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="PHPCon" id="PHPCon">
+        <header>
+          <h3>
+            PHP [60 PHP 5 In Arabic - String Functions - Substr_Compare() ,
+            substr_Count() ]
+          </h3>
+        </header>
+
+        <h2>
+          [PHP - String Functions - [ 60 PHP 5 In Arabic - String Functions -
+          Substr_Compare() , substr_Count() ] ] => Concept:
+        </h2>
+
+        <ol>
+          <li>
+            [PHP - String functions [ substr_count(Main St0ring , Sub String ,
+            Start Index, Length) ] method syntax & concept as following : <br />
+            <ul>
+              <li>
+                To count the number of repetation of certain substring within a
+                string according to giving result as following : <br />
+                <ol>
+                  <li>
+                    [Main String] : The Main String to search in for [Sub
+                    String] and count it [starting with a spcific index] &&
+                    [with in a certain length] => [Req]
+                  </li>
+
+                  <li>
+                    [Sub String] : The Sub String to search for it inside the
+                    [Main String] and count it [starting with a spcific index]
+                    && [with in a certain length] => [Req]
+                  </li>
+
+                  <li>
+                    [Starting Index] : The start of searching and counting the
+                    Sub string Index position => [optional]
+                  </li>
+
+                  <li>
+                    [Length] : The range of searching with in the string for the
+                    Sub string, starting from the assigned start index =>
+                    [optional]
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - String functions [ substr_compare(String1 , String2 , Start
+            Index, Length , Letter Case ) ] method syntax & concept as following
+            : <br />
+            <ul>
+              <li>
+                To count the number of repetation of certain substring within a
+                string according to giving result as following : <br />
+                <ol>
+                  <li>
+                    [String1] : The first Sub String to Compare with the second
+                    string inside the main string , starting from the start
+                    index => [Req]
+                  </li>
+
+                  <li>
+                    [String2] : The Second Sub String to be Compared from the
+                    first string inside the main string , starting from the
+                    start index => [Req]
+                  </li>
+
+                  <li>
+                    [Starting Index] : The start comparing the [First Sub
+                    string] with [Second Sub string] => [Req]
+                  </li>
+
+                  <li>
+                    [Length] : The range of comparing the [First Sub string]
+                    with [Second Sub string] , starting with Starting index =>
+                    [Optional]
+                  </li>
+
+                  <li>
+                    [Letter Case Sensitivity] : Activating / De-Activating
+                    (Letter Case Sensitivity - default) of comparing the [First
+                    Sub string] with [Second Sub string] , starting with
+                    Starting index => [Optional]
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+        </ol>
+
+        <br />
+        <br />
+        <hr />
+        <!-------------------------------------------  -->
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPImp" id="PHPImp">
+        <header>
+          <h3>
+            PHP [60 PHP 5 In Arabic - String Functions - Substr_Compare() ,
+            substr_Count() ] Importance & Benefits:
+          </h3>
+        </header>
+
+        <ul>
+          <li>
+            [String Functions - substr_count()] method => This Metod is very
+            usful in counting certain substring inside a Main String with
+            specific conditions [Starting Counting Position in the main string]
+            || [Length of counting in the main string]
+          </li>
+          <li>
+            [String Functions - substr_compare()] method => This Metod is very
+            usful in comparing certain substring with a nother one inside a Main
+            String with specific conditions [Starting Comparing Position in the
+            main string] || [Length of comparing in the main string] || [Letter
+            case sensitivity]
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPSyntx" id="PHPSyntx">
+        <header>
+          <h3>
+            [ 60 PHP 5 In Arabic - String Functions - Substr_Compare() ,
+            substr_Count() ] Syntax & Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; In this after setting up the application => We will create a
+          simple PHP File && Running it by [Local Server]
+        </p>
+
+        <p>=&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} :</p>
+        <br />
+        <p>
+          Using [String Functions - [SubStr_count()] || [SubStr_comare()] => has
+          following (8) main Examples :
+        </p>
+
+        <ol type="A">
+          <li>
+            [PHP - A) String functions [ substr_count(String , starting Index,
+            length) ] method : <br />
+            <ul>
+              <li>
+                including the following elelments : <br />
+                <ul>
+                  <li>[Stirng] => the main string search in the sub-string</li>
+                  <li>
+                    [SubStirng] => the sub-string to look for it in the String
+                  </li>
+                  <li>
+                    [string index] => The index to start the counting process
+                  </li>
+                  <li>
+                    [SubStirng] => The sub-string to look for it in the String
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                To get the repetation count of a certian sub string inside a
+                certain string , including the following examples (4): <br />
+                <ol>
+                  <li>
+                    First Example => String Functions - {substr_count(Main
+                    String , Sub String , Start Index, Length)} => Default
+                    Method : [ Starting index : Default - optional/advanced] ||
+                    [Length : Default - optional/advanced]
+                  </li>
+                  <li>
+                    Second Example => String Functions - {substr_count(Main
+                    String , Sub String , Start Index, Length)} => Default
+                    Method : [ Starting index : Customized - optional/advanced]
+                    || [Length : Default - optional/advanced]
+                  </li>
+                  <li>
+                    Third Example => String Functions - {substr_count(Main
+                    String , Sub String , Start Index, Length)} => Default
+                    Method : [ Starting index : Customized - optional/advanced]
+                    || [Length : Customized - optional/advanced]
+                  </li>
+                  <li>
+                    Fourth Example => String Functions - {substr_count(Main
+                    String , Sub String , Start Index, Length)} => Default
+                    Method : [ Starting index : Customized - optional/advanced]
+                    || [Length : Customized(Main parent String length) -
+                    optional/advanced]
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - A) String functions [ substr_compare(String1 , String2 ,
+            Start Index, Length , Letter Case{true||false} ) ] method : <br />
+            <ul>
+              <li>
+                including the following elelments : <br />
+                <ul>
+                  <li>[Stirng] => the main string search in the sub-string</li>
+                  <li>
+                    [SubStirng] => the sub-string to look for it in the String
+                  </li>
+                  <li>
+                    [string index] => The index to start the counting process
+                  </li>
+                  <li>
+                    [SubStirng] => The sub-string to look for it in the String
+                  </li>
+                  <li>
+                    [Letter case Sensetivity] => To activate/deactivate letter
+                    case sensitivity in searching process
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                To get the Result of equaled||bigger||smaller of certian
+                sub-string with another a certain sub-string , including the
+                following examples (4): <br />
+                <ol>
+                  <li>
+                    Fifth Example => String Functions - { substr_compare(String1
+                    , String2 , Start Index, Length , Letter Case) } => Default
+                    Method : [ Starting index : (10) - Obligatory] || [Length :
+                    default - optional/advanced] || [Letter case :
+                    default(false) - optional/advanced]
+                  </li>
+                  <li>
+                    Sixth Example => String Functions - {substr_compare(String1
+                    , String2 , Start Index, Length , Letter Case) } => Advanced
+                    Method : [ Starting index : default(10) - Obligatory] ||
+                    [Length : advanced - optional/advanced] || [Letter case :
+                    default(false) - optional/advanced]
+                  </li>
+                  <li>
+                    Seventh Example => String Functions -
+                    {substr_compare(String1 , String2 , Start Index, Length ,
+                    Letter Case) } => Advanced Method : [ Starting index :
+                    default(10) - Obligatory] || [Length : Customized -
+                    optional/advanced] || [Letter case : advanced(false) -
+                    optional/advanced]
+                  </li>
+                  <li>
+                    Eigth Example => String Functions - {substr_compare(String1
+                    , String2 , Start Index, Length , Letter Case) } => Advanced
+                    Method : [ Starting index : default(10) - Obligatory] ||
+                    [Length : Customized - optional/advanced] || [Letter case :
+                    advanced(true) - optional/advanced]
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <!-- ================================================================= -->
+
+        <h2>B) Html page :</h2>
+        <br />
+        <span class="one"> &lt; !DOCTYPE html &gt; </span> <br />
+        <span class="two"> &lt; html &gt; </span> <br />
+        <span class="three"> &lt; /head &gt;</span> <br />
+        <span class="four">
+          &lt; title &gt; &lt;? php echo $title; ?&gt; &lt; /title &gt;
+        </span>
+        <br />
+        <span class="four">
+          &lt; link rel="stylesheet" href="60 PHP 5 In Arabic - String Functions
+          - Substr_[Compare, Count]" media="all" &gt;
+        </span>
+        <br />
+        <span class="three"> &lt; /head &gt; </span> <br />
+        <br />
+        <span class="three">&lt; body &gt; </span> <br />
+
+        <span class="three">&lt; /body &gt; </span> <br />
+        <span class="two">&lt;/html &gt; </span> <br />
+        ----------------------------------------------------------------------------
+        <br />
+        ----------------------------------------------------------------------------
+        <br />
+        <br /><br />
+        <hr />
+        <br /><br />
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPPract" id="PHPPract">
+        <header>
+          <h3>
+            PHP [ 60 PHP 5 In Arabic - String Functions - Substr_Compare() ,
+            substr_Count() ] General Practical Applications :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Here (8) Major Applications PHP [ 60 PHP 5 In Arabic - String
+          Functions - Substr_Compare() , substr_Count() ] as following =>
+          <br /><br />
+        </p>
+
+        <ol type="A">
+          <li>
+            [PHP - A) String functions [ substr_count(String , starting Index,
+            length) ] method : <br />
+            <ul>
+              <li>
+                To get the repetation count of a certian sub string inside a
+                certain string , including the following examples (4): <br />
+                <ol>
+                  <li>
+                    First Example => String Functions - {substr_count(Main
+                    String , Sub String , Start Index, Length)} => Default
+                    Method : [ Starting index : Default - optional/advanced] ||
+                    [Length : Default - optional/advanced]
+                  </li>
+                  <li>
+                    Second Example => String Functions - {substr_count(Main
+                    String , Sub String , Start Index, Length)} => Default
+                    Method : [ Starting index : Customized - optional/advanced]
+                    || [Length : Default - optional/advanced]
+                  </li>
+                  <li>
+                    Third Example => String Functions - {substr_count(Main
+                    String , Sub String , Start Index, Length)} => Default
+                    Method : [ Starting index : Customized - optional/advanced]
+                    || [Length : Customized - optional/advanced]
+                  </li>
+                  <li>
+                    Fourth Example => String Functions - {substr_count(Main
+                    String , Sub String , Start Index, Length)} => Default
+                    Method : [ Starting index : Customized - optional/advanced]
+                    || [Length : Customized(Main parent String length) -
+                    optional/advanced]
+                  </li>
+                </ol>
+              </li>
+
+              <li>
+                Each Example includes the following steps :
+                <ol>
+                  <li>
+                    Printing the main string variable before [Counting
+                    Substraction]
+                  </li>
+                  <li>Processing [Counting Substraction]</li>
+                  <li>Printing the [Substracted String]</li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            [PHP - A) String functions [ substr_compare(String1 , String2 ,
+            Start Index, Length , Letter Case{true||false} ) ] method : <br />
+            <ul>
+              <li>
+                To get the Comparing Result of [equaled||bigger||smaller] of
+                certian sub-string with another a certain sub-string , including
+                the following examples (4): <br />
+                <ol>
+                  <li>
+                    Fifth Example => String Functions - { substr_compare(String1
+                    , String2 , Start Index, Length , Letter Case) } => Default
+                    Method : [ Starting index : (10) - Obligatory] || [Length :
+                    default - optional/advanced] || [Letter case :
+                    default(false) - optional/advanced]
+                  </li>
+                  <li>
+                    Sixth Example => String Functions - {substr_compare(String1
+                    , String2 , Start Index, Length , Letter Case) } => Advanced
+                    Method : [ Starting index : default(10) - Obligatory] ||
+                    [Length : advanced - optional/advanced] || [Letter case :
+                    default(false) - optional/advanced]
+                  </li>
+                  <li>
+                    Seventh Example => String Functions -
+                    {substr_compare(String1 , String2 , Start Index, Length ,
+                    Letter Case) } => Advanced Method : [ Starting index :
+                    default(10) - Obligatory] || [Length : Customized -
+                    optional/advanced] || [Letter case : advanced(false) -
+                    optional/advanced]
+                  </li>
+                  <li>
+                    Eigth Example => String Functions - {substr_compare(String1
+                    , String2 , Start Index, Length , Letter Case) } => Advanced
+                    Method : [ Starting index : default(10) - Obligatory] ||
+                    [Length : Customized - optional/advanced] || [Letter case :
+                    advanced(true) - optional/advanced]
+                  </li>
+                </ol>
+              </li>
+
+              <li>
+                Each Example includes the following steps :
+                <ol>
+                  <li>
+                    Printing the both strings variable values before [Comparing
+                    Substracted strings]
+                  </li>
+                  <li>Processing [Comparing Substracted strings]</li>
+                  <li>Printing the [Substracted Strings Comparing Result]</li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+        </ol>
+
+        <!-- <section id=sec class=txtarea >                                  
+                 <a href="http://localhost/PHP%20Course/60%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20Substr_%5bCompare,%20Count%5d/60%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20Substr_%5bCompare,%20Count%5d.php">  
+                    {60 PHP 5 In Arabic - String Functions - Substr_Compare()  , substr_Count() } => Lesson 60 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+        <section id="sec" class="txtarea">
+          <a
+            class="btn"
+            href="http://localhost/PHP%20Course/60%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20Substr_%5bCompare,%20Count%5d/60%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20Substr_%5bCompare,%20Count%5d.php"
+          >
+            {Main Page} [Display] => {60 PHP 5 In Arabic - String Functions -
+            Substr_Compare() , substr_Count() } => Lesson 60 PHP File Webpage by
+            Localhost
+          </a>
+          <br />
+          <br />
+
+          <a
+            class="btn"
+            href="60 PHP 5 In Arabic - String Functions - Substr_[Compare, Count].php"
+          >
+            {Main Page} [Source Code] => {60 PHP 5 In Arabic - String Functions
+            - Substr_Compare() , substr_Count() } => Lesson 60 PHP File Webpage
+            by Localhost
+          </a>
+        </section>
+        <br />
+
+        <!-- <script  src="14 PHP 5  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="VideoSection">
+        <h3>Lesson 60 Video File:</h3>
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=SgNNj6ZXj90&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=60&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\60 PHP 5 In Arabic - String Functions - Substr_[Compare, Count].mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shandow &trade;
+    </footer>
+
+    <script>
+      alert(
+        "Welcome to 60 PHP 5 In Arabic - String Functions - Substr_Compare()  , substr_Count() "
+      );
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

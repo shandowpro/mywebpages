@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 4 Learn JS BOM - Window Methods - setTimeout </title>
+    <link rel="stylesheet" href="4 Learn JS BOM - Window Methods - setTimeout.css" media="all">
+    
+    <style>        
+       .custom {
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            margin: 10px auto;
+            border: 5px solid gray;    
+            background-color: #ccc;
+            text-align: center;
+        } 
+         
+        .dis {
+            border: 3px solid red;
+            border-radius: 30px;
+            width: 100%;
+            /* height: 200px; */
+            text-align: center;
+            line-height: 2em;
+        }
+
+        .item{
+            color: red;
+            font-size: 30px;
+            font-family: monospace;
+            background-color: blue;
+        }
+        
+    </style>
+    
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main" >
+        4 Learn JS BOM - Window Methods - setTimeout
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS HTML BOM main Topics">
+                4 Learn JS BOM - Window Methods - setTimeout  Main Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to 4 Learn JS BOM - Window Methods - setTimeout Concept">
+                4 Learn JS BOM - Window Methods - setTimeout  Concept </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to 4 Learn JS BOM - Window Methods - setTimeout Importance & Benefits">
+                4 Learn JS BOM - Window Methods - setTimeout  Importance & Benefits </a> </li> 
+
+            <li> <a href=#JSDOMImp title="Go to 4 Learn JS BOM - Window Methods - setTimeout Syntax ">
+                4 Learn JS BOM - Window Methods - setTimeout main Information</a> </li>            
+
+            <li> <a href=#JSDOMPract title="Go to 4 Learn JS BOM - Window Methods - setTimeout Practical Applications">
+                4 Learn JS BOM - Window Methods - setTimeout  Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS HTML BOM Course <span> 4 Learn JS BOM - Window Methods - setTimeout  </span>
+    </main>
+
+    
+    <div class="Post" id=post>
+        <Section  id="MainC" class="MainC">
+
+            <header>
+                4 Learn JS BOM - Window Methods - setTimeout || clearTimeout Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> Window Methods - setTimeout(function(){}, Time , par1 , par2 , ...); </li>
+                    <li> Window Methods - clearTimeout(setTimeoutVarName); </li>
+                </ol>                                                
+                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> 4 Learn JS BOM - Window Methods - setTimeout  Concept: </h3>
+            </header>
+                                                        
+            <p> =&gt; [ window Methods ] : <br>
+                <ol>
+                    <li> Main concept of {window Methods} => <br>                        
+                        <ol>
+                            <li> {setTimeout()} Method => <br> 
+                                <p> To Set a Timer [by Milliseconds] to start Certain Code or function </p>
+                                <p> This function depend on Obligatories elements and other Optional elements: 
+                                    <ul> 
+                                        <li> Obligatories :  <br>
+                                            <ol> 
+                                                <li> [Function Name] => Which will be implemented after the Timer set in the setTimeout Method </li>
+                                                <li> [Timer] => The Seconds by (Milliseconds) Which the Function will be delegated with  </li>
+                                            </ol>
+                                        </li>
+                                        <li> Optionals :  <br>
+                                            <ol> 
+                                                <li> [Parameters]  => The main Parameters of the main setTimeout </li>                                                
+                                            </ol>
+                                        </li>
+                                    </ul>                                                                                                    
+                                </p>
+                            </li>
+
+                            <li> {clearTimeout()} Method => <br>
+                                <p> To Stop processing a Declared setTimeout Function </p>
+                                
+                                <p> This method elements as following : <br>
+                                    <li> The Declared setTimeout Method Variable  </li>
+                                </p>
+                            </li>                            
+                        </ol>                                                                                                         
+                                                
+                </ol>  <br>
+                            
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> 4 Learn JS BOM - Window Methods - setTimeout Importance & Benefits : </h3>
+            </header>
+
+            <p> 4 Learn JS BOM - Window Methods - setTimeout gives us the Following Features : <br>
+                <ul>                                                 
+                    <li> {setTimeout() || clearTimeout()} => Are some of most usually used methods in JS , and has many Advantages when mixed with other JS functions </li>
+                    <li> {setTimeout() || clearTimeout()} => Using them can create an awesome Applications </li>
+                </ul>                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> 4 Learn JS BOM - Window Methods - setTimeout Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; {JS BOM - Window Metods: setTimeout(), clearTimeout() } by following Conceptual Syntax as following : </p>
+            
+            <div id="Code" class="Code">
+                
+                [A]// {JSBOM file} : <br> <br>
+
+                [1] {BOM} (setTimeout()) Examples: <br>                
+                
+                    <span class= one></span> a)  Declaring a setTimeout() function + [with inner Function decleration] : <br> <br>
+                        
+                        <span class= two></span> setTimeout(function(){   <br>
+                            <span class= three></span> 'use strict' ; <br> 
+                            <span class= three></span> console.log('Write This after # Seconds'); <br> 
+                        <span class= two></span> }, #Milliseconds ) ; <br>
+                //=========================================================== <br> <br>                    
+                                                
+                    <span class= one></span> b)  Declaring a setTimeout() function + [with Calling previous Declared inner Function ] : <br> <br>
+                        
+                        <span class= two></span> setTimeout(functionName, #Milliseconds ) ; <br> 
+                //=========================================================== <br> <br>                    
+                                                                                
+                    <span class= one></span> c)  Defining a variable f Declaring a setTimeout() function + [with Calling previous Declared inner Function ] : <br> <br>
+                        
+                        <span class= two></span> var myTime = setTimeout(functionName, #Milliseconds ) ; <br> 
+                //=========================================================== <br> <br>                    
+
+                [2] {BOM} (clearTimeout()) Examples: <br>                
+                    <span class= one></span> a) Declaring a ClearTimeout() Method [to stop Processing the Previous setTimeout()]: <br> <br>
+                        
+                        <span class= two></span> clearTimeout(myTime) ; <br>                         
+                //=========================================================== <br> <br>                    
+                    
+                    <span class= one></span> b) Creaing a Button  Stop Processing the Previous setTimeout() [by onclick event]: <br> <br>
+                        
+                        
+                        <span class= two></span> // Defining the Button Variable : <br> 
+                        <span class= two></span> var btn = document.getElementByID('btn'); <br> <br> 
+                        
+                        
+                        <span class= two></span> // Defining onclick event => to ClearTimeout() : <br>
+                        <span class= two></span> btn.onclick = function {  <br>
+                            <span class=three></span> 'use strict' ; <br>
+                            <span class=three></span> clearTimeout(myTime) ; <br>
+                        <span class=two></span>  }; <br> <br> 
+                                                                                                                                                                
+                //=========================================================== <br> <br>                                                                    
+                //=========================================================== <br> <br>                                                                
+            
+            <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMPract" id="JSDOMPract">
+            <header>
+                <h3> 4 Learn JS BOM - Window Methods - setTimeout => General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt ; Here 1 Major Application will include creating [2 Sector] of simple information displaying => as following :  &gt;&gt; <br>
+                <ol> 
+                    <li> The First Section =>  window Functions and Methods Example  {setTimeout()} , as Following: <br> 
+                        <p>  Getting all Required Variables </p>                                                
+                        <p>  Displaying the {Time Inserted value}  </p>                                                
+                        <p>  Declaring the Function to be called  </p>                                                
+                        <p>  Defining the Declared SetTimeout() Function inside the Variable  </p>                                                
+                    </li>                    
+                    
+                    <li> The Second Section =>  window Functions and Methods Example {clearTimeout()}, as Following: <br> 
+                        <p> Creating A Button to Stop Working with the SetTimeout() Function => by clearTimeout() </p>                                            
+                    </li>                    
+                </ol>                
+                                    
+            <br> <br>                                    
+
+            <div id="elem" class="btn" ></div> <br>             
+                                    
+            <!-- <button  class=btn onclick="printB()"> Click to Start [ Browser print ] </button>   -->
+            
+            <button  id="btn" class=btn> Click to Stop processing the setTimeout() Function</button> 
+            
+            <!-- <div id="note" class="dis"></div> <br> -->
+                                
+            <hr> <br> <br>
+            <!-- ========================================================= -->
+
+            
+
+            <button class=btn onclick="test()"> Click to Start JS HTML BOM [ window ]  Application    
+            </button> 
+            
+            
+            <script  src="WindowMethodssetTimeout.js">
+            </script>
+                                    
+            <br>    
+                                          
+        <hr>
+                <button id=btn class="btn" onclick="display()">Display JS Code</button>
+                
+                <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Testing JS HTML BOM [Parent Element]  Application  <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                                                        
+                        
+                        <span class=one></span> &lt;script src=".js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JS HTML BOM [Parent Element]  */ <br>                    
+                        template-string-converter.enable; <br><br>
+                                                
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div>
+                
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection">
+            <h3> Lesson 4 Video File: </h3>
+
+            <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=-7VhjQ5k014&list=PLDoPjvoNmBAy9nFRJgVYgEID8xE2a6q6V&index=4&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JS BOM\4 Learn JS BOM - Window Methods - setTimeout.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="Links">
+            <h3>Course Reaquirments : </h3>
+            <ul>
+                <li> JS </li>
+                <li> JSDOM </li>                
+            </ul>
+        </section>
+        
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <!-- <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section> -->
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 4 Learn JS BOM - Window Methods - setTimeout");
+    </script>
+    
+
+</body>
+
+</html>       

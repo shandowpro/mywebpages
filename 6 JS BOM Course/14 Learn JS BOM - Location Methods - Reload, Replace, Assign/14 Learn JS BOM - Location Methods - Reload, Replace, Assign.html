@@ -1,0 +1,489 @@
+
+ 
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 14 Learn JS BOM - Location Methods - Reload, Replace, Assign </title>
+    <link rel="stylesheet" href="14 Learn JS BOM - Location Methods - Reload, Replace, Assign.css" media="all">
+    
+    <style>        
+       /* body{height:4000px; width:1500px;} */
+       
+       .custom {
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            margin: 10px auto;
+            border: 5px solid gray;    
+            background-color: #ccc;
+            text-align: center;
+        } 
+         
+        .dis {
+            border: 3px solid red;
+            border-radius: 30px;
+            width: 100%;
+            /* height: 200px; */
+            text-align: center;
+            line-height: 2em;
+        }
+
+        .item{
+            color: red;
+            font-size: 30px;
+            font-family: monospace;
+            background-color: blue;
+        }
+
+
+        /* .Home0 {
+            position: fixed;
+            border: 3px solid #080;
+            padding: 5px;
+            background: lightblue;
+            color: #100;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            top: 20px;
+            left: 20px
+        }
+
+        .Home0:hover {
+            background: #080;
+            border-color: lightgreen;
+            color: #FFF
+        }
+
+        .End0 {
+            position: fixed;
+            border: 3px solid #080;
+            padding: 5px;
+            background: lightblue;
+            color: #100;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            top: 70px;
+            left: 20px
+        }
+
+        .End0:hover {
+            background: #080;
+            border-color: lightgreen;
+            color: #FFF
+        }
+         */
+    </style>
+    
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main" >
+        14 Learn JS BOM - Location Methods - Reload, Replace, Assign
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS HTML BOM main Topics">
+                14 Learn JS BOM - Location Methods - Reload, Replace, Assign  Main Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to 14 Learn JS BOM - Location Methods - Reload, Replace, Assign Concept">
+                14 Learn JS BOM - Location Methods - Reload, Replace, Assign Concept </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to 14 Learn JS BOM - Location Methods - Reload, Replace, Assign Importance & Benefits">
+                14 Learn JS BOM - Location Methods - Reload, Replace, Assign Importance & Benefits </a> </li> 
+
+            <li> <a href=#JSDOMImp title="Go to 14 Learn JS BOM - Location Methods - Reload, Replace, Assign Syntax ">
+                14 Learn JS BOM - Location Methods - Reload, Replace, Assign main Information</a> </li>            
+
+            <li> <a href=#JSDOMPract title="Go to 14 Learn JS BOM - Location Methods - Reload, Replace, Assign Practical Applications">
+                14 Learn JS BOM - Location Methods - Reload, Replace, Assign Practical Applications </a> </li>
+
+        </ol>
+
+        <!-- Scrolling through by using [Directly href link]  -->
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+        
+        <!-- Scrolling through by using [scrollBy() && scrollTo() function]  -->
+        <!-- <button id="home0" class="Home0"  title="Go to page header"> Home [by scroll Function] </button>
+        <button id="end0" class="End0"  title="Go to page footer"> End [by scroll Function] </button> -->
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS HTML BOM Course <span> 14 Learn JS BOM - Location Methods - Reload, Replace, Assign </span>
+    </main>
+
+    
+    <div class="Post" id=post>
+        <Section  id="MainC" class="MainC">
+
+            <header>
+                14 Learn JS BOM - Location Methods - Reload, Replace, Assign Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> location.assign(); => To Assign new value of location's Href of the current Webpage [with keeping the History] </li>    
+                    <li> location.replace(); => To Assign new value of location's Href of the current Webpage [with Replacing the History] </li>    
+                    <li> location.reload(); => To Reload the Current Webpage [from Browser Cache (false: default Value) || from Server Cache (true: Strong Reload)] </li>                        
+                </ol>                                                
+                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> 14 Learn JS BOM - Location Methods - Reload, Replace, Assign  Concept: </h3>
+            </header>
+                                                        
+            <p> =&gt; [ Location - Reload  ||  Location - Assign()  || location - Replace() ] : <br>
+                <ol>
+                    <li> Main concept of {location.reload()} || {location.assign()} || {location.replace()} => <br>
+                        <ol>
+                            <li> {location.reload()} Method => <br>                                 
+                                <p> To Relaod the Current webpage by using Browser Cache OR the Server Cache   </p>
+                                <p> Reload => has (2 Cases) , as following : <br>
+                                    <ul> 
+                                        <li> reload(false) || reload() => The Normal Reloading [Using the browser Cache to reload the web page]
+                                        <li> reload(true)  => The Strong/Full Reloading [Using the Server Cache to reload the web page] => {More safer for Accurate & Most Recent Server Data} 
+                                    </ul>
+                                </p> 
+                            </li>                              
+                            
+                            <li> {location.assign()} Method => <br>                                 
+                                <p> To Assign new value of the Location's Href of Current webpage </p>
+                                <p> This Function will keep the Current Webpage in the History before Changing it </p> 
+                            </li>                              
+                            
+                            <li> {location.replace()} Method => <br>                                 
+                                <p> To Assign new value of the Location's Href of Current webpage </p>
+                                <p> This Function will Replace the Current Webpage with the new Webpage in the History </p> 
+                            </li>                                                                                                                                                                                       
+                        </ol>
+                    </li>
+                </ol>  <br>                            
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> 14 Learn JS BOM - Location Methods - Reload, Replace, Assign importance & Benefits : </h3>
+            </header>
+
+            <p> 14 Learn JS BOM - Location Methods - Reload, Replace, Assign gives us the Following Features : <br>
+                <ul>                                                 
+                    <li> {location.reload} => A JS useful Advanced Tool to Control the method of Reloading mode [from Browser Cache || from Server Cache] </li>
+                    <li> {location.assign} & {location.replace} => A JS useful Advanced Tool to Control change the current locatoin Href value, [with keeping Current Webpage in History  || Replace it with the new one] </li>
+                </ul>                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> 14 Learn JS BOM - Location Methods - Reload, Replace, Assign Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; {JS BOM - Window Location Methods - Reload, Replace, Assign => by following Conceptual Syntax as following : </p>
+            
+            <div id="Code" class="Code">
+                
+                [A]// {JSBOM file} : <br> <br>
+
+                [1] {BOM} ( {location.Reload(), Replace(), Assign()} ) Examples: <br> 
+                                            
+                    1)  Reloading method [location.reload()] of the current page: <br> <br>
+                    
+                    <span class= one></span> a) Normal Browser Reloading the of [location.reload()] of the current page: <br> <br>
+                                                                                                
+                        <span class=two></span> console.log(location.reload()); <br>
+                        <span class=two></span> console.log(location.reload(false)); <br>
+                        
+                        <span class=two></span> alert(location.reload()); <br>
+                        <span class=two></span> alert(location.reload(false)); <br> 
+                                                                    
+                //=========================================================== <br> <br>                    
+
+                    <span class= one></span> b) Strong Browser Reloading the of [location.reload(true)] of the current page: <br> <br>
+                                                                                                
+                        <span class=two></span> console.log(location.reload(true)); <br>
+                        <span class=two></span> console.log(location.reload(true)); <br>
+                        
+                        <span class=two></span> alert(location.reload(true)); <br>
+                        <span class=two></span> alert(location.reload(true)); <br> 
+                                                                    
+                //=========================================================== <br> 
+                //=========================================================== <br> <br>                    
+                
+                2)  Assigning method [location.assign()] of the current page [with keeping the current webpage in the History]: <br> <br>
+                                                                                                                                            
+                    <span class=one></span> console.log(location.assign()); <br>                        
+                    
+                    <span class=one></span> alert(location.assign()); <br>                        
+                                                            
+                //=========================================================== <br> <br>                    
+                
+                3)  Replacing method [location.replace()] of the current page [with Replacing the current webpage in the History with the new webpage ]: <br> <br>
+                                                                                                                                            
+                    <span class=one></span> console.log(location.replace()); <br>
+                    
+                    <span class=one></span> alert(location.replace()); <br>
+                                                            
+                //=========================================================== <br> <br>                                                                                        
+                //=========================================================== <br> <br>
+                //=========================================================== <br> <br>
+            
+            <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMPract" id="JSDOMPract">
+            <header>
+                <h3> 14 Learn JS BOM - Location Methods - Reload, Replace, Assign => General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here 1 Major Application, with (2) pathes, with (2) Functions in each ,  as following :  &gt;&gt; <br>
+                <ol> 
+                    <li> The First Path =>  Getting/Setting the type of [location.protocol] of the current page, as Following: <br> 
+                        <ul>
+                            <li> Get Function: <br>
+                                <p> Getting the protocol type by console </p> 
+                                <p> Getting the protocol type Value by alert </p> 
+                                <p> Adding protocol type into the display element </p>
+                            </li>
+                            
+                            <li> Set Function: <br>
+                                <p> Setting the protocol type by prompt [with different types] </p> 
+                                <p> Display the new protocol type by [console, alert, display element] </p> 
+                            </li>
+                        </ul>
+                    </li>                                        
+                    
+                    <li> The Second Path =>  Getting/Setting the value of [location.search] of the current page, as Following: <br> 
+                        <ul>
+                            <li> Get Function: <br>
+                                <p> Getting the Search Querry String Value by console </p> 
+                                <p> Getting the Search Querry String Value by alert </p> 
+                                <p> Adding the Search Querry String value into the display element </p>
+                            </li>
+                            
+                            <li> Set Function: <br>
+                                <p> Setting the Search Querry String Value by prompt </p> 
+                                <p> Display the Search Querry String Value by [console, alert, display element] </p> 
+                                <p> Adding new value of the Search Qerry String into the display element </p>
+                            </li>
+                        </ul>
+                    </li>                                        
+                    
+                    <li> The Third Path =>  Gettings/Setting the value of [location.pathname] of the current page, as Following: <br> 
+                        <ul>
+                            <li> Get Function: <br>
+                                <p> Getting the pathname Value by console </p> 
+                                <p> Getting the pathname Value by alert </p> 
+                                <p> Adding the pathname value into the display element </p>
+                            </li>
+                            
+                            <li> Set Function: <br>
+                                <p> Setting the pathname Value by prompt </p> 
+                                <p> Display the pathname Value by [console, alert, display element] </p> 
+                                <p> Adding new value of the pathname into the display element </p>
+                            </li>
+                        </ul>
+                    </li>                                        
+                    
+                    
+                </ol>                                                    
+            <br> <br>                                    
+            
+            <div id="elem" class="btn"></div> <br>
+                                    
+            <button  id="btn11" class=btn> location Normal Browser Reloading method {location.reload(false)}  </button> 
+            <button  id="btn12" class=btn> location Strong Server Reloading method {location.reload(true)}  </button> 
+            <button  id="btn2" class=btn> location Assign method {location.assign()}  </button> 
+            <button  id="btn3" class=btn> location replace method {location.replace()}  </button> 
+                                            
+            <hr> <br> <br>
+            <!-- ========================================================= -->
+
+            
+            <button class=btn onclick="test()"> Click to Start JS HTML BOM [ window ]  Application    
+            </button> 
+            
+            
+            <script  src="LocationMethodsReloadReplaceAssign.js">
+            </script>
+                                    
+            <br>    
+                                          
+        <hr>
+                <button id=btn class="btn" onclick="display()">Display JS Code</button>
+                
+                <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Testing JS HTML BOM [Parent Element]  Application  <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                                                        
+                        
+                        <span class=one></span> &lt;script src=".js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JS HTML BOM [Parent Element]  */ <br>                    
+                        template-string-converter.enable; <br><br>
+                                                
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div>
+                
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection">
+            <h3> Lesson 14 Video File: </h3>
+
+            <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+            src="https://www.youtube.com/embed/watch?v=ffAZF5tDqLc&list=PLDoPjvoNmBAy9nFRJgVYgEID8xE2a6q6V&index=14&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JS BOM\14 Learn JS BOM - Location Methods - Reload, Replace, Assign.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="Links">
+            <h3>Course Reaquirments : </h3>
+            <ul>
+                <li> JS </li>
+                <li> JSDOM </li>                
+            </ul>
+        </section>
+        
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <!-- <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section> -->
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 14 Learn JS BOM - Location Methods - Reload, Replace, Assign");
+    </script>
+    
+
+</body>
+
+</html>       

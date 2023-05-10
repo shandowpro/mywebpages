@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Css Lesson 22 [Z-Index]</title>
+    <link rel="stylesheet" href="Z-Index.css">
+    <style>
+        .home
+        {
+            background:lightblue; border:3px solid #0ff; padding:5px;
+            position:fixed; font-size:20px; color:#FFF; top:50px; right:10px; 
+            text-decoration: none        
+        }
+    
+        .home:hover
+        {
+            background:#fff; border:5px solid #0ff; padding:5px;
+            position:fixed; font-size:25px; color:lightblue;
+            text-decoration: underline
+        }
+    
+        .end
+        {
+            background:lightblue; border:3px solid #0ff; padding:5px;
+            position:fixed; font-size:20px; color:#FFF; top:120px; right:19px; 
+            text-decoration: none        
+        }
+        
+        .end:hover
+        {
+            background:#fff; border:5px solid #0ff; padding:5px;
+            position:fixed; font-size:25px; color:lightblue;
+            text-decoration: underline
+        }        
+    </style>           
+</head>
+
+<body>
+    <a class="home" href="#title" title="Go to page header">Home</a>
+    <a class="end" href="#footer" title="Go to page footer">End</a>
+    
+    <h1 id="title" class="title"> Css Lesson 22 [Z-Index]</h1>
+
+    <fieldset class="index">
+        <legend>Index</legend>
+        <ol type="A">
+            <li> <a href="#MainC" title="Go to Main Concept of [Z-Index] Property">[Z-Index] Main Concept</a></li>
+            
+            <li> <a href="#Auto" title="Go to [Z-Index:Auto] Value">[Z-Index:Auto]</a></li>
+                <ul>
+                    <li> <a href="#AutoC" title="Go to [Z-Index:Auto] Concept">[Z-Index:Auto]Concept</a> </li>
+                    <li> <a href="#AutoE" title="Go to [Z-Index:Auto] Example">[Z-Index:Auto]Example</a> </li>
+                </ul>
+            
+            <li> <a href="#Numeric" title="Go to [Z-Index:#(Numeric Value)] Property">[Z-Index:#(Numeric Value)]</a> </li>
+                <ul>
+                    <li> <a href="#NumericC" title="Go to [Z-Index:Auto] Concept">[Z-Index:#(Numeric Value)] Concept</a> </li>
+                    <li> <a href="#NumericE" title="Go to [Z-Index:Auto] Example">[Z-Index:#(Numeric Value)] Example</a> </li>
+                </ul>
+        </ol>
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>
+
+    <fieldset id="MainC">
+        <legend>[Z-Index] Main Concept</legend>
+        <p> This property is an Numeric Index to arrange elements display priority in Screen Web Page.</p>        
+        <p> The value of this property can (Auto), or (#) numeric Value.</p>
+        <p> The element with lower numbers will be lower in Display priority.</p>        
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>
+
+    <fieldset id="Auto" class="Auto">
+        <legend>Z-index: Auto</legend>
+        
+        <h2 id="AutoC" class="title1">[Z-index: Auto] (Concept): </h2>
+        <p> By this [Auto] value of z-index property the elements will arranged by thier coded priority in Editing programe</p>
+        <p> The elements will be arranged (from older to most recent)</p>
+        
+        <h2 id="AutoE" class="title1">Z-index: Auto (Example): </h2>
+        
+        <div class="parent1">            
+            <div class="AExp1"> Div 1 </div>  
+            <div class="AExp2"> Div 2 </div>
+            <div class="AExp3"> Div 3 </div>    
+        </div>
+        
+        <br class="clear">                                
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>    
+
+    <fieldset id="Numeric">
+        <legend>Z-index: Numeric Value</legend>
+        
+        <h2 id="NumericC" class="title1">[Z-index: # Numeric Value] (Concept): </h2>
+        <p> By this [# Numeric] value of z-index property the elements will arranged by it index</p>
+        <p> The elements will be arranged (from smaller to larger)</p>
+        
+        <h2 id="NumericE" class="title1">[Z-index: # Numeric Value] (Example): </h2>
+        
+        <div class="parent2">            
+            <div class="NExp1"> Div 1 This div [Z-Index:2] will be up on div 3 & and under div 2</div>  
+            <div class="NExp2"> Div 2 This div [Z-Index:3] will be in top of all divs</div>
+            <div class="NExp3"> Div 3 This div [Z-Index:1] will be in bottom of all divs </div>        
+        </div>                                
+        
+        <br class="clear">        
+    </fieldset>
+    
+    <fieldset id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; intiated by Shindow &trade; 
+    </fieldset>
+        
+</body>
+</html>

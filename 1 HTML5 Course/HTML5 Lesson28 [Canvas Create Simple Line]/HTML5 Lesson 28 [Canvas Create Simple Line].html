@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 28 HTML5 New Tags [Canvas - Create Simple Line] {Part 3} </title>
+    <link rel="stylesheet" href="HTML5  [Canvas Create Simple Line].css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">  </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 28 HTML5 New Tags [Canvas Create Simple Line]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="HTML5 [Canvas Create Simple Line] Main Concept" > HTML5 [Canvas Create Simple Line] Main Concept" </a> </li>            
+            <li> <a href=#CanvasNTag  title="Go to Canvas Create Simple Line" >
+                    Canvas Create Simple Line  </a> </li>     
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> HTML5 Lesson 28 HTML5 New Tags [Canvas Create Simple Line] {Part 3}</span> 
+    </main>
+<!-------------------------------------------------------------------------------------------------------------->                        
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>                 
+                HTML5 Lesson 28 [Canvas Create Simple Line]
+            </header>
+            
+            <article>                                                
+                <p> &gt; The New HTML5 New Tags in this lesson as following :</p>
+                <ol>                    
+                    <li> &lt;canvas&gt; &nbsp; &lt;/canvas&gt;  </li>                               
+                    
+                    <li> &lt;canvas&gt; width ="" height="" &nbsp; &lt;/canvas&gt;  </li>
+                    
+                    <li> var CanvasHeight = canvasName.height();  </li>                               
+                    
+                    <li> var CanvasWidth = canvasName.width();  </li>                               
+                    
+                    <li> contextName.stroke(); </li>                               
+                    
+                    <li> Drawing Advanced Shapes by Canvas Lines and Shapes  </li>                               
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>       
+        <section class="CanvasSimpleL" id="CanvasSimpleL">
+            <header>                
+                &lt; canvas &gt; &nbsp; &lt; /canvas &gt;
+            </header>
+            
+            <article>
+                <header>
+                    <h1> HTML5 New Tag [Canvas Create Simple Line] Concept: </h1>
+                    
+                    <p> =&gt; [Canvas] how to create a line by the Canvas tool it self .
+                    
+                    <p> =&gt; [Canvas] hoe to set canvas dimensions by Canvas attributes in HTML5.
+                    
+                    <p> =&gt; [Canvas] how to use canvas Js Codes to get the canvas properties .                    
+                    
+                    <p> =&gt; [Canvas] how to create complicated shapes via Canvas line in JS .                    
+                    
+                    <p> =&gt; [Canvas] which created in Web-page can ber downloaded from the page as an image directly .                                                                    
+                </header>
+                                        
+                
+                <header>
+                    <h1>[Canvas] Syntax:</h1>0
+                        <p> Following there the Js Codes related with Canvas Tag Properties :</p>
+                        <div>
+                            <p> A) [Identifying Canvas Variable & and it's Context in JS as a Variable:</p>
+                                &nbsp;&nbsp; var CanvasName = document.getElementById("Canvas ID"),<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; CanvasContext = CanvasName.getContext('2d');<br>
+                            ===========================================================<br>
+                            =========================================================== <br>     
+                                                                                    
+                            <p> B) [Assigning Canvas height & width by Canvas Properties] in JS as a Variable:</p>
+                                &nbsp;&nbsp; var CanvasHeight = CanvasName.height(),
+                                &nbsp;&nbsp;&nbsp;&nbsp; var CanvasWidth = CanvasName.width();
+                            =========================================================== <br>
+                            =========================================================== <br>
+                            <br><br>
+                            
+                            <p> C) [Applying line Properties within Context] in JS :</p>
+                                &nbsp;&nbsp; 1) Applying line Color: <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; ContextName.fillStyle= "Color Code";<br>
+                            =========================================================== <br><br>
+                            
+                                &nbsp;&nbsp; 2) Applying line Width: <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; ContextName.lineWidth = "Number by px";<br>
+                            =========================================================== <br><br>
+                            
+                            <p> D) Assigning Start Point Coordiantion of the Line :  </p>
+                                &nbsp;&nbsp; ContextName.moveTo(x, y);<br>
+                            =========================================================== <br><br>
+                            
+                            <p> E) Assigning Start Point Coordiantion of the Line :  </p>
+                                &nbsp;&nbsp; ContextName.moveTo(x, y);<br>
+                            =========================================================== <br><br>
+                            
+                            <p> F) Showing the line in the Canvas : </p>
+                            &nbsp;&nbsp; ContextName.stroke();<br>
+                            =========================================================== <br>                            
+                            =========================================================== <br>
+                            =========================================================== <br>                             
+                            <br><br>                                                                                        
+                        </div>                                            
+                </header>    
+                
+                <header>
+                    <h3> HTML5 [ Canvas Create Simple Line] Practical Applications :  </h3>                     
+                    <p> This Application will provide multiple Simple Line Drawer Mode + multiple Complicated Lines and Shapes   </p>
+                    
+                </header>                                                
+                    
+                    <br>
+                    
+                <textarea id=txtarea class=txtarea > </textarea><br>    
+
+                <canvas id="c" class="c"> </canvas>                        
+                
+                <button class=btn onclick="Canv()"> Click to Start [Canvas - Multiple Simple Lines - Complicated Lines ]                                             Application {Canvas part3} Application
+                </button> <br>
+                
+                <button class=btn onclick=Clear()> Click to Clear All Shapes in the Canvas </button>
+                
+
+                <script src="CanvasSimpleL.js"> </script>                                        
+            <hr>
+
+                <div class=CanvSimpL >
+                    <code>
+                        // HTML Codes: <br>
+                        &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        &lt;/textarea&gt; <br><br>
+
+                        &lt;button class="btn" onclick="Canv()"&gt;<br>                            
+                        &nbsp;&nbsp; Click to Start [Canvas - Simple Canvas] Main Number part3 Application <br>                               
+                        &lt;/button&gt; <br><br>                            
+
+                        &lt;script src="CanvSimpleL.js"&gt;<br>                            
+                        &lt;/script&gt; <br><br>
+
+                        =======================================================<br><br>
+
+                        // JS Codes [CanvSimpleL.js] : <br><br>
+                        /* global alert, document, prompt, console */<br>
+                        /* jslint plusplus: true evil: true */ <br>
+                        /* [Canvas Create Simple Line] Application {Part 3} */ <br><br>                        
+
+                        function Canv () { <br> <br>
+
+                        &nbsp;&nbsp; alert("Welcome to Creating Single - Complicated Lines Drawer Application..."); <br>
+
+                        &nbsp;&nbsp; var myCanvas = document.getElementById('c'), <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; myContext = myCanvas.getContext('2d'), <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; txt = document.getElementById("txtarea"); <br> <br>
+
+                        &nbsp;&nbsp; var mthd = prompt("Choose your Mehtod... \n Press 1 for [Simple lines Drawer] Mode... \n<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; Press 2 for [Complicated Lines Drawer] Mode...\n Or Press any other key to Exit... "); <br><br>
+
+                        &nbsp;&nbsp; if (mthd == "1") { <br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Simple lines Drawer] Mode ..."); <br> <br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; alert("Lets set your Canvas properties >>>"); <br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; var CanvWidth = prompt("Enter your Canvas width ..."), <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CanvHeight = prompt("Enter your Canvas Height ..."), <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CanvColor = prompt("Enter your Main Canvas Color by RGB System ..."); <br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; myCanvas.width = CanvWidth; <br> <br>
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp; myCanvas.height = CanvHeight; <br><br>
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp; myContext.fillStyle = CanvColor; <br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; alert("Lets set your Line Properties >>>"); <br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; var LW = prompt("Choose your line width ..."), <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LColor = prompt("Choose you line Color by RGB System..."),<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LStartX = parseInt(prompt("Insert line Start point X Coordinate ...")),<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LStartY = parseInt(prompt("Insert line Start point Y Coordinate ...")),<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEndX = parseInt(prompt("Insert line End point X Coordinate ...")), <br>  
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEndY = parseInt(prompt("Insert line End point Y Coordinate ..."));<br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; myContext.strokeStyle = LColor; <br>
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp; myContext.lineWidth = LW; <br><br>
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp; myContext.moveTo(LStartX, LStartY); <br><br>
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp; myContext.lineTo(LEndX, LEndY); <br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; myContext.stroke(); <br> <br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; txt.innerHTML = "Your line has been drawn Succesfully!"; <br><br>
+
+                        &nbsp;&nbsp; } else if (mthd == "2") { <br> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Complicated Lines Drawer] Mode ..."); <br> <br>
+ 
+                        &nbsp;&nbsp;&nbsp;&nbsp; alert("Lets set your Canvas properties >>>"); <br> <br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; var CanvWidth1 = prompt("Enter your Canvas width ..."), <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CanvHeight1 = prompt("Enter your Canvas Height ..."), <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CanvColor1 = prompt("Enter your Main Canvas Color by RGB System ..."), <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CanvCount = parseInt(prompt("How manu Canvas you wish to draw ?")); <br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; myCanvas.width = CanvWidth1; <br> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; myCanvas.height = CanvHeight1; <br><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; myContext.fillStyle = CanvColor1; <br> <br>
+
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; for (var x = 1; x &lt; CanvCount+1; x++ ) { <br> <br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Lets set your Line properties number :" + x );  <br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var LW1 = prompt("Choose your line width ..."), <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LColor1 = prompt("Choose you line Color by RGB System..."), <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LStartX1 = parseInt(prompt("Insert line Start point X Coordinate ...")),<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LStartY1 = parseInt(prompt("Insert line Start point Y Coordinate ...")),<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEndX1 = parseInt(prompt("Insert line End point X Coordinate ...")), <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEndY1 = parseInt(prompt("Insert line End point Y Coordinate ...")); <br> <br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myContext.strokeStyle = LColor1; <br> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myContext.lineWidth = LW1; <br> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myContext.moveTo(LStartX1, LStartY1); <br> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myContext.lineTo(LEndX1, LEndY1); <br> <br>
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myContext.stroke(); <br>                            
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp; }  <br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; txt.innerHTML = "Your line(s) has been drawn Succesfully!"; <br> <br>
+
+                        &nbsp;&nbsp; } else { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; alert("Error Entry!"); <br>
+                        &nbsp;&nbsp; } <br>
+                        } <br><br>
+                    //============================================================================================== <br><br>
+                    
+                        
+                    function Clear() { <br><br>
+
+                    &nbsp;&nbsp; var myCanvas = document.getElementById('c'), <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; myContext = myCanvas.getContext('2d'), <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; txt = document.getElementById("txtarea"); <br> <br>
+
+                    &nbsp;&nbsp; myContext.clearRect(0, 0, 800, 400); <br><br>
+
+                    &nbsp;&nbsp; txt.innerHTML = "All Shapes have been deleted!"; <br> <br>
+
+                    &nbsp;&nbsp; alert("All Shapes have been Deleted!"); <br>
+
+                    }
+
+                    </code>                 
+                    
+                </div>
+                    
+            </article>                
+        </section>
+
+    <!------------------7------------------------------------------------------------------------------------>                                
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Create Simple Canvas </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="12">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num1">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 28 Video File:</h3>
+                <video controls width="300" height="300" autoplay>
+                    <source src="C:/Users/hp/Videos/pLanguages/web/1 Web Designing Front End/A HTML/2 HTML 5/HTML 5/28 Canvas - Create Simple Line.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video> 
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

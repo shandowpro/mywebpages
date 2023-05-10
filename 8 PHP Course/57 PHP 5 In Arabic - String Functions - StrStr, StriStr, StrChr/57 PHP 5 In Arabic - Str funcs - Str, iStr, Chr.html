@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 57 PHP 5 - String Functions - StrStr, StriStr, StrChr </title>
+    <link rel="stylesheet" href="57 PHP 5 In Arabic - String Functions - StrStr, StriStr, StrChr.css" media="all">
+    
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        57 PHP 5 - String Functions - StrStr, StriStr, StrChr
+    </header>
+<!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to PHP main Topics">
+                57 PHP 5 In Arabic - String Functions - StrStr, StriStr, StrChr Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to PHP [String Functions - StrToLower, StrToUpper] Concept">
+                57 PHP 5 In Arabic - String Functions - StrStr, StriStr, StrChr Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to PHP [String Functions - StrToLower, StrToUpper] Importance & Benefits">
+                57 PHP 5 In Arabic - String Functions - StrStr, StriStr, StrChr Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to PHP [String Functions - StrToLower, StrToUpper] Syntax">
+                57 PHP 5 In Arabic - String Functions - StrStr, StriStr, StrChr Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to PHP [String Functions - StrToLower, StrToUpper] Practical Applications">
+                57 PHP 5 In Arabic - String Functions - StrStr, StriStr, StrChr Practical Applications </a> </li>
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+        
+    <main class="Welcome"> Welcome to PHP Course <span> 57 PHP 5 - String Functions - StrStr, StriStr, StrChr </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                PHP5 [ String Functions - [ 57 PHP 5 - String Functions - StrStr, StriStr, StrChr ] Main Topics :
+            </header>
+            
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                
+                <ol>
+                    <li>  String Functions / strstr(string , find, before Search) - Methods as following : 
+                        <ol> 
+                            <li> strstr($string, string text); => [Default String Searching inside another String -  Sensitive Case - Search before : false ] </li>
+                            <li> strstr($string, string text , before search); => [Default String Searching inside another String -  Sensitive Case - Search before : false / true]  </li>
+                        </ol>
+                    </li>
+                    <li>  String Functions / stristr(string , find, before Search) - Methods as following : 
+                        <ol> 
+                            <li> stristr($string, string text); => [Default String Searching inside another String -  InSensitive Case - Search before : false ] </li>
+                            <li> stristr($string, string text , before search); => [Default String Searching inside another String -  InSensitive Case - Search before : false/true]  </li>
+                        </ol>
+                    </li>
+                    <li>  String Functions / strchr(string , find, before Search) - Methods- [Simmiler to {strstr()}]  as following : 
+                        <ol> 
+                            <li> strchr($string, string text); => [Default String Searching inside another String -  Sensitive Case - Search before : false ] </li>
+                            <li> strchr($string, string text , before search); => [Default String Searching inside another String -  Sensitive Case - Search before : false/true]  </li>
+                        </ol>
+                    </li>
+                </ol>
+                <hr>                                                                                                    
+            </article>
+        </Section>        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> PHP [57 PHP 5 - String Functions - StrStr, StriStr, StrChr ] </h3>
+            </header>
+                        
+            <h2> [PHP - String Functions - [ 57 PHP 5 - String Functions - StrStr, StriStr, StrChr ] ] => Concept: </h2>
+                                                        
+                <p> [PHP - A) String functions [ Strstr(String , Finding text ,  Search before [True/false]) ] method syntax & concept as following : <br>                    
+                    <ul>
+                        <li> To search for the a [certian text] inside a string with following creterias : <br>
+                            <ol>
+                                <li> Sensitive letter case searching for the assigned text </li>
+                                <li> (False) [Default] to get [the searched text and all after] inside the string </li>
+                                <li> (True) to get [all before the searched text - excepting the searching text] inside the string  </li>                                
+                            </ol>
+                        </li>
+                        <li> Consist of following elements [Advanced] : <br>
+                            <ol> 
+                                <li> [String variable] -> The String to searching in for the text => {Obligated}  </li>
+                                <li> [Finding text] -> The Text to Search about inside the string variable  => {Obligated}  </li>
+                                <li> [Search before [True/false]] -> Activate [before search] advanced feature, {Optional} , and include the (2) values <br>
+                                    <ol> 
+                                        <li> [True] => {Activating [before search]} : search & get the Searched text only , excepting the searched text  </li>
+                                        <li> [False] => {De-Activating [before search]} : search & get the Searched text after only - including the searched text  </li>
+                                    </ol>                                    
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>                                                                                                        
+                </p>                                
+                
+                <p> [PHP - B) String functions [ Stristr(String , Finding text ,  Search before [True/false]) ] method syntax & concept as following : <br>                    
+                    <ul>
+                        <li> To search for the a [certian text] inside a string with following creterias : <br>
+                            <ol>
+                                <li> InSensitive letter case searching for the assigned text </li>
+                                <li> (False) [Default] to get [the searched text and all after] inside the string </li>
+                                <li> (True) to get [all before the searched text - excepting the searching text] inside the string  </li>                                
+                            </ol>
+                        </li>
+                        <li> Consist of following elements [Advanced] : <br>
+                            <ol> 
+                                <li> [String variable] -> The String to searching in for the text => {Obligated}  </li>
+                                <li> [Finding text] -> The Text to Search about inside the string variable  => {Obligated}  </li>
+                                <li> [Search before [True/false]] -> Activate [before search] advanced feature, {Optional} , and include the (2) values <br>
+                                    <ol> 
+                                        <li> [True] => {Activating [before search]} : search & get the Searched text only , excepting the searched text  </li>
+                                        <li> [False] => {De-Activating [before search]} : search & get the Searched text after only - including the searched text  </li>
+                                    </ol>                                    
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>                                                                                                        
+                </p>                                
+                
+                <p> [PHP - C) String functions [ Strchr(String , Finding text ,  Search before [True/false]) ] method / [Smmiler to strstr)()] syntax & concept as following : <br>
+                    <ul>
+                        <li> To search for the a [certian text] inside a string with following creterias : <br>
+                            <ol>
+                                <li> Sensitive letter case searching for the assigned text </li>
+                                <li> (False) [Default] to get [the searched text and all after] inside the string </li>
+                                <li> (True) to get [all before the searched text - excepting the searching text] inside the string  </li>                                
+                            </ol>
+                        </li>
+                        <li> Consist of following elements [Advanced] : <br>
+                            <ol> 
+                                <li> [String variable] -> The String to searching in for the text => {Obligated}  </li>
+                                <li> [Finding text] -> The Text to Search about inside the string variable  => {Obligated}  </li>
+                                <li> [Search before [True/false]] -> Activate [before search] advanced feature, {Optional} , and include the (2) values <br>
+                                    <ol> 
+                                        <li> [True] => {Activating [before search]} : search & get the Searched text only , excepting the searched text  </li>
+                                        <li> [False] => {De-Activating [before search]} : search & get the Searched text after only - including the searched text  </li>
+                                    </ol>                                    
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>                                                                                                        
+                </p>                                
+            
+                <br> <br> <hr>
+                <!-------------------------------------------  -->                                                                                                                                                                                                                              
+            </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> PHP [56 PHP 5 - String Functions - StrStr(), StriStr(), StrChr() ] Importance & Benefits: </h3>
+            </header>
+            
+            <ul> 
+                <li> [String Functions - StrStr, StriStr, StrChr ] methods => These methods very helpful in Searcing and getting certian text value inside a string </li> 
+                <li> [String Functions - StrStr, StriStr, StrChr ] methods => These methods provide Advanced Searching creterias [Letter sensitivity case] && [Searching before] </li>
+                <li> [String Functions - StrStr, StriStr, StrChr ] methods => These methods very helpful when dealing with database data [getting certain filtered Text data] specilally with mixing with  other String methods </li>
+            </ul>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ 57 PHP 5 In Arabic - String Functions - StrStr(), StriStr(), StrChr()] Syntax & Methods: </h3>
+            </header>        
+
+            <p> =&gt; In this after setting up the application => We will create a simple PHP File && Running it by [Local Server] </p>
+            
+            <p> =&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} : </p> <br>
+                <p> Using [String Functions - StrStr(), StriStr(), StrChr() ] => has following (3) main Examples : </p> 
+            
+                <ol type="A">
+                    <li> [PHP - A) String functions [ Strstr(String , Finding text ,  Search before [True/false]) ] method : <br> 
+                        <ul>
+                            <li> To search for the a [certian text] inside a string with following creterias , including the following examples (4): <br>
+                                <ol>
+                                    <li> (a) => {Default strstr(String, find, Search before)} Method [Sensitive] || [Search before : false [default] ] </li>
+                                    <li> (b) => {Advnaced strstr(String, find, Search before)} Method [Sensitive] || [Search before : false]  </li>
+                                    <li> (c) => {Advanced strstr(String, find, Search before)} Method [Sensitive] || [Search before : true]First Example => String Functions -  {strstr(string variable/text value , find, Search before)}   </li>                                
+                                    <li> (d) => {Advanced strstr(String, find, Search before)} Method {Filtering Email Domain & Name } -> [Sensitive] || [Search before : true]First Example => String Functions -  {strstr(string variable/text value , find, Search before)} </li>                                
+                                </ol>
+                            </li>
+                        </ul>                                                                                                                            
+                    </li>
+                
+                    <li> [PHP - B) String functions [ Stristr(String , Finding text ,  Search before [True/false]) ] method syntax & concept as following : <br>                    
+                        <ul>
+                            <li> To search for the a [certian text] inside a string , including the following examples (3) : <br>
+                                <ol>
+                                    <li> (a) => {Default strstr(String, find, Search before)} Method [InSensitive] || [Search before : false [default]  </li>
+                                    <li> (b) => {Advnaced stristr(String, find, Search before)} Advanced Method [InSensitive] || [Search before : false]  </li>
+                                    <li> (c) => {Advanced strstr(String, find, Search before)} Advanced Method [InSensitive] || [Search before : true]   </li>                                                            
+                                </ol>
+                            </li>                       
+                        </ul>                                                                                                        
+                    </li>                                
+                    
+                    <li> [PHP - C) String functions [ Strchr(String , Finding text ,  Search before [True/false]) ] method / [Smmiler to strstr)()] syntax & concept as following : <br>
+                        <ul>
+                            <li> To search for the a [certian text] inside a string , including the following examples (3): <br>
+                                <ol>
+                                    <li> (a) => {Default strchr(String, find, Search before)} Method [Sensitive] || [Search before : false [default]  </li>
+                                    <li> (b) => {Advnaced strchr(String, find, Search before)} Method [Sensitive] || [Search before : false]  </li>
+                                    <li> (c) => {Advanced strchr(String, find, Search before)} Method [Sensitive] || [Search before : true] </li>                                
+                                </ol>
+                            </li>                        
+                        </ul>                                                                                                        
+                    </li>                                                                
+                </ol>           
+                <!-- ================================================================= -->
+                                               
+                <h2>  B)  Html page :  </h2> <br>                    
+                        <span class='one'> &lt; !DOCTYPE html &gt; </span> <br>
+                            <span class='two'> &lt; html &gt; </span> <br>
+                                <span class='three'> &lt; /head &gt;</span> <br>
+                                    <span class='four'> &lt; title &gt; &lt;? php echo $title; ?&gt;  &lt; /title &gt;  </span> <br>
+                                    <span class='four'> &lt; link rel="stylesheet" href="57 PHP 5 In Arabic - String Functions - StrStr, StriStr, StrChr" media="all" &gt;  </span> <br>
+                                <span class='three'> &lt; /head &gt; </span>  <br> <br>                                
+                                <span class='three'>&lt; body &gt; </span> <br>                            
+                                
+                                <span class='three'>&lt; /body &gt; </span> <br>
+                                <span class='two'>&lt;/html &gt; </span> <br>
+                                ---------------------------------------------------------------------------- <br>
+                                ---------------------------------------------------------------------------- <br>                      
+                   <br><br> <hr>                                                                                                                                  
+            <br><br>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+         <section class="PHPPract" id="PHPPract"> 
+            <header>
+                <h3> PHP [56 PHP 5 In Arabic - String Functions - StrStr(), StriStr(), StrChr()] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here (3) Major Applications PHP [ String Functions - StrStr(), StriStr(), StrChr() ] as following =>  <br><br>
+                
+                <ol type="A">
+                    <li> [PHP - A) String functions [ Strstr(String , Finding text ,  Search before [True/false]) ] method , and including the following (3) exps : <br> 
+                        <ul>
+                            <li> To search for the a [certian text] inside a string with following creterias , including the following examples (4): <br>
+                                <ol>
+                                    <li> (a) => {Default strstr(String, find, Search before)} Method [Sensitive] || [Search before : false [default] ] , including the following steps:  <br>
+                                        <ul>
+                                            <li> Printing the main string variables before  </li>
+                                            <li> Processing [Searching for the String text] </li>
+                                            <li> Printing the main [Searching for the String text]  </li>
+                                        </ul>
+                                    </li>
+                                                                    
+                                    <li> (b) => {Advnaced strstr(String, find, Search before)} Method [Sensitive] || [Search before : false] , including the following steps: <br>
+                                        <ul>
+                                            <li> Printing the main string variables before  </li>
+                                            <li> Processing [Searching for the String text] </li>
+                                            <li> Printing the main [Searching for the String text]  </li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li> (c) => {Advanced strstr(String, find, Search before)} Method [Sensitive] || [Search before : true]First Example => String Functions -  {strstr(string variable/text value , find, Search before)} , including the following steps: <br>
+                                        <ul>
+                                            <li> Printing the main string variables before  </li>
+                                            <li> Processing [Searching for the String text] </li>
+                                            <li> Printing the main [Searching for the String text]  </li>
+                                        </ul>                                                                                                                
+                                    </li>    
+                                    
+                                    <li> (d) => {Advanced strstr(String, find, Search before)} Method {Filtering Email Domain & Name } -> [Sensitive] || [Search before : true]First Example => String Functions -  {strstr(string variable/text value , find, Search before)} , including the following steps: <br>                                        
+                                        <ul>
+                                            <li> Printing the main string variables before  </li>
+                                            <li> Getting Email Name [by activating the search before Feature ] </li>
+                                            <li> Getting Email Domain [without the (@) sign]  [by activating the search before Feature + Replace Method ] </li>
+                                            <li> Printing each [Main Email, Email name, Email Domain] </li>
+                                        </ul>                                                                                                                                                        
+                                    </li>                                
+                                </ol>
+                            </li>
+                        </ul>                                                                                                                            
+                    </li>
+                
+                    <li> [PHP - B) String functions [ Stristr(String , Finding text ,  Search before [True/false]) ] method , and including the following (3) exps : <br>                    
+                        <ul>
+                            <li> To search for the a [certian text] inside a string , including the following examples (3) : <br>
+                                <ol>
+                                    <li> (a) => {Default strstr(String, find, Search before)} Method [InSensitive] || [Search before : false [default] , including the following steps: <br>
+                                        <ul>
+                                            <li> Printing the main string variables before  </li>
+                                            <li> Processing [Searching for the String text] </li>
+                                            <li> Printing the main [Searching for the String text]  </li>
+                                        </ul>                                                                            
+                                    </li>
+
+                                    <li> (b) => {Advnaced stristr(String, find, Search before)} Advanced Method [InSensitive] || [Search before : false] , including the following steps: <br>
+                                        <ul>
+                                            <li> Printing the main string variables before  </li>
+                                            <li> Processing [Searching for the String text] </li>
+                                            <li> Printing the main [Searching for the String text]  </li>
+                                        </ul>                                                                    
+                                    </li>
+
+                                    <li> (c) => {Advanced strstr(String, find, Search before)} Advanced Method [InSensitive] || [Search before : true] , including the following steps: <br>
+                                        <ul>
+                                            <li> Printing the main string variables before  </li>
+                                            <li> Processing [Searching for the String text] </li>
+                                            <li> Printing the main [Searching for the String text]  </li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </li>                       
+                        </ul>                                                                                                        
+                    </li>                                
+                    
+                    <li> [PHP - C) String functions [ Strchr(String , Finding text ,  Search before [True/false]) ] method / [Smmiler to strstr)()] syntax , and including the following (3) exps  : <br>
+                        <ul>
+                            <li> To search for the a [certian text] inside a string , including the following examples (3): <br>
+                                <ol>
+                                    <li> (a) => {Default strchr(String, find, Search before)} Method [Sensitive] || [Search before : false [default] , including the following steps: <br>
+                                        <ul>
+                                            <li> Printing the main string variables before  </li>
+                                            <li> Processing [Searching for the String text] </li>
+                                            <li> Printing the main [Searching for the String text]  </li>
+                                        </ul>                                                                                                                                                                                                        
+                                    </li>
+
+                                    <li> (b) => {Advnaced strchr(String, find, Search before)} Method [Sensitive] || [Search before : false]  , including the following steps: <br>
+                                        <ul>
+                                            <li> Printing the main string variables before  </li>
+                                            <li> Processing [Searching for the String text] </li>
+                                            <li> Printing the main [Searching for the String text]  </li>
+                                        </ul>                                                                                                                                                                
+                                    </li>
+
+                                    <li> (c) => {Advanced strchr(String, find, Search before)} Method [Sensitive] || [Search before : true]   , including the following steps: <br>                                        
+                                        <ul>
+                                            <li> Printing the main string variables before  </li>
+                                            <li> Processing [Searching for the String text] </li>
+                                            <li> Printing the main [Searching for the String text]  </li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </li>                        
+                        </ul>                                                                                                        
+                    </li>                                                                
+                </ol>        
+                
+             <!-- <section id=sec class=txtarea >                                  
+                 <a href="http://localhost/PHP%20Course/57%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20StrStr,%20StriStr,%20StrChr/57%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20StrStr,%20StriStr,%20StrChr.php">  
+                    {57 PHP 5 In Arabic - String Functions - StrStr, StriStr, StrChr() } => Lesson 57 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+
+            <section id=sec class=txtarea >                                  
+                <a class=btn href="http://localhost/PHP%20Course/57%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20StrStr,%20StriStr,%20StrChr/57%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20StrStr,%20StriStr,%20StrChr.php">  
+                   {Main Page} [Display] => {57 PHP 5 In Arabic - String Functions - StrStr, StriStr, StrChr() } => Lesson 57 PHP File Webpage by Localhost
+               </a> <br> <br>             
+               
+               <a class=btn href="57 PHP 5 In Arabic - String Functions - StrStr, StriStr, StrChr.php">  
+                   {Main Page} [Source Code] => {57 PHP 5 In Arabic - String Functions - StrStr, StriStr, StrChr() } => Lesson 57 PHP File Webpage by Localhost
+               </a>             
+           </section> <br> 
+            
+             <!-- <script  src="14 PHP 5  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+                
+        </section>                           
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="VideoSection">
+            <h3> Lesson 57 Video File:</h3>
+            
+            <iframe
+            width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+            src="https://www.youtube.com/embed/watch?v=xUtQbwl2JLA&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=57&controls=0&loop=1&autoplay=1&fs=1"    
+        >   
+        </iframe>
+            
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\57 PHP 5 In Arabic - String Functions - StrStr, StriStr, StrChr.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                        Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shandow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 57 PHP 5 - String Functions - StrStr, StriStr, StrChr ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> JavaScript Lesson 10 [Javascript Output] </title>
+    <link rel="stylesheet" href="JavaScript [Javascript Output].css" media="all" >
+    
+    <script> </script>    
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JavaScript Lesson 10 [Javascript Output]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="Go to Javascript main Topics" > JavaScript [Output] Main Topics </a> </li>            
+            
+            <li> <a href=#JSOutputCon Console  title="Go to Javascript Output Concept" > Javascript[Output] Concept </a> </li>                                                
+            
+            <li> <a href=#JSOutputTypes Console  title="Go to Javascript Output Concept" > Javascript[Output] Types + Examples </a> </li>                                                
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to JavaScript Course <span> JavaScript Lesson 10 [Javascript Output] </span> 
+    </main>
+<!-------------------------------------------------------------------------------------------------------------->                        
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>                 
+                JavaScript [Output]
+            </header>
+            
+            <article>                                                
+                <p> &gt; The New object in this lesson as following (in one Tag):</p>
+                <ol type="A">                    
+                    <li> Main Output Concept . </li>
+                    <li> Output Types + Examples. </li>                                        
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>                               
+        <section class="JSOutputCon" id="JSOutputCon">
+            <header>                
+                <h3> Main Concept of Output :</h3>
+            </header>                    
+                <p> =&gt; [JS Output] as it in any programing Languages is the Function to display data by code. </p>
+                
+                <p> =&gt; [JS Output] There are many different Style to display the data in several Framework, using Javascript, using several way or Code for the same purpose (Output) </p>
+        </section>                                                
+        <!------------------------------------------------------------------------------------------------------>                               
+        <section class="JSOutputTypes" id="JSOutputTypes">
+            <header>
+                <h3> Output Main Types or Functions (Codes): </h3>                                              
+            </header>
+            
+            <p> =&gt; [JS Output] several Function to do the output function, such as: </p>
+                <ol type="A">
+                    <li> <h3> [alert() Function]: </h3></li>
+                        <p> =&gt; [ alert() ] It is commonlly used in Displaying Messages to the user in sepereted message upon the top of Screen. </p> 
+
+                        <p> =&gt; [ alert() ] can hold different types of messages such as : </p> 
+                            <ol>
+                                <li><h3> [Single Value(s)]: </h3></li>    
+                                    <p> Such as String values or numbers or any other type of Data. </p>             
+                                
+                                <li><h3> [Variables Value(s)]: </h3></li>    
+                                    <p> Variables of any datatype can be displayed on alert() function message . </p>                                   
+
+                                <li><h3> [Algorithms operations results]: </h3></li>    
+                                    <p> Alert() can display the result of all types of Math operations, and even of numeric values. </p>                                                   
+                            </ol>    
+                    
+                        <p> =&gt; [ alert() ] Code can be written Directly in page address bar to Excute a Javascript Code certain code with the certain page, as following : </p> 
+                            
+                            <div>
+                                  javascript:alert("Welcome to Javascript");                  
+                            </div>
+                        
+                        <p> =&gt; [ alert() ] Code can also be written Directly in Browser Console FrameWork Page to Excute a Javascript Code certain code with Console Testing FrameWork , as following : </p> 
+                            <div>
+                                  alert("Welcome to Javascript");                  
+                            </div>
+                                    
+                    
+                    <div class="JSOutputTypesExp">
+                        <Header>
+                            <h3> Creating (3) kinds of Alerts by Javascript Coding: </h3>
+                            <p> The Sourcing seperated JS Code Soure is [alert.js]:</p>
+                        </Header>    
+
+                    <div> The Alert messages have been Displayed upon Page Screen </div>
+
+                                <!--
+                                // (1): Alert with Single Value [with Concatenation]:
+                                alert("Alert 1: " + "<br>" + "My Name is :" + myName);
+
+                                // (2): Alert with Variables Value [with Concatenation]:
+                                alert("Alert 2: " + "<br>" + "My Name is :" + myName + "<br>" + "My Age is : " + myAge);
+
+                                // (3): Alert with Algorithm operation [with Concatenation]:
+                                alert("Alert 3: " + "<br>" + "Summition Operation of two Numbers = " + (x + y));
+
+                                -->                                                    
+                        <script src="alert.js"></script>                                         
+
+                        <button class=btn onclick="test()"> Click to Start [Display alert Function]    
+                        </button> <br>
+                                                            
+                        <button class=btn onclick="display()"> Click to Show JS Code    
+                        </button> 
+
+                    </div>
+                                        
+                    
+                    <div id='displayAlert' class="JSOutputTypesExp1"> 
+                    
+                    
+                     <!----    <code>
+                            HTML Codes :<br>
+                            &nbsp; &nbsp; &lt;Div&gt; The Alert messages have been Displayed upon Page Screen &lt; /Div &gt; <br>
+                            &nbsp; &nbsp; &lt; script src="alert.js" &gt; &nbsp; &lt; /script &gt; <br><br>                                                                                     
+                            JS Codes :<br>
+                            // Declaration of Some Vars:<br>
+                            var myName = "Shadi",<br>
+                            &nbsp; &nbsp; myAge = 33,<br>
+                            &nbsp; &nbsp; x = 10,<br>
+                            &nbsp; &nbsp; y = 20,<br><br>
+
+
+                            // Functions :<br>
+                            // (1): Alert with Single Value [with Concatenation]:<br>
+                            alert("Alert 1: " + "&lt;br&gt;" + "My Name is :" + myName);<br><br>
+
+                            // (2): Alert with Variables Value [with Concatenation]:<br>
+                            alert("Alert 2: " + "&lt;br&gt;" + "My Name is :" + myName + "&lt;br&gt;" + "My Age is : " + myAge);<br><br>
+
+                            // (3): Alert with Algorithm operation [with Concatenation]:<br>
+                            alert("Alert 3: " + "&lt;br&gt;" + "Summition Operation of two Numbers = " + (x + y));<br>
+
+                        </code> -->
+                        <textarea id="SourceCode" readonly></textarea>
+                    </div>                   
+                    
+                    <!---------------------------------------------------------------------------->
+                    <li> <h3> [.write() Function]: </h3></li>    
+                        <p> =&gt; [write()] is an output function usually used for<mark>Testing Purposes</mark>, and not for real job, because it might create errors, due to it will clear all of ALL page elements contents and Substitute it by new contents. </p>                                                   
+                        <p> =&gt; [write()] is usually specialized for inserting any types of contents into in the Html page Directly or inside certian Element Indirectly (by creating              element first and then add to it the desired Contents [using merger between Html ,css, and JS codes]. </p>
+                        <p> =&gt; [write()] it's output content(s) will be displayed just after the Script Tag position in the page. </p>                                                   
+                                                                                                
+                        <div class="JSOutputTypesExp">
+                            <Header>
+                                <h3> Creating new element span inside Div Element [using .Write Function] and displaying certain output inside this Span. </h3>
+                                <p> The Sourcing JS Code Soure is [Write.js]:</p>                                
+                            </Header>    
+                                
+                                <div id="testwrite"> 
+                                    <script src="Write.js"></script>                                             
+                                    
+                                    <button class=btn onclick="display1()"> Click to Show [Write function] JS Code  </button> 
+                                </div>                                                                                                                            
+
+
+                        </div>
+                    
+                        <div id=displayWrite class="JSOutputTypesExp1"> 
+                            <!--<code>
+                                HTML Codes :<br>
+                                &nbsp; &nbsp; &lt; Div id="testwrite" &gt;<br>
+                                &nbsp; &nbsp;&nbsp;&nbsp;&lt;script src="Write.js"&gt;&lt;/script&gt;             
+                                &lt; /Div &gt; <br><br>                                                                                           
+                                JS Codes :<br>
+                                // Declaration of Some Vars:<br>
+                                var myName = "Shadi",<br>
+                                &nbsp; &nbsp; myAge = 33;<br><br>               
+                                                                 
+                                // Functions :<br>
+                                document.write("&lt;span style='color:blue'> My Name is : &lt;/span>" + myName + "&lt;br&gt;" +<br>
+                                "&lt;span style='color:blue'> My Age is : &lt;/span>" + myAge);                         
+                            </code> -->
+                            <textarea id="SourceCode1" readonly></textarea>
+                        </div>                                                           
+                    
+                    <!---------------------------------------------------------------------------->
+                    <li> <h3> [.innerHTML() Function]: </h3></li>
+                    
+                        <p> =&gt; [innerHTML()] it Considered as the <mark>Main Type Code</mark> used for output function, but with Substitution Property Also with the existed Contents in the Allocated element(s). </p>                                                                                           
+                        <p> =&gt; [innerHTML()] can write inside Certain Element by (2) methods: </p>             
+                            <ol>
+                                <li> <h4> [Long Code calling Element] </h4> </li>                                
+                                    <p> =&gt; This is the default method used in JS as following: </p>             
+                                        <div>   
+                                            document.getElementById("Element Name by ID").innerHTML = Allocated VALUE;
+                                        </div>
+                                
+                                <li> <h4> [Short Code calling Element] </h4> </li>
+                                    <p> =&gt; This is shortcut of the default long method by using Variable of long code of Calling elememt in Html as following :  </p>           
+                                        <div>                                                                  
+                                            var myDiv = document.getElementById("Element Name by ID");           
+                                            myDiv.innerHTML = Allocated VALUE;
+                                        </div> 
+                                
+                                    <p> =&gt; This is shortcut helping in saving Data Variable caches memory, and then more performace of page loading   </p>           
+                            </ol>                                        
+                    
+                            <div class="JSOutputTypesExp">
+                                <Header>
+                                    <h3> Displaying long Form of personal informantion using Types and Forms of data using JS Mainly merged With HTML Tags with Css Attributes   </h3>
+                                    <p> The Sourcing JS Code Soure is [Output.js]:</p>
+                                </Header>    
+
+                                <div id="testinner">
+                                </div>
+                                <script src="inner.js"></script>    
+                                
+                                <button class=btn onclick="test2()"> Display Inner Function </button>
+                                
+                                <button class=btn onclick="display2()"> Click to Start [Display Inner Function]  </button> 
+
+                            </div>
+                    
+                            <div id=displayInner class="JSOutputTypesExp1"> 
+                                
+                                <!--<code>
+                                    HTML Codes :<br>
+                                    &nbsp; &nbsp; &lt; Div id="testinner" &gt; &lt; /Div &gt; <br>
+                                    &nbsp; &nbsp; &lt; script src="inner.js" &gt; &nbsp; &lt; /script &gt; <br><br>                                                                                     
+                                    JS Codes :<br>
+                                    // Declaration of Some Vars:<br>
+                                    var myName = "Shadi",<br>
+                                    &nbsp; &nbsp; myAge = 33,<br>
+                                    &nbsp; &nbsp; myDiv = document.getElementById("testinner");<br><br>
+  
+
+                                    // Funcitons :<br>
+                                    myDiv.innerHTML = "&lt;span style='color:blue'> My Name is : &lt;/span>" + myName + "&lt;br&gt;" + <br>               
+                                    "&lt;span style='color:blue'> My Age is : &lt;/span>" + myAge;
+                                                                                                            
+                                </code> -->
+                                <textarea id="SourceCode2" readonly></textarea>
+                            </div>                   
+                                        
+                    <!---------------------------------------------------------------------------->
+                    <li> <h3> [console.log() Function]: </h3></li>                    
+                        <p> =&gt; [console.log()] it specialized for Browser's Console framework, and it is also usually used for testing purposes. </p>                                                                                                             
+                        <p> =&gt; [console.log()] it's codes will not be showen to the user, but only for the developers, due to it woring only with Browser Console Frame Work. </p>                     
+                        <p> =&gt; [console.log()] will be written in JS File but will appear and Displayed on Console FrameWork. </p>                     
+                    
+                        <div class="JSOutputTypesExp">
+                            <Header>
+                                <h3> Displaying long Form of personal informantion using Types and Forms of data using JS Mainly merged With HTML Tags with Css Attributes   </h3>
+                                <p> The Sourcing JS Code Soure is [Output.js]:</p>                               
+                            </Header>    
+                                
+                                <div id="testconsole1"> The Output will be Showen in Console FrameWork</div>
+                    
+                                <script src="console.js"></script>                                                 
+                    
+                                <button class=btn onclick="test3()"> Display console Function </button>
+
+                                <button class=btn onclick="display3()"> Click to Start [Display Console Function]  </button> 
+                        </div>
+                    
+                        <div id=displayConsole class="JSOutputTypesExp1"> 
+                            
+                            <!-----
+                            
+                          <code>
+                                HTML Codes :<br>
+                                &nbsp; &nbsp; &lt; Div id="test" &gt; &lt; /Div &gt; <br>
+                                &nbsp; &nbsp; &lt; script src="test.js" &gt; &nbsp; &lt; /script &gt; <br><br>                                                                                     
+                                JS Codes :<br>
+                                // Declaration of Some Vars:<br>
+                                var myName = "Shadi",<br>
+                                &nbsp; &nbsp;myAge = 33;<br><br>               
+                                                                                                                                
+                                // Funcitons :<br>
+                                console.log("Hello My Name is :" + myName + " , And I'm " + myAge); 
+                            </code>                            
+                            -->
+
+                            <textarea id="SourceCode3" readonly></textarea>
+                        </div>                                    
+            </ol>
+        </section>
+    </div>    
+                                                                                    
+        <!------------------------------------------------------------------------------------------------------> 
+        <!------------------------------------------------------------------------------------------------------>                                                                              
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="200"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="22">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num2">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 10 Video File:</h3>
+                <iframe			
+				width="100%"
+				height="100%"											
+				allowfullscreen
+				allowfullscreen="allowfullscreen"
+				mozallowfullscreen="mozallowfullscreen"
+				msallowfullscreen="msallowfullscreen"
+				oallowfullscreen="oallowfullscreen"
+				webkitallowfullscreen="webkitallowfullscreen"
+				frameborder="0"				
+				preload="yes"
+				src="https://www.youtube.com/embed/watch?v=DZTgVQhgJYM&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=10&controls=0&loop=1&autoplay=1&fs=1" 				
+				>
+			</iframe>
+                <!-- <video controls width="300" height="300" autoplay>
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/10 Output.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                           -->
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>
+    
+    
+    <script>
+        alert("Welcome to JavaScript : Lesson 10 [Javascript Output]");      
+    </script>
+    
+</body>
+</html

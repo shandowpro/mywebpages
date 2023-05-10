@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 10 [HTML5 New Tags] Part 4 </title>
+    <link rel="stylesheet" href="HTML5 New Tags Part 4.css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">        
+    </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 10 [HTML5 New Tags] Part 4 [Details, Mark, Wbr]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="[HTML5 New Tags Part 4] Main Concept" > [HTML5 New Tags] Part 4 Concept </a> </li>
+            <li> <a href=#DetailsNTag   title="Go to Details Tag"           > Details Tag  </a> </li>
+            <li> <a href=#MarkNTag  title="Go to Mark Tag"                      > Mark Tag </a> </li>            
+            <li> <a href=#WbrNTag  title="Go to Wbr Tag"                      > Wbr Tag </a> </li>            
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> Lesson 10 </span> </main>
+
+<!-------------------------------------------------------------------------------------------------------------->                        
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>
+                [HTML5 New Tags] Concept 
+            </header>
+            
+            <article>
+                <p> &gt; This lesson we will display new [3] HTML5 Tags of advanced Tags. <span class="FixSpace"></span></p> 
+                <p> &gt; The New HTML5 Tags in this lesson as following :</p>
+                
+                <ol>
+                    <li> &lt; details &gt; &nbsp; &nbsp; &lt; /details &gt; </li>
+                    <li> &lt; mark &gt; &nbsp; &nbsp; &nbsp; &nbsp; &lt; /mark &gt; </li>                
+                    <li> &lt; wbr &gt; &nbsp; &nbsp; &nbsp; &nbsp; &lt; /wbr &gt; </li>                
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        
+        
+        <section class="DetailsNTag" id="DetailsNTag">
+            <header>
+                Details Tag [ &lt; details &gt; &lt; /details &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> [Details Tag] Concept: </h1>
+                    <p> =&gt; [Details Tag] commonly wide used in sites as a show more details button (Spoilers) in Articles and paragraphes. </p>
+                    
+                    <p> =&gt; [Details Tag] function usually was formated and coded by Javascritp and J-Querry, but this advanced tag is already coded! </p>
+                    
+                    <p> =&gt; [Details Tag] has 2 common Attributes:
+                        <ol>
+                            <li> [&lt; Summary &gt; &lt; /Summary &gt;] =&gt; to specify certain title instead of details (defaulted). </li>
+                            <li> open =&gt; to make it open stauts when loaded (Expanded contents). </li>
+                        </ol>
+                    </p>
+                    
+                </header>
+                
+                <header>
+                    <h1> Main & Common Usages: </h1>
+                    <p> =&gt; It is a usful tool in Article's content capsulating or compressing function. </p>
+                    <p> =&gt; Commonly used in Showing/Hiding Certain content in page from being visible or Non Vislible upon user. </p>                                    
+                </header>
+                
+                <header class="DetailsExp">
+                    <h1>Example (1) / List of hidden Text Content:</h1>
+                    <div class="DetailsExp1">                        
+                        <p> This is main Article Details. To see the Article Detalils click on (Show More).</p>
+                        <details>
+                            <summary>Show more</summary>                            
+                            <p>This is the Article Further Details. This is the Article Further Details. 
+                            This is the Article Further Details. This is the Article Further Details. 
+                            This is the Article Further Details. This is the Article Further Details. </p>       
+                        </details>
+                    </div>
+                    
+                    <h1>Example (1) Script:</h1>
+                    <div class="Code">
+                        <p class="DivTag"> &lt; div &gt; </p>
+                            <p class="Content">Example (1) / List of hidden Links of References:</p>
+                                                                 
+                                <span class="PTag"> &lt; p &gt; </span>
+                                <span class="Content"> This is main Article Details To see the Article Detalils click on (Show <span class="FixSpace">&nbsp; More).</span> </span>
+                                <p class="PClosing0"> &lt; /p &gt; </p>                     
+                            
+                            <p class="DetailsTag"> &lt; details &gt; </p>
+                                <span class="SummaryTag">&lt; summary &gt; </span> 
+                                <span class="Content"> Show more </span>                            
+                                <span class="SummaryClosing"> &lt;/ summary &gt; </span>
+                        
+                                <p class="PTag"> &nbsp; &nbsp;  &lt; p &gt; 
+                                <span class="Content"> This is the Article Further Details. </span>               <span class="PClosing"> &lt; /p &gt; </span>                                     </p>                                           
+                        
+                            <p class="DetailsClosing"> &lt;/ details &gt; </p>
+                        <p class="DivClosing"> &lt; /div &gt; </p>        
+                    </div>                
+                <!-------------------------------------------------------------------------->
+                    <hr>
+                    
+                    <h1>Example (2) / List of hidden References Links:</h1>                
+                    <div class="DetailsExp2">                        
+                        <p> This is main Article Contents. To see the Article References Linnks click on (Refs).</p>
+                        <details open>
+                            <summary>Refs</summary>                            
+                            <ul>
+                                <li> <a href="https://www.google.com">Google Reference</a></li>
+                                <li> <a href="https://www.youtube.com">YouTube Reference</a></li>
+                                <li> <a href="https://www.facebook.com">Facebook Reference</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                    
+                    <h1>Example (2) Script:</h1>
+                    <div class="Code">
+                        <p class="DivTag"> &lt; div &gt; </p>
+                            <p class="Content">Example (1) / List of hidden Links of References:</p>
+                                                                 
+                                <span class="PTag"> &lt; p &gt; </span>
+                                <span class="Content"> This is main Article Details  To see the Article Detalils click on (Show <span class="FixSpace">&nbsp; More). </span>
+                                <p class="PClosing0"> &lt; /p &gt; </p>                     
+                            
+                            <p class="DetailsTag"> &lt; details &gt; </p>
+                                <span class="SummaryTag">&lt; summary &gt; </span> 
+                                <span class="Content"> Show more </span>                            
+                                <span class="SummaryClosing"> &lt;/ summary &gt; </span>
+                        
+                                <p class="PTag"> &nbsp; &nbsp;  &lt; p &gt; 
+                                <span class="Content"> This is the Article Further Details. </span>               <span class="PClosing"> &lt; /p &gt; </span>                                     </p>                                           
+                        
+                            <p class="DetailsClosing"> &lt;/ details &gt; </p>
+                        <p class="DivClosing"> &lt; /div &gt; </p>        
+                    </div>                                                        
+                </header>                        
+                                                                            
+            </article>                
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="MarkNTag" id="MarkNTag">
+            <header>
+                Mark Tag [ &lt; mark &gt; &lt; /mark &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Main Concept: </h1>
+                    <p> =&gt; This is the Text highlighting Tag property, and it can be further formated by CSS. 
+                </header>                            
+                
+                <header>
+                    <h1> Main & Common Usages: </h1>
+                    <p> =&gt; [Mark] Tag can be used to highlight the important Contents or Words or even Paragraph to give them special Attraction with different Colors, backgrounds, effects.       
+                </header>
+                
+                <header class="MarkExp">
+                    <h1>Example / Highlighting vip Words:</h1>
+                    <div class="DetailsExp1">                        
+                        <p> This is main Article Details and this is an <mark>IMPORTANT WORD</mark> </p>         
+                    </div>
+                    
+                    <h1>Example Script:</h1>
+                    <div class="Code">
+                        <p class="PTag"> &lt; p &gt; 
+                            <span class="Content">This is main Article Details and this is</span>
+                            <span class="MarkTag"> &nbsp; &lt; mark &gt; </span>
+                            <span class="Content">  IMPORTANT WORD &nbsp; &nbsp; &nbsp; </span>
+                            <span class="MarkClosing"> &lt;/ mark &gt; </span>
+                            <span class="PClosing"> &lt;/ p &gt; </span>                        
+                        </p>                        
+                    </div>
+                </header>            
+            </article>                
+        </section>    
+<!-------------------------------------------------------------------------------------------------------------->   
+        <section class="WbrNTag" id="WbrNTag">
+            <header>
+                Wbr Tag [ &lt; wbr &gt; &lt; /wbr &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Main Concept: </h1>
+                    <p> =&gt; [Wbr] Tag is an advanced Word Breaking tag.</p>
+                    <p> =&gt; [Wbr] Tag is similer to [word-break] in CSS3, but [wbr] is much more easy and can also be formated by CSS.</p>                    
+                </header>                            
+                
+                <header>
+                    <h1> Main & Common Usages: </h1>
+                    <p> =&gt; [Wbr] Tag can be used to cut or split words, Sentences, Links,Entries upon certain rules in [CIO] Techniecs and [Word Press]. </p>                    
+                </header>
+                
+                <header class="WbrExp">
+                    <h1>Example / Spliting Long Link:</h1>
+                    
+                    <div class="WbrExp1">                        
+                        <Article>
+                            https://www.testinglonglink.com <br> /products.php?id=20 <br> &cat=100 <br>&test=mainsection
+                        </Article>
+                    </div>
+                    
+                    <h1>Example Script:</h1>
+                    <div class="Code">
+                        <p class="ArticleTag"> &lt; article &gt; </p>
+                        <span class="Content">https://www.testinglonglink.com</span> 
+                        <p class="WbrTag">&lt; wbr &gt; 
+                        <span class="Content">/products.php?id=20</span>                         
+                        <span class="WbrClosing">&lt; /wbr &gt; </span>                        
+                        </p>
+                        
+                        <p class="WbrTag">&lt; wbr &gt; 
+                        <span class="Content"> &cat=100 </span> 
+                        <span class="WbrClosing">&lt; /wbr &gt; </span>
+                        </p>
+                        
+                        <p class="WbrTag">&lt; wbr &gt; 
+                        <span class="Content"> &test=mainsection  </span> 
+                        <span class="WbrClosing">&lt; /wbr &gt; </span>
+                        </p>                                                
+                        
+                        <p class="ArticleClosing"> &lt; /article &gt; </p>
+                    </div>
+                </header>            
+            </article>                
+        </section>    
+<!-------------------------------------------------------------------------------------------------------------->
+
+    </div>    
+
+<!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

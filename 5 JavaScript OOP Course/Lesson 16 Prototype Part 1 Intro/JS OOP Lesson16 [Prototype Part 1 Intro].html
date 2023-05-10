@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS OOP Lesson 16 [Prototype Intro {Part 1}] </title>
+    <link rel="stylesheet" href="JS OOP Lesson16 [Prototype Part 1 Intro].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JS OOP Lesson 16 [Prototype Intro {Part 1}]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS OOP main Topics">
+                JS OOP Lesson15 [Prototype Intro ] Main Topics </a> </li>
+
+            <li> <a href=#JSOOPCon title="Go to JS OOP [Prototype Intro ] Concept">
+                JS OOP Lesson15 [Prototype Intro ] Concept </a> </li>
+
+            <li> <a href=#JSOOPImp title="Go to JS OOP [Prototype Intro ] Importance & Benefits">
+                JS OOP Lesson15 [Prototype Intro ] Importance & Benefits </a> </li>
+
+            <li> <a href=#JSOOPSyntx title="Go to JS OOP [Prototype Intro ] Syntax">
+                JS OOP Lesson15 [Prototype Intro ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSOOPPract title="Go to JS OOP [Prototype Intro ] Practical Applications">
+                JS OOP Lesson15 [Prototype Intro ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS OOP Course <span> JS OOP Lesson 16 [Prototype Intro ] {Part 1}  </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                JS OOP [Prototype Intro ] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS OOP [Prototype Intro ] Concept. </li>
+
+                    <li> JS OOP [Prototype Intro ] Importance & Benefits. </li>
+
+                    <li> JS OOP [Prototype Intro ] Syntax [Define + Access]. </li>
+
+                    <li> JS OOP [Prototype Intro ] Practical Application. </li>
+                </ol>
+                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPCon" id="JSOOPCon">
+            <header>
+                <h3> JS OOP [Prototype Intro ] Concept: </h3>
+            </header>
+            
+            <p> =&gt; JS OOP [Prototype Intro ]: This lessson will provide the Concept of Protptype which has been Created from the Normal Function or Constructor Function  .
+            
+            <p> =&gt; JS OOP [Prototype Intro ]: Any Prototype will be as an [[Object]] with name of it's Parent Function , which will inherate the properties & Methods Names of its Function as it's Propeties &n Methods 's names, and their Values & fuctionalities as it's values & fuctionalities    .            
+            
+            <p> =&gt; JS OOP [Prototype Intro ]: Is a an Object which is being created from any Fucniton wether it was default Function or Constructor Function <br>
+                and this Prototype will inherate all the Propterites and functions (Methods) thate has been Cereated From.
+            
+            <p> =&gt; JS OOP [Prototype Intro ]: There are (3) Kinds of Prototype Function (based on it's Construtor Function that Created from ) as following : 
+                <ol>
+                    <li> [Defualt Function Prototype] =&lt; </li>                        
+                        <p> This kind of Prototype is Consructed from a Default Function </p>
+                    
+                    <li> [Constructor Function Prototype] =&lt; </li>                    
+                        </p>This kind of Prototype is Consructed from a Constructor Function</p>
+                    
+                    <li> [Built in Constructor Function Prototype] =&lt; </li>                    
+                        </p>This kind of Prototype is Consructed from a Built In Constructor Function</p>
+                </ol>                                                 
+                
+
+            <p> =&gt; JS OOP [Prototype Intro ]: The Extracted Proptotype will inherate All the propteies and Method of the Function that created from (regardless of the type of Consturtor function - with some differences) as the following :<br>
+                <ul>    
+                    <ol type ="A">
+                        <li> Prototype from A [Constructor Function] :</li>
+                            <ul>                                                            
+                                <li> Generated Prototype Object's (name) will be inherated as =&lt; [Object]</li>
+                                <li> Generated Prototype Object's (Properies Names) will be inherated as following =&lt;<li>                                
+                                    <ul>
+                                        <li> (Constructor) [which is the Prototype Constructor Function ]</li>
+                                        <li> Prototype's Constructor Function's Internal Properties's Names </li>
+                                        <li> Prototype's Constructor Function's Internal Methods's Names </li>
+                                    </ul>
+                                <li> Generated Prototype Object's (Properies Values) will be inherated as following =&lt;<li>                                                                <ul>
+                                    <ul>
+                                        <li> Prototype's Constructor Funciton [which is the the value of Prototype (constructor) Property's Name]</li>
+                                        <li> Prototype's Constructor Function's Internal Properties's Values </li>
+                                        <li> Prototype's Constructor Function's Internal Methods's Functions </li>
+                                    </ul>                                                                                    
+                            </ul>
+                                     
+                        
+                        <li> Prototype from A [Built In Constructor Function] :</li>                        
+                            <ul>
+                                <li> Generated Prototype Object's (name) will be inherated as =&lt; [Data type of the Built In Function (String, Number, Boolean, Array) ]</li>
+                                <li> Generated Prototype Object's (Properies Names) will be inherated as folllowing =&lt;<li>                                
+                                    <ul>
+                                        <li> (Constructor) [which is the Specified Data Type Built In Constructor Function ]</li>
+                                        <li> Prototype's Specified Built in Constructor function Data type's Internal Properties's Names </li>
+                                        <li> Prototype's Specified Built in Constructor function Data type's Internal Methods's Names </li>
+                                    </ul>
+
+                                <li> Generated Prototype Object's (Properies Values) will be inherated as folllowing =&lt;<li>                                                                
+                                    <ul>
+                                        <li> Prototype's Built in Constructor Funciton [which is the Specified Data Type Built In Constructor Main Function]</li>                                
+                                        <li> Prototype's Specified Built in Constructor function Data type's Internal Properties's Values </li>
+                                        <li> Prototype's Specified Built in Constructor function Data type's Internal Methods's Values </li>                                
+                                    </ul>
+                            <ul>
+
+                        <li> Prototype from A [Default Function] :</li>                        
+                            <ul>
+                                <li> Generated Prototype Object's (name) will be inherated as =&lt; [Data type of the Built In Function (String, Number, Boolean, Array) ]</li>
+                                <li> Generated Prototype Object's (Properies Names) will be inherated as folllowing =&lt;<li>                                
+                                    <ul>
+                                        <li> (Constructor) [which is the Specified Data Type Built In Constructor Function ]</li>
+                                        <li> Prototype's Specified Built in Constructor function Data type's Internal Properties's Names </li>
+                                        <li> Prototype's Specified Built in Constructor function Data type's Internal Methods's Names </li>
+                                    </ul>
+                                <li> Generated Prototype Object's (Properies Values) will be inherated as folllowing =&lt;<li>                                                                
+                                    <ul>
+                                        <li> Prototype's Built in Constructor Funciton [which is the Specified Data Type Built In Constructor Main Function]</li>                                
+                                        <li> Prototype's Specified Built in Constructor function Data type's Internal Properties's Values </li>
+                                        <li> Prototype's Specified Built in Constructor function Data type's Internal Methods's Values </li>                                
+                                    </ul>
+                            </ul>                                                                            
+                    </ol>
+                </ul>                                                            
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSOOPImp" id="JSOOPImp">
+            <header>
+                <h3> JS OOP [Prototype Intro ] Importance & Benefits: </h3>
+            </header>
+
+            <p> [Prototype Intro ] gives us the Following Features : <br>
+                <ul>
+                    <li> More advanced tools to extract objects from Funcitons Wether it's type was [Constructor Function , Normal Function, Specified Data type Built In Constructor function ]. </li>                    
+                    <li> Ability to inherate all certain Function's properites and Methods = &lt; as an [Object] Not as another Function . </li>                    
+                </ul>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPSyntx" id="JSOOPSyntx">
+            <header>
+                <h3> JS OOP [Prototype Intro ] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS OOP Defining Object by [Prototype Intro ] Conceptual Examples as following : </p>
+            
+            <div id="Code" class="Code">
+            // (1) First type of Prototype [from Consturctor Function Prototype] : <br>
+                    <span class = one></span>// A) Defining [Defualt Function Prototype] :<br><br>                                
+                        <span class = two></span>function funcName(par1) { <br>
+                            <span class = three></span>this.par1= par1; <br>
+                            <span class = three></span>this.internalFuc = () => { <br>
+                                <span class = four></span>return 'value';<br>
+                            <span class = three></span>} <br>                                                                        
+                        <span class = two></span>}  <br>                 
+                //=========================================================== <br> <br>                    
+                        
+                    <span class = one></span>// B) Printing the value of prototype extracted from the constructor Function : <br>
+                        <span class = two></span>console.log(funcName.prototype);<br>
+                        
+                        <span class = two></span>// this will Return the Constructor Function is in <br>
+                            <span class = three></span>console with all its Proerties and Functions(Methods) <br>                                                
+                    //=========================================================== <br> <br>                    
+                    <br><br> ======================================================= <br> <br>
+                        
+                        
+            // (2) Second type of Prototype [from Constructor Function Prototype] : 
+                <span class = one></span>// A) Defigning [Defualt Function Prototype] :<br><br>                                
+                    <span class = two></span>function funcName() { <br>
+                        <span class = three></span>return 'Hello'; <br>
+                    <span class = two></span>} <br> <br>
+                    
+                    <span class = one></span>// B) Printing the value of prototype extracted from the constrructor Function : <br>                                                    
+                        
+                        <span class = two></span>console.log(funcName.prototype); <br>
+                            
+                        <span class = two></span>// this will Return the default Fucniton is in console <br>
+                                                                    
+                    <br><br> ======================================================= <br><br>
+            
+                // (3) Third type of Prototype [from Built In Constructor Function Prototype] :  <br>
+                <span class = one></span>// A) Defining [Built In Function Prototype] :<br><br>                                
+                    
+                    <span class = two></span>const arr = [value1, value2, value3]; <br>
+                                        
+                    <span class = two></span>console.log(arr.constructor); <br>
+
+                    <span class = two></span>// This will print the Concsturctor Function Name of the cerated Array ... <br>
+                    
+
+                    <span class = one></span>// B) Printing the value of prototype extracted from the Array Built In constructor Function : <br>                                                    
+                        
+                    <span class = two></span>console.log(Array.prototype);  <br>
+                            
+                    <span class = two></span>// this will Return the Array Built In Constructor Function as inhertated from the Prototype is in console <br>
+                                                                    
+                    <br><br> ======================================================= <br>
+                                        
+                    <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPPract" id="JSOOPPract">
+            <header>
+                <h3> JS OOP [Prototype Function] General Practical Applications : </h3>
+            </header>
+
+            
+            <p> =&gt; Here one Major Application will include following Function/Tasks :  &gt;&gt; <br>
+
+                <ol>                    
+                    <li> Creating Prototype from a Default Function [Assumed function] </li> 
+                
+                    <li> Creating Prototype from a Constructor Function [Assumed function] </li> 
+                    
+                    <li> Creating Prototype from a Built in Constructor Function [Assumed functions] </li> 
+                    
+                    <p> This will include All Types of Built-In Functions of differnt Datatypes [String - Number - Boolean - Array - Object]  </p>                                                                                                        
+                </ol>                
+                
+                <br>
+                
+            <textarea id=txtarea class=txtarea> </textarea><br>
+                
+            <button class=btn onclick="test()"> Click to Start First Application [Testing  Prototype Intro ] 
+            </button>  <br>
+            
+            <script src="JSOOPPrototypeIntro.js">
+            </script>
+
+            <br>
+
+            <button class=btn onclick="testPro()"> Click to Start Second Application [Testing Prototype] Application </button> 
+             <br>
+                        
+            <script src="testPrototype.js">
+            </script>
+            
+            <br> <hr> <br>
+            
+            <!-- ================================================================================ -->
+            
+            <textarea id=txtarea1 class=txtarea1> </textarea><br>
+                        
+            <button class=btn onclick="Display1()"> Click to Display JS Code of [First Application (Testing  Prototype Intro)]    
+            </button>  
+                                    
+            <script src="JSOOPPrototypeIntro.js">
+            </script>
+
+            <br> <hr> <br>
+            
+            <!-- ================================================================================= -->
+            
+            <textarea id=txtarea2 class=txtarea2> </textarea><br>
+                        
+            <button class=btn onclick="Display2()"> Click to Display JS Code of [Second Application (Testing  Prototype Intro)]    
+            </button>
+            
+            <script src="testPrototype.js">
+            </script>
+
+            <br> <hr> <br>    
+                                                  
+                
+            <!-- <div class=JSOOPObjConstTraining >                                        
+                
+                <code>
+                    
+                    <p data-include="JSOOPPrototypeIntro.js"> </p>
+                    // HTML Codes: <br>
+                    <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                    <span class=one></span> &lt;/textarea&gt; <br><br>
+                    
+                    <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Constructor function + One Exctracted object - Testing <br>
+                            <span class=three></span> (Additional Internal Functions)] Application<br>         
+                    <span class=one></span> &lt;/button&gt; <br><br>                            
+                    
+                    <span class=one></span> &lt;button class="btn" onclick="testPro()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Constructor function + Multiple Exctracted objects - Testing <br>
+                            <span class=three></span> Additional Internal Functions)] Application <br>         
+                    <span class=one></span> &lt;/button&gt; <br><br>                            
+                    
+                    <span class=one></span> &lt;script src="JSOOPPrototypeIntro.js"&gt;<br>                            
+                    <span class=one></span> &lt;/script&gt; <br><br>
+                    
+                    =======================================================<br><br>
+                    
+                    /* global document, alert, prompt */ <br>                    
+                    /* JSOOP [Prototype Intro {Part 1}] */ <br>                    
+                    template-string-converter.enable; <br>
+
+                    function test() { <br>
+
+                        <span class=one></span>do { <br> <br>
+                    
+                            <span class=two></span> var constTypt = prompt("Welcome to [Prototype] Application \n <br> 
+                                <span class=three></span> Press (1) to Construct Prototype from Default function \n  <br>
+                                <span class=three></span> Press (2) to Construct Proptotype from a [Constructor Function] \n <br>
+                                <span class=three></span> Press (3) to Construct Proptotype from a [Built In Constructor Function]\n <br>
+                                <span class=three></span> Press any other key to Exit..."), <br>
+                                <span class=three></span>strAll = ""; <br> <br>
+                    
+                    
+                            <span class=two></span>if (constTypt == "1") { <br>
+                                <span class=three></span> alert("Welcome to [Constructing Prototype from Default Function]..."); <br> <br>
+                    
+                                <span class=three></span>function user(uName) { <br>
+                                    <span class=four></span>return `Welcome  ${uName}`; <br>
+                                <span class=three></span>}; <br> <br>
+                                            
+                                <span class=three></span>var userName = prompt("Enter your Name...");  <br> <br>
+                                
+                                <span class=three></span> alert("The Following is the Constructor Function of the Default Function ..."); <br><br>
+                                
+                                <span class=three></span>alert(user.constructor);<br> <br>
+                    
+                                <span class=three></span>console.log("The Following is the Constructor Function of the Default Function ..."); <br><br>
+                                
+                                <span class=three></span>console.log(user.constructor );<br><br>
+                                
+                                <span class=three></span>console.log('----------------------------------------'); <br> <br>
+                                        
+                                <span class=three></span>strAll += "The Constructor Function of the Default Function \n" + <br>
+                                    <span class=four></span> user.constructor + <br>
+                                    <span class=four></span>'\n================================================\n'; <br>
+                                
+                                
+                                <span class=three></span>alert("The Following is the Main Constructor Function Value [upon user parameter Value] ..."); <br>
+                                
+                                <span class=three></span>alert(user(userName)); <br> <br>
+                    
+                                <span class=three></span>console.log("The Following is the Main Constructor Function Value [upon user parameter Value] ..."); <br>
+                                
+                                <span class=three></span>console.log(user(userName)); <br>
+                                
+                                <span class=three></span>console.log('----------------------------------------'); <br>
+                                
+                                <span class=three></span>strAll +=  "The Main Constructor Function Value [upon user parameter Value] \n" + <br>
+                                    <span class=four></span> user(userName) +  <br>
+                                    <span class=four></span>'\n================================================\n'; <br> <br>
+                            
+                                
+                                <span class=three></span>alert("The Following is the prototype Extracted object  ..."); <br> <br>
+                                
+                                <span class=three></span>alert(user.prototype); <br><br>
+
+                                
+                                <span class=three></span>console.log("The Following is Extracted prototype  ..."); <br>
+                                
+                                <span class=three></span>console.log(user.prototype); <br>
+                                                                    
+                                <span class=three></span>console.log('----------------------------------------'); <br> <br>
+                                                                                                        
+                                <span class=three></span>strAll += "The Extracted prototype is \n" + user.prototype + <br>
+                                    <span class=four></span>'\n================================================\n'; <br> <br>
+                                
+                                <span class=three></span>document.getElementById("txtarea").innerHTML = strAll; <br> <br>
+                                
+                            <span class=two></span>} else if (constTypt == "2") { <br>
+                                
+                                <span class=three></span>alert("Welcome to [Constructing Prototype from Constructor Function]..."); <br> <br>
+                                                        
+                                <span class=three></span>function constFunc(name, age, city) { <br>
+                                    <span class=four></span>this.name = name; <br>
+                                    <span class=four></span>this.age = age; <br>
+                                    <span class=four></span>this.city = city; <br> <br>
+                                    
+                                    <span class=four></span>this.display = function () { <br>
+                                        <span class=five></span>return `Your name is : ${name}\n Your Age is : <br>
+                                        <span class=five></span> ${age}\n Your City is : ${city}\n`; <br>
+                                    <span class=four></span>} <br>
+
+                                <span class=three></span>}; <br>
+                    
+
+                                <span class=three></span>var userName = prompt("Enter your name (Property1) "),  <br>
+                                    <span class=four></span>userAge = prompt("Enter your age (Property2) "),<br>
+                                    <span class=four></span>userCity = prompt("Enter your city (Property3) "); <br> <br>
+                                                    
+                                <span class=three></span>alert("The Following is the Main Constructor Function Value [upon user parameter Value] ..."); <br>
+                                
+                                <span class=three></span>alert(constFunc(userName, userAge, userCity)); <br>
+                                
+                                <span class=three></span>console.log("The Following is the Main Constructor Function Properties Value <br>
+                                    <span class=four></span>[upon user parameter Value] ..."); <br> <br>
+
+                                <span class=three></span>console.log(constFunc(userName, userAge, userCity)); <br>
+                                
+                                <span class=three></span>console.log('\n--------------------------------------\n'); <br> <br>
+                                                                    
+                                <span class=three></span>strAll = "The main constructor Function is as following :" + <br>
+                                    <span class=four></span> constFunc(userName, userAge, userCity) + <br>
+                                    <span class=four></span> '\n=============================================\n';<br> <br>
+                                                                                
+                                <span class=three></span>console.log("The Following is the [Prototype] of the given Constructor Function ..."); <br> <br>
+                                
+                                <span class=three></span>console.log(constFunc.prototype); <br> <br>
+                                
+                                <span class=three></span>console.log(' ---------------------------------------- '); <br><br>
+                                
+                                <span class=three></span>alert("The Following is the Prototype of the given Constructor Function  ..."); <br>
+                                
+                                <span class=three></span>alert(constFunc.prototype); <br>
+                                
+                                <span class=three></span>strAll += constFunc.prototype + <br>
+                                    <span class=four></span> '\n =======================================\n'; <br><br>
+                                
+                                <span class=three></span>document.getElementById("txtarea").innerHTML = strAll;  <br><br>
+                                                                                
+                            <span class=two></span>} else if (constTypt == "3") { <br> <br>
+                    
+                                <span class=three></span>alert("Welcome to [[Constructing Prototype] from [Built In Constructor Function]]..."); <br> <br>
+                                
+                                <span class=three></span>var mthd = prompt("Press 1 for [String] Built in Consturctor Fuction \n  <br>
+                                    <span class=four></span>Press 2 for [Number] Built in Consturctor Fuction \n <br>
+                                    <span class=four></span>Press 3 for [boolean] Built in Consturctor Fuction \n <br>
+                                    <span class=four></span>Press 4 for [Array] Built in Consturctor Fuction \n <br>
+                                    <span class=four></span>Press 5 for [Object] Built in Consturctor Fuction \n <br>
+                                    <span class=four></span>Press 6 for [Extracted-Object] Built in Consturctor Fuction\n <br>
+                                    <span class=four></span>or any other key to Exit... "); <br> <br>
+
+                                                                    
+                                    <span class=three></span>if (mthd == '1') { <br> <br>
+                    
+                                        <span class=four></span>alert("Welcome to Prototype from [String Built In Constructor Function] ..."); <br><br>
+                    
+                                        <span class=four></span>var str = new String(); <br>
+                                    
+                                        <span class=four></span>alert("The Prototype of [String Built In] Constructor Function as following ... ");<br>
+                                        
+                                        <span class=four></span>alert(String.prototype); <br><br>
+                    
+                                        <span class=four></span>console.log("The Prototype of [String Built In] Constructor Function as following ... "); <br>
+                                        
+                                        <span class=four></span>console.log(String.prototype); <br>
+                                        
+                                        <span class=four></span>console.log(' ---------------------------------------- '); <br> <br>
+                                    
+                                        <span class=four></span>strAll += "The Prototype of [String Built In] Constructor Function : " + <br>
+                                            <span class=five></span> String.prototype + <br>
+                                            <span class=five></span> "\n =============================== \n"; <br><br>
+                    
+                                        <span class=four></span>//========================================================================================= <br> <br>
+                                    
+                                        <span class=four></span>alert("The [String Variable] Constructor Function as following ... "); <br>
+
+                                        <span class=four></span>alert(str.constructor);  <br>
+                                    
+                                        <span class=four></span>console.log("Your [String Variable] Constructor Function as following  ... "); <br>
+                                        
+                                        <span class=four></span>console.log(str.constructor); <br>                
+                                        
+                                        <span class=four></span>console.log(' ---------------------------------------- '); <br> <br>
+                                    
+                                        <span class=four></span>strAll += "The [String Variable] Constructor Function : " + <br>
+                                            <span class=five></span> str.constructor + <br>
+                                            <span class=five></span> "\n =============================== \n"; <br> <br>
+                    
+                                        <span class=four></span>//========================================================================================= <br><br>
+                                    
+                                        <span class=four></span>alert("The [String Built in] Constructor Function as following ... "); <br>
+                                        
+                                        <span class=four></span>alert(String.constructor); <br>
+                                    
+                                        <span class=four></span>console.log("The [String Built in] Constructor Function as following  ... "); <br>
+                                        
+                                        <span class=four></span>console.log(String.constructor); <br>
+                                    
+                                        <span class=four></span>console.log(' ---------------------------------------- '); <br> <br>
+                                                                                                    
+                                    
+                                        <span class=four></span>strAll += "The [String Built in] Constructor Function : " + String.constructor + <br>
+                                            <span class=five></span> "\n =============================== \n"; <br> <br>
+                    
+                                        <span class=four></span>//========================================================================================= <br> <br>
+                                    
+                                        <span class=four></span>document.getElementById("txtarea").innerHTML = strAll; <br> <br>
+                                    
+                                                    
+                                    <span class=three></span>} else if (mthd == '2') { <br> <br>
+                                        <span class=four></span>alert("Welcome to Prototype from [Number Built In Constructor Function] ..."); <br> <br>
+                                    
+                                        <span class=four></span>var num =new Number(); <br> <br>
+                    
+                                        <span class=four></span>alert("The Prototype of [Number Built In] Constructor Function as following ... ");<br>
+
+                                        <span class=four></span>alert(Number.prototype); <br><br>
+                    
+                                        <span class=four></span>console.log("The Prototype of [Number Built In] Constructor Function as following ... "); <br>
+                                        
+                                        <span class=four></span>console.log(Number.prototype); <br> <br>
+                                    
+                                        <span class=four></span>console.log(' ---------------------------------------- '); <br> <br>
+                                    
+                                        <span class=four></span>strAll += "The Prototype of [Number Built In] Constructor Function : " + <br>
+                                            <span class=five></span>Number.prototype + "\n =============================== \n"; <br> <br>
+                    
+                                        <span class=four></span>//========================================================================================= <br> <br>
+                                    
+                                        <span class=four></span>alert("The [Number Variable] Constructor Function as following ... "); <br>
+                                        
+                                        <span class=four></span>alert(num.constructor);<br>
+                                    
+                                        <span class=four></span>console.log("Your [Number Variable] Constructor Function as following  ... "); <br>
+                                        <span class=four></span>console.log(num.constructor); <br>                 
+                                        <span class=four></span>console.log(' ---------------------------------------- '); <br> <br>
+
+                                        <span class=four></span>strAll += "The [Number Variable] Constructor Function : " + <br>
+                                            <span class=five></span>num.constructor+ "\n =============================== \n"; <br> <br>
+                    
+                                        <span class=four></span>//====================================================================================<br> <br>
+                                    
+                                        <span class=four></span>alert("The [Number Built in] Constructor Function as following ... "); <br>
+                                        
+                                        <span class=four></span>alert(Number.constructor); <br>
+                                    
+                                        <span class=four></span>console.log("The [Number Built in] Constructor Function as following  ... "); <br>
+                                        
+                                        <span class=four></span>console.log(Number.constructor); <br>
+                                    
+                                        <span class=four></span>console.log(' ---------------------------------------- '); <br> <br>
+                                                                                                    
+                                    
+                                        <span class=four></span>strAll += "The [Number Built in] Constructor Function : " + <br>
+                                            <span class=five></span>Number.constructor + "\n =============================== \n"; <br> <br>
+                    
+                                        <span class=four></span>//===================================================================================<br> <br>
+                                    
+                                        <span class=four></span>document.getElementById("txtarea").innerHTML = strAll; <br> <br>
+                                    
+                                    <span class=three></span>} else if (mthd == '3') { <br> <br>
+                                    
+                                        <span class=four></span>alert("Welcome to Prototype from [Boolean Built In Constructor Function] ..."); <br>
+                                    
+                                        <span class=four></span>var bol = new Boolean(); <br>
+                    
+                                        <span class=four></span>alert("The Prototype of [Boolean Built In] Constructor Function as following ... "); <br>
+                                        
+                                        <span class=four></span>alert(Boolean.prototype); <br>
+                    
+                                        <span class=four></span>console.log("The Prototype of [Boolean Built In] Constructor Function as following ... "); <br>
+                                        
+                                        <span class=four></span>console.log(Boolean.prototype); <br>
+                                    
+                                        <span class=four></span>console.log(' ---------------------------------------- '); <br> <br>
+                                    
+                                        <span class=four></span>strAll += "The Prototype of [Boolean Built In] Constructor Function : " <br>
+                                            <span class=five></span>+ Boolean.prototype + "\n =============================== \n"; <br> <br>
+                    
+                                        <span class=four></span>//================================================================================== <br>
+                                    
+                                        <span class=four></span>alert("The [Boolean Variable] Constructor Function as following ... "); <br>
+                                        
+                                        <span class=four></span>alert(bol.constructor); <br>
+                                    
+                                        <span class=four></span>console.log("Your [Boolean Variable] Constructor Function as following  ... "); <br>
+                                        
+                                        <span class=four></span>console.log(bol.constructor); <br>                 
+                                    
+                                        <span class=four></span>console.log(' ---------------------------------------- '); <br><br>
+                                    
+                                        <span class=four></span>strAll += "The [Boolean Variable] Constructor Function : " + <br>
+                                            <span class=five></span> bol.constructor+ "\n =============================== \n"; <br> <br>
+                    
+                                        <span class=four></span>//===============================================================================<br>
+                                    
+                                        <span class=four></span>alert("The [Boolean Built in] Constructor Function as following ... "); <br>
+                                        
+                                        <span class=four></span>alert(Boolean.constructor); <br>
+                                    
+                                        <span class=four></span> console.log("The [Boolean Built in] Constructor Function as following  ... ");  <br>
+                                    
+                                        <span class=four></span>console.log(Boolean.constructor); <br>
+
+                                        <span class=four></span>console.log(' ---------------------------------------- '); <br> <br>
+                                                                                                    
+                                        <span class=four></span> strAll += "The [Boolean Built in] Constructor Function : " + Boolean.constructor + <br>
+                                            <span class=five></span> "\n =============================== \n"; <br><br>
+                    
+                                        <span class=four></span>//========================================================================================= <br><br>
+                                    
+                                        <span class=four></span>document.getElementById("txtarea").innerHTML = strAll; <br> <br>
+                                    
+                                    
+                                    <span class=three></span>} else if (mthd == '4') { <br><br>
+                                    
+                                        <span class=four></span>alert("Welcome to Prototype from [[Array] Built In Constructor Function] ..."); <br>
+                                    
+                                        <span class=four></span>var arr = new Array(); <br>
+                                    
+                                        <span class=four></span> alert("The Prototype of [Array Built In] Constructor Function as following ... "); <br>
+
+                                        <span class=four></span>alert(Array.prototype); <br>
+                    
+                                        <span class=four></span>console.log("The Prototype of [Array Built In] Constructor Function as following ... "); <br>
+                                        
+                                        <span class=four></span>console.log(Array.prototype); <br>
+                                    
+                                        <span class=four></span>console.log(' ---------------------------------------- '); <br> <br>
+                                    
+                                        <span class=four></span>strAll += "The Prototype of [Array Built In] Constructor Function : " +<br>
+                                            <span class=five></span> Array.prototype + "\n =============================== \n"; <br> <br>
+                    
+                                        <span class=four></span>//=================================================================================<br>
+                                    
+                                        <span class=four></span>alert("The [Array Variable] Constructor Function as following ... ");<br>
+                                        
+                                        <span class=four></span>alert(arr.constructor); <br>
+                                    
+                                        <span class=four></span>console.log("Your [Array Variable] Constructor Function as following  ... ");  <br>
+                                        
+                                        <span class=four></span>console.log(arr.constructor); <br>                 
+                                    
+                                        <span class=four></span>console.log(' ---------------------------------------- '); <br> <br>
+                                    
+                                    
+                                        <span class=four></span> strAll += "The [Array Variable] Constructor Function : " + <br>
+                                            <span class=five></span> "\n =============================== \n"; <br> <br>
+                    
+                                        <span class=four></span>//===================================================================================<br>
+                                    
+                                        <span class=four></span>alert("The [Array Built in] Constructor Function as following ... "); <br>
+                                        
+                                        <span class=four></span>alert(Array.constructor);<br>
+                                    
+                                        <span class=four></span>console.log("The [Array Built in] Constructor Function as following  ... "); <br>
+                                        
+                                        <span class=four></span>console.log(Array.constructor); <br>
+                                    
+                                        <span class=four></span>console.log(' ---------------------------------------- '); <br> <br>
+                                                                                                    
+                                    
+                                        <span class=four></span>strAll += "The [Array Built in] Constructor Function : " + <br>
+                                            <span class=five></span> Array.constructor + "\n =============================== \n"; <br> <br>
+                    
+                                        <span class=four></span>//==================================================================================<br>
+                                    
+                                        <span class=four></span>document.getElementById("txtarea").innerHTML = strAll; <br> <br>
+                                    
+                                    <span class=three></span>} else if (mthd == '5') { <br> <br>
+                                    
+                                        <span class=four></span>alert("Welcome to Prototype from [[Object] Built in Consturctor Fuction] ..."); <br>
+                    
+                                        <span class=four></span>const obj = new Object(); <br>
+                                    
+                                        <span class=four></span>console.log("Your Prototype from [Object] Built In Constructor Function as following ... "); <br>
+                                    
+                                        <span class=four></span>console.log(Object.prototype); <br>
+                                    
+                                        <span class=four></span>console.log(' ---------------------------------------- '); <br>
+                                    
+                                        <span class=four></span>console.log("Your Object Built In Constructor Function] as following ... "); <br>
+
+                                        <span class=four></span>console.log(Object.constructor); <br>
+
+                                        <span class=four></span>console.log(' ---------------------------------------- '); <br>
+                                    
+                                    
+                                        <span class=four></span>alert("Your Prototype from [Object] Built In Constructor Function as following ... "); <br>
+                                        
+                                        <span class=four></span>alert(Object.prototype); <br>
+                    
+                                        <span class=four></span> alert("Your Object Built In Constructor Function] as following ... "); <br>
+                                        
+                                        <span class=four></span>alert(obj.constructor); <br> <br>
+                                    
+                                            
+                                        <span class=four></span>strAll += Object.prototype + <br>
+                                            <span class=five></span> "\n =============================== \n"; <br> <br>
+                                    
+                                        <span class=four></span>document.getElementById("txtarea").innerHTML = strAll; <br><br>
+                                    
+                                    
+                                    <span class=three></span>} else { <br>
+                                        <span class=four></span>alert("Error Entry!"); <br>
+                                    <span class=three></span>} <br> <br>
+                                            
+                                <span class=two></span>} else { <br>
+                                    <span class=three></span>alert("Error Entry!"); <br>                        
+                                <span class=two></span>} <br> <br>
+                    
+                                <span class=two></span>var z = prompt("Press 1 to restart your Choise \n Any other key to Exit... "); <br>
+                    
+                                <span class=two></span>if (z != '1') { <br>
+                                    <span class=there></span>alert("good Bye!"); <br>
+                                <span class=two></span>} <br>
+                    
+                        <span class=one></span>} while (z == '1'); <br>                        
+                    } <br>
+
+                </code>                    
+            </div> -->
+
+            <!--<script type="text/Javascript" src= "JSOOPPrototypeIntro.js"></script> -->
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 16 Video File:</h3>
+
+            <iframe
+                width="100%"
+                height="100%"
+                allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"
+                frameborder="0"
+                preload="yes"
+                src="https://www.youtube.com/embed/watch?v=YKWWKHgxbIc&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=16&controls=0&loop=1&autoplay=1&fs=1"
+            >
+            </iframe>
+
+            <!-- <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\16 JavaScript OOP  Prototype Part 1 Intro.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS OOP Lesson 16 [Prototype Intro ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>     

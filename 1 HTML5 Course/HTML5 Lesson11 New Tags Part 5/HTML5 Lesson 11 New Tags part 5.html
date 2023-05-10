@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 11 [HTML5 New Tags] Part 5 </title>
+    <link rel="stylesheet" href="HTML5 New Tags Part 5.css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">        
+    </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 11 [HTML5 New Tags] Part 5 [Figure & Figcaption]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="[HTML5 New Tags Part 5] Main Concept" > [HTML5 New Tags] Part 5 Concept </a> </li>
+            <li> <a href=#FigureNTag   title="Go to Figure Tag"           > Figure & FigCaption Tag  </a> </li>            
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> Lesson 10 </span> </main>
+
+<!-------------------------------------------------------------------------------------------------------------->                        
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>
+                [HTML5 New Tags] Concept 
+            </header>
+            
+            <article>
+                <p> &gt; This lesson we will display the new Tag [Figure] HTML5 and its attribute [FigCaption].
+                <p> &gt; The New HTML5 Tags in this lesson as following :</p>
+                
+                <ol>
+                    <li> &lt; figure &gt; &nbsp; &nbsp; &lt; /figure &gt; </li>
+                    <li> &lt; figcaption &gt; &nbsp; &nbsp; &nbsp; &nbsp; &lt; /figcaption &gt; </li>             
+                    <li> &lt; code &gt; &nbsp; &nbsp; &nbsp; &nbsp; &lt; /code &gt; </li>                
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+                
+        <section class="FigureNTag" id="FigureNTag">
+            <header>
+                Figure Tag [ &lt; figure &gt; &lt; /figure &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> [Figure Tag] Concept: </h1>
+                    <p> =&gt; [Figure Tag] commonly wide used as an explination container, which can hold different types of contents (Code/s, Image/s, Diagram/s, Flow Chart/s, Statistic Chart/s, Schema/s). </p>
+                    
+                    <p> =&gt; [Figure Tag] has an internal Tag [Figcaption] which is the heading or the legend of this Figure.</p>
+                    
+                    <p> =&gt; [Figcaption Tag] can be upper or lower the Figure.</p>
+                    
+                </header>
+                
+                <header>
+                    <h1> Main & Common Usages: </h1>
+                    <p> =&gt; It can be an additional Tag, Not an Structural Tag. </p>
+                    <p> =&gt; Commonly used in Scientific Articles, Products Title display as an addition illustrative element to the main Subject article. </p>                                    
+                </header>
+                
+                <header class="FigureExp">
+                    <h1>Example (1): Code inside a Figure:</h1>
+                    <p> This Article about using code inside Figure.</p>
+                    <div class="FigureExp1">                                            
+                        <figure>
+                            <code> 
+                                &lt;article&gt; <br>
+                                &nbsp;&nbsp; &lt;header&gt; Example (1)/ Code inside a Figure &lt;/header&gt; <br>
+                                &nbsp;&nbsp; &lt;p&gt; This article about using code inside Figure &lt;/p&gt; <br>
+                                &nbsp;&nbsp; &lt;figure&gt; This article about using code inside Figure<br> 
+                                &nbsp;&nbsp;&nbsp;&nbsp; &lt;code&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is Code Tag where to wirte this code ...<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; &lt;/code&gt; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; &lt;figcaption&gt; Using Code inside the Figure &lt;/figcaption&gt;<br>
+                                        
+                                &nbsp;&nbsp; &lt;/figure&gt; <br>
+                                &lt;/article&gt;
+                            </code>
+                            <figcaption>Using Code inside the Figure [Example(1) HTML5 Coding] </figcaption>
+                        </figure>            
+                    </div>   
+                    
+                <!-------------------------------------------------------------------------->
+                    <h1>Example (2): Single Image inside a Figure:</h1>
+                    <p> This Article about using image inside Figure.</p>
+                    <header class="FigureExp2">
+                        <p>This image inside the figure...</p>
+                        <figure>
+                            <img src=Shadi.jpg alt="My picture" title="Me" />
+                            <figcaption>Using Image inside the Figure</figcaption>
+                        </figure>
+                    </header>
+                    <div class="FigureExp2">                                                                    
+                        <figure>
+                            <code> 
+                                    &lt;header&gt; <br>
+                                    &nbsp;&nbsp; &lt;p&gt; Example (2)/ Single Image inside a Figure &lt;/p&gt; <br>
+                                    &nbsp;&nbsp; &lt;figure&gt; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;img&gt; src="shadi.jpg" alt="My picture" title="Me" &lt;/img&gt;<br> 
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;figcaption&gt; Using Image inside the Figure &lt;/figcaption&gt;<br>
+                                    &nbsp;&nbsp; &lt;/figure&gt; <br>
+                                    &lt;/header&gt;
+                            </code>                                                          
+                            <figcaption> Using single image inside figure [Example (2) Coding HTML5] </figcaption>
+                        </figure>    
+                    </div> 
+<!-------------------------------------------------------------------------------------------------------------->
+                    <h1>Example (3): Several Images inside a Figure:</h1>
+                    <p> This Article about using multiple images inside A Figure.</p>                    
+                    <header class="FigureExp3">
+                        <p>These images inside the figure...</p>
+                        <figure>
+                            <img src=Shadi.jpg alt="My picture" title="Me" />
+                            <img src=Shadi.jpg alt="My picture" title="Me" />
+                            <img src=Shadi.jpg alt="My picture" title="Me" />
+                            <figcaption>Using Several Images inside the Figure</figcaption>
+                        </figure>
+                    </header>
+                    <div class="FigureExp3">                                                                    
+                        <figure>
+                            <code> 
+                                    &lt;article&gt; <br>
+                                    &nbsp;&nbsp; &lt;p&gt; Example (3)/ Single Image inside a Figure &lt;/p&gt; <br>
+                                    &nbsp;&nbsp; &lt;figure&gt; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;img&gt; src="shadi.jpg" alt="My picture" title="Me" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/img&gt;<br> 
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;img&gt; src="shadi.jpg" alt="My picture" title="Me" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/img&gt;<br> 
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;img&gt; src="shadi.jpg" alt="My picture" title="Me" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/img&gt;<br> 
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;figcaption&gt; Using several Images inside the Figure &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/figcaption&gt;<br>
+                                    &nbsp;&nbsp; &lt;/figure&gt; <br>
+                                    &lt;/article&gt;
+                            </code>                                                          
+                            <figcaption> Using several images inside figure [Example (3) Coding HTML5] </figcaption>
+                        </figure>    
+                    </div> 
+                </header>                                                                               
+            </article>                
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Css Lesson 26 [Selectors]</title>
+    <link rel="stylesheet" href="Selectors.css">
+    <style>
+        
+    </style>           
+</head>
+
+<body>
+    <a class="home" href="#title" title="Go to page header">Home</a>
+    <a class="end" href="#footer" title="Go to page footer">End</a>
+    <!------------------------------------------------------------------>
+    <h1 id="title" class="title"> Css Lesson 26 [Selectors]</h1>
+    <!------------------------------------------------------------------>
+    <fieldset class="index">
+        <legend>Index</legend>
+        <ol type="A">
+            <li> <a href="#MainC" title="Go to Main Concept of [Selectors] Property" > [Selectors] Main Concept</a> </li>                        
+            <li> Main Types of Selectors in (Css2): </li>
+            <ol class="Types">
+                <li> <a href="#All" title="Go to type of on [Selectors]: All (*)"                        > Type of [selector] : [ (*) (All) ] </a> </li> 
+                <li> <a href="#DC" title="Go to type of on [Selectors]: DirectChild (>)"                 > Type of [selector] : [ (&gt;) (Direct Child) ] </a> </li>
+                <li> <a href="#FNS" title="Go to type of on [Selectors]: First Direct Next Sibling (+)" > Type of [selector] : [ (+) (First Direct Next Sibling) ] </a> </li>
+                <li> <a href="#ANS" title="Go to type of on [Selectors]: All Next Sibling (~)"           > Type of [selector] : [ (~) (All Next Sibling) ] </a> </li>   
+            </ol>                                            
+        </ol>
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>
+
+    <fieldset id="MainC">
+        <legend>[Selectors] Main Concept</legend>
+        <p> These Symbols is meant by calling specific elements in page with certain conditions.</p>        
+        <p> [Selectors] ara very helpful to programer and developers in coding with (CSS) and Assigning specific porperties to specific element in web-page .</p>        
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>
+    
+    <fieldset id="All" class="All">
+        <legend>Type of [Selector] : [ (*) (All) ]</legend>
+            
+            <h2 class="title1"> Selector: (*) (All) Concept </h2>
+            <p> The Astric Selector means to select all elements in the following range.</p>
+            <p> The Astric Selector can be as public selector of all webpage or all elements in specific range.</p>
+            
+            <h2 class="title1"> Selector: (*) (All) Examples </h2>
+            
+            <h3 class="title0"> (1) Selecting all elements in the whole webpage: </h3>
+            <div> Just writing: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; * {Css Properties} </div>
+            
+            <h3 class="title0"> (2) Selecting all elements with in specific Parent element: </h3>
+            <div> Writing: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; Element Name(Parent) * {Css Properties} </div>
+            
+            <div class="Exp1Parent">
+                This is parent Div (All Elements Will be in the same properties):
+                <div>
+                    This is Child Div
+                    <div>
+                        This is Grand Child Div
+                        <p> This is Child Paragraph of Grand Child Div </p>
+                    </div>
+                </div>
+                <p> This is Child Paragraph </p>
+                <span> This is Child Span </span>
+            </div>
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>    
+    
+    <fieldset id="DC" class="DC">
+        <legend>Type of [Selector] : [ (&gt;) (Direct Child) ]</legend>
+            
+            <h2 class="title1"> Selector: (&gt;) (Direct Child) Concept </h2>
+            <p> The Greater than Selector means to select only the direct Child/s element/s of certain type with in a specific parent element.</p>
+            <p> The Greater than Selector will NOT select a Grand Child element (Indirect Next Child element).</p>
+            <p> The Greater than Selector will NOT run select the parents of determined element. (the Parent of the parent Element)</p>
+            
+            <h2 class="title1"> Selector: (&gt;) (Direct Child) Example </h2>
+            <div> Just writing: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; Parent name &gt; Child name {Css Properties} </div>
+            
+            <h3 class="title0"> Selecting all Direct Childs Paragraphes elements of the Parent and assign unified Properties : </h3>
+            <div> Just writing: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; Parent name &gt; p {Css Properties} </div>                                                                                
+            
+            <div class="Exp1Parent">
+                This is parent Div (All Direct Childs Will be in the same properties):<br><br>                
+                <p> This is Child Paragraph 1 (Direct Child) </p>
+                <div>
+                    This is Child Div
+                    <p> This is Grand Child Paragraph 2 (Indirect Child) </p>
+                </div>
+                <p> This is Child Paragraph 2 (Direct Child) </p>                
+            </div>
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>
+
+<fieldset id="FNS" class="FNS">
+        <legend> Type of [Selector] : [ (+) (First Next Sibling) ] </legend>
+            
+            <h2 class="title1"> Selector: (+) (First Direct Next Sibling) Concept </h2>
+            <p> The Plus Selector means to select the first next element with the same level (with same parent-Sibling-) ONLY.</p>
+            <p> The Plus Selector will select next sibling type writen even if it was Not the next line, but must be with same parent.</p>
+            <p> The Plus Selector will NOT select further more the next sibling of determined element.</p>    
+            
+            <h2 class="title1"> Selector: (+) (First Next Sibling) Example </h2>
+            <div> Just writing: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; Sinbling name + Sibling name {Css Properties} </div>
+            
+            <h3 class="title0"> Selecting the next sibling Paragraph element to div element and assign specific Properties : </h3>
+            <div> Just writing: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; Div + p {Css Properties} </div>                                                                                
+            
+            <div class="Exp1Parent">
+                This is parent Div <br><br>                                
+                <div>
+                    This is Child Div (The First Next Sibling Will be in specific properties):
+                    <p> This is Grand Child Paragraph 2 (Indirect Child) </p>
+                </div>                
+                <p> This is Child Paragraph (The First Next Sibling to Child Div) </p>                
+            </div>
+    </fieldset>
+
+<!------------------------------------------------------------------------------------------------------------------>
+    
+    <fieldset id="ANS" class="ANS">
+        <legend> Type of [Selector] : [ (~) (All Next Siblings) ] </legend>
+            
+            <h2 class="title1"> Selector: (+) (All Direct Next Siblings) Concept </h2>
+            <p> The Hymin Selector means to select All next elements of detected element type with the same level (with same parent-Sibling-).</p>
+            <p> The Hymin Selector will ONLY select next following siblings of detected type writen , and NOT the previous slibling of detected type.</p>            
+            
+            <h2 class="title1"> Selector: (~) (All Next Siblings) Example </h2>
+            <div> Just writing: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; Sinbling name ~ Sibling name {Css Properties} </div>
+            
+            <h3 class="title0"> Selecting All next siblings Paragraph element to div element and assign specific Properties : </h3>
+            <div> Just writing: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; Div + p {Css Properties} </div>                                                                                
+            
+            <div class="Exp1Parent">
+                This is parent Div <br><br>                                                
+                <p> This is Child Paragraph 1  </p>                
+                <div>
+                    This is Child Div (All next Siblings of P element type Will be in the same properties):
+                    <p> This is Grand Child Paragraph 2 (Indirect Child) </p>
+                </div>                
+                <p> This is Child Paragraph 1 (Next Paragraph Sibling 1 to Child Div) </p>
+                <p> This is Child Paragraph 2 (Next Paragraph Sibling 2 to Child Div) </p>
+                <p> This is Child Paragraph 3 (Next Paragraph Sibling 3 to Child Div) </p>                
+            </div>
+    </fieldset>
+
+<!------------------------------------------------------------------------------------------------------------------>
+    
+    
+    
+    <fieldset id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </fieldset>
+        
+</body>
+</html>

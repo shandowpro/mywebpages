@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>13 Learn Object Oriented PHP - Inheritance</title>
+    <link
+      rel="stylesheet"
+      href="13 Learn Object Oriented PHP - Inheritance.css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      13 Learn Object Oriented PHP - Inheritance
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to PHP OOP main Topics">
+            13 Learn Object Oriented PHP - Inheritance Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPCon"
+            title="Go to  [PHP OOP 13 Learn Object Oriented PHP - Inheritance] Concept"
+          >
+            13 Learn Object Oriented PHP - Inheritance Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPImp"
+            title="Go to  [PHP OOP 13 Learn Object Oriented PHP - Inheritance] Importance & Benefits"
+          >
+            13 Learn Object Oriented PHP - Inheritance Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPSyntx"
+            title="Go to  [PHP OOP 13 Learn Object Oriented PHP - Inheritance] Syntax"
+          >
+            13 Learn Object Oriented PHP - Inheritance Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPPract"
+            title="Go to  [PHP OOP 13 Learn Object Oriented PHP - Inheritance] Practical Applications"
+          >
+            13 Learn Object Oriented PHP - Inheritance Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <main class="Welcome">
+      Welcome to PHP Course
+      <span> 13 Learn Object Oriented PHP - Inheritance</span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          PHP [PHP OOP 13 Learn Object Oriented PHP - Inheritance] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>PHP OOP 5 [Inheritance] used Operator {extends}</li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPCon" id="PHPCon">
+        <header>
+          <h3>[PHP OOP Inheritance] Concept:</h3>
+        </header>
+
+        <h2>
+          =&gt; PHP OOP [Inheritance] : <br />
+          <ul>
+            <li>
+              Main Concept =&gt; <br />
+              <p>
+                It is a system to copying all Class Properties & Methods to
+                another class
+              </p>
+              <p>It is usually used by any OOP System</p>
+              <p>
+                This system allowing beside copying => to add addition
+                Properties & Methods in the new Class
+              </p>
+              <p>The Inherited Method can not be changed in the new Class</p>
+            </li>
+          </ul>
+        </h2>
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="PHPImp" id="PHPImp">
+        <header>
+          <h3>
+            PHP [PHP OOP 13 Learn Object Oriented PHP - Inheritance] Importance
+            & Benefits :
+          </h3>
+        </header>
+
+        <p>
+          [Inheritance] => Is very common and criticaly to use in saving time in
+          creating new Class with any OOP application and PHP script <br />
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPSyntx" id="PHPSyntx">
+        <header>
+          <h3>
+            [ PHP OOP [13 Learn Object Oriented PHP - Inheritance] Syntax &
+            Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Following is a simple syntax code written Emded in a HTML page
+          => <br />
+          Printing string text value from the server in the user website page
+        </p>
+
+        <p>=&gt; [Inheritance] => <br /></p>
+
+        <p>Syntax: <br /></p>
+        <div id="Code" class="Code">
+          <span class="one"></span> &lt; ?php <br />
+
+          <span class="two"></span> A) Defining new Class {ClassName} with
+          [default Property value] & [Method using (Parameter) Variable] :
+          <br />
+
+          <span class="three"></span> class ClassName { <br />
+
+          <span class="four"></span> // Class Properties Definging (public
+          Variable) [with Null Property Value] : <br />
+          <span class="four"></span> private propertyName1; <br />
+
+          <span class="four"></span> // Class Method Defining to access to a
+          certain Property [To change the value] with Using (Parameter + $this +
+          Incription(sha1() ) ) : <br />
+          <span class="four"></span> public function MethodName1($Par1 , $Par2 ,
+          $Par3 ) { <br />
+          <span class="five"></span> $this->propertyName1 = $Par1; <br />
+          <span class="five"></span> $this->propertyName2 = $Par2; <br />
+          <span class="five"></span> $this->propertyName3 = $Par3; <br />
+          <span class="four"></span> } <br /><br />
+
+          <span class="three"></span> } <br /><br />
+
+          <span class="two"></span> B) Inheriting new Class {ClassName1} with
+          [Addition Property of default value] & [Additon Method] : <br />
+
+          <span class="three"></span> class ClassName2 { <br />
+
+          <span class="four"></span> // Class Properties Definging (public
+          Variable) [with Null Property Value] : <br />
+          <span class="four"></span> public propertyName4; <br />
+
+          <span class="four"></span> // Class Method Defining to access to a the
+          new Property of the second class [To change the value] with Using
+          (Parameter + $this + Incription(sha1() ) ) : <br />
+          <span class="four"></span> public function MethodName2() { <br />
+          <span class="five"></span> echo $this->propertyName4; <br />
+          <span class="four"></span> } <br /><br />
+
+          <span class="three"></span> } <br /><br />
+
+          <span class="three"></span> Defining/Creating new Object {objName}
+          from the first class [ClassName] : <br />
+          <span class="four"></span> $objName= new ClassName(); <br />
+
+          <span class="three"></span> Defining/Creating new Object {objName2}
+          from the second class [ClassName2] : <br />
+          <span class="four"></span> $objName2= new ClassName2(); <br />
+          <br />
+
+          <span class="three"></span> Calling / Proccessing first Object
+          {objName} from the first Class -> {objName}'s Old Basic Method [To
+          change the value of the value of the property] (with 3 parameters) :
+          <br />
+          <span class="four"></span> $objName-> MethodName1('value1', 'value2',
+          'value3'); <br />
+          <br />
+
+          <span class="three"></span> Calling / Proccessing second Object
+          {objName2} from the second Class -> {objName}'s Inherited Method [To
+          change the value of the value of the property] (with 3 parameters) :
+          <br />
+          <span class="four"></span> $objName2-> MethodName1('value1', 'value2',
+          'value3'); <br />
+          <br />
+
+          <span class="three"></span> Calling / Proccessing second Object
+          {objName2} from the second Class -> {objName}'s new Method [To change
+          the value of the value of the property] (with 3 parameters) : <br />
+          <span class="four"></span> $objName2-> MethodName2('value1', 'value2',
+          'value3', 'value4'); <br />
+          <br />
+
+          <span class="three"></span> Printing the Object created from the first
+          Class {after changing by method} : <br />
+          <span class="four"></span> echo '&lt; pre &gt;'; <br />
+          <br />
+          <span class="four"></span> print_r ($objName); <br />
+          <br />
+          <span class="four"></span> echo '&lt; /pre &gt;'; <br />
+          <br />
+
+          <span class="three"></span> Printing the Object created from the
+          second Class {after changing by method} : <br />
+          <span class="four"></span> echo '&lt; pre &gt;'; <br />
+          <br />
+          <span class="four"></span> print_r ($objName2); <br />
+          <br />
+          <span class="four"></span> echo '&lt; /pre &gt;'; <br />
+          <br />
+
+          //=========================================================== <br />
+          <br />
+
+          <p>
+            =&gt; PHP new Syntax of the [Inheritance] (2) Applications as
+            following : <br />
+          </p>
+
+          <ol type="A">
+            <li>
+              First Example => Inheriting a Class with no addition properties or
+              Methods with in the new Class
+            </li>
+            <li>
+              Second Example => Inheriting a Class with addition properties or
+              Methods with in the new Class
+            </li>
+          </ol>
+          <hr />
+          //=========================================================== <br />
+          <br />
+          <br /><br />
+        </div>
+
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPPract" id="PHPPract">
+        <header>
+          <h3>PHPOOP [Inheritance] General Practical Applications :</h3>
+        </header>
+
+        <p>In this lesson There is no appplied Examples = > as following :</p>
+
+        <ol type="A">
+          <li>
+            First Example => Definig Class {AppleDevices} => [Creating new Class
+            {Apple Device with non default values of Properties ()} + {(2)
+            Constants + (2) Methods [using the Constant & $ this inside methnod]
+            } + (1)Object[iphone] {iphone6plus with Customized Values} +
+            Printing Object var Dump] , and including the following steps :
+            <br />
+            <ul>
+              <li>
+                {FIRST CLASS} : efining and Creating Class [AppleDevice] {with
+                properties default} : <br />
+                <ul>
+                  <li>Defining the Class Properties Values</li>
+                  <li>
+                    Method (using Parameters) within the Method of -> To [Change
+                    and Displaying all Properties values]
+                  </li>
+                </ul>
+              </li>
+              <li>
+                {SECOND CLASS} : Inhireting a new Class [Sony] from the old
+                Class [AppleDevice]
+              </li>
+
+              <li>
+                (First Object) : [iphone6plus] => Defining and Creating new
+                Object from the class first {AppleDevice}
+              </li>
+
+              <li>
+                (First Object) : [iphone6plus] => Processing the Old Method
+                {DisplayData} : [Changing and Displaying all properties]
+              </li>
+
+              <li>
+                (First Object) : [iphone6plus] => Printing all properties of
+                {object:iphone6plus} after changing by method [Changing and
+                Displaying all properties]
+              </li>
+
+              <li>
+                (Second Object) : [sony] => Defining and Creating new Object
+                from the class {Sony}
+              </li>
+
+              <li>
+                (Second Object) : [sony] => Processing the Inherited Method
+                {DisplayData} : [Changing and Displaying all properties] {The
+                Inherited Method}
+              </li>
+
+              <li>
+                (Second Object) : [sony] => Printing all properties of
+                {object:sony} after changing by method [Changing and Displaying
+                all properties]
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            Second Example => Inheriting a Class with addition properties or
+            Methods with in the new Class , and including the following steps :
+            <br />
+            <ul>
+              <li>
+                {FIRST CLASS} => Defining and Creating Class [AppleDevice] {with
+                properties default} : <br />
+                <ul>
+                  <li>Defining the Class Properties Values</li>
+                  <li>
+                    Method (using Parameters) within the Method of -> To [Change
+                    and Displaying all Properties values]
+                  </li>
+                </ul>
+              </li>
+              <li>
+                {SECOND CLASS} => Inhireting a new Class [Sony1] from the old
+                Class [AppleDevice1] : <br />
+                <ul>
+                  <li>Adding new Properites</li>
+                  <li>Adding new Methods</li>
+                </ul>
+              </li>
+              <li>
+                (First Object) : [iphone7plus] => Defining and Creating new from
+                the class {AppleDevice1}
+              </li>
+              <li>
+                (First Object) : [iphone7plus] => Processing the Old Method
+                {DisplayData} : [Changing and Displaying all properties ]
+              </li>
+              <li>
+                (First Object) : [iphone7plus] => Printing all properties of
+                {object:iphone7plus} after changing by method [Changing and
+                Displaying all properties]
+              </li>
+              <li>
+                (First Object) : [iphone7plus] => Printing all properties of
+                {object:iphone7plus} after changing by method [Changing and
+                Displaying all properties]
+              </li>
+
+              <li>
+                (Second Object) : [sony] => Defining and Creating new from the
+                class {Sony}
+              </li>
+              <li>
+                (Second Object) : [sony] => Processing the Inherited Method
+                {DisplayData} : [Changing and Displaying all properties ]
+              </li>
+              <li>
+                (Second Object) : [sony] => Printing all properties of
+                {object:sony} after changing by method {DisplayData} : [Changing
+                and Displaying all properties]
+              </li>
+              <li>
+                (Second Object) : [sony] => Processing the New Method
+                {DisplayProps} : [Changing and Displaying all properties ]
+              </li>
+              <li>
+                (Second Object) : [sony] => Printing all properties of
+                {object:sony} after changing by method {DisplayProps} :
+                [Changing and Displaying all properties]
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+
+        <section id="sec" class="txtarea">
+          <a
+            class="btn"
+            href="http://localhost/PHPOOP%20Course/13%20Learn%20Object%20Oriented%20PHP%20-%20Inheritance/13%20Learn%20Object%20Oriented%20PHP%20-%20Inheritance.php"
+          >
+            {Main Page} [Display] => {13 Learn Object Oriented PHP -
+            Inheritance} => Lesson 13 PHP File Webpage by Localhost
+          </a>
+          <br />
+          <br />
+
+          <a class="btn" href="13 Learn Object Oriented PHP - Inheritance.php">
+            {Main Page} [Source Code] => {13 Learn Object Oriented PHP -
+            Inheritance} => Lesson 13 PHP File Webpage by Localhost
+          </a>
+        </section>
+        <br />
+
+        <!-- <section id=sec class=txtarea >                                  
+                  <a class=btn href="http://localhost/PHP%20Course/95%20PHP%205%20In%20Arabic%20-%20Filter%20-%20Whats%20Filter%20&%20Why%20To%20Use%20it/check.php">  
+                    {Check Page} [Display] => {13 Learn Object Oriented PHP - Inheritance} => {check.php} Webpage by Localhost 
+                </a> <br> <br>             
+                
+                <a class=btn href="check.php">  
+                    {Check Page} [Source Code] => {13 Learn Object Oriented PHP - Inheritance} => {check.php} Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+        <!-- <script  src="14 PHP OOP  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="VideoSection">
+        <h3>Lesson 13 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=cuNSv4QfvbQ&list=PLDoPjvoNmBAxXTPncg0W4lhVS32LO_xtQ&index=13&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\OOP PHP\13 Learn Object Oriented PHP  - Inheritance.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to 13 Learn Object Oriented PHP - Inheritance");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

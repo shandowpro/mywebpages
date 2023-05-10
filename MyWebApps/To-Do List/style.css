@@ -1,0 +1,169 @@
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1em;
+  background: url(paper.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  background-position: 0px -125px;
+  margin: 0;
+  padding: 40px 0 0 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-right: 5px;
+  border-radius: .25rem !;
+  top:-30px; 
+  color: black;
+  font-size:15px;
+}
+
+ button {
+    top: -20px;
+ }
+.dateinput {
+    box-sizing: border-box;
+    width: 500px;
+    margin-right: 5px;
+    border-radius: .25rem !important;
+}
+
+h1 {
+  margin: -10px 0 10px 0;
+  font-size: 35px;
+  color: black;
+  font-weight: bold;  
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0px 0px 10px -200px;
+  width:auto;
+}
+
+li{
+  width:500px;
+  color:black;
+  overflow-wrap:normal;
+  margin:auto;
+}
+
+#add {
+  margin-right: 5px;
+  width: 100px;
+}
+
+#add, #clear {
+  border-radius: .25rem !important;
+  font-size:20px;
+    transition:all .5s ease-in-out ;
+}
+
+#add:hover, #clear:hover {
+  background-color: #6c757d !important;
+  font-weight: bold;
+}
+
+.deletebutton {
+  border-color: white;
+  padding: 0;
+  height: 25px;
+  width: 25px;
+  visibility: hidden;
+}
+
+.deletebutton:hover {
+  color: silver;
+}
+
+.edit {
+  border-color: transparent;
+  height: 40px;
+}
+
+.edit:focus-visible {
+  outline: transparent auto 1px;
+}
+
+.show {
+  visibility: visible;
+}
+
+.width {
+  width: 15%;
+}
+
+.margin {
+  margin: auto;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.itemdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+@media only screen and (max-width: 1024px) {
+    .w-25 {
+      width: 35% !important;
+    }
+
+    .width {
+      width: 25%;
+    }
+
+  body {
+    font-size: 2em;
+    background-size: auto 1750px;
+    background-position: -775px -300px;
+    padding-top: 60px;
+  }
+
+  h1 {
+    margin: 95px 0 30px 0;
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+   body {
+      background-size: auto;
+      background-position: -550px -200px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 65px 0 10px 0;
+  }
+
+  li {
+    font-size: .75em;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .w-25 {
+    width: 75% !important;
+  }
+
+  body {
+  font-size: 1.5em;
+  background-size: auto;
+  background-position: -625px -200px;
+  }
+}
+
+@media only screen and (max-width: 285px) {
+  .width {
+    width: 65%;
+  }
+}

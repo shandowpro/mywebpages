@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 21 [3D Transform - Backface Visibility] </title>
+    <link rel="stylesheet" href="CSS3 Lesson21 3D Transform - Backface Visibility.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 21 [3D Transform - Backface Visibility]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 3D Transform - Backface Visibility main Topics">
+                [ 3D Transform - Backface Visibility ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to 3D Transform - Backface Visibility [3D Transform - Backface Visibility ] Concept">
+                [ 3D Transform - Backface Visibility ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to 3D Transform - Backface Visibility [3D Transform - Backface Visibility ] Importance & Benefits">
+                [ 3D Transform - Backface Visibility ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to 3D Transform - Backface Visibility [3D Transform - Backface Visibility ] Syntax">
+                [ 3D Transform - Backface Visibility ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to 3D Transform - Backface Visibility [3D Transform - Backface Visibility ] Practical Applications">
+                [ 3D Transform - Backface Visibility ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 21 [3D Transform - Backface Visibility ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                3D Transform - Backface Visibility Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [3D Transform - Backface Visibility] Concept. </li>                       
+                    
+                    <li> [3D Transform - Backface Visibility] Importance & Benefits. </li>
+
+                    <li> [3D Transform - Backface Visibility] Syntax [Exmaple]. </li>
+                    
+                     <li> [3D Transform - Backface Visibility] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    
+                    <ul>
+                        <li> Basic concept about {Transform-Origin} , and it;s advanced features to contol the Transform Axe  </li>
+                        <li> Basic concept about {Transform-Style} , and it's advanced features to control the preserving the 3D tranform</li>                            
+                        <li> The Differences between the {Transform-origin} & {perspective-origin} </li>                         
+                    </ul>                   
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [3D Transform - Backface Visibility] Concept: </h3>
+            </header>
+                        
+            <ul>
+                <li>A) {Transform-Origin} main Concept :</li>
+                    <ol>
+                        <li> It a contorling tool of transforming aixe of the Element while performing the Transform effect </li>
+                                            
+                        <li> This property Require {transforming} Effect first to be Activated on the Element </li>                                    
+                                                                                    
+                        <li> It can accept the following types of aspects/values/Parameters (the Same of {perspective-origin} ): </li> <br> 
+                    
+                            <ul>                        
+                                <li> [Percentage]  => by (X %) (Y %) </li>
+                                <li> [Direction Name]  => by Direction name (left, right , top , botttom , center)  </li>                                                                                        
+                            </ul>                    
+                    
+                        <li>The Differences between {Transform-origin} & {perspective-origin} as following: </li>
+                            <ul>
+                                <li>{Transform-origin} => Controling (position) of the Element Trasnforming Axe {regaless of the Type of the Transforing}</li>
+                                <li>{perspective-origin} => Controling (position) of the viewer of the Element Trasnforming Axe {regaless of the Type of the Transforing}</li>
+                            </ul>
+                    </ol>
+                                            
+                <li> B) {Transform-Style} :</li>                    
+                    <ol>
+                        <li> It is a tool to control the {3D} Transforming element Display/Show. and it is being set into the Parent Container. And (2) Following options :</li>
+                            <ul>
+                                <li> [Flat]: It is the Default opition of this property. and it is to keep the transforming Element with Flat mode  </li>
+                                <li> [Preserve-3d]: This option keep the transforming Element with 3D mode {parent Containe & it's Children Elements} </li>
+                            </ul>                        
+                        <li> [Flat, reserve-3d] => [Flat]: This mode will ont display all kinds of the Transforming Effect in {3D} Successfully [specially the Z-Effect types] such as {translateZ} <br>
+                                     but in [reserve-3d] :will display all featrues of all kinds of 3d Successfully  </li>                    
+                    </ol>
+            </ul>            
+                        
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+            <section class="CSS3Imp" id="CSS3Imp">
+                <header>
+                    <h3> [3D Transform - Backface Visibility ] Importance & Benefits: </h3>
+                </header>
+                
+                <p> =&gt; [3D Transform - Backface Visibility ] : This Advanced property enabling the following features & imporatance : <br>            
+                    <ul>                                                                
+                        <li> Adding Extraodinary features to the 3D-Transforming Elements, by controling the Axies of Transforming Effects  </li>                                                
+                        <li> Great control of 3d Environment {Amount of 3D Scale & Angle of User Viwe}  </li>  
+                        <li> Ability of using multiple Child Elements inside the parent Container with Different kinds of transforming types </li>   
+                        <li> Ability to have more control on activating 3D mode on spcsific containers & deactivating it on the others </li>                           
+                        <li> 3D Backface Visibility property will provide unique effects specilaly when merged with 
+                            other 3D Transform properties animations effects  </li>                        
+                    </ul>                                                 
+            </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+            <section class="CSS3Syntx" id="CSS3Syntx">
+                <header>
+                    <h3> [ 3D Transform - Backface Visibility] Syntax & Methods: </h3>
+                </header>
+                            
+                <div id="Code" class="Code">
+                    <span class='one'></span> // *) [3D Transform - Backface Visibility] Syntax as following :<br><br>                                                    
+                    
+                        <span class='two'></span> //a)  [HTML] file  : <br>                                          
+                        
+                            <span class=three></span> &lt; div class='container' &gt; <br>                            
+                                <!-- FaceCard -->
+                                <span class=four></span> &lt;div class='Face' &gt; <br>
+                                    <span class=five></span> &lt; h1 &gt; Face Header  &lt; /h1 &gt; <br>                                                      
+                                    <span class=five></span> &lt; p &gt; Face Card Details... &lt; /p &gt; <br>                                                                                      
+                                    <span class=five></span> &lt; ul &gt; <br>                                                                                      
+                                        <span class=six></span> &lt; li &gt; Detail 1 &lt; /li &gt; <br>                                                                                      
+                                        <span class=six></span> &lt; li &gt; Detail 2 &lt; /li &gt; <br>                                                                                      
+                                        <span class=six></span> &lt; li &gt; Detail 3 &lt; /li &gt; <br>                                                                                                                      
+                                    <span class=five></span> &lt; /ul &gt; <br>                                                                                      
+                                <span class=four></span> &lt; /div &gt;  <br>                        
+                                
+                                <!-- BackCard -->
+                                <span class=four></span> &lt;div class='Back' &gt; <br>
+                                    <span class=five></span> &lt; h1 &gt; Back Header  &lt; /h1 &gt; <br>                                                      
+                                    <span class=five></span> &lt; p &gt; Back Card Details... &lt; /p &gt; <br>                                                                                      
+                                    <span class=five></span> &lt; ul &gt; <br>                                                                                      
+                                        <span class=six></span> s&lt; li &gt; Detail 1 &lt; /li &gt; <br>                                                                                      
+                                        <span class=six></span> &lt; li &gt; Detail 2 &lt; /li &gt; <br>                                                                                      
+                                        <span class=six></span> &lt; li &gt; Detail 3 &lt; /li &gt; <br>                                                                                                                      
+                                    <span class=five></span> &lt; /ul &gt; <br>                                                                                      
+                                <span class=four></span> &lt; /div &gt;  <br>                        
+                                                                
+                            <span class=three></span> &lt; /div &gt;  <br>                                
+
+                            <br> <br>                                        
+
+            // ------------------------------------------------------------------------------ <br><br>
+            
+                //  [3D Transform - Create Flip Card] + [Flipping card by 3d-Transform: rotateY() + rotateX() ] Syntax as following :<br><br> 
+
+                    <span class=two></span> // A) {3D Transform - Create Vertical Flipping Card} Example1: {RotateY Effect} Syntaxes:  <br>
+                                            
+                        <span class=three></span> * {  <br>
+                            <span class=four></span>  box-sizing: border-box; ; <br>
+                        <span class=three></span>  }  <br>                                              
+
+                        <!-- a) Container:  3d-transforming : Vertical Rotating Effect  -->
+                        <span class=three></span> .container {  <br>                                                                              
+                            <span class=four></span> perspective: 1000px; <br>
+                            <span class=four></span> widht:500px; <br>                                                                                                                          
+                            <span class=four></span> height: 600px; <br>                                                                                                                          
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> position: ralative; <br>                            
+                        <span class=three></span>  }  <br>                                              
+                    <!-- ------------------------------------------------ -->                                                    
+                        <span class=three></span> .container:hover {  <br>                                                                                                                  
+                            <span class=four></span> transform: rotateY(180deg); <br>                                                                                    
+                            <span class=four></span> transform-style: preserve-3d; <br>                                                                                    
+                            <span class=four></span> transform-origin: center center; <br>                                                                                    
+                        <span class=three></span>  }  <br>                                              
+                        <!-- ------------------------------------------------ -->                                                    
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                            
+                        
+                        <!-- b) CardFace :  -->
+                        <span class=three></span> .Face {  <br>                                                  
+                                                                
+                            <span class=four></span> transform-style: preserve-3d;<br>
+                            <span class=four></span> position: absolute; <br>                            
+                            <span class=four></span> position: z-index: 2; <br>                            
+                            <span class=four></span> <br>                            
+                            <span class=four></span> position: absolute; <br>                            
+                            <span class=four></span> position: absolute; <br>                            
+                            <span class=four></span> position: absolute; <br>                            
+                            <span class=four></span> position: absolute; <br>                            
+                            
+                            font-size: 30px;
+                            line-height: 400px;
+                            text-align: center;    
+                            color:#000;
+                            background-color: blue;
+                            backface-visibility: hidden;    
+                            left:0;     
+                            top:0;
+                            width:100%;    
+                            height:100%;                                
+                        <span class=three></span>  }  <br>                                                                                                              
+                            
+                        <span class=three></span> .Face:hover {  <br>                                                  
+                            <span class=four></span> Transform: rotate(360deg) ; <br>
+                            <span class=four></span> Transform-origin: center right; <br>
+                        <span class=three></span>  }  <br>                                       
+                        <!-- ------------------------------------------------ -->                                
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                                                
+                        <!-- C) CardBack :  -->
+                        <span class=three></span> .Back {  <br>                                                  
+                            <span class=four></span> position: absolute; <br>
+                            <span class=four></span> left:0px; <br>
+                            <span class=four></span> top:0px; <br>           
+                            <span class=four></span> background-color:#f00; <br>                                                                   
+                            <span class=four></span> transition: all 1s ease-in-out ; <br>
+                        <span class=three></span>  }  <br>                                                                                                              
+                            
+                        <span class=three></span> .Back:hover {  <br>                                                  
+                            <span class=four></span> Transform: rotate(360deg) ; <br>
+                            <span class=four></span> Transform-origin: center right; <br>
+                        <span class=three></span>  }  <br>                                                               
+                        <!-- ------------------------------------------------ -->                                                                    
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+
+                <span class=two></span> // B) {3D Transform - Create Horizontal Flipping Card} Example2: {RotateX Effect} Syntaxes:  <br>
+                    <span class=three></span> body {  <br>
+                        <span class=four></span> perspective: 600px ; <br>
+                    <span class=three></span>  }  <br>                                              
+
+                    <!-- a) Container:  3d-transforming : Rotating Effect  -->
+                    <span class=three></span> .container {  <br>                                                                              
+                        <span class=four></span> widht:500px; <br>                                                                                                                          
+                        <span class=four></span> height: 600px; <br>                                                                                                                          
+                        <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=four></span> dispaly: block; <br>                                                                                                                              
+                        <span class=four></span> position: ralative; <br>                            
+                    <span class=three></span>  }  <br>                                              
+                    <!-- ------------------------------------------------ -->                                                    
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                            
+                    
+                    <!-- b) CardFace :  -->
+                    <span class=three></span> .Face {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#f00; <br>                                                                   
+                        <span class=four></span> transition: all 1s ease-in-out ; <br>
+                    <span class=three></span>  }  <br>                                                                                                              
+                        
+                    <span class=three></span> .Face:hover {  <br>                                                  
+                        <span class=four></span> Transform: rotate(360deg) ; <br>
+                        <span class=four></span> Transform-origin: center right; <br>
+                    <span class=three></span>  }  <br>                                       
+                    <!-- ------------------------------------------------ -->                                
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                                                
+                    
+                    <!-- C) CardBack :  -->
+                    <span class=three></span> .Back {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#f00; <br>                                                                   
+                        <span class=four></span> transition: all 1s ease-in-out ; <br>
+                    <span class=three></span>  }  <br>                                                                                                              
+                        
+                    <span class=three></span> .Back:hover {  <br>                                                  
+                        <span class=four></span> Transform: rotate(360deg) ; <br>
+                        <span class=four></span> Transform-origin: center right; <br>
+                    <span class=three></span>  }  <br>                                                               
+                <!-- ------------------------------------------------ -->                                                                    
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                                                                
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="JSDOMPract" >
+
+            <header>
+                <h3> [3D Transform - Backface Visibility] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following is the Applied example of { [3D-Transform-origin] & [3d-Transform-style] with different kinds of Transforms } : <br>
+                
+            <p> (2) Fieldsets contain (3) sections for each (of 3 types of transform types) && Each Section has all options available in the Property of this section as following:  </p>
+            
+            <ul>
+                <li> A) First Fieldset: { Tranform-origin }: And it has (3) Sections as following :  </li>                                                        
+                    <ol>
+                        <li> Rotate() Effect : and it has (6) sub Secitons as follwing : </li>                      
+                            <ul>
+                                <li> (1) Sub Section : Rotate Transform With [transform-origin: right center] </li>
+                                <li> (2) Sub Section : Rotate Transform With [transform-origin: left center] </li>
+                                <li> (3) Sub Section : Rotate Transform With [transform-origin: top center] </li>
+                                <li> (4) Sub Section : Rotate Transform With [transform-origin: bottom center] </li>
+                                <li> (5) Sub Section : Rotate Transform With [transform-origin: center center] </li>
+                            </ul>
+
+                        <li> Transalte() Effect </li>        
+                            <ul>
+                                <li> (1) Sub Section : Transalte Transform With [transform-origin: right center] </li>
+                                <li> (2) Sub Section : Transalte Transform With [transform-origin: left center] </li>
+                                <li> (3) Sub Section : Transalte Transform With [transform-origin: top center] </li>
+                                <li> (4) Sub Section : Transalte Transform With [transform-origin: bottom center] </li>
+                                <li> (5) Sub Section : Transalte Transform With [transform-origin: center center] </li>
+                            </ul>
+
+                        <li> Scale() Effect </li>        
+                            <ul>
+                                <li> (1) Sub Section : Scale Transform With [transform-origin: right center] </li>
+                                <li> (2) Sub Section : Scale Transform With [transform-origin: left center] </li>
+                                <li> (3) Sub Section : Scale Transform With [transform-origin: top center] </li>
+                                <li> (4) Sub Section : Scale Transform With [transform-origin: bottom center] </li>
+                                <li> (5) Sub Section : Scale Transform With [transform-origin: center center] </li>
+                            </ul>
+                    </ol>   
+            
+                <!-- ========================================================================= -->
+                <li> B) Second Fieldset: { Transform-Style }: And it has (3) Sections with fixed tranform-origin: center center as following :  </li>                                                        
+                    <ol>
+                        <li> Rotate() Effect : and it has (2) sub Secitons as following : </li>                      
+                            <ul>
+                                <li> (1) Sub Section : Rotate(360deg) Transform With [transform-style: flat] </li>
+                                <li> (2) Sub Section : Rotate(360deg) Transform With [transform-style: preserve-3d] </li>                                
+                            </ul>
+                            
+                        <li> Translate() Effect </li>        
+                            <ul>
+                                <li> (1) Sub Section : TranslateZ Transform With [transform-style: flat] </li>
+                                <li> (2) Sub Section : TranslateZ Transform With [transform-style: preserve-3d] </li>                                                                
+                            </ul>
+                            
+                        <li> Scale() Effect </li>        
+                            <ul>
+                                <li> (1) Sub Section : ScaleZ Transform With [transform-style: flat] </li>
+                                <li> (2) Sub Section : ScaleZ Transform With [transform-style: preserve-3d] </li>
+                            </ul>
+                    </ol>   
+            </ul>                                                
+
+            <br>
+            <hr>
+            <br> <br> <hr> <hr> <hr>                               
+            <!-- ========================================================================= -->                                        
+                
+            <!-- A) Vertical Flipping Card Application  -->
+            <fieldset class='VerFather'>                                                  
+                <div class='VerFront'> Front Face </div>                    
+                <div class='VerBack'> Back Face </div>                                                                    
+            </fieldset>    <br> <br>
+            
+            <!-- -------------------------------------------------------------------------------------- -->                                                            
+            
+            <!-- B) Horizontaly Flipping Card Application  -->
+            <fieldset class='HorFather'>                                                  
+                <div class='HorFront'> Front Face </div>                    
+                <div class='HorBack'> Back Face </div>                                                                    
+            </fieldset>    
+        </section>            
+
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 21 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=RtNLlANWSgs&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=21&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\21 Css3  - 3D Transform - Backface Visibility.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 21 [3D Transform - Backface Visibility ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

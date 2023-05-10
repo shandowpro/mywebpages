@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Css Lesson 27 [Pseudo Classes]</title>
+    <link rel="stylesheet" href="Pseudo Classes.css">
+    <style>
+        
+    </style>           
+</head>
+
+<body>
+    <a class="home" href="#title" title="Go to page header">Home</a>
+    <a class="end" href="#footer" title="Go to page footer">End</a>
+    <!------------------------------------------------------------------>
+    <h1 id="title" class="title"> Css Lesson 27 [Pseudo Classes]</h1>
+    <!------------------------------------------------------------------>
+    <fieldset class="index">
+        <legend>Index</legend>
+        <ol type="A">
+            <li> <a href="#MainC" title="Go to Main Concept of [Pseudo Classes] Property" > [Pseudo Classes] Main Concept</a> </li>                        
+            <li> Main Types of Pseudo Classes in (Css2): </li>
+            <ol class="Types">
+                <li> <a href="#FLetter" title="Go to type of on [Pseudo Class]: First-Letter" > Type of [Pseudo Class] : [ First-Letter ] </a> </li> 
+                <li> <a href="#FLine" title="Go to type of on [Pseudo Class]: First-Line"     > Type of [Pseudo Class] : [ First-Line ] </a> </li>
+                <li> <a href="#FChild" title="Go to type of on [Pseudo Class]: First-Child"   > Type of [Pseudo Class] : [ First-Class ] </a> </li>
+                <li> <a href="#Before" title="Go to type of on [Pseudo Class]: Before"        > Type of [Pseudo Class] : [ Before ] </a> </li>   
+                <li> <a href="#After" title="Go to type of on [Pseudo Class]: After"          > Type of [Pseudo Class] : [ After ] </a> </li>   
+            </ol>                                            
+        </ol>
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>
+
+    <fieldset id="MainC">
+        <legend>[Pseudo Classes] Main Concept</legend>
+        <p> These Special Reserved Classes in CSS help to allocate specific Elements and assigning it with special Properties.</p>        
+        <p> [Pseudo Classes] ara very helpful to programer and developers in coding with (CSS) and Assigning specific porperties to specific element/multiple elements in web-page .</p>        
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>
+    
+    <fieldset id="FLetter" class="FLetter">
+        <legend>Type of [Pseudo Class] : [ First-Letter ]</legend>
+            
+            <h2 class="title1"> Pseudo Class: First-Letter Concept </h2>
+            <p> The First-Letter Pseudo Class means to Determine the first Letter of detected element to allocate it with special properties by Css.</p>
+            <p> The First-Letter Pseudo Class can be initiated to muliple elements by mixind this First-Line Type with other types of Pseudo Classes & Selectors.</p>
+            
+            <h2 class="title1"> Pseudo Class: First-Letter Examples </h2>
+            
+            <h3 class="title0"> (1) Specifing first letter of a simple Paragraph with special Properties: </h3>
+            <div> Write: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; P: First-Letter {Css Properties} </div>
+            
+            <div class="Exp1">
+                <p> This is Noraml Paragraph </p>    
+            </div>
+            
+            <br>
+                    
+            <h3 class="title0"> (2) Specifing first letter of multiple Divs with special Properties:: </h3>
+            <div> Write: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; div: First-Letter {Css Properties} </div>
+            
+            <div class="Exp2">
+                <div> This is Noraml Div 1 </div>
+                <div> This is Noraml Div 2 </div>
+                <div> This is Noraml Div 3 </div>    
+            </div>
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>    
+    
+    <fieldset id="FLine" class="FLine">
+        <legend>Type of [Pseudo Class] : [ First-Line ]</legend>
+            
+            <h2 class="title1"> Pseudo Class: First-Line Concept </h2>
+            <p> The First-Line Pseudo Class means to Determine the first Line of detected element to allocate it with special properties by Css.</p>
+            <p> The First-Line Pseudo Class can be initiated to muliple elements by mixing this First-Line Type with other types of Pseudo Classes & Selectors.</p>
+            <p> The First-Line Pseudo Class will be applied automatically on First-Line of determined Element in webpage even if the page zoom changed .</p>
+            
+            <h2 class="title1"> Pseudo Class: First-Line Examples </h2>
+            
+            <h3 class="title0"> (1) Specifing first line of a simple Paragraph with special Properties: </h3>
+            <div> Write: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; P: First-Line {Css Properties} </div>
+            
+            <div class="Exp1">
+                <p> This is the first line of  Paragraph . This is normal Paragraph. This is normal Paragraph.This is normal Paragraph.
+                This is normal Paragraph.This is normal Paragraph.This is normal Paragraph.This is normal Paragraph.
+                This is normal Paragraph.This is normal Paragraph.This is normal Paragraph.This is normal Paragraph.
+                This is normal Paragraph.This is normal Paragraph.This is normal Paragraph.This is normal Paragraph.
+                </p>    
+            </div>
+            
+            <br>
+                    
+            <h3 class="title0"> (2) Specifing first line of multiple Divs with special Properties:: </h3>
+            <div> Write: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; div: First-Iine {Css Properties} </div>
+            
+            <div class="Exp2">
+                <div> This is the first line of Div 1. This is Noraml Div 1. This is Noraml Div 1. This is Noraml Div 1. This is Noraml Div 1. This is Noraml Div 1. This is Noraml Div 1. This is Noraml Div 1. This is Noraml Div 1. This is Noraml Div 1. This is Noraml Div 1. This is Noraml Div 1. This is Noraml Div 1. This is Noraml Div 1. This is Noraml Div 1. This is Noraml Div 1.</div>
+                <div> This is the first line of Div 2. This is Noraml Div 2. This is Noraml Div 2. This is Noraml Div 2. This is Noraml Div 2. This is Noraml Div 2. This is Noraml Div 2. This is Noraml Div 2. This is Noraml Div 2. This is Noraml Div 2. This is Noraml Div 2. This is Noraml Div 2. This is Noraml Div 2. This is Noraml Div 2. This is Noraml Div 2. This is Noraml Div 2.</div>
+                <div> This is the first line of Div 3. This is Noraml Div 3. This is Noraml Div 3. This is Noraml Div 3. This is Noraml Div 3. This is Noraml Div 3. This is Noraml Div 3. This is Noraml Div 3. This is Noraml Div 3. This is Noraml Div 3. This is Noraml Div 3. This is Noraml Div 3. This is Noraml Div 3. This is Noraml Div 3. This is Noraml Div 3. This is Noraml Div 3.</div>    
+            </div>
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>
+
+<fieldset id="FChild" class="FChild">
+        <legend> Type of [Pseudo Class] : [ First-Child ] </legend>
+            
+            <h2 class="title1"> Pseudo Class: First-Child Concept </h2>
+            <p> The First-Class means detect the first child of certain type related to certain parent.</p>        
+            <p> The Plus Pseudo Class will NOT select further more the next sibling of determined element.</p>    
+            
+            <h2 class="title1"> Pseudo Class: First-Class Example </h2>
+            <div> Just writing: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; Parent Name Child Type: First-Child {Css Properties} </div>
+            
+            <h3 class="title0"> (1) Specifing first child of a simple Paragraph within a parent div and give it special Properties: </h3>
+            <div> Write: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; div P: First-Child {Css Properties} </div>
+            
+            <div class="Exp1">
+                This is Parent Div.
+                <p> This is the [ First Child ] paragraph. </p>
+                <p> This is normal paragraph. </p>
+                <p> This is normal paragraph. </p>
+            </div>
+            
+            <br>
+                    
+            <h3 class="title0"> (2) Specifing each first child of type paragraph related to each parent Divs and give them special Properties:: </h3>
+            <div> Write: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; div p: First-Child {Css Properties} </div>
+            
+            <div class="Exp2">
+                <div>
+                    This is Parent Div 1.
+                    <p> This is the [ First Child ] paragraph. </p>
+                    <p> This is normal paragraph. </p>
+                    <p> This is normal paragraph. </p>    
+                </div>
+                <div>
+                    This is Parent Div 2.
+                    <p> This is the [ First Child ] paragraph. </p>
+                    <p> This is normal paragraph. </p>
+                    <p> This is normal paragraph. </p>    
+                </div>
+                <div>
+                    This is Parent Div 3.
+                    <p> This is the [ First Child ] paragraph. </p>
+                    <p> This is normal paragraph. </p>
+                    <p> This is normal paragraph. </p>    
+                </div>
+            </div>
+    </fieldset>
+
+<!------------------------------------------------------------------------------------------------------------------>
+    
+    <fieldset id="Before" class="Before">
+        <legend> Type of [Pseudo Class] : [ Before ] </legend>
+            
+            <h2 class="title1"> Pseudo Class: Before Concept </h2>
+            <p> The Before Pseudo Class means to Add or Edit an element before specific element determined by code.</p>
+            <p> The Before Pseudo Class also can be applied for multiple elements by using Selectors and other Pseudo Classes.</p>            
+            
+            <h2 class="title1"> Pseudo Class: Before Example </h2>
+            <div> Write: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; element Name :before {Css Properties} </div>
+            
+            
+            <h3 class="title0"> (1) Adding specific Contents before 3 Paragraphes elements and assign this addition by certain Properties : </h3>
+            <div> Write: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; Parent Name p: before {Content:"";  Css properties} </div>                                                                                
+            
+            <div class="Exp1">                
+                <p> This is a normal Paragraph. </p>
+                <p> This is a normal Paragraph. </p>
+                <p> This is a normal Paragraph. </p>                
+            </div>
+                
+            
+            <h3 class="title0"> (2) Adding specific Contents before multiple First child Paragraphes elements related to multiple divs, and assign this addition by certain Properties : </h3>
+            <div> Write: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; Parent Name Div P:First-Child:before {Content:"";  Css properties} </div>                                                                                
+            
+            <div class="Exp2">                
+                <div>
+                    This is First Parent Div.
+                    <p> This is a [ First Child ] Paragraph. </p>
+                    <p> This is a normal Paragraph. </p>
+                    <p> This is a normal Paragraph. </p>    
+                </div>
+                <div>
+                    This is Second Parent Div.   
+                    <p> This is a [ First Child ] Paragraph. </p>
+                    <p> This is a normal Paragraph. </p>
+                    <p> This is a normal Paragraph. </p>    
+                </div>
+                <div>
+                    This is Third Parent Div.
+                    <p> This is a [ First Child ] Paragraph. </p>
+                    <p> This is a normal Paragraph. </p>
+                    <p> This is a normal Paragraph. </p>    
+                </div>                            
+            
+            </div>
+    </fieldset>
+
+<!------------------------------------------------------------------------------------------------------------------>
+
+<fieldset id="After" class="After">
+        <legend> Type of [Pseudo Class] : [ After ] </legend>
+            
+            <h2 class="title1"> Pseudo Class: After Concept </h2>
+            <p> The After Pseudo Class means to Add or Edit an element after specific element determined by code.</p>
+            <p> The After Pseudo Class also can be applied for multiple elements by using Selectors and other Pseudo Classes.</p>            
+            
+            <h2 class="title1"> Pseudo Class: After Example </h2>
+            <div> Write: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; element Name :after {Css Properties} </div>
+            
+            
+            <h3 class="title0"> (1) Adding specific Contents after 3 Paragraphes elements and assign this addition by certain Properties : </h3>
+            <div> Write: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; Parent Name P: after {Content:"";  Css properties} </div>                                                                                
+            
+            <div class="Exp1">                
+                This is Parent Div.
+                <p> This is a normal Paragraph. </p>
+                <p> This is a normal Paragraph. </p>
+                <p> This is a normal Paragraph. </p>                
+            </div>
+            
+            
+            <h3 class="title0"> (2) Adding specific Contents after multiple First child Paragraphes elements related to multiple divs, and assign this addition by certain Properties : </h3>
+            <div> Write: &nbsp; &nbsp; =&gt; &nbsp; &nbsp; Parent Name Div P:First-Child:after {Content:"";  Css properties} </div>                                                                                
+            
+            <div class="Exp2">                
+                <div>
+                    This is First Parent Div.
+                    <p> This is a [ First Child ] Paragraph. </p>
+                    <p> This is a normal Paragraph. </p>
+                    <p> This is a normal Paragraph. </p>    
+                </div>
+                <div>
+                    This is Second Parent Div.
+                    <p> This is a [ First Child ] Paragraph. </p>
+                    <p> This is a normal Paragraph. </p>
+                    <p> This is a normal Paragraph. </p>    
+                </div>
+                <div>
+                    This is Third Parent Div.
+                    <p> This is a [ First Child ] Paragraph. </p>
+                    <p> This is a normal Paragraph. </p>
+                    <p> This is a normal Paragraph. </p>    
+                </div>                            
+            
+            </div>
+                                    
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>        
+    <fieldset id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </fieldset>
+        
+</body>
+</html>

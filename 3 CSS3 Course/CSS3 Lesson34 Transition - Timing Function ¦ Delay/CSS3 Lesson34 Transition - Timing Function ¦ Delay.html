@@ -1,0 +1,830 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 34 [Transition Timing Function ¦ Delay] </title>
+    <link rel="stylesheet" href="CSS3 Lesson34 Transition - Timing Function ¦ Delay.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 34 [CSS3 Transition Timing Function ¦ Delay]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+     <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to CSS3 Transition Timing Function ¦ Delay main Topics">
+                [ CSS3 Transition Timing Function ¦ Delay ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to CSS3  Transition Timing Function ¦ Delay [CSS3  Transition Timing Function ¦ Delay ] Concept">
+                [ CSS3 Transition Timing Function ¦ Delay ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to CSS3  Transition Timing Function ¦ Delay [CSS3 Transition Timing Function ¦ Delay ] Importance & Benefits">
+                [ CSS3 Transition Timing Function ¦ Delay ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to CSS3  Transition Timing Function ¦ Delay [CSS3  Transition Timing Function ¦ Delay ] Syntax">
+                [ CSS3 Transition Timing Function ¦ Delay ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to CSS3  Transition Timing Function ¦ Delay [CSS3 Transition Timing Function ¦ Delay ] Practical Applications">
+                [ CSS3 Transition Timing Function ¦ Delay ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 34 [CSS3 Transition Timing Function ¦ Delay ] {Transition part2} </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                CSS3 Lesson 34 Transition Timing Function ¦ Delay Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [CSS3 Lesson 34 Transition Timing Function ¦ Delay] Concept. </li>                       
+                    
+                    <li> [CSS3 Lesson 34 Transition Timing Function ¦ Delay] Importance & Benefits. </li>
+
+                    <li> [CSS3 Lesson 34 Transition Timing Function ¦ Delay] Syntax [Examples]. </li>
+                    
+                     <li> [CSS3 Lesson 34 Transition Timing Function ¦ Delay] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>                    
+                    <ul>
+                        <li> Basic concept about {transition-Timing function} types : Built-in :[ease, ease-in, ease-out , ease-in-out , linear ] && Customized [steps(), cubic-bezier ] </li> 
+                        <li> Basic concept about {transition-Delay} in-details </li>
+                    </ul>                   
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class=CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [CSS3 Transition Timing Function ¦ Delay ] Concept: </h3>
+            </header>
+                      
+                <p> {Transition Timing Function ¦ Delay}: These properties are the Third & fourth parts of Transition Function <br>
+                
+                <p> {Transition Timing Function ¦ Delay}: These Two Basic properties are optional in shorthand function to be activate tarnstion Function proprly  <br>
+                    
+                <p> {Transition Timing Function ¦ Delay}: These properties in details (Syntax) as following   :  <br>
+                    
+                <ol>
+                    <li> First: {transition-Timing function} => This is property is responsible for the type Transition speed curve of the Element which the transition will be applied on  </li>
+                    <ul>
+                        <li> {transition-Timing function} => Default Value is [ease] : which means to set curve speed to be easy on start & easy in End </li>
+                        <li> {transition-Timing function} => Can be set by one single property name OR Multiple properties names (Seperated by ,) in order </li>
+                        <li> {transition-Timing function} => Has (2) major Sections :  </li>
+                        <ol>
+                            <li> Frist Section [Built-in] Timing Functions (6) type: </li>
+                                <ol>
+                                    <li>{ease} => To start the transtion easy & end it easy also </li>
+                                    <li>{ease-in} => To start the transition easy only </li>
+                                    <li>{ease-out} => To end the transition easy  only </li>
+                                    <li>{ease-in-out} => To start the transtion easy & end it easy also </li>
+                                    <li>{linear} => To start the transition end it by the same ratio 1</li>
+                                </ol>
+                        
+                            <li> Second Section [Customized] Timing Fucntion (2) types : </li>
+                                <ol>
+                                    <li> {steps} => This is a function to seperate the transition to several steps, <br>
+                                        with the ability to assign certain mode of assensrunizing the transition effect and step, from following :  </li>
+                                        <ul>
+                                            <li> [start] : To start the transtion immediatly with from the first step  </li>
+                                            <li> [end] : To start the first step first then start the transition's first step  </li>
+                                        </ul>
+                                    
+                                    <li> {cubic-bezier} => This is an advanced function to seperate the transition to several steps, <br>
+                                        with the ability to assign certain mode of assensrunizing the transition effect and step, with following tips  </li>
+                                        
+                                        <ul>
+                                            <li> This method can assign several numbers of steps,</li>
+                                            <li> Each number value is a range of step speed curve [0 -> 1] </li>                                            
+                                        </ul>
+                                </ol>
+                        </ol>
+                    </ul>
+
+                    <li> Second: {transition-Delay} => This is Transition Delaying Time that the Element will spend to start the Transition  </li>
+                    <ul>
+                        <li> {transition-Delay} => Default Value is [0s] : which means to transate the Element's property(s) instantely with out any delaying . </li>
+                        <li> {transition-Delay} => Can be set by one single duration time OR Multiple duration times (Seperated by ,) in order </li>
+                        <li> {transition-Delay} => Can be set by both (s -> Second || ms-> MilliSecond) </li>
+                    </ul>
+                </ol>                    
+                                                    
+                <!-- ------------------------------------------------------ -->
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+        <section class="CSS3Imp" id="CSS3Imp">
+            <header>
+                <h3> [CSS3 Lesson 34 Transition Timing Function ¦ Delay ] Importance & Benefits: </h3>
+            </header>
+            
+            <p> =&gt; [CSS3 Lesson 34 Transition Timing Function ¦ Delay ] : This Advanced property enabling the following features & imporatance : <br>            
+                <ul>                                                                
+                    <li> [transition-Timing function] & [transition-Delay] => Add much more wonderful effects to animating elements  </li>
+                    <li> [transition-Timing function] & [transition-Delay] => Gives a great specific Tool to reach varaiety of Transtion-timing-function built-in of the speed curves   </li>                    
+                    <li> [transition-Timing function] & [transition-Delay] => Gives a great amazing Tool to customize certain speed curves , with ability to merge certain steps with certain type of transition   </li>                    
+                </ul>                                                 
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ CSS3 Transition Timing Function ¦ Delay] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // (*) [CSS3 Transition Timing Function ¦ Delay] Syntax as following :<br><br>
+                <span class='one'></span> //a)  [HTML] file  : <br>                                          
+                    <!-- A) Transition-Timing-Function -->                                        
+                        <span class=two></span> &lt; fieldset class='Transition-Timing-Function'  &gt; <br>                        
+                            <!-- Container of [Built-In] Function -->
+                            <span class=three></span> &lt; section class='Built-In'  &gt; <br>                                                        
+                                <span class=four></span>  &lt; div class='Ease' &gt;  This element's [transition-timing-function] is [ease] with [width] property (when hover)  &lt; /div &gt;  <br>
+                                <span class=four></span>  &lt; div class='Ease-In' &gt;  This element's [transiion-timing-function] is [ease-in] with [width] property (when hover)  &lt; /div &gt;  <br>
+                                <span class=four></span>  &lt; div class='Ease-Out' &gt;  This element's [transiion-timing-function] is [ease-out] with [width] property (when hover)  &lt; /div &gt;  <br>
+                                <span class=four></span>  &lt; div class='Ease-In-Out' &gt;  This element's [transiion-timing-function] is [ease-in-out] with [width] property (when hover)  &lt; /div &gt;  <br>
+                                <span class=four></span>  &lt; div class='Linear' &gt;  This element's [transiion-timing-function] is [Linear] with [width] property (when hover)  &lt; /div &gt;  <br>
+                            <span class=three></span> &lt; /section &gt;  <br> <br>
+
+                            <!-- Container of Customized function  -->
+                            <span class=three></span> &lt; section class='Customized'  &gt; <br>
+                                <!-- Customized Function / 1) [Steps] -->
+                                <span class=four></span>  &lt; div class='Steps' &gt;   <br>
+                                    <span class=five></span>  &lt; div class='Steps-Start' &gt;  This element's [transition-timing-function] is {Customized} => [Steps(3, start)] with [width] property (when hover)  &lt; /div &gt;  <br>
+                                    <span class=five></span>  &lt; div class='Steps-End' &gt;  This element's [transition-timing-function] is {Customized} => [Steps(3, end)] with [width] property (when hover)  &lt; /div &gt;  <br>
+                                <span class=four></span> &lt; /div &gt;  <br> <br>
+                                
+                                <!-- Customized function / 2) [Cubic-bezier]  -->
+                                <span class=four></span>  &lt; div class='Cubic-Bezier' &gt;  This element's [transiion-timing-function] is [ease-in] with [width] property (when hover)  &lt; /div &gt;  <br> 
+
+                            <span class=three></span> &lt; /section &gt;  <br> <br>
+                        <span class=two></span> &lt; /fieldset &gt;  <br> <br>
+                    // ----------------------------------------------------------------------------- <br><br>                                                                                                    
+                    
+                    <!-- B) Transition-Delay -->                                        
+                        <span class=two></span> &lt; fieldset class='Transition-Delay'  &gt; <br>                        
+                            <!-- First Section => All Children will be at same Delay ratio  -->
+                            <span class=three></span> &lt; section class='Uni-Delay'  &gt; <br>                                                        
+                                <span class=four></span>  &lt; div class='One' &gt;  This element's [transiion-timing-function] is [ease] with [width] property (when hover)  &lt; /div &gt;  <br>
+                                <span class=four></span>  &lt; div class='Two' &gt;  This element's [transiion-timing-function] is [ease-in] with [width] property (when hover)  &lt; /div &gt;  <br>
+                                <span class=four></span>  &lt; div class='Three' &gt;  This element's [transiion-timing-function] is [ease-out] with [width] property (when hover)  &lt; /div &gt;  <br>
+                                <span class=four></span>  &lt; div class='Four' &gt;  This element's [transiion-timing-function] is [ease-in-out] with [width] property (when hover)  &lt; /div &gt;  <br>                                
+                            <span class=three></span> &lt; /section &gt;  <br> <br>                                                        
+                            
+                            <!-- Second Function => All Children will be at defferent Delay ratioes  -->
+                            <span class=three></span> &lt; section class='Def-Delay'  &gt; <br>                                                        
+                                <span class=four></span>  &lt; div class='First' &gt;  This element's [Delay ratio] is the [smallest] with [width] property (when hover) [Reach first]  &lt; /div &gt;  <br>
+                                <span class=four></span>  &lt; div class='Second' &gt;  This element's [Delay ratio] is the [smallest] with [width] property (when hover) [Reach Second] &lt; /div &gt;  <br>
+                                <span class=four></span>  &lt; div class='Third' &gt;  This element's [Delay ratio] is the [smallest] with [width] property (when hover) [Reach Third]   &lt; /div &gt;  <br>
+                                <span class=four></span>  &lt; div class='Fourth' &gt;  This element's [Delay ratio] is the [smallest] with [width] property (when hover) [Reach last]   &lt; /div &gt;  <br>                                
+                            <span class=three></span> &lt; /section &gt;  <br> <br>                                                        
+                        <span class=two></span> &lt; /fieldset &gt;  <br> <br>
+                    // ----------------------------------------------------------------------------- <br><br>                                                                                                    
+                    <br> <br>  <hr>                                                                                                                                                                    
+                    // ------------------------------------------------------------------------------ <br><br>
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                                                                                                                                                                        
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                
+                        <br> <br>  <hr>                                                           
+                    <span class='one'></span> //b)  [CSS3] file  : <br>                                          
+                        
+                    <!-- CSS3 Settings {Transition: Timing-Function && Delay }:
+                        (a) General parent Container Settings :  
+                        (1) Setting main Containers {Transition-Timing-Function && Delay}  -->
+                        <span class=two></span> .Transition-Timing-Function, .Transition-Delay {  <br>
+                            <span class=three></span> margin: 50px auto ; <br>
+                            <span class=three></span> position: relative ; <br>                                                        
+                            <span class=three></span> width: 100%; <br>
+                            <span class=three></span> height: 800px; <br>
+                            <span class=three></span> border: 3px solid #EEE; <br>                            
+                            <span class=three></span> border-radius: 20px ; <br>                            
+                        <span class=two></span> }  <br> <br>                                                
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- ----------------------------------------------------------------------- -->
+
+                        <!-- (b) General parent Container' Sub-containers Settings :  
+                        (1) General Setting Public {Sub containers} of The parent Container [Transition-Timing-Function]   -->
+                        <span class=two></span> .Transition-Timing-Function > section {  <br>                            
+                            <span class=three></snpan> position: absolute ; <br>                            
+                            <span class=three></span> margin: 50px auto ; <br>
+                            <span class=three></span> width: 200px; <br>
+                            <span class=three></span> height: 200px; <br>
+                            <span class=three></span> background-color: blue; <br>                            
+                            <span class=three></span> border: 1px solid black; <br>                            
+                            <span class=three></span> border-radius: 20px ; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        <!-- ------------------------------------------------------------- -->                        
+                        
+                        <!-- //(b) General parent Container' Sub-containers Settings :  
+                        (2) General Setting Public {Sub containers} of The parent Container [Transition-Delay]   -->
+                        <span class=two></span> .Transition-Delay > section {  <br>                            
+                            <span class=three></snpan> position: absolute ; <br>                            
+                            <span class=three></span> margin: 50px auto ; <br>
+                            <span class=three></span> width: 200px; <br>
+                            <span class=three></span> height: 200px; <br>
+                            <span class=three></span> background-color: blue; <br>                            
+                            <span class=three></span> border: 1px solid black; <br>                            
+                            <span class=three></span> border-radius: 20px ; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        <!-- ------------------------------------------------------------- -->                        
+                        <!-- ------------------------------------------------------------- -->                        
+
+                        <!-- /(c) General Children of the parent Container'  Settings :  
+                        (1) General Setting Public {Children inside sub-Container} of the parent Container [Transition-Timing-Function]   -->
+                        <span class=two></span> .Transition-Timing-Function > section > div {  <br>
+                            <span class=three></snpan> position: absolute ; <br>                            
+                            <span class=three></span> margin: 50px auto ; <br>
+                            <span class=three></span> width: 200px; <br>
+                            <span class=three></span> height: 200px; <br>
+                            <span class=three></span> background-color: blue; <br>                            
+                            <span class=three></span> border: 1px solid black; <br>                            
+                            <span class=three></span> border-radius: 20px ; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        <!-- ------------------------------------------------------------- -->                        
+
+                        <!-- /(c) General Children of the parent Container  Settings :  
+                        (2) General Setting Public {Children inside sub Container} of the parent container[Transition-Delay]   -->
+                        <span class=two></span> .Transition-Delay > section > div {  <br>                            
+                            <span class=three></snpan> position: absolute ; <br>                            
+                            <span class=three></span> margin: 50px auto ; <br>
+                            <span class=three></span> width: 200px; <br>
+                            <span class=three></span> height: 200px; <br>
+                            <span class=three></span> background-color: blue; <br>                            
+                            <span class=three></span> border: 1px solid black; <br>                            
+                            <span class=three></span> border-radius: 20px ; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        <!-- ------------------------------------------------------------- -->
+                        <!-- ------------------------------------------------------------- -->
+                        <!-- ------------------------------------------------------------- -->
+                                
+                        <!-- b) Customized Settings of [Children] of the first Parent Container [Transition-Timing-Function] : 
+                        (1) Setting {Children of the first sub Container} [.Transition-Timing-Function > .Built-In > .Built-In]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Timing-Function > .Built-In > .Ease {  <br>
+                            <span class=three></span> transition-property: width; <br>
+                            <span class=three></span> transition-duration: 3s; <br>
+                            <span class=three></span> transition-timing-Function: ease; <br>
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Transition-Timing-Function > .Built-In > .Ease: hover{  <br>
+                            <span class=three></span> width: 500px; <br>                                                                                    
+                        <span class=two></span> }  <br> <br>
+                        <!-- -------------------------------------------------------------- -->
+                        
+                        <!-- b) Customized Settings of [Children]:                        
+                        (2) Setting Children of the second sub Container [.Transition-Timing-Function > .Built-In > div]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Timing-Function > .Built-In > .Ease-In {  <br>
+                            <span class=three></span> transition-property: width; <br>
+                            <span class=three></span> transition-duration: 3s; <br>
+                            <span class=three></span> transition-timing-Function: ease-in; <br>
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Transition-Timing-Function > .Built-In > .Ease-In: hover{  <br>
+                            <span class=three></span> width: 500px; <br>                                                                                    
+                        <span class=two></span> }  <br> <br>
+                        <!-- -------------------------------------------------------------- -->
+                        
+                        <!-- b) Customized Settings of [Children]:                        
+                        (1) Setting Children of the first sub Container [.Transition-Timing-Function > .Built-In > div]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Timing-Function > .Built-In > .Ease-Out {  <br>
+                            <span class=three></span> transition-property: width; <br>
+                            <span class=three></span> transition-duration: 3s; <br>
+                            <span class=three></span> transition-timing-Function: ease-out; <br>
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Transition-Timing-Function > .Built-In > .Ease-Out: hover{  <br>
+                            <span class=three></span> width: 500px; <br>                                                                                    
+                        <span class=two></span> }  <br> <br>
+                        <!-- -------------------------------------------------------------- -->
+                        
+                        <!-- b) Customized Settings of [Children]:                        
+                        (1) Setting Children of the first sub Container [.Transition-Timing-Function > .Built-In > div]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Timing-Function > .Built-In > .Ease-In-Out {  <br>
+                            <span class=three></span> transition-property: width; <br>
+                            <span class=three></span> transition-duration: 3s; <br>
+                            <span class=three></span> transition-timing-Function: ease-in-out; <br>
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Transition-Timing-Function > .Built-In > .Ease-In-Out: hover{  <br>
+                            <span class=three></span> width: 500px; <br>                                                                                    
+                        <span class=two></span> }  <br> <br>
+                        <!-- -------------------------------------------------------------- -->
+                        
+                        <!-- b) Customized Settings of [Children]:                        
+                        (1) Setting Children of the first sub Container [.Transition-Timing-Function > .Built-In > div]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Timing-Function > .Built-In > .Linear {  <br>
+                            <span class=three></span> transition-property: width; <br>
+                            <span class=three></span> transition-duration: 3s; <br>
+                            <span class=three></span> transition-timing-Function: linear; <br>
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Transition-Timing-Function > .Built-In > .Linear: hover{  <br>
+                            <span class=three></span> width: 500px; <br>                                                                                    
+                        <span class=two></span> }  <br> <br>
+                        <!-- -------------------------------------------------------------- -->
+                        <!-- -------------------------------------------------------------- -->
+                        <!-- b) Customized Settings of [Children]:                        
+                        (2) Setting {The Second sub Container} [.Transition-Timing-Function > .Customized > .Steps ]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Timing-Function > .Customized > .Steps > div {  <br>
+                            <span class=three></span> transition-property: width; <br>
+                            <span class=three></span> transition-duration: 3s; <br>                            
+                        <span class=two></span> }  <br> <br>
+                        
+                        <!-- (2)/ a- Setting {First Child of The Second sub Container} [.Transition-Timing-Function > .Customized > .Steps > .Start]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Timing-Function > .Customized > .Steps > .Start {  <br>                            
+                            <span class=three></span> transition-timing-Function: steps( #number, start ); <br>
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Transition-Timing-Function > .Customized > .Steps > .Start: hover {  <br>
+                            <span class=three></span> width: 500px; <br>                                                                                    
+                        <span class=two></span> }  <br> <br>
+                        <!-- ======================================================================================================= -->
+                        
+                        <!-- (2)/ b- Setting {Second Child of The Second sub Container} [.Transition-Timing-Function > .Customized > .Steps > .End]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Timing-Function > .Customized > .Steps > .End {  <br>                        
+                            <span class=three></span> transition-timing-Function: steps( #number, end ); <br>
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Transition-Timing-Function > .Customized > .Steps > .End: hover {  <br>
+                            <span class=three></span> width: 500px; <br>                                                                                    
+                        <span class=two></span> }  <br> <br>                                                
+                        <!-- -------------------------------------------------------------- -->
+                        
+                        <!-- b) Customized Settings of [Children]:                        
+                        (2) Setting Children of the second sub Container [.Transition-Timing-Function > .Customized > Cubic-Bezier]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Timing-Function > .Customized > .Cubic-Bezier {  <br>
+                            <span class=three></span> transition-property: width; <br>
+                            <span class=three></span> transition-duration: 3s; <br>
+                            <span class=three></span> transition-timing-function: cubic-bezier( #, # ,# ,# ); <br>
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Transition-Timing-Function > .Customized > .Cubic-Bezier: hover {  <br>
+                            <span class=three></span> width: 500px; <br>                                                                                    
+                        <span class=two></span> }  <br> <br>
+                        <!-- -------------------------------------------------------------- -->                        
+                        <!-- -------------------------------------------------------------- -->                                                
+                        <!-- -------------------------------------------------------------- -->                                                    
+                        
+                        <!-- C) Customized Settings of [Children] of the Second Parent Container [Transition-Delay] : 
+                        (1) Setting {Children of the first sub Container [.Uni-Delay]} [.Transition-Delay > .Uni-Delay > .One]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Delay > .Uni-Delay > .One {  <br>
+                            <span class=three></span> transition-property: width; <br>
+                            <span class=three></span> transition-duration: 3s; <br>
+                            <span class=three></span> transition-timing-Function: ease; <br>
+                            <span class=three></span> transition-delay: 2s; <br>
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Transition-Delay > .Uni-Delay > .One: hover {  <br>
+                            <span class=three></span> width: 500px; <br>                                                                                    
+                        <span class=two></span> }  <br> <br>
+                        <!-- -------------------------------------------------------------- -->
+                        
+                        <!-- / C) Customized Settings of [Children] of the Second Parent Container [Transition-Delay] : 
+                        (2) Setting {Children of the first sub Container [.Uni-Delay]} [.Transition-Delay > .Uni-Delay > .Two]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Delay > .Uni-Delay > .One {  <br>
+                            <span class=three></span> transition-property: width; <br>
+                            <span class=three></span> transition-duration: 3s; <br>
+                            <span class=three></span> transition-timing-Function: ease; <br>
+                            <span class=three></span> transition-delay: 2s; <br>
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Transition-Delay > .Uni-Delay > .Two: hover {  <br>
+                            <span class=three></span> width: 500px; <br>                                                                                    
+                        <span class=two></span> }  <br> <br>
+                        <!-- -------------------------------------------------------------- -->
+                        
+                        <!-- / C) Customized Settings of [Children] of the Second Parent Container [Transition-Delay] : 
+                        (3) Setting {Children of the first Sub-Container [.Uni-Delay]} [.Transition-Delay > .Uni-Delay > .Three]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Delay > .Uni-Delay > .Three {  <br>
+                            <span class=three></span> transition-property: width; <br>
+                            <span class=three></span> transition-duration: 3s; <br>
+                            <span class=three></span> transition-timing-Function: ease; <br>
+                            <span class=three></span> transition-delay: 2s; <br>
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Transition-Delay > .Uni-Delay > .Three: hover {  <br>
+                            <span class=three></span> width: 500px; <br>                                                                                    
+                        <span class=two></span> }  <br> <br>
+                        <!-- -------------------------------------------------------------- -->
+                        <!-- -------------------------------------------------------------- -->                                                    
+                        
+                        <!-- C) Customized Settings of [Children] of the Second Parent Container [Transition-Delay] : 
+                        (2) Setting {Children of the second sub Container [.Def-Delay]} [.Transition-Delay > .Def-Delay > .First]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Delay > .Def-Delay > .First {  <br>
+                            <span class=three></span> transition-property: width; <br>
+                            <span class=three></span> transition-duration: 3s; <br>
+                            <span class=three></span> transition-timing-Function: ease; <br>
+                            <span class=three></span> transition-delay: 1s; <br>
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Transition-Delay > .Def-Delay > .First {  <br>
+                            <span class=three></span> width: 500px; <br>                                                                                    
+                        <span class=two></span> }  <br> <br>
+                        <!-- -------------------------------------------------------------- -->
+                        
+                        <!-- / C) Customized Settings of [Children] of the Second Parent Container [Transition-Delay] : 
+                        (2) Setting {Children of the second sub Container [.Def-Delay]} [.Transition-Delay > .Def-Delay > .Second]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Delay > .Def-Delay > .Second {  <br>
+                            <span class=three></span> transition-property: width; <br>
+                            <span class=three></span> transition-duration: 3s; <br>
+                            <span class=three></span> transition-timing-Function: ease; <br>
+                            <span class=three></span> transition-delay: 2.5s; <br>
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Transition-Delay > .Def-Delay > .Second: hover {  <br>
+                            <span class=three></span> width: 500px; <br>                                                                                    
+                        <span class=two></span> }  <br> <br>
+                        <!-- -------------------------------------------------------------- -->
+                        
+                        <!-- / C) Customized Settings of [Children] of the Second Parent Container [Transition-Delay] : 
+                        (3) Setting {Children of the second Sub-Container [.Def-Delay]} [.Transition-Delay > .Def-Delay > .Third]  [hover Effect]   -->
+                        <span class=two></span> .Transition-Delay > .Def-Delay > .Three {  <br>
+                            <span class=three></span> transition-property: width; <br>
+                            <span class=three></span> transition-duration: 3s; <br>
+                            <span class=three></span> transition-timing-Function: ease; <br>
+                            <span class=three></span> transition-delay: 4s; <br>
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Transition-Delay > .Def-Delay > .Three: hover {  <br>
+                            <span class=three></span> width: 500px; <br>                                                                                    
+                        <span class=two></span> }  <br> <br>
+                        <!-- -------------------------------------------------------------- -->
+                        <!-- -------------------------------------------------------------- -->                                                                                                   
+                        // ------------------------------------------------------------------------------ <br><br>                                                            
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>                        
+                    // ------------------------------------------------------------------------------ <br><br>
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="CSS3Pract" >
+
+            <header>
+                <h3> [CSS3 - Transition Timing Function ¦ Delay] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following are Applied examples of {Transition Timing Function ¦ Delay} new feature/ property with (all) of Transitoin Function Values} : <br>
+                
+            <p> (2) Main Fieldsets Multiple as following:  </p>                        
+            
+            <ul>                    
+                <li> First Fieldset [Transition-Timing-Function] as following:  </li>                        
+                    <ol>                    
+                        <li> First Section {Built-In} Timing-Functions, and include (6) children : </li>
+                            <ul>
+                                <li> [ease] {Built-In} Timing-Function  </li>
+                                <li> [ease-in] {Built-In} Timing-Function  </li>
+                                <li> [ease-out] {Built-In} Timing-Function  </li>
+                                <li> [ease-in-out] {Built-In} Timing-Function  </li>
+                                <li> [linear] {Built-In} Timing-Function  </li>                        
+                            </ul>
+                        
+                        <li> Second Section {Customized} Timing-Functions, and include (2) children : </li>
+                            <ul>
+                                <li> [steps] {Customized} Timing-Function  </li>                        
+                                <li> [Cubic-bezier] {Customized} Timing-Function  </li>                                              
+                            </ul>
+                    </ol>
+                    
+                <li> Second Fieldset [Transition-Delay] as following:  </li>                                            
+                    <ol>                    
+                        <li> First Section {Built-In} Timing-Functions, and include (6) children : </li>
+                            <ul>
+                                <li> [ease] {Built-In} Timing-Function  </li>
+                                <li> [ease-in] {Built-In} Timing-Function  </li>
+                                <li> [ease-out] {Built-In} Timing-Function  </li>
+                                <li> [ease-in-out] {Built-In} Timing-Function  </li>
+                                <li> [linear] {Built-In} Timing-Function  </li>                        
+                            </ul>
+                        
+                        <li> Second Section {Customized} Timing-Functions, and include (2) children : </li>
+                            <ul>
+                                <li> [steps] {Customized} Timing-Function  </li>                        
+                                <li> [Cubic-bezier] {Customized} Timing-Function  </li>                                              
+                            </ul>
+                    </ol>
+            </ul>                                                
+            <br><br><br>
+            <!-- ========================================================================= -->                                                        
+                        
+                <header>Threre are (2) main Parent Containers => Transition (Timing) && (Function Delay) - for Hovering (Width) only </header>
+                    
+                <fieldset class='Transition-Timing-Function'>                                                  
+
+                    <legend>  A) Transition - (Timing - Function ) (delay = 0) Function by Hovering-Event Main Parent Container :  </legend>
+                    
+                    <!-- Main Parent Container {Transition} Application  -->
+                                            
+                    <section class='Built-In'> 
+                        <header>  1) [Built-In] Timing Function: </header>
+                                                        
+                            <div class='Ease'>                     
+                                This element's [transition-timing-function] is [Ease] & [transition-delay:0s] with [width] property (when hover)  
+                            </div>                                                                                
+
+                            <div class='Ease-In'>                     
+                                This element's [transition-timing-function] is [Ease-In] & [transition-delay:0s] with [width] property (when hover)                                      
+                            </div>                                                                                    
+
+                            <div class='Ease-Out'>                     
+                                This element's [transition-timing-function] is [Ease-Out] & [transition-delay:0s] with [width] property (when hover)                                      
+                            </div>                                                            
+
+                            <div class='Ease-In-Out'>                     
+                                This element's [transition-timing-function] is [Ease-In-Out] & [transition-delay:0s] with [width] property (when hover)                                                                          
+                            </div>                                                            
+
+                            <div class='Linear'>                     
+                                This element's [transition-timing-function] is [Linear] & [transition-delay:0s] with [width] property (when hover)                                                                          
+                            </div>    
+                    </section>                                                  
+                    <!-- ------------------------------------------------------------------------- -->                
+                    <hr> <br> <br>                        
+                        
+                    <section class='Customized'>
+                        
+                        <header>  2) [Customized] Timing Functions [steps || cubic-bezier ]: </header>
+                        
+                        <section class='Steps'>                            
+                            <header> a- [Customized : Steps]  </header>
+                        
+                            <div class='Steps-Start'>                     
+                                This element's [transition-timing-function: Customized -> Steps -> start] is [Steps (3,start)] with [width] property (when hover)
+                            </div>
+                            <hr> 
+                            
+                            <div class='Steps-End'>                     
+                                This element's [transition-timing-function: Customized -> Steps -> end ] is [Steps (3,start)] with [width] property (when hover)                                        
+                            </div>                                
+                            <hr> 
+                        </section>                                                        
+                        
+                        <hr> 
+                        
+                        <section class='Bezier'>                                                     
+                            <header> b- [Customized :Cubic-Bezier]  </header>                            
+                            
+                            <h3> First Mode: </h3>
+                            <div class='Cubic-Bezier1'>                     
+                                This element's [transition-timing-function: Customized -> cubic-bezier()] is [cubic-bezier(0.075, 0.82, 0.165, 1)] with [width] property (when hover)
+                            </div>                                                              
+                            <hr>
+                            
+                            <h3> Second Mode: </h3>
+                            <div class='Cubic-Bezier2'>                     
+                                This element's [transition-timing-function: Customized ->  cubic-bezier()] is [ cubic-bezier(0.165, 0.84, 0.44, 1) ] with [width] property (when hover)
+                            </div>                                                              
+                            <hr>
+                            
+                            <h3> Third Mode: </h3>
+                            <div class='Cubic-Bezier3'>                     
+                                This element's [transition-timing-function: Customized ->  cubic-bezier()] is [cubic-bezier(0.19, 1, 0.22, 1)] with [width] property (when hover)
+                            </div>                                                              
+                            <hr>
+                            
+                            <h3> Fourth Mode: </h3>
+                            <div class='Cubic-Bezier4'>                     
+                                This element's [transition-timing-function: Customized ->  cubic-bezier()] is [cubic-bezier(0.68, -0.55, 0.265, 1.55)] with [width] property (when hover)
+                            </div>                                                              
+                            <hr>
+                            
+                            <h3> Fifth Mode: </h3>
+                            <div class='Cubic-Bezier5'> 
+                                This element's [transition-timing-function: Customized ->  cubic-bezier()] is [cubic-bezier(0.95, 0.05, 0.795, 0.035)] with [width] property (when hover)
+                            </div>                                                              
+                            <hr>                            
+                            
+                            <h3> Sixth Mode: </h3>
+                            <div class='Cubic-Bezier6'> 
+                                This element's [transition-timing-function: Customized ->  cubic-bezier()] is [cubic-bezier(1, 0, 0, 1)] with [width] property (when hover)
+                            </div>                                                              
+                            <hr>                            
+                            
+                            <h3> Seventh Mode: </h3>
+                            <div class='Cubic-Bezier7'> 
+                                This element's [transition-timing-function: Customized ->  cubic-bezier()] is [cubic-bezier(0.895, 0.03, 0.685, 0.22)] with [width] property (when hover)
+                            </div>                                                              
+                            <hr>                            
+                            
+                            <hr>                            
+                        </section>                                                                                        
+                    </section>                                                  
+                    <!-- ------------------------------------------------------------------------- -->                
+                    <hr> <br> <br>                                                
+
+                </fieldset>
+                <br><hr> <br>                        
+                <!-- --------------------------------------------------------------------- -->                                                            
+                <!-- --------------------------------------------------------------------- -->                                                            
+
+                <header> B) Transition - (Delay=> (delay = Unified || Different) (Timing-Function:ease only) by Hovering-Event Main Parent Container :  </header>
+                
+                <fieldset class="Transition-Delay">
+                    <legend> B) Transition - (Delay=> (delay = Unified || Different) (Timing-Function:ease only)  :  </legend>
+                        
+                    <h3> 1) Unified Delay Children </h3>
+                    <section class="Uni-Delay">                    
+                        <div class='One'>
+                            This element's [Transition-delay: 2s] [transiion-timing-function] is [ease] with [width] property (when hover) 
+                        </div>                        
+                        <br>
+                        
+                        <div class='Two'>
+                            This element's [Transition-delay: 2s] [transiion-timing-function] is [ease] with [width] property (when hover)                             
+                        </div>                        
+                        <br>
+                        
+                        <div class='Three'>
+                            This element's [Transition-delay: 2s] [transiion-timing-function] is [ease] with [width] property (when hover)
+                        </div>
+                        <br>
+            
+                    </section>                    
+                    <br><hr> <br>                        
+                    <!-- -------------------------------------------------------------- -->
+
+                    <h3> 2) Different Delay Children </h3>
+                    <section class="Def-Delay">
+                        
+                        <div class='First'>
+                            First element [Transition-delay: 1s] [transiion-timing-function] is [ease] with [width] property (when hover) 
+                        </div>
+                        
+                        <br>
+                        
+                        <div class='Second'>
+                            Second element [Transition-delay: 2.5s] [transiion-timing-function] is [ease] with [width] property (when hover)                             
+                        </div>
+                        
+                        <br>
+                        
+                        <div class='Third'>
+                            Third element [Transition-delay: 4s] [transiion-timing-function] is [ease] with [width] property (when hover)
+                        </div>
+                        <br>
+                                    
+                    </section>
+                    
+                </fieldset>            
+            <!-- --------------------------------------------------------------------- -->                                            
+            <br><hr> <br>                        
+            <br><hr> <br>        
+            <!-- --------------------------------------------------------------------- -->                            
+        <!-- --------------------------------------------------------------------- -->                                                    
+        </section>                    
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 34 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=3C2RCebBfow&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=34&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\33 Css3 - Transition - Timing Function ¦ Delay.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 34 [CSS3 Transition Timing Function ¦ Delay ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

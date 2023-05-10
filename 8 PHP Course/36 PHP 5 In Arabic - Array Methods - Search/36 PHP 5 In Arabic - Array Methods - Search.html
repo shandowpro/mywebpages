@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 36 PHP 5 In Arabic - Array Methods - Search </title>
+    <link rel="stylesheet" href="36 PHP 5 In Arabic - Array Methods - Search.css" media="all">
+    
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        36 PHP 5 In Arabic - Array Methods - Search
+    </header>
+<!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to PHP main Topics">
+                36 PHP 5 In Arabic - Array Methods - Search Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to PHP [36 PHP 5 In Arabic - Array Methods - Search] Concept">
+                36 PHP 5 In Arabic - Array Methods - Search Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to PHP [36 PHP 5 In Arabic - Array Methods - Search] Importance & Benefits">
+                36 PHP 5 In Arabic - Array Methods - Search Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to PHP [36 PHP 5 In Arabic - Array Methods - Search] Syntax">
+                36 PHP 5 In Arabic - Array Methods - Search Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to PHP [36 PHP 5 In Arabic - Array Methods - Search] Practical Applications">
+                36 PHP 5 In Arabic - Array Methods - Search Practical Applications </a> </li>
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+        
+    <main class="Welcome"> Welcome to PHP Course <span> 36 PHP 5 In Arabic - Array Methods - Search  </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                PHP [36 PHP 5 In Arabic - Array Methods - Search] Main Topics :
+            </header>
+            
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+
+                <ol type="A">                                                            
+                    <li> Searching Methods of arrays as following : <br>
+                        <ol> 
+                            <li> in_array(needle[element value], haystack[array Name] , type[true, false]); </li>
+                            <li> array_search(needle[element value], haystack[array Name] , type[true, false]); </li>
+                            <li> array_key_exists(needle[index||key], haystack[array Name]); </li>                        
+                        </ol>
+                    </li>
+                    
+                </ol>                                                
+            </article>
+        </Section>        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> PHP [36 PHP 5 In Arabic - Array Methods - Search] </h3>
+            </header>
+                        
+            <h2> [PHP Array Methods - Search ] => Array Methods - Search Concept: </h2>
+                    <P> One of the most important methods of Array [Indexed || Associative] in PHP </P>
+                    
+                    <P> Searching functionality is about one or More of following Tasks : <br>                        
+                        <ol>        
+                            <li> Getting certain element's Index inside the array </li>
+                            <li> Getting certain element's Value inside the array </li>
+                            <li> Getting certain element's Index && Value inside the array  </li>
+                        </ol>
+                    </P>
+                    
+                    <P> Searching functionality usgin one of the following element property : <br>                        
+                        <ol>                                                        
+                            <li> Element Value </li>
+                            <li> Element Index </li>
+                            <li> Element Keyname </li>                            
+                        </ol>                                    
+                    </P>
+
+                <h2> [PHP Array Methods - Search ] => Array Methods - Search Methods Sytax && concepts : </h2>
+                    <ol>  
+                        <!-- First Method -->
+                        <li> in_array(needle[element value], haystack[array Name] , type[true, false]); <br>
+                            <p> It is content of the following : <br>
+                                <ul>
+                                    <li> needle || [element value]  => This is what are you looking for </li>
+                                    <li> haystack || [array Name]   => This is what are you looking in </li>
+                                    <li> needle || [element value]  => This is the type of searching by this method , and it is including : <br>
+                                        <ol> 
+                                            <li> [True] => For the Identical Searching [ applying the datatype searching]  </li>
+                                            <li> [False] => For the Normal Searching [ not applying the datatype searching]  </li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </p>
+
+                            <p> Return of this Method is => The Element Index  </p>
+                            
+                            <p> Usages : <br>
+                                <ul>
+                                    <li> For Checking for the existance of the element in as array </li>
+                                    <li> For printing the element value || index || both in a certain array </li>
+                                </ul>
+                            </p>
+
+                        </li>
+                        <br> <br> <hr>
+
+                        <!-- Second Method -->
+                        <li> array_search(needle[element value], haystack[array Name], type[true, false]); <br>
+                            <p> It is content of the following : <br>
+                                <ul>
+                                    <li> needle || [element value]  => This is what are you looking for </li>
+                                    <li> haystack || [array Name]   => This is what are you looking in </li>
+                                    <li> needle || [element value]  => This is the type of searching by this method , and it is including : <br>
+                                        <ol> 
+                                            <li> [True] => For the Identical Searching [ applying the datatype searching]  </li>
+                                            <li> [False] => For the Normal Searching [ not applying the datatype searching]  </li>
+                                        </ol>
+7                                    </li>
+                                </ul>
+                            </p>
+                            
+                            <p> Return of this Method is => The Element Index  </p>
+                            
+                            <p> Usages : <br>
+                                <ul>
+                                    <li> For Checking for the existance of the element in as array </li>
+                                    <li> For printing the element value || index || both in a certain array </li>
+                                </ul>
+                            </p>
+                        </li>
+                        <br> <br> <hr>
+                        
+                        
+                        <!-- Third Method  -->
+                        <li> array_key_exists(needle[index||key], haystack[array Name]); <br>
+                            <p> It is content of the following : <br>
+                                <ul>                                    
+                                    <li> needle || [element index || element key]  => This is what are you looking FOR </li>
+                                    <li> haystack || [array Name]   => This is what are you looking IN </li>
+                                    <li> needle || [element value]  => This is the type of searching by this method , and it is including : <br>
+                                        <ol> 
+                                            <li> [True] => For the Identical Searching [ applying the datatype searching]  </li>
+                                            <li> [False] => For the Normal Searching [ not applying the datatype searching]  </li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </p>
+                            
+                            <p> Return of this Method is => The Element Index  </p>
+                            
+                            <p> Usages : <br>
+                                <ul>
+                                    <li> For Checking for the existance of the element in the array </li>
+                                    <li> For printing the element value || index || both in a certain array </li>
+                                </ul>
+                            </p>
+                        </li>              
+                    </ol>
+
+                <br> <br> <hr>
+                <!-------------------------------------------  -->                                                                                                                                                                                                                              
+            </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> PHP [36 PHP 5 In Arabic - Array Methods - Search] Importance & Benefits: </h3>
+            </header>
+            
+                <ul> 
+                    <li> Accurate accessing to a certain element inside a certain Array with Multiply Searching creterias || standards [Index || Value || keyname] </li>
+                    <li> Dealing with all types of arrays [Indexed || Associative || Multidimensional] </li>
+                    <li> Ability to control the Searching type [Searching for Value only] || [Searching for Value + Including element Idenity]  </li>  
+                </ul>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ 36 PHP 5 In Arabic - Array Methods - Search ] Syntax & Methods: </h3>
+            </header>        
+
+            <p> =&gt; In this after setting up the application => We will create a simple PHP File && Running it by [Local Server] </p>
+            
+            <p> =&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} : <br>
+                <p> Using [Array  Methods - Search] => has following ( 4 ) main Examples : </p>                
+                
+                <ul>
+                    <li> First Example  => <br>
+                        <ul>
+                            <li> in_array();} Method in => {Indexed Array}: (a) => Checking of Element's Existance: <br> 
+                                <ul>  
+                                    <li> (1) Checking without using Identical Mode [false] </li> 
+                                    <li> (2) Checking without using Identical Mode [true] </li>                                
+                                </ul>                            
+                            </li>                                                                         
+                        </ul>
+                    </li>           
+                    
+                    <li> Second Example => <br>
+                        <ul>
+                            <li> {array_search();} Method in => {Indexed Array} : (b) => Checking of Element's Existance by {array_search();} : <br> 
+                                <ul>  
+                                    <li> (1) Searching without using Identical Mode [false] </li> 
+                                    <li> (2) Checking with using Identical Mode [True] </li>
+                                </ul> 
+                            </li>   
+                        </ul>
+                    </li>     
+                    
+                    <li> Third Example => <br>
+                        <ul>
+                            <li> {array_key_exists();} in => {Associative Array} && {Indexed Array} =>  (a) => Searching & Typing the [Element's Index] || [Element's Value] <br> 
+                                <ul>  
+                                    <li> (1) Search & Print [Element's Index] && [Element's Value] in {Indexed Array} by {array_key_exists(Element Index);} </li> 
+                                    <li> (2) Searching & Print [Element's Index] && [Element's Value] in {Associative Array} by {array_key_exists(Element keyname);}  </li>
+                                </ul> 
+                            </li>   
+                            <li> Third Example => {array_key_exists();} in => {Associative Array} && {Indexed Array} =>  (b) => Checking of Element's Existance in [Indexed array] || [Associative array]  <br> 
+                                <ul>  
+                                    <li> (1) Searching for Element in [Indexed Array] using it's [Index] </li> 
+                                    <li> (2) Searching for Element in [Associative Array] using it's [keyName] </li>
+                                </ul> 
+                            </li>   
+                        </ul>
+                    </li>     
+                    
+                    <li> Fourth Example => <br>
+                        <ul>
+                            <li> {in_array();} && {array_search();} && {array_key_exists();} within => {Multidimensional Array} => (b) => Checking of Element's Existance by {in_array();} && {array_search();} && {array_key_exists();} within => {Multidimensional Array - indexed && associative}  <br> 
+                                <ul>  
+                                    <li> (1) Searching for Element in [Multidimensional array - indexed] using it's [value] => by using [in_array()]  </li> 
+                                    <li> (2) Searching for Element in [Multidimensional array - indexed] using it's [value] => by using [array_search()] </li>
+                                    <li> (3) Searching for Element in [Multidimensional array - indexed] using it's [index] => by using [array_key_exists()] </li>
+                                    <li> (4) Searching for Element in [Multidimensional array - associative] using it's [keyname? or value?] => by using [in_array()] </li>
+                                    <li> (5) Searching for Element in [Multidimensional array - associative] using it's [keyname] => by using [array_search()] </li>
+                                    <li> (6) Searching for Element in [Multidimensional array - associative] using it's [keyname] => by using [array_key_exists()] </li>
+                                </ul> 
+                            </li>   
+                        </ul>
+                    </li>     
+                    <!-- <li>  First Example => {in_array();} in => {Indexed Array}: <br>
+                        <ol>
+                            <li> (a) => Searching & Typing the [Element's Index] : <br>
+                                <ul>
+                                    <li> (1) Searching without using Identical Mode [false]: </li>
+                                    <li> (2) Searching with using Identical Mode [true]:  </li>
+                                </ul>
+                            </li>    
+                            
+                            <li> (b) => Searching & Typing the [Element's Value] :  <br>
+                                <ul>
+                                    <li> (1) Searching without using Identical Mode [false]: </li>
+                                    <li> (2) Searching with using Identical Mode [true]: </li>
+                                </ul>
+                            </li>    
+                        
+                            <li> (c) => Searching & Typing the [Element's Value] & [Element's Index] :  <br>
+                                <ul>
+                                    <li> (1) Searching without using Identical Mode [false]:  </li>
+                                    <li> (2) Searching with using Identical Mode [true]:  </li>
+                                </ul>
+                            </li>    
+                        
+                            <li> (d) => Checking of Element's Existance :  <br>
+                                <ul>
+                                    <li> (1) Checking without using Identical Mode [false]: </li>
+                                    <li> (2) Checking without using Identical Mode [true]: </li>
+                                </ul>
+                            </li>                            
+                        </ol>
+                    </li>
+
+                    <li>  Second Example => {array_search();} in => {Indexed Array} :  <br>
+                        <ol>
+                            <li> (a) => Searching & Typing the [Element's Index] : <br>
+                                <ul>
+                                    <li> (1) Searching without using Identical Mode [false]: </li>
+                                    <li> (2) Searching with using Identical Mode [true]:  </li>
+                                </ul>
+                            </li>    
+                            
+                            <li> (b) => Searching & Typing the [Element's Value] :  <br>
+                                <ul>
+                                    <li> (1) Searching without using Identical Mode [false]: </li>
+                                    <li> (2) Searching with using Identical Mode [true]: </li>
+                                </ul>
+                            </li>    
+                        
+                            <li> (c) => Searching & Typing the [Element's Value] & [Element's Index] :  <br>
+                                <ul>
+                                    <li> (1) Searching without using Identical Mode [false]:  </li>
+                                    <li> (2) Searching with using Identical Mode [true]:  </li>
+                                </ul>
+                            </li>    
+                        
+                            <li> (d) => Checking of Element's Existance :  <br>
+                                <ul>
+                                    <li> (1) Checking without using Identical Mode [false]: </li>
+                                    <li> (2) Checking without using Identical Mode [true]: </li>
+                                </ul>
+                            </li>                            
+                        </ol>
+                    </li>
+
+
+                    <li>  Third Example => {array_key_exists();} in => {Associative Array} && {Indexed Array} :  <br>
+                        <ol>
+                            <li> (a) => Searching & Typing the [Element's Index] || [Element's Value] : <br>
+                                <ul>
+                                    <li> (1) Search & Print [Element's Index] [Element's Value] in {Indexed Array}:  </li>
+                                    <li> (2) Searching & Print [Element's Index] & [Element's Value] in {Associative Array}:  </li>
+                                </ul>
+                            </li>    
+                            
+                            <li> (b) => Checking of Element's Existance in [Indexed array] || [Associative array] : <br>
+                                <ul>
+                                    <li> (1) Searching for Element in [Indexed Array] using it's [Index] : </li>
+                                    <li> (2) Searching for Element in [Associative Array] using it's [keyName] : </li>
+                                </ul>
+                            </li>                                                                                
+                        </ol>
+                    </li>
+                    
+
+                    <li>  Fourth Example => {in_array();} && {array_search();} && {array_key_exists();} within => {Multidimensional Array}: <br>
+                        <ol>
+                            <li> (a) => Searching & Typing the [Element's Index] || [Element's Value] in :  <br>
+                                <ul>
+                                    <li> (1) Searching in : {Multidimensional Array - indexed} => by [in_array();] </li>
+                                    <li> (2) Searching in : {Multidimensional Array - indexed} => by [array_search();] </li>
+                                    <li> (3) Searching in : {Multidimensional Array - indexed} => by [array_key_exists();] </li>
+                                    <li> (4) Searching in : {Multidimensional Array - associative} => by [in_array();] </li>
+                                    <li> (5) Searching in : {Multidimensional Array - associative} => by [array_search();]  </li>
+                                    <li> (6) Searching in : {Multidimensional Array - associative} => by [array_key_exists();] </li>
+                                </ul>
+                            </li>    
+                            
+                            <li> (b) => Checking of Element's Existance by {in_array();} && {array_search();} && {array_key_exists();} within => {Multidimensional Array - indexed && associative} : <br>
+                                <ul>
+                                    <li> (1) Searching for Element in [Multidimensional array - indexed] using it's [index] => by using [in_array()] </li>
+                                    <li> (1)+ Searching for Element in [Multidimensional array - indexed] using it's [value] => by using [in_array()] </li>
+                                    
+                                    <li> (2) Searching for Element in [Multidimensional array - indexed] using it's [index] => by using [array_search()]  </li>
+                                    <li> (2)+ Searching for Element in [Multidimensional array - indexed] using it's [value] => by using [array_search()] </li>
+                                    
+                                    <li> (3) Searching for Element in [Multidimensional array - indexed] using it's [index] => by using [array_key_exists()] </li>
+                                    <li> (3)+ Searching for Element in [Multidimensional array - indexed] using it's [value] => by using [array_key_exists()] </li>
+                                    
+                                    <li> (4) Searching for Element in [Multidimensional array - associative] using it's [keyname] => by using [in_array()] </li>
+                                    <li> (5) Searching for Element in [Multidimensional array - associative] using it's [keyname] => by using [array_search()] </li>
+                                    <li> (6) Searching for Element in [Multidimensional array - associative] using it's [keyname] => by using [array_key_exists()] </li>
+                                    
+                                </ul>
+                            </li>                                                                                
+                        </ol>
+                    </li> -->
+                </ul>
+                <!-- ================================================================= -->
+                                               
+                <h2>  B)  Html page :  </h2> <br>                    
+                        <span class='one'> &lt; !DOCTYPE html &gt; </span> <br>
+                            <span class='two'> &lt; html &gt; </span> <br>
+                                <span class='three'> &lt; /head &gt;</span> <br>
+                                    <span class='four'> &lt; title &gt; &lt;? php echo $title; ?&gt;  &lt; /title &gt;  </span> <br>
+                                    <span class='four'> &lt; link rel="stylesheet" href="36 PHP 5 In Arabic - Array Methods - Search" media="all" &gt;  </span> <br>
+                                <span class='three'> &lt; /head &gt; </span>  <br> <br>                                
+                                <span class='three'>&lt; body &gt; </span> <br>                            
+                                
+                                <span class='three'>&lt; /body &gt; </span> <br>
+                                <span class='two'>&lt;/html &gt; </span> <br>
+                                ---------------------------------------------------------------------------- <br>
+                                ---------------------------------------------------------------------------- <br>                      
+                   <br><br> <hr>                                                                                                                                  
+            <br><br>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+         <section class="PHPPract" id="PHPPract"> 
+            <header>
+                <h3> PHP [36 PHP 5 In Arabic - Array Methods - Search] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here (4) Major Applications PHP [ Array Multidimensional ] as following =>  <br><br>
+
+            <ul>                                              
+                <li> First Example  => <br>
+                    <ul>
+                        <li> in_array();} Method in => {Indexed Array}: (a) => Checking of Element's Existance: <br> 
+                            <ul>  
+                                <li> (1) Checking without using Identical Mode [false] </li> 
+                                <li> (2) Checking without using Identical Mode [true] </li>                                
+                            </ul>                            
+                        </li>                                                                         
+                    </ul>
+                </li>           
+                
+                <li> Second Example => <br>
+                    <ul>
+                        <li> {array_search();} Method in => {Indexed Array} : (b) => Checking of Element's Existance by {array_search();} : <br> 
+                            <ul>  
+                                <li> (1) Searching without using Identical Mode [false] </li> 
+                                <li> (2) Checking with using Identical Mode [True] </li>
+                            </ul> 
+                        </li>   
+                    </ul>
+                </li>     
+                
+                <li> Third Example => <br>
+                    <ul>
+                        <li> {array_key_exists();} in => {Associative Array} && {Indexed Array} =>  (a) => Searching & Typing the [Element's Index] || [Element's Value] <br> 
+                            <ul>  
+                                <li> (1) Search & Print [Element's Index] && [Element's Value] in {Indexed Array} by {array_key_exists(Element Index);} </li> 
+                                <li> (2) Searching & Print [Element's Index] && [Element's Value] in {Associative Array} by {array_key_exists(Element keyname);}  </li>
+                            </ul> 
+                        </li>   
+                        <li> Third Example => {array_key_exists();} in => {Associative Array} && {Indexed Array} =>  (b) => Checking of Element's Existance in [Indexed array] || [Associative array]  <br> 
+                            <ul>  
+                                <li> (1) Searching for Element in [Indexed Array] using it's [Index] </li> 
+                                <li> (2) Searching for Element in [Associative Array] using it's [keyName] </li>
+                            </ul> 
+                        </li>   
+                    </ul>
+                </li>     
+                
+                <li> Fourth Example => <br>
+                    <ul>
+                        <li> {in_array();} && {array_search();} && {array_key_exists();} within => {Multidimensional Array} => (b) => Checking of Element's Existance by {in_array();} && {array_search();} && {array_key_exists();} within => {Multidimensional Array - indexed && associative}  <br> 
+                            <ul>  
+                                <li> (1) Searching for Element in [Multidimensional array - indexed] using it's [value] => by using [in_array()]  </li> 
+                                <li> (2) Searching for Element in [Multidimensional array - indexed] using it's [value] => by using [array_search()] </li>
+                                <li> (3) Searching for Element in [Multidimensional array - indexed] using it's [index] => by using [array_key_exists()] </li>
+                                <li> (4) Searching for Element in [Multidimensional array - associative] using it's [keyname? or value?] => by using [in_array()] </li>
+                                <li> (5) Searching for Element in [Multidimensional array - associative] using it's [keyname] => by using [array_search()] </li>
+                                <li> (6) Searching for Element in [Multidimensional array - associative] using it's [keyname] => by using [array_key_exists()] </li>
+                            </ul> 
+                        </li>   
+                    </ul>
+                </li>     
+            </ul>
+
+             <!-- <section id=sec class=txtarea >                                  
+                 <a href="http://localhost/PHP%20Course/36%20PHP%205%20In%20Arabic%20-%20Array%20Methods%20-%20Search/36%20PHP%205%20In%20Arabic%20-%20Array%20Methods%20-%20Search.php">  
+                    {36 PHP 5 In Arabic - Array Methods - Search} => Lesson36 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+            <section id=sec class=txtarea >                                  
+                <a class=btn href="http://localhost/PHP%20Course/36%20PHP%205%20In%20Arabic%20-%20Array%20Methods%20-%20Search/36%20PHP%205%20In%20Arabic%20-%20Array%20Methods%20-%20Search.php">  
+                   {Main Page} [Display] => {36 PHP 5 In Arabic - Array Methods - Search} => Lesson36 PHP File Webpage by Localhost
+               </a> <br> <br>             
+               
+               <a class=btn href="36 PHP 5 In Arabic - Array Methods - Search.php">  
+                   {Main Page} [Source Code] => {36 PHP 5 In Arabic - Array Methods - Search} => Lesson36 PHP File Webpage by Localhost
+               </a>             
+           </section> <br> 
+
+            
+             <!-- <script  src="14 PHP 5 In Arabic - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+                
+        </section>                           
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson36 Video File:</h3>
+
+
+            <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=ehz5dAHLq_M&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=36&controls=0&loop=1&autoplay=1&fs=1"    
+        >
+        </iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\36 PHP 5 In Arabic - Array Methods - Search.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shandow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 36 PHP 5 - Array Methods - Search ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Css Lesson 18 [Grouping]</title>
+    <link rel="stylesheet" href="Grouping.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="title" id="title">Css/ Lesson 18 [Grouping](Same Elements, Different Elements) </h1>
+                        
+        <fieldset class="index">
+            <legend class="index">Lesson Index</legend>            
+            <ol>
+                <li>First/ Grouping Similar type of Elements:</li>
+                <ol type="A">                    
+                    <li> <a href="#div" title="Go to :Divs Similar Group">Grouping Similar Divs</a></li>
+                    <li> <a href="#h" title="Go to :Heads Similar Group">Grouping Similar Heads</a></li>
+                    <li> <a href="#p" title="Go to :Paragraphs Similar Group">Grouping Similar Paragraphs</a></li>                    
+                </ol>
+                
+                <li> <a href="#second" title="Go to :Different Group">Second/ Grouping Different type of Elements:</a></li>
+            </ol>
+        </fieldset>
+    <!----------------------------------------------------------------------------------------------->        
+        <div class="first">
+            <h2 class="subtitle1">First/ Grouping Similar type of Elements::</h2>
+            
+            <fieldset class="div" id ='div'>            
+                <legend>(A) Grouping Similar Divs</legend>    
+                
+                <div class="div1">This is Div 1 </div>
+                <div class="div2">This is Div 2 </div>
+                <div class="div3">This is Div 3 </div>
+            </fieldset>
+        <!----------------------------------------------------------------------------------------------->        
+            <fieldset class="h" id='h'>
+                <legend>(B)Grouping Similar Heads</legend>      
+                
+                <h2 class="h1">This is Head 1 </h2>            
+                <h2 class="h2">This is Head 2 </h2>
+                <h2 class="h3">This is Head 3 </h2>
+                
+            </fieldset>
+            
+        <!----------------------------------------------------------------------------------------------->        
+            <fieldset class="p" id="p">
+                <legend>(C)Grouping Similar Paragraphs</legend>                
+                
+                <p class="p1">This is Paragraph 1 </p>                                
+                <p class="p2">This is Paragraph 2 </p>
+                <p class="p3">This is Paragraph 3 </p>
+                
+            </fieldset>                            
+        </div>
+        
+         <hr><hr>
+    <!----------------------------------------------------------------------------------------------------------->        
+        <div class="second" id="second">
+            <h2 class="subtitle1">Second/ Grouping Different type of Elements :</h2>
+            
+            <fieldset id="different1">
+                <legend>Different Elements with all Same properties </legend>        
+                    
+                <div class="divA">
+                    <h3 class="caption1">Head of div 1</h3> <br>
+                    <hr class="clearb"></hr>
+                    <div> This is Div1 </div>    
+                    <hr class="clearb"></hr>
+                    <p> This is Paragraph 1</p>                    
+                </div>                                
+                
+                <div class="divB">
+                    <h3 class="caption2">Head of div 2</h3> <br>                   
+                    <hr class="clearb"></hr>
+                    <div> This is Div2 </div>
+                    <hr class="clearb"></hr>
+                    <p> This is Paragraph 2</p>                    
+                </div>
+                
+                <div class="divC">
+                    <h3 class="caption3">Head of div 3</h3> <br>                    
+                    <hr class="clearb"></hr>
+                    <div> This is Div3 </div>
+                    <hr class="clearb"></hr>
+                    <p> This is Paragraph 3</p>
+                </div>
+                
+            </fieldset>    
+            <!----------------------------------------------------------------------------------------------------------->
+            <fieldset id="different2">
+                <legend>Different Elements with partial Same properties </legend>    
+                
+                <div class="divA0">
+                    <h3 class="caption10">Head of div 1</h3> <br>
+                    <hr class="clearb"></hr>
+                    <div> This is Div1 </div>    
+                    <hr class="clearb"></hr>
+                    <p> This is Paragraph 1</p>                    
+                </div>                                
+                
+                <div class="divB0">
+                    <h3 class="caption20">Head of div 2</h3> <br>                   
+                    <hr class="clearb"></hr>
+                    <div> This is Div2 </div>
+                    <hr class="clearb"></hr>
+                    <p> This is Paragraph 2</p>                    
+                </div>
+                
+                <div class="divC0">
+                    <h3 class="caption30">Head of div 3</h3> <br>                    
+                    <hr class="clearb"></hr>
+                    <div> This is Div3 </div>
+                    <hr class="clearb"></hr>
+                    <p> This is Paragraph 3</p>
+                </div>
+                
+            </fieldset>    
+        </div>
+
+    <!----------------------------------------------------------------------------------------------->        
+        <fieldset class="footer" id="footer">
+            This is the page Footer.
+        </fieldset>
+        <a class="home" href="#title" title="Go to page header">Home</a>
+        <a class="end" href="#footer" title="Go to page footer">End</a>
+    </div>
+</body>
+</html>

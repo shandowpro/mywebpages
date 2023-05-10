@@ -1,0 +1,1815 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 13 [2D Transform - Skew()] </title>
+    <link rel="stylesheet" href="CSS3 Lesson13 [2D Transform - Skew].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 13 [2D Transform - Skew()]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 2D Transform - Skew() main Topics">
+                [ 2D Transform - Skew() ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to 2D Transform - Skew() [2D Transform - Skew() ] Concept">
+                [ 2D Transform - Skew() ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to 2D Transform - Skew() [2D Transform - Skew() ] Importance & Benefits">
+                [ 2D Transform - Skew() ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to 2D Transform - Skew() [2D Transform - Skew() ] Syntax">
+                [ 2D Transform - Skew() ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to 2D Transform - Skew() [2D Transform - Skew() ] Practical Applications">
+                [ 2D Transform - Skew() ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 13 [2D Transform - Skew() ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                2D Transform - Skew() Property Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [2D Transform - Skew()] Concept. </li>                       
+                    
+                    <li> [2D Transform - Skew()] Importance & Benefits. </li>
+
+                    <li> [2D Transform - Skew()] Syntax [Exmaple]. </li>
+                    
+                     <li> [2D Transform - Skew()] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    
+                    <ul>
+                         <li> Using the [Transform-Skew()(X Angle Deg,Y Angle Deg)] Property to control => [Anglar Skew] property of the Object </li>
+                         <li> Differnce between [rotate()] & [skew()] Functions Effects on the Element</li>                                                                           
+                         <li> Contcatenate between all Transform Functions of the same Element Code </li>                                                                           
+                    </ul>                   
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [2D Transform - Skew()] Concept: </h3>
+            </header>
+                        
+            <p> =&gt; [2D Transform - Skew()] : This is one of CSS3 Properties to control the Element Angular Skew Amount property (Horizontally, or Vertically) . <br>
+            
+            <p> =&gt; [2D Transform - Skew()] : The  one Value of Skew function => will only gives Angle value to the Horizontal Axe and vertical axe with 0 value <br>
+                
+            <p> =&gt; [2D Transform - Skew()] : This is one of CSS3 {2D Transform} Properties Functions, which has the same in 3D Transform  . <br>
+                                
+            <p> =&gt; There are (2) Methods to write this property as following : <br>                
+                <ul>                                                            
+                    <li> [transform: skew(X: Horz Deg value, Y: Vert Deg Value) ] => This Can Hold one angluar Value to each Direction </li> <br>                                            
+                    <li> [transform: skewX (Horz Deg value) / : transformY: skewY (Vert Deg Value) ] => This Can control only detected Direction </li> <br>                                                                
+                </ul>                
+                                
+            <p> =&gt; This Skew Value is about amount of skewing angle the Element toward a certain Dimension(s) as following examples : <br>                
+                <ul>                    
+                    <li> [X]  => Skew Element to the Left Direction </li>
+                    <li> [-X] => Skew Element to the Right Direction</li>
+                    <li> [Y]  => Skew Element to the Bottom Direction </li>
+                    <li> [-Y] => Skew Element to the Top Direction </li>                    
+                </ul>
+                
+            <p> =&gt; To activate skew() Property properly with a clear Difference from the rotate() => It is recomended to following following procedures : <br>                
+                    
+                <ul>                    
+                    <li> [One Value] => It will be clear differ when write only Value of one Direction & and the other Direction [0] value, as following : <br>                        
+                        <p> transform: skew(+-value deg); => This will set only the Horizontal Axe </p>    
+                        <p> transform: skew(+-value deg, 0); </p>    
+                        <p> transform: skew(0, +-value deg); </p>    
+                        <p> transform: skewX(+-value deg); </p>    
+                        <p> transform: skewY(+-value deg); </p>                            
+                    </li>
+                    
+                    <li> [Two Values] => It will be clear differ when write two Different value when writing 2 values (different amounts, regardless of the - or + values) <br>                        
+                        <p> transform: skewX(+-value deg, +-value deg); </p>                                            
+                    </li>                                    
+                </ul>
+        </section>
+
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+            <section class="CSS3Imp" id="CSS3Imp">
+                <header>
+                    <h3> [2D Transform - Skew() ] Importance & Benefits: </h3>
+                </header>
+
+                <p> =&gt; [2D Transform - Skew() ] : This Advanced property enabaling the following features : <br>            
+                    <ul>                                        
+                        <li> The ability to Skew the Element by Set certain Angle(s) with certain amount , in one direnction or both directions</li>                        
+                        <li> This Property gives great Performance in Designing nice Templates specilaly when using with (Transition Property- will be taken in future) <li>
+                        <li> This Property gives great animations effects in Designing nice Templates specilaly when using with (other Transform Properites) <li>
+                    </ul>                                                 
+            </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ 2D Transform - Skew ] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [2D Transform - Skew()] Syntax as following :<br><br>                                                    
+                
+                    <span class=two></span> //a)  [HTML] file  : <br>                                          
+                
+                        <span class=three></span> &lt; div &gt; This is a Skew Text by 2D Transform-Skew Property 
+                       <br>                                            
+                        <span class=three></span> &lt;/div&gt;   <br> <br>                                                                              
+                
+                // ------------------------------------------------------------------------------ <br><br>
+                <span class= one></span> // A)  [2D Transform - Skew()] General {Fixed Mode} Syntax:  <br>                                          
+                    <span class=two></span> // {Exmple 1} [First Method => a value for each Dimension ] General CSS3 Syntax  : <br>
+                        <span class=three></span> div {  <br>                                                  
+                            <span class=four></span> margin: 40px; <br>                                         
+                            <span class=four></span> padding: 3px; <br>                                        
+                            <span class=four></span> width: 400px; <br> 
+                            <span class=four></span> border: 1px solid #CCC; <br>
+                            <span class=four></span> backgournd-color: #FFF; <br>
+                            <span class=four></span> Transform: Skew(+/-Horz Angle value Deg, +/-Vert Angle value Deg); <br>
+                        <span class=three></span>  }  <br>                                              
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                <span class=two></span> // {Exmple 2} [Second Method => one Value for only the X (Horz) Dimension] General CSS3 Syntax  : <br>
+                &nbsp;&nbsp; <span class="two"></span> a) Setting the Horz Dimension by [one Angle Value] Method : <br>
+                    <span class=three></span> div {  <br>                                                  
+                        <span class=four></span> margin: 40px; <br>                                                                          
+                        <span class=four></span> padding: 3px; <br>                                                                          
+                        <span class=four></span> width: 400px; <br>                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>
+                        <span class=four></span> backgournd-color: #FFF; <br>                                                         
+                        <span class=four></span> Transform: Skew(+/-Angle value Deg); <br>
+                    <span class=three></span>  }  <br>                                              
+                // --------------------------------------------------------------------------- <br><br>
+                
+                <span class=two></span> // {Exmple 3} [Second Method - one Value for only the X (Horz) Dimension] General CSS3 Syntax  : <br>
+                &nbsp;&nbsp;<span class="two"></span> b) Setting the Horz Dimension by [X Angle Value] Method : <br>
+                    <span class=three></span> div {  <br>                                                  
+                        <span class=four></span> margin: 40px; <br>                                        
+                        <span class=four></span> padding: 3px; <br>                                   
+                        <span class=four></span> width: 400px; <br>
+                        <span class=four></span> border: 1px solid #CCC; <br>
+                        <span class=four></span> backgournd-color: #FFF; <br>                                                         
+                        <span class=four></span> Transform: SkewX(+/-Angle value Deg); <br>
+                    <span class=three></span>  }  <br>                                              
+
+                // ------------------------------------------------------------------------------ <br><br>
+                
+                <hr>
+
+                <span class=two></span> // {Exmple 4} [Fixed Mode/Second Method - one Value for only the Y(Vert) Dimension] General CSS3 Syntax  : <br>                                         
+                    <span class=three></span> div {  <br>                                                  
+                        <span class=four></span> margin: 40px; <br>                                                                          
+                        <span class=four></span> padding: 3px; <br>                                                                          
+                        <span class=four></span> width: 400px; <br>                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>                                        
+                        <span class=four></span> backgournd-color: #FFF; <br>                        
+                        <span class=four></span> transform: SkewY(value Angle Deg); <br>
+                    <span class=three></span>  }  <br> <br>                                              
+                // ------------------------------------------------------------------------------ <br><br>                        
+                // ------------------------------------------------------------------------------ <br><br>                        
+                <span class=two></span> // {Exmple 5} [Dynamic Mode => a value for each Angular Dimension] + [Transition Effect] General CSS3 Syntax : <br>  
+                    <span class=three></span> div {  <br>                                                  
+                        <span class=four></span> margin: 40px; <br>                                                                          
+                        <span class=four></span> padding: 3px; <br>                                                                          
+                        <span class=four></span> width: 400px; <br>                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>
+                        <span class=four></span> backgournd-color: #FFF; <br>
+                        <span class=four></span> transition: all 1s ease-in-out; <br>
+                        <span class=three></span>  }  <br>                                                                      
+                    
+
+                    <span class=three></span> div :hover {  <br>                                                  
+                        <span class=four></span> Transform: Skew(X value Angle, Y value Angle); <br>
+                    <span class=three></span>  }  <br>                                              
+
+            // ------------------------------------------------------------------------------ <br><br>                                                            
+        // ------------------------------------------------------------------------------ <br><br>                                                            
+                <span class=two></span> // {Exmple 6} [Dynamic Mode => a value for one Angular Dimension {X}] + [Transition Effect] General CSS3 Syntax : <br>  
+                <span class=three></span> div {  <br>                                                  
+                    <span class=four></span> margin: 40px; <br>                                                                          
+                    <span class=four></span> padding: 3px; <br>                                                                          
+                    <span class=four></span> width: 400px; <br>                                                                          
+                    <span class=four></span> border: 1px solid #CCC; <br>
+                    <span class=four></span> backgournd-color: #FFF; <br>
+                    <span class=four></span> transition: all 1s ease-in-out; <br>
+                    <span class=three></span>  }  <br>                                                                      
+                
+
+                <span class=three></span> div :hover {  <br>                                                  
+                    <span class=four></span> Transform: Skew(X value Angle deg, 0 value Angle deg); <br>
+                <span class=three></span>  }  <br>                                                  
+
+                <span class=two></span> OR  <br>                                                  
+                
+                <span class=three></span> div :hover {  <br>                                                  
+                    <span class=four></span> Transform: SkewX(value Angle deg); <br>
+                <span class=three></span>  }  <br>                                                  
+                
+                <span class=two></span> OR  <br>                                                  
+                
+                <span class=three></span> div :hover {  <br>                                                  
+                    <span class=four></span> Transform: Skew(value Angle deg); => This will Set Only the X [Horz Axe] <br>
+                <span class=three></span>  }  <br>                                                  
+            // ------------------------------------------------------------------------------ <br><br>
+            
+        <hr>
+                
+            <span class=two></span> // {Exmple 7} [Dynamic Mode => a value for one Angular Dimension {Y}] + [Transition Effect] General CSS3 Syntax : <br>  
+                <span class=three></span> div {  <br>                                                  
+                    <span class=four></span> margin: 40px; <br>                                                                          
+                    <span class=four></span> padding: 3px; <br>                                                                          
+                    <span class=four></span> width: 400px; <br>                                                                          
+                    <span class=four></span> border: 1px solid #CCC; <br>
+                    <span class=four></span> backgournd-color: #FFF; <br>
+                    <span class=four></span> transition: all 1s ease-in-out; <br>
+                    <span class=three></span>  }  <br>                                                                      
+                
+
+                <span class=three></span> div :hover {  <br>                                                  
+                    <span class=four></span> Transform: Skew(0 value Angle deg, Y value Angle deg); <br>
+                <span class=three></span>  }  <br>                                                  
+
+                <span class=two></span> OR  <br>                                                  
+                
+                <span class=three></span> div :hover {  <br>                                                  
+                    <span class=four></span> Transform: SkewY(value Angle deg); <br>
+                <span class=three></span>  }  <br>                                                  
+                                        
+        <hr>                                            
+                //=========================================================== <br> <br>                                    
+                //=========================================================== <br> <br>                                                      
+                //=========================================================== <br> <br>                                                                                    
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="JSDOMPract">
+
+            <header>
+                <h3> [2D Transform - Skew] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following is the Applied example of [2D-Transform: Skew(Value)] syntax : &gt;&gt; <br>
+                <ul>
+                    <li> (2) Fieldsets contain (3) section (each section is Skewd by Certain defferent (2) Methods) for each as following:  </li> 
+                    
+                    <ol>
+                        <li> First Fieldset [Fixed Mode] :</li>
+                            <ul>
+                                <li> First Section => Skewd by {First Method (2 values for Each dimension)}   </li>                                         
+                                <li> Second Section => Skewd by {First Method (1 value for both dimensions)}   </li>                                                                         
+                                
+                                <li> Third Section => Translated by {Second Method (2 values for Each dimension)}   </li>  
+                                <li> Fourth Section => Translated by {First Method (1 value for both dimensions)}   </li>                                                                                                                                         
+                            </ul>
+                        
+                        <li> Second Fieldset [Dynamic Mode] :</li>
+                            <ul>
+                                <li> First Section => Translated by {First Method (2 values for Each dimension)}   </li>                                         
+                                
+                                <li> Second Section => Translated by {First Method (1 value for both dimensions)}   </li>                                                                         
+                                
+                                <li> Third Section => Translated by {Second Method (2 values for Each dimension)}   </li>                                          
+                                
+                                <li> Fourth Section => Translated by {First Method (1 value for both dimensions)} </li>                                                                         
+                            </ul>
+                    </ol>                    
+                </ul>                
+                <br>
+                <hr>
+
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+            <fieldset class='FixedMode'>  
+                <legend> Skew() => First Mode {Fixed Mode} </legend>
+            
+                <!-- A] First Mode/Fixed Mode=> (First Method) => One Direction Method -->
+                <!-- 1) One Direction -->
+                <section class='sec1'>
+    
+                    <h3> Skew to [Right (-X)] {by -30deg} </h4>
+                        <div class='Right1'>
+                            <h4>This Section will be Skewed => {Right:-30Deg} by [First Method : Two Values {skew(x = -30deg, y = 0)} ] </h4>
+                        </div> <br>
+                                            
+                        <div class='Right2'>
+                            <h4>This Section will be Skewed => {Right:-30Deg} by [Second Method : One Value {skewX(-30deg)} ] </h4>
+                        </div> <br>
+                    
+                        <div class='Right3'>
+                            <h4>This Section will be Skewed => {Right:-30Deg} by [Third Method : One Value {skew(-30deg)} ] </h4>
+                        </div> <br>
+
+                    <hr> <br>
+                    
+                    <h3> Skew to [Left (X)] {by 30deg} </h4>
+                        <div class='Left1'>
+                            <h4>This Section will be Skewed => {Left:30Deg} by [First Method : Two Values {skew(x = 30deg, y = 0)} ] </h4>
+                        </div> <br>
+                        
+                        <div class='Left2'>
+                            <h4>This Section will be Skewed => {Left:30Deg} by [Second Method : One Value {skewX(30deg)} ] </h4>
+                        </div> <br>
+                        
+                        <div class='Left3'>
+                            <h4>This Section will be Skewed => {Left:30Deg} by [Third Method : One Value {skew(30deg)} ] </h4>
+                        </div> <br>
+                    
+                    <hr>
+
+                    <h3> Skew to [Top (-Y)] {by 30deg} </h3>
+                        <div class='Top1'>
+                            <h4>This Section will be Skewed => {Top:-30Deg} by [First Method : Two Values {skew( x = 0, y = -30deg)} ] </h4>
+                        </div> <br>
+                        
+                        <div class='Top2'>
+                            <h4>This Section will be Skewed => {Top:-30Deg} by [Second Method : Two Values {skewY(-30deg)} ] </h4>
+                        </div> <br>
+                                        
+                    <hr>
+
+                    <h3> Skew to [Bottom (Y)] {by 30deg} </h3>
+                        <div class='Bottom1'>
+                            <h4>This Section will be Skewed => {Bottom:30Deg} by [First Method : Two Values {skew( x = 0, y = 30deg)} ] </h4>
+                        </div> <br>
+                        
+                        <div class='Bottom2'>
+                            <h4>This Section will be Skewed => {Bottom:30Deg} by [Second Method : Two Values {skewY(30deg)} ] </h4>
+                        </div> <br>                                            
+                    <hr>
+                        
+                </section>
+                <hr>
+                
+                <!-- First Mode/Fixed Mode: (Second Method) => Two Directions Method -->
+                <!-- 2) Two Directions -->
+                <section class='sec2'>
+
+                    <h3> Skew [Right + Top] {by 30deg for each}</h3>
+                    <div class='RightTop'>
+                        <h4>This Section will be Skewsed => {Right:30deg + Top:-30deg} by [ two Values (x = -30deg, y = -30deg] </h4>                 
+                    </div> <br> <br>
+                    
+                    <h3> Skew [Right + Bottom] {by 30deg for each} </h3>
+                        <div class='RightBottom'>                            
+                            <h4>This Section will be Skewsed => {Right:-30deg + Bottom:30deg} by [ two Values (x = -30deg, y = 30deg] </h4>                 
+                        </div> <br> <br>
+                    
+                    <h3> Skew [Left + Top] {by 30deg for each} </h3>
+                        <div class='LeftTop'>                            
+                            <h4>This Section will be Skewsed => {Right:-30deg + Top:-30deg} by [ two Values (x = 30deg, y = -30deg] </h4>                 
+                        </div> <br> <br>
+                    
+                    <h3> Skew [Left + Bottom] {by 30deg for each} </h3>
+                        <div class='LeftBottom'>                            
+                            <h4>This Section will be Skewsed => {Left:30deg + Bottom:30deg} by [ two Values (x = 30deg, y = -30deg] </h4>                 
+                        </div> <br> <br>
+                                    
+                </section>
+                <hr>
+                
+            </fieldset>                                                                
+            <hr>
+            <hr>
+            
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+            <fieldset class='DynamicMode'>  
+                <legend> Skew() => Second Mode {Dynamic Mode}</legend>
+                            
+                <!-- B] Second Mode/Dynamic Mode=> (First Method) =>  One Direction Method -->                
+                <section class='sec1'>
+    
+                    <!-- 1) One Direction -->
+
+                    <h3> Skew to [Right (-X)] {by -30deg} </h4>
+                        <div class='DRight1'>
+                            <h4>This Section will be Skewed => {Right:-30Deg} by [First Method : Two Values {skew(x = -30deg, y = 0)} ] </h4>
+                        </div> <br>
+                                            
+                        <div class='DRight2'>
+                            <h4>This Section will be Skewed => {Right:-30Deg} by [Second Method : One Value {skewX(-30deg)} ] </h4>
+                        </div> <br>
+                    
+                        <div class='DRight3'>
+                            <h4>This Section will be Skewed => {Right:-30Deg} by [Third Method : One Value {skew(-30deg)} ] </h4>
+                        </div> <br>
+
+                    <hr> <br>
+                    
+                    <h3> Skew to [Left (X)] {by 30deg} </h4>
+                        <div class='DLeft1'>
+                            <h4>This Section will be Skewed => {Left:30Deg} by [First Method : Two Values {skew(x = 30deg, y = 0)} ] </h4>
+                        </div> <br>
+                        
+                        <div class='DLeft2'>
+                            <h4>This Section will be Skewed => {Left:30Deg} by [Second Method : One Value {skewX(30deg)} ] </h4>
+                        </div> <br>
+                        
+                        <div class='DLeft3'>
+                            <h4>This Section will be Skewed => {Left:30Deg} by [Third Method : One Value {skew(30deg)} ] </h4>
+                        </div> <br>
+                    
+                    <hr>
+
+                    <h3> Skew to [Top (-Y)] {by 30deg} </h3>
+                        <div class='DTop1'>
+                            <h4>This Section will be Skewed => {Top:-30Deg} by [First Method : Two Values {skew( x = 0, y = -30deg)} ] </h4>
+                        </div> <br>
+                        
+                        <div class='DTop2'>
+                            <h4>This Section will be Skewed => {Top:-30Deg} by [Second Method : Two Values {skewY(-30deg)} ] </h4>
+                        </div> <br>
+                                        
+                    <hr>
+
+                    <h3> Skew to [Bottom (Y)] {by 30deg} </h4>
+                        <div class='DBottom1'>
+                            <h4>This Section will be Skewed => {Bottom:30Deg} by [First Method : Two Values {skew( x = 0, y = 30deg)} ] </h4>
+                        </div> <br>
+                        
+                        <div class='DBottom2'>
+                            <h4>This Section will be Skewed => {Bottom:30Deg} by [Second Method : Two Values {skewY(30deg)} ] </h4>
+                        </div> <br>                                            
+                    <hr>                                            
+                </section>
+                <hr>
+                //================================================================================== <br><br>
+                
+                <!-- 2) Two Directions -->
+                <section class='sec2'>
+
+                    <h4> Skew [Right + Top] {by 30deg for each}</h4>
+                    <div class='DRightTop'>
+                        <h4>This Section will be Skewsed => {Right:30deg + Top:-30deg} by [ two Values (x = -30deg, y = -30deg] </h4>                 
+                    </div> <br> <br>
+                    
+                    <h4> Skew [Right + Bottom] {by 30deg for each} </h4>
+                        <div class='DRightBottom'>                            
+                            <h4>This Section will be Skewsed => {Right:-30deg + Bottom:30deg} by [ two Values (x = -30deg, y = 30deg] </h4>                 
+                        </div> <br> <br>
+                    
+                    <h4> Skew [Left + Top] {by 30deg for each} </h4>
+                        <div class='DLeftTop'>                            
+                            <h4>This Section will be Skewsed => {Right:-30deg + Top:-30deg} by [ two Values (x = 30deg, y = -30deg] </h4>                 
+                        </div> <br> <br>
+                    
+                    <h4> Skew [Left + Bottom] {by 30deg for each} </h4>
+                        <div class='DLeftBottom'>                            
+                            <h4>This Section will be Skewsed => {Left:30deg + Bottom:30deg} by [ two Values (x = 30deg, y = -30deg] </h4>                 
+                        </div> <br> <br>
+                                    
+                </section>
+                        
+            </fieldset>                                                                
+        <hr>
+
+        //================================================================================== <br><br>
+            <fieldset class='MultipleMode'>  
+                <legend> Skew() => Third Mode {Multiple Mode [Skew + Rotation + Scaling + Translate]}</legend>
+            
+                
+                <!-- C] Third Mode {Multiple Mode}=> (Third Method) => Skew + other Transform properties  -->
+                
+                <!-- 1) Skew + Rotation : -->
+                <section class='sec1'>
+                    <fieldset>
+                        <legend>A) Skew + Rotation : </legend>
+
+                            <!-- {Skew:Right}, {Rotate:Right,Left} -->
+                            <h3> 1) {SkewX: -30deg => Right  + Rotate: 45deg => Right } : </h3>                                        
+                            <div class='SkwRRotR'>
+                                <h4>
+                                    This Section will be {Skewed} by -30deg to the Right + {Rotated} by 45 deg into the Right Direction : When Hover
+                                </h4>                 
+                            </div> <br>                        
+                            <!-- --------------------------------------------------------------------- -->
+                            
+                            <h3> 2) { SkewX: -30deg => Right + Rotate:-45 deg => Left} : </h3>                        
+                            <div class='SkwRRotL'>                        
+                                <h4>
+                                    This Section will be {Skewed} by -30deg to the Right + {Rotated} by 45 deg into the Right Direction : When Hover
+                                </h4>                 
+                            </div> <br>                                                    
+                            <hr>
+                            <!-- ---s------------------------------------------------------------------ -->
+
+                            <!-- {Skew:Left}, {Rotate:Right,Left} -->
+                            <h3> 3) { Skew: 30deg => Left + Rotate: 45deg => Right } : </h3>                                        
+                            <div class='SkwLRotR'>
+                                <h4>
+                                    This Section will be {Skewed} by 30deg to the Bottom + {Rotated} by 45 deg into the Right Direction : When Hover
+                                </h4>                 
+                            </div> <br>
+                            
+                            <!-- --------------------------------------------------------------------- -->
+                            
+                            <h3> 4) { Skew: 30deg => Left + Rotate:-45 deg => Left} : </h3>                        
+                            <div class='SkwLRotL'>                        
+                                <h4>
+                                    This Section will be {Skewed} by 30deg to the Left + {Rotated} by 45 deg into the Left Direction : When Hover
+                                </h4>                 
+                            </div> <br>                               
+                            <!-- --------------------------------------------------------------------- -->
+
+                            <!-- {Skew:Bottom}, {Rotate:Right,Left} -->
+                            <h3> 5) {SkewY: 30deg => Bottom  + Rotate: 45deg => Right } : </h3>                                        
+                            <div class='SkwBRotR'>
+                                <h4>
+                                    This Section will be {Skewed} by 30deg to the Bottom + {Rotated} by 45 deg into the Right Direction : When Hover
+                                </h4>                 
+                            </div> <br>                        
+                            <!-- --------------------------------------------------------------------- -->
+                            
+                            <h3> 6) { SkewY: 30deg => Bottom + Rotate:-45 deg => Left} : </h3>                        
+                            <div class='SkwBRotL'>                        
+                                <h4>
+                                    This Section will be {Skewed} by 30deg to the Bottom + {Rotated} by 45 deg into the Left Direction : When Hover
+                                </h4>                 
+                            </div> <br>                                                    
+                            <hr>
+                            <!-- --------------------------------------------------------------------- -->
+                        
+                            <!-- {Skew:Top}, {Rotate:Right,Left} -->                 
+                            <h3> 7) { SkewY: -30deg => Top + Rotate: 45deg => Right } : </h3>                                    
+                            <div class='SkwTRotR'>
+                                <h4>
+                                    This Section will be {Skewed} by -30deg to the Top + {Rotated} by 45 deg into the Right Direction : When Hover
+                                </h4>                 
+                            </div> <br>
+                            
+                            <!-- --------------------------------------------------------------------- -->
+                            
+                            <h3> 8) { SkewY: -30deg => Top + Rotate:-45 deg => Left} : </h3>                    
+                            <div class='SkwTRotL'>                  
+                               <h4>
+                                    This Section will be {Skewed} by 30deg to the Top + {Rotated} by 45 deg into the Left Direction : When Hover
+                                </h4>                 
+                            </div> <br>                                                                    
+                            <hr>
+                            <!-- --------------------------------------------------------------------- -->
+                            <!-- --------------------------------------------------------------------- -->
+                        </fieldset>
+                    </section>
+                    <hr>                    
+            <!-- ========================================================================================= -->
+                    
+                    <!-- 2) Skew + Scaling: -->                
+                    <section class='sec2'>
+                        <legend>
+                            B) Skew + Scaling : 
+                        </legend>                           
+    
+                        <h3> 1) { Skew: -30deg => Right  + Scaling : .7 times} : </h3>
+                                        
+                        <div class='SkwRScl'>
+                            <h4>
+                                This Section will be {Skewed} by -30deg to the Right + {Scaled} by .7 Times: When Hover
+                            </h4>                 
+                        </div> <br>
+                                                                                                
+                        <hr>
+                        <!-- --------------------------------------------------------------------- -->
+                        
+    
+                        <h3> 2) { Skew: 30deg => Left  + Scaling : .7 times} : </h3>
+                                        
+                        <div class='SkwLScl'>
+                            <h4>
+                                This Section will be {Skewed} by 30deg to the Left + {Scaled} by .7 Times: When Hover
+                            </h4>                 
+                        </div> <br>
+                        
+                        <!-- --------------------------------------------------------------------- -->
+                        
+                        <h3> 3) { Skew: -30deg => Top  + Scaling : .7 times  } : </h3>
+                                        
+                        <div class='SkwTScl'>
+                            <h4>
+                                This Section will be {Skewed} by -30deg to the Top + {Scaled} by .7 Times: When Hover
+                            </h4>                 
+                        </div> <br>
+                        <!-- --------------------------------------------------------------------- -->
+                        <hr>
+                        <!-- --------------------------------------------------------------------- -->
+                        <h3> 4) { Skew: 30deg => Bottom  + Scaling : .7 times  } : </h3>
+                                        
+                        <div class='SkwBScl'>
+                            <h4>
+                                This Section will be {Skewed} by 30deg to the Bottom + {Scaled} by .7 Times: When Hover
+                            </h4>                 
+                        </div> <br>
+                        
+                        <!-- --------------------------------------------------------------------- -->                        
+                        
+                        <br>                        
+                    </section>
+            <!-- =========================================================================================== -->
+                    
+                    <!-- 3) Skewing + Translating -->                
+                    <section class='sec3'>
+                        <fieldset>
+                            <legend> C) Skew + Translating : </legend>
+    
+                                <!-- {Skew:Right}, {Translate:Right,Left,Bottom,Top} -->
+                                <h3> 1) {SkewX: -30deg => Right  + Translate: 50px => Right} : </h3>                                        
+                                <div class='SkwRTranR'>
+                                    <h4>
+                                        This Section will be {Skewed} by -30deg to the Right + {Translated} by 50px into the Right Direction : When Hover
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 2) {SkewX: -30deg => Right  + Translate: -50px => Left} : </h3>                       
+                                <div class='SkwRTranL'>                        
+                                    <h4>
+                                        This Section will be {Skewed} by -30deg to the Right + {Translated} by -50px into the Right Direction : When Hover
+                                    </h4>                 
+                                </div> <br>                                                    
+                                <hr>
+                                <!-- --------------------------------------------------------------------- -->
+                                    
+                                <h3> 3) { SkewX: -30deg => Right + Translate: 50px => Bottom} : </h3>                                        
+                                <div class='SkwRTranB'>
+                                    <h4>
+                                        This Section will be {Skewed} by 30deg to the Right + {Translated} by 50px into the Bottom Direction : When Hover
+                                    </h4>                 
+                                </div> <br>
+                                
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 4) { SkewX: -30deg => Right + Translate: -50px => Top} : </h3>                        
+                                <div class='SkwRTranT'>                        
+                                    <h4>
+                                        This Section will be {Skewed} by -30deg to the Right + {Translated} by -50px into the Right Direction : When Hover
+                                    </h4>                 
+                                </div> <br>                               
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+    
+                                <!-- {Skew:Left}, {Rotate:Right,Left,Bottom,Top} -->
+                                <h3> 5) {SkewX: 30deg => Left  + Translate: 50px => Right} : </h3>                                        
+                                <div class='SkwLTranR'>
+                                    <h4>
+                                        This Section will be {Skewed} by 30deg to the Left + {Translated} by 50px into the Right Direction : When Hover
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 6) {SkewX: 30deg => Left  + Translate: -50px => Left} : </h3>                       
+                                <div class='SkwLTranL'>                        
+                                    <h4>
+                                        This Section will be {Skewed} by -30deg to the Left + {Translated} by -50px into the Left Direction : When Hover
+                                    </h4>                 
+                                </div> <br>                                                    
+                                <hr>
+                                <!-- --------------------------------------------------------------------- -->
+                                    
+                                <h3> 7) { SkewX: 30deg => Left + Translate: 50px => Bottom} : </h3>                                        
+                                <div class='SkwLTranB'>
+                                    <h4>
+                                        This Section will be {Skewed} by 30deg to the Left + {Translated} by 50px into the Bottom Direction : When Hover
+                                    </h4>                 
+                                </div> <br>
+                                
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 8) { SkewX: 30deg => Left + Translate: -50px => Top} : </h3>                        
+                                <div class='SkwLTranT'>                        
+                                    <h4>
+                                        This Section will be {Skewed} by 30deg to the Left + {Translated} by -50px into the Top Direction : When Hover
+                                    </h4>                 
+                                </div> <br>                               
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <!-- {Skew:Bottom}, {Rotate:Right,Left,Bottom,Top}-->                                
+                                <h3> 9) {SkewY: 30deg => Bottom + Translate: 50px => Right} : </h3>                                        
+                                <div class='SkwBTranR'>
+                                    <h4>
+                                        This Section will be {Skewed} by 30deg to the Bottom + {Translated} by 50px into the Right Direction : When Hover
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 10) {SkewY: 30deg => Bottom  + Translate: -50px => Left} : </h3>                       
+                                <div class='SkwBTranL'>                        
+                                    <h4>
+                                        This Section will be {Skewed} by 30deg to the Bottom + {Translated} by -50px into the Left Direction : When Hover
+                                    </h4>                 
+                                </div> <br>                                                    
+                                <hr>
+                                <!-- --------------------------------------------------------------------- -->
+                                    
+                                <h3> 11) { SkewY: 30deg => Bottom + Translate: 50px => Bottom} : </h3>                                        
+                                <div class='SkwBTranB'>
+                                    <h4>
+                                        This Section will be {Skewed} by 30deg to the Bottom + {Translated} by 50px into the Bottom Direction : When Hover
+                                    </h4>                 
+                                </div> <br>
+                                
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 12) { SkewY: 30deg => Bottom + Translate: -50px => Top} : </h3>                        
+                                <div class='SkwBTranT'>                        
+                                    <h4>
+                                        This Section will be {Skewed} by 30deg to the Bottom + {Translated} by -50px into the Top Direction : When Hover
+                                    </h4>                 
+                                </div> <br>                               
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <!-- {Skew:Top}, {Rotate:Right,Left,Bottom,Top} -->
+                                
+                                <h3> 13) {SkewY: -30deg => Top + Translate: 50px => Right} : </h3>                                        
+                                <div class='SkwTTranR'>
+                                    <h4>
+                                        This Section will be {Skewed} by -30deg to the Top + {Translated} by 50px into the Right Direction : When Hover
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 14) {SkewY: -30deg => Top  + Translate: -50px => Left} : </h3>                       
+                                <div class='SkwTTranL'>                        
+                                    <h4>
+                                        This Section will be {Skewed} by -30deg to the Top + {Translated} by -50px into the Left Direction : When Hover
+                                    </h4>                 
+                                </div> <br>                                                    
+                                <hr>
+                                <!-- --------------------------------------------------------------------- -->
+                                    
+                                <h3> 11) { SkewY: -30deg => Top + Translate: 50px => Bottom} : </h3>                                        
+                                <div class='SkwTTranB'>
+                                    <h4>
+                                        This Section will be {Skewed} by -30deg to the Top + {Translated} by 50px into the Bottom Direction : When Hover
+                                    </h4>                 
+                                </div> <br>
+                                
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 12) { SkewY: -30deg => Top + Translate: -50px => Top} : </h3>                        
+                                <div class='SkwTTranT'>                        
+                                    <h4>
+                                        This Section will be {Skewed} by -30deg to the Top + {Translated} by -50px into the Top Direction : When Hover
+                                    </h4>                 
+                                </div> <br>                               
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->                                                                
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                            </fieldset>                                            
+                        <br>                        
+                    </section>                
+                    <hr> <br>                                                        
+            <!-- =========================================================================================== -->
+
+                    <!-- 4) Skewing + Rotating + Scaling  -->                
+                    <section class='sec4'>
+                        <fieldset>
+                            <!-- {Skew:Right, Left, Bottom ,Top}, {Rotate: 30deg Right, Left}, {Scale:.7} -->
+                            <legend> D) Skew + Rotating + Scaling  : </legend>
+    
+                                <!-- a) {Skew:Right},{Rotate: 30deg Right, Left}, {Scale:.7} -->
+                                <h3> 1) {SkewX: -30deg => Right + Rotating: 30deg => Right + Scaling: .7 times } : </h3>                                        
+                                <div class='SkwRRotRScl'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Right </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Scaled} by .7 times </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3>  2) {SkewX: -30deg => Right + Rotating: -30deg => Left + Scaling: .7 times } : </h3>                       
+                                <div class='SkwRRotLScl'>                        
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Right </li>
+                                            <li> {Rotated} by -30deg into the Left Direction</li>
+                                            <li> {Scaled} by .7 times </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                                                    
+                                <hr>
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <!-- b) {Skew:Left}, {Rotate: 30deg Right, Left}, {Scale:.7} -->    
+                                <h3> 3) {SkewX: 30deg => Left + Rotating: 30deg => Right + Scaling: .7 times } : </h3>                                        
+                                <div class='SkwLRotRScl'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Left </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Scaled} by .7 times </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3>  4) {SkewX: 30deg => Left + Rotating: -30deg => Left + Scaling: .7 times } : </h3>                       
+                                <div class='SkwLRotLScl'>                        
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Left </li>
+                                            <li> {Rotated} by 30deg into the Left Direction</li>
+                                            <li> {Scaled} by .7 times </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                                                    
+                                <hr>
+                                <!-- --------------------------------------------------------------------- -->                                                                                                    
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <!-- c) {Skew:Top}, {Rotate: 30deg Right, Left}, {Scale:.7} -->
+                                <h3> 5) {SkewY: -30deg => Top + Rotating: 30deg => Right + Scaling: .7 times } : </h3>                                        
+                                <div class='SkwTRotRScl'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Top </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Scaled} by .7 times </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3>  6) {SkewY: -30deg => Top + Rotating: -30deg => Left + Scaling: .7 times } : </h3>                       
+                                <div class='SkwRRotLScl'>                        
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Top </li>
+                                            <li> {Rotated} by -30deg into the Left Direction</li>
+                                            <li> {Scaled} by .7 times </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                                                    
+                                <hr>
+                                <!-- --------------------------------------------------------------------- -->
+                                    
+                                <h3> 7) {SkewY: 30deg => Bottom + Rotating: 30deg => Right + Scaling: .7 times } : </h3>                                        
+                                <div class='SkwTRotRScl'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Bottom </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Scaled} by .7 times </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3>  8) {SkewY: 30deg => Bottom + Rotating: -30deg => Left + Scaling: .7 times } : </h3>                       
+                                <div class='SkwBRotLScl'>                        
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Bottom </li>
+                                            <li> {Rotated} by 30deg into the Left Direction</li>
+                                            <li> {Scaled} by .7 times </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                                                    
+                                                                
+                                <!-- --------------------------------------------------------------------- -->
+                                <h3>  9) {SkewY: 30deg => Bottom + Rotating: 30deg => right + Scaling: .7 times } : </h3>                       
+                                <div class='SkwBRotRScl'>                        
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Bottom </li>
+                                            <li> {Rotated} by 30deg into the right Direction</li>
+                                            <li> {Scaled} by .7 times </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                                                    
+                                
+                                <!-- --------------------------------------------------------------------- -->
+                                <h3>  10) {SkewY: 30deg => Bottom + Rotating: 30deg => left + Scaling: .7 times } : </h3>                       
+                                <div class='SkwBRotLScl'>                        
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Bottom </li>
+                                            <li> {Rotated} by 30deg into the lef Direction</li>
+                                            <li> {Scaled} by .7 times </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                                                    
+                                <hr>
+                                <!-- --------------------------------------------------------------------- -->                                                                                                                                                                
+                                <!-- --------------------------------------------------------------------- -->                                                                
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                            </fieldset>
+                                            
+                        <br>                        
+                    </section>                
+                    <hr>                
+                <!-- ==================================================================================== -->
+                    
+                <!-- 5) Skewing + Rotating + Translating  -->                
+                    <section class='sec5'>
+                        <fieldset>
+                            <!-- {Skew:Right, Left, Bottom ,Top}, {Rotate: 30deg Right}, {Translate:Right, Left, Top, Bottom} -->
+                            <legend> D) Skew + Rotating + Translating  : </legend>
+    
+                                <!-- a) {Skew:Right},{Rotate: 30deg Right}, {Translate:Right, Left, Top , Bottom} -->
+                                <h3> 1) {SkewX: -30deg => Right + Rotating: 30deg => Right + Translate: 70px => Right} : </h3>                                        
+                                <div class='SkwRRotRTranR'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Right </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by 70px to the Right </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 2) {SkewX: -30deg => Right + Rotating: 30deg => Right + Translate: 70px => Left} : </h3>                                        
+                                <div class='SkwRRotRTranL'>                        
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Right </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by -70px to the Left </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                                                    
+                                <hr>
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 3) {SkewX: -30deg => Right + Rotating: 30deg => Right + Translate: 70px => Top} : </h3>                                        
+                                <div class='SkwRRotRTranT'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Right </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by -70px to the Top </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 4) {SkewX: -30deg => Right + Rotating: 30deg => Right + Translate: 70px => Botttom} : </h3>                                        
+                                <div class='SkwRRotRTranB'>                        
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Right </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by 70px to the Bottom </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                                                    
+                                <hr>
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                                                                                                                                
+                                <!-- b) {Skew: Left},{Rotate: 30deg Right}, {Translate:Right, Left, Top , Bottom} -->
+                                <h3> 5) {SkewX: 30deg => Left + Rotating: 30deg => Right + Translate: 70px => Right } : </h3>                                        
+                                <div class='SkwLRotRTranR'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Left </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by 70px to the Right </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 6) {SkewX: 30deg => Left + Rotating: 30deg => Right + Translate: -70px => Left } : </h3>                                        
+                                <div class='SkwLRotRTranL'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Left </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by -70px to the Left </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 7) {SkewX: 30deg => Left + Rotating: 30deg => Right + Translate: 70px => Bottom } : </h3>                                        
+                                <div class='SkwLRotRTranB'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Left </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by 70px to the Bottom </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 8) {SkewX: 30deg => Left + Rotating: 30deg => Right + Translate: -70px => Top } : </h3>                                        
+                                <div class='SkwLRotRTranT'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Left </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by -70px to the Top </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <!-- c) {Skew: Top},{Rotate: 30deg Right}, {Translate:Right, Left, Top , Bottom} -->
+                                
+                                <h3> 9) {SkewY: -30deg => Top + Rotating: 30deg => Right + Translate: 70px => Right } : </h3>                                        
+                                <div class='SkwTRotRTranR'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Top</li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by 70px to the Right </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 10) {SkewY: -30deg => Top + Rotating: 30deg => Right + Translate: -70px => Left } : </h3>                                        
+                                <div class='SkwTRotRTranL'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Top </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by -70px to the Left </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 11) {SkewY: -30deg => Top + Rotating: 30deg => Right + Translate: 70px => Bottom } : </h3>                                        
+                                <div class='SkwTRotRTranB'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Top </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by 70px to the Bottom </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 12) {SkewY: -30deg => Top + Rotating: 30deg => Right + Translate: -70px => Top } : </h3>                                        
+                                <div class='SkwTRotRTranT'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Top </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by -70px to the Top </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <!-- d) {Skew: Bottom},{Rotate: 30deg Right}, {Translate:Right, Left, Top , Bottom} -->
+                                
+                                <h3> 13) {SkewY: 30deg => Bottom + Rotating: 30deg => Right + Translate: 70px => Right } : </h3>                                        
+                                <div class='SkwBRotRTranR'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Bottom</li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by 70px to the Right </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 14) {SkewY: 30deg => Bottom + Rotating: 30deg => Right + Translate: -70px => Left } : </h3>                                        
+                                <div class='SkwBRotRTranL'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Bottom </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by -70px to the Left </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 15) {SkewY: 30deg => Bottom + Rotating: 30deg => Right + Translate: 70px => Bottom } : </h3>                                        
+                                <div class='SkwBRotRTranB'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Bottom </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by 70px to the Bottom </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 16) {SkewY: 30deg => Bottom + Rotating: 30deg => Right + Translate: -70px => Top } : </h3>                                        
+                                <div class='SkwBRotRTranT'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Bottom </li>
+                                            <li> {Rotated} by 30deg into the Right Direction</li>
+                                            <li> {Translate} by -70px to the Top </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->                                
+                                <!-- --------------------------------------------------------------------- -->                                                                
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                            </fieldset>                                            
+                        <br>                        
+                    </section>                
+                    <hr>                
+                    
+        <!-- ================================================================================================= -->
+                <!-- 6) Skewing + Scaling + Translating + -->                
+                    <section class='sec6'>
+                        <fieldset>
+                            <!-- {Skew:Right, Left, Bottom ,Top}, {Scale: .7 times}, {Translate:Right, Left, Top, Bottom} -->
+                            <legend> E) Skew + Scale + Translate  : </legend>
+    
+                                <!-- a) {Skew:Right},{Scale: .7 times}, {Translate:Right, Left, Top , Bottom} -->
+                                <h3> 1) {SkewX: -30deg => Right + Scale: .7 times + Translate: 70px => Right} : </h3>                                        
+                                <div class='SkwRSclTranR'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Right </li>
+                                            <li> {Scaled} by .7 Times</li>
+                                            <li> {Translate} by 70px to the Right </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 2) {SkewX: -30deg => Right + Scale: .7 times + Translate: 70px => Left} : </h3>                                        
+                                <div class='SkwRSclTranL'>                        
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Right </li>
+                                            <li> {Scaled} by .7 Times</li>
+                                            <li> {Translate} by -70px to the Left </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                                                    
+                                <hr>
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 3) {SkewX: -30deg => Right + Scale: .7 times + Translate: 70px => Top} : </h3>                                        
+                                <div class='SkwRSclTranT'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Right </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Translate} by -70px to the Top </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 4) {SkewX: -30deg => Right + Scale: .7 times + Translate: 70px => Botttom} : </h3>                                        
+                                <div class='SkwRSclTranB'>                        
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Right </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Translate} by 70px to the Bottom </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                                                    
+                                <hr>
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                                                                                                                                
+                                <!-- b) {Skew: Left},{Scale: .7 times}, {Translate:Right, Left, Top , Bottom} -->
+                                <h3> 5) {SkewX: 30deg => Left + Scale: .7 times + Translate: 70px => Right } : </h3>                                        
+                                <div class='SkwLSclTranR'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Left </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Translate} by 70px to the Right </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 6) {SkewX: 30deg => Left + Scale: .7 times + Translate: -70px => Left } : </h3>                                        
+                                <div class='SkwLSclTranL'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Left </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Translate} by -70px to the Left </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 7) {SkewX: 30deg => Left + Scale: .7 times + Translate: 70px => Bottom } : </h3>                                        
+                                <div class='SkwLSclTranB'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Left </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Translate} by 70px to the Bottom </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 8) {SkewX: 30deg => Left + Scale: .7 times + Translate: -70px => Top } : </h3>                                        
+                                <div class='SkwLSclTranT'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Left </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Translate} by -70px to the Top </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <!-- c) {Skew: Top},{Scale: .7 times}, {Translate:Right, Left, Top , Bottom} -->
+                                
+                                <h3> 9) {SkewY: -30deg => Top + Scale: .7 times + Translate: 70px => Right } : </h3>                                        
+                                <div class='SkwTSclTranR'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Top</li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Translate} by 70px to the Right </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 10) {SkewY: -30deg => Top + Scale: .7 times + Translate: -70px => Left } : </h3>                                        
+                                <div class='SkwTSclTranL'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Top </li>
+                                            <li> {Scaled} by .7 times </li>
+                                            <li> {Translate} by -70px to the Left </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 11) {SkewY: -30deg => Top + Scale: .7 times + Translate: 70px => Bottom } : </h3>                                        
+                                <div class='SkwTSclTranB'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Top </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Translate} by 70px to the Bottom </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 12) {SkewY: -30deg => Top + Scale: .7 times + Translate: -70px => Top } : </h3>                                        
+                                <div class='SkwTSclTranT'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Top </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Translate} by -70px to the Top </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <!-- d) {Skew: Bottom},{Scale: .7 times}, {Translate:Right, Left, Top , Bottom} -->
+                                
+                                <h3> 13) {SkewY: 30deg => Bottom + Scale: .7 times + Translate: 70px => Right } : </h3>                                        
+                                <div class='SkwBSclTranR'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Bottom</li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Translate} by 70px to the Right </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 14) {SkewY: 30deg => Bottom + Scale: .7 times + Translate: -70px => Left } : </h3>                                        
+                                <div class='SkwBSclTranL'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Bottom </li>
+                                            <li> {Scaled} by .7 times </li>
+                                            <li> {Translate} by -70px to the Left </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 15) {SkewY: 30deg => Bottom + Scale: .7 times + Translate: 70px => Bottom } : </h3>                                        
+                                <div class='SkwBSclTranB'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Bottom </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Translate} by 70px to the Bottom </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 16) {SkewY: 30deg => Bottom + Scale: .7 times + Translate: -70px => Top } : </h3>                                        
+                                <div class='SkwBSclTranT'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Bottom </li>
+                                            <li> {Scaled} by .7 times </li>
+                                            <li> {Translate} by -70px to the Top </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                            </fieldset>                                            
+                            <br>                        
+                        </section>                
+                        <hr>                                        
+                <!-- --------------------------------------------------------------------- -->
+                <!-- --------------------------------------------------------------------- -->                                                                                
+
+                <!-- 7) Skewing + Scaling + Rotating + Translating  -->                
+                    <section class='sec7'>
+                        <fieldset>
+                            <!-- {Skew:Right, Left, Bottom ,Top}, {Scale: .7 times}, {Rotate: Right} , {Translate:Right, Left, Top, Bottom} -->
+                            <legend> F) Skew + Scale  + Rotating + Translate  : </legend>
+    
+                                <!-- a) {Skew:Right},{Scale: .7 times}, {Translate:Right, Left, Top , Bottom} -->
+                                <h3> 1) {SkewX: -30deg => Right + Scale: .7 times + Rotate: 30deg => Right + Translate: 70px => Right} : </h3>                                        
+                                <div class='SkwRSclRotRTranR'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Right </li>
+                                            <li> {Scaled} by .7 Times</li>
+                                            <li> {Rotated} by 30deg to Right </li>
+                                            <li> {Translate} by 70px to the Right </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 2) {SkewX: -30deg => Right + Scale: .7 times + Rotate: 30deg => Right +  Translate: 70px => Left} : </h3>                                        
+                                <div class='SkwRSclRotRTranL'>                        
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Right </li>
+                                            <li> {Scaled} by .7 Times</li>
+                                            <li> {Rotated} by 30deg to Right </li>
+                                            <li> {Translate} by -70px to the Left </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                                                    
+                                <hr>
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 3) {SkewX: -30deg => Right + Scale: .7 times + Rotate: 30deg => Right +  Translate: 70px => Top} : </h3>                                        
+                                <div class='SkwRSclRotRTranT'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Right </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Rotated} by 30deg to Right </li>
+                                            <li> {Translate} by -70px to the Top </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 4) {SkewX: -30deg => Right + Scale: .7 times + Rotate: 30deg => Right + Translate: 70px => Botttom} : </h3>                                        
+                                <div class='SkwRSclRotRTranB'>                        
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Right </li>
+                                            <li> {Scaled} by .7 times</li>                                            
+                                            <li> {Rotated} by 30deg to Right </li>                                            
+                                            <li> {Translate} by 70px to the Bottom </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                                                    
+                                <hr>
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                                                                                                                                
+                                <!-- b) {Skew: Left},{Scale: .7 times}, {Rotate:30deg => Right}, {Translate:Right, Left, Top , Bottom} -->
+                                <h3> 5) {SkewX: 30deg => Left + Scale: .7 times + Rotate: 30deg => Right + Translate: 70px => Right } : </h3>                                        
+                                <div class='SkwLSclRotRTranR'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Left </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Rotated} by 30deg to Right</li>
+                                            <li> {Translate} by 70px to the Right </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 6) {SkewX: 30deg => Left + Scale: .7 times + Rotate: 30deg => Right + Translate: -70px => Left } : </h3>                                        
+                                <div class='SkwLSclRotRTranL'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Left </li>
+                                            <li> {Scaled} by .7 times </li>
+                                            <li> {Rotated} by 30deg to Right </li>
+                                            <li> {Translate} by -70px to the Left </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 7) {SkewX: 30deg => Left + Scale: .7 times + Rotate: 30deg => Right + Translate: 70px => Bottom } : </h3>                                        
+                                <div class='SkwLSclRotRTranB'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Left </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Rotated} by 30deg to Right</li>
+                                            <li> {Translate} by 70px to the Bottom </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 8) {SkewX: 30deg => Left + Scale: .7 times + Rotate: 30deg => Right  + Translate: -70px => Top } : </h3>                                        
+                                <div class='SkwLSclRotRTranT'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Left </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Rotated} by 30deg to Right</li>
+                                            <li> {Translate} by -70px to the Top </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <!-- c) {Skew: Top},{Scale: .7 times}, {Rotate:Right}, {Translate:Right, Left, Top , Bottom} -->
+                                
+                                <h3> 9) {SkewY: -30deg => Top + Scale: .7 times + Rotate: 30deg => Right + Translate: 70px => Right } : </h3>                                        
+                                <div class='SkwTSclRotRTranR'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Top</li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Rotated} by 30deg to Right</li>
+                                            <li> {Translate} by 70px to the Right </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 10) {SkewY: -30deg => Top + Scale: .7 times + Rotate: 30deg => Right + Translate: -70px => Left } : </h3>                                        
+                                <div class='SkwTSclRotRTranL'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Top </li>
+                                            <li> {Scaled} by .7 times </li>
+                                            <li> {Rotated} by 30deg ot Right </li>
+                                            <li> {Translate} by -70px to the Left </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 11) {SkewY: -30deg => Top + Scale: .7 times + Rotate: 30deg => Right + Translate: 70px => Bottom } : </h3>                                        
+                                <div class='SkwTSclRotRTranB'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Top </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Rotated} by 30deg To Right</li>
+                                            <li> {Translate} by 70px to the Bottom </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 12) {SkewY: -30deg => Top + Scale: .7 times + Rotate: 30deg => Right + Translate: -70px => Top } : </h3>                                        
+                                <div class='SkwTSclRotRTranT'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by -30deg to the Top </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Rotated} by 30deg to Right</li>
+                                            <li> {Translate} by -70px to the Top </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <!-- d) {Skew: Bottom},{Scale: .7 times}, {Rotate:Right} ,{Translate:Right, Left, Top , Bottom} -->
+                                
+                                <h3> 13) {SkewY: 30deg => Bottom + Scale: .7 times + Rotate: 30deg => Right + Translate: 70px => Right } : </h3>                                        
+                                <div class='SkwBSclRotRTranR'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Bottom</li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Rotated} by 30deg to Right</li>
+                                            <li> {Translate} by 70px to the Right </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 14) {SkewY: 30deg => Bottom + Scale: .7 times + Rotate: 30deg => Right  + Translate: -70px => Left } : </h3>                                        
+                                <div class='SkwBSclRotRTranL'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Bottom </li>
+                                            <li> {Scaled} by .7 times </li>
+                                            <li> {Rotated} by 30deg to Right </li>
+                                            <li> {Translate} by -70px to the Left </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 15) {SkewY: 30deg => Bottom + Scale: .7 times  + Rotate: 30deg => Right + Translate: 70px => Bottom } : </h3>                                        
+                                <div class='SkwBSclRotRTranB'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Bottom </li>
+                                            <li> {Scaled} by .7 times</li>
+                                            <li> {Rotated} by 30deg to Right</li>
+                                            <li> {Translate} by 70px to the Bottom </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                
+                                <h3> 16) {SkewY: 30deg => Bottom + Scale: .7 times + Rotate: 30deg => Right + Translate: -70px => Top } : </h3>                                        
+                                <div class='SkwBSclRotRTranT'>
+                                    <h4>
+                                        This Section:hover => will be:<br>
+                                        <ol>
+                                            <li> {Skewed} by 30deg to the Bottom </li>
+                                            <li> {Scaled} by .7 times </li>
+                                            <li> {Rotated} by 30deg to Right </li>
+                                            <li> {Translate} by -70px to the Top </li>
+                                        </ol>     
+                                    </h4>                 
+                                </div> <br>                        
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->                                                                
+                                <!-- --------------------------------------------------------------------- -->
+                                <!-- --------------------------------------------------------------------- -->
+                            </fieldset>                                            
+                        <br>                        
+                    </section>                
+                    <hr>                                    
+                    <hr>
+                    
+            </fieldset>                                                                
+        //================================================================================== <br><br>
+                                
+                <!-- --------------------------------------------------------------------- -->                        
+
+            <hr>
+            <hr>            
+            
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+    
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 13 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=B2nprLWchlE&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=13&index=12&index=11&index=10&index=9&index=8&index=7&index=6&index=5&index=4&index=3&index=2&controls=0&loop=1&autoplay=1&fs=1" 				
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\13 Css3 - 2D Transform - Skew.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 13 [2D Transform - Skew() ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

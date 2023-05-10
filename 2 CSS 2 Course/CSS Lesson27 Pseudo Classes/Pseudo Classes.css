@@ -1,0 +1,143 @@
+.title {font:italic bold 40px arial; text-align:center; background:purple;
+       border:5px solid #333; color:#FFF; letter-spacing:2px; word-spacing:5px}
+.footer {text-align:center; text-decoration:underline}
+.index, .index legend {background:lightgreen; border:5px groove blue}
+
+.Types a {text-decoration: none}
+
+fieldset {margin-bottom:25px; border:5px solid aqua; background:lightblue}
+
+legend {border:5px solid aqua; padding:10px; background:rgb(200,150,100);
+       font:italic bold 25px arial; text-decoration:none}
+       
+p {font-size:20px }
+
+.title1 { margin:30px auto 20px; text-decoration:none; font-size:30px}
+.title0 { margin:30px auto 20px; text-decoration:none; font-size:25px}
+
+.FLetter h2 + div, .FLetter h3 + div {border:2px groove green; font-size:20px; text-align:center; width:600px;  height:auto; margin:auto auto 20px auto; padding:10px 5px; font-size:25px; font-weight:bold}
+.FLetter h2 ~ p {text-indent:20px}
+
+.FLine h2 + div, .FLine h3 + div {border:2px groove green; font-size:20px; text-align:center; width:700px;  height:auto; margin:auto auto 20px auto; padding:10px 5px; font-size:25px; font-weight:bold}
+.FLine h2 ~ p {text-indent:20px}
+
+.FChild h2 + div, .FChild h3 + div {border:2px groove green; font-size:20px; text-align:center; width:850px; height:auto; margin:auto auto 20px auto; padding:10px 5px; font-size:25px; font-weight:bold}
+.FChild h2 ~ p {text-indent:20px}
+
+.Before h2 + div, .Before h3 + div {border:2px groove green; font-size:20px; text-align:center; width:900px; height:auto; margin:auto auto 20px auto; padding:10px 5px; font-size:25px; font-weight:bold}
+.Before h2 ~ p {text-indent:20px}
+
+.After h2 + div, .After h3 + div {border:2px groove green; font-size:20px; text-align:center; width:900px; height:50px; height:auto; margin:auto auto 20px auto; padding:10px 5px; font-size:25px; font-weight:bold}
+.After h2 ~ p {text-indent:20px}
+/*===============================[ Pseudo Class: First-Letter ]==============================================================================*/
+
+.FLetter .Exp1, .FLetter .Exp2
+    {border:3px solid blue; margin:10px; padding:20px; text-align:center; height:auto}
+
+.FLetter .Exp1 p:first-letter
+    {
+        display:block; background:#f00; border-radius:10px; border:2px solid #fff;
+        font-weight:bold; font-size:40px; color:#fff;
+        margin:0px 10px 0px 0px; padding:5px
+    }
+
+.FLetter .Exp2 div
+    {
+        font-size:20px; margin:10px auto 20px; outline:2px solid #00f; width:300px; height:50px;
+        text-align:center; padding:10px
+    }
+
+.FLetter .Exp2 div:first-letter
+    {
+        display:block; background:#f00; border-radius:10px; border:2px solid #fff;
+        font-weight:bold; font-size:40px; color:#fff; font-family:arial;
+        margin:20px 5px auto auto; padding:5px
+    }
+
+/*================================[ Pseudo Class: First-Line ]==========================================================================*/
+
+.FLine .Exp1, .FLine .Exp2
+    {border:3px solid blue; margin:10px; padding:20px; text-align:center; height:auto}
+
+.FLine .Exp1 p:first-line
+    {
+        background:#f00; border-radius:10px; text-indent:30px; 
+        font-weight:bold; font-size:30px; color:#fff;        
+    }
+
+.FLine .Exp2 div
+    {
+        font-size:20px; margin:10px auto 20px; width:auto; height:auto;
+        text-align:center; padding:10px; border:2px solid #00f
+    }
+
+.FLine .Exp2 div:first-line
+    {
+        background:#f00; border-radius:10px;
+        font-weight:bold; font-size:30px; color:#fff; font-family:arial;    
+    }
+
+/*=============================[ Pseudo Class: First-Class ]=========================================================================*/
+
+.FChild .Exp1 {border:3px groove #080; background:aqua; text-align:center; padding:10px; font-size:25px; font-weight:bold}
+.FChild .Exp1 p:first-child {border:3px solid blue; margin:10px; padding:20px; text-align:center; height:auto; font-size:20px; font-weight:bold}
+.FChild .Exp1 p {font-weight:normal }
+
+.FChild .Exp2 {border:3px groove #080; background:aqua; text-align:center; padding:10px; }
+.FChild .Exp2 div {border:2px solid #f00; margin:auto auto 20px; padding:10px; font-size:25px; font-weight:bold }
+.FChild .Exp2 div p:first-child {border:3px solid blue; margin:10px; padding:20px; text-align:center; height:auto; font-size:20px; font-weight:bold}
+.FChild .Exp2 div p {font-weight:normal}
+/*=============================[ Pseudo Class: Before ]=========================================================================*/
+
+.Before .Exp1 {border:3px groove #080; background:aqua; text-align:center; padding:10px; font-size:25px; font-weight:bold}
+.Before .Exp1 p:before { content:"This Content is an addition from Css"; border:1px solid #f00; color:#00f }
+
+.Before .Exp2 {border:3px groove #080; background:aqua; text-align:center; padding:10px; }
+.Before .Exp2 div {border:2px solid #f00; margin:auto auto 20px; padding:10px; font-size:25px; font-weight:bold }
+.Before .Exp2 div p:first-child:before { content:"This Content is an addition from Css"; border:1px solid #f00; color:#00f }
+
+/*.Before .Exp3 ul li {}
+.Before .Exp3 ul li :before
+    {        
+       
+        list-style:none inside url('Shadi.jpg'); 
+    }
+*/
+    
+/*=============================[ Pseudo Class: After ]=========================================================================*/
+
+.After .Exp1 {border:3px groove #080; background:aqua; text-align:center; padding:10px; font-size:25px; font-weight:bold}
+.After .Exp1 p:after { content:"This Content is an addition from Css"; border:1px solid #f00; color:#00f }
+
+.After .Exp2 {border:3px groove #080; background:aqua; text-align:center; padding:10px; }
+.After .Exp2 div {border:2px solid #f00; margin:auto auto 20px; padding:10px; font-size:25px; font-weight:bold }
+.After .Exp2 div p:first-child:after { content:"This Content is an addition from Css"; border:1px solid #f00; color:#00f }
+
+/*====================================================================================================*/
+    .home
+        {
+            background:green; border:3px solid #0ff; padding:5px;
+            position:fixed; font-size:20px; color:#FFF; top:50px; right:10px; 
+            text-decoration: none        
+        }
+    
+    .home:hover
+        {
+            background:lightgreen; border:5px solid #0ff; padding:5px;
+            position:fixed; font-size:25px; color:#000;
+            text-decoration: underline
+        }
+    
+    .end
+        {
+            background:green; border:3px solid #0ff; padding:5px;
+            position:fixed; font-size:20px; color:#FFF; top:120px; right:10px; 
+            text-decoration: none        
+        }
+        
+    .end:hover
+        {
+            background:lightgreen; border:5px solid #0ff; padding:5px;
+            position:fixed; font-size:25px; color:#000;
+            text-decoration: underline
+        }      

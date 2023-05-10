@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS OOP Lesson 13 [Element Children Append Child]</title>
+    <link
+      rel="stylesheet"
+      href="JS DOM Lesson13 [Elements  Children  Append Child].css"
+      media="all"
+    />
+    <style>
+      .hidden {
+        visibility: hidden;
+      }
+    </style>
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JS DOM Lesson 13 [Element Children Append Child]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS OOP main Topics">
+            JS DOM Lesson13 [Element Children Append Child ] Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMCon"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Concept"
+          >
+            JS DOM Lesson13 [Element Children Append Child] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMImp"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Importance & Benefits"
+          >
+            JS DOM Lesson13 [Element Children Append Child] Importance &
+            Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMSyntx"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Syntax"
+          >
+            JS DOM Lesson13 [Element Children Append Child] Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMPract"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Practical Applications"
+          >
+            JS DOM Lesson13 [Element Children Append Child] Practical
+            Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS DOM Course
+      <span> JS DOM [Element Children Append Child] </span>
+    </main>
+
+    <div class="Post" id="post">
+      <section id="MainC" class="MainC">
+        <header>JS DOM [Element Children Append Child] Main Topics :</header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>JS DOM [Element Children Append Child ] Concept.</li>
+
+            <li>
+              JS DOM [Element Children Append Child ] Importance & Benefits.
+            </li>
+
+            <li>JS DOM [Element Children Append Child ] Syntax .</li>
+
+            <li>
+              JS DOM [Element Children Append Child ] Practical Application.
+            </li>
+          </ol>
+
+          <p>&gt; Main new Methods in this lesson are as following :</p>
+          <ul>
+            <li>Creating New Elements :</li>
+            <ol>
+              <li>{document.createElement();}</li>
+            </ol>
+            <br />
+
+            <li>Creating New Text Node :</li>
+            <ol>
+              <li>{document.createTextNode();}</li>
+            </ol>
+            <br />
+
+            <li>Adding New Elements to the Parent Element [append Child]:</li>
+            <ol>
+              <li>{Pelem.appendChild();}</li>
+            </ol>
+            <br />
+
+            <li>
+              Adding New TextNode to the Parent Element [append Text Node]:
+            </li>
+            <ol>
+              <li>
+                Append [TextNode] varaible to a [Parent Elmemnt]:
+                {Pelem.appendChild();}
+              </li>
+              <li>
+                Append [TextNode] varaible to a [Child Elmemnt]:
+                {elem.appendChild();}
+              </li>
+            </ol>
+          </ul>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMCon" id="JSDOMCon">
+        <header>
+          <h3>JS DOM [Element Children (append Child)] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [Element Children Append Child]: This Method is one
+          of controling Element of Document , and is very important in any
+          Planguage .
+        </p>
+
+        <p>
+          =&gt; JS HTML DOM [Element Children Append Child]: ther are many
+          related Method to the {append Child}as following :<br />
+        </p>
+        <ul>
+          <li>
+            {document.createElement(); }=> To create New element in HTML page
+            with the javascript, wether it is en Elemnet or a text Node
+          </li>
+
+          <li>
+            {document.createTextNode(); => To create new text Node {text
+            Contents}
+          </li>
+
+          <li>
+            {Elem.appendChild(); => To add a Child Element to a parent element
+          </li>
+
+          <li>
+            {Elem.appendChild(); => To add a Text Node to a parent element also
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSDOMImp" id="JSDOMImp">
+        <header>
+          <h3>
+            JS DOM [Element Children append Child] Importance & Benefits :
+          </h3>
+        </header>
+
+        <p>
+          JS DOM [ElementsClassList Add Remove Toggle] gives us the Following
+          Features : <br />
+        </p>
+        <ul>
+          <li>
+            It is very Helpful when dealing with parent element's child elements
+            & Child Nodes by several Functions of (get -set) full Control
+          </li>
+
+          <li>
+            gives more advanced features to programing functions speacially in
+            Events & Conditional Functions
+          </li>
+
+          <li>
+            gives more advanced features to create a tree of elements & Text
+            Node in web page by using JS only by JSDOM
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMSyntx" id="JSDOMSyntx">
+        <header>
+          <h3>JS DOM [Element Children Append Child] Syntax & Methods:</h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [Children & childNodes} by {several methods} as
+          following Conceptual Syntax as following :
+        </p>
+
+        <div id="Code" class="Code">
+          [*] {HTML file} (parent element) example: <br />
+
+          <span class="one"></span> &lt;div id='main' class= "main"&gt; <br />
+          <span class="one"></span> &lt;/div&gt; <br />
+
+          //=========================================================== <br />
+          <br />
+
+          [*]// {JS file} Defining a Child element variables & their child Nodes
+          by [document.createElement(); ]: <br />
+
+          <span class="one"></span>var ChildElementVar3 =
+          document.createElement('h2'); <br />
+          <span class="one"></span>var ChildNodeElementVar3 =
+          document.createTextNode('TExt of h2'); <br />
+
+          <span class="one"></span>var ChildElementVar1 =
+          document.createElement('div'); <br />
+          <span class="one"></span>var ChildNodeElementVar1 =
+          document.createTextNode('TExt of Div'); <br />
+
+          <span class="one"></span>var ChildElementVar2 =
+          document.createElement('p'); <br />
+          <span class="one"></span>var ChildNodeElementVar2 =
+          document.createTextNode('TExt of Paragaraph'); <br />
+
+          //=========================================================== <br />
+          <br />
+
+          [*]// Appending child Nodes to Child Elements {by appendChild();}:
+          <br />
+
+          <span class="one"></span>
+          ChildElementVar1.appendChild(ChildNodeElementVar1); <br />
+          <br />
+
+          <span class="one"></span>
+          ChildElementVar2.appendChild(ChildNodeElementVar2); <br />
+          <br />
+
+          <span class="one"></span>
+          ChildElementVar3.appendChild(ChildNodeElementVar3); <br />
+          <br />
+
+          //=========================================================== <br />
+          <br />
+
+          [*]// Appending child Elements to Parent Element {by appendChild();}:
+          <br />
+          [1] Get Parent elememnt variable :<br />
+          <span class="one"></span> ParElementVar =
+          document.getElementByID('main');<br />
+          <br />
+
+          [2] Append Child variables to the Parent elememnt variable :<br />
+          <span class="one"></span>
+          ParElementVar.appendChild(ChildElementVar1);<br />
+          <br />
+          <span class="one"></span>
+          ParElementVar.appendChild(ChildElementVar2);<br />
+          <br />
+          <span class="one"></span>
+          ParElementVar.appendChild(ChildElementVar3);<br />
+          <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMPract" id="JSDOMPract">
+        <header>
+          <h3>
+            JS DOM [Element Children append Child] General Practical
+            Applications :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Here one Major Application will include following main [ 2
+          Paths] of the : &gt;&gt; <br />
+        </p>
+
+        <ul>
+          <li>
+            {Path 1} => Dealing with [Child Element]: including Following (2)
+            Metods:
+          </li>
+
+          <li>
+            {Path 2} => Dealing with [Child Nodes]: including Following (2)
+            methods:
+          </li>
+        </ul>
+
+        <br />
+
+        <section id="sec" class="secClass"></section>
+        <br />
+
+        <section id="sec2" class="secClass2"></section>
+        <br />
+
+        <section id="sec3" class="secClass3"></section>
+        <br /><br />
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <script src="ElemChildrenAppendChild.js"></script>
+
+        <button class="btn" onclick="test()">
+          Click to Start [Elements children Append Child] Application
+        </button>
+
+        <br />
+
+        <hr />
+        <button id="btn" class="btn" onclick="display()">
+          Display JS Code
+        </button>
+
+        <div class="JSOOPObjConstTraining">
+          <code>
+            // HTML Codes: <br />
+            <span class="one"></span> &lt;textarea id="txtarea"
+            class="txtarea"&gt;<br />
+            <span class="one"></span> &lt;/textarea&gt; <br /><br />
+
+            <span class="one"></span> &lt;button class="btn"
+            onclick=test"()"&gt;<br />
+            <span class="two"></span> Click to Start [Testing JS DOM [Children
+            append Child ] Application <br />
+            <span class="one"></span> &lt;/button&gt; <br /><br />
+
+            <span class="one"></span> &lt;script src=".js"&gt;<br />
+            <span class="one"></span> &lt;/script&gt; <br /><br />
+
+            =======================================================<br /><br />
+
+            /* global document, alert, prompt */ <br />
+            /* JS DOM [Element Children append Child] */ <br />
+            template-string-converter.enable; <br /><br />
+
+            <textarea id="SourceCode" readonly></textarea>
+          </code>
+        </div>
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 13 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=2GZNCMJa7uU&list=PLDoPjvoNmBAxx97QDMOCpzxbu1ZHJ4i7i&index=13&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+          <source
+            src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\HTML JS Dom\13 JS HTML Dom Elements  Children  Append Child.mp4"
+            type="video/mp4"
+          />
+          Your browser Does Not Support the Video file ...
+        </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JS DOM Lesson13 [Element Children (append Child)]  ");
+    </script>
+  </body>
+</html>

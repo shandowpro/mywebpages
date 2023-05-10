@@ -1,0 +1,763 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 12 [2D Transform - Translate()] </title>
+    <link rel="stylesheet" href="CSS3 Lesson12 [2D Transform - Translate].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 12 [2D Transform - Translate()]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 2D Transform - Translate() main Topics">
+                [ 2D Transform - Translate() ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to 2D Transform - Translate() [2D Transform - Translate() ] Concept">
+                [ 2D Transform - Translate() ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to 2D Transform - Translate() [2D Transform - Translate() ] Importance & Benefits">
+                [ 2D Transform - Translate() ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to 2D Transform - Translate() [2D Transform - Translate() ] Syntax">
+                [ 2D Transform - Translate() ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to 2D Transform - Translate() [2D Transform - Translate() ] Practical Applications">
+                [ 2D Transform - Translate() ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 12 [2D Transform - Translate() ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                2D Transform - Translate() Property Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [2D Transform - Translate()] Concept. </li>                       
+                    
+                    <li> [2D Transform - Translate()] Importance & Benefits. </li>
+
+                    <li> [2D Transform - Translate()] Syntax [Exmaple]. </li>
+                    
+                     <li> [2D Transform - Translate()] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    
+                    <ul>
+                         <li> Using the [Transform-Translate()(Duplicating value X, Duplicating value Y)] Property to control Changing Translate Function property to Translate the Element to cetain amount</li>
+                         <li> Differnce between [X Value (Width)] & [Y Value (Height)] in controling Translate of Element </li>                                                                           
+                    </ul>                   
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [2D Transform - Translate()] Concept: </h3>
+            </header>
+                        
+            <p> =&gt; [2D Transform - Translate()] : This is one of CSS3 Properties to control the Element Translate Amount (by each width And Height, or one of them only) . <br>
+            
+            <p> =&gt; [2D Transform - Translate()] : The Default value of this property  (and all Transform) is (none) . <br>
+                
+            <p> =&gt; [2D Transform - Translate()] : This is one of CSS3 {2D Transform} Properties Functions, which has the same in 3D Transform  . <br>
+                
+                
+            <p> =&gt; There are (2) Methods to write this property as following : <br>                
+                <ul>                                                            
+                    <li> [transform: Translate(width value,height Value) ] => This Can Hold two values of each dimenstions  both , or one Value for Each Dimensions at once </li> <br>                        
+                    <li> [transform: TranslateX(Width Value)] ,<br> [transform: TranslateY(Height Value)] <br>  =>  This method to control one Dimension only  </li> <br>                        
+                </ul>                
+                                
+            <p> =&gt; This property 's Value is about amount of Duplicating of Original's Element Dimensions as following examples : <br>                
+                <ul>
+                    
+                    <li> [none]  => Reset this Element's Property to none {Default Value} </li>
+                    <li> [1]     => keep the same dimensions as it , with out changes</li>
+                    <li> [.5]    => Change the Current Dimensions by half </li>
+                    <li> [2]     => Change the Current Dimensions by Double </li>
+                    <li> [3]     => Change the Current Dimensions by Trible </li>
+                </ul>
+                
+            </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+            <section class="CSS3Imp" id="CSS3Imp">
+                <header>
+                    <h3> [2D Transform - Translate() ] Importance & Benefits: </h3>
+                </header>
+
+                <p> =&gt; [2D Transform - Translate() ] : This Advanced property enabling the following features : <br>            
+                    <ul>                                        
+                        <li> The ability to Translate the Element by cetain Value or Amount , for Certain dimension or Both</li>                        
+                        <li> This Property is will be great in Designing nice Templates specilaly when using with (Transition Property- will be taken in future) <li>                                                             
+                    </ul>                                
+ 
+                <p> =&gt; [2D Transform - Translate() ] : Next lessons we will study integrated properties with this property => to make graet templates , such as : <br>            
+
+                <ul>
+                    <li> All Tranform properties </li>
+                    <li> Transition Properties </li>
+                </ul>
+
+            </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ 2D Transform - Translate ] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [2D Transform - Translate()] Syntax as following :<br><br>                                                    
+                
+                    <span class=two></span> //a)  [HTML] file  : <br>                                          
+                
+                        <span class=three></span> &lt; div &gt; This is a Translate Text by 2D Transform-Translate Property 
+                       <br>                                            
+                        <span class=three></span> &lt;/div&gt;   <br> <br>                                                                              
+                
+                // ------------------------------------------------------------------------------ <br><br>
+                <span class= one></span> // A)  [2D Transform - Translate()] General {Fixed Mode} Syntax:  <br>                                          
+                    <span class=two></span> // {Exmple 1} [First Method - two Values for each Dimension ] General CSS3 Syntax  : <br>
+                        <span class=three></span> div {  <br>                                                  
+                            <span class=four></span> margin: 40px; <br>                                                                          
+                            <span class=four></span> padding: 3px; <br>                                                                          
+                            <span class=four></span> width: 400px; <br>                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                          
+                            <span class=four></span> backgournd-color: #FFF; <br>                                                                                                          
+                            <span class=four></span> Transform: Translate(width value, height value); <br>
+                        <span class=three></span>  }  <br>                                              
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                <span class=two></span> // {Exmple 2} [First Method - one Values for both Dimensinos ] General CSS3 Syntax  : <br>
+                    <span class=three></span> div {  <br>                                                  
+                        <span class=four></span> margin: 40px; <br>                                                                          
+                        <span class=four></span> padding: 3px; <br>                                                                          
+                        <span class=four></span> width: 400px; <br>                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>                                                                          
+                        <span class=four></span> backgournd-color: #FFF; <br>                                                                                                          
+                        <span class=four></span> Transform: Translate(value); <br>
+                    <span class=three></span>  }  <br>                                              
+                // ------------------------------------------------------------------------------ <br><br>
+                <hr>
+
+                <span class=two></span> // {Exmple 3} [Second Method] General CSS3 Syntax  : <br>                                         
+                    <span class=three></span> div {  <br>                                                  
+                        <span class=four></span> margin: 40px; <br>                                                                          
+                        <span class=four></span> padding: 3px; <br>                                                                          
+                        <span class=four></span> width: 400px; <br>                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>                                                                          
+                        <span class=four></span> backgournd-color: #FFF; <br>                                                                                                          
+                        <span class=four></span> transform: TranslateX(value); <br>                                                                                                                                  
+                        <span class=four></span> transform: TranslateY(value); <br>                                                                                                                                                          
+                    <span class=three></span>  }  <br> <br>                                              
+                // ------------------------------------------------------------------------------ <br><br>                        
+                    
+            <span class= one></span> // B)  [2D Transform - Translate()] General {Dynamic Mode} Syntax:  <br>                                              
+                <span class=two></span> // {Exmple 1} [First Method - two Values for each Dimension ] General CSS3 Syntax  : <br>
+                    <span class=three></span> div {  <br>                                                  
+                        <span class=four></span> margin: 40px; <br>                                                                          
+                        <span class=four></span> padding: 3px; <br>                                                                          
+                        <span class=four></span> width: 400px; <br>                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>                                                                          
+                        <span class=four></span> backgournd-color: #FFF; <br>                                                                                                          
+                        <span class=three></span>  }  <br>                                                                      
+                    
+
+                    <span class=three></span> div :hover {  <br>                                                  
+                        <span class=four></span> Transform: Translate(width value, height value); <br>
+                    <span class=three></span>  }  <br>                                              
+
+            // ------------------------------------------------------------------------------ <br><br>                                                            
+        // ------------------------------------------------------------------------------ <br><br>                                                            
+            <span class=two></span> // {Exmple 2} [First Method - one Values for both Dimensinos ] General CSS3 Syntax  : <br>
+                <span class=three></span> div {  <br>                                                  
+                    <span class=four></span> margin: 40px; <br>                                                                          
+                    <span class=four></span> padding: 3px; <br>                                                                          
+                    <span class=four></span> width: 400px; <br>                                                                          
+                    <span class=four></span> border: 1px solid #CCC; <br>                                                                          
+                    <span class=four></span> backgournd-color: #FFF; <br>                                                                                                          
+                <span class=three></span>  }  <br>                                              
+                    
+                
+                <span class=three></span> div :hover {  <br>                                                  
+                    <span class=four></span> Transform: Translate(value); <br>
+                <span class=three></span>  }  <br>                                              
+                
+            // ------------------------------------------------------------------------------ <br><br>
+            
+        <hr>
+
+            <span class=two></span> // {Exmple 3} [Second Method] General CSS3 Syntax  : <br>                                         
+                <span class=three></span> div {  <br>                                                  
+                    <span class=four></span> margin: 40px; <br>                                                                          
+                    <span class=four></span> padding: 3px; <br>                                                                          
+                    <span class=four></span> width: 400px; <br>                                                                          
+                    <span class=four></span> border: 1px solid #CCC; <br>                                                                          
+                    <span class=four></span> backgournd-color: #FFF; <br>                                                                                                          
+                <span class=three></span>  }  <br> <br>                                              
+                    
+                <span class=three></span> div :hover {  <br>                                                  
+                    <span class=four></span> transform: TranslateX(value); <br>                                                                                                                                  
+                    <span class=four></span> transform: TranslateY(value); <br>                                                                                                                                                          
+                <span class=three></span>  }  <br>                                              
+                                            
+                //=========================================================== <br> <br>                                    
+                //=========================================================== <br> <br>                                                      
+                //=========================================================== <br> <br>                                                                                    
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="JSDOMPract">
+
+            <header>
+                <h3> [2D Transform - Translate] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following is the Applied example of [2D-Transform: Translate(Value)] syntax : &gt;&gt; <br>
+                <ul>
+                    <li> (2) Fieldsets contain (3) section (each section is Translated by Certain defferent (2) Methods) for each as following:  </li> 
+                    
+                    <ol>
+                        <li> First Fieldset [Fixed Mode] :</li>
+                            <ul>
+                                <li> First Section => Translated by {First Method (2 values for Each dimension)}   </li>                                         
+                                <li> Second Section => Translated by {First Method (1 value for both dimensions)}   </li>                                                                         
+                                
+                                <li> Third Section => Translated by {Second Method (2 values for Each dimension)}   </li>                                                                         <li> Fourth Section => Translated by {First Method (1 value for both dimensions)}   </li>                                                                                                                                         
+                            </ul>
+                        
+                        <li> Second Fieldset [Dynamic Mode] :</li>
+                            <ul>
+                                <li> First Section => Translated by {First Method (2 values for Each dimension)}   </li>                                         
+                                <li> Second Section => Translated by {First Method (1 value for both dimensions)}   </li>                                                                         
+                                
+                                <li> Third Section => Translated by {Second Method (2 values for Each dimension)}   </li>                                                                         <li> Fourth Section => Translated by {First Method (1 value for both dimensions)}   </li>                                                                         
+                            </ul>
+                    </ol>                    
+                </ul>                
+                <br>
+                <hr>
+
+            <fieldset class='FixedMode'>  
+                <legend> Translate() => First Mode {Fixed Mode} </legend>
+            
+                <!-- A] First Mode/Fixed Mode=> (First Method) => Two Values Method -->
+                <section class='sec1'>
+    
+                    <!-- 1) One Direction -->
+
+                    <h4> Move to [Right] by 20px {by 2 values} </h4>
+                    <div class='twoVRight'>
+                        <h4>This Section will be Translated => {Right:20px} by [First Method : two Values (x = 20, y = 0)] with in First Method </h4>                 
+                    </div> <br>
+                    
+                    <h4> Move to [Left] by 20px {by 2 values} </h4>
+                    <div class='twoVLeft'>
+                        <h4>This Section will be Translated => {Left:20px} by [First Method : two Values (x = -20, y = 0)] with in First Method </h4>                                         
+                    </div> <br>
+                    
+                    
+                    <h4> Move to [Top] by 20px {by 2 values} </h4>
+                    <div class='twoVTop'>
+                        <h4>This Section will be Translated => {Top:20px} by [First Method : two Values (x = 0, y = -20)] with in First Method </h4>                 
+                    </div> <br>
+                    
+                    
+                    <h4> Move to [Bottom] by 20px {by 2 values} </h4>
+                    <div class='twoVBottom'>
+                        <h4>This Section will be Translated => {Bottom:20px} by [First Method : two Values (x = 0, y = 20)] with in First Method </h4>                                         
+                    </div> <br>
+                    
+                    <hr>
+                    
+                    <!-- 2) Two Directions -->
+                    
+                    <h4> Move to [Right + Top] by 20px {by 2 values}</h4>
+                    <div class='twoVRightTop'>
+                        <h4>This Section will be Translated => {Right:20px + Top:20px} by [First Method : two Values (x = 20, y = -20)] with in First Method </h4>                 
+                    </div> <br>
+                    
+                    <h4> Move to [Right + Bottom] by 20px {by 2 values} </h4>
+                    <div class='twoVRightBottom'>
+                        <h4>This Section will be Translated => {Right:20px + Bottom:20px} by [First Method : two Values (x = 20, y = 20)] with in First Method </h4>                 
+                    </div> <br>
+                    
+                    <h4> Move to [Left + Top] by 20px {by 2 values} </h4>
+                    <div class='twoVLeftTop'>
+                        <h4>This Section will be Translated => {Left:20px + Top:20px} by [First Method : two Values (x = -20, y = 20)] with in First Method </h4>                                         
+                    </div> <br>
+                    
+                    <h4> Move to [Left + Bottom] by 20px {by 2 values} </h4>
+                    <div class='twoVLeftBottom'>
+                        <h4>This Section will be Translated => {Left:20px + Bottom:20px} by [First Method : two Values (x = -20, y = 20)] with in First Method </h4>                                         
+                    </div> <br>
+                    
+                </section>
+                <hr>
+                
+                <!-- First Mode/Fixed Mode: (Second Method) => One Value Method -->
+                <section class='sec2'>
+                    <h3>
+                        Translate() => [One Value Method] =>  will only read one Dimension {X : Horizontal} <br>
+                        So There will be no second dimension {Y : Vertical}
+                    </h3>
+                    
+                    <!-- 1) One Direction -->
+                    
+                    <h4> Move to [Right] by 20px {by 1 values} </h4>
+                    <div class='oneVRight'>
+                        <h4>This Section will be Translated => {Right:20px} by [Second Method : One Values (20px)] with in First Method </h4>                 
+                    </div> <br>
+                    
+                    <h4> Move to [Left] by 20px {by 1 values} </h4>
+                    <div class='oneVLeft'>
+                        <h4>This Section will be Translated => {Left:20px} by [Second Method : One Values (-20px)] with in First Method </h4>                                         
+                    </div> <br>
+
+                </section>
+                <hr>
+                
+            </fieldset>                                                                
+            <hr>
+            <hr>
+            
+            <fieldset class='DynamicMode'>  
+                <legend> Translate() => Second Mode {Dynamic Mode}</legend>
+            
+                
+                <!-- B] Second Mode/Dynamic Mode=> (First Method) => Two Values Method -->
+                <section class='sec1'>
+    
+                    <!-- 1) One Direction -->
+                    <h3>A) Move to one Direction: </h3>
+
+                    <h4> Move to [Right] by 20px {by 2 values} </h4>                    
+                    <div class='twoVRight'>
+                        <h4>This Section will be Translated => {Right:20px} by [First Method : two Values (x = 20, y = 0)] with in First Method </h4>                 
+                    </div> <br>
+                    
+                    <h4> Move to [Left] by 20px {by 2 values} </h4>
+                    <div class='twoVLeft'>
+                        <h4>This Section will be Translated => {Left:20px} by [First Method : two Values (x = -20, y = 0)] with in First Method </h4>                                         
+                    </div> <br>
+
+                    <h4> Move to [Top] by 20px {by 2 values} </h4>
+                    <div class='twoVTop'>
+                        <h4>This Section will be Translated => {Top:20px} by [First Method : two Values (x = 0, y = -20)] with in First Method </h4>                 
+                    </div> <br>
+                    
+                    <h4> Move to [Bottom] by 20px {by 2 values} </h4>
+                    <div class='twoVBottom'>
+                        <h4>This Section will be Translated => {Left:20px} by [First Method : two Values (x = 0, y = 20)] with in First Method </h4>                                         
+                    </div> <br>
+                    
+                    <hr>
+                    
+                    <!-- 2) Two Directions -->
+                    <h3> B) Move to 2 Directions :   </h3>
+                    
+                    <h4> Move to [Right] + [Top] by 20px {by 2 values} </h4>                    
+                    <div class='twoVRightTop'>
+                        <h4>This Section will be Translated => {Right:20px + Top:20px} by [First Method : two Values (x = 20, y = -20)] with in First Method </h4>                 
+                    </div> <br>
+                    
+                    
+                    <h4> Move to [Right] + [Bottom] by 20px {by 2 values} </h4>                    
+                    <div class='twoVRightBottom'>
+                        <h4>This Section will be Translated => {Right:20px + Bottom:20px} by [First Method : two Values (x = 20, y = 20)] with in First Method </h4>                 
+                    </div> <br>
+                    
+                    <h4> Move to [Left] + [Top] by 20px {by 2 values} </h4>                    
+                    <div class='twoVLeftTop'>
+                        <h4>This Section will be Translated => {Left:20px + Top:20px} by [First Method : two Values (x = -20, y = 20)] with in First Method </h4>                                         
+                    </div> <br>
+                                        
+                    <h4> Move to [Left] + [Bottom] by 20px {by 2 values} </h4>                    
+                    <div class='twoVLeftBottom'>
+                        <h4>This Section will be Translated => {Left:20px + Bottom:20px} by [First Method : two Values (x = -20, y = 20)] with in First Method </h4>                                         
+                    </div> <br>
+
+                </section>
+                <hr>
+
+                <!-- Second Mode/Dynamic Mode: (Second Method) => One Value Method -->
+                <section class='sec2'>
+                    <h3>
+                        Translate() => [One Value Method] =>  will only read one Dimension {X : Horizontal} <br>
+                        So There will be no second dimension {Y : Vertical}
+                    </h3>
+                    
+                    <!-- 1) One Direction -->
+                    <h4> Move to [Right] by 20px {by 1 values} </h4>
+                    <div class='oneVRight'>
+                        <h4>This Section will be Translated => {Right:20px} by [Second Method : One Values (20px)] with in First Method </h4>                 
+                    </div> <br>
+                    
+                    <h4> Move to [Left] by 20px {by 1 values} </h4>
+                    <div class='oneVLeft'>
+                        <h4>This Section will be Translated => {Left:20px} by [Second Method : One Values (-20px)] with in First Method </h4>                                         
+                    </div> <br>
+                </section>
+
+                <hr>                
+                <hr>
+                
+            </fieldset>                                                                
+        <hr>
+
+            <fieldset class='MultipleMode'>  
+                <legend> Translate() => Third Mode {Multiple Mode}</legend>
+            
+                
+                <!-- C] Third Mode {Multiple Mode}=> (Third Method) => More than one properties  -->
+                
+                <!-- 1) Rotation + Scaling -->
+                <section class='sec1'>
+    
+                    <h2>
+                        A) Rotation + Scaling 
+                    </h2> <br>
+
+                    <h3> 1) {Rotate:45 deg => Right + Scale:1.5} : </h3>
+                                    
+                    <div class='RotRightScale'>
+                        <h4>
+                            This Section will be {Rotated} by 45 deg into the Right Direction +  {Scaled:1.5} times
+                        </h4>                 
+                    </div> <br>
+                    
+                    <!-- --------------------------------------------------------------------- -->
+                    
+                    <h3> 2) {Rotate:45 deg => Left + Scale:1.5} : </h3>
+                    
+                    <div class='RotLeftScale'>
+                        <h4>This Section will be {Rotated} by 45 deg into the Left Direction + <br>
+                             {Scaled:1.5} times
+                            </h4>                 
+                        </div> <br>
+                        
+                    </section>
+                    <hr>
+            <!-- ========================================================================================= -->
+                    
+                    <!-- 2) Rotation + Translating -->                
+                    <section class='sec2'>
+                        
+                        <h2>
+                            B) Rotation + Translate
+                        </h2> <br>
+                        
+                        <h3> 1-1) {Rotate:45 deg => Right + Translate => Right:20px} : </h3>                                    
+                        <div class='RotRightTransR'>
+                            <h4>This Section will be {Rotated} by 45 deg into the Right Direction + 
+                                {Moved:20px} into the left Direction
+                            </h4>                 
+                        </div>
+                        
+                        <br>                        
+
+                        <h3> 1-2) {Rotate:45 deg => Right + Translate => Left:20px} : </h3>                                    
+                        <div class='RotRightTransL'>
+                            <h4>This Section will be {Rotated} by 45 deg into the Right Direction +
+                                {Moved:20px} into the left Direction
+                            </h4>                 
+                        </div>
+                        <br>
+                        
+                        <!-- --------------------------------------------------------------------- -->
+                        
+                        <h3> 2-1) {Rotate:45 deg => Left + Translate => Right:20px} : </h3>                                    
+                        <div class='RotLeftTransR'>
+                            <h4>This Section will be {Rotated} by 45 deg into the Left Direction +
+                                {Moved:20px} into the Right Direction
+                            </h4>                 
+                        </div>
+                        <br>
+                        
+                        <!-- --------------------------------------------------------------------- -->
+
+                        <h3> 2-2) {Rotate:45 deg => Left + Translate => Left:20px} : </h3>                                    
+                        <div class='RotLeftTransL'>
+                            <h4>This Section will be {Rotated} by 45 deg into the Left Direction +
+                                {Moved:20px} into the Left Direction
+                            </h4>                 
+                        </div>
+                        <br>                        
+                    </section>
+            <!-- =========================================================================================== -->
+                    
+                    <!-- 3) Scaling + Translating -->                
+                    <section class='sec3'>
+                        
+                        <h2>
+                            C) Scaling + Translating
+                        </h2> <br>
+                        
+                        <h3> 1-1) {Scale => 1.5 + Translate => Right:20px} : </h3>                                    
+                        <div class='scaleTransR'>
+                            <h4>This Section will be {Scaled} by 1.5 times  + 
+                                {Moved:20px} into the Right Direction
+                            </h4>                 
+                        </div>
+                        
+                        <br>                        
+                        
+                        <h3> 1-2) {Scale => 1.5 + Translate => Left:20px} : </h3>                                    
+                        <div class='scaleTransL'>
+                            <h4>This Section will be {Scaled} by 1.5 times  + 
+                                {Moved:20px} into the Left Direction
+                            </h4>                                             
+                        </div>
+                        <br>
+                        
+                        <!-- --------------------------------------------------------------------- -->
+                        
+                        <h3> 1-3) {Scale => 1.5 + Translate => Top:20px} : </h3>                                    
+                        <div class='scaleTransT'>
+                            <h4>This Section will be {Scaled} by 1.5 times  + 
+                                {Moved:20px} into the Top Direction
+                            </h4>                 
+                        </div>
+                        
+                        <br>                        
+                        
+                        <h3> 1-4) {Scale => 1.5 + Translate => Bottom:20px} : </h3>                                    
+                        <div class='scaleTransB'>
+                            <h4>This Section will be {Scaled} by 1.5 times  + 
+                                {Moved:20px} into the Bottom Direction
+                            </h4>                                             
+                        </div>
+                        <br>
+                        
+                        <br>                        
+                    </section>                
+                    <hr>                
+
+                    
+                    <!-- 4) Scaling + Translating + Rotating -->                
+                    <section class='sec4'>
+                        
+                        <h2>
+                            C) Scaling + Translating
+                        </h2> <br>
+                        
+                        <h3> 1-1) {Scale => 1.5 + Translate => Right:20px} : </h3>                                    
+                        <div class='scaleTransR'>
+                            <h4>This Section will be {Scaled} by 1.5 times  + 
+                                {Moved:20px} into the Right Direction
+                            </h4>                 
+                        </div>
+                        
+                        <br>                        
+                        
+                        <h3> 1-2) {Scale => 1.5 + Translate => Left:20px} : </h3>                                    
+                        <div class='scaleTransL'>
+                            <h4>This Section will be {Scaled} by 1.5 times  + 
+                                {Moved:20px} into the Left Direction
+                            </h4>                                             
+                        </div>
+                        <br>
+                        
+                        <!-- --------------------------------------------------------------------- -->
+                        
+                        <h3> 1-3) {Scale => 1.5 + Translate => Top:20px} : </h3>                                    
+                        <div class='scaleTransT'>
+                            <h4>This Section will be {Scaled} by 1.5 times  + 
+                                {Moved:20px} into the Top Direction
+                            </h4>                 
+                        </div>
+                        
+                        <br>                        
+                        
+                        <h3> 1-4) {Scale => 1.5 + Translate => Bottom:20px} : </h3>                                    
+                        <div class='scaleTransB'>
+                            <h4>This Section will be {Scaled} by 1.5 times  + 
+                                {Moved:20px} into the Bottom Direction
+                            </h4>                                             
+                        </div>
+                        <br>
+                        
+                        <br>                        
+                    </section>                
+                    <hr>                
+
+
+                    <hr>
+                    
+                </fieldset>                                                                
+                                
+                <!-- --------------------------------------------------------------------- -->                        
+
+            <hr>
+            <hr>            
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+    
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 12 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=Euc_KOMUeyw&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=12&index=11&index=10&index=9&index=8&index=7&index=6&index=5&index=4&index=3&index=2&controls=0&loop=1&autoplay=1&fs=1" 				
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\12 Css3 - 2D Transform - Translate.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 12 [2D Transform - Translate() ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

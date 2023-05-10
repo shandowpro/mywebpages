@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS OOP Lesson 13 [Constructor Function Dealing With Properties {Part 3}] </title>
+    <link rel="stylesheet" href="JS OOP Lesson13 [Constructor Function Dealing With Properties].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JS OOP Lesson 13 [Constructor Function Dealing With Properties {Part 3}]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS OOP main Topics">
+                JS OOP Lesson13 [Constructor Function Dealing With Properties] Main Topics </a> </li>
+
+            <li> <a href=#JSOOPCon title="Go to JS OOP [Constructor Function Dealing With Properties] Concept">
+                JS OOP Lesson13 [Constructor Function Dealing With Properties] Concept </a> </li>
+
+            <li> <a href=#JSOOPImp title="Go to JS OOP [Constructor Function Dealing With Properties] Importance & Benefits">
+                JS OOP Lesson13 [Constructor Function Dealing With Properties] Importance & Benefits </a> </li>
+
+            <li> <a href=#JSOOPSyntx title="Go to JS OOP [Constructor Function Dealing With Properties] Syntax">
+                JS OOP Lesson13 [Constructor Function Dealing With Properties] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSOOPPracts title="Go to JS OOP [Constructor Function Dealing With Properties] Practical Applications">
+                JS OOP Lesson13 [Constructor Function Dealing With Properties] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS OOP Course <span> JS OOP Lesson 13 [Constructor Function Dealing With Properties] {Part 3}  </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                JS OOP [Constructor Function Dealing With Properties] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS OOP [Constructor Function Dealing With Properties] Concept. </li>
+
+                    <li> JS OOP [Constructor Function Dealing With Properties] Importance & Benefits. </li>
+
+                    <li> JS OOP [Constructor Function Dealing With Properties] Syntax [Define + Access]. </li>
+
+                    <li> JS OOP [Constructor Function Dealing With Properties] Practical Application. </li>
+                </ol>
+                
+                <p> &gt; Main Codes and scripts in this lesson are as following :</p>
+                <ol type="A">
+
+                    <li> [Adding extracted object to an Array] =&gt; {ArryName[i] = ExtObjName;}. </li>
+                
+                </ol>
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPCon" id="JSOOPCon">
+            <header>
+                <h3> JS OOP [Constructor Function Dealing With Properties] Concept: </h3>
+            </header>
+            
+            <p> =&gt; JS OOP [Constructor Function Dealing with Properties]: This lessson will provide to developer more enhanced tools and script to control the constructor function's Properties within the each [Extacted Objects] + and [Pattern Constructor Fucntion] .
+            
+            <p> =&gt; JS OOP [Constructor Function Dealing with Properties new keywords]: There are (2) Methods to deal with properties in Objects as following : <br>
+                <ol>
+                    <li> {Dealing with properties For each extracted Object }; = &gt; this is the default method to deal with properties single for each Extracted Object [Adding new property directly in each Object] </li>    
+                    <li> {Dealing with properties as Parametres in Contructor Function [Pattern]}; = &gt; this is the advanded method to deal with properties Globally to All of Objects which will be Extracted later from this Pattern [Constructor Function]  </li>    
+                    <li> {Merging between Array and Object(s)}; = &gt; This advanded method to deal with Multiple Objects as Array's Elements to get new extracted Objects (which has been Established from the Constructor function) as Array Elements.</li>                                        
+                </ol>
+
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSOOPImp" id="JSOOPImp">
+            <header>
+                <h3> JS OOP [Constructor Function Dealing With Properties] Importance & Benefits: </h3>
+            </header>
+
+            <p> [Constructor Function Dealing With Properties Method] gives us the Following Features : <br>
+                <ul>
+                    <li> More advanced tools to Control in each Contsructor Function's Prarmeters ansd Extracted Object's Properties. </li>                    
+                    <li> Good Understading of Constructor function and it's Tools open the way to deal with each OOP Technology more proficiently. </li>                    
+                </ul>
+        </section>
+
+        <!--------------------------------------------------------------------s---------------------------------->
+        <section class="JSOOPSyntx" id="JSOOPSyntx">
+            <header>
+                <h3> JS OOP [Constructor Function Dealing With Properties] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS OOP Defining Object by [Constructor Function Dealing With Properties] Methods as following : </p>
+            <div id="Code" class="Code">
+                
+                // A) [Defining new Contructor function] :<br><br>                                
+                <span class=one></span> function FuncName (Parameter1, Parameter2, Parameter3, ... ) { <br>
+                    <span class=two></span> console.log(this);<br>
+                    <span class=two></span> this.Parameter1 = Parameter1;<br>
+                    <span class=two></span> this.Parameter2 = Parameter2;<br>
+                    <span class=two></span> this.Parameter3 = Parameter3;<br>
+                    <span class=one></span> } <br><br>
+                    //=========================================================== <br>
+                    
+                    // A`) [Defining new new Extracted Object from the Contructor function] :<br><br>                                
+                    <span class=one></span> let obj1Name = new FuncName (Value of Parameter1, Value of Parameter2, Value of Parameter3);<br><br>                            
+                    //=========================================================== <br>
+                    
+                    // B) (2) Mode of Adding new property to new Extracted Object(s) : <br> <br>                
+                    
+                    // B1) [Adding (Single new Property in each Extacted Object) directly and lonely Default Method ] Syntax :<br><br>                                                
+                    
+                    <span class=one></span> let obj1Name.newParameterName = Value of new Parameter ;<br> <br>ذ
+                    
+                    //=========================================================== <br> <br>
+                    
+                    // B2) [Adding (Global new Parameter in All Object(s) will be Extracted later) Advanced Global Method ] Syntax :<br><br>                                                
+                    
+                    <span class=one></span> function FuncName (Parameter1, Parameter2, Parameter3, Parameter4 ) { <br>
+                        <span class=two></span> console.log(this);<br>
+                        <span class=two></span> this.Parameter1 = Parameter1;<br>
+                        <span class=two></span> this.Parameter2 = Parameter2;<br>
+                        <span class=two></span> this.Parameter3 = Parameter3;<br>
+                        <span class=two></span> this.Parameter4 = Parameter4;<br>
+                        <span class=one></span> } <br><br>
+                    
+                    //=========================================================== <br> <br>
+                    
+                    <br><br> =======================================================
+                    <br><br> =======================================================
+                    <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPPract" id="JSOOPPract">
+            <header>
+                <h3> JS OOP [Constructor Function Dealing With Properties] General Practical Applications : </h3>
+            </header>
+
+            
+            <p> =&gt; Here one Major Application will include following Function/Tasks :  &gt;&gt; <br>
+
+                <ol>
+                    <li> Creating Constructor function with [Fixed Parameters + Fixed Functions (Dispalying Merged Prameters Values and Calculations) ].  </li>
+
+                    <li> Creating Multiple Extracted Objects upon user Request from the Constructor Function with [Fixed Parameters + Fixed Functions (Dispalying Merged Prameters Values and Calculations) ].  </li>                                        
+                </ol>
+
+                <p> =&gt; (2) Checking Method [Extracted Object Constructor Function] as follwoing :  &gt;&gt; <br>
+
+                <ol>
+                    <li> [instanceof Method] {extracted Object instanceof Constructor function}.  </li>
+                    <li> [.constructor Method] {extracted Object.Constructor === Constructor function Name}.  </li>                    
+                </ol>
+
+            <br>
+
+            <textarea id=txtarea class=txtarea> </textarea><br>
+
+            <button class=btn onclick="constProps()"> Click to Start [Constructor function - Dealing with Properties] Application    
+            </button> 
+            <br>
+
+            <textarea id=txtarea1 class=txtarea1> </textarea><br>
+            
+            <button class=btn onclick="Display()"> Click to Display JS code
+            </button> 
+            <hr>
+            
+            <!---<button class=btn onclick="test()"> Click to Start [testing application]  
+            </button>                                            
+                 -->                                  
+            <br>    
+                
+                <script src="JSOOPObjConstProperties.js">
+                </script>
+                <hr>
+                
+                <!-- <div class=JSOOPObjConstProperties>
+                    <code>
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+
+                        <span class=one></span> &lt;button class="btn" onclick=constFunc"()"&gt;<br>                           
+                        <span class=two></span> Click to Start Click to Start [Constructor function + Extracted Object(s)] Applicaion {2 Modes(Fixed,Flexible)} Application <br>         
+                        <span class=one></span> &lt;/button&gt; <br><br>                            
+
+                        <span class=one></span> &lt;script src="JSOOPObjConstProperties.js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+
+                        /* global document, alert, prompt */ <br>                    
+                        /* JSOOP [Object Constructor Function - Dealing with Properties] <br>                    
+                        template-string-converter.enable; <br>
+                        =======================================================<br><br>
+                        function constProps() { <br><br>
+                            
+                            <span class=one></span> alert("Welcome to Constructor Function - Dealing with Properites... " ); <br>
+                        
+                            <span class=one></span> var userCount = parseInt(prompt("Enter the nubmer of <br>
+                                <span class=two></span> users to establish a constructor Function...")); <br>  
+                            
+                            <span class=one></span> function constF(fName, lName, age, country, city, street) { <br><br>
+                                <span class=two></span> this.fName = fName; <br>
+                                <span class=two></span> this.lName = lName; <br>
+                                <span class=two></span> this.age = age; <br>
+                                <span class=two></span> this.country = country; <br>
+                                <span class=two></span> this.city = city;  <br>
+                                <span class=two></span> this.street = street; <br> <br>       
+                                
+                                <span class=two></span> this.fullName = function() { <br><br>
+                                    <span class=three></span> return `Your Full Name is ${this.fName} ${this.lName} `; <br>
+                                <span class=two></span> }; <br><br>
+                        
+                                <span class=two></span> this.ageInDays = () => `your Age in Days = ${this.age * 365}`;  <br>
+                        
+                                <span class=two></span> this.FullAd = function() { <br>
+                                    <span class=three></span> return `Your Full Address ${this.country} ${this.city} ${this.street}`; <br>
+                                <span class=two></span> }; <br> <br>
+                        
+                                <span class=two></span> this.allData = function () { <br><br>
+                                    <span class=three></span> return `your All user data as following : \n <br>
+                                        <span class=four></span> User First Name is ${this.fName} \n User last Name is ${this.lName} \n <br> 
+                                        <span class=four></span> User Age is ${this.age} \n User country is ${this.country} \n <br>
+                                        <span class=four></span> User city is ${this.city} \n User street is ${this.street}`; <br>
+                                <span class=two></span> }; <br>
+                            <span class=one></span> } <br> <br>
+                            
+                            <span class=one></span> console.log("Enter users Parameters [for each user] as following: "); <br> <br>
+                                    
+                            <span class=one></span> const allObjs = new Array(); <br><br>
+                        
+                            <span class=one></span> allObjs.length = userCount; <br> <br>
+                        
+                            <span class=one></span> for (i=0; i &lt; userCount; i++) { <br>
+                                
+                                <span class=two></span> alert("lets enter parameters of user's Object number ( " + (i+1) + " ) :"); <br> <br>
+                                
+                                <span class=two></span> var ufName = prompt("Enter First name : "), <br>
+                                    <span class=three></span> ulName = prompt("Enter last name : "), <br>
+                                    <span class=three></span> uage = parseInt(prompt("Enter age : ")), <br>
+                                    <span class=three></span> ucountry = prompt("Enter country : "), <br>
+                                    <span class=three></span> ucity = prompt("Enter city : "), <br>
+                                    <span class=three></span> ustreet = prompt("Enter street : "); <br>
+                        
+                                <span class=two></span> let user1 = new constF(ufName, ulName, uage, ucountry, ucity, ustreet); <br><br>
+                        
+                                <span class=two></span> console.log("User object's Functions as following :\n "); <br>
+                                
+                                <span class=two></span> console.log(user1.allData()); <br>
+                                <span class=two></span> console.log('\n =========================== \n'); <br>
+                                <span class=two></span> console.log(user1.fullName()); <br>
+                                <span class=two></span> console.log('\n =========================== \n');<br>
+                                <span class=two></span> console.log(user1.FullAd()); <br>
+                                <span class=two></span> console.log('\n =========================== \n'); <br>
+                                <span class=two></span> console.log(user1.ageInDays()); <br>
+                                <span class=two></span> console.log('\n =========================== \n'); <br> <br>
+                                                        
+                                <span class=two></span> allObjs[i] = user1; <br>
+                        
+                            <span class=one></span> } <br>
+                            
+                            <span class=one></span> console.log('Printing All Extracted Objects as following:');<br><br>
+                        
+                            <span class=one></span> for (z=0; z &lt; userCount; z++) { <br>
+                                <span class=two></span> console.log(`Your extracted object number ( ${(z + 1)} ) ovarall as following: \n `); <br>        
+                                <span class=two></span> console.log(allObjs[z]); <br>
+                            <span class=one></span> } <br><br>                        
+                        }<br><br>
+
+                    //====================================================================================================  <br>  
+                                     
+                    </code>
+                </div> -->
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 13 Video File:</h3>
+
+
+            <iframe
+                width="100%"
+                height="100%"
+                allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"
+                frameborder="0"
+                preload="yes"
+                src="https://www.youtube.com/embed/watch?v=SekHx9P7TgM&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=13&controls=0&loop=1&autoplay=1&fs=1"
+            >
+            </iframe>
+            
+            <!-- <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\13 JavaScript OOP  Constructor Function Dealing With Properties.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video> -->
+        </section>
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS OOP Lesson 13 [Constructor Function Dealing With Properties] {Part 3} ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>   

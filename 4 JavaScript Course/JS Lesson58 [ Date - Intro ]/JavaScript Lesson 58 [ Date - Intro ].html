@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Lesson 58 [ Date - Intro ]</title>
+    <link rel="stylesheet" href="JavaScript [ Date - Intro ].css" media="all" />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JavaScript Lesson 58 [ Date - Intro ]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to Javascript main Topics">
+            [ JavaScript [ Date - Intro ] ] Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDateIntroCon"
+            title="Go to [JavaScript [ Date - Intro ]] Concept"
+          >
+            [ JavaScript [ Date ] ] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDateIntroImp"
+            title="Go to [JavaScript [ Date - Intro ]] 
+                    Importance & Benefits"
+          >
+            [ JavaScript [ Date] ] Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDateIntroSyntx"
+            title="Go to [JavaScript [ Date - Intro ] ] 
+                    main Syntax"
+          >
+            [ JavaScript [ Date ] ] Main Syntax & Methods
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDateIntroPract"
+            title="Go to [JavaScript [ Date - Intro ] ] 
+                    Practical Application"
+          >
+            [ JavaScript [ Date ] ] Practical Application
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JavaScript Course
+      <span>
+        JavaScript Lesson 58 [JavaScript [ Date - Intro ] { Date - Part 1}
+      </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>[JavaScript [ Date - Intro ] Main Topics :</header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>Javascript [ Date ] Concept</li>
+
+            <li>JavaScript [ Date ] Importance & Benefits.</li>
+
+            <li>JavaScript [ Date ] Date Methods and Syntax</li>
+
+            <li>JavaScript [ Date ] Practical Application</li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDateIntroCon" id="JSDateIntroCon">
+        <header>
+          <h3>JavaScript [ Date - Intro ]] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JavaScript [ Date - Intro ] : This Lesson Will Present a Public
+          Concept and Methods of Date in any Programing language specialy in JS
+          Particularly and Practical General Examples.
+        </p>
+
+        <p>
+          =&gt; JavaScript [ Date - Intro ] : In JS programing language there
+          are two main Methods to Deal with Date and time as Following :
+        </p>
+        <ol>
+          <li>Main Built-in Functions and Methods:</li>
+          <p>
+            This way is to deal with date and Time without any Editing Abilities
+            as it is.
+          </p>
+
+          <p>
+            This way will be taken in this lesson and Following as a start in
+            Dealing with Date and Time in JS.
+          </p>
+
+          <li>Using Object Syntax:</li>
+          <p>
+            This way is more advanced way to deal with date and Time with more
+            Controling Abilities in Comparison with Default Methods of JS Built
+            Funcitons.
+          </p>
+
+          <p>This way will be Studied in Further Lessons.</p>
+        </ol>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDateIntroImp" id="JSDateIntroImp">
+        <header>
+          <h3>JavaScript [ Date - Intro ] Importance & Benefits:</h3>
+        </header>
+
+        <p>
+          =&gt; JavaScript [ Date - Intro ] : Due to the importance of Date in
+          any P.Language, it is very essential and useful specially in more
+          advanced, to providing Controling Tools of Date and Time and providing
+          Functional Processing [Inserting, Validating, Replacing, Searching,
+          Reading] in Javascript Web Functional Processing and Applications, by
+          providing the Integration features with other Programing functions
+          such as [Functions, Tools and Elements Creators], which can provide
+          following Programing features: <br />
+        </p>
+
+        <ul>
+          <li>
+            Date and Time are essintial and commonly used in profficient
+            web-page String Functional Processing and Application which is built
+            on accurate result of Inputs \ Outputs String and Texual Values such
+            as (E- mails, URLs,...) in any P.languages specially (Javascript)
+          </li>
+
+          <li>
+            It is Critical in Web Applications Developing upon Mathematical
+            Inputs and Outputs Values.
+          </li>
+
+          <li>
+            Date & Time Functions in JS can Be used integratly with other math
+            Functions to get more accurate, advanced results which can be very
+            Benificual in Programming.
+          </li>
+
+          <li>
+            Date and Time Built-In can has Quantifires or Parametrers to provide
+            more controlling tools on (Date - Time) advaced Format in JS to
+            produce more specifc advanced results which can be very Benificual
+            in Programming.
+          </li>
+        </ul>
+
+        <p>
+          =&gt; JavaScript [ Date - Intro ] : Main Built-In Functions in JS to
+          deal with Date and Time as following : <br />
+        </p>
+        <ol>
+          <li>new Date(); => For Full Format of Current Date & Time</li>
+
+          <li>
+            new Date(Number of MillSeconds); => For Full Format of Date & Time
+            Starting from the Default [Unix Standards UTC (Thurs 1 Jan 1970
+            00:00:00 ) + Given Milliseconds & Defferance of Time Zone from GMT]
+          </li>
+
+          <li>
+            new Date(String Format); => For Full Format of Current Date & Time
+            by Certain String Customized Date Format
+          </li>
+
+          <li>
+            new Date(7 Integer Arguments of Date & Time); => For Full Format of
+            Current Date & Time by Certain Integer Customized Date Format
+          </li>
+        </ol>
+      </section>
+
+      <!--------------------------------------------------------------------s---------------------------------->
+      <section class="JSDateIntroSyntx" id="JSDateIntroSyntx">
+        <header>
+          <h3>[ JavaScript [ Date - Intro ]] Mains Syntax & Methods:</h3>
+        </header>
+
+        <p>=&gt; JS Random Functions can be as following :</p>
+
+        <div id="Code" class="Code">
+          // A) [ For Full Format of Current Date & Time] Syntax :<br /><br />
+          &nbsp;&nbsp; new Date(); <br />
+
+          =======================================================<br /><br />
+
+          // B) [ For Full Format of Date & Time After Adding Milliseconds to
+          [Default Unix Standards UTC ] Syntax :<br /><br />
+          &nbsp;&nbsp; new Date(Number of MillSeconds); <br />
+
+          =======================================================<br /><br />
+
+          // C) [ Full Format of Current Date & Time by Certain String
+          Customized Date ] Syntax :<br /><br />
+          &nbsp;&nbsp; new Date("Month's Name, Day's Number, Full Year's Number,
+          Hour, Minutes, Seconds MilliSeconds"); <br />
+
+          =======================================================<br /><br />
+
+          // D) [Full Format of Current Date & Time by Certain (Numbers) Integer
+          Customized Date Format] Syntax :<br /><br />
+          &nbsp;&nbsp; new Date(Year, Month, Day, Hour, Minute, Second,
+          MilliSecond); <br />
+          =======================================================<br /><br />
+          =======================================================<br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDateIntroPract" id="JSDateIntroPract">
+        <header>
+          <h3>JavaScript [ Date - Intro ] Practical Applications :</h3>
+        </header>
+
+        <p>
+          =&gt; Here (1) Practical Application, which will include All Date &
+          Time's Built-In Functions and Methods of Format of JavaScript as
+          following : <br />
+        </p>
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <button class="btn" onclick="mthd()">
+          Click to Start [Date & Time - Built-In] Main Methods Application
+        </button>
+        <br />
+
+        <script src="JSDateTimeIntro.js"></script>
+        <hr />
+
+        <div class="JSDateIntroPractExp">
+          <code>
+            // HTML Codes: <br />
+            &lt;textarea id="txtarea" class="txtarea"&gt;<br />
+            &lt;/textarea&gt; <br /><br />
+
+            &lt;button class="btn" onclick="mthd()"&gt;<br />
+            &nbsp;&nbsp; Click to Start [REGs - Quantifires] Functional
+            Processing Application <br />
+            &lt;/button&gt; <br /><br />
+
+            &lt;script src="JSDateIntro.js"&gt;<br />
+            &lt;/script&gt; <br /><br />
+
+            =======================================================<br /><br />
+
+            // JS Codes [JSDateIntro.js] : <br /><br />
+            /* global alert, document, prompt, console */<br />
+            /* jslint plusplus: true evil: true */ <br />
+            /* [Regular Expression Quantifires Functional Processing part 2]
+            Application */ <br />
+            // ========================================// <br />
+
+            function mthd() { <br />
+            &nbsp;&nbsp; "use strict"; <br /><br />
+
+            &nbsp;&nbsp; MainLoop: <br /><br />
+
+            &nbsp;&nbsp; do { <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to Date & Time - Intro Part
+            1 - Main Date & Time's Built-In Function and Methods"); <br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp; var meth = prompt("Please Choose your Date
+            & Time Built-In Method to Process to Apply ...\n <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (1) Full Format of
+            Current Date & Time\n <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (2) Full Format of Date &
+            Time After Adding Milliseconds to [Default Unix Standards UTC \n<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (3) Full Format of
+            Current Date & Time by Certain String Customized Date Format \n
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (4) Full Format of
+            Current Date & Time by Certain (Numbers) Integer Customized Date
+            Format\n <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press any other key
+            to exit ..."); <br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp; if (meth !== "1" && meth !== "2" && meth
+            !== "3" && meth !== "4") { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Good Bye!"); <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; } else { <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; if (meth == "1") { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to Date & Time
+            Format Built-In Method number (1) [Full Format of <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Current Date &
+            Time]"); <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var myDate = new Date();
+            <br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Date Format by
+            [Full Format of Current Date & Time] is \n" + myDate); <br />
+            <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("txtarea").innerHTML = "Your Date Format by
+            [Full Format of <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Current Date &
+            Time] is \n" + <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myDate; <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp; } else if (meth == "2") { <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to Date & Time
+            Format Built-In Method number (2) [Full Format of Date & Time <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; After Adding
+            Milliseconds to Default Unix Time Standard] "); <br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var milS =
+            parseInt(prompt("Enter your MilliSecond Number to Add to Default
+            Time of Unix")); <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myDate = new
+            Date(milS); <br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Date Format by
+            [Full Format of Date & Time After Adding Milliseconds to <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unix Time
+            Standard]\n" + myDate); <br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("txtarea").innerHTML =<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your Date Format
+            by [Full Format of Date & Time After Adding Milliseconds to Default
+            Unix Time Standard]\n" +<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myDate; <br />
+            <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp; } else if (meth == "3") { <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to Date & Time
+            Format Built-In Method number (3) [Full Format of Current Date &
+            Time <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by Certain String
+            Customized Date Format] "); <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var StrD = prompt("Enter your
+            String Date to Apply"),
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myDate = new
+            Date(StrD); <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Date Format by
+            [Full Format of Current Date & Time by <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Certain String
+            Customized Date Format]\n" + myDate); <br />
+            <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("txtarea").innerHTML = "Your Date Format by
+            [Full Format of Current Date & Time by<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Certain String
+            Customized Date Format]\n" + myDate; <br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp; } else if (meth == "4") { <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to Pattern
+            number (4) Method [Full Format of Current Date & Time <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by Certain
+            (Numbers) Integer Customized Date Format]"); <br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var Year =
+            parseInt(prompt("Enter your Year Number to Apply")),<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Month =
+            parseInt(prompt("Enter your Month Number to Apply"))-1, <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Day =
+            parseInt(prompt("Enter your Day Number to Apply")), <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hour =
+            parseInt(prompt("Enter your Hour Number to Apply")), <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mint =
+            parseInt(prompt("Enter your Minute Number to Apply")), <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sec =
+            parseInt(prompt("Enter your Second Number to Apply")), <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MSec =
+            parseInt(prompt("Enter your MilliSecond Number to Apply"));
+            <br /><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myDate = new
+            Date(Year, Month, Day, Hour, Mint, Sec, MSec); <br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Date Format by
+            [Full Format of Current Date & Time by Certain String Customized
+            Date Format]\n" +<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myDate);<br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("txtarea").innerHTML = <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your Date Format
+            by [Full Format of Current Date & Time by Certain String Customized
+            Date Format]\n" +<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myDate;
+            <br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp; } else { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert ("Error Entry!"); <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; } <br />
+            &nbsp;&nbsp; } <br />
+
+            &nbsp;&nbsp; var z = prompt("Press 1 to restart the whole
+            Application ,\nPress any other key to exit");<br />
+
+            &nbsp;&nbsp; if (z !== "1") { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; alert("Good Bye!"); <br />
+            &nbsp;&nbsp; } else { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; alert("Let's Restart"); <br />
+            &nbsp;&nbsp; } <br /><br />
+            &nbsp;&nbsp; } while (z == "1"); <br />
+            }<br />
+            //////////////////////////////////////////////////////////<br /><br /><br />
+          </code>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------------------->
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to get basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg" />
+          Your browser Does Not Support the Audio file format...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 58 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=d2Ht2VErMUM&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=58&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300" >
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics\58 Date - Date Intro.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file format...              
+            </video>                           -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JavaScript");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

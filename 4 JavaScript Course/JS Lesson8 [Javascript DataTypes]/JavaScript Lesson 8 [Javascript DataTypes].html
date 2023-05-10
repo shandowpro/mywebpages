@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> JavaScript Lesson 8 [Javascript DataTypes] </title>
+    <link rel="stylesheet" href="JavaScript [Javascript DataTypes].css" media="all" >
+        
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        JavaScript Lesson 8 [Javascript DataTypes]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="JavaScript [Javascript DataTypes] Main Concept" > JavaScript [Javascript DataTypes] Main Concept" </a> </li>            
+            
+            <li> <a href=#JSDTList Console  title="Go to Introduction to Javascript DataTypes Main List" > Javascript [Main DataTypes List] </a> </li>                                                
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to JavaScript Course <span> JavaScript Lesson 8 [Javascript DataTypes] </span> 
+    </main>
+<!-------------------------------------------------------------------------------------------------------------->                        
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>                 
+                JavaScript [DataTypes]
+            </header>
+            
+            <article>                                                
+                <p> &gt; The New object in this lesson as following (in one Tag):</p>
+                <ol type="A">                    
+                    <li> Main DataTypes List . </li>
+                    <li> Main DataTypes Concepts. </li>
+                    <li> Main DataTypes Practical Exps. </li>                    
+                </ol>    
+            </article>            
+        </Section>
+    
+        <section class="JSDTList" id="JSDTList">
+            <header>                
+                In this Lesson , We will just take an short Idea about each DataType , and we will have more details information about each one in Enhanced Lessons.
+            </header>
+            
+            <article>
+                <h2> [JS DataTypes] Main DataTypes as Following : </h2>
+                
+                <ul>                    
+                    
+                    <li><h3> [Boolean] DataType in JS: </h3> </li>
+                        <p> =&gt; [JS Boolean Datetype] is Type of Data about Logic Values (one of two probable Values) which can be as following: </p>
+                            <ul>
+                                <li> True </li>
+                                <li> False </li>
+                            </ul>
+                            or <br><br>
+                                <ul>
+                                    <li> 0 (as logic Value) </li>
+                                    <li> 1 (as logic Value) </li>                                
+                                </ul>
+                        <div class="JSDTListExp">
+                            <Header>
+                                <h3> Geting Value of Boolean Variable inside the Div Element </h3>
+                                <p> The Sourcing JS Code Soure is [DataType.js]</p>
+                                
+                                <div id="testboolean">
+                                </div>
+                                <script src="Datatypes.js"></script>                                         
+                                
+                            </Header>    
+                        </div>
+                                                            
+                        <p> =&gt; [JS Boolean Datetype] is Type of Data about Logic Values (one of two probable Values) which can be as following: </p>
+                        
+                        <div class="JSDTListExp1"> 
+                            <code>
+                                HTML Codes :<br>
+                                &nbsp; &nbsp; &lt; Div id="test" &gt; &lt; /Div &gt; <br>
+                                &nbsp; &nbsp; &lt; script src="test.js" &gt; &lt; /script &gt; <br>
+                                                                
+                                JS Codes :<br>
+                                // Declaration of Some Vars:<br>
+                                var Case1 = "Good",<br>
+                                &nbsp; &nbsp; Case2 = "Bad";<br>
+                                
+                                &nbsp; &nbsp; myCase = true,<br><br>
+                                                            
+                                // Funcitons :<br>
+                                if (myCase ==== true) {<br>
+                                    &nbsp; &nbsp; document.getElementById("test") = Case1;<br>
+                                } else {<br>
+                                    &nbsp; &nbsp; document.getElementById("test") = Case2;<br>                                 
+                                } <br><br>                                                        
+                                
+                                // Chrome Console :<br>
+                                &nbsp; &nbsp; typeof myCase &gt;<br>
+                                &nbsp; &nbsp; Boolean <br>                            
+                            </code>
+                        </div>
+        <!------------------------------------------------------------------------------------------------------>                               
+                    <li><h3> [Object] DataType in JS: </h3> </li>                                        
+                        <p> =&gt; [JS Object Datetype] is one of wide Range of use in JS, and it is about a not Specific value(s).  </p>
+                        
+                        <p> =&gt; [JS Object Datetype] is more similer to Dictionary Datatype in Python programing language, which means that has Multiple Elements And each Element has its own (Key) and (Value).</p>
+                        
+                        <p> =&gt; [JS Object Datetype] each element can be called by using it's (key) to use it's value, and if I Did'nt => it will displayed object inspite of the element value.</p>                                                
+                        
+                        <div class="JSDTListExp">
+                            <Header>
+                                <h3> Geting Value of Object Variable Specific Value inside the Div Element by Key </h3>
+                                <p> The Sourcing JS Code Soure is [DataType.js] Getting First Element Value of Object DataType:</p>
+                                
+                                <div id="testobject">
+                                </div>
+                                <script src="Datatypes.js"></script>                                         
+                                
+                            </Header>    
+                        </div>
+                    
+                    
+                        <div class="JSDTListExp1"> 
+                            <code>
+                                HTML Codes :<br>
+                                &nbsp; &nbsp; &lt; Div id="test" &gt; &lt; /Div &gt; <br>
+                                &nbsp; &nbsp; &lt; script src="test.js" &gt; &lt; /script &gt; <br><br>                                                                                                
+                                JS Codes :<br>
+                                // Declaration of Some Vars:<br>
+                                var myAge = {firstName: "Shadi", lastName: "Sayed"};<br><br>               
+                                                                
+                                // Funcitons :<br>
+                                document.getElementById("test").innerHTML = myAge.firstName;<br><br>
+                                                                                                                                
+                                // Chrome Console :<br>
+                                &nbsp; &nbsp; typeof myAge &gt;<br>
+                                &nbsp; &nbsp; object <br>
+                            </code>
+                        </div>                                                            
+        <!------------------------------------------------------------------------------------------------------>                                                     
+                    <li><h3> [Symbol] DataType in JS: </h3> </li>                                                 
+                        <p> =&gt; [JS Symbol Datetype] is one of DataType in Js , and We will take it in Advanced lesson   </p>
+                                                            
+        <!------------------------------------------------------------------------------------------------------>                                                     
+                    <li><h3> [Array] DataType in JS: </h3> </li>                                                 
+                        <p> =&gt; [JS Array Datetype] is one of DataType which can contain more than one Value with one Type of data </p>
+                        
+                        <p> =&gt; [JS Array Datetype] each element of Array has a certain index can be Used to call a certain Element of array, independing on index Rules.  </p>
+                                                                
+                        <div class="JSDTListExp">
+                            <Header>
+                                <h3> Geting Value of Array Variable Specific Element Value inside the Div Element by Element Index </h3>
+                                <p> The Sourcing JS Code Soure is [DataType.js] Getting First Element Value of Array DataType with Index = 0:</p>
+                                
+                                <div id="testarray">
+                                </div>
+                                <script src="Datatypes.js"></script>                                         
+                                
+                            </Header>    
+                        </div>
+                    
+                        <div class="JSDTListExp1"> 
+                            <code>
+                                HTML Codes :<br>
+                                &nbsp; &nbsp; &lt; Div id="test" &gt; &lt; /Div &gt; <br>
+                                &nbsp; &nbsp; &lt; script src="test.js" &gt; &nbsp; &lt; /script &gt; <br><br>                                                                                     
+                                JS Codes :<br>
+                                // Declaration of Some Vars:<br>
+                                var myAge = [firstName: "Shadi", lastName: "Sayed"];<br><br>               
+                                                                
+                                // Funcitons :<br>
+                                document.getElementById("test").innerHTML = myAge[0];<br><br>
+                                                                                                                                
+                                // Chrome Console :<br>
+                                &nbsp; &nbsp; typeof myAge &gt;<br>
+                                &nbsp; &nbsp; object //(Inspite of myAge is Array DataType, but it will be displayed as object) <br> 
+                            </code>
+                        </div>                                                            
+                    <!------------------------------------------------------------------------------------------>
+                    
+                    <li><h3> [String] DataType in JS: </h3> </li>                                                 
+                        <p> =&gt; [JS String Datetype] is one of DataType which can hold <mark>Textual</mark> Data of letters and words. </p>
+                        
+                        <p> =&gt; [JS String Datetype] it's value Must be in Sigle or Doubled Quotes sings 
+                                  <mark>"&nbsp;"</mark>  or <mark>'&nbsp;'</mark>. </p>
+                    
+                        <p> =&gt; [JS String Datetype] Can use one Type of Quoting Sing only in A variable , but can also hold or contain the both Type of qouting Signs but we must use                   a <mark>backSlash</mark> Sign First <mark>&nbsp;\&nbsp;</mark> just before the           second type of Qouting Sing , inside the main Quote used itself. </p>                        
+                        
+                        <div class="JSDTListExp">
+                            <Header>
+                                <h3> Geting Value of String Variable inside the Div Element and using 2 types of Quotation Signs</h3>
+                                <p> Getting my Full Name and Nick Name with Differernt Quotations Signs inside:</p>
+                                
+                                <div id="teststring1">
+                                </div>
+                                <script src="Datatypes.js"></script>                                         
+                                
+                                
+                                <p> Getting my Full Name and Nick Name with the Same Quotations Signs inside using back Slash sign:</p>
+                                
+                                <div id="teststring2">
+                                </div>
+                                <script src="Datatypes.js"></script>                                         
+                                
+                            </Header>    
+                        </div>
+                        
+                    
+                        <div class="JSDTListExp1"> 
+                            <code>
+                                HTML Codes :<br>
+                                &nbsp; &nbsp; &lt; Div id="teststring1" &gt; &lt; /Div &gt; <br>
+                                &nbsp; &nbsp; &lt; script src="DataTypes.js" &gt; &nbsp; &lt; /script &gt; <br>
+                                                                
+                                &nbsp; &nbsp; &lt; Div id="teststring2" &gt; &lt; /Div &gt; <br>
+                                &nbsp; &nbsp; &lt; script src="DataTypes.js" &gt; &nbsp; &lt; /script &gt; <br><br><br>            
+                                
+                                JS Codes :<br>
+                                // Declaration of Some Vars:<br>
+                                var myFullName1 = "Shadi Sayed Mohammed 'Shindow' ",
+                                &nbsp; &nbsp; myFullName2 = "Shadi Sayed Mohammed \"Shindow\"";
+                                
+                                                                
+                                // Funcitons :<br>
+                                document.getElementById("teststring1").innerHTML =  myFullName1;<br>
+                                document.getElementById("teststring2").innerHTML =  myFullName2;<br><br>
+                                
+                                                                                                
+                                // Chrome Console :<br>
+                                &nbsp; &nbsp; typeof myName &gt;<br>
+                                &nbsp; &nbsp; String <br>
+                            </code>
+                        </div>
+                    
+                    <!------------------------------------------------------------------------------------------>
+                    <li><h3> [Number] DataType in JS: </h3> </li>                                                                                         
+                        <p> =&gt; [JS Number Datetype] is one of DataType which can hold <mark>Numeric</mark> Data of numbers. </p>
+                        
+                        <p> =&gt; [JS String Datetype] it is Essential very helpful in Arthmetic operations. </p>
+                    
+                        <p> =&gt; [JS String Datetype] is different from Textual numbers in Textual Form, becouse it can be process any Math operations on it. </p>
+                    
+                        <p> =&gt; [JS String Datetype] can Be concatenated with Texual value of numbers, but Can process any Math Operatoins (Will Be Taken in Concatenation Lesson). </p>
+                        
+                        <div class="JSDTListExp">
+                            <Header>
+                                <h3> Geting Value of Number Variable inside the Div Element with Single Numeric Value & Concatenating with other Number textual Value  </h3>
+                                <p> Getting a single Numeric Value from a Variable in [DataType.js]:</p>
+                                
+                                <div id="testnumber1">
+                                </div>
+                                <script src="Datatypes.js"></script>                                         
+                                                                                                
+                                
+                                <p> Getting a single Textual Value from a Variable in [DataType.js]:</p>
+                                
+                                <div id="testnumber2">
+                                </div>
+                                <script src="Datatypes.js"></script>                                    
+                                
+                                
+                                <p> Getting a Concatenated Numeric Value with Textual nember Value a Variable in [DataType.js]:</p>
+                                
+                                <div id="testnumber3">
+                                </div>
+                                <script src="Datatypes.js"></script>                                         
+                                
+                            </Header>    
+                        </div>
+                    
+                        <div class="JSDTListExp1"> 
+                            <code>
+                                HTML Codes :<br>
+                                &nbsp; &nbsp; &lt; Div id="testnubmer1" &gt; &lt; /Div &gt; <br>
+                                &nbsp; &nbsp; &lt; script src="test.js" &gt; &nbsp; &lt; /script &gt; <br><br>   &nbsp; &nbsp; &lt; Div id="testnubmer2" &gt; &lt; /Div &gt; <br>
+                                &nbsp; &nbsp; &lt; script src="test.js" &gt; &nbsp; &lt; /script &gt; <br><br>   &nbsp; &nbsp; &lt; Div id="testnubmer3" &gt; &lt; /Div &gt; <br>
+                                &nbsp; &nbsp; &lt; script src="test.js" &gt; &nbsp; &lt; /script &gt; <br><br>            
+                                JS Codes :<br>
+                                // Declaration of Some Vars:<br>
+                                textualNumber = "30",<br>
+                                numericNumber = 30;<br><br>
+                                
+                                                                
+                                // Funcitons :<br>
+                                document.getElementById("testnumber1").innerHTML =  numericNumber;<br>
+                                document.getElementById("testnumber2").innerHTML =  textualNumber;<br>
+                                document.getElementById("testnumber3").innerHTML =  numericNumber + textualNumber;<br><br>
+                                                                                                
+                                // Chrome Console :<br>
+                                &nbsp; &nbsp; typeof myAge &gt;<br>
+                                &nbsp; &nbsp; Number <br>
+                            </code>
+                        </div>
+                    
+                    <!------------------------------------------------------------------------------------------>
+                    <li><h3> [Null] DataType in JS: </h3> </li>                                                   
+                        <p> =&gt; [JS String Datetype] is one of DataType we will talk about it in an advanced lesson . </p>
+                    
+                    <!------------------------------------------------------------------------------------------>
+                    <li><h3> [NaN] DataType in JS: </h3> </li>                                                   
+                        <p> =&gt; [JS String Datetype] is one of DataType which means Not A Number, and also we will talk about it in advanced Lesson. </p>                                        
+                </ul>                                                                
+                    
+            </article>       
+        </section>
+                    
+<!-------------------------------------------------------------------------------------------------------------->
+        
+<!--------------------------------------------------------------------------------------------------------------> 
+    </div>    
+    
+<!-------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="200"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="22">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num2">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 8 Video File:</h3>
+                
+                <iframe			
+				width="100%"
+				height="100%"											
+				allowfullscreen
+				allowfullscreen="allowfullscreen"
+				mozallowfullscreen="mozallowfullscreen"
+				msallowfullscreen="msallowfullscreen"
+				oallowfullscreen="oallowfullscreen"
+				webkitallowfullscreen="webkitallowfullscreen"
+				frameborder="0"				
+				preload="yes"
+				src="https://www.youtube.com/embed/watch?v=2pz2JlJUDMg&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=8&controls=0&loop=1&autoplay=1&fs=1" 				
+				>
+			</iframe>
+                <!-- <video controls width="300" height="300" autoplay>
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/8  Data Type.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                           -->
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>
+    
+    
+    <script>
+        alert("Welcome to JavaScript: Lesson 8 [DataTypes]");    
+    </script>
+    
+</body>
+</html

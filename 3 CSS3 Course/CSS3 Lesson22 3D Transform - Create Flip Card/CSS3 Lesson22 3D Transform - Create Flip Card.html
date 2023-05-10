@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 22 [3D Transform - Create Flip Card] </title>
+    <link rel="stylesheet" href="CSS3 Lesson22 3D Transform - Create Flip Card.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 22 [3D Transform - Create Flip Card]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 3D Transform - Create Flip Card main Topics">
+                [ 3D Transform - Create Flip Card ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to 3D Transform - Create Flip Card [3D Transform - Create Flip Card ] Concept">
+                [ 3D Transform - Create Flip Card ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to 3D Transform - Create Flip Card [3D Transform - Create Flip Card ] Importance & Benefits">
+                [ 3D Transform - Create Flip Card ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to 3D Transform - Create Flip Card [3D Transform - Create Flip Card ] Syntax">
+                [ 3D Transform - Create Flip Card ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to 3D Transform - Create Flip Card [3D Transform - Create Flip Card ] Practical Applications">
+                [ 3D Transform - Create Flip Card ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 22 [3D Transform - Create Flip Card ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                3D Transform - Create Flip Card Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [3D Transform - Create Flip Card] Concept. </li>                       
+                    
+                    <li> [3D Transform - Create Flip Card] Importance & Benefits. </li>
+
+                    <li> [3D Transform - Create Flip Card] Syntax [Exmaple]. </li>
+                    
+                     <li> [3D Transform - Create Flip Card] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    
+                    <ul>
+                        <li> Practical Application of Flipping Card (Horizontaly - Vertical) Roating [Simple + Advanced] </li>                        
+                    </ul>                   
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [3D Transform - Create Flip Card] Concept: </h3>
+            </header>
+                                    
+                <li> The following concepts will be Applied in this Application :</li>
+                    <ol>
+                        <li> {Persective} => To assign 3d persective Val3ue </li>                                                                 
+                        <li> {Transform-Style} => Determining the Transform Style (3d-preserve / flat) </li>                                                                 
+                        <li> {Transform-Origin} => Determining the Transform Origin/Direction </li>                        
+                        <li> {Transition} => Determining Duration of Transform </li>                                                                 
+                        <li> {backface-visibiltiy} => Deteriming the visibility of Card face (After performing Transforming )  </li>
+                        <li> {z-index} => To assign Which face of card will be the Front & Which will be the Back </li>                                                                 
+                    </ol>                                                                                                
+        </section>            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+        <section class="CSS3Imp" id="CSS3Imp">
+            <header>
+                <h3> [3D Transform - Create Flip Card ] Importance & Benefits: </h3>
+            </header>
+            
+            <p> =&gt; [3D Transform - Create Flip Card ] : This Advanced property enabling the following features & imporatance : <br>            
+                <ul>                                                                
+                    <li> Designing an Advanced Flipping Cards with Extra features  </li>                                                
+                    <li> Full Controling of Cards Elements </li>  
+                    <li> Ability Deterine the type of Transforming Type & Direction belongs to the Card </li>                       
+                </ul>                                                 
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ 3D Transform - Create Flip Card] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [3D Transform - Create Flip Card - First Application (Flipping Card with more detials)] Syntax as following :<br><br>                                                    
+                
+                    <span class='two'></span> //a)  [HTML] file  : <br>                                          
+                
+                        <span class=three></span> &lt; div class='container' &gt; <br>
+                            <!-- FaceCard -->
+                            <span class=four></span> &lt;div class='Face' &gt; <br>                                                                
+                                <span class=five></span> &lt; header &gt; <br>                                                      
+                                    <span class=six></span> &lt; img src='image.jpg' alt='Avatar imag' &gt; <br>                                                      
+                                <span class=five></span> &lt;/header &gt; <br>                                                                                      
+                                <span class=five></span> &lt; h3 &gt; Face Card &lt; /h3 &gt; <br>
+                                <span class=five></span> &lt; p &gt; Face Card Details... &lt; /p &gt; <br>                                                                
+                                <span class=five></span> &lt; span &gt; hover to see more details... &lt; /span &gt; <br>                                
+                            <span class=four></span> &lt; /div &gt;  <br>                        
+
+                            <!-- BackCard -->
+                            <span class=four></span> &lt;div class='Back' &gt; <br>
+                                <span class=five></span> &lt; h1 &gt; Header Back  &lt; /h1 &gt; <br>                                                      
+                                <span class=five></span> &lt; p &gt; Back Card Details... &lt; /p &gt; <br>                                                                                      
+                                <span class=five></span> &lt; ul &gt; <br>                                                                                      
+                                    <span class=six></span> &lt; li &gt; Detail 1 &lt; /li &gt; <br>                                                                                      
+                                    <span class=six></span> &lt; li &gt; Detail 2 &lt; /li &gt; <br>                                                                                      
+                                    <span class=six></span> &lt; li &gt; Detail 3 &lt; /li &gt; <br>                                                                                                                      
+                                <span class=five></span> &lt; /ul &gt; <br>                                                                                      
+                            <span class=four></span> &lt; /div &gt;  <br>                                                                                                                                                    
+                        <span class=three></span> &lt; /div &gt;  <br>                                
+
+                        <br> <br>                                        
+
+                // ------------------------------------------------------------------------------ <br><br>
+                
+                    //  [3D Transform - Create Flip Card - more Details] + [Flipping card by 3d-Transform: rotateY() + rotateX() ] Syntax as following :<br><br> 
+
+                    <span class=two></span> // A) {3D Transform - Create Vertical Flipping Card} Example1: {RotateY Effect} Syntaxes:  <br>
+                                    
+                        <span class=three></span> body {  <br>
+                            <span class=four></span> perspective: 1000px ; <br>
+                        <span class=three></span>  }  <br>                                              
+
+                        <!-- a) Container:  3d-transforming : Rotating Effect  -->
+                        <span class=three></span> .container {  <br>                                                                              
+                            <span class=four></span> widht:500px; <br>                                                                                                                          
+                            <span class=four></span> height: 500px; <br>                                                                                                                          
+                            <span class=four></span> margin: 50px auto; <br>                                                                                                                          
+                            <span class=four></span> padding: 0px; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> position: ralative; <br>                            
+                            <span class=four></span> border-radius:10px; <br>                            
+                            <span class=four></span> transition: all 1s ease-in-out ; <br>                                                                                                                              
+                            <span class=four></span> transform-style: preserve-3d ; <br>
+                        <span class=three></span>  }  <br>                                              
+                        
+                        <span class=three></span> .container:hover {  <br>                                                                              
+                            <span class=four></span> transform: rotateY(180deg); <br>                            
+                        <span class=three></span>  }  <br>                                              
+                            
+                        <!-- b) Any Face inside the Card :  -->                                                
+                        <span class=three></span> container div {  <br>                                                  
+                            <span class=four></span> position: absolute; <br>
+                            <span class=four></span> left:0px; <br>
+                            <span class=four></span> top:0px; <br>           
+                            <span class=four></span> width:100%; <br>           
+                            <span class=four></span> height:100%; <br>           
+                            <span class=four></span> text-align:center; <br>
+                            <span class=four></span> border: 2px solid #CCC; <br>
+                            <span class=four></span> border-radius: 10px ; <br>
+                            <span class=four></span> color: #333 ; <br>
+                        <span class=three></span>  }  <br>                                                                                                              
+                        
+                        <!-- ------------------------------------------------------------------------ -->                
+                        <span class=three></span> .Container .Front header, .Container .Back header {  <br> 
+                            <!-- b) CardBack :  -->
+                        <span class=three></span> .Back {  <br>                                                  
+                            <span class=four></span> position: absolute; <br>
+                            <span class=four></span> left:0px; <br>
+                             <span class=four></span> top:0px; <br>           
+                            <span class=four></span> background-color:#f00; <br>                                                                   
+                            <span class=four></span> transition: all 1s ease-in-out ; <br>
+                        <span class=three></span>  }  <br>                                                                                                              
+                            
+                        <span class=three></span> .Back:hover {  <br>                                                  
+                            <span class=four></span> Transform: rotate(360deg) ; <br>
+                            <span class=four></span> Transform-origin: center right; <br>
+                        <span class=three></span>  }  <br>                                                                                                                                                                                                                                                                                                            
+                        <!-- ------------------------------------------------------------------------ -->
+
+                        
+                        <span class=three></span> .Container .Front header img, .Container .Back header img {  <br>  
+                            <span class=four></span> width: 100px;<br>
+                            <span class=four></span> height: 100px; <br>
+                            <span class=four></span> border:2px solid #888;<br>
+                            <span class=four></span> border-radius: 50%; <br>
+                            <span class=four></span> margin: 50 auto; <br>
+                            <span class=four></span> text-align: center; <br>
+                            <span class=four></span> margin-top: -10px ; <br>
+                        <span class=three></span> } <br>  
+                            
+                        <!-- ------------------------------------------------ -->                                                    
+                        <span class=three></span> .Card1 .Front h3 , .Card2 .Front h3 {  <br>                                                    
+                            <span class=four></span> margin: 50px auto ; <br>
+                            <span class=four></span> font-size:20px; <br>
+                            <span class=four></span> font-weight:bold; <br>                                                                    
+                        <span class=three></span> } <br>  
+                        
+                        <!-- ------------------------------------------------ -->                                                    
+                        
+                        <span class=three></span> .Card1 .Front p , .Card2 .Front p { <br>                              
+                            <span class=four></span> list-style: none; <br>
+                            <span class=four></span> line-height: 1.7; <br>
+                            <span class=four></span> padding: 5px; <br>                                                                                        
+                            <span class=four></span> width: 90%; <br>                                                                                        
+                        <span class=three></span> } <br>  
+
+                // ------------------------------------------------------------------------------ <br><br>                                                                                            
+
+                    <span class=three></span> .Card1 .Front span , .Card2 .Front span { <br>                                                                                                                                                                          
+                            <span class=four></span> margin: 50 auto; <br>
+                            <span class=four></span> text-align: center; <br>
+                            <span class=four></span> display: inline-block; <br>                                                                                                                                                                                                      
+                        <span class=three></span> } <br>  
+                // ------------------------------------------------------------------------------ <br><br>                                                                                            
+                
+                    <span class=three></span> .Card1 .Back ul , .Card2 .Back ul { <br>                                                                        
+                        <span class=four></span> list-style: none; <br>
+                        <span class=four></span> line-height: 1.7; <br>
+                        <span class=four></span> padding: 5px; <br>
+                    <span class=three></span> } <br>                      
+                    // ------------------------------------------------------------------------------ <br><br>                    
+
+                    <span class=three></span> .Card1 .Front, .Card2 .Front { <br>                                                                                                            
+                        <span class=four></span> z-index: 2; <br>
+                        <span class=four></span> backface-visibility: hidden; <br>                            
+                    <span class=three></span> } <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                                    
+                    
+                    <span class=three></span> .Card1 .Back { <br>                                                                                                            
+                        <span class=four></span> z-index: 1; <br>
+                        <span class=four></span> backface-visibility: hidden; <br>                            
+                        <span class=four></span> transform: rotateY(180deg); <br>                            
+                    <span class=three></span> } <br>                                                                  
+                // ------------------------------------------------------------------------------ <br><br>            
+                        
+                    <span class=three></span> .Card2 .Back  { <br>                                                                                                            
+                        <span class=four></span> z-index: 1; <br>
+                        <span class=four></span> backface-visibility: hidden; <br>                            
+                        <span class=four></span> transform: rotateX(180deg); <br>                            
+                    <span class=three></span> } <br>                                                                  
+                // ------------------------------------------------------------------------------ <br><br>            
+                
+                                                                                                    
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="JSDOMPract" >
+
+            <header>
+                <h3> [3D Transform - Create Flip Card] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following is the Applied example of { [3D-Transform-origin] & [3d-Transform-style] with different kinds of Transforms } : <br>
+                
+            <p> (2) Fieldsets contain (3) sections for each (of 3 types of transform types) && Each Section has all options available in the Property of this section as following:  </p>
+            
+            <ul>
+                <li> A) First Fieldset: {Simple Flipping Card}: And it has (2) Secions as following :  </li>                                                        
+                    <ol>
+                        <li> RotateY() Effect - Center Center : and it has (2) Faces as follwing : 
+                            <ul>
+                                <li> (1) First Face {Front}: contain following:
+                                    <ul>
+                                        <li> Header => contain image of Avatar</li>
+                                        <li> h3 => Avatar title name</li>
+                                        <li> p => Detials of Avatar </li>
+                                    </ul>                                    
+                                </li>
+
+                                <li> (2) Second Face {Back}: contain following:
+                                    <ul>                                        
+                                        <li> list => Avatar Contact </li>
+                                    </ul>                                    
+                                </li>
+                            </ul>
+                        </li> <br>
+                    </ol>
+
+                <li> A) First Fieldset: {Simple Flipping Card}: And it has (2) Secions as following :  </li>                                                        
+                    <ol>   
+                        <li> RotateX() Effect - Center Center : and it has (2) Faces as follwing : 
+                            <ul>
+                                <li> (1) First Face {Front}: contain following:
+                                    <ul>
+                                        <li> Header => contain image of Avatar</li>
+                                        <li> h3 => Avatar title name</li>
+                                        <li> p => Detials of Avatar </li>
+                                    </ul>                                    
+                                </li>
+
+                                <li> (2) Second Face {Back}: contain following:
+                                    <ul>                                        
+                                        <li> list => Avatar Contact </li>
+                                    </ul>                                    
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>                
+                </ol>               
+                <!-- ========================================================================= -->
+                
+            </ul>                                                
+
+            <br>
+            <hr>
+            <br> <br> <hr> <hr> <hr>                               
+            <!-- ========================================================================= -->                                        
+        <!-- A) Practical example 1 [Simple]:  -->
+            <!-- 1) Vertical Flipping Card Application  -->
+            <fieldset class='VerFather'>                                                  
+                <div class='VerFront'></div>                                                                    
+                <div class='VerBack'></div>                                                                    
+            </fieldset>    
+            <br> <br>
+            
+            <!-- -------------------------------------------------------------------------------------- -->                                                            
+            
+            <!-- 2) Horizontaly Flipping Card Application  -->
+            <fieldset class='HorFather'>                                                  
+                <div class='HorFront'> Front Face </div>                    
+                <div class='HorBack'> Back Face </div>                                                                    
+            </fieldset>    
+            <!-- -------------------------------------------------------------------------------------- -->                                                            
+            <!-- -------------------------------------------------------------------------------------- -->                                                            
+            
+        <!-- B) Practical example 2 [More Detailed]:  -->
+            
+            <!-- 1) Vertical Flipping Card Application  -->
+            <fieldset class='Card1'>                                                  
+                <div class='Front'>
+                    <header>
+                        <img src='Shadi.jpg' alt='myPicture'>
+                    </header> 
+
+                    <h3> Shadi Sayed Mohammed </h3>
+                    
+                    <p> This is more Details about CardFace This is more Details about CardFace, This is more Details about CardFace </p>
+                    
+                    <span> Hover to see more details </span>                                    
+                </div>                                                    
+                
+                <div class='Back'>                                                         
+                    
+                    <h3> My Contact </h3>
+                    
+                    <ul>
+                        <li> Email: shadsyaed.687181@gmail.com</li>
+                        <li> Mob: 0111156999</li>
+                        <li> Studt: Kario</li>                        
+                        <li> Land: Agypten </li>
+                    </ul>
+                </div>                                                                    
+            </fieldset> 
+               <br> <br>
+               <hr>
+            
+            <!-- -------------------------------------------------------------------------------------- -->                                                            
+            <!-- /B) Practical example 2 [More Detailed]:  -->
+            <!-- 2) Horizontaly Flipping Card Application  -->
+            <fieldset class='Card2'>                                                  
+                <div class='Front'> 
+                    <header>
+                        <img src='Shadi.jpg' alt='myPicture'>
+                    </header> 
+
+                    <h3> Shadi Sayed Mohammed </h3>
+                    
+                    <p> This is more Details about CardFace This is more Details about CardFace, This is more Details about CardFace </p>
+                    
+                    <span> Hover to see more details </span>                                    
+                </div>                    
+                <!-- --------------------------------------------------------------------------------------- -->
+                <!-- --------------------------------------------------------------------------------------- -->
+                
+                <div class='Back'>                     
+                    <h3> My Contact </h3>
+                    
+                    <ul>
+                        <li> Email: shadsyaed.687181@gmail.com</li>
+                        <li> Mob: 0111156999</li>
+                        <li> Studt: Kario</li>                        
+                        <li> Land: Agypten </li>
+                    </ul>                    
+                </div>                                                                    
+            </fieldset>    
+            
+        
+        </section>            
+
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 22 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=wVz3w3Ik_-A&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=22&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\22 Css3  3- 3D Transform - Create Flip Card.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 22 [3D Transform - Create Flip Card ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

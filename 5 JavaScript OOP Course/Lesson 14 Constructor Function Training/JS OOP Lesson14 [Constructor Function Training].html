@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS OOP Lesson 14 [Constructor Function Training - Addtional Internal Functions {Part 4}] </title>
+    <link rel="stylesheet" href="JS OOP Lesson14 [Constructor Function Training].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JS OOP Lesson 14 [Constructor Function Training {Part 4}]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS OOP main Topics">
+                JS OOP Lesson14 [Constructor Function Training] Main Topics </a> </li>
+
+            <li> <a href=#JSOOPCon title="Go to JS OOP [Constructor Function Training] Concept">
+                JS OOP Lesson14 [Constructor Function Training] Concept </a> </li>
+
+            <li> <a href=#JSOOPImp title="Go to JS OOP [Constructor Function Training] Importance & Benefits">
+                JS OOP Lesson14 [Constructor Function Training] Importance & Benefits </a> </li>
+
+            <li> <a href=#JSOOPSyntx title="Go to JS OOP [Constructor Function Training] Syntax">
+                JS OOP Lesson14 [Constructor Function Training] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSOOPPract title="Go to JS OOP [Constructor Function Training] Practical Applications">
+                JS OOP Lesson14 [Constructor Function Training] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS OOP Course <span> JS OOP Lesson 14 [Constructor Function Training] {Part 4}  </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                JS OOP [Constructor Function Training] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS OOP [Constructor Function Training] Concept. </li>
+
+                    <li> JS OOP [Constructor Function Training] Importance & Benefits. </li>
+
+                    <li> JS OOP [Constructor Function Training] Syntax [Define + Access]. </li>
+
+                    <li> JS OOP [Constructor Function Training] Practical Application. </li>
+                </ol>
+                
+                <p> &gt; Main Functional Internal Constructor Fuctions in this lesson are as following :</p>
+                    <ol type="1">
+
+                        <li> Definging new Constructor Internal Function it's Return upon one of Parameter's value (String - Numeric - Logical Values). </li>
+                        <li> Definging new Constructor Internal Function with Conditional Changing (up on certain parameter Value) </li>
+                        <li> Definging new Constructor Internal Function to Display (Certain Value) or (Parameter's Value ) (up on certain parameter Value Logical Value) </li>
+                        <li> Definging new Constructor Internal Function that using internal Parameter Value to Change it's value by other main Constructor Pararmeter's Value </li>                                        
+                    </ol>
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPCon" id="JSOOPCon">
+            <header>
+                <h3> JS OOP [Constructor Function Training] Concept: </h3>
+            </header>
+            
+            <p> =&gt; JS OOP [Constructor Function Dealing with Properties]: This lessson will provide to developer more enhanced tools and script to control the constructor function's Properties within the each [Extacted Objects] + and [Pattern Constructor Fucntion] .
+            
+            <p> =&gt; JS OOP [Constructor Function Dealing with Properties new keywords]: There are (2) Methods to deal with properties in Objects as following : <br>
+                <ol>
+                    <li> {Dealing with properties For each extracted Object }; = &gt; this is the default method to deal with properties single for each Extracted Object [Adding new property directly in each Object] </li>    
+                    <li> {Dealing with properties as Parametres in Contructor Function [Pattern]}; = &gt; this is the advanded method to deal with properties Globally to All of Objects which will be Extracted later from this Pattern [Constructor Function]  </li>    
+                    <li> {Merging between Array and Object(s)}; = &gt; This advanded method to deal with Multiple Objects as Array's Elements to get new extracted Objects (which has been Established from the Constructor function) as Array Elements.</li>                                        
+                </ol>
+
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSOOPImp" id="JSOOPImp">
+            <header>
+                <h3> JS OOP [Constructor Function Training] Importance & Benefits: </h3>
+            </header>
+
+            <p> [Constructor Function Training Method] gives us the Following Features : <br>
+                <ul>
+                    <li> More advanced tools to Control in each Contsructor Function's Prarmeters ansd Extracted Object's Properties. </li>                    
+                    <li> Good Understading of Constructor function and it's Tools open the way to deal with each OOP Technology more proficiently. </li>                    
+                </ul>
+        </section>
+
+        <!--------------------------------------------------------------------s---------------------------------->
+        <section class="JSOOPSyntx" id="JSOOPSyntx">
+            <header>
+                <h3> JS OOP [Constructor Function Training] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS OOP Defining Object by [Constructor Function Training Extra Functions ] Methods as following : </p>
+            <div id="Code" class="Code">
+                
+                // A) [Defining new Contructor function] :<br><br>                                
+                    <span class=one></span> function ConstName (Parameter1, Parameter2, Parameter3, Parameter4, Parameter5 ) { <br>
+                        <span class=two></span> this.Parameter1 = Parameter1;<br><br>
+                        <span class=two></span> this.Parameter2 = Parameter2;<br> <br>
+                        <span class=two></span> this.Parameter3 = Parameter3;<br> <br>
+                        <span class=two></span> this.Parameter4 = Parameter4;<br> <br>
+                        <span class=two></span> this.Parameter5 = Parameter5;<br> <br>
+                        
+                    // ------------------------------------------------------------------<br> <br>
+                    <span class=one></span> // Definging new Function it's Return upon one of Parameter's value (String Value): <br>
+                    
+                        <span class=two></span> this.funcName1 = function () { <br>
+                            <span class=three></span> if (Parameter2 === 'Value') { <br>
+                                <span class=four></span> this.Parameter3 = 'Certain Different Value'; <br>
+                                <span class=three></span> } else { <br>
+                                <span class=four></span> return 'Certain String '; <br>                            
+                            <span class=three></span> } <br>
+                        <span class=two></span> } <br> <br>
+                        
+                    // ------------------------------------------------------------------<br> <br>
+                    <span class=one></span> // Definging new Function it's Return upon one of Parameter's value (Numeric Value): <br>
+                    
+                        <span class=two></span> this.funcName2 = function () { <br>
+                            <span class=three></span> if (Parameter1 >= #) { <br>
+                                <span class=four></span> this.Parameter4 = Value; <br>
+                            <span class=three></span> } else { <br>
+                                <span class=four></span> return 'Certain String '; <br>                            
+                            <span class=three></span> } <br>
+                        <span class=two></span> } <br> <br>
+                    // ------------------------------------------------------------------<br> <br>
+                    <span class=one></span> // Definging new Function Show-Hide a Property Value upon one of Parameter's Value (true,false): <br>
+                    
+                        <span class=two></span> this.funcName3 = function () { <br>
+                            <span class=three></span> if (Parameter2 >= #) { <br>
+                                <span class=four></span> return 'Your Parameter4 Name is ${this.Parameter4}';<br>
+                            <span class=three></span> } else { <br>
+                                <span class=four></span> return 'Can Not show the value of Parameter4'; <br>                            
+                            <span class=three></span> } <br>
+                        <span class=two></span> } <br> <br>                            
+                    // ------------------------------------------------------------------<br> <br>
+                    <span class=one></span> // Definging new Function with Conditional Changing (up on certain parameter Value): <br>
+                    
+                        <span class=two></span> this.funcName4 = function (newParameterValue) { <br>
+                            <span class=three></span> if (Parameter4 === true ) { <br>
+                                <span class=four></span> this.Parameter3 = newParameterValue ; <br>
+                            <span class=three></span> } else { <br>
+                                <span class=four></span> return 'Certain String'; <br>                            
+                            <span class=three></span> } <br>
+                        <span class=two></span> } <br> <br>
+                                
+                    // ------------------------------------------------------------------<br> <br>                                                    
+                        <span class=two></span> console.log(this);<br>
+                    <span class=one></span> } <br><br>
+                //============================================================================ <br>
+                            
+                    // B) [Defining a new Extracted Object from the Contructor function] :<br><br>                                
+                        <span class=one></span> let obj1Name = new FuncName (Value of Parameter1, Value of Parameter2, Value of Parameter3, Value of Parameter4 );<br><br>                            
+                    //=========================================================== <br>
+                    
+                    // C) Displaying Methods of Constructor Function  : <br> <br>                
+                        <span class=one></span> console.log(funcName1()); [Will return change the property value if the function's return if the condition achieved]
+                        <span class=one></span> console.log(funcName2()); [Will return change the property value the function's return if the condition achieved]
+                        <span class=one></span> console.log(funcName3()); [Will return the in the contructor function if the function's condition achieved]
+                        <span class=one></span> console.log(funcName4()); [Will return changing in the function's property's value (with the given sub function parameter) if the mentioned condition achieved]
+                        
+                    //=========================================================== <br> <br>                    
+                    <br><br> =======================================================
+                    <br><br> =======================================================
+                    <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPPract" id="JSOOPPract">
+            <header>
+                <h3> JS OOP [Constructor Function Training] General Practical Applications : </h3>
+            </header>
+
+            
+            <p> =&gt; Here one Major Application will include following Function/Tasks :  &gt;&gt; <br>
+
+                <ol>
+                    <li> Creating Constructor function with [Fixed Parameters + Fixed Functions ] (multiple as following) :  </li>
+                    <ul>
+                        <li> Showing certain property if certain condiotion has acheived </li>
+                        <li> Showing changing property's value if certain condiotion has acheived </li>
+                        <li> Printing certian value if certain condiotion has acheived </li>
+                        <li> Proccessing certain calculations if certain condiotion has acheived </li>
+                    </ul>
+                    
+                </ol>                
+
+            <br>
+
+            <textarea id=txtarea class=txtarea> </textarea><br>
+
+            <button class=btn onclick="constProp()"> Click to Start [Constructor function + One Exctracted object - Testing (Additional Internal Functions)] Application    
+            </button>  <br>
+            
+            <button class=btn onclick="constProps()"> Click to Start [Constructor function + One Exctracted object - Testing (Additional Internal Functions)] Application    
+            </button>  <br>
+            
+            <hr>
+            
+            <textarea id=txtarea1 class=txtarea1> </textarea><br>
+
+            <button class=btn onclick="Display1()"> Click to Start Diplay JS Code of [First Application (constProp)] 
+            </button>  <br>
+            
+            <hr>            
+            
+            <textarea id=txtarea2 class=txtarea2> </textarea><br>
+            
+            <button class=btn onclick="Display2()"> Click to Start Diplay JS Code of [Second Application (constProps)] 
+            </button>  <br>
+            
+            
+            <!---<button class=btn onclick="test()"> Click to Start [testing application]  
+            </button>                                            
+                 -->                                  
+            <br>    
+                
+            <script src="JSOOPObjConstTraining.js">
+            </script>
+            <hr>
+                
+                <!-- <div class=JSOOPObjConstTraining>
+                    <code>
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+
+                        <span class=one></span> &lt;button class="btn" onclick=constProp"()"&gt;<br>                           
+                            <span class=two></span> Click to Start [Constructor function + One Exctracted object - Testing <br>
+                                <span class=three></span> (Additional Internal Functions)] Application<br>         
+                        <span class=one></span> &lt;/button&gt; <br><br>                            
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=constProps"()"&gt;<br>                           
+                            <span class=two></span> Click to Start [Constructor function + Multiple Exctracted objects - Testing <br>
+                                <span class=three></span> Additional Internal Functions)] Application <br>         
+                        <span class=one></span> &lt;/button&gt; <br><br>                            
+
+                        <span class=one></span> &lt;script src="JSOOPObjConstTraining.js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+
+                        /* global document, alert, prompt */ <br>                    
+                        /* JSOOP [Object Constructor Function - Training - Addintional Internal Functions] <br>                    
+                        template-string-converter.enable; <br>
+                        =======================================================<br><br>
+                        // First Applcanton :  <br> <br>
+                        
+                        function constProp() { <br> <br>
+
+                            <span class=one></span> alert("Welcome to Constructor Function + <br>
+                                <span class=two></span> [One] Extracted Objects - Training (Additoinal Functions)... " ); <br> <br>
+                        
+                            <span class=one></span> function constF(fName, lName, age, country, city, street, eMail, showEmail) { <br><br>
+                                <span class=two></span> this.fName = fName; <br>
+                                <span class=two></span> this.lName = lName; <br>
+                                <span class=two></span> this.age = age;  <br>
+                                <span class=two></span> this.country = country; <br>
+                                <span class=two></span> this.city = city; <br>
+                                <span class=two></span> this.street = street; <br>         
+                                <span class=two></span> this.eMail = eMail; <br> <br>       
+                        
+                                <span class=two></span> this.showEmail =  function() { <br> <br>
+                                    <span class=three></span> if (age >= 18 ){ <br><br>
+                                        <span class=four></span>console.log(`Your email is: ${eMail}`); <br>              
+                                        <span class=four></span> alert(`Your email is: ${eMail}`);  <br> <br>
+                                        
+                                    <span class=three></span> } else { <br> <br>
+                                        <span class=four></span> console.log(`Your Can Not Access Email data due to Age restriction `); <br>
+                                        <span class=four></span> alert(`Your Can Not Access Email data due to Age restriction `); <br>
+                                    <span class=three></span> }<br>
+                                <span class=two></span> }; <br> <br>
+                        
+                                <span class=two></span> this.changeName = function (newFName, newLName) { <br> <br>
+                                    <span class=three></span> if (age >= 18) { <br>               
+                                        <span class=four></span>  this.fName = newFName ;  <br>
+                                        <span class=four></span>this.lName = newLName ;  <br>
+                                        <span class=four></span> console.log('Name has changed Successflly'); <br>
+                                        <span class=four></span> alert('Name has changed Successflly'); <br>
+                                    <span class=three></span> } else { <br>
+                                        <span class=four></span> console.log('Name Can not be changed due to Age restriction!'); <br>
+                                        <span class=four></span> alert('Name Can not be changed due to Age restriction!'); <br>
+                                    <span class=three></span> } <br>         
+                                <span class=two></span> }; <br> <br>
+                        
+                                <span class=two></span> this.fullName = function() { <br> <br>
+                                    <span class=three></span> return `Your Full Name is ${this.fName} ${this.lName} `; <br>
+                                <span class=two></span> };  <br><br>
+                        
+                                <span class=two></span> this.ageInDays = () => `your Age in Days = ${this.age * 365}`;  <br> <br>
+                        
+                                <span class=two></span> this.ageInWeeks = () => `your Age in Weeks = ${this.age * 52}`;  <br> <br>
+                        
+                                <span class=two></span> this.ageInMonths = () => `your Age in Months = ${this.age * 12}`; <br> <br>
+                        
+                                <span class=two></span> this.FullAd = function() { <br> <br>
+                                    <span class=three></span>return `Your Full Address ${this.country} ${this.city} ${this.street}`; <br>
+                                <span class=two></span> }; <br> <br>
+                        
+                                <span class=two></span> this.allData = function () { <br>                                
+                                    <span class=three></span> return `your All user data as following : \n <br>
+                                        <span class=four></span>  User First Name is ${this.fName} \n User last Name is ${this.lName} \n <br>
+                                        <span class=four></span> User Age is ${this.age} \n User country is ${this.country} \n  <br>
+                                        <span class=four></span>  User city is ${this.city} \n User street is ${this.street} \n<br>
+                                        <span class=four></span>  User Email is ${this.eMail}`;<br> 
+                                <span class=two></span> }; <br><br>
+
+                                <span class=two></span> this.showConstName = () => `your Construtor Function Name is ( ${this.constructor.name} )`; <br><br>
+        
+                                <span class=two></span> // This Fuction needs more Knowledge in OOP [Change name of Contstructor Namne ]:  <br> <br>
+
+                                <span class=two></span> this.changeConstName = function(newConstName) { <br> 
+                                    <span class=three></span> if (age >= 18 ) { <br>
+                                        <span class=four></span> this.constructor.name = newConstName; <br>
+                                        <span class=four></span> return `Your new Construtor Function Name is ( ${newConstName} )`;<br>                
+                                    <span class=three></span> } else { <br>
+                                        <span class=four></span> return 'You Can not change Constructor Fucntion name due to Age Destruction!';<br>
+                                    <span class=three></span> } <br>
+                                <span class=two></span> } <br>
+
+                                <span class=two></span >console.log(this); <br>
+                            <span class=one></span> } <br> <br>
+                        
+                            
+                        <span class=one></span> var ufName = prompt("Enter First name : "),  <br>
+                             <span class=two></span> ulName = prompt("Enter last name : "), <br>
+                             <span class=two></span> uage = parseInt(prompt("Enter age : ")), <br>
+                             <span class=two></span> ucountry = prompt("Enter country : "), <br>
+                             <span class=two></span> ucity = prompt("Enter city : "), <br>
+                             <span class=two></span> ustreet = prompt("Enter street : "), <br>
+                             <span class=two></span> uEmail = prompt("Enter email : "); <br><br>
+                                
+                        <span class=one></span> let user1 = new constF(ufName, ulName, uage, ucountry, ucity, ustreet, uEmail, true);  <br><br>
+                                
+                        <span class=one></span> do { <br> <br>
+                        
+                            <span class=two></span> var intFunc = prompt("Choose between following Functions : \n <br>
+                                <span class=three></span> Press (1) for [Change Name] Function... \n<br>
+                                <span class=three></span> Press (2) for [Show Email] Fucntion... \n <br>
+                                <span class=three></span> Press (3) for [Showing Full Name] Function... \n <br>
+                                <span class=three></span> Press (4) for [Showing Full Address] Function...\n <br>
+                                <span class=three></span> Press (5) for [Age - Calculations (Days, Weeks ,Months)] Function... \n <br>
+                                <span class=three></span> Press (6) for [Showing All Data] Function... \n <br>
+                                <span class=three></span> Press (7) for [Showing Constructor Function Name] Function \n <br>
+                                <span class=three></span> Press (8) for [Changing Constructor Fucntion Name] Function... <br><br>
+                        
+                        
+                            <span class=two></span> if (intFunc == "1") { <br> <br>
+                                        
+                                <span class=three></span> alert("Welcome to [Change Name] Function..."); <br> <br>            
+                                    
+                                <span class=three></span> console.log("Welcome to [Change Name] Function..."); <br> <br>            
+                                    
+                                <span class=three></span> var newFirstName = prompt("Enter your New First Name :"), <br>
+                                    <span class=four></span> newLastName = prompt("Enter your New Last Name :"); <br> <br>
+                                    
+                                <span class=three></span> if (user1.age >= 18) { <br> <br>
+                                        
+                                    <span class=four></span> user1.changeName(newFirstName,newLastName); <br><br>
+                                        
+                                    <span class=four></span> console.log('Your full Name after updating as Following: \n');<br>
+                                        
+                                    <span class=four></span> console.log(`your first name is : ${user1.fName}`); <br>
+                                    <span class=four></span> alert(`your first name is : ${user1.fName}`); <br><br>
+                                        
+                                    <span class=four></span> console.log(`your Second name is : ${user1.lName}`); <br>        
+                                    <span class=four></span> alert(`your Second name is : ${user1.lName}`); <br>        
+                                    <span class=four></span> console.log("======================== "); <br><br>
+                                        
+                                    <span class=four></span> alert(user1.fullName()); <br>
+                                    <span class=four></span> console.log(user1.fullName());<br>
+                                    <span class=four></span`> console.log("======================== "); <br><br>
+                                
+                                <span class=three></span> } else  {  <br><br>
+                                        
+                                    <span class=four></span> user1.changeName(newFirstName,newLastName); <br>            
+                                    <span class=four></span> console.log("======================== "); <br> <br>                
+                                
+                                <span class=three></span> } <br> <br>
+                                                            
+                            <span class=two></span> } else if (intFunc == "2") { <br> <br>
+                                    
+                                <span class=three></span> alert("Welcome to [Show Email] Function..."); <br> <br>            
+                                    
+                                <span class=three></span> user1.showEmail(); <br><br>
+                                
+                                <span class=three></span> console.log("======================== "); <br><br>
+                                    
+                            <span class=two></span> } else if (intFunc == "3") { <br> <br>
+                                    
+                                <span class=three></span> alert("Welcome to [Show Full Name] Function..."); <br> <br>           
+                                
+                                <span class=three></span> console.log(user1.fullName()); <br> <br>
+                                    
+                                <span class=three></span> alert(user1.fullName()); <br> <br>         
+                                
+                                <span class=three></span> console.log("======================== "); <br> <br>
+                                    
+                                    
+                            <span class=two></span> } else if (intFunc == "4") { <br><br>
+                                    
+                                <span class=three></span> alert("Welcome to [Show Full Address] Function..."); <br> <br>            
+                                    
+                                <span class=three></span> console.log(user1.FullAd()); <br> <br>            
+                                    
+                                <span class=three></span> alert(user1.FullAd()); <br> <br>        
+                                                
+                                <span class=three></span> console.log("======================== "); <br> <br>
+                                    
+                                    
+                            <span class=two ></span> } else if (intFunc == "5") { <br><br>
+                                    
+                                <span class=three></span> alert("Welcome to [Age Calculations] Functions..."); <br><br>            
+                                    
+                                <span class=three></span> alert("1) your age by Days as following..."); <br>            
+                                <span class=three></span> console.log("1) your age [by Days] as following: "); <br><br>
+                    
+                                <span class=three></span> console.log(user1.ageInDays());<br>
+                                <span class=three></span> alert(user1.ageInDays()); <br><br>
+                                
+                                <span class=three></span> console.log("------------------------------------"); <br><br>
+                                    
+                                    
+                                <span class=three></span> alert("2) your age [by Weeks] as following:..."); <br>        
+                                <span class=three></span> console.log("2) your age [by Weeks] as following: "); <br><br>
+                        
+                                    <span class=three></span> console.log(user1.ageInWeeks()); <br>        
+                                    <span class=three></span> alert(user1.ageInWeeks()); <br>                                            
+                                    <span class=three></span> console.log("------------------------------------"); <br>
+                                                                        
+                                    <span class=three></span> alert("3) your age [by Months] as following:..."); <br>            
+                                    <span class=three></span> console.log("3) your  age [by Months] as following: ");<br><br>
+                                    
+                                    <span class=three></span> console.log(user1.ageInMonths()); <br>        
+                                    <span class=three></span> alert(user1.ageInMonths()); <br>        
+                                                        
+                                    <span class=three></span> console.log("------------------------------------"); <br><br>
+                                    
+                            <span class=two></span> } else if (intFunc == "6") { <br> <br>
+                                    
+                                    <span class=three></span> alert("Welcome to [Show All User's Data] Function..."); <br>            
+                                    <span class=three></span> console.log("3) your  age [by Months] as following: "); <br><br>
+                                    
+                                    <span class=three></span> console.log(user1.allData()); <br>
+                                    <span class=three></span> alert(user1.allData()); <br>                                    
+                                    <span class=three></span> console.log("------------------------------------");<br><br>
+                                
+                            <span class=two></span> } else if (intFunc == "7") { <br> <br>
+            
+                                    <span class=three></span> alert("Welcome to [Show Constrcutor Fucntion Name ] Function..."); <br> <br>            
+                                    
+                                    <span class=three></span> strNames = ''; <br><br>
+                                    
+                                    <span class=three></span> console.log(user1.showConstName()); <br>
+                                    
+                                    <span class=three></span> alert(user1.showConstName()); <br>
+                                    
+                                    <span class=three></span> console.log("------------------------------------"); <br> <br>
+                                    
+                                    <span class=three></span> strNames += `${user1.showConstName()} `; <br>        
+                                    
+                                    <span class=three></span> document.getElementById('txtarea').innerHTML += strNames; <br> <br>
+                                
+                            <span class=two></span>} else if (intFunc == "8") { <br><br>
+                                    
+                                    <span class=three></span> alert("Welcome to [Changing Constrcutor Fucntion Name ] Function..."); <br> <br>            
+                                    
+                                    <span class=three></span> strNames = ''; <br> <br>
+                                    
+                                    <span class=three></span> var newConst = prompt("Enter your new Contructor Name"); <br> <br>
+                                    
+                                    <span class=three></span> console.log(user1.changeConstName(newConst)); <br> <br>
+                                    
+                                    <span class=three></span> alert(user1.changeConstName(newConst)); <br> <br>
+                                    
+                                    <span class=three></span> console.log("------------------------------------"); <br><br>
+                                    
+                                    <span class=three></span> strNames += `${user1.changeConstName(newConst)} `; <br> <br>        
+                                    
+                                    <span class=three></span> document.getElementById('txtarea').innerHTML += strNames;  <br> <br>
+                                    
+                                <span class=two></span> } else { <br>
+                                    <span class=three></span> alert("Error Entry!"); <br>
+                                <span class=two></span> } <br> <br>
+                        
+                                <span class=two></span> var z= prompt("Press (1) to Choose another Internal Function"); <br>
+                            <span class=one></span> }   while (z == "1"); <br>                        
+                             } <br> <br>         
+
+                    //====================================================================================================  <br>  
+                    //====================================================================================================  <br>  
+                    // Second Applcanton : <br> <br>
+                    
+                    function constProps() { <br> <br>
+
+                        <span class=one></span> alert("Welcome to Constructor Function + (Multiple) Extracted Objects - <br>
+                            <span class=two></span> Training (Additoinal Functions)... " ); <br> <br>
+                    
+                        <span class=one></span> var userCount = parseInt(prompt("Enter the nubmer of users (Extractd Objects) to <br>
+                            <span class=two></span> establish from the constructor Function...")); <br> <br>
+                        
+                        <span class=one></span> function constF(fName, lName, age, country, city, street, eMail, showEmail) { <br><br>
+                            <span class=two></span> this.fName = fName; <br>
+                            <span class=two></span> this.lName = lName; <br>
+                            <span class=two></span> this.age = age; <br>
+                            <span class=two></span> this.country = country; <br>
+                            <span class=two></span> this.city = city; <br>
+                            <span class=two></span> this.street = street; <br>        
+                            <span class=two></span>this.eMail = eMail; <br><br>
+                    
+                        <span class=one></span> this.showEmail =  function() { <br><br>
+                            <span class=two></span> if (age >= 18 ){ <br>
+                                <span class=three></span> console.log(`Your email is: ${this.eMail}`); <br>                
+                                <span class=three></span> alert(`Your email is: ${this.eMail}`);<br>
+                            <span class=two></span> } else { <br>
+                                <span class=three></span> console.log(`Your Can Not Access Email data due to Age restriction `);<br>
+                                <span class=three></span> alert(`Your Can Not Access Email data due to Age restriction `); <br>
+                            <span class=two></span>} <br>
+                        <span class=one></span>};  <br> <br>
+                    
+                        <span class=one></span> this.changeName = function (newFName, newLName) { <br><br>
+                            <span class=two></span> if (age >= 18) { <br>                
+                                <span class=three></span> this.fName = newFName ;  <br>
+                                <span class=three></span> this.lName = newLName ;  <br>
+                                <span class=three></span> console.log('Name has changed Successflly'); <br>
+                                <span class=three></span> alert('Name has changed Successflly');<br>
+                            <span class=two></span> } else { <br>
+                                <span class=three></span> console.log('Name Can not be changed due to Age restriction!'); <br>
+                                <span class=three></span> alert('Name Can not be changed due to Age restriction!'); <br>
+                            <span class=two></span>} <br>
+                        <span class=one></span> }; <br> <br>
+                                                
+                        <span class=one></span>this.fullName = function() { <br>
+                            <span class=two></span>return `Your Full Name is ${this.fName} ${this.lName} `; <br>
+                        <span class=one></span> }; <br> <br>
+                        <span class=one></span> this.ageInDays = () => `your Age in Days = ${this.age * 365}`; <br> <br>
+                        
+                        <span class=one></span> this.ageInWeeks = () => `your Age in Weeks = ${this.age * 52}`; <br> <br>
+                        
+                        <span class=one></span> this.ageInMonths = () => `your Age in Months = ${this.age * 12}`; <br> <br>
+                        
+                        <span class=one></span> this.FullAd = function() { <br>
+                            <span class=two></span> return `Your Full Address ${this.country} ${this.city} ${this.street}`;<br>
+                        <span class=one></span> }; <br> <br>
+                            
+                        <span class=one></span> this.allData = function () { <br>
+                            <span class=two></span> return `your All user data as following : \n User First Name is ${this.fName} \n<br>
+                                <span class=three></span> User last Name is ${this.lName} \n User Age is ${this.age} \n <br>
+                                <span class=three></span>User country is ${this.country} \n User city is ${this.city} \n <br>
+                                <span class=three></span>User street is ${this.street} \n User Email is ${this.eMail}`; <br>
+                        <span class=one></span> }; <br> <br>
+                                
+                        <span class=one></span> this.showConstName = () => `your Construtor Function Name is ( ${this.constructor.name} )`; <br><br>
+                                
+                        <span class=one></span>// This Fuction needs more Knowledge in OOP [Change name of Contstructor Namne ]:  <br>
+                        <span class=one></span> this.changeConstName = function(newConstName) { <br> <br>
+                                    
+                            <span class=two></span> if (age >= 18 ) { <br> <br>
+                                <span class=three></span> this.constructor.name = newConstName; <br>
+                                <span class=three></span> return `Your new Construtor Function Name is ( ${newConstName} )`; <br>                                    
+                            <span class=two></span> } else { <br> <br>
+                                <span class=three></span> return 'You Can not change Constructor Fucntion name due to Age Destruction!'; <br>
+                            <span class=two></span> } <br>
+                        <span class=one></span>} <br> <br>
+                                    
+                        <span class=one></span> console.log(this); <br>
+                         } <br><br>                                    
+                                                                        
+                        //------------------------------------------------------------------------------------------------------- <br><br>
+                        <span class=one></span> console.log("Enter users Parameters [for each user] as following: ");  <br> <br>
+                        
+                        <span class=one></span> const allObjs = new Array(); <br> <br>
+                        
+                        <span class=one></span> allObjs.length = userCount; <br><br>
+                        
+                        <span class=one></span> for (i=0; i &lt; userCount; i++) { <br> <br>         
+                            
+                            <span class=two></span> alert("lets enter parameters of user's Object number ( " + (i+1) + " ) :"); <br> <br>
+                            
+                            <span class=two></span>var ufName = prompt("Enter First name : "), <br>
+                                <span class=three></span>ulName = prompt("Enter last name : "), <br>
+                                <span class=three></span>uage = parseInt(prompt("Enter age : ")), <br>
+                                <span class=three></span>ucountry = prompt("Enter country : "), <br>
+                                <span class=three></span>ucity = prompt("Enter city : "),<br>
+                                <span class=three></span>ustreet = prompt("Enter street : "), <br> <br>
+                                <span class=three></span>uEmail = prompt("Enter email : "); <br><br>
+                                
+                            <span class=two></span>let user1 = new constF(ufName, ulName, uage, ucountry, ucity, ustreet, uEmail, true); <br> <br>            
+                    
+                            <span class=two></span> do { <br>  <br>
+                    
+                                <span class=three></span> var intFunc = prompt("Choose between following Functions : \n <br>
+                                    <span class=four></span> Press(1) for [Change Name] Function... \n Press (2) for [Show Email] Fucntion... \n <br>
+                                    <span class=four></span> Press (3) for [Showing Full Name] Function... \n <br>
+                                    <span class=four></span> Press (4) for [Showing Full Address] Function...\n <br>
+                                    <span class=four></span> Press (5) for [Age - Calculations (Days, Weeks ,Months)] Function... \n <br>
+                                    <span class=four></span> Press (6) for [Showing All Data] Function \n <br>
+                                    <span class=four></span>Press (7) for [Showing Constructor Fucntion Name] Function \n <br>
+                                    <span class=four></span>Press (8) for [Changing Constructor Fucntion Name] Function... "); <br> <br>
+                                
+                                <span class=three></span> var strNames = ''; <br> <br>
+                                
+                                <span class=three></span> document.getElementById('txtarea').innerHTML += strNames; <br><br>
+                        
+                                
+                                <span class=three></span> if (intFunc == "1") { <br> <br>
+                                    
+                                    <span class=four></span> alert("Welcome to [Change Name] Function..."); <br> <br>            
+                                    
+                                    <span class=four></span> console.log("Welcome to [Change Name] Function..."); <br> <br>
+                                    
+                                    <span class=four></span> strNames = ''; <br> <br>
+                                    
+                                    <span class=four></span> var newFirstName = prompt("Enter your New First Name :"), <br>
+                                        <span class=five></span> newLastName = prompt("Enter your New Last Name :"); <br> <br>
+                                          
+                                    <span class=four></span> if (user1.age >= 18) { <br> <br>
+                                        
+                                        <span class=five></span> user1.changeName(newFirstName,newLastName); <br> <br>
+                                            
+                                        <span class=five></span> console.log('Your full Name after updating as Following: \n'); <br> <br>
+                                            
+                                        <span class=five></span> console.log(`your first name is : ${user1.fName}`); <br> <br>
+                                        
+                                        <span class=five></span> alert(`your first name is : ${user1.fName}`); <br> <br>
+                                                                                        
+                                        <span class=five></span> console.log(`your Second name is : ${user1.lName}`); <br> <br>         
+
+                                        <span class=five></span> alert(`your Second name is : ${user1.lName}`); <br> <br>         
+                                        
+                                        <span class=five></span> console.log("======================== "); <br> <br>
+                                            
+                                        <span class=five></span> alert(user1.fullName()); <br>  <br>
+                                        
+                                        <span class=five></span> console.log(user1.fullName()); <br> <br>
+                                        
+                                        <span class=five></span> console.log("======================== "); <br> <br>
+                                        
+                                        <span class=five></span> strNames += `Your first name is (${user1.fName})\n Your second name is <br>
+                                        
+                                            <span class=six></span> (${user1.lName})\n ${user1.fullName()}`; <br>
+
+                                        <span class=five></span>document.getElementById('txtarea').innerHTML += strNames; <br>
+                                            
+                                    <span class=four></span> } else  { <br>
+                                         
+                                        <span class=five></span> console.log(user1.changeName(newFirstName,newLastName)); <br>            
+                                        
+                                        <span class=five></span> console.log("======================== "); <br>                
+                                        
+                                        <span class=five></span> strNames += `${user1.changeName(newFirstName,newLastName)}`; <br><br>
+                                        
+                                        <span class=five></span> document.getElementById('txtarea').innerHTML += strNames;  <br><br>
+                                        
+                                    <span class=four></span> } <br> <br>
+                                    
+                                <span class=three></span> } else if (intFunc == "2") { <br><br>
+                                    
+                                    <span class=four></span> alert("Welcome to [Show Email] Function..."); <br>             
+                                    
+                                    <span class=four></span> strNames = ''; <br>
+                                    
+                                    <span class=four></span> console.log(user1.showEmail()); <br>
+                                    
+                                    <span class=four></span> console.log("======================== "); <br>
+                                    
+                                    <span class=four></span> strNames += `${user1.showEmail()}`; <br>         
+                                    
+                                    <span class=four></span> document.getElementById('txtarea').innerHTML += strNames;  <br> <br>
+                                    
+                                <span class=three></span> } else if (intFunc == "3") { <br> <br>
+                                    
+                                    <span class=four></span> alert("Welcome to [Show Full Name] Function..."); <br>             
+                                    
+                                    <span class=four></span> strNames = ''; <br>
+                                    
+                                    <span class=four></span> console.log(user1.fullName()); <br>
+                                    
+                                    <span class=four></span> alert(user1.fullName()); <br>        
+                                    
+                                    <span class=four></span> console.log("======================== "); <br>
+                                    
+                                    <span class=four></span> strNames += `${user1.fullName()}`; <br>        
+                                    
+                                    <span class=four></span> document.getElementById('txtarea').innerHTML += strNames;  <br>
+                                    
+                                <span class=three></span> } else if (intFunc == "4") { <br> <br>
+                                    
+                                    <span class=four></span> alert("Welcome to [Show Full Address] Function..."); <br>            
+                                    
+                                    <span class=four></span> strNames = ''; <br>
+                                    
+                                    <span class=four></span> console.log(user1.FullAd()); <br>             
+                                    
+                                    <span class=four></span> alert(user1.FullAd()); <br>         
+                                    
+                                    <span class=four></span> console.log("======================== "); <br>
+                                    
+                                    <span class=four></span> strNames += `${user1.FullAd()}`; <br>
+                                    
+                                    <span class=four></span> document.getElementById('txtarea').innerHTML += strNames; <br> <br>
+                                    
+                                <span class=three></span> } else if (intFunc == "5") { <br> <br>
+                                    
+                                    <span class=four></span> alert("Welcome to [Age Calculations] Functions..."); <br>            
+                                    
+                                    <span class=four></span> strNames = ''; <br>
+                                    
+                                    <span class=four></span> alert("1) your age by Days as following...");  <br>            
+                                    
+                                    <span class=four></span> console.log("1) your age [by Days] as following: "); <br>
+                                    
+                                    <span class=four></span> console.log(user1.ageInDays()); <br>
+                                    
+                                    <span class=four></span> alert(user1.ageInDays()); <br>
+                                    
+                                    <span class=four></span> console.log("------------------------------------");<br> <br>
+                                                                        
+                                    <span class=four></span> alert("2) your age [by Weeks] as following:..."); <br>             
+
+                                    <span class=four></span> console.log("2) your age [by Weeks] as following: "); <br>
+                                    
+                                    <span class=four></span> console.log(user1.ageInWeeks()); <br>        
+
+                                    <span class=four></span> alert(user1.ageInWeeks()); <br>        
+                                    
+                                    <span class=four></span> console.log("------------------------------------"); <br>
+                                                                        
+                                    <span class=four></span> alert("3) your age [by Months] as following:..."); <br>            
+                                    
+                                    <span class=four></span> console.log("3) your  age [by Months] as following: "); <br>
+                                    
+                                    <span class=four></span> console.log(user1.ageInMonths()); <br>        
+                                    
+                                    <span class=four></span> alert(user1.ageInMonths()); <br>         
+                                    
+                                    <span class=four></span> console.log("------------------------------------"); <br>
+                                    
+                                    <span class=four></span> strNames += `${user1.ageInDays()} \n ${user1.ageInWeeks()} \n ${user1.ageInMonths()} `; <br>        
+                                    
+                                    <span class=four></span> document.getElementById('txtarea').innerHTML += strNames; <br><br>
+                                    
+                                <span class=three></span>} else if (intFunc == "6") { <br><br>
+                                    
+                                    <span class=four></span>alert("Welcome to [Show All User's Data] Function..."); <br>            
+                                    
+                                    <span class=four></span> strNames = ''; <br>
+                                    
+                                    <span class=four></span> console.log("3) your  age [by Months] as following: "); <br>
+                                    
+                                    <span class=four></span> console.log(user1.allData()); <br>
+
+                                    <span class=four></span> alert(user1.allData()); <br>
+                                    
+                                    <span class=four></span> console.log("------------------------------------"); <br>
+                                    
+                                    <span class=four></span> strNames += `${user1.allData()} `; <br>         
+                                    
+                                    <span class=four></span> document.getElementById('txtarea').innerHTML += strNames; <br> <br>
+                                    
+                                <span class=three></span> } else if (intFunc == "7") { <br><br>
+                                    
+                                    <span class=four></span> alert("Welcome to [Show Constrcutor Fucntion Name ] Function..."); <br>             
+                                    
+                                    <span class=four></span> strNames = ''; <br>
+                                    
+                                    <span class=four></span> console.log(user1.showConstName()); <br>
+                                    
+                                    <span class=four></span> alert(user1.showConstName()); <br>
+                                    
+                                    <span class=four></span> console.log("------------------------------------"); <br>
+                                    
+                                    <span class=four></span> strNames += `${user1.showConstName()} `; <br>        
+                                    
+                                    <span class=four></span> document.getElementById('txtarea').innerHTML += strNames; <br> <br>
+                                
+                                <span class=three></span> } else if (intFunc == "8") { <br><br>
+                                    
+                                    <span class=four></span> alert("Welcome to [Changing Constrcutor Fucntion Name ] Function...");<br>             
+                                    
+                                    <span class=four></span> strNames = ''; <br>
+                                    
+                                    <span class=four></span> var newConst = prompt("Enter your new Contructor Name"); <br>
+                                    
+                                    <span class=four></span> console.log(user1.changeConstName(newConst)); <br>
+                                    
+                                    <span class=four></span> alert(user1.changeConstName(newConst)); <br>
+                                    
+                                    <span class=four></span> console.log("------------------------------------"); <br>
+                                    
+                                    <span class=four></span> strNames += `${user1.changeConstName(newConst)} `; <br>        
+                                    
+                                    <span class=four></span> document.getElementById('txtarea').innerHTML += strNames; <br> <br>
+                                                                        
+                                <span class=three></span> } else { <br> 
+                                    <span class=four></span> alert("Error Entry!"); <br>
+                                <span class=three></span> } <br>
+                        
+                                <span class=three></span> var z= prompt("Press (1) to Choose another Internal Function"); <br>
+                            
+                            <span class=two></span> }   while (z == "1"); <br> <br>
+                    
+                            <span class=two></span>// Adding the Extracted Object to the objects Array: <br><br>
+                           
+                            <span class=two></span> allObjs[i] = user1; <br><br>
+                                                
+                            <span class=two></span> var z0 = prompt("press (1) to check about the Extracted object's Constructor's Name..."); <br> <br>
+                            
+                            <span class=two></span> if (z0 == "1"){ <br><br>
+                                <span class=three></span> var z1 = prompt("press (1) for [instanceof] check Method...\n <br>
+                                    <span class=four></span> press (2) for [.constructor] check Method...\n press any other key to exit... "); <br> <br>
+                    
+                                <span class=three></span> if (z1 == "1"){ <br> <br>
+                                    
+                                    <span class=four></span> alert("Your Choosed [instanceof] check Method ... "); <br><br>
+                                    
+                                    <span class=four></span> if (user1 instanceof constF){ <br> <br>
+                                        
+                                        <span class=five></span> console.log('Your new Extracted Object has been Established from<br>
+                                            <span class=six></span> Constructor Function [True]'); <br><br>
+                                    
+                                    <span class=four></span> } else { <br> <br>
+                                        
+                                        <span class=five></span> console.log('Your new Extracted Object has NOT been Established from <br>
+                                            <span class=six></span> Constructor Function [False]'); <br>
+                                    <span class=four></span> } <br> <br>
+                                                                        
+                                <span class=three></span> }  else if (z1 == "2") { <br><br>                
+                                    
+                                    <span class=four></span> alert("Your Choosed [.constructor] check Method ... "); <br> <br>
+                                    
+                                    <span class=four></span> if (user1.constructor === constF){ <br><br>
+                                    
+                                        <span class=five></span> console.log('Your new Extracted Object has been Established from<br>
+                                            <span class=six></span> Constructor Function [True]'); <br><br>
+                                    
+                                    <span class=four></span> } else { <br> <br>
+                                    
+                                        <span class=five></span> console.log('Your new Extracted Object has NOT been Established from<br>
+                                            <span class=six></span> Constructor Function [False]'); <br> <br>                                    
+
+                                    <span class=four></span> } <br>
+                                <span class=three></span> } <br> <br>
+                    
+                            <span class=two></span> } else { <br>
+                                <span class=three></span> alert('Error Entry!');  <br>
+                            <span class=two></span> } <br>
+                        <span class=one></span> } <br>
+                        
+                        <span class=one></span> console.log('lets Print All Extracted Objects as following:'); <br> <br>
+                    
+                        <span class=one></span> for (z=0; z &lt; userCount; z++) { <br>
+                            <span class=two></span> console.log(`Your extracted object number ( ${(z + 1)} ) <br>
+                                <span class=three></span> ovarall as following: \n `); <br>        
+                            <span class=two></span>console.log(allObjs[z]); <br>
+                        <span class=one></span> } <br>                        
+                    } <br>                                                        
+                    </code>
+                </div> -->
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 14 Video File:</h3>
+
+            <iframe
+                width="100%"
+                height="100%"
+                allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"
+                frameborder="0"
+                preload="yes"
+                src="https://www.youtube.com/embed/watch?v=dP2dg-T1RKk&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=14&controls=0&loop=1&autoplay=1&fs=1"
+            >
+            </iframe>
+
+            <!-- <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\14 JavaScript OOP  Constructor Function Training's.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video> -->
+        </section>
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS OOP Lesson 14 [Constructor Function Training] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>    

@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 10 PHP5 - Constants </title>
+    <link rel="stylesheet" href="10 PHP 5 In Arabic - Constants.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        10 PHP5 - Constant
+    </header>
+<!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to PHP main Topics">
+                10 PHP5 - Constant Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to PHP [10 PHP 5 In Arabic - Data Type Overview] Concept">
+                10 PHP5 - Constant Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to PHP [10 PHP 5 In Arabic - Data Type Overview] Importance & Benefits">
+                10 PHP5 - Constant Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to PHP [10 PHP 5 In Arabic - Data Type Overview] Syntax">
+                10 PHP5 - Constant Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to PHP [10 PHP 5 In Arabic - Data Type Overview] Practical Applications">
+                10 PHP5 - Constant Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to PHP Course <span> 10 PHP5 - Constant </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                PHP [10 PHP5 - Constant] Main Topics :
+            </header>
+            
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+
+                <ol type="A">
+                    <li> PHP [10 PHP5 - Constant] main Concept of [Constants] && [Magic Constants] </li>
+                    
+                    <li> PHP [10 PHP5 - Constant] main Methods (2) in declaring Constants </li>
+                    
+                    <li> PHP [10 PHP5 - Constant]  practical examples of each types of constants  </li>                                
+                                    
+                </ol>                
+                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> PHP [10 PHP5 - Constant] main  : </h3>
+            </header>
+                        
+            <h2> PHP [10 PHP5 - Constant] Concept of [Constants] && [Magic Constants]  in php5: </h2>                                
+                <p> First Constants Concept: </p>        
+                <ol> 
+                    <li> [Constants] => {Normal constants}   <br>                        
+                        <ul>
+                            <li> It is a fixed data memory, which can Not changed [Re-declared] by develper later once it has declared </li>
+                            <li> Constant Can be accessed by any other scope in the php file </li>
+                        </ul>
+                    </li>                                        
+                    
+                    <li> [Magic-Constants] => {PHP built-in constants}   <br>                        
+                        <ul>
+                            <li> They are variant fixed functions which has many Programtic features, such as : <br>
+                                <ol>
+                                    <li> {Get current local Host file} => echo __FILE__ ; </li>
+                                    <li> {Get current local Host Folder/Direct} => echo __DIR__ ; </li>
+                                    <li> {Get current LINE of this script } => echo __LINE__ ; </li>
+                                    <li> {Get PHP Integer Max Number } => echo __PHP_INT_MAX__ ; </li>
+                                </ol>
+                            </li> 
+                        </ul>
+                    </li> <br> <hr>                                         
+ 
+                <p> Second Declaring Constants Methods: </p>        
+                <ol> 
+                    <li> [ define('Constant_Name', 'Constant Value', letter Insensitivity[true || false] )] => {Most Common }   <br>                        
+                        <ul>
+                            <li> {Constant_Name} => It recomended to be upper case [to avoid programaic Problems] </li>
+                            <li> {Constant Value} => It can be texual value  ||  logic value (false , true)  </li>                            
+                            <li> {Constant Insensitivity[true || false] )} => It a logic value (false , true)  </li>                            
+                        </ul>
+                    </li>                                        
+                    
+                    <li> [ const Constant Name = 'Constant Value'; => {Less Common }   <br>                        
+                        <ul>
+                            <li> This uncommon method to declare the constant is not common in usual </li>
+                            <li> this method is common likely in {OPP} </li>
+                        </ul>
+                    </li>                                        
+                                                                                                                    
+                <br> <br> <hr>
+                <!-------------------------------------------  -->                                                                                                                                                                                                                              
+            </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> PHP [10 PHP5 - Constant] Importance & Benefits: </h3>
+            </header>
+            
+                <ul> 
+                    <li> [PHP - Constants] => Provides serveral advantages to the developer to control website server with high security for data </li>
+                    <li> [PHP - Constants] => Help to prevent bugs in scripts by saving critical data from manipulating by user or develpers  </li>                    
+                    <li> [PHP - Magic-Constants] => Provides very handy feature to the devolpers , by variant built-in functions </li>
+                </ul>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ PHP - Constants ] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; In this after setting up the application => We will create a simple PHP File && Running it by [Local Server] </p>
+            
+            <p> =&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} : <br>
+                <ul> 
+                    <li> Creating several Constants (Normal || Magic )   </li>
+                    <li> Using (2) methods to define Constants (define(); || const(); )   </li>
+                </ul> 
+            </p>        
+            
+            <ol>                                  
+                <li> Declaring different variable types && tetting it's data types by (2) method  in of [php file] : <br>
+                    <span class='one'> &lt;? php  </span> <br>                                    
+                        
+                    <span class="one"></span> // A) Declaring different variable types <br> <br>
+                        <span class='two'> $title = "10 PHP5 - Constant" ;  </span> <br>
+                        <span class='two'> $heading = "This head value is genarated from php file";  </span> <br>
+                        <span class='two'> $Paragraph = "This Paragraph value is genarated from php file" ;  </span> <br>
+                        <span class='two'> $h11 = '&lt; h1 &gt  &lt; /h1 &gt; ' ;  </span> <br>                    
+                        <span class='two'> $h12 = '&lt; h1 &gt  &lt; /h1 &gt; ' ;  </span> <br>                    
+                        <span class='two'> $h13 = '&lt; h1 &gt  &lt; /h1 &gt; ' ;  </span> <br>                    
+                        
+                        <span class='two'> define('CONST1' , 'Constant1 value' , false);  </span> <br>
+                        <span class='two'> define('CONST2' , 'Constant2 value' , true);  </span> <br>
+                        <span class='two'> define('CONST3' , false);  </span> <br>
+                        <span class='two'> define('CONST4' , true);  </span> <br>
+                        
+                        <span class='two'> const CONST5 = 'Constant5 value' ;  </span> <br>
+                        <span class='two'> const CONST6 = 'Constant6 value' ;  </span> <br>
+                        <span class='two'> const CONST7 = true ;  </span> <br>
+                        <span class='two'> const CONST8 = false ;  </span> <br> <br> <hr>                              
+                </li>
+
+                    <!-- ---------------------------------------------------------------------------- -->
+
+                <li>  B) Declaring accomulated varables to hold all result in page :   <br>
+                        B1) Declaring accomulated varable to hold conastants defined by (define() Method ) :
+                        <!-- <span class="one">   </span> <br> <br> -->
+
+                        <span class="two"> $ConstD = '&lt; ul &gt;';  </span> <br>
+                                            
+                        <span class="two"> $ConstD .= '&lt; li &gt;' . "The First constant is => [" . VALUE_SEN_DEF . "] || with datatype => </span> <br>
+                            <span class="three"> [" .  var_dump(VALUE_SEN_DEF) . "] by Declaration Method =>  [Define()] </span> <br>
+                            <span class="three"> && and case sensitivity => [false] " . '&lt; /li &gt;' . '&lt; br &gt;' ;</span> <br><br>
+                    
+                        <span class="two"> $ConstD .= '&lt; li &gt;' . "The Second constant is => [" . VALUE_INS_DEF . "] || with datatype => </span> <br>
+                            <span class="three"> [" .  var_dump(VALUE_INS_DEF) . "] by Declaration Method => [Define()] </span> <br> 
+                            <span class="three"> && and case sensitivity => [true] " . '&lt; /li &gt;' . '&lt; br &gt;' ; </span> <br><br>                        
+                    
+                        <span class="two"> $ConstD .= '&lt; li &gt;' . "The Third constant is => [" . LOG_FAL_DEF . "] || with datatype => </span> <br>
+                            <span class="three"> [" .  var_dump(LOG_FAL_DEF) . "] by Declaration Method => [Define()] </span> <br>
+                            <span class="three"> && and case sensitivity => [true] " . '&lt; /li &gt;' . '&lt; br &gt;' ; </span> <br> <br>   
+                    
+                        <span class="two"> $ConstD .= '&lt; li &gt;' . "The Fourth constant is => [" . LOG_TRU_DEF . "] || with datatype => </span> <br>
+                            <span class="three">[" .  var_dump(LOG_TRU_DEF) . "] by Declaration Method => [Define()] </span> <br>
+                            <span class="three"> && and case sensitivity => [true] " . '&lt; /li &gt;' . '&lt; br &gt;' ; </span> <br> <br>
+                            
+                        <span class="two"> $ConstD .= '&lt; li &gt;' . "The Fifth constant is => [" . VAL_CONS . "] || with datatype => </span> <br>
+                            <span class="three">  [" .  var_dump(VAL_CONS) . "] by Declaration Method => [Const]  " </span> <br> <br>
+                            <span class="three"> . '&lt; /li &gt;' . '&lt; br &gt;' ;   </span> <br>
+                                
+                        <span class="two"> $ConstD .= '&lt; li &gt;' . "The Sixth constant is => [" . LOG_TRUE_CONS . "] || with datatype => </span> <br>
+                            <span class="three">  [" .  var_dump(LOG_TRUE_CONS) . "] by Declaration Method => [Const]  " </span> <br>
+                            <span class="three"> '&lt; /li &gt;' . '&lt; br &gt;' ; </span> <br><br>
+                                
+                        <span class="two"> $ConstD .= '&lt; li &gt;' . "The Seventh constant is => [" . LOG_FALSE_CONS . "] || with datatype => </span> <br>
+                            <span class="three"> [" .  var_dump(LOG_FALSE_CONS) . "] by Declaration Method => [Const]  " </span> <br>
+                            <span class="three"></span>. '&lt; /li &gt;' . '&lt; br &gt;' ;</span> <br> <br>
+                                        
+                        <span class="two"> $ConstD .= '&lt; /ul &gt;' ; <br> 
+                    </li>
+                        --------------------------------------------------------------------------- <br>        
+                        
+                    <!-- ---------------------------------------------------------------------------------- -->
+                    <li> B) Declaring accomulated varables to hold all result in page :<br>
+                         B2) Declaring accomulated varable to hold conastants defined by (const() Method ) :   <br>                        
+                        
+                         <span class="two"> $ConstC = '&lt; ul &gt; '; </span> <br>
+        
+                        <span class="two">$ConstC .= '&lt; li &gt;' . "The First constant is => [" . VALUE_SEN_DEF . "] || with datatype => </span> <br>
+                            <span class="three">  [" .  gettype(VALUE_SEN_DEF) . "] by Declaration Method =>  [Define()] </span> <br>
+                            <span class="three"> && and case sensitivity => [false] " . '&lt; /li &gt; ' . '&lt; br &gt; '; </span> <br> <br>          
+                    
+                            <span class="two"> $ConstC .= '&lt; li &gt;' . "The Second constant is => [" . VALUE_INS_DEF . "] || with datatype => </span> <br>
+                                <span class="three"> '&lt; li &gt;'[" .  gettype(VALUE_INS_DEF) . "] by Declaration Method => [Define()]  </span> <br>
+                                <span class="three">&& and case sensitivity => [true] " . '&lt; /li &gt;' . '&lt; br &gt;'; </span> <br> <br>                     
+
+                            <span class="two"> $ConstC .= '&lt; li &gt;' . "The Third constant is => [" . LOG_FAL_DEF . "] || with datatype => </span> <br>
+                                <span class="three">[" .  gettype(LOG_FAL_DEF) . "] by Declaration Method => [Define()] </span> <br>
+                                <span class="three">&& and case sensitivity => [true] " . '&lt; /li &gt;' . '&lt; br &gt;' ; </span><br> <br>    
+                    
+                            <span class="two">$ConstC .= '&lt; li &gt;' . "The Fourth constant is => [" . LOG_TRU_DEF . "] || with datatype =>  </span><br>
+                                <span class="three"> [" .  gettype(LOG_TRU_DEF) . "] by Declaration Method => [Define()]</span> <br>
+                                <span class="three">&& and case sensitivity => [true] " . '&lt; /li &gt;' . '&lt; br &gt;'; </span> <br> <br>
+                            
+                            <span class="two"> $ConstC .= '&lt; li &gt;' . "The Fifth constant is => [" . VAL_CONS . "] || with datatype => </span><br> 
+                                <span class="three">[" .  gettype(VAL_CONS) . "] by Declaration Method => [Const] " </span> <br>
+                                <span class="three">. '&lt; /li &gt;' . '&lt; br &gt;' ; </span> <br> <br>
+                            
+                            <span class="two">$ConstC .= '&lt; li &gt;' . "The Sixth constant is => [" . LOG_TRUE_CONS . "] || with datatype => </span> <br>
+                                <span class="three">[" .  gettype(LOG_TRUE_CONS) . "] by Declaration Method => [Const]" </span> <br>
+                                <span class="three"></span>. '&lt; /li &gt;' . '&lt; br &gt;' ; </span> <br>  <br>   
+                            
+                            <span class="two">$ConstC .= '&lt; li &gt;' . "The Seventh constant is => [" . LOG_FALSE_CONS . "] || with datatype => </span> <br>
+                                <span class="three">[" .  gettype(LOG_FALSE_CONS) . "] by Declaration Method => [Const] " </span> <br>
+                                <span class="three">. '&lt; /li &gt;' . '&lt; br &gt;' ; </span> <br> <br>   
+                                        
+                            <span class="two">$ConstC .= '&lt; ul &gt;' ; </span> <br>       
+                    </li>
+                            ------------------------------------------------------------------- <br> <hr>
+                            
+                            <!-- ---------------------------------------------------------------------------------- -->
+                            
+                        <li>// C) Printing all Constants of (2) types [Normal Constants || Magic Constants] of both (2) Methods of Declarations : <br> <br>
+                                                        
+                            <span class="one">  First Type of Constant  (Normal Constants)  :  </span> <br>                            
+                                
+                                <span class="two">&lt; ?php echo $h11; ?&gt; </span> <br>        
+
+                                    <span class="three">&lt; p &gt; </span> <br>                     
+                                        <span class="four"> &lt; ?php </span> <br>
+                                            <span class="five">echo $ConstD; // printing all constants && Datatypes[by gettype();] && Case-Sensitivity </span> <br>
+                                        <span class="four">? &lt;  </span> <br>                                            
+                                    <span class="three"> &lt; /p &gt; </span> <br> <hr> <br>                                 
+                                <!-- --------------------------------------------------------->
+                                
+                                    <span class="two"> &lt ;?php echo $h12; ?&gt; </span> <br> 
+
+                                    <span class="two"> &lt; p &gt; </span> <br>  
+                                        <span class="three"> &lt; ?php </span> <br> 
+                                            <span class="four">echo $ConstC; // printing all constants && Datatypes[by var_dump();] && Case-Sensitivity </span> <br>
+                                        <span class="three"> ?&gt; </span> <br>                                        
+                                    <span class="two"> &lt; /p &gt; <br> <hr> 
+                                <!-- ------------------------------------------------------ -->
+
+                                    <span class="three"> &lt; ?php echo $h13; ?&gt;  </span> <br>
+
+                                        <span class="two"> &lt; p &gt; </span> <br>  
+                                            <span class="three"> &lt; ?php </span> <br> 
+                                                <span class="four">echo $ConstM; //printing some [Magic-Constants] </span> <br>
+                                            <span class="three"> ?&gt; </span> <br>                                        
+                                        <span class="two"> &lt; /p &gt; <br> <hr> 
+                            <!--  --------------------------------------------------------->                                
+                </li> <br> <hr>                                                                                                     
+            </ol>                        
+            <br><br>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+         <section class="PHPPract" id="PHPPract"> 
+            <header>
+                <h3> PHP [10 PHP5 - Constant] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here one Major Application will include following Function/Tasks :  <br>
+                <ol>                    
+                    <li> Calling following Elements values from Comments ih php file in by Local host of XAMMP : </li>
+                    <ul>        
+                        <li> &lt; h1 &gt; => {TEXTNODE generated from PHP file} </li>
+                        <li> &lt; p &gt; -=> {TEXTNODE generated from PHP file}  </li>
+                        
+                        <li> &lt; h1 &gt; => Topic of constants declared by [define()] Method   </li>
+                        <li> &lt; p &gt; => displaying constants declared by [define()] Method => {genereated from PHP file}   </li>
+                        
+                        <li> &lt; h1 &gt; => Topic constants declared by [const] Method   </li>
+                        <li> &lt; p &gt; => displaying constants declared by [const] Method   </li>
+                        
+                        <li> &lt; h1 &gt; => Topic Magic-constants   </li>
+                        <li> &lt; p &gt; => displaying Magic-constants   </li>                        
+                    </ul>            
+                                                                                
+                </ol>                
+            <br>
+            
+             <!-- <section id=sec class=txtarea >                                  
+                <a href="http://localhost/PHP%20Course/10%20PHP%205%20In%20Arabic%20-%20Constants/10%20PHP%205%20In%20Arabic%20-%20Constants.php">  
+                    {10 PHP5 - Constants} => Lesson10 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+            <section id=sec class=txtarea >                                  
+                <a class=btn href="http://localhost/PHP%20Course/10%20PHP%205%20In%20Arabic%20-%20Constants/10%20PHP%205%20In%20Arabic%20-%20Constants.php">  
+                   {Main Page} [Display] => {10 PHP5 - Constants} => Lesson10 PHP File Webpage by Localhost
+               </a> <br> <br>             
+               
+               <a class=btn href="10 PHP 5 In Arabic - Constants.php">  
+                   {Main Page} [Source Code] => {10 PHP5 - Constants} => Lesson10 PHP File Webpage by Localhost
+               </a>             
+           </section> <br>               
+                        
+            <!-- <script  src="10 PHP 5 In Arabic - Constants.php">
+            </script>
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea> -->
+                
+        </section>                 
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 10 Video File:</h3>
+            
+
+
+              <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+            src="https://www.youtube.com/embed/watch?v=18lAoQR4yv0&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=10&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+            
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\10 PHP 5 In Arabic - Constants.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 10 PHP5 - Constants ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

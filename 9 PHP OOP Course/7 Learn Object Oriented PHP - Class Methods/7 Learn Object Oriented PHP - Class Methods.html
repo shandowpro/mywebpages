@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>7 Learn Object Oriented PHP - Class Methods</title>
+    <link
+      rel="stylesheet"
+      href="7 Learn Object Oriented PHP - Class Methods.css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      7 Learn Object Oriented PHP - Class Methods
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to PHP main Topics">
+            7 Learn Object Oriented PHP - Class Methods Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPCon"
+            title="Go to PHP [PHP OOP   7 Learn Object Oriented PHP - Class Methods] Concept"
+          >
+            7 Learn Object Oriented PHP - Class Methods Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPImp"
+            title="Go to PHP [PHP OOP   7 Learn Object Oriented PHP - Class Methods] Importance & Benefits"
+          >
+            7 Learn Object Oriented PHP - Class Methods Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPSyntx"
+            title="Go to PHP [PHP OOP   7 Learn Object Oriented PHP - Class Methods] Syntax"
+          >
+            7 Learn Object Oriented PHP - Class Methods Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPPract"
+            title="Go to PHP [PHP OOP   7 Learn Object Oriented PHP - Class Methods] Practical Applications"
+          >
+            7 Learn Object Oriented PHP - Class Methods Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <main class="Welcome">
+      Welcome to PHP Course
+      <span> 7 Learn Object Oriented PHP - Class Methods </span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          PHP [PHP OOP 7 Learn Object Oriented PHP - Class Methods] Main Topics
+          :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>PHP OOP 5 [Class Method] Defining inside the Class</li>
+            <li>PHP OOP 5 [Class Method] Calling by Object .</li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPCon" id="PHPCon">
+        <header>
+          <h3>[PHP OOP Class Methods ] Concept:</h3>
+        </header>
+
+        <h2>
+          =&gt; OOP [Class Methods] : <br />
+          <ul>
+            <li>
+              Main Concepst =&gt; <br />
+              <p>
+                Methods are function defined inside the Class , that will be
+                applied with the created Object(s) by calling
+              </p>
+              <p>
+                Methods defining inside the class must add the Visibity markers
+                before it , to detect the kind of way to display
+              </p>
+              <p>Methods can applied with different value by each object</p>
+            </li>
+          </ul>
+        </h2>
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="PHPImp" id="PHPImp">
+        <header>
+          <h3>
+            PHP [PHP OOP 7 Learn Object Oriented PHP - Class Methods] Importance
+            & Benefits :
+          </h3>
+        </header>
+
+        <p>
+          [Class Methods] => Are very critical to process certain action inside
+          the class and all object created from <br />
+        </p>
+        <p>
+          [Class Methods] => The same Method can be applied with different
+          values for each object <br />
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPSyntx" id="PHPSyntx">
+        <header>
+          <h3>[ PHP OOP 7 Class Methods ] Syntax & Methods:</h3>
+        </header>
+
+        <p>
+          =&gt; Following is a simple syntax code written Emded in a HTML page
+          => <br />
+          Printing string text value from the server in the user website page
+        </p>
+
+        <p>=&gt; [Class Methods] main Syntax as following : <br /></p>
+
+        <p>Syntax: <br /></p>
+        <div id="Code" class="Code">
+          <span class="one"></span> &lt; ?php <br />
+
+          <span class="two"></span> Defining new Class {ClassName} with [default
+          properties values] & [simple Method] : <br />
+
+          <span class="three"></span> class ClassName{ <br />
+
+          <span class="four"></span> // Class Properties Definging : <br />
+          <span class="four"></span> public propertyName1 = "value" ; <br />
+          <span class="four"></span> public propertyName1 = 'value' ; <br />
+          <span class="four"></span> private propertyName2 = 'value'; <br />
+          <span class="four"></span> protected propertyName3 = 'value'; <br />
+
+          <span class="four"></span> // Class Methods Definging : <br />
+          <span class="four"></span> public function MethodName1() { <br />
+          <span class="five"></span> Codes to be processed <br />
+          <span class="four"></span> } <br /><br />
+          <span class="four"></span> private function MethodName2() { <br />
+          <span class="five"></span> Codes to be processed <br />
+          <span class="four"></span> } <br />
+          <br />
+          <span class="four"></span> protected function MethodName3() { <br />
+          <span class="five"></span> Codes to be processed <br />
+          <span class="four"></span> } <br />
+          <span class="three"></span> } <br /><br />
+
+          <span class="two"></span> Defining new Object {objName} with All
+          Defined Properties & Methods : <br />
+          <span class="three"></span> $objName= new ClassName(); <br />
+
+          <span class="two"></span> Changing / Assinging Object {objName} with
+          Customized parameter value : <br />
+          <span class="three"></span> $objName-> propertyName1 = "value"; <br />
+          <span class="three"></span> $objName-> propertyName2 = "value"; <br />
+          <span class="three"></span> $objName-> propertyName3 = "value"; <br />
+          <br />
+
+          <span class="two"></span> Calling / Proccessing Object {objName}'s
+          Metods : <br />
+          <span class="three"></span> $objName-> MethodName1(); <br />
+          <br />
+          <span class="three"></span> $objName-> MethodName2(); <br />
+          <br />
+          <span class="three"></span> $objName-> MethodName3(); <br />
+          <br />
+
+          <span class="two"></span> Printing the Var_dump of new created Object
+          : <br />
+          <span class="three"></span> echo &lt; pre &gt; ; <br />
+          <span class="four"></span> echo var_dump($objName); <br />
+          <span class="three"></span> echo &lt; pre &gt; ; <br />
+
+          <span class="one"></span> &gt; <br />
+          //=========================================================== <br />
+          <br />
+          <p>
+            =&gt; PHP new Syntax of the [Class Methods] (2) Applications as
+            following : <br />
+          </p>
+
+          <ol type="A">
+            <li>
+              First Example {Apple Devices} => [Creating new Class {Apple Device
+              with non default values of Properties} + (2)Object[iphone]
+              {iphone6plus with Customized Values} + Printing Object var Dump]
+            </li>
+            <li>
+              Second Example {User Registration } => [Creating new Class {with
+              default values of Properties} + (2)Object[users] {User1 with
+              Customized properties Values + User2 with Default properties
+              Values } + Printing Object var Dump]
+            </li>
+          </ol>
+          <hr />
+          //=========================================================== <br />
+          <br />
+          <br /><br />
+        </div>
+
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPPract" id="PHPPract">
+        <header>
+          <h3>PHP [Class Methods] General Practical Applications :</h3>
+        </header>
+
+        <p>
+          In this lesson will be (2) Application [Practical Examples of creating
+          new class{with Public Properties} and objects {with Null + customized
+          Properites Values}] = > as following :
+        </p>
+
+        <ol type="A">
+          <li>
+            First Example {Apple Devices} => [Creating new Class {Apple Device
+            with non default values of Properties} + (2)Object[iphone]
+            {iphone6plus with Customized Values} + Printing Object var Dump] ,
+            and including the following steps : <br />
+            <ul>
+              <li>
+                Definging and Creating new Class [AppleDevice] {with default}
+              </li>
+              <li>
+                Definging and Creating new Class [AppleDevice] {with default} :
+                <br />
+                <ul>
+                  <li>Defining the Class properties</li>
+                  <li>Defining the Class Methods</li>
+                </ul>
+              </li>
+              <li>
+                Definging and Creating new (2) Objects : [iphone6plus] &
+                [iphone7plus] => from the class {AppleDevice}
+              </li>
+              <li>
+                Changing/Assigning the propertries values (Customized Properites
+                Values) of the Defined objects [iphone6plus] => {First Object}
+              </li>
+              <li>
+                Calling the defined Method for the object [$ iphone6plus]} =>
+                {First Object}
+              </li>
+              <li>
+                Changing/Assigning the propertries values (Customized Properites
+                Values) of the Defined objects [iphone7plus] => {Second Object}
+              </li>
+              <li>
+                Printing the var Dump Object[iphone6plus] & Object[iphone7plus]
+                created from the class [AppleDevice]
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            Second Example {User Registration } => [Creating new Class {with
+            default values of Properties} + (2)Object[users] {User1 with
+            Customized properties Values + User2 with Default properties Values}
+            + Printing Object var Dump] , and including the following steps :
+            <br />
+            <ul>
+              <li>
+                Definging and Creating new Class [Registration] {with default
+                properties values} + {Simple Method}
+              </li>
+              <li>
+                Definging and Creating new (2) Objects : [user1] & [user2] =>
+                from the class {Registration}
+              </li>
+              <li>
+                Changing/Assigning the propertries values (Customized Properites
+                Values) of the Defined objects => [First Object]
+              </li>
+              <li>
+                Calling / Proccessing the Method for the [user1] object =>
+                {First Object}
+              </li>
+              <li>
+                Printing the var Dump Object[user1] (after editing it's
+                Properties) created from the class [Registration] => {first
+                Object}
+              </li>
+              <li>
+                Printing the var Dump Object[user2] (with default Properties
+                Values) created from the class [Registration] => {Second Object}
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+
+        <section id="sec" class="txtarea">
+          <a
+            class="btn"
+            href="http://localhost/PHPOOP%20Course/7%20Learn%20Object%20Oriented%20PHP%20-%20Class%20Methods/7%20Learn%20Object%20Oriented%20PHP%20-%20Class%20Methods.php"
+          >
+            {Main Page} [Display] => {7 Learn Object Oriented PHP - Class
+            Methods} => Lesson 7 PHP File Webpage by Localhost
+          </a>
+          <br />
+          <br />
+
+          <a class="btn" href="7 Learn Object Oriented PHP - Class Methods.php">
+            {Main Page} [Source Code] => {7 Learn Object Oriented PHP - Class
+            Methods} => Lesson 7 PHP File Webpage by Localhost
+          </a>
+        </section>
+        <br />
+
+        <!-- <section id=sec class=txtarea >                                  
+                 <a class=btn href="http://localhost/PHP%20Course/95%20PHP%205%20In%20Arabic%20-%20Filter%20-%20Whats%20Filter%20&%20Why%20To%20Use%20it/check.php">  
+                    {Check Page} [Display] => {7 Learn Object Oriented PHP - Class Methods} => {check.php} Webpage by Localhost 
+                </a> <br> <br>             
+                
+                <a class=btn href="check.php">  
+                    {Check Page} [Source Code] => {7 Learn Object Oriented PHP - Class Methods} => {check.php} Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+        <!-- <script  src="14 PHP OOP  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="VideoSection">
+        <h3>Lesson 7 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=acaLeiYBAuY&list=PLDoPjvoNmBAxXTPncg0W4lhVS32LO_xtQ&index=7&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\OOP PHP\7 Learn Object Oriented PHP  - Class Methods.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to 7 Learn Object Oriented PHP - Class Methods");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

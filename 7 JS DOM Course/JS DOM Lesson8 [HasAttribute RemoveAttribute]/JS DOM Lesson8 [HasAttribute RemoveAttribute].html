@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS OOP Lesson 8 [Elements Has Attribute & Remove Attribute]</title>
+    <link
+      rel="stylesheet"
+      href="JS DOM Lesson8 [HasAttribute RemoveAttribute].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JS DOM Lesson 8 [Elements Has Attribute & Remove Attribute]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS OOP main Topics">
+            JS DOM Lesson8 [Elements Has Attribute & Remove Attribute] Main
+            Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMCon"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Concept"
+          >
+            JS DOM Lesson8 [Elements Has Attribute & Remove Attribute] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMImp"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Importance & Benefits"
+          >
+            JS DOM Lesson8 [Elements Has Attribute & Remove Attribute]
+            Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMSyntx"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Syntax"
+          >
+            JS DOM Lesson8 [Elements Has Attribute & Remove Attribute] Syntax &
+            Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMPract"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Practical Applications"
+          >
+            JS DOM Lesson8 [Elements Has Attribute & Remove Attribute] Practical
+            Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS DOM Course
+      <span> JS DOM [Elements Has Attribute & Remove Attribute] </span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          JS DOM [Element Has Attribute & Remove Attribute] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>
+              JS DOM [Elements Has Attribute & Remove Attribute ] Concept.
+            </li>
+
+            <li>
+              JS DOM [Elements Has Attribute & Remove Attribute ] Importance &
+              Benefits.
+            </li>
+
+            <li>
+              JS DOM [Elements Has Attribute & Remove Attribute ] Syntax .
+            </li>
+
+            <li>
+              JS DOM [Elements Has Attribute & Remove Attribute ] Practical
+              Application.
+            </li>
+          </ol>
+
+          <p>&gt; Main new Methods in this lesson are as following :</p>
+          <ul>
+            <li>
+              {Has Attribute} => {elementName.hasAttribute('AttributeName');}
+            </li>
+            <li>
+              {Remove Attribute} =>
+              {elemnentName.removeAttribute('AttributeName');}
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMCon" id="JSDOMCon">
+        <header>
+          <h3>JS DOM [Elements Has Attribute & Remove Attribute] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [Elements Has Attribute & Remove Attribute]: There
+          are another methods for Elements Attrbutes with addtional Functional
+          Processes.
+        </p>
+
+        <p>
+          =&gt; JS HTML DOM [Elements {Has Attribute} & {Remove Attribute}]:
+          Syntax as following:.
+        </p>
+        <ul>
+          <li>
+            [hasAttribute();] => {elementName.hasAttribute('AttributeName');}
+          </li>
+          <ol>
+            <li>
+              =&gt; This Method is Conditional Method to give a boolean result
+              an status of existance Element's Attribute or not
+            </li>
+          </ol>
+
+          <li>
+            [removeAttribute();] =>
+            {elemnentName.removeAttribute('AttributeName');}
+          </li>
+          <ol>
+            <li>
+              =&gt; Used to remove/delete a certain defined-existed element's
+              Attrbute of a certain element- even if it was empty
+            </li>
+          </ol>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSDOMImp" id="JSDOMImp">
+        <header>
+          <h3>
+            JS DOM [Elements Has Attribute & Remove Attribute] Importance &
+            Benefits:
+          </h3>
+        </header>
+
+        <p>
+          JS DOM [Elements Has Attribute & Remove Attribute] gives us the
+          Following Features : <br />
+        </p>
+        <ul>
+          <li>
+            It is very Helpful when dealing with element's Attributes's Values
+            by setting & Getting Functions
+          </li>
+
+          <li>
+            gives more features to pragrmaing functions speacially in DOM
+            programing Technique speacially [get-set functions]
+          </li>
+
+          <li>
+            Much more easier method than other methods in dealing with
+            elements's Attributes .
+          </li>
+
+          <li>
+            Much more accurate method than other Direct Method in dealing with
+            elements's Attributes .
+          </li>
+
+          <li>
+            Ability to check about existance of Certain Attribute in specific
+            Element Or Not
+          </li>
+
+          <li>
+            Ability to Delete-remove Certain Attribute in specific Element
+          </li>
+
+          <li>
+            Ability to Use both methods with Conditional Statements , and
+            performe advanced programing procedures
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMSyntx" id="JSDOMSyntx">
+        <header>
+          <h3>
+            JS DOM [Elements Has Attribute & Remove Attribute] Syntax & Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [{has, remove Functions of elements's Attributes} by
+          {hasAttribute}, {removeAttribute}] Methods Conceptual Syntax as
+          following :
+        </p>
+
+        <div id="Code" class="Code">
+          [*]// Defining a variable with certain Element in web page {by
+          Different methods}: <br />
+          <span class="one"></span>var ElementVar =
+          document.querrySelectorAll('ElementTagName'); <br />
+          <span class="one"></span>var ElementVar =
+          document.getElementsByTagName('ElementTagName'); <br />
+          <span class="one"></span>var ElementVar =
+          document.getElementById('ElementId'); <br />
+          <span class="one"></span>var ElementVar =
+          document.getElementsClassName('ElementClassName'); <br />
+
+          // [A] [hasAttribute();]: <br />
+          <br />
+          // 1) JS HTML DOM [ {hasAttribute();}] MAIN Syntax as following :<br /><br />
+          <span class="one"></span> ElementVar.hasAttribute('Attribute Name');
+          <br />
+          //=========================================================== <br />
+          <br />
+          // 2) JS HTML DOM [Checking of existance of an Attribute in an
+          definded element function by {hasAttribute();}] Syntax as following
+          :<br /><br />
+          <span class="one"></span> if ( ElementVar.hasAttribute('Attribute
+          Name')) { <br />
+          <span class="two"></span> console.log("Yes, The Attribute is
+          existed"); <br />
+          <span class="one"></span> else { <br />
+          <span class="two"></span> console.log("No, The Attribute is Not
+          existed"); <br />
+          <span class="one"></span> } <br />
+
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          // [B] [removeAttribute();]: <br />
+          <br />
+          // 1) JS HTML DOM [ {removeAttribute();}] MAIN Syntax as following
+          :<br /><br />
+          <span class="one"></span> ElementVar.removeAttribute('Attribute
+          Name'); <br />
+          //=========================================================== <br />
+          <br />
+          // 2) JS HTML DOM [Removing of existanced of an Attribute in an
+          definded element by a conditional Statement {removeAttribute();}]
+          Syntax as following :<br /><br />
+
+          // Checking if the Element has the Attribute Or Not: <br />
+          <span class="one"></span> if ( ElementVar.hasAttribute('Attribute
+          Name')) { <br />
+          // Deleting - removing the Existed Attribute if it has an Empty Value
+          {null}: <br />
+          <span class="two"></span> if (ElementVar.AttributeName === "") {<br />
+          <span class="three"></span>
+          ElementVar.removeAttribute('AttributeName'); <br />
+          <span class="two"></span> } <br />
+          <span class="one"></span> }
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMPract" id="JSDOMPract">
+        <header>
+          <h3>
+            JS DOM [Elements Has Attribute & Remove Attribute] General Practical
+            Applications :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Here one Major Application will include following [2 Main Paths]
+          of the : &gt;&gt; <br />
+        </p>
+        <ol>
+          <li>[hasAttribute();] Method => has(2) functions:</li>
+          <ul>
+            <li>{Checking the Extistance of Attribute only}</li>
+            <li>
+              {Checking the Extistance of Attribute only + Editing Attribute
+              value}
+            </li>
+          </ul>
+
+          <li>[removeAttribute();] Method => has(2) functions:</li>
+          <ul>
+            <li>
+              {conditional Attribute Removing {if attribute is existed + it's
+              Value Not Null}}
+            </li>
+            <li>
+              {Non- Conditional Removing - (if the Attribute is Existed - logic
+              condition)}
+            </li>
+          </ul>
+        </ol>
+        <br />
+
+        <a target="" id="linkId" class="linkClass"> This is a normal Link</a>
+
+        <div id="" class="">This is a default Div</div>
+
+        <p id="pId" class="">This is a default Paragraph</p>
+
+        <p id="spId">This is a Paragraph with <span>span</span> <br /></p>
+
+        <img src="" alt="" />
+
+        <h2 id="h2-id" class="h2-class"></h2>
+
+        <section id="sec" class="secClass"></section>
+        <br />
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <script src="ElemHasAttRemAtt.js"></script>
+
+        <button class="btn" onclick="test()">
+          Click to Start [Elements Has Attribute & Remove Attribute] Application
+        </button>
+
+        <br />
+
+        <hr />
+        <button id="btn" class="btn" onclick="display()">
+          Display JS Code
+        </button>
+
+        <div class="JSOOPObjConstTraining">
+          <code>
+            // HTML Codes: <br />
+            <span class="one"></span> &lt;textarea id="txtarea"
+            class="txtarea"&gt;<br />
+            <span class="one"></span> &lt;/textarea&gt; <br /><br />
+
+            <span class="one"></span> &lt;button class="btn"
+            onclick=test"()"&gt;<br />
+            <span class="two"></span> Click to Start [Testing JS DOM [Elements
+            Has Attribute & Remove Attribute ] Application <br />
+            <span class="one"></span> &lt;/button&gt; <br /><br />
+
+            <span class="one"></span> &lt;script src=".js"&gt;<br />
+            <span class="one"></span> &lt;/script&gt; <br /><br />
+
+            =======================================================<br /><br />
+
+            /* global document, alert, prompt */ <br />
+            /* JS DOM [Elements Has Attribute & Remove Attribute ] */ <br />
+            template-string-converter.enable; <br /><br />
+
+            <textarea id="SourceCode" readonly></textarea>
+          </code>
+        </div>
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 8 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=J0SVBmCMsGo&list=PLDoPjvoNmBAxx97QDMOCpzxbu1ZHJ4i7i&index=8&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\HTML JS Dom\8 JS HTML Dom Elements  HasAttribute RemoveAttribute.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert(
+        "Welcome to JS DOM Lesson8 [Elements  Has Attribute & Remove Attribute] "
+      );
+    </script>
+  </body>
+</html>

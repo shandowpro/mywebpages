@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Css Lesson 22 [Z-Index]</title>
+    <link rel="stylesheet" href="Z-Index.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="title" id="title">Css/ Lesson 22 [Z-Index] (, ) </h1>
+                        
+        <fieldset class="index">
+            <legend class="index">Lesson Index</legend>            
+            <ol type="A">                                                
+                <li>Visibility Property</li>
+                <ol>
+                    <li> <a href="#Visible" title="Go to :Visibility Visible Value (Default Value) "> [ Visibility: Visible (Default Value)]</a></li>
+                    <li> <a href="#Hidden" title="Go to :Visibility Hidden Value "> [ Visibility: Hidden ]</a></li>                    
+                </ol>
+                <li><a href="#Hidden_None" title="Go to :Visibility:Hidden & Display:None">Differences between [Visibility:Hidden] & [Display:None]</a></li>                
+            </ol>
+        </fieldset>
+    </div>
+    <!----------------------------------------------------------------------------------------------->        
+                            
+    <fieldset id="Visible" class="Visible">
+        
+        <legend>(A) Visibility : Visible [Default Value]</legend>    
+        
+        <h2 class="subtitle1">Visibility: Visible value (Concept):</h2>                                            
+        
+        <div class="VCon">
+            This is the Default value of Visibility Property.<br>
+            It is mean to show the element on web-page.<br>
+        </div>
+        
+        
+        <h2 class="subtitle1">Visibility: Visible value (Example):</h2>
+        
+        <div class="VExp">
+            This is a Div with <span>Visible</span> value of Visibilty property.         
+        </div>
+                        
+    </fieldset>        
+        <!----------------------------------------------------------------------------------------------->        
+            
+    <fieldset id="Hidden" class="Hidden">
+        <legend>(B) Visibility : Hidden </legend>    
+        
+        <h2 class="subtitle1">Visibility: Hidden value (Concept):</h2>                                            
+        
+        <div class="HCon">            
+            It is mean to Hide the element from the screen, but <span>with keeping it's location reserved</span>.<br>
+        </div>
+        
+        
+        <h2 class="subtitle1">Visibility: Hidden value (Example1):</h2>        
+        The 2 following divs are set floated. <br>
+        The first Div is <span>Hidden</span> and its location is reserved<br>
+        The second div is <span>Visible</span>.
+        
+        <div class="HExp1">
+            This is the Hidden Div (First Div).
+        </div>
+        <div class="HExp2">
+            This is a Visible Div (Second Div). 
+        </div>
+                
+    </fieldset>                        
+    <!----------------------------------------------------------------------------------------------------------->
+            
+    <fieldset id="Hidden_None" class="Hidden_None">
+        <legend>(C) [Visibility: Hidden] & [Display: None] </legend>    
+        
+        <h2 class="subtitle1">Visibility: Scroll value (Concept):</h2>                                            
+        
+        <div class="HNCon">
+            [Visibility: Hidden] => Means to hide element , but saving its location on screen.<br>
+            [Display: None] => Means to hide element and its location (Total Hide).<br>
+        </div>
+        
+        
+        <h2 class="subtitle1">[Visibility: Hidden] (Example1) :</h2>
+        <p>These are two divs. First is [Visibility: Hidden], and second [Visibility: Visible]</p>
+        <div class="HideExp1">
+            This is First div with [Visibility: Hidden].
+        </div>
+        <div class="HideExp2">
+            This is Second div with [Visibility: Visible].
+        </div>
+        <br class="clear">
+        <p>The first div will NOT place over second div, becouse second div is just Visibility: hidden. </p>        
+        
+        <hr class="clear">
+            
+        <h2 class="subtitle1">[Display: None] (Example2):</h2>
+        <p>These are two divs. First is [display: none], and second [Display: block]</p>
+        <div class="NoneExp1">
+            This is First div with [Display: None].
+        </div>
+        <div class="NoneExp2">
+            This is Second div with [Display: block].
+        </div>
+        <br class="clear">
+        <p>The first div will place over second div, becouse second div is display: none & both are floated </p>                
+    </fieldset>                                
+    <!----------------------------------------------------------------------------------------------------------->  
+    <!---------------------------------------------------------------------------------------------------------------------------->
+    
+    <fieldset class="footer" id="footer">
+        This is the page Footer.
+    </fieldset>
+    <a class="home" href="#title" title="Go to page header">Home</a>
+    <a class="end" href="#footer" title="Go to page footer">End</a>    
+
+</body>
+</html>

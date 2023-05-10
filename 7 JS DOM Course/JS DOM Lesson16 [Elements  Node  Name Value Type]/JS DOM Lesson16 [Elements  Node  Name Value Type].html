@@ -1,0 +1,683 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS OOP Lesson 16 [Element Child Node  (Name Value Type)] </title>
+    <link rel="stylesheet" href="JS DOM Lesson16 [Elements  Node  Name Value Type].css" media="all">
+    <style>
+        .hidden {
+            visibility: hidden;
+        }
+
+    </style>
+    
+    <script>        
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main" >
+        JS DOM Lesson 16 [Element's Child Node  (Name Value Type)] 
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS OOP main Topics">
+                JS DOM Lesson16 [Element Node  Name Value Type ]  Main Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to JS OOP [Find Elements By  ID Class Tag ] Concept">
+                JS DOM Lesson16 [Element Node  Name Value Type]  Concept </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to JS OOP [Find Elements By  ID Class Tag ] Importance & Benefits">
+                JS DOM Lesson16 [Element Node  Name Value Type]  Importance & Benefits </a> </li>
+
+            <li> <a href=#JSDOMSyntx title="Go to JS OOP [Find Elements By  ID Class Tag ] Syntax">
+                JS DOM Lesson16 [Element Node  Name Value Type] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to JS OOP [Find Elements By  ID Class Tag ] Practical Applications">
+                JS DOM Lesson16 [Element Node  Name Value Type]  Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS DOM Course <span> JS DOM [Element Node  Name Value Type]  </span>
+    </main>
+
+    
+    <div class="Post" id=post>
+        <Section  id="MainC" class="MainC">
+
+            <header>
+                JS DOM [Element Node  Name Value Type] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS DOM [Element Node  Name Value Type  ] Concept. </li>                    
+                    
+                    <li> JS DOM [Element Node  Name Value Type ]  Importance & Benefits. </li>
+
+                    <li> JS DOM [Element Node  Name Value Type ] Syntax . </li>
+                    
+                    <li> JS DOM [Element Node  Name Value Type  ] Practical Application. </li>
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                
+                <ul>                                                                                                        
+                    <li> Get Access - Display to [(Main Elements Child Nodes - Internal Child Nodes] in [Parent Element]: </li>                    
+                        <ol type =A>                            
+                        
+                            <li> child Node [nodeName] => {ParElementVar.childNodes[x].nodeName;}</li>
+
+                            <li> child Value [nodeValue] => {ParElementVar.childNodes[x].nodeValue;}</li>                                    
+
+                            <li> child Node [nodeType] => {ParElementVar.childNodes[x].nodeType;}</li>                                                            
+                                                                                    
+                </ul>
+                                    
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> JS DOM [Element Node  Name Value Type]  Concept: </h3>
+            </header>
+                                                        
+            <p> =&gt; JS HTML DOM [Element Node  Name Value Type]: These Methods are to have more Controling Tools of Element's child Nodes by controing it's properties {based on Object Concept} .                
+                
+            <p> =&gt; JS HTML DOM [Element Node  Name Value Type]: These Methods can be used with all Types of Element's Child nodes (child Element , child Node) .                
+                
+            <p> =&gt; JS HTML DOM [Element Node  Name Value Type]: These Methods can be used as get function or set Function .                
+
+            <p> =&gt; JS HTML DOM [Element Node  Name Value Type]: The following are Main properties-methtods of parent Element's child Nodes   :<br>
+               <ul>
+                    <li> {child Node}'s Name [nodeName]  => {ParElementVar.childNodes[x].nodeName;}</li>
+                        <ul>
+                            <p>This Method is simmiler to the {tagName} of (child Node of element Type), but will get {null} value for other types of child Nodes   </p>
+                            
+                            <p>This Method can produce different kind of Results upon the type of child Node as following :     </p>
+                            
+                                <ol>
+                                    <li>[#text] : if the childNode is type of (Empty space, Text, Comment)</li>
+                                    <li>[tag Name] : if the childNode is type of (child Element)</li>
+                                </ol>
+                        </ul>
+                    
+                        
+                    <li> {child Node}'s Value [nodeValue] => {ParElementVar.childNodes[x].nodeValue;}</li>
+                        
+                        <ul>
+                            
+                            <p> This Method is different from the default value Methods, and require more determination of the specific child Node of the Selected child Node   </p>
+                            
+                            <p> The result of this Direct method of the Public Child Node {if type of Child Node is (Text, Comment, empty Space)} with out specification is [#text]   </p>
+                            
+                            <p> The result of this Direct method of the Public Child Node {if type of Child Node is (element)} with out specification is [null]   </p>
+                            
+                            <p> This Direct Method can produce different Results if the Child Node is {Element Type}, with more child Node specification as follwoing  :     </p>
+                            
+                                <ol>
+                                    <li>{ParElementVar.childNodes[x].firstElementChild.nodeValue;} => To Get the Value of the First Element child of the internal selected child Node  </li>
+                                    
+                                    <li>{ParElementVar.childNodes[x].lastElementChild.nodeValue;} => To Get the Value of the Last Element child of the internal selected child Node  </li>
+                                   
+                                    <li>{ParElementVar.childNodes[x].firstChild.nodeValue;} => To Get the Value of the First child Node (regardless of type of child Node) of the internal selected child Node  </li>
+                                   
+                                    <li>{ParElementVar.childNodes[x].lastChild.nodeValue;} => To Get the Value of the Last child Node (regardless of type of child Node) of the internal selected child Node    </li>
+                                   
+                                    <li>{ParElementVar.childNodes[x].childNodes[x].nodeValue;} => To Get the Value of the specific child Node (with certain index) (regardless of type of child Node) of the internal selected child Node  </li>
+                                    
+                                    <li>{ParElementVar.childNodes[x].children[x].nodeValue;} => To Get the Value of the specific Element child (with certain index) of the internal selected child Node  </li>
+                                    
+                                </ol>
+
+                        </ul>
+                    
+                    
+                    <li> {child Node}'s Type  => {ParElementVar.childNodes[x].nodeType;}</li>
+                        
+                        <p>This Method To get the Type of child Node, by numbers as following:</p>
+                                                                    
+                        <ul>
+                            <li> {1} : For {Element Child Node} </li>
+                            <li> {2} : For {Attribute Child Node} </li>
+                            <li> {3} : For {Text Child Node} </li>
+                            <li> {8} : For {Comment Child Node} </li>
+
+                        </ul>
+                </ul>
+                                        
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> JS DOM [Element Node  Name Value Type] Importance & Benefits : </h3>
+            </header>
+
+            <p> JS DOM [Elements Node  Name Value Type] gives us the Following Features : <br>
+                <ul>                                                 
+                    <li> Providing more specified controing Tools of  Element's Child Nodes's properties </li>        
+                    
+                    <li> Available for all Types of [Elements's Child Nodes] {Text, comment , Elements , Attributes , empty spaces } for advanced programing functions </li>        
+                    
+                    <li> Could be combined with other ChildNode Extentions Methods like (firstElementChild, lastElementChild, firstChild , lastChild , [specific Index] ) </li>        
+                    
+                    <li> Could Include more exapanding methods which will provide more accurate Accessing Abilities </li>        
+
+                </ul>
+                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+
+        <!---IM here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> JS DOM [Element Node  Name Value Type]  Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS HTML DOM [Children & childNodes} by {several methods} as following Conceptual Syntax as following : </p>
+            
+            <div id="Code" class="Code">
+                
+                [*] {HTML file} (parent element) example: <br>
+                
+                <span class= one></span> &lt;div id='main' class= "main"&gt; <br>                     
+                    <span class= two></span>  This is a Greating <br>                     
+                    
+                    <span class= two></span> &lt;h2 id='head-id'&gt; This is  a Heading &lt;/h2&gt; <br>                     
+                    
+                    <span class= two></span>  This is  a Normal Text <br>                                         
+                    
+                    <span class= two></span> &lt;p id ='paragarph-id'&gt; This is  a Paragraph &lt;/p&gt; <br>                     
+                    
+                    <span class= two></span> &lt;!-- This is a Comment &gt;  &lt;/p&gt; <br>                     
+
+                <span class= one></span> &lt;/div&gt; <br>
+                    
+                //=========================================================== <br> <br>                    
+                                
+                [A]// {JS file} Accessing a child Nodes with in it's Parent's {Main Child, Internal Childs by [(3) different Methods] } : <br>
+                    
+                    [1] Accessing Element's Main child Node by {(3) Methods} :<br>
+                        
+                        a) Accessing Parent Element Main [Child Nodes] by Method: <br>                
+                            
+                            <span class= one></span> ParElementVar.firstChild; => [Main First Child Node] <br>                      
+
+                            <span class= one></span> ParElementVar.lastChild; => [Main Last Child Node] <br>                      
+                            
+                            <span class= one></span> ParElementVar.childNodes[x]; => [specific index Child Node] <br>                      
+                            
+                        b) Accessing Parent Element Main [Child Elements] by Method: <br>                
+                            
+                            <span class= one></span> ParElementVar.firstElementChild; => [Main first Child Element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.lastElementChild; => [Main Last Child Element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.children[x]; => [specific index Child element] <br>                      
+
+                    //=========================================================== <br> <br>                                                                                                    
+                    
+                    [2] Accessing [Internal Child node] of Element's Main child Node by {(3) Methods for each child Nodes and child Elements Nodes} :<br>
+                        
+                        a) Accessing [internal child node] of Parent Element Main's Child Nodes by (3) Method: <br>                
+                            
+                            <span class= one></span> ParElementVar.firstChild.firstChild; => [first child Node of Main First Child Node ] <br>                      
+
+                            <span class= one></span> ParElementVar.lastChild.lastChild ; => [last child Node of Main Last Child Node] <br>                      
+                            
+                            <span class= one></span> ParElementVar.childNodes[x].childNode[x]; => [certain child node of specific index Child Node] <br>                      
+                            
+                        b) Accessing [internal child node] of Parent Element Main [Child Elements] by (3) Method: <br>                
+
+                            <span class= one></span> ParElementVar.firstElementChild.firstElementChild; => [first Element Child of Main first Child Element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.lastElementChild.lastElementChild; => [last Element child of Main Last Child Element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.children[x].children[x]; => [ certain Element child of specific index Child element] <br>                      
+                        
+                        C) Accessing [internal child node] of Parent Element Main [Child Elements] by several mixed Method: <br>                
+
+                            <span class= one></span> ParElementVar.firstElementChild.lastElementChild; => [Last Element Child of Main first Child Element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.firstElementChild.lastChild; => [Last Child of Main first Child Element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.firstElementChild.firstElementChild; => [first Element Child of Main first Child Element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.firstElementChild.firstChild; => [Last Child of Main first Child Element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.firstElementChild.children[x]; => [Specific Element Child of Main first Child Element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.firstElementChild.childNodes[x]; => [Specific Child Node of Main first Child Element] <br>                      
+                            //=========================================================== <br> <br>                                                                                                            
+                            
+                            <span class= one></span> ParElementVar.lastElementChild.firstElementChild; => [First Element child of Main Last Child Element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.lastElementChild.firstChild; => [First child Node of Main Last Child Element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.lastElementChild.children[x]; => [specific Element child of Main Last Child Element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.lastElementChild.childNodes[x]; => [specific child Node of Main Last Child Element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.lastElementChild.lastElementChild; => [last Element child of Main Last Child Element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.lastElementChild.lastChild; => [last child Node of Main Last Child Element] <br>                      
+                            
+                            //=========================================================== <br> <br>                                                                                                            
+
+                            
+                            <span class= one></span> ParElementVar.children[x].firstElementChild; => [ first Element Child of specific index Child element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.children[x].firstChild; => [ first Child Node of specific index Child element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.children[x].lastElementChild; => [ Last Element Child of specific index Child element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.children[x].lastChild; => [ Last Child Node of specific index Child element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.children[x].children[x]; => [ specific Child Element by index of specific index Child element] <br>                      
+                            
+                            <span class= one></span> ParElementVar.children[x].childNodes[x]; => [  specific Child Node of specific index Child element] <br>                                                                      
+                    
+                    //=========================================================== <br> <br>                                                        
+                    //=========================================================== <br> <br>                                                                                                                                                                                                      
+                
+                [B]// Accessing main properties of Main child Nodes {node name , node value , node type}: <br>                
+                    
+                    [1] Accessing [node Name] property of [Main Child Node - Internal child Node]  :<br>                                            
+                        
+                        a) Accessing [node Name] property of [Main Child Node]  :<br>                                            
+                                                
+                            <span class= one></span> ParElementVar.childNode[x].nodeName;<br> <br>                                                                                          
+
+                            <span class= one></span> ParElementVar.children[x].nodeName;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.firstChild.nodeName;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.lastChild.nodeName;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.firstElementChild.nodeName;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.lastElementChild.nodeName;<br> <br>                                                                                          
+                        
+                        b) Accessing [node Name] property of [Interanl child Node] of Main Child Node  :<br>                                            
+                                                
+                            <span class= one></span> ParElementVar.childNode[x].childNode[x].nodeName;<br> <br>                                                                                          
+
+                            <span class= one></span> ParElementVar.children[x].children[x].nodeName;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.firstChild.lastChild.nodeName;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.lastChild.firstElementChild.nodeName;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.firstElementChild.lastElementChild.nodeName;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.lastElementChild.firstChild.nodeName;<br> <br>                                                                                          
+                        
+                    //===================================================================================== <br> <br>                                                                    
+
+                    [2] Accessing [node Value] property of [Main Child Node - Internal child Node]  :<br>                                            
+                        
+                        a) Accessing [value Name] property of [Main Child Node]  :<br>                                            
+                                                
+                            <span class= one></span> ParElementVar.childNode[x].nodeValue;<br> <br>                                                                                          
+
+                            <span class= one></span> ParElementVar.children[x].nodeValue;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.firstChild.nodeValue;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.lastChild.nodeValue;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.firstElementChild.nodeValue;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.lastElementChild.nodeValue;<br> <br>                                                                                          
+                        
+                        b) Accessing [node Name] property of [Interanl child Node] of Main Child Node  :<br>                                            
+                                                
+                            <span class= one></span> ParElementVar.childNode[x].childNode[x].nodeValue;<br> <br>                                                                                          
+
+                            <span class= one></span> ParElementVar.children[x].children[x].nodeValue;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.firstChild.lastChild.nodeValue;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.lastChild.firstElementChild.nodeValue;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.firstElementChild.lastElementChild.nodeValue;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.lastElementChild.firstChild.nodeValue;<br> <br>                                                                                          
+                        
+                    //=========================================================== <br> <br>                                                                    
+
+                    [3] Accessing [node Type] property of [Main Child Node - Internal child Node]  :<br>                                            
+                        
+                        a) Accessing [value Type] property of [Main Child Node]  :<br>                                            
+                                                
+                            <span class= one></span> ParElementVar.childNode[x].nodeType;<br> <br>                                                                                          
+
+                            <span class= one></span> ParElementVar.children[x].nodeType;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.firstChild.nodeType;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.lastChild.nodeType;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.firstElementChild.nodeType;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.lastElementChild.nodeType;<br> <br>                                                                                          
+                        
+                        b) Accessing [node Name] property of [Interanl child Node] of Main Child Node  :<br>                                            
+                                                
+                            <span class= one></span> ParElementVar.childNode[x].childNode[x].nodeType;<br> <br>                                                                                          
+
+                            <span class= one></span> ParElementVar.children[x].children[x].nodeType;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.firstChild.lastChild.nodeType;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.lastChild.firstElementChild.nodeType;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.firstElementChild.lastElementChild.nodeType;<br> <br>                                                                                          
+                            
+                            <span class= one></span> ParElementVar.lastElementChild.firstChild.nodeType;<br> <br>                                                                                          
+                        
+                //=========================================================== <br> <br>                                                                    
+                //=========================================================== <br> <br>                                                        
+                //=========================================================== <br> <br>                                                        
+            
+            <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMPract" id="JSDOMPract">
+            <header>
+                <h3> JS DOM [Element Node  Name Value Type]  General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here one Major Application will include following main [3 Paths] of the :  &gt;&gt; <br>
+                
+                <ul>
+                    <li> {Path 1} => Get [Child Node Name] {nodeName}, including Following (2) Main Methods:  </li>
+                        <ol>
+                            <li> Get [node Name] of [Main child Node] Method by serveral methods: </li>
+                                <ul>
+                                    <li> By first Child Node Method => {ParElem.firstChild.nodeName} </li>
+                                    <li> By first Element Child Node Method => {ParElem.firstElementChild.nodeName} </li>
+                                    <li> By last Child Node Method => {ParElem.lastChild.nodeName}</li>
+                                    <li> By last Element Child Node Method => {ParElem.lastElementChild.nodeName} </li>
+                                    <li> By certain Index Child Node Method => {ParElem.childNode[x].nodeName} </li>
+                                    <li> By certain Index Element Child  Node Method => {ParElem.children[x].nodeName} </li>
+                                    
+                                </ul>
+                                
+                                
+                            <li> Get [node Name] of [Internal Child Node] of Main child Node Method </li>
+                                <p> This Method include following functions :</p>                                                        
+                                
+                                <ul>
+                                    <li> By first Child Node Method => {ParElem.firstChild.childNode[x].nodeName} </li>
+                                    <li> By first Element Child Node Method => {ParElem.firstElementChild.childNode[x].nodeName} </li>
+                                    <li> By last Child Node Method => {ParElem.lastChild.childNode[x].nodeName}</li>
+                                    <li> By last Element Child Node Method => {ParElem.lastElementChild.childNode[x].nodeName} </li>
+                                    <li> By certain Index Child Node Method => {ParElem.childNode[xMain].childNode[x].nodeName} </li>
+                                    <li> By certain Index Element Child  Node Method => {ParElem.children[xMain].childNode[x].nodeName} </li>
+                                                                    
+                                </ul>
+                            
+                        </ol>
+                    
+                    <li> {Path 2} => Get [Child Node Value] {nodeValue} , including Following (2) Main Methods:  </li>
+                        <ol>
+                            <li> Get [node Value] of [Main child Node] Method </li>
+                                <ul>
+                                    <li> By first Child Node Method => {ParElem.firstChild.nodeValue} </li>
+                                    <li> By first Element Child Node Method => {ParElem.firstElementChild.nodeValue} </li>
+                                    <li> By last Child Node Method => {ParElem.lastChild.nodeValue}</li>
+                                    <li> By last Element Child Node Method => {ParElem.lastElementChild.nodeValue} </li>
+                                    <li> By certain Index Child Node Method => {ParElem.childNode[x].nodeValue} </li>
+                                    <li> By certain Index Element Child  Node Method => {ParElem.children[x].nodeValue} </li>
+                                </ul>
+
+
+                            <li> Get [node Value] of [Internal Child Node] of Main child Node Method </li>
+                                <p> This Method include following functions :</p>                                                        
+                                    <ul>
+                                        <li> By first Child Node Method => {ParElem.firstChild.childNode[x].nodeValue} </li>
+                                        <li> By first Element Child Node Method => {ParElem.firstElementChild.childNode[x].nodeValue} </li>
+                                        <li> By last Child Node Method => {ParElem.lastChild.childNode[x].nodeValue}</li>
+                                        <li> By last Element Child Node Method => {ParElem.lastElementChild.childNode[x].nodeValue} </li>
+                                        <li> By certain Index Child Node Method => {ParElem.childNode[xMain].childNode[x].nodeValue} </li>
+                                        <li> By certain Index Element Child  Node Method => {ParElem.children[xMain].childNode[x].nodeValue} </li>
+                                        
+                                    </ul>
+                            
+                        </ol>
+                    
+                    <li> {Path 3} => Get [Child Type] {nodeType}, including Following (2) Main Methods:  </li>
+                        <ol>
+                            <li> Get [node Type] of [Main child Node] Method </li>
+                                <ul>
+                                    <li> By first Child Node Method => {ParElem.firstChild.nodeValue} </li>
+                                    <li> By first Element Child Node Method => {ParElem.firstElementChild.nodeValue} </li>
+                                    <li> By last Child Node Method => {ParElem.lastChild.nodeValue}</li>
+                                    <li> By last Element Child Node Method => {ParElem.lastElementChild.nodeValue} </li>
+                                    <li> By certain Index Child Node Method => {ParElem.childNode[x].nodeValue} </li>
+                                    <li> By certain Index Element Child  Node Method => {ParElem.children[x].nodeValue} </li>
+                                </ul>
+
+
+                            <li> Get [node Type] of [Internal Child Node] of Main child Node Method </li>
+                                <p> This Method include following functions :</p>                                                        
+                                    <ul>
+                                        <li> By first Child Node Method => {ParElem.firstChild.childNode[x].nodeType} </li>
+                                        <li> By first Element Child Node Method => {ParElem.firstElementChild.childNode[x].nodeType} </li>
+                                        <li> By last Child Node Method => {ParElem.lastChild.childNode[x].nodeType}</li>
+                                        <li> By last Element Child Node Method => {ParElem.lastElementChild.childNode[x].nodeType} </li>
+                                        <li> By certain Index Child Node Method => {ParElem.childNode[xMain].childNode[x].nodeType} </li>
+                                        <li> By certain Index Element Child Node Method => {ParElem.children[xMain].childNode[x].nodeType} </li>                                        
+                                    </ul>
+                            
+                        </ol>                                        
+                    
+                </ul>
+                
+            <br>            
+
+            
+            <section id=sec class=secClass>
+                This is First Text
+                <h2> This is heading 2 </h2>
+                This is Second Text
+                <div> This is Main div </div>
+                This is Third Text
+                <p> This is child paragarph </p>
+                <!--This is Comment-->
+            </section> <br>
+
+
+            <textarea id=txtarea class=txtarea> </textarea><br>                                  
+
+            
+            <script  src="ElemNodesNameValueType.js">
+            </script>
+
+            <button class=btn onclick="test()"> Click to Start [Element's Child Node  (Name Value Type) ]  Application    
+            </button> 
+                                    
+            <br>    
+                                          
+        <hr>
+                <button id=btn class="btn" onclick="display()">Display JS Code</button>
+                
+                <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Testing JS DOM [Element Child Node (Name Value Type) ]  Application  <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                                                        
+                        
+                        <span class=one></span> &lt;script src=".js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JS DOM [Element Child Node  (Name Value Type)]  */ <br>                    
+                        template-string-converter.enable; <br><br>
+                                                
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div>
+                
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 16 Video File:</h3>
+
+            <iframe
+                width="100%"
+                height="100%"
+                allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"
+                frameborder="0"
+                preload="yes"
+                src="https://www.youtube.com/embed/watch?v=Qyjv9hbXzrU&list=PLDoPjvoNmBAxx97QDMOCpzxbu1ZHJ4i7i&index=16&controls=0&loop=1&autoplay=1&fs=1"
+            >
+            </iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\HTML JS Dom\16 JS HTML Dom Elements  Node  Name Value Type.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS DOM Lesson16 [Element's Child Node  (Name Value Type)]  ");
+    </script>
+    
+
+</body>
+
+</html>       

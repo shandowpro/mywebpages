@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 23 [Background New Features] </title>
+    <link rel="stylesheet" href="CSS3 Lesson23 Background New Features.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 23 [Background New Features]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to Background New Features main Topics">
+                [ Background New Features ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to Background New Features [Background New Features ] Concept">
+                [ Background New Features ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to Background New Features [Background New Features ] Importance & Benefits">
+                [ Background New Features ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to Background New Features [Background New Features ] Syntax">
+                [ Background New Features ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to Background New Features [Background New Features ] Practical Applications">
+                [ Background New Features ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 23 [Background New Features ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                Background New Features Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [Background New Features] Concept. </li>                       
+                    
+                    <li> [Background New Features] Importance & Benefits. </li>
+
+                    <li> [Background New Features] Syntax [Exmaple]. </li>
+                    
+                     <li> [Background New Features] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    
+                    <ul>
+                        <li> Basic concept about {background-size} , and it's values [simple value, percentage, contain, cover] </li>
+                        <li> Basic concept about {background-clip} , and it's Values [border-box , padding-box, content-box ] </li>
+                        <li> Basic concept about {background-Origin} , and it's values [border-box , padding-box, content-box ] </li>
+                                        
+                    </ul>                   
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [Background New Features] Concept: </h3>
+            </header>
+                        
+            <ul>
+                <li> A) {Background New Features} main Concept :</li>
+                    <p> In CSS3 there are much more features in properties to controling background image </p>
+                    
+                    <ol>
+                        <li> {background-size} :</li>
+                        
+                            <p> Default value of {background-size} is : [auto auto]  </p>    
+                            <p> This new feature to control {background image's size} , and can be set by following types of values:</p>
+                            
+                            <ol>
+                                <li> {background-size: #Width Value px height Value px;} : <br>
+                                    <p> This type of value to control the image size by certain value of px </p>
+                                    <p> The first value => Width & The Second value => height.  </p>
+                                </li>    
+                                
+                                <li> background-size: width percentage %  height percentage % : <br>
+                                    <p> This one most popular type of value to be used   </p>
+                                    <p> The first value => Width & The Second value => height.  </p>
+                                    <p> This type of value has been fixed many of image sizing problems in CSS2 properties. such as {Justifing the inner backgournd image to fit accauratly it's parent contianer, or less } </p>
+                                    </li>                                 
+                                    
+                                <li> background-size: contain : <br>
+                                    <p> This value to maintan the Image original (even if the parent scale chagned)</p>
+                                    <p> This Value will repeat the image size if the parent scale is more/less the it's size </p>
+                                    <p> This will not cut the original image size even the the parent scale changed</p>
+                                    <p> This type of value is less popular to use due to image repeatation </p>
+                                </li>                                                                 
+                                                            
+                                <li> background-size: cover  </li>                                 
+                                    <p> This is the most popular type of backgorund-size used, and is very usful in rersponsive Designing </p>                                
+                                    <p> This value to maintan the Image scaling to be always fit it's parent container (even if it changed) </p>                                
+                                    <p> This Value will repeat the image size if the parent scale is more/less the it's size </p>
+                                    <p> This type of value will cut the image original size in case of the parent scale is smaller than the orginal image </p>
+                                    <p> This type of value will stretch the image original size in case of the parent scale is bigger than the orginal image </p>
+                                    <p> This type of value is less popular to use due to image repeatation </p>
+                            </ol>
+                        <!-- ================================================================================== -->
+                        <li> {background-clip} :</li>
+                        
+                            <p> This new feature to control {background starting Edge} by setting by following types of values:</p>
+                            <p> Default value of {background-clip} is : [border-box]  </p>    
+                            
+                            <ol>
+                                <li> {background-clip: } : [border-box] <br>
+                                    <p> This value will make the background edge start from it's parent contianer border </p>                            
+                                </li>    
+                                
+                                <li> {background-clip: } : [padding-box] <br>
+                                    <p> This value will make the background edge start from it's parent contianer padding </p>                            
+                                </li>    
+                                
+                                <li> {background-clip: } : [content-box] <br>
+                                    <p> This value will make the background edge start from it's parent contianer content </p>                            
+                                </li>    
+                                                                                                                    
+                            </ol>
+                        <!-- =========================================================================== -->
+                        
+                        <li> {background-origin} :</li>
+                        
+                            <p> This new feature to control {background's image starting Edge} by setting by following types of values:</p>
+                            <p> Default value of {background-clip} is : [border-box]  </p>    
+                            
+                            <ol>
+                                <li> {background-clip: } : [border-box] <br>
+                                    <p> This value will make the background edge start from it's parent contianer border </p>                            
+                                </li>    
+                                
+                                <li> {background-clip: } : [padding-box] <br>
+                                    <p> This value will make the background edge start from it's parent contianer padding </p>                            
+                                </li>    
+                                
+                                <li> {background-clip: } : [content-box] <br>
+                                    <p> This value will make the background edge start from it's parent contianer content </p>                            
+                                </li>    
+                                                                                                                    
+                            </ol>
+                        <!-- =========================================================================== -->
+                    </ol>                                                                                                                            
+            </ul>            
+                        
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+        <section class="CSS3Imp" id="CSS3Imp">
+            <header>
+                <h3> [Background New Features ] Importance & Benefits: </h3>
+            </header>
+            
+            <p> =&gt; [Background New Features ] : This Advanced property enabling the following features & imporatance : <br>            
+                <ul>                                                                
+                    <li> Providing great Extraodinary tools to control element backgorund image properties</li>
+                    <li> Solving many problems of displaying backgorund image suitable way to user </li>  
+                    <li> Ability to create awesome desinging in Elements background images </li>   
+                </ul>                                                 
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ Background New Features] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [Background New Features] Syntax as following :<br><br>                                                    
+                
+                <span class='one'></span> //a)  [HTML] file  : <br>                                          
+            
+                    <span class=two></span> &lt; div  &gt; <br>                                                
+                        
+                        <span class=three></span> &lt; img src='' width='400px' height='300px' / &gt; <br>
+                                                                                                                                        
+                    <span class=two></span> &lt; /div &gt;  <br>                                
+
+                    <br> <br>                                        
+
+                // ------------------------------------------------------------------------------ <br><br>
+                <span class='one'></span> //b)  [CSS3] file  : <br>                                          
+
+                    <span class=two></span> // A) {background-size} Syntaxes:  <br> <br>
+                
+                    <span class=two></span> // 1) {background-size:#Value} Syntaxes:  <br> <br>
+                                    
+                        <span class=three></span> body {  <br>
+                            <span class=four></span> box-sizing: border-box ; <br>
+                        <span class=three></span>  }  <br>                                              
+
+                        <!-- a) Container:  3d-transforming : Rotating Effect  -->
+                        <span class=three></span> div {  <br>
+                            <span class=four></span> widht:500px; <br>                                                                                                                          
+                            <span class=four></span> height: 600px; <br>                                                                                                                          
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> position: ralative; <br>                            
+                        <span class=three></span>  }  <br>                                              
+                        
+                        
+                    <!-- ------------------------------------------------------------------------ -->                
+                        <!-- ------------------------------------------------ -->                                                    
+                        <!-- ------------------------------------------------ -->                                                    
+                // ------------------------------------------------------------------------------ <br><br>                                                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                                                                                
+            
+            
+            
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                                                                
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="JSDOMPract" >
+
+            <header>
+                <h3> [Background New Features] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following are Applied examples of {background} new features/properties with all it's all Values} : <br>
+                
+            <p> (3) Fieldsets Multiple contains as following:  </p>
+            
+            <ul>
+                <li> A) First Fieldset: {background-size}: And it has (3) Sections as following :  </li>                                                        
+                    <ol>                        
+                        <li> First Section: {background-size}: #Value => with (3) Divs/ cases as follwing : </li>                      
+                            <ul>
+                                <li> (1) Equalized size (orginal backgournd Image size = Parent contanier size) </li>
+                                <li> (2) Not Equalled size (orginal backgournd Image size &gt; Parent contanier size) </li>
+                                <li> (3) Not Equalled size (orginal backgournd Image size &lt; Parent contanier size) </li>                                
+                            </ul>
+                        
+                        <li> Second Secion: {background-size}: Percentage% => with (3) Divs/cases as follwing : </li>                      
+                            <ul>
+                                <li> (1) Equalized size (orginal backgournd Image size = Parent contanier size) </li>
+                                <li> (2) Not Equalled size (orginal backgournd Image size &gt; Parent contanier size) </li>
+                                <li> (3) Not Equalled size (orginal backgournd Image size &lt; Parent contanier size) </li>                                
+                            </ul>
+
+                        <li> Third Section: {background-size}: contain => with (3) Divs/cases as follwing : </li>                      
+                            <ul>
+                                <li> (1) Equalized size (orginal backgournd Image size = Parent contanier size) </li>
+                                <li> (2) Not Equalled size (orginal backgournd Image size &gt; Parent contanier size) </li>
+                                <li> (3) Not Equalled size (orginal backgournd Image size &lt; Parent contanier size) </li>                                
+                            </ul>
+                        
+                        <li> Fourth: {background-size}: cover => with (3) Divs/cases as follwing : </li>                      
+                            <ul>
+                                <li> (1) Equalized size (orginal backgournd Image size = Parent contanier size) </li>
+                                <li> (2) Not Equalled size (orginal backgournd Image size &gt; Parent contanier size) </li>
+                                <li> (3) Not Equalled size (orginal backgournd Image size  &lt; Parent contanier size) </li>                                
+                            </ul>
+
+                    </ol>               
+                <!-- ========================================================================= -->
+                                
+                <li> B) Second Fieldset: {background-clip}: And it has (3) Sections as following :  </li>                                                        
+                    <ol>                        
+                        <li> First Section: {background-clip}: border-box </li>                                                  
+                        <li> Second Section: {background-clip}: padding-box </li>                                                  
+                        <li> Third Section: {background-clip}: content-box </li>                                                                                              
+                    </ol>   
+            
+                <!-- ========================================================================= -->
+                
+                <li> C) Third Fieldset: {background-origin}: And it has (3) Sections as following :  </li>                                                        
+                    <ol>                        
+                        <li> First Section: {background-origin}: border-box </li>                                                  
+                        <li> Second Section: {background-origin}: padding-box </li>                                                  
+                        <li> Third Section: {background-origin}: content-box </li>                                                                                              
+                    </ol>   
+            
+                <!-- ========================================================================= -->                
+            </ul>                                                
+            <hr>
+            <br>
+            <br>
+            <!-- ========================================================================= -->                                        
+                
+            <!-- A)  {background-size} Application1  -->
+            <fieldset class='Background-Size'>                                                  
+                <legend> First => Background-Size : </legend>
+                <section class='Default'>
+                   
+                    <header> Default value of backgorund-size: [auto auto] </header>
+                   
+                    <div class='EqDefault'>                     
+                        The Background image size by [Default] is Equalled with The Div Container
+                    </div>
+
+                    <div class='GrDefault'>                     
+                        The Background image size by [Default] is Greater than The Div Container
+                    </div>  
+
+                    <div class='SmDefault'>                     
+                        The Background image size by [Default] is Smaller than The Div Container
+                    </div>                        
+                </section>
+            <!-- ------------------------------------------------------------------------- -->
+                <section class='Value'>
+                    <header> Using Value Type in background-size: [#Value] </header>
+                    <div class='EqValue'>                     
+                        The Background image size by type [Value] is Equalled with The Div Container
+                    </div>
+
+                    <div class='GrValue'>                     
+                        The Background image size by type [Value] is Greater than The Div Container
+                    </div>
+
+                    <div class='SmValue'>    
+                        The Background image size by type [Value] is Smaller than The Div Container                 
+                    </div>                                            
+                </section>
+                <!-- --------------------------------------------- -->
+                <section class='Perc'>
+                    <header> Using Percentage Type background-size: [Percentage%] </header>
+                    <div class='EqPerc'>                     
+                        The Background image size by type [Percentage='100%'] is Equalled with The Div Container
+                    </div>
+
+                    <div class='GrPerc'>                     
+                        The Background image size by type [Percentage='120%'] is Greater than The Div Container
+                    </div>
+
+                    <div class='SmPerc'>                     
+                        The Background image size by type [Percentage='80%'] is Smaller than The Div Container
+                    </div>                        
+                </section>
+            <!-- --------------------------------------------------------------------- -->
+                
+                <section class='Contain'>
+                    <header> Using Contain Type in background-size: [contain] </header>
+                    <div class='EqCont'>                     
+                        The Background image size by type [contain] is Equalled with The Div Container
+                    </div>
+
+                    <div class='GrCont'>                     
+                        The Background image size by type [contain] is Greater than The Div Container
+                    </div>
+
+                    <div class='SmCont'>                     
+                        The Background image size by type [contain] is Smaller than The Div Container
+                    </div>                        
+                </section>
+            <!-- --------------------------------------------------------------------- -->                            
+                                
+                <section class='Cover'>
+                    <header> Using Cover Type in backgorund-size: [cover] </header>
+                    <div class='EqCover'>                     
+                        The Background image size by type [cover] is Equalled with The Div Container
+                    </div>
+                    <div class='GrCover'>                     
+                        The Background image size by type [cover] is Greater than The Div Container
+                    </div>
+                    <div class='SmCover'>                
+                        The Background image size by type [cover] is Smaller than The Div Container     
+                    </div>                        
+                </section>
+            <!-- --------------------------------------------------------------------- -->                            
+        </fieldset>
+        <!-- --------------------------------------------------------------------- -->                                            
+        <br><hr> <br>
+
+        <!-- B)  {background-clip} Application2  -->
+            <fieldset class='Background-Clip'>                                                  
+                
+                <legend> Second => Background-Clip  : </legend>
+                
+                <section class='Clip-Default'>
+                    <header> Default value of background-clip: [Default Value] </header>
+                    <div class='Default'>                     
+                         background-clip by type [Default value]
+                    </div>            
+                </section>
+            <!-- ------------------------------------------------------------------------- -->
+                <section class='Clip-Border-Box'>
+                    <header> Default value of background-clip: [border-box] </header>
+                    <div class='Border-box'>                     
+                         background-clip by type [border-box]
+                    </div>                                        
+                </section>
+                <!-- --------------------------------------------- -->
+                            
+                <section class='Clip-Padding-Box'>
+                    <header> Default value of background-clip: [padding-box] </header>
+                    <div class='Padding-box'>          
+                        Background-clip by type [padding-box]           
+                    </div>                                        
+                </section>
+                <!-- --------------------------------------------- -->
+                            
+                <section class='Clip-Content-Box'>
+                    <header> Default value of background-clip: [content-box] </header>
+                    <div class='Content-box'>           
+                        background-clip by type [content-box]          
+                    </div>                                        
+                </section>
+                <!-- --------------------------------------------- -->
+                            
+        </fieldset>
+        <!-- --------------------------------------------------------------------- -->                            
+        <br><hr> <br>        
+        <!-- C)  {background-Origin} Application3  -->
+            <fieldset class='Background-Origin'>                                                  
+                <legend> Third => Background-Origin : </legend>
+                <section class='Origin-Default'>
+                    <header> Default value of background-origin: [Default Value] </header>
+                    <div class='Default'>                     
+                         background-origin by type [default value]
+                    </div>            
+                </section>
+            <!-- ------------------------------------------------------------------------- -->
+                <section class='Background-Origin'>
+                    <header> Default value of background-origin: [border-box] </header>
+                    <div class='Border-box'>                     
+                         background-origin by type [border-box]
+                    </div>                                        
+                </section>
+                <!-- --------------------------------------------- -->
+                            
+                <section class='Background-Origin'>
+                    <header> Default value of background-Origin: [padding-box] </header>
+                    <div class='Padding-box'>          
+                        background-Origin by type [paddding-box]           
+                    </div>                                        
+                </section>
+                <!-- --------------------------------------------- -->
+                            
+                <section class='Background-Origin'>
+                    <header> Default value of background-Origin: [content-box] </header>
+                    <div class='Content-box'>           
+                        background-Origin by type [content-box]          
+                    </div>                                        
+                </section>
+                <!-- --------------------------------------------- -->
+                            
+        </fieldset>
+        <!-- --------------------------------------------------------------------- -->                                                                                    
+            <br> <br>
+            
+            <!-- -------------------------------------------------------------------------------------- -->                                                            
+                        
+        </section>            
+
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 23 Video File:</h3>
+            
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=4KIbjCjPpzA&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=23&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\23 Css3  - Background New Features.mp4" type="video/mp4">s
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 23 [Background New Features ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

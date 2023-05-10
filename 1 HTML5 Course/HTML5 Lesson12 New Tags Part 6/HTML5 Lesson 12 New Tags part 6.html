@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 12 [HTML5 New Tags] Part 6 </title>
+    <link rel="stylesheet" href="HTML5 New Tags Part 6.css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">        
+    </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 12 [HTML5 New Tags] Part 6 [Time, Dialog, Bdi]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="[HTML5 New Tags Part 6] Main Concept" > [HTML5 New Tags] Part 6 Concept </a> </li>
+            <li> <a href=#TimeNTag   title="Go to Time Tag"           > Time Tag  </a> </li>            
+            <li> <a href=#DialogNTag   title="Go to Dialog Tag"       > Dialog Tag  </a> </li>            
+            <li> <a href=#BdiNTag   title="Go to Bdi Tag"             > Bdi Tag  </a> </li>            
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> Lesson 12 </span> </main>
+
+<!-------------------------------------------------------------------------------------------------------------->                        
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>
+                [HTML5 New Tags] Concept 
+            </header>
+            
+            <article>                
+                <p> &gt; The New HTML5 Tags in this lesson as following :</p>
+                
+                <ol>
+                    <li> &lt; time &gt; &nbsp; &nbsp; &lt; /time &gt; </li>
+                    <li> &lt; dialog &gt; &nbsp; &nbsp; &lt; /dialog &gt; </li>             
+                    <li> &lt; bdi &gt; &nbsp; &nbsp; &lt; /bdi &gt; </li>                
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>
+      
+        <section class="TimeNTag" id="TimeNTag">
+            <header>
+                Time Tag [ &lt; time &gt; &lt; /time &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> [Time Tag] Concept: </h1>
+                    <p> =&gt; [Time Tag] is to display formated and supported Time, Time & Date in Web Page . </p>
+                    <p> =&gt; [Time Tag] can be written as simple text, but [Time Tag] allowing many progrming features and supports. </p>                                        
+                </header>
+                
+                <header>
+                    <h1> Main & Features of [Time] Tag Usages: </h1>
+                    <p> =&gt; Allowing Browsers to Time Zones Converting by user location. </p>
+                    <p> =&gt; It is a base in programable features and events in JavaScripts, J-Querry. </p>             
+                    <p> =&gt; It is a base in Searching Engines advanced or Smart Reselts. </p>                         
+                    <p> =&gt; [Time Tag] can be used as full Time and Date format (year-month-dayTHour:Min:Sec) or partially (year-month), (Hour:Min). </p>                         
+                </header>
+                
+                <header class="TimeExp">
+                    <h1>Example:</h1>
+                    <p> This Article about using Time Tag in Full (datetime) Format on <time datetime="2020-6-7T10:30:30">June, 6th, 2020 10:30:30</time></p>
+                    
+                    <div class="TimeExp1">                                            
+                        <code> 
+                            &lt;article&gt; <br>                            
+                            &nbsp;&nbsp; &lt;p&gt; This Article about using Time Tag in Full (datetime) Format on <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;time datetime="2020-6-7T10:30:30"&gt; June, 6th, 2020 10:30:30&lt;/time&gt; &nbsp;&nbsp;&nbsp;&lt;/p&gt; <br>                   
+                            &lt;/article&gt;
+                        </code>                    
+                    </div>   
+                </header>                                                                               
+            </article>                
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+                
+        <section class="DialogNTag" id="DialogNTag">
+            <header>
+                Dialog Tag [ &lt; dialog &gt; &lt; /dialog &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> [Dialog Tag] Concept: </h1>
+                    <p> =&gt; [Dialog Tag] has an internal attribute (open) to control its standby Status. 
+                    <p> =&gt; [Dialog Tag] is usaully used as pop up message and can be programed by JS or J-Querry . 
+                    <p> =&gt; [Dialog Tag] it is block tag by defualt, and it's position property can be set by Css . 
+                </header>
+                
+                <header>
+                    <h1> Main & Features of [Dialog] Tag Usages: </h1>
+                    <p> =&gt; [Dialog Tag] can be used as hidden message , or container to be shown when clicking on            certain button (programed by JS or J-Querry) which is simpler alternative for Popups. </p>   
+                </header>
+                
+                <header class="DialogExp">
+                    <h1>Example:</h1>
+                    <dialog class="Note" open>                                        
+                        <details>
+                            <summary>Social Websites</summary>
+                            <ul>
+                                <li> <a href="https://google.com" >Google</a></li>
+                                <li> <a href="https://youtube.com" >Youtube</a></li>
+                                <li> <a href="https://facebook.com" >Facebook</a></li>
+                            </ul>
+                        </details>
+                    </dialog>
+                    
+                    <div class="DialogExp1">                                            
+                        <code> 
+                            &lt;dialog class="Note" open&gt; <br>
+                            &nbsp;&nbsp;Click on Links bellow to hypernate to other sites... <br>
+                            &nbsp;&nbsp;&lt;details&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;summary&gt; Social Websites &lt;/summary&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt; &lt;a href="https://google.com" &gt;Google&lt;/a&gt;&lt;/li&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt; &lt;a href="https://youtube.com" &gt;Youtube&lt;/a&gt;&lt;/li&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt; &lt;a href="https://facebook.com" &gt;Facebook&lt;/a&gt;&lt;/li&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                            &nbsp;&nbsp;&lt;/details&gt;<br>
+                            
+                            &lt;/dialog&gt;                              
+                        </code>                    
+                    </div>   
+                </header>                                                                               
+            </article>                
+        </section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="BdiNTag" id="BdiNTag">
+            <header>
+                Bdi Tag [ &lt; bdi &gt; &lt; /bdi &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> [Bdi Tag] Concept: </h1>
+                    <p> =&gt; [Bdi Tag] is an advanced easy text direction Converter [RtL &lt;=&gt; LtR] and vise     versa.
+                    <p> =&gt; [Bdi Tag] is an Inline Tag and its a better alternative for the Spin Tag [with its       text direction changing & Display changing to Block in Css].                    
+                </header>
+                
+                <header>
+                    <h1> Main & Features of [Dialog] Tag Usages: </h1>
+                    <p> =&gt; [Bdi Tag] can be used as the best solution and fastest method for local text           directional changing for specific text. </p>   
+                    <p> =&gt; [Bdi Tag] NOT supported by [Internet Explorer , Opera , Safari] browsers until         2014. </p>   
+                </header>
+                
+                <header class="BdiExp">
+                    <h1>Example:</h1>                    
+                        <section>
+                            <h3> Top Members:</h3>
+                            <ul>
+                                <li> Shadi : 80 points </li>
+                                <li> <bdi>&nbsp; شادي </bdi>: 100 points </li>
+                                <li> <bdi>&nbsp;&nbsp; سيد &nbsp;</bdi> : 150 points </li>
+                            </ul>
+                        </section>                                        
+                    
+                    <div class="BdiExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>
+                            &nbsp; &nbsp; &lt;h3&gt; Top Members: &lt;/h3&gt;<br>
+                            &nbsp; &nbsp; &lt;ul&gt;<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt; &lt;bdi&gt; Shadi &lt;/bdi&gt;: 80 points &lt;/li&gt;<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt; &lt;bdi&gt; شادي &lt;/bdi&gt;: 100 points &lt;/li&gt;<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt; &lt;bdi&gt; سيد &lt;/bdi&gt;: 150 points &lt;/li&gt;<br>
+                            
+                            &nbsp; &nbsp; &lt;/ul&gt;<br>                            
+                            &lt;/section&gt;                              
+                        </code>                    
+                    </div>   
+                </header>                                                                               
+            </article>                
+        </section>
+        
+    
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+
+    
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+    
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

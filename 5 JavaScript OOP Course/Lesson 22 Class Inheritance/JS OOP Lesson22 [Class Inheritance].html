@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS OOP Lesson 22 [Class Inheritance] {Part3}</title>
+    <link
+      rel="stylesheet"
+      href="JS OOP Lesson22 [Class Inheritance].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JS OOP Lesson 22 [Class Inheritance] {Part3}
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS OOP main Topics">
+            JS OOP Lesson22 [Class Inheritance ] Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a href="#JSOOPCon" title="Go to JS OOP [Class Inheritance ] Concept">
+            JS OOP Lesson22 [Class Inheritance ] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPImp"
+            title="Go to JS OOP [Class Inheritance ] Importance & Benefits"
+          >
+            JS OOP Lesson22 [Class Inheritance ] Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPSyntx"
+            title="Go to JS OOP [Class Inheritance ] Syntax"
+          >
+            JS OOP Lesson22 [Class Inheritance ] Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPPract"
+            title="Go to JS OOP [Class Inheritance ] Practical Applications"
+          >
+            JS OOP Lesson22 [Class Inheritance ] Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS OOP Course
+      <span> JS OOP Lesson 22 [Class Inheritance ] {Part3} </span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          JS OOP [Class Static Properties and Methods ] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>JS OOP [Class Inheritance ] Concept.</li>
+
+            <li>JS OOP [Class Inheritance ] Importance & Benefits.</li>
+
+            <li>JS OOP [Class Inheritance ] Syntax [Definition + Access].</li>
+
+            <li>JS OOP [Class Inheritance ] Practical Application.</li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPCon" id="JSOOPCon">
+        <header>
+          <h3>JS OOP [Class Inheritance ] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JS OOP [Class Inheritance ]: It is one of Powerful points of
+          programing in any P.Language.
+        </p>
+
+        <p>
+          =&gt; JS OOP [Static Properites ]: Inheritance in JS an Class will
+          provide the advanced Control to have a Copy of Specific Propterites
+          and Methods from Parent Class in an new child Class .
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSOOPImp" id="JSOOPImp">
+        <header>
+          <h3>JS OOP [Class Inheritance ] Importance & Benefits:</h3>
+        </header>
+
+        <p>[Class Inheritance ] gives us the Following Features : <br /></p>
+        <ul>
+          <li>
+            Great understanding of OOP of Class Inheritance gives great
+            abilities for more advanced programing features.
+          </li>
+
+          <li>
+            More advanced Accessing tools to different scopes of Class, and
+            gives Private Sopes of Accessibility from specific Class's
+            Propterites and Methods in limitless number of new Child(s) Class.
+          </li>
+
+          <li>
+            JS OOP [Static Properites ]: Inheritance will provide the feature to
+            pass the Inherited Propeties and Methods in Extracted Objects from
+            the Child class Too.
+          </li>
+
+          <li>
+            Inheritance will provide the feature to pass the Inherited Propeties
+            and Methods in Extracted Objects from the Child class Too.
+          </li>
+
+          <li>
+            Inheritance will provide the feature to edit the Inherited Methods
+            [that is existed in Parent class] in new Child class.
+          </li>
+
+          <li>
+            Inheritance will provide more Code Efficiency and saving more time
+            in Coding and Executing Scirpts.
+          </li>
+
+          <li>
+            Inheritance will provide the feature to edit the Inherited Methods
+            [that is existed in Parent class] in new Child class.
+          </li>
+
+          <li>
+            Inheritance will provide more Code Efficiency and saving more time
+            in Coding and Executing Scirpts.
+          </li>
+
+          <li>
+            The Ability for Extra Controling of Class through Inheritance, with
+            out Effecting on any of Extracted Object(s)
+          </li>
+
+          <li>
+            The Ability to Inherite some specific propeties and Methods in new
+            Child Class with out other existed in the Parent Class
+          </li>
+
+          <li>
+            The Great Accessibility to all Inherited Methods of Parent class by
+            each (Child Class + new Extracted Object(s) from Child & Parent
+            Class)
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPSyntx" id="JSOOPSyntx">
+        <header>
+          <h3>JS OOP [Class Inheritance ] Syntax & Methods:</h3>
+        </header>
+
+        <p>
+          =&gt; JS OOP Defining-Declaring [Class] Conceptual Syntax as following
+          :
+        </p>
+
+        <div id="Code" class="Code">
+          // A) JS OOP Defining-Declaring [Parent Class] Conceptual Syntax as
+          following :<br /><br />
+          <span class="one"></span> class ParentClass { <br />
+
+          <span class="two"></span> constructor(Par1, Par2, Par3) { <br />
+          <span class="three"></span> this.par1 = par1;<br />
+          <span class="three"></span> this.par2 = par2;<br />
+          <span class="three"></span> this.par3 = par3;<br />
+          <span class="two"></span> }<br />
+          <br />
+
+          <span class="two"></span> ParentMeth() { <br />
+          <span class="three"></span> return 'A message from Parent Method';
+          <br />
+          <span class="two"></span>} <br />
+          <br />
+
+          <span class="one"></span> }<br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          // B) JS OOP Defining-Declaring [Child Class] Conceptual Syntax as
+          following :<br /><br />
+
+          // Main Inheritance Code : <br />
+          <span class="one"></span> class ChildClass extends ParentClass {
+          <br />
+
+          <span class="two"></span> constructor(Par1, Par2, Par3) { <br />
+          // Inherating Parent class's Parameters from Child Class : <br />
+          <span class="three"></span>super(Par1, Par2, Par3)<br />
+          <span class="two"></span> }<br />
+          <br />
+
+          // Defining & Overriding the {Parent Method} from (Parent Class) in
+          the (Child Class): <br />
+          <span class="two"></span> Parentmeth() { <br />
+          <span class="three"></span> return 'A message from Child Method';
+          <br />
+          <span class="two"></span>} <br />
+          <br />
+
+          <span class="one"></span> }<br />
+          //=========================================================== <br />
+          <br />
+
+          // C) Extracting a new one Object from [Child Class] :<br /><br />
+
+          <span class="one"></span>// Declaring new Object (obj1) from the
+          [Child Class]: <br />
+          <span class="two"></span> let obj1 = new ChildClass("par1 value",
+          "par2 value", "par3 value"); <br /><br />
+          //=========================================================== <br />
+          <br />
+
+          // D) Extracting a new one Object from [Parent Class] :<br /><br />
+
+          <span class="one"></span>// Declaring new Object (obj1) from the
+          [Parent Class]: <br />
+          <span class="two"></span> let obj1 = new ParentClass("par1 value",
+          "par2 value", "par3 value"); <br /><br />
+
+          //=========================================================== <br />
+          <br />
+
+          // E) Accessing Inherited (Methods + propeties) from {Parent Class} by
+          [Child Class] {After OverWriting}: <br />
+
+          <span class="one"></span> // E1) Accessing inherited {Parent Method}
+          After OverWriting : <br />
+          <span class="one"></span>console.log(ChildClass.ParentMeth());<br />
+          <br />
+
+          <span class="one"></span> // E2) Accessing inherited Parmeters &
+          Variables : <br />
+          <span class="one"></span>console.log(ChildClass.par1);<br />
+          <br />
+          <span class="one"></span>console.log(ChildClass.par2);<br />
+          <br />
+          <span class="one"></span>console.log(ChildClass.par3);<br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          // F) Accessing Inherited (Methods + propeties) from {Parent Class} by
+          [Extracted Object] {After OverWriting}: <br />
+
+          <span class="one"></span> //F1) Accessing inherited {Parent Method}
+          After OverWriting In Child Class : <br />
+          <span class="one"></span>console.log(obj1.ParentMeth());<br />
+          <br />
+
+          <span class="one"></span> // F2) Accessing inherited Parmeters &
+          Variables : <br />
+          <span class="one"></span>console.log(obj1.par1);<br />
+          <br />
+          <span class="one"></span>console.log(obj1.par2);<br />
+          <br />
+          <span class="one"></span>console.log(obj1.par3);<br />
+          <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPPract" id="JSOOPPract">
+        <header>
+          <h3>JS OOP [Class Inheritance] General Practical Applications :</h3>
+        </header>
+
+        <p>
+          =&gt; Here one Major Application will include following Function/Tasks
+          : &gt;&gt; <br />
+        </p>
+
+        <ol>
+          <li>
+            Initiating (Parent Class) + (new Child Class) (with Inheritance
+            Feature)
+          </li>
+
+          <li>
+            Extracting new Object(s) from each(Parent Class + Child Class) upon
+            User request.
+          </li>
+
+          <li>
+            Ability to Extract Multiple Object from each [Class] & [Constructor
+            Function ] according user's Desired Count.
+          </li>
+
+          <li>Inside each Path there are the Following Functions :</li>
+
+          <ol>
+            <li>
+              Displaying the main [Class] Or [Constructor Function ] Default
+              Syntax.
+            </li>
+
+            <li>
+              Choosing from available Methods to Execute to Display + Checking
+              for the Constructor Function Name (by (8) available Methods)
+            </li>
+
+            <li>
+              Displaying all Extracted Object(s) in Text Area field in the web
+              page + other Displaying result from Selected Functions.
+            </li>
+          </ol>
+        </ol>
+
+        <br />
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <button class="btn" onclick="test()">
+          Click to Start [Testing Class Inheritance Properties & Methods ]
+          Application
+        </button>
+
+        <script src="JSOOPClassInheritance.js"></script>
+
+        <br />
+        <hr />
+
+        <button id="btn" class="btn" onclick="display()">
+          Display JS Code
+        </button>
+
+        <div class="JSOOPObjConstTraining">
+          <code>
+            // HTML Codes: <br />
+            <span class="one"></span> &lt;textarea id="txtarea"
+            class="txtarea"&gt;<br />
+            <span class="one"></span> &lt;/textarea&gt; <br /><br />
+
+            <span class="one"></span> &lt;button class="btn"
+            onclick=test"()"&gt;<br />
+            <span class="two"></span> Click to Start [Testing Class Inheritance
+            Properties & Methods ] Application <br />
+            <span class="one"></span> &lt;/button&gt; <br /><br />
+
+            <span class="one"></span> &lt;script src="JSOOPClassIntro.js"&gt;<br />
+            <span class="one"></span> &lt;/script&gt; <br /><br />
+
+            =======================================================<br /><br />
+
+            /* global document, alert, prompt */ <br />
+            /* JSOOP [Class Inheritance] */ <br />
+            template-string-converter.enable; <br /><br />
+
+            <textarea id="SourceCode" readonly></textarea>
+          </code>
+        </div>
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 22 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=jkOas2I7NJo&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=22&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\22 JavaScript OOP  Class Inheritance.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JS OOP Lesson 22 [Class Inheritance ] ");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

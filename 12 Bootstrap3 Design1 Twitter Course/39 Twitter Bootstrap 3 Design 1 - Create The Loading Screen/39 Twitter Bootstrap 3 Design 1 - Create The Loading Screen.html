@@ -1,0 +1,1223 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    
+    <!-- IE compatiblity Meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    
+    <!-- First Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" >    
+ 
+    <meta content="Learning Course" description="This is Lesson 35 of Bootstrap Course with title : Retouch 2 Media Query Fixes " >    
+
+    <title> 39 Twitter Bootstrap 3 Design 1 - Create The Loading Screen </title>
+    
+    <link rel="stylesheet" href="39 Twitter Bootstrap 3 Design 1 - Create The Loading Screen.css" media="all">        
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="all">
+    
+    <link rel="stylesheet" href="css/fontawesome.min.css" media="all"> 
+    
+    <link rel="stylesheet" href="css/all.min.css">                    
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Droid+Sans">
+
+    <link rel="stylesheet" href="css/style.css" media="all">
+ 
+    <link rel="stylesheet" href="css/media.css" media="all">
+    
+    <link rel="stylesheet" href="css/default_theme.css" media="all">
+    
+            
+    <style>        
+       .custom {
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            margin: 10px auto;
+            border: 5px solid gray;    
+            background-color: #ccc;
+            text-align: center;
+        } 
+         
+        .dis {
+            border: 3px solid red;
+            border-radius: 30px;
+            width: 100%;
+            /* height: 200px; */
+            text-align: center;
+            line-height: 2em;
+        }
+
+        .item{
+            color: red;
+            font-size: 30px;
+            font-family: monospace;
+            background-color: blue;
+        }
+        
+        .sh {            
+            background-color: blue;
+            color: #fff;
+            margin-bottom: 10px;
+            text-align:center;
+        }
+        
+    </style>
+    <!--[if It IE 9]>
+        <script src="js/html5shiv.min.js"> </script>
+        <script src="js/respond.min.js"> </script>
+    <[endif]!-->
+</head>
+
+<body>
+            
+    <!-------------------------------------------------------------------------------------------------------->
+    <header class="Main" id="Main">
+        39 Twitter Bootstrap 3 Design 1 - Create The Loading Screen
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+    <!-- Bootstrap Navigation Bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+        
+            <!-- 1] {Navbar Container / Header} : Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ToggleMenu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"> Shindow Pro <span>lnc.</span> </a>
+            </div>
+        
+            <!-- 2] {Navbar Container / Menu Items} : Collect the nav links, forms, and other content for toggling -->
+            <div id="ToggleMenu" class="collapse navbar-collapse" >
+                
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li class="active"><a href="#MainC"> Main Topics <span class="sr-only">(current)</span></a></li>
+                    
+                    <li><a href="#JSDOMCon">Concept</a></li>
+                    <li><a href="#JSDOMImp">Importance & Benefits</a></li>
+                    <li><a href="#JSDOMSyntx">Syntax & Examples</a></li>
+                    <li><a href="#JSDOMPract">Practical Applications</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Hot Links <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#VideoSection" target="_self"> Lesson Video </a></li>
+            
+                            <li role="separator" class="divider"></li>
+            
+                            <li><a href="http://shadi-pro.epizy.com" target="_blank"> My References </a></li>
+                            
+                            <li role="separator" class="divider"></li>
+                            
+                            <li><a href="http://shadi-cv.epizy.com" target="_blank"> My Personal Website </a></li>
+                            <!-- <li><a href="#">Something else here</a></li> -->
+                            <!-- <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>                            
+                            <li><a href="#">One more separated link</a></li> -->
+                        </ul>
+                    </li>
+                </ul>
+                
+                <!-- <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form> -->
+
+                <!-- <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul> -->
+
+            </div><!-- /.navbar-collapse -->
+
+        </div><!-- /.container-fluid -->
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!-- ------------------------ -->
+    
+    <!-- CSS Navigation Bar -->
+    <!-- <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to Bootstrap3 Design1 main Topics">
+                Bootstrap3 Design1 - 39 Twitter Bootstrap 3 Design 1 - Create The Loading ScreenMain Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to Bootstrap3 Design1 - 21 Twitter Bootstrap 3 Design 1 - Section Price Table Part 2Concept">
+                Bootstrap3 Design1 - 39 Twitter Bootstrap 3 Design 1 - Create The Loading ScreenConcept </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to Bootstrap3 Design1 - 21 Twitter Bootstrap 3 Design 1 - Section Price Table Part 2Importance & Benefits">
+                Bootstrap3 Design1 - 39 Twitter Bootstrap 3 Design 1 - Create The Loading ScreenImportance & Benefits </a> </li>
+            
+
+            <li> <a href=#JSDOMSyntx title="Go to Bootstrap3 Design1 - 21 Twitter Bootstrap 3 Design 1 - Section Price Table Part 2Syntax">
+                Bootstrap3 Design1 - 21 Twitter Bootstrap 3 Design 1 - Section Price Table Part 2Syntax & Examples </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to Bootstrap3 Design1 - 21 Twitter Bootstrap 3 Design 1 - Section Price Table Part 2Practical Applications">
+                Bootstrap3 Design1 - 39 Twitter Bootstrap 3 Design 1 - Create The Loading ScreenPractical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav> -->
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome container text-center center-block">
+        <span> Welcome to Bootstrap3 Design1 Course | </span> <br>
+        39 Twitter Bootstrap 3 Design 1 - Create The Loading Screen
+        <!-- <div class="container"> 
+            <div class="row"> 
+            </div>
+        </div>  -->
+    </main>
+    <!-- ---------------------------------------------------------------------------------------------------- -->
+    <!-- Options Tool box -->
+    <section class="option-box">
+        <!-- First Tool OPtion {Changing the color of the Whole the Website Template } -->
+                        
+        <!-- <div class="container" >            
+            <div class="row" > -->
+                
+                <div class="color-option text-center" style="float:left"> 
+                    <h4> Color Options </h4>
+                    <ul class="list-unstyled">
+                        <li data-value="css/default_theme.css"></li>
+                        <li data-value="css/blue_theme.css"></li>
+                        <li data-value="css/purple_theme.css"></li>
+                        <li data-value="css/yellow_theme.css"></li>
+                    </ul>
+                </div>
+                
+                <i class="fas fa-gear fa-2x gear-option"></i>            
+                                        
+                <!-- <div class="color-option text-center col-xs-12" > 
+                    <h4> Color Options </h4>
+                    <ul class="list-unstyled">
+                        <li data-value="css/default_theme.css"></li>
+                        <li data-value="css/blue_theme.css"></li>
+                        <li data-value="css/purple_theme.css"></li>
+                        <li data-value="css/yellow_theme.css"></li>
+                    </ul>
+                </div> -->
+
+            <!-- ` -->
+        
+    </section>
+    
+    <!-- ---------------------------------------------------------------------------------------------------- -->
+
+    <!--  Bootstrap Main Carousel Slider Section  -->
+    <div id="myslider" class="carousel slide hidden-xs" data-ride="carousel">
+        
+        <!-- 1] Carousel Slider / Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myslider" data-slide-to="0" class="active"></li>
+          <li data-target="#myslider" data-slide-to="1"></li>
+          <li data-target="#myslider" data-slide-to="2"></li>
+          <li data-target="#myslider" data-slide-to="3"></li>
+        </ol>
+      
+        <!-- 2] Carousel Slider / Wrapper for slides [Carousel Slider Container] -->
+        <div class="carousel-inner" role="listbox">
+
+          <div class="item active">
+            <!-- <img src="img/img1.jpg" class="img-responsive" alt=""> -->
+            <img src="img/img1.jpg" alt="" style="background-size:cover">
+            <div class="carousel-caption hidden-xs">
+                <h1> First image active  </h1>
+                <p class="lead"> First image active details First image active details First image active details First image active detailsFirst image active details   </p>
+                <div class="btn btn-default"> Read more</div>
+                <div class="btn btn-danger"> Buy now</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="img/img2.jpg" alt="" class="img-responsive" style="background-size:cover">
+            <div class="carousel-caption hidden-xs">                  
+                <h1> Second image  </h1>
+                <p class="lead"> Second image active details Second image active details Second image active details Second image active details Second image active details   </p>        
+            </div>
+          </div>
+          
+          <div class="item">            
+              <img src="img/img3.jpg" alt="" class="img-responsive" style="background-size:cover">
+              <div class="carousel-caption hidden-xs">
+                <h1> Third image  </h1>
+                <p class="lead"> Third image  Third image details Third image active details  image  details  image  details  image  details   </p>                                
+            </div>
+          </div>
+
+          <div class="item">
+              <img src="img/img4.jpg" alt="" class="img-responsive" style="background-size:cover">
+            <div class="carousel-caption hidden-xs">                
+                <h1> Fourth image  </h1>
+                <p class="lead"> Fourth image  Fourth image details Fourth image active details  image  details  image  details  image  details   </p>                                                
+            </div>
+          </div>          
+
+        </div>
+      
+        <!-- 3] Carousel Slider / Controls [Buttons] -->
+        <a class="left carousel-control" href="#myslider" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <!-- <span class="sr-only">Previous</span> -->
+        </a>
+        
+        <a class="right carousel-control" href="#myslider" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <!-- <span class="sr-only">Next</span> -->
+        </a>
+    </div>
+    <!-- --------------------------------------- -->
+
+    <!-- About Section  -->
+    <section class="about text-center" id="about">
+        <div class="container">      
+            <h1 class="hidden-xs"> About Section  => Creating and Designing {Preloader page} to be previewed over the webpage , designed <span><strong> Bootstrap & Jquery </strong> </span> </h1>
+            
+            <h3 class="visible-xs"> About Section =>  Creating and Designing {Preloader page} Design by <span><strong> Bootstrap </strong> </span> </h3>
+            
+            <p class="lead"> Creating and Designing {Preloader page} , as one of the website feature  <span> <strong> Bootstrap </strong> </span> </p>
+        </div>
+    </section>
+    <!-- ---------------------------------------- -->
+    
+    <!-- Features/Service Section -->
+    <section class="features text-center">
+        <div class="container" >
+            
+            <h1> Our Features / Services </h1>
+            
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6"> 
+                    <div class="feat"> 
+                        <span class="glyphicon glyphicon-ok">  </span>                                         
+                        <h3> Fully Responsive </h3>                
+                        <p> Our Web Sites is Fully Resonsive with all kind of Screens and Sets Our Web Sites is Fully Resonsive with all kind of Screens and Sets </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6"> 
+                    <div class="feat"> 
+                        <span class="glyphicon glyphicon-eye-open">  </span>                                         
+                        <h3> Awesome Display </h3>                
+                        <p> Our Web Sites is Awesome Display with all kind of Screens and Sets Our Web Sites is Awesome Display with all kind of Screens and Sets </p>
+                    </div> 
+                </div>
+
+                <div class="col-lg-3 col-md-6"> 
+                    <div class="feat">
+                        <span class="glyphicon glyphicon-pencil">  </span>                                         
+                        <h3> Well Documenented </h3>                
+                        <p> Our Web Sites is Well Documenented with all kind of Screens and Sets Our Web Sites is Well Documenented with all kind of Screens and Sets </p>                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6"> 
+                    <div class="feat"> 
+                        <span class="glyphicon glyphicon-unchecked">  </span>                                         
+                        <h3> Retina Ready </h3>                
+                        <p> Our icons in Web Sites are with perfect Pixels with all kind of any Zooming Our icons in Web Sites are with perfect Pixels with all kind of any Zooming  </p>
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </section>
+    <!-- ---------------------------------------- -->
+
+    <!-- Testimonials Section [Other Carousel]  -->    
+    <section class="testimonials text-center">
+        <h1> What Our Clients Say </h1>
+
+        <div class="container">
+            
+            <div id="carousel-testimonials" class="carousel slide text-center" data-ride="carousel">
+                                
+                <!-- 2] Carousel Slider / Wrapper for slides [Carousel Slider Container] -->
+                <div class="carousel-inner" role="listbox">
+                    
+                    <div class="item active">                    
+                        <p class="lead"> This is the our First Client Openion This is the our First Client Openion This is the our First Client Openion </p>
+                        <span> Shadi Sayed </span> 
+                    </div>
+                    
+                    <div class="item">            
+                        <p class="lead"> This is the our Second Client Openion This is the our Second Client Openion This is the our Second Client Openion </p>
+                        <span> Ahmed Mohammed </span> 
+                    </div>
+                    
+                    <div class="item">            
+                        <p class="lead"> This is the our Third Client Openion This is the our Third Client Openion This is the our Third Client Openion </p>
+                        <span> Ali Sayed </span> 
+                    </div>
+                    
+                    <div class="item">
+                        <p class="lead"> This is the our Fourth Client Openion This is the our Fourth Client Openion This is the our Fourth Client Openion </p>
+                        <span> Heba Shadin </span> 
+                    </div>                          
+                </div>
+                
+                <!-- 1] Testimonials Carousel Slider / Indicators -> (Moved out the Parent {carousel-inner} ) -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-testimonials" data-slide-to="0" class="active">
+                        <img src="img/2.jpg" alt="Shadi">
+                    </li>
+                    
+                    <li data-target="#carousel-testimonials" data-slide-to="1">
+                        <img src="img/3.jpg" alt="Ahmed">
+                    </li>
+                    
+                    <li data-target="#carousel-testimonials" data-slide-to="2">
+                        <img src="img/4.jpg" alt="Ali">                        
+                    </li>
+                    
+                    <li data-target="#carousel-testimonials" data-slide-to="3">                        
+                        <img src="img/1.jpg" alt="Heba">
+                    </li>
+                </ol>
+
+            </div>        
+        </div>
+    </section>
+    <!-- --------------------------------------- -->
+    
+    <!-- Table price Section -->
+    <section class="price-table text-center">
+        <div class="container"> 
+            <h1> Our price Plans </h1>
+            
+            <div class="row"> 
+                
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="price_box">                        
+                        <h2 class="text-primary"> Hosting </h2>     
+                        <p class="center-block"> 50$ </p> 
+                        <ul class="list-unstyled">
+                            <li> Space : 50GB </li> 
+                            <li> FTP : 5</li> 
+                            <li> DataBases : 5</li> 
+                            <li> Emails: 20</li> 
+                            <li> IPS : 2</li> 
+                        </ul>
+                        <a href="#" class="btn btn-primary"> Buy Now </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="price_box">                        
+                        <h2 class="text-danger"> VPs </h2>     
+                        <p class="center-block"> 60$ </p> 
+                        <ul class="list-unstyled">
+                            <li> Space : 60GB </li> 
+                            <li> FTP : 5</li> 
+                            <li> DataBases : 5</li> 
+                            <li> Emails: 20</li> 
+                            <li> IPS : 2</li> 
+                        </ul>
+                        <a href="#" class="btn btn-danger"> Buy Now </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="price_box">                        
+                        <h2 class="text-info"> Dedicated </h2>     
+                        <p class="center-block"> 70$ </p> 
+                        <ul class="list-unstyled">
+                            <li> Space : 70GB </li> 
+                            <li> FTP : 5</li> 
+                            <li> DataBases : 5</li> 
+                            <li> Emails: 20</li> 
+                            <li> IPS : 2</li> 
+                        </ul>
+                        <a href="#" class="btn btn-info"> Buy Now </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="price_box">                        
+                        <h2 class="text-success"> Cloud </h2>     
+                        <p class="center-block"> 80$ </p> 
+                        <ul class="list-unstyled">
+                            <li> Space : 80GB </li> 
+                            <li> FTP : 5</li> 
+                            <li> DataBases : 5</li> 
+                            <li> Emails: 20</li> 
+                            <li> IPS : 2</li> 
+                        </ul>
+                        <a href="#" class="btn btn-success"> Buy Now </a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <!-- ---------------------------------------- -->
+
+    <!-- Our Team Section -->
+    <section class="our-team text-center">
+        
+        <div class="team">
+            
+            <div class="container">
+                <h1> Meet Our Team</h1> 
+                
+                <div class="row">
+                
+                    <div class="col-lg-3 col-sm-3">
+                        <div class="person"> 
+                            <img src="img/2.jpg" alt="Shadi Sayed" class="img-circle">
+                            <h3> Shadi Sayed </h1>
+                            <p> This is the ShindowPro Founder </p>
+                            <i class="fab fa-google fa-lg" class="fas fa-spin"></i>
+                            <!-- <i class="fas fa-gamepad fa-spin"></i> -->
+                            <i class="fab fa-facebook fa-lg"></i>
+                            <i class="fab fa-youtube fa-lg"></i>
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-3">
+                        <div class="person"> 
+                            <img src="img/4.jpg" alt="Ali Omar" class="img-circle">
+                            <h3> Ali Omar </h1>
+                            <p> This is the CEO of our Group </p>
+                            <i class="fab fa-google fa-lg"></i>
+                            <i class="fab fa-facebook fa-lg"></i>
+                            <i class="fab fa-youtube fa-lg"></i>
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-3">
+                        <div class="person"> 
+                            <img src="img/1.jpg" alt="Heba Shadin" class="img-circle">
+                            <h3> Heba Shahin  </h1>
+                            <p> This is our Team leader </p>
+                            <i class="fab fa-google fa-lg"></i>
+                            <i class="fab fa-facebook fa-lg"></i>
+                            <i class="fab fa-youtube fa-lg"></i>
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-3">
+                        <div class="person"> 
+                            <img src="img/3.jpg" alt="Mohammed Ahmed" class="img-circle">
+                            <h3> Mohammed Ahmed </h1>
+                            <p> This is our Greate Full Stack Engineer </p>
+                            <i class="fab fa-google fa-lg"></i>
+                            <i class="fab fa-facebook fa-lg"></i>
+                            <i class="fab fa-youtube fa-lg"></i>
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>    
+    <!-- --------------------------------------- -->
+
+    <!-- Subscribe Section  -->
+    <section class="subscribe text-center"> 
+        <div class="container">             
+            <h1> Keep in touch </h1>
+            <p class="lead">  Sing up for Our New Letter</p>
+            <form class="form-inline">
+                <input class="form-control input-lg" placeholder="Write your email" > 
+                <button class="btn btn-danger btn-lg"> <i class="fas fa-edit fa-lg"></i> &nbsp; Subscribe </button> 
+            </form>
+        </div>        
+    </section>
+    <!-- --------------------------------------- -->
+    
+    <!-- Statistics Section  -->
+    <section class="statistics text-center">
+        <div class="data">
+            <div class="container">
+               <h1> Our Statistics </h1>
+                <div class="row">                    
+                    
+                    <div class="stats"> 
+                        <div class="col-md-3 col-sm-6 ">                              
+                            <i class="fas fa-user fa-5x"> </i>
+                            <p> 9500 </p>                            
+                            <span> Our Statisfied Users </span>
+                        </div>                                        
+                        
+                        <div class="col-md-3 col-sm-6 ">                              
+                            <i class="fas fa-comment fa-5x"> </i>                            
+                            <p> 15000 </p>
+                            <span> Posted Comments </span>
+                        </div>                                        
+                                            
+                        <div class="col-md-3 col-sm-6 ">  
+                            <i class="fas fa-briefcase fa-5x"> </i>                                                                            
+                            <p> 150 </p>
+                            <span> Projects Finalized </span>
+                        </div>          
+
+                        <div class="col-md-3 col-sm-6 ">                         
+                            <i class="fas fa-ticket fa-5x"> </i>                            
+                            <p> 85000 </p>                            
+                            <span> Problem Tickets Solved </span>
+                        </div>                        
+                    </div>
+                    
+                </div>
+           </div>         
+        </div>        
+    </section>
+    <!-- --------------------------------------- -->
+
+    <!-- Our Skills Section -->
+    <section class="our-skills"> 
+        <div class="container"> 
+            <h1 class="text-center"> Our Skills</h1>
+            
+            <div class="row"> 
+                <div class="col-md-5"> 
+                    <div class="skills-progress"> 
+                        <div class="progress text-center">                         
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                HTML/CSS
+                            </div>
+                        </div>
+                        
+                        <div class="progress">                                                 
+                            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                PHP/SQL
+                            </div>
+                        </div>
+                        
+                        <div class="progress">                         
+                            <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                                Javascript/J-Query
+                            </div>
+                        </div>
+                        
+                        <div class="progress">                         
+                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                Wordpress
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-md-offset-1"> 
+                    <div class="skills-info text-center"> 
+                        <h3> About the Team </h3>
+                        <p class="lead"> We Are a specialized Team in Web Designing and Developing & Passionate about Digital Ideas and Digital Marketing </p>
+                        <button type="button" class="btn btn-primary"> Call Proffessent </button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+
+    </section>
+    <!-- ---------------------------------------- -->
+
+    <!-- Contact us Section -->
+    <section class="contact-us text-center">
+        <div class="fields"> 
+            <div class="container">                             
+                <i class="fas fa-headphones fa-5x"></i>
+                <h1> Tell us about your feeling </h1>
+                <p class="lead"> Feel free to contact us any time </p>
+                
+                <div class="row">
+                    <form role="form" >  
+                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-lg" placeholder="Username" >
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" placeholder="Email" >
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" placeholder="Phone" >
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">                                                
+                            <div class="form-group">
+                                <textarea class="form-control input-lg" placeholder="Write your Message" ></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary btn-block"> Contact Us </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>                    
+            </div>
+        </div>        
+    </section>
+    <!-- ---------------------------------------- -->
+
+    <!-- Our Clients Section  -->
+    <section class="our-clients">
+        
+        <div class="container">
+        
+            <div class="row">            
+        
+                <ul class="list-unstyled">
+                    <li class="col-md-2 col-xs-12 text-center"> 
+                        <img src="img/Clients/client-1.png" alt="" class="img-responsive center-block">
+                    </li>
+                    <li class="col-md-2 col-xs-12 text-center "> 
+                        <img src="img/Clients/client-2.png" alt="" class="img-responsive center-block">
+                    </li>
+                    <li class="col-md-2 col-xs-12 center-block"> 
+                        <img src="img/Clients/client-3.png" alt="" class="img-responsive center-block">
+                    </li>
+                    <li class="col-md-2 col-xs-12 text-center"> 
+                        <img src="img/Clients/client-4.png" alt="" class="img-responsive center-block">
+                    </li>
+                    <li class="col-md-2 col-xs-12 text-center"> 
+                        <img src="img/Clients/client-5.png" alt="" class="img-responsive center-block">
+                    </li>        
+                    <li class="col-md-2 col-xs-12 text-center"> 
+                        <img src="img/Clients/client-6.png" alt="" class="img-responsive center-block">
+                    </li>        
+                </ul> 
+            </div> 
+        </div> 
+        
+    </section>
+    <!-- ---------------------------------------- -->
+    
+    <!-- Footer Section -->
+    <section class="footer">
+        
+        <div class="container">
+            <div class="row">
+                <!-- First Column {Site Map + Social Media} -->
+                <div class="col-lg-4 col-md-6">
+                    <!-- 1) Site Map  -->
+                    <h3> Site Map </h3>
+                    <ul class="list-unstyled three-columns"> 
+                        <li> <a href="#myslider"> Home </a> </li>
+                        <li> <a href="#about"> About </a> </li>
+                        <li> <a href="#"> Company </a> </li>                        
+                        <li> <a> Design </a> </li>                        
+                        <li> <a> Solutions </a> </li>
+                        <li herf="#"> <a> Contact </a> </li>
+                        <li> <a> Services </a> </li>
+                        <li> <a> Activities </a> </li>
+                        <li> <a> Featured </a> </li>
+                        <li> <a href="http://shadi-pro.epizy.com">My Refs</a></li>
+                        <li> <a href="http://shadi-cv.epizy.com">My CV</a></li>
+                    </ul>
+                    
+                    <!-- 2) Social Media Links -->
+                    <ul class="list-unstyled social-list text-center"> 
+                        <li> <img src="img/social/facebook-48.png" alt="facebook"> </li>
+                        <li> <img src="img/social/twitter-48.png" alt="twitter"> </li>
+                        <li> <img src="img/social/whatsapp-48.png" alt="whatsapp"> </li>
+                        <li> <img src="img/social/google-plus-48.png" alt="google-plus"> </li>
+                        <li> <img src="img/social/linkedin-48.png" alt="linkedin"> </li>                        
+                        <li> <img src="img/social/tiktok-48.png" alt="tiktok"> </li>                        
+                        <li> <img src="img/social/mail-48.png" alt="mail"> </li>                        
+                        <li> <img src="img/social/instagram-48.png" alt="instagram"> </li>                        
+                        <li> <img src="img/social/rss-48.png" alt="rss"> </li>                                                
+                        <li> <img src="img/social/myspace-48.png" alt="myspace"> </li>                                                
+                        <li> <img src="img/social/bebo-48.png" alt="bebo"> </li>                                                
+                    </ul>                    
+                </div>
+            
+                <!-- Second column {Latest Articles} -->
+                <div class="col-lg-4 col-md-6">                
+                    <h3> Latest Articles </h3>
+
+                    <!-- First media -->
+                    <div class="media">
+                        <a href="#" class="pull-left"> 
+                            <img src="img/social/bebo-48.png" class="media-object" alt="" >
+                        </a>                    
+                        <div class="media-body">
+                            <h4 class="media-heading"> Programming </h4>
+                            This articles about the Programing and just for testing purposes for Display
+                        </div>
+                    </div> 
+                    
+                    <!-- Second media -->
+                    <div class="media">
+                        <a href="#" class="pull-left"> 
+                            <img src="img/social/facebook-48.png" class="media-object" alt="" >
+                        </a>                    
+                        <div class="media-body">
+                            <h4 class="media-heading"> Design </h4>
+                            This articles about the Design and just for testing purposes for Display
+                        </div>
+                    </div> 
+                    
+                    <!-- Third media -->
+                    <div class="media">
+                        <a href="#" class="pull-left"> 
+                            <img src="img/social/tiktok-48.png" class="media-object" alt="" >
+                        </a>                    
+                        <div class="media-body">
+                            <h4 class="media-heading"> Social </h4>
+                            This articles about the Social and just for testing purposes for Display
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- Third column {Featured Works} -->
+                <div class="col-lg-4 col-md-12 text-center">                
+                    <h3> Latest Articles </h3>
+                    <img src="img/footer/1.png" class="img-thumbnail" alt="image1">
+                    <img src="img/footer/2.png" class="img-thumbnail" alt="image2">
+                    <img src="img/footer/3.png" class="img-thumbnail" alt="image3">
+                    <img src="img/footer/4.png" class="img-thumbnail" alt="image4">                
+                </div>
+
+            </div>
+            
+        </div>
+
+        <!-- {copyright} -->
+        <div class="copyright1 text-center"> 
+            Copyright &copy; 2022 by <span> Shindow </span> lnc.
+        </div>        
+    
+    </section>
+    
+    
+    <!-- ---------------------------------------- -->
+    <!-- Page contents with Old CSS  -->
+    <div class="Post" id=post>
+        <Section  id="MainC" class="MainC">
+
+            <header>
+                Bootstrap3 Design1 [39 Twitter Bootstrap 3 Design 1 - Create The Loading Screen] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson will be => Creating preloader section to be overloaded on the webpage template</p>
+                <ol type="A">                                        
+                    <li> New Classes:  <br>
+                        <ol>                            
+                            <li> The preloader spinner code will be loaded from the google search </li> 
+
+                            <li> Preloader section will be coded by using jquery {plugin.js} file </li>
+                        </ol>                                                 
+                    </li>                                           
+                </ol>                
+                                                    
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> Bootstrap3 Design1 [39 Twitter Bootstrap 3 Design 1 - Create The Loading Screen]  Concept: </h3>
+            </header>
+            
+            <p> This lesson => Creating one of recent section of the now a day website, which add to the website features  </p>
+            
+            <p> {Preloader idea} : creating an overlay page on the whole webpgae to be displayed while the page elemmnts is being loaded <br> 
+                 and after the page is completey loaded , this overlay page will be disapear .</p>                        
+
+            <p> Main first step to create the preloader page in the HTML as a last of section after footer section, which be formated by CSS </p>
+            
+            <p> Inner perloader will be a spinner loaded form the internet [HTML + CSS]</p>
+ 
+            <p> Main processig steps of preloader page in the jquery : <br>
+                <ul>
+                    <li>  </li>
+                </ul>
+            
+            
+            </p>
+            
+        </ol>  <br>                                
+
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> Bootstrap3 Design1 [39 Twitter Bootstrap 3 Design 1 - Create The Loading Screen] Importance & Benefits : </h3>
+            </header>
+
+            <p> Bootstrap3 Design1 [39 Twitter Bootstrap 3 Design 1 - Create The Loading Screen] gives us the Following : <br>
+                <ul>                                                 
+                    <li> Using the j-query to set colors and control the Changing process of the selected li color in the color box => to apply on the whole website template </li>
+                </ul>                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> [39 Twitter Bootstrap 3 Design 1 - Create The Loading Screen] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; [39 Twitter Bootstrap 3 Design 1 - Create The Loading Screen} by following Conceptual and Practical Syntax  as following : </p>
+            
+            <div id="Code" class="Code">
+                
+                [1*] {Bootstrap3} (Optimal Script) : <br>
+                                                        
+                //=========================================================== <br> <br>                    
+                                
+                [A]// {HTML file} included with {Bootstrap} and {J-qurey} <br>                                                                                                                   
+                                    
+                    &lt; html &gt; <br> <br>
+                        <span class= one></span> &lt; head &gt; <br> <br>
+                            <span class= two></span>  &lt; meta http-equiv="X-UA-Compatible" content="IE=edge" &gt; <br>
+                            <span class= two></span>  &lt; meta name="viewport" content="width=device-width, initial-scale=1" &gt; <br> <br>
+                            
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/bootstrap.min.css" &gt; <br> 
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/myStyle.css" &gt; <br> <br>
+                            
+                            <span class= two></span>  &lt; !--[if It IE 9] &gt; <br>
+                            <span class= two></span>  &lt; script src="js/html5shiv.min.js" &gt;  &lt;/script &gt; <br>
+                            <span class= two></span>  &lt; script src="js/respond.min.js" &gt;  &lt;/script &gt; <br>
+                            <span class= two></span>  &lt; [endif]!--&gt; <br> <br>
+
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/bootstrap.min.css" &gt; <br> <br>
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/myStyle.css" &gt; <br> <br>
+                        <span class= one></span> &lt; /head &gt; <br> <br>
+                        
+                        <span class= one></span> &lt; body &gt; <br> <br>
+                        
+                        <span class= one></span> // Designing page with row of following content Distrubtion: <br><br>
+                            
+                            <span class= two></span> (1) Column has => (1) Row has => (2) Columns [First (image): width:3 => {img-responsive + center-block}] && [Second (Paragraph): width:9 => {lead}]  in a Row <br>
+
+                            <span class= two></span>  &lt; div class="container" &gt;  <br>
+                                
+                                <span class= three></span>  &lt; div class="row" &gt; <br> <br>                                    
+                                
+                                <span class= three></span>  // Using Nesting Columns with row of (2) Columns : <br>
+
+                                <span class= three></span>  (*) Parent Column Box [with full Grid Width] with inner Child Row Container : <br>
+                                                                    
+                                    <span class= four></span>  &lt; div class="col-lg-12" &gt;  <br>
+                                        <span class= five></span>  &lt; div class="row" &gt;  <br>
+                                            
+                                            <span class= six></span> (*) Child Column Box [with Partial Grid Width] of {image Container}  : <br>
+                                            
+                                            <span class= six></span>  &lt; div class="col-lg-3" &gt;  <br>
+                                                <span class= seven></span>  &lt; img src="img.png" class="img-responsive center-block" &gt;  <br>
+                                            <span class= six></span>  &lt; /div &gt;  <br>
+                                            
+                                            <span class= six></span>  &lt; div class="col-lg-9" &gt;  <br>
+                                                <span class= seven></span>  &lt; h1 &gt; Image Title Name  &lt; /h1 &gt; <br>
+                                                <span class= seven></span>  &lt; p &gt; More Details about Image &lt; /p &gt; <br>
+                                            <span class= six></span>  &lt; /div &gt;  <br>
+
+                                        <span class= five></span>  &lt; /div &gt;  <br> <br>                                    
+                                    
+                                    <span class= four></span>  &lt; /div &gt;  <br> <br>
+                                                                                                            
+                                <span class= three></span>  &lt; /div &gt; <br>
+                            <span class= two></span>  &lt; /div &gt; <br>
+                        <span class= one></span>  &lt; /div &gt; <br>
+                        
+                        <span class= one></span> // Designing page Slider with Boostrap scripts Copied from Bootstrap   : <br><br>                            
+                            
+                        <span class= one></span>  &lt; script src="js/jquery-1.12.4.js" &gt; <br> <br>
+                        <span class= one></span>  &lt; script src="js/bootstrap.min.js" &gt; <br> <br>
+                    &lt; /body &gt; <br> <br>                    
+                //=========================================================== <br> <br>                                                                    
+                //=========================================================== <br> <br>                                                                
+            
+            <br><br>
+            </div>
+            
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMPract" id="JSDOMPract">
+            <header>
+                <h3> 39 Twitter Bootstrap 3 Design 1 - Create The Loading Screen => General Practical Applications : </h3>
+            </header>
+                        
+            <p> Creating script of the j-query file to apply the change on the whole website following CSS files : <br>
+                <ul>
+                    <li> {default_theme.css} => This is the grouped css of all classes and elements that has any property of color such as [color , background-color , border] -> {main theme color is #E41B17} </li>
+                    <li> {blue_theme.css} => This is a custom color css file -> {main theme color is #009AFF}   </li>                    
+                    <li> {purple_theme.css} => This is a custom color css file -> {main theme color is #E426D5}   </li>
+                    <li> {yellow_theme.css} => This is a custom color css file -> {main theme color is #FFD500}   </li>
+                </ul>                        
+             </p>
+             
+
+
+                                                
+            </p> <br>                                            
+            
+            <hr> <br> <br>
+            <!-- ========================================================= -->            
+            
+            <!-- <div class="btn" id="elem"> Element </div> <br>              -->
+                                    
+            
+            <!-- <div id="note" class="dis"></div> <br> -->
+
+            <!-- <button class=btn onclick="test()"> Click to Start Bootstrap3 Design1 [ 21 Twitter Bootstrap 3 Design 1 - Section Price Table Part 2]  Application    
+            </button>  -->
+            
+            
+            <!-- <script  src="IntroWhatisBootstrap3.js">
+            </script> -->
+                                    
+            <br>    
+                                          
+        <hr>
+                <button id=btn class="btn0" onclick="display()">Display JS Code [plugins.js] file </button>
+                
+                <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class= one></span> &lt; head &gt; <br> <br>
+                            <span class= two></span>  &lt; meta http-equiv="X-UA-Compatible" content="IE=edge" &gt; <br>
+                            <span class= two></span>  &lt; meta name="viewport" content="width=device-width, initial-scale=1" &gt; <br> <br>
+                            
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/bootstrap.min.css" &gt; <br> 
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/myStyle.css" &gt; <br> <br>
+                            
+                            <span class= two></span>  &lt; !--[if It IE 9] &gt; <br>
+                            <span class= two></span>  &lt; script src="js/html5shiv.min.js" &gt;  &lt;/script &gt; <br>
+                            <span class= two></span>  &lt; script src="js/respond.min.js" &gt;  &lt;/script &gt; <br>
+                            <span class= two></span>  &lt; [endif]!--&gt; <br> <br>
+
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/bootstrap.min.css" &gt; <br>
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/myStyle.css" &gt; <br> <br>
+                        <span class= one></span> &lt; /head &gt; <br> <br> <br>
+                        
+                        <span class= one></span> &lt; body &gt; <br> <br>
+                            <span class= two></span>  &lt; div class="container" &gt;  <br>
+                                <span class= three></span>  &lt; div class="row" &gt; <br> <br>
+                                    
+                                    <span class= four></span>  &lt; div class="col-lg-3 col-md-6 col-sm-12 col-xs-6" &gt;  <br>
+                                        <span class= five></span>  &lt; div class="sh" &gt; Testing Div &lt; /div &gt; <br>
+                                    <span class= four></span>  &lt; /div &gt;  <br> <br>
+                                
+                                <span class= three></span>  &lt; /div &gt;  <br> <br>
+                            <span class= two></span>  &lt; /div &gt;  <br> <br>
+                            
+
+                            <span class= two></span>  &lt; script src="js/jquery-1.12.4.js" &gt; <br> <br>
+                            <span class= two></span>  &lt; script src="js/bootstrap.min.js" &gt; <br> <br>
+                        <span class= one></span> &lt; /body &gt; <br> <br>                                                
+                        =======================================================<br><br>
+                                                                                                              
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div>
+                
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection" id="VideoSection">
+            <h3> Lesson 39 Video File: </h3>
+            
+                     <iframe
+            width="100%"
+            height="100%"
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=PrkoxZI6tjs&list=PLDoPjvoNmBAw24EjNUp_88S1VeaNK8Cts&index=39&controls=0&loop=1&autoplay=1&fs=1"
+            >
+ 
+            </iframe>
+   
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\Bootstrap\Boot Strap 3\Design 1\39 Twitter Bootstrap 3 Design 1 - Create The Loading Screen.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="Links">
+            <h3>Course Reaquirments : </h3>
+            <ul>
+                <li> HTML </li>                
+                <li> CSS3 </li>
+                <li> JS </li>
+            </ul>
+        </section>
+        
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <!-- <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section> -->
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="http://shadi-pro.epizy.com">My Refs</a></li>
+                <li> <a href="http://shadi-cv.epizy.com">My CV</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer0">
+        All right reserved by &nbsp; &copy; &nbsp; Initiated by Shindow &trade;
+    </footer>
+
+    <section class="loading-overlay">
+        <div class="spinner">            
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>        
+        </div>
+
+    </section>
+
+    <script>
+        alert("Welcome to 39 Twitter Bootstrap 3 Design 1 - Create The Loading Screen");
+    </script>
+    
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/plugins.js"></script>
+
+    
+    <!-- Get the version of the Bootstrap -->
+    <!-- <script>
+        window.onload = function () {
+        var span = document.createElement('span');
+        
+        span.className = 'fa';
+        span.style.display = 'none';
+        document.body.insertBefore(span, document.body.firstChild);
+        
+        alert(window.getComputedStyle(span, null).getPropertyValue('font-family'));
+            
+        document.body.removeChild(span);
+        };
+    </script> -->
+
+
+    <!-- Fixig the Prefixes version of the Bootstrap -->
+    <!-- <script>
+        window.onload = function () {
+        var span = document.createElement('span');
+        
+        span.className = 'fas';
+        span.style.display = 'none';
+        document.body.insertBefore(span, document.body.firstChild);
+        
+        alert(window.getComputedStyle(span, null).getPropertyValue('font-family'));
+            
+        document.body.removeChild(span);
+        };
+    </script> -->
+    
+
+</body>
+
+</html>       

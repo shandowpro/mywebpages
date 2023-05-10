@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 48 PHP 5  - String Functions - Str_Split, Chunk_Split </title>
+    <link rel="stylesheet" href="48 PHP 5 In Arabic - String Functions - Str_Split, Chunk_Split.css" media="all">
+    
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        48 PHP 5  - String Functions - Str_Split, Chunk_Split
+    </header>
+<!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to PHP main Topics">
+                48 PHP 5 - String Functions - Str_Split, Chunk_Split Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to PHP [47 PHP 5  - String Functions - Implode] Concept">
+                48 PHP 5 - String Functions - Str_Split, Chunk_Split Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to PHP [47 PHP 5  - String Functions - Implode] Importance & Benefits">
+                48 PHP 5 - String Functions - Str_Split, Chunk_Split Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to PHP [47 PHP 5  - String Functions - Implode] Syntax">
+                48 PHP 5 - String Functions - Str_Split, Chunk_Split Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to PHP [47 PHP 5  - String Functions - Implode] Practical Applications">
+                48 PHP 5 - String Functions - Str_Split, Chunk_Split Practical Applications </a> </li>
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+        
+    <main class="Welcome"> Welcome to PHP Course <span> 48 PHP 5 - String Functions - Str_Split, Chunk_Split </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                PHP [48 PHP 5 - String Functions - Str_Split, Chunk_Split] Main Topics :
+            </header>
+            
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                
+                    <p>  String Functions - {Str_Split} && {Chunk_Split} Str_Split as following : </p>
+                        <ol> 
+                            <li> $Arr = Str_Split(string, Length);  </li>
+                            <li> $var = chunk_Split(string, Length, End);  </li>                            
+                        </ol>
+                    <hr>                                                                                                    
+            </article>
+        </Section>        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> PHP [48 PHP 5 - String Functions - Str_Split, Chunk_Split] </h3>
+            </header>`
+                        
+            <h2> [PHP - String Functions - Str_Split || Chunk_Split ] => Concept: </h2>
+                                                        
+                <p> [PHP - String functions [ Str_Split || Chunk_Split ] method syntax & concept as following : <br>
+                    <ol> 
+                        <li> {Str_Split} :  $Arr = Str_Split(string, Length); => To split the string varaible into letters(including empty spaces) and piut them into an [array] of elements splitted accroding to certain Length , and syntax includes the following elements :<br>
+                             <ol> 
+                                 <li> [String variable] => to be splitted or chunked => {Obligated} </li>
+                                 <li> [Length] => Number of splited element in the array => {Optional} </li>
+                            </ol>                                                                                                    
+                        </li>
+                        
+
+                        <li> $var = chunk_Split(string, Length, End); => To split the string varaible into chunks(peaces of string) splitted by customized (splitter) and put them in a [new variable] of splitted chunks elements accroding to certain {Length} & {end splitter} , and syntax and include the following elements :<br> 
+                            <ol> 
+                                <li> [String variable] => to be splitted or chunked => {Obligated} </li>
+                                <li> [Length] => Number of splited chunk element in the array => {Optional} </li>
+                                <li> [End] => End splitter type [regular expressoin] => {Optional} </li>
+                           </ol>
+                        </li>                            
+
+                    </ol>
+                </p>
+            
+                <br> <br> <hr>
+                <!-------------------------------------------  -->                                                                                                                                                                                                                              
+            </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> PHP [48 PHP 5 - String Functions - Str_Split, Chunk_Split] Importance & Benefits: </h3>
+            </header>
+            
+            <ul> 
+                <li> [String Functions - Str_Split || Chunk_Split ] methods =>   Is really important in advanced php functions & scripts [will be studied in the php tutorials course] </li>
+
+                <li> [String Functions - Str_Split || Chunk_Split ] method => Can provide much more accurate & customized splitting methods of String variable ,and convert it to an Array || variable , in order to : coding, validating, datatype converting or any advanced application  </li>
+            </ul>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ 48 PHP 5 - String Functions - Str_Split, Chunk_Split] Syntax & Methods: </h3>
+            </header>        
+
+            <p> =&gt; In this after setting up the application => We will create a simple PHP File && Running it by [Local Server] </p>
+            
+            <p> =&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} : <br>
+                <p> Using [String Functions - Str_Split, Chunk_Split] => has following ( 2 ) main Examples : </p> 
+                                
+                    <ol type="A">        
+                        <li> First Example => String Functions - {Str_Split} : contains (3) Exps : <br>
+                            <ol>   
+                                <li> {Default Length value} </li>
+                                <li> {Customized Length value [one letter]} </li>
+                                <li> {Customized Length value [2 letters]} </li>
+                            </ol>
+                        </li>                        
+                        
+                        <li>  Second Example => String Functions -  {Chunk_Split} : contains (3) Exps : <br>
+                            <p> {Default Length && Default End} </p>                            
+                            <p> {Customized Length && Default End}  </p>                            
+                            <p> {Customized Length && Customized End} </p>
+                        </li>                                                                        
+                                            
+                    </ol>
+                </P>                                                            
+                <!-- ================================================================= -->
+                                               
+                <h2>  B)  Html page :  </h2> <br>                    
+                        <span class='one'> &lt; !DOCTYPE html &gt; </span> <br>
+                            <span class='two'> &lt; html &gt; </span> <br>
+                                <span class='three'> &lt; /head &gt;</span> <br>
+                                    <span class='four'> &lt; title &gt; &lt;? php echo $title; ?&gt;  &lt; /title &gt;  </span> <br>
+                                    <span class='four'> &lt; link rel="stylesheet" href="48 PHP 5  - String Functions - Str_Split, Chunk_Split" media="all" &gt;  </span> <br>
+                                <span class='three'> &lt; /head &gt; </span>  <br> <br>                                
+                                <span class='three'>&lt; body &gt; </span> <br>                            
+                                
+                                <span class='three'>&lt; /body &gt; </span> <br>
+                                <span class='two'>&lt;/html &gt; </span> <br>
+                                ---------------------------------------------------------------------------- <br>
+                                ---------------------------------------------------------------------------- <br>                      
+                   <br><br> <hr>                                                                                                                                  
+            <br><br>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+         <section class="PHPPract" id="PHPPract"> 
+            <header>
+                <h3> PHP [48 PHP 5  - String Functions - Str_Split, Chunk_Split] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here (2) Major Applications PHP [ String Functions - Str_Split, Chunk_Split ] as following =>  <br><br>
+                
+
+                <ol type="A">        
+                    
+                    
+                    
+                    </li>                                                                        
+                                        
+                </ol>
+
+                <ol type="A">        
+                    <li> First Example => String Functions - {Str_Split} : contains (3) Exps : <br>
+                        <ol>   
+                            <li> {Default Length value} </li>
+                            <li> {Customized Length value [one letter]} </li>
+                            <li> {Customized Length value [2 letters]} </li>
+                        </ol>
+
+                        <p> Each Example Include the follwing steps : <br>
+                            <ol>    
+                                <li> Declaring String varaible which will be Splitted </li>
+                                <li> Declaring the Array Elements of splited Letters (includes spaces)  </li>
+                                <li> Printing the Main String Variable before Splitted </li>
+                                <li> Printing the Array after splitted </li>
+                            </ol>
+                        </p>
+                    </li> 
+                    <br> <br> <hr> <br>
+
+                    
+                    <li>  Second Example => String Functions -  {Chunk_Split} : contains (3) Exps : <br>
+                        <ol>    
+                            <li> {Default Length && Default End}  </li>
+                            <li> {Customized Length && Default End}  </li>
+                            <li> {Customized Length && Customized End}  </li>                            
+                        </ol>                                                                            
+
+                        <p> Each Example Include the follwing steps : <br>
+                            <ol>    
+                                <li> Declaring String varaible which will be Splitted </li>
+                                <li> Declaring the Variable of splited chunks </li>
+                                <li> Printing the Main String Variable before Splitted </li>
+                                <li> Printing the String of Chunks after Chunked </li>
+                            </ol>
+                        </p>
+                    </li>
+                </ol>    
+
+             <!-- <section id=sec class=txtarea >                                  
+                 <a href="http://localhost/PHP%20Course/48%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20Str_Split,%20Chunk_Split/48%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20Str_Split,%20Chunk_Split.php">  
+                    {48 PHP 5 - String Functions - Str_Split, Chunk_Split} => Lesson 48 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+            <section id=sec class=txtarea >                                  
+                <a class=btn href="http://localhost/PHP%20Course/48%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20Str_Split,%20Chunk_Split/48%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20Str_Split,%20Chunk_Split.php">  
+                   {Main Page} [Display] => {48 PHP 5 - String Functions - Str_Split, Chunk_Split} => Lesson 48 PHP File Webpage by Localhost
+               </a> <br> <br>             
+               
+               <a class=btn href="48 PHP 5 In Arabic - String Functions - Str_Split, Chunk_Split.php">  
+                   {Main Page} [Source Code] => {48 PHP 5 - String Functions - Str_Split, Chunk_Split} => Lesson 48 PHP File Webpage by Localhost
+               </a>             
+           </section> <br> 
+            
+             <!-- <script  src="14 PHP 5  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+                
+        </section>                           
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="VideoSection">
+            <h3> Lesson 48 Video File:</h3>
+        
+        <iframe
+            width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=bbj9eCG863E&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=48&controls=0&loop=1&autoplay=1&fs=1"    
+        >   
+        </iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\48 PHP 5 In Arabic - String Functions - Str_Split, Chunk_Split.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shandow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 48 PHP 5  - String Functions - Str_Split, Chunk_Split ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

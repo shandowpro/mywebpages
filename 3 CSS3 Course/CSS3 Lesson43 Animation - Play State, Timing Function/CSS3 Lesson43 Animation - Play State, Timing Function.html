@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson43 Animation - [Play-State, Timing Function]  </title>
+    <link rel="stylesheet" href="CSS3 Lesson43 Animation - Play State, Timing Function.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson43 [CSS3 Animation - [Play-State, Timing Function]]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+     <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to CSS3 Animation - [Play-State, Timing Function] main Topics">
+                [ CSS3 Animation - [Play-State, Timing Function] ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to CSS3  Animation - [Play-State, Timing Function] [CSS3  Animation - [Play-State, Timing Function] ] Concept">
+                [ CSS3 Animation - [Play-State, Timing Function] ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to CSS3  Animation - [Play-State, Timing Function] [CSS3 Animation - [Play-State, Timing Function] ] Importance & Benefits">
+                [ CSS3 Animation - [Play-State, Timing Function] ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to CSS3  Animation - [Play-State, Timing Function] [CSS3  Animation - [Play-State, Timing Function] ] Syntax">
+                [ CSS3 Animation - [Play-State, Timing Function] ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to CSS3  Animation - [Play-State, Timing Function] [CSS3 Animation - [Play-State, Timing Function] ] Practical Applications">
+                [ CSS3 Animation - [Play-State, Timing Function] ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson43 [CSS3 Animation - [Play-State, Timing Function] ] {part5} </span>
+    </main>
+
+    
+    <div class="Post">s
+        <Section id="MainC" class="MainC">
+
+            <header>
+                CSS3 Lesson 43 Animation - [Play-State, Timing Function] Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+
+                <ol type="A">
+                    <li> Animation-Play-State  => {concept & Conceptual Examples}   </li>                                                                                        
+                    <li> Animation-Timing-Function  => {concept & Conceptual Examples}   </li>                                                                                        
+                </ol>                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class=CSS3Con id="CSS3Con">
+            <header>
+                <h3> [CSS3 Animation - [Play-State, Timing Function] ] Concept: </h3>
+            </header>
+                                              
+            <p> {Animation- [Play-State || Timing-Function]} => Is Needing for using [prefixes] before the animation property and it's branshed properties <br>
+                                                
+            <p> {Animation - [Play-State, Timing Function]}: These are the seventh and eighth child porperties of Animation syntax , with following details : <br>
+                <ol>
+                    <li> { -webkit-animation-Play-State || animation-Play-State} =>  <br>
+                        <p> It is the Play-Stating of the Animation   </p>
+                        <p> [Default value] of Animation-Play-State : running  </p>
+                        <p> Animation-Play-State => can be set by : {running} || {paused} : pausing property can be controled by using (javascript || J-Quarry)  </p>
+                    </li>
+
+                    <li> { -webkit-animation-Timing-Function || animation-Timing-Function} => <br>
+                        <p> Which is the timing function mode (such as the transition funcitons) </p>
+                        <p> [Default value] : {ease}  </p>
+                        <p> Can be assigned by one of following values : <br>
+                            <ol>
+                                <li> [ease] => To make the animating element start easy, then accelerating in the middle , then easy when finishing  </li>
+                                <li> [ease-in] => To make the animating element start easy, then accelerating until finishing </li>
+                                <li> [ease-out] => To To make the animating element start then accelerating, finishing easy </li>
+                                <li> [ease-in-out] => To To make the animating element start easy, then accelerating in the middle , then easy when finishing [diffenret from te ease in more speedy in the middle] </li>
+                                <li> [linear] => To make the animating element with the same speed in whole the animation duration  </li>                                
+                            </ol>
+                    </li>                    
+                </ol>
+                                                                        
+                <!-- ------------------------------------------------------ -->
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+        <section class="CSS3Imp" id="CSS3Imp">
+            <header>
+                <h3> [CSS3 / Animation - [Play-State || Timing-Function] ] Importance & Benefits: </h3>
+            </header>
+            
+            <p> =&gt; [CSS3 / Animation - [Play-State || Timing-Function] ] : This Advanced Animation sub properties enabling the following features & imporatance : <br>            
+                <ul>                                                                
+                    <li> [animation-Play-State] : Give a ability to set a certain timer for the animation by using [JS || J-quarry] to controling shifting the {play state} value </li>
+                    <li> [animation-Timing-Function] : Give a ability to assign a certain Timing funciton mode to applay certain type of motion to the animation element {by several times} </li>                    
+                </ul>                                                 
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ CSS3 Animation - [Play-State || Timing-Function]] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // (*) [CSS3 Animation - [Play-State || Timing-Function]] Syntax as following :<br><br>
+                <span class='one'></span> //a)  [HTML] file  : <br>                                          
+                    <!-- *) Animation - Keyframes Common Examples  -->                                        
+                        
+                    <!-- First Parent Container [Play-State] --> 
+                        <span class=two></span> &lt; fieldset class='Play-State' &gt; <br>
+
+                            <!--  First Div => { (1) Animation: Moving || Play-State: running (default) || Timing-Function: ease} -->
+                            <span class=three></span> &lt; div class='Play-State-Running'  &gt; <br>
+                            <span class=three></span> &lt; /div &gt;  <br> <br>
+                            <br>
+                            <!-- ---------------------------------------------- -->                                                                                    
+                            <!-- ---------------------------------------------- -->
+                            
+                            <!--  Second Div => { (1) Animation: Moving || Play-State: paused  || Timing-Function: ease} -->
+                            <span class=three></span> &lt; div class='Play-State-Paused'  &gt; <br>
+                            <span class=three></span> &lt; /div &gt;  <br> <br>
+                            <br>
+                            <!-- ---------------------------------------------- -->                                                                                    
+                            <!-- ---------------------------------------------- -->
+                        <span class=two></span> &lt; /fieldset &gt; <br> 
+                            <br> <hr>
+                        <!-- ---------------------------------------------- -->
+                        <!-- ---------------------------------------------- -->
+                        
+                    <!-- Second Parent Container [Timing-Function]  -->                    
+                        <span class=two></span> &lt; fieldset class='Timing-Function' &gt; <br>
+                                                                            
+                            <!--  First Div => { (1) Animation: Moving || Play-State: running || Timing-Function: ease} -->
+                            <span class=three></span> &lt; div class='Timing-Function-Ease'  &gt; <br>
+                            <span class=three></span> &lt; /div &gt;  <br> <br>
+                            <br>
+                            <!-- ---------------------------------------------- -->                                                                                    
+                            <!-- ---------------------------------------------- -->
+                            
+                            <!--  Second Div => { (1) Animation: Moving || Play-State: running   || Timing-Function: ease-in} -->
+                            <span class=three></span> &lt; div class='Timing-Function-Ease-In'  &gt; <br>
+                            <span class=three></span> &lt; /div &gt;  <br> <br>                        
+                            <!-- ---------------------------------------------- -->
+                            <!-- ---------------------------------------------- -->
+
+                            <!--  Third Div => { (1) Animation: Moving || Play-State: running || Timing-Function: ease-out} -->
+                            <span class=three></span> &lt; div class='Timing-Function-Ease-Out'  &gt; <br>
+                            <span class=three></span> &lt; /div &gt;  <br> <br>
+                            <br>
+                            <!-- ---------------------------------------------- -->                                                                                    
+                            <!-- ---------------------------------------------- -->
+                            
+                            <!--  Fourth Div => { (1) Animation: Moving || Play-State: running   || Timing-Function: ease-in-Out} -->
+                            <span class=three></span> &lt; div class='Timing-Function-Ease-Out-In'  &gt; <br>
+                            <span class=three></span> &lt; /div &gt;  <br> <br>                        
+                            <!-- ---------------------------------------------- -->
+                            <!-- ---------------------------------------------- -->
+                            <!--  First Div => { (1) Animation: Moving || Play-State: running || Timing-Function: Linear} -->
+                            <span class=three></span> &lt; div class='Timing-Function-Linear'  &gt; <br>
+                            <span class=three></span> &lt; /div &gt;  <br> <br>
+                            <br>
+                            <!-- ---------------------------------------------- -->                                                                                    
+                            <!-- ---------------------------------------------- -->                                                    
+              0          <span class=two></span> &lt; /fieldset &gt; <br> 
+                        <br> <hr>
+                        <!-- ---------------------------------------------- -->
+                        <!-- ---------------------------------------------- --> 
+                        <br> <hr>
+                            <!-- ---------------------------------------------- -->
+                    <br> <br>  <hr>
+                    // ------------------------------------------------------------------------------ <br><br>
+                    // ------------------------------------------------------------------------------ <br><br>                    
+                    // ------------------------------------------------------------------------------ <br><br>
+                        <br> <br>  <hr>                                                           
+                    
+                    <span class='one'></span> //b)  [CSS3] file  : <br>                                          
+                        
+                    <!-- CSS3 Settings {.Play-State  || Timing-Function }:
+                        (a) General parent Container Settings :  -->                        
+                        <span class=two></span> .Play-State, .Timing-Function {  <br>
+                            <span class=three></span> position: relative; <br>                        
+                            <span class=three></span> margin: 50px auto ; <br>                        
+                            <span class=three></span> width: 100%; <br>
+                            <span class=three></span> height: fit-content; <br>
+                            <span class=three></span> border: 3px solid #EEE; <br>                            
+                            <span class=three></span> border-radius: 10px ; <br>                            
+                        <span class=two></span> }  <br> <br>                                                
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- (b) Public setting of the heading of the parent containers -->
+                        <span class=two></span> .Play-State > h2, .Timing-Function > h2 {  <br>
+                            <span class=three></span> font-size :20px; <br>
+                            <span class=three></span> margin: 50px auto; <br>
+                            <span class=three></span> color:  #333; <br>
+                            <span class=three></span> background-color: #CCC; <br>
+                            <span class=three></span> border: 2px solid #333; <br>
+                            <span class=three></span> border-radius: 20px; <br>
+                            <span class=three></span> width: 80%; <br>
+                            <span class=three></span> height: fit-content; <br>                                                        
+                            <span class=three></span> text-align: center ; <br>                                                                                    
+                            <span class=three></span> list-style: .7 ; <br>                                                                                                                                                                                                                      
+                        <span class=two></span> }  <br> <hr>
+
+
+
+
+                        <!-- (b) Public Sub-container (.Play-State) Settings :  -->                        
+                        <!-- <span class=two></span>  .Play-State {  <br>
+                            <span class=three></span> position: relative; <br>                        
+                            <span class=three></span> margin: 50px auto ; <br>                        
+                            <span class=three></span> width: 90%; <br>
+                            <span class=three></span> height: fit-content; <br>
+                            <span class=three></span> border: 3px solid #EEE; <br>                            
+                            <span class=three></span> border-radius: 10px ; <br>                            
+                        <span class=two></span> }  <br> <br> <hr>                                                
+                         -->
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- /(b) Public Sub-container (.Timing-Function) Settings :  -->                        
+                        <!-- <span class=two></span>  .Timing-Function {  <br>
+                            <span class=three></span> position: relative; <br>                        
+                            <span class=three></span> margin: 50px auto ; <br>                        
+                            <span class=three></span> width: 90%; <br>
+                            <span class=three></span> height: fit-content; <br>
+                            <span class=three></span> border: 3px solid #EEE; <br>                            
+                            <span class=three></span> border-radius: 10px ; <br>                            
+                        <span class=two></span> }  <br> <br> <hr>                                                 -->
+                        
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- ----------------------------------------------------------------------- -->
+                        
+                        <!-- (c) Public Children Settings :  -->
+                        <span class=two></span> .Play-State > div, .Timing-Function > div  {  <br>                            
+                            <span class=three></snpan> position: absolute ; <br>                                                        
+                            <span class=three></span> width: 100px; <br>
+                            <span class=three></span> height: 100px; <br>
+                            <span class=three></span> color: #FFF ; <br>
+                        <span class=two></span> }  <br> <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                        
+                        <!-- ------------------------------------------------------------- -->                        
+                        <!-- ------------------------------------------------------------- -->                        
+                        
+                        
+                        <!-- (d) Customized Children of the First  [ .Play-State] parent contianer
+                        (1) .Running Child --->
+                        <span class=two></span> .Play-State > .Running {  <br>                            
+                            <span class=three></snpan> animation-name: moving ; <br>                                                        
+                            <span class=three></span>  animation-duration: 8s; <br>
+                            <span class=three></span>  animation-iteration-count: infinite; <br>
+                            <span class=three></span> animation-delay: 0s ; <br>
+                            <span class=three></span> animation-direction: normal ; <br>
+                            <span class=three></span> animation-fill-mode: none ; <br>
+                            <span class=three></span> animation-timing-function: ease ; <br>
+                            <span class=three></span> animation-play-state: running ; <br>
+                        <span class=two></span> }  <br> <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                        
+                        
+                        <!-- /(d) Customized Children of the First [ .Play-State] parent contianer
+                        (2) .Puased Child --->
+                        <span class=two></span> .Play-State > .Paused {  <br>                            
+                            <span class=three></snpan> animation-name: moving ; <br>                                                        
+                            <span class=three></span>  animation-duration: 8s; <br>
+                            <span class=three></span>  animation-iteration-count: infinite; <br>
+                            <span class=three></span> animation-delay: 0s ; <br>
+                            <span class=three></span> animation-direction: normal ; <br>
+                            <span class=three></span> animation-fill-mode: none ; <br>
+                            <span class=three></span> animation-timing-function: ease ; <br>
+                            <span class=three></span> animation-play-state: paused ; <br>
+                        <span class=two></span> }  <br> <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                        
+                        <!-- ------------------------------------------------------------- -->                        
+                        
+                        <!-- (d) Customized Children of the Second [ .Timing-Function] parent contianer
+                        (1) .Ease Child --->
+                        <span class=two></span> .Play-State > .Ease {  <br>                            
+                            <span class=three></snpan> animation-name: moving ; <br>                                                        
+                            <span class=three></span>  animation-duration: 8s; <br>
+                            <span class=three></span>  animation-iteration-count: infinite; <br>
+                            <span class=three></span> animation-delay: 0s ; <br>
+                            <span class=three></span> animation-direction: normal ; <br>
+                            <span class=three></span> animation-fill-mode: none ; <br>
+                            <span class=three></span> animation-timing-function: ease ; <br>
+                            <span class=three></span> animation-play-state: running ; <br>
+                        <span class=two></span> }  <br> <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                        
+                        
+                        <!-- /(d) Customized Children of the Second [ .Timing-Function] parent contianer
+                        (2) .Ease-In Child --->
+                        <span class=two></span> .Play-State > .Ease-In {  <br>                            
+                            <span class=three></snpan> animation-name: moving ; <br>                                                        
+                            <span class=three></span>  animation-duration: 8s; <br>
+                            <span class=three></span>  animation-iteration-count: infinite; <br>
+                            <span class=three></span> animation-delay: 0s ; <br>
+                            <span class=three></span> animation-direction: normal ; <br>
+                            <span class=three></span> animation-fill-mode: none ; <br>
+                            <span class=three></span> animation-timing-function: ease-in ; <br>
+                            <span class=three></span> animation-play-state: running  ; <br>
+                        <span class=two></span> }  <br> <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                        
+
+                        <!-- /(d) Customized Children of the Third [ .Timing-Function] parent contianer
+                        (3) .Ease-Out Child --->
+                        <span class=two></span> .Play-State > .Ease-Out {  <br>                            
+                            <span class=three></snpan> animation-name: moving ; <br>                                                        
+                            <span class=three></span>  animation-duration: 8s; <br>
+                            <span class=three></span>  animation-iteration-count: infinite; <br>
+                            <span class=three></span> animation-delay: 0s ; <br>
+                            <span class=three></span> animation-direction: normal ; <br>
+                            <span class=three></span> animation-fill-mode: none ; <br>
+                            <span class=three></span> animation-timing-function: ease-out ; <br>
+                            <span class=three></span> animation-play-state: running ; <br>
+                        <span class=two></span> }  <br> <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                        
+
+                        <!-- /(d) Customized Children of the Fourth [ .Timing-Function] parent contianer
+                        (4) .Ease-In-Out Child --->
+                        <span class=two></span> .Play-State > .Ease-Out-In {  <br>                            
+                            <span class=three></snpan> animation-name: moving ; <br>                                                        
+                            <span class=three></span>  animation-duration: 8s; <br>
+                            <span class=three></span>  animation-iteration-count: infinite; <br>
+                            <span class=three></span> animation-delay: 0s ; <br>
+                            <span class=three></span> animation-direction: normal ; <br>
+                            <span class=three></span> animation-fill-mode: none ; <br>
+                            <span class=three></span> animation-timing-function: ease-in-out ; <br>
+                            <span class=three></span> animation-play-state: running ; <br>
+                        <span class=two></span> }  <br> <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                        
+
+                        <!-- /(d) Customized Children of the Fifth [ .Timing-Function] parent contianer
+                        (5) .Linear Child --->
+                        <span class=two></span> .Play-State > .Ease-Out-In {  <br>                            
+                            <span class=three></snpan> animation-name: moving ; <br>                                                        
+                            <span class=three></span>  animation-duration: 8s; <br>
+                            <span class=three></span>  animation-iteration-count: infinite; <br>
+                            <span class=three></span> animation-delay: 0s ; <br>
+                            <span class=three></span> animation-direction: normal ; <br>
+                            <span class=three></span> animation-fill-mode: none ; <br>
+                            <span class=three></span> animation-timing-function: Linear ; <br>
+                            <span class=three></span> animation-play-state: running ; <br>
+                        <span class=two></span> }  <br> <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                        
+                        <!-- ------------------------------------------------------------- -->                        
+                        <!-- ------------------------------------------------------------- -->                        
+                                                                                                                        
+                                            // ------------------------------------------------------------------------------ <br><br>                                                                                                            
+                        <!-- ------------------------------------------------------------- -->                                                                    
+                        <!-- ------------------------------------------------------------- -->                        
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="CSS3Pract" >
+
+            <header>
+                <h3> [CSS3 - Animation - [Play-State, Timing Function]] General Practical Applications : </h3>
+            </header>
+         
+            <h4> 
+                =&gt; Following are Applied examples of {Animation - [Play-State, Timing Function]} new feature/ properties of animation Function Values} : 
+            </h4>
+                
+            <p> (2) Main Fieldsets has (Play-State + Timing-Function) divs (children) as following:  </p>                                    
+                <ol>                    
+                    <li>  First Container [Play-State] => with following settings: </li>  <br>
+                        <p> Has (2) Seperated Elements (div) {with one animation (Moving)}: </p> <br>
+                        <ul>                        
+                            <li> First child: Play-State : 0s || Timing-Function : none  </li>
+                            <li> Second child : Play-State : 3s || Timing-Function : none </li>                                                                           
+                        </ul> 
+                    <hr>                                
+                    
+                    <li>  Second Container => with following settings: </li>  <br>                    
+                        <p> Has (3) Sub-containers {with one animation (Moving + coloring) with (2) chlidren}: </p> <br>
+                        
+                    <ol>
+                        <li> First sub-container [Forwards] : with following elemnts </li> <br>
+                            <ul>
+                                <li>  First child : Play-State: 0s || Timing-Function : forwards  </li>
+                                <li>  Second child : Play-State: 3s || Timing-Function : forwards  </li>
+                            </ul>
+
+                        <li> Second sub-container [Backwards] : with following elemnts </li> <br>
+                            <ul>
+                                <li>  First child : Play-State: 0s || Timing-Function : backwards  </li>
+                                <li>  Second child : Play-State: 3s || Timing-Function : backwards  </li>
+                            </ul>
+
+                        <li> Third sub-container [Both] : with following elemnts </li> <br>
+                            <ul>
+                                <li>  First child : Play-State: 0s || Timing-Function : both  </li>
+                                <li>  Second child : Play-State: 3s || Timing-Function : both  </li>
+                            </ul>                                                        
+                    </ol>                        
+                    <hr>                                            
+                </ol>                                   
+                <!-- --------------------------------------------------------------- -->
+
+            <p> (2) Animation function :   </p>
+                <ul>
+                    <p> {coloring } && {coloringMoving} Animations:  </p>                                 
+                    <ol>
+                        <li>   {First keyframe color: Black} </li>
+                        <li>   {Last keyframe color: Yellow} </li>
+                    </ol>
+                                                        
+                </ul>
+            <br><br><br>
+            <!-- ========================================================================= -->                                                        
+                        
+            <header> There are (2) main Parent Container => Has Animating Children (with different Types of Animating) </header>
+            
+            <!-- First Fieldset / Play-State  -->
+            <fieldset class='Play-State'>                                                  
+                <legend>  Following There are (2) children of animating Elements  :  </legend>                                                                                                                            
+                
+                <!--  First & Second Div => { (1) Animation: Moving || Play-State: running (first child) , paused (Second child) || Timing-Function: ease} -->
+                
+                <header>  First Element => { One Animation (Moving) || play-state: running }  </header>
+                
+                    <div class='Running'>
+                         <br> (1) Timing-Function : ease } <br>
+                               { Play-State : Running }
+                    </div> <br>
+                    <!-- ------------------------------------------------------------------------- -->                            
+                
+                <header>  Second Element => { One Animation (Moving) }  </header>
+                    <div class='Paused'>                                                                     
+                        <br> (2) Timing-Function : ease } <br>
+                        { Play-State : Paused }
+                    </div> <br>
+                    <!-- ------------------------------------------------------------------------- -->                                                                            
+                    <hr> <br> <br>                                                                    
+            </fieldset>            
+                
+                <!-- ------------------------------------------------------------------------- -->                                                                            
+                <!-- ------------------------------------------------------------------------- -->                                                                            
+            
+            <!-- Second Fieldset / Timing-Function -->
+            <fieldset class='Timing-Function'> 
+                <legend>  Following There are (3) Sub-Container with (2) children for each of animating Elements  :  </legend>                
+                <!--   (first & second & third & fourth & fifht) div => { (1) Animation: Moving  || Play-State: running  || Timing-Function: ease, ease-in, ease-out, ease-in-out, linear} }
+                (1) First div (child) : Timing-Function : Ease -->
+                 
+                <div class='Headers'>
+                     <header>  First Child [Timing-function: Ease]    </header>
+                     <header>  Second Child [Timing-function: Ease-In]  </header>
+                     <header>  Third Child [Timing-function: Ease-out]  </header>
+                     <header>  Fourth Child [Timing-function: Ease-in-out]   </header>
+                     <header>  Fifth Child [Timing-function: Linear]    </header>                     
+                 </div>
+
+
+
+                    <div class='Ease'>                                                   
+                        <br> (1) Timing-Function : Ease } <br>
+                                { Play-State : Runnning}
+                    </div>
+                        <br> <br>
+                    <!-- ================================================================= -->
+                    
+                <!-- (2) Second div (child) : Timing-Function : Ease-in --> -->
+            
+                    <div class='Ease-In' >
+                        <br> (2) {Timing-Function : ease-in} <br>
+                            { Play-State : Running }                        
+                    </div>                
+                    <!-- ------------------------------------------------------------------------- -->                                                                            
+                
+                <!-- (3) Third div (child) : Timing-Function : Ease-out --> -->
+            
+                    <div class='Ease-Out' >
+                        <br> (3) {Timing-Function : ease-out} <br>
+                            { Play-State : Running }                        
+                    </div>                
+                    <!-- ------------------------------------------------------------------------- -->                                                                            
+                    
+                <!-- (4) Fouth div (child) : Timing-Function : Ease-in-out --> -->
+            
+                    <div class='Ease-in-out' >
+                        <br> (4) {Timing-Function : ease-in-out} <br>
+                            { Play-State : Running }                        
+                    </div>                
+                    <!-- ------------------------------------------------------------------------- -->                                                                            
+                    
+                            
+                <!-- (5) fifth div (child) : Timing-Function : :Linaear --> -->
+            
+                    <div class='Linear' >
+                        <br> (5) {Timing-Function : linear} <br>                        
+                            { Play-State : Running }                        
+                    </div>                
+                    <!-- ------------------------------------------------------------------------- -->                                                                            
+                    
+                            
+                    <!-- ------------------------------------------------------------------------- --> 
+                <hr> <br> <br>                                                        
+            </fieldset>            
+            
+            <!-- --------------------------------------------------------------------- -->                                                                                        
+            <br><hr> <br>        
+            <!-- --------------------------------------------------------------------- -->                                                    
+            <!-- --------------------------------------------------------------------- -->                                                                                        
+            <br><hr> <br>        
+            <!-- --------------------------------------------------------------------- -->                            
+        </section>                    
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 43 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=4jmrVzZhuOo&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=43&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\43 Css3 - Animation - Play State, Timing Function.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 43 [CSS3 Animation - [Play-State, Timing Function] ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

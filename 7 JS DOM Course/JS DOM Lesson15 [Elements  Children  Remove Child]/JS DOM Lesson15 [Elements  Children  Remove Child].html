@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS OOP Lesson 15 [Element Children  Remove Child] </title>
+    <link rel="stylesheet" href="JS DOM Lesson15 [Elements  Children  Remove Child].css" media="all">
+    <style>
+        .hidden {
+            visibility: hidden;
+        }
+
+    </style>
+    
+    <script>        
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main" >
+        JS DOM Lesson 15 [Element Children  Remove Child] 
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS OOP main Topics">
+                JS DOM Lesson15 [Element Children  Remove Child ]  Main Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to JS OOP [Find Elements By  ID Class Tag ] Concept">
+                JS DOM Lesson15 [Element Children  Remove Child]  Concept </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to JS OOP [Find Elements By  ID Class Tag ] Importance & Benefits">
+                JS DOM Lesson15 [Element Children  Remove Child]  Importance & Benefits </a> </li>
+
+            <li> <a href=#JSDOMSyntx title="Go to JS OOP [Find Elements By  ID Class Tag ] Syntax">
+                JS DOM Lesson15 [Element Children  Remove Child] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to JS OOP [Find Elements By  ID Class Tag ] Practical Applications">
+                JS DOM Lesson15 [Element Children  Remove Child]  Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS DOM Course <span> JS DOM [Element Children  Remove Child]  </span>
+    </main>
+
+    
+    <div class="Post" id=post>
+        <Section  id="MainC" class="MainC">
+
+            <header>
+                JS DOM [Element Children  Remove Child] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS DOM [Element Children  Remove Child  ] Concept. </li>                    
+                    
+                    <li> JS DOM [Element Children  Remove Child ]  Importance & Benefits. </li>
+
+                    <li> JS DOM [Element Children  Remove Child ] Syntax . </li>
+                    
+                    <li> JS DOM [Element Children  Remove Child  ] Practical Application. </li>
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                
+                <ul>                                                                                                        
+                    <li> Removing [Child Elements - Child Nodes] from [Parent Element]: </li>                    
+                        <ol type =A>
+                            <li> Removing [Child Element] variable from [Parent Element]: </li>
+                                <ul>
+                                    <li> Remove [First Child Element] => {ParElementVar.removeChild(ParElementVar.firstElementChild);}</li>
+                                    
+                                    <li> Remove [Last Child element]  => {ParElementVar.removeChild(ParElementVar.lastElementChild);} </li>                                                                                                                                
+                                    
+                                    <li> Remove [Certain Child element]  => {ParElementVar.removeChild(ParElementVar.children[x]);} </li>                                                                                                                                
+                                </ul>                            
+                        
+                            <li> Removing [Child Node] variable from [Parent Element]: </li>
+                                <ul>
+                                    <li> Remove [First Child Node] => {ParElementVar.removeChild(ParElementVar.firstChild);}</li>
+                                    
+                                    <li> Remove [Last Child Node]  => {ParElementVar.removeChild(ParElementVar.lastChild);} </li>                                                                                                                                
+                                    
+                                    <li> Remove [Certain Child Node]  => {ParElementVar.removeChild(ParElementVar.childNodes[x]);} </li>                                                                                                                                
+                                </ul>                            
+                                                                                    
+                </ul>
+                                    
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> JS DOM [Element Children (Remove Child)]  Concept: </h3>
+            </header>
+                                                        
+            <p> =&gt; JS HTML DOM [Element Children  Remove Child]: This Method is one of the Element's Child to control it's children  by [removing function] .                
+                
+            <p> =&gt; JS HTML DOM [Element Children  Remove Child]: This method is including all Types of Elment's Children (child Element , child Node) .                
+                                    
+            <p> =&gt; JS HTML DOM [Element Children  Remove Child]: There are many related-involed Methods with the {Remove (child element - child node) Method } which helps in adding more Accuracy for removing funcion as following :<br>
+                <ul>
+                    <li> Remove [First Child Element] => {ParElementVar.removeChild(ParElementVar.firstElementChild);}</li>
+                                    
+                    <li> Remove [Last Child element]  => {ParElementVar.removeChild(ParElementVar.lastElementChild);} </li>                                                                                                                                
+                        
+                    <li> Remove [Certain Child element]  => {ParElementVar.removeChild(ParElementVar.children[x]);} </li>                                                                                                                                
+
+                    
+                    <li> Remove [First Child Node] => {ParElementVar.removeChild(ParElementVar.firstChild);}</li>
+                                    
+                    <li> Remove [Last Child Node]  => {ParElementVar.removeChild(ParElementVar.lastChild);} </li>                                                                                                                                
+                    
+                    <li> Remove [Certain Child Node]  => {ParElementVar.removeChild(ParElementVar.childNodes[x]);} </li>                                                                                                                                
+                    
+                </ul>
+                                        
+
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> JS DOM [Element Children Remove Child] Importance & Benefits : </h3>
+            </header>
+
+            <p> JS DOM [Elements Children Remove Child] gives us the Following Features : <br>
+                <ul>                                                 
+                    <li> Removing function is critical addition for Element's controling </li>        
+                    
+                    <li> Available for both [Elements and Child Nodes] Element's Type for more advanced programing functions </li>        
+                    
+                    <li> Could be used for removing certain child by it's index in parent Element </li>        
+                                                                                
+                </ul>
+                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+
+        <!---IM here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> JS DOM [Element Children  Remove Child]   Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS HTML DOM [Children & childNodes} by {several methods} as following Conceptual Syntax as following : </p>
+            
+            <div id="Code" class="Code">
+                
+                [*] {HTML file} (parent element) example: <br>
+                
+                <span class= one></span> &lt;div id='main' class= "main"&gt; <br>                     
+                    <span class= two></span>  This is a Greating <br>                     
+                    
+                    <span class= two></span> &lt;h2 id='head-id'&gt; This is  a Heading &lt;/h2&gt; <br>                     
+                    
+                    <span class= two></span>  This is  a Normal Text <br>                                         
+                    
+                    <span class= two></span> &lt;p id ='paragarph-id'&gt; This is  a Paragraph &lt;/p&gt; <br>                     
+                    
+                    <span class= two></span> &lt;!-- This is a Comment &gt;  &lt;/p&gt; <br>                     
+
+                <span class= one></span> &lt;/div&gt; <br>
+                    
+                //=========================================================== <br> <br>                    
+                                
+                [A]// {JS file} Defining a Child element variables & their child Nodes by [document.getElementById(''); ]: <br>
+                    [1] Definging Element's children variables by it's id :<br>
+                
+                    <span class= one></span>var ParElementVar = document.getElementById('main'), <br>                      
+                    
+                        <span class= two></span> ChildElemVar1 = document.getElementById('head-ld'); <br>                      
+                        
+                        <span class= two></span> ChildElemVar2 = document.getElementById('paragarph-id'); <br>                                                              
+                        
+                    //=========================================================== <br> <br>                                                                                                    
+                        
+                    [2] Definging Parent Element's [child Elements] variables by it's (first-last- certian index) :<br>
+                    
+                    <span class= one></span> ChildElemVar1 = ParElementVar.firstElementChild; => [First Child Element] <br>                      
+                                                
+                        <span class= two></span> ChildElemVar2 = ParElementVar.lastElementChild; => [Last Child Element] <br>                      
+                        
+                        <span class= two></span> ChildElemVar3 = ParElementVar.children[x]; => [certain Child Element] <br>                      
+                    
+                    //=========================================================== <br> <br>                                                        
+
+                    [3] Definging Parent Element's [child Nodes] variables by it's (first-last- certian index) :<br>
+                    
+                    <span class= one></span> ChildNodeVar1 = ParElementVar.firstChild; => [First Child Node] <br>                      
+                                                
+                        <span class= two></span> ChildNodeVar2 = ParElementVar.lastChild; => [Last Child Node] <br>                      
+                        
+                        <span class= two></span> ChildNodeVar3 = ParElementVar.childNodes[x]; => [certain Child Node] <br>                      
+                    
+                    //=========================================================== <br> <br>                                                        
+                    //=========================================================== <br> <br>                                                                                                                                                                                                      
+                
+                [B]// Removing  [child Elements - child Nodes] from Parent Element {ParElementVar.removeChild(ParElementVar. {several Methods});}: <br>                
+                    
+                    [1] Removing [child Elements - child Nodes] from Parent elememnt by {the Childs defined Variables} :<br>                                            
+                        <span class= one></span> ParElementVar.removeChild(ParElementVar.ChildElemVar1);<br> <br>                                                                                          
+                        
+                        <span class= one></span> ParElementVar.removeChild(ParElementVar.ChildElemVar2);<br> <br>                                                                                          
+                        
+                        <span class= one></span> ParElementVar.removeChild(ParElementVar.ChildElementVar1);<br> <br>                                                                                          
+                        
+                        <span class= one></span> ParElementVar.removeChild(ParElementVar.ChildElementVar2);<br> <br>                                                                                          
+                        
+                        <span class= one></span> ParElementVar.removeChild(ParElementVar.ChildElementVar3);<br> <br>                                                                                          
+    
+                        
+                        <span class= one></span> ParElementVar.removeChild(ParElementVar.ChildNodeVar1);<br> <br>                                                                                          
+                            
+                        <span class= one></span> ParElementVar.removeChild(ParElementVar.ChildNodeVar2);<br> <br>                                                                                          
+                        
+                        <span class= one></span> ParElementVar.removeChild(ParElementVar.ChildNodeVar3);<br> <br>                                                                                          
+
+                    [2] Remove [Child Nodes - child elements] from the Parent element by {direct method accessing }:<br>
+                        [a] Removing [child Elements]: <br>
+                            <span class= one></span> ParElementVar.removeChild(ParElementVar.firstElementChild);<br> <br>                                                                                                                  
+                            
+                            <span class= one></span> ParElementVar.removeChild(ParElementVar.lastElementChild);<br> <br>                                                                                                                  
+                            
+                            <span class= one></span> ParElementVar.removeChild(ParElementVar.children[x]);<br> <br>                                                                                                                  
+                            
+                        [b] removing [child Nodes]: <br>
+                            <span class= one></span> ParElementVar.removeChild(ParElementVar.firstChild);<br> <br>                                                                                                                  
+                            
+                            <span class= one></span> ParElementVar.removeChild(ParElementVar.lastChild);<br> <br>                                                                                                                  
+                            
+                            <span class= one></span> ParElementVar.removeChild(ParElementVar.childNodes[x]);<br> <br>                                                                                                                  
+
+                //=========================================================== <br> <br>                                                                    
+                //=========================================================== <br> <br>                                                        
+                //=========================================================== <br> <br>                                                        
+            
+            <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMPract" id="JSDOMPract">
+            <header>
+                <h3> JS DOM [Element Children Remove Child]  General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here one Major Application will include following main [ 2 Paths] of the :  &gt;&gt; <br>
+                
+                <ul>
+                    <li> {Path 1} => Removing [Child Element]: including Following (3) Methods:  </li>
+                        <ol>
+                            <li>Using first Element child Method </li>
+                            <li>Using last Element child Method </li>
+                            <li>Using certian Element's index child Method in Parent element </li>
+                        </ol>
+                        
+                    <li> {Path 2} => Removing [Child Nodes]: including Following (3) methods:  </li>                        
+                        <ol>
+                            <li>Using first child Node Method </li>
+                            <li>Using last child Node Method </li>
+                            <li>Using certian child's index Method in Parent element </li>
+                        </ol>
+                </ul>
+                
+            <br>            
+
+            
+            <section id=sec class=secClass>
+                <h2> This is heading 2 </h2>
+                <div> This is Main div </div>
+                <p> This is child paragarph </p>
+            </section> <br>
+
+
+            <textarea id=txtarea class=txtarea> </textarea><br>                                  
+
+            
+            <script  src="ElemChildrenRemChild.js">
+            </script>
+
+            <button class=btn onclick="test()"> Click to Start [Elements children Remove Child (Child Node - Child Element)]  Application    
+            </button> 
+                                    
+            <br>    
+                                          
+        <hr>
+                <button id=btn class="btn" onclick="display()">Display JS Code</button>
+                
+                <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Testing JS DOM [Children Remove Child ]  Application  <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                                                        
+                        
+                        <span class=one></span> &lt;script src=".js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JS DOM [Element Children Remove Child]  */ <br>                    
+                        template-string-converter.enable; <br><br>
+                                                
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div>
+                
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 15 Video File:</h3>
+
+            <iframe
+                width="100%"
+                height="100%"
+                allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"
+                frameborder="0"
+                preload="yes"
+                src="https://www.youtube.com/embed/watch?v=5emapNHT0h4&list=PLDoPjvoNmBAxx97QDMOCpzxbu1ZHJ4i7i&index=15&controls=0&loop=1&autoplay=1&fs=1"
+            >
+            </iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\HTML JS Dom\15 JS HTML Dom Elements  Children  Remove Child.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS DOM Lesson15 [Element Children (Remove Child)]  ");
+    </script>
+    
+
+</body>
+
+</html>       

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS OOP Lesson 10 [For In Loop with Object properties] </title>
+    <link rel="stylesheet" href="JS OOP Lesson10 [For In Loop with Object properties].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JS OOP Lesson 10 [For In Loop with Object properties]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS OOP main Topics">
+                JS OOP Lesson9 [For In Loop with Object properties] Main Topics </a> </li>
+
+            <li> <a href=#JSOOPCon title="Go to JS OOP [For In Loop with Object properties] Concept">
+                JS OOP Lesson9 [For In Loop with Object properties] Concept </a> </li>
+
+            <li> <a href=#JSOOPImp title="Go to JS OOP [For In Loop with Object properties] Importance & Benefits">
+                JS OOP Lesson9 [For In Loop with Object properties] Importance & Benefits </a> </li>
+
+            <li> <a href=#JSOOPSyntx title="Go to JS OOP [For In Loop with Object properties] Syntax">
+                JS OOP Lesson9 [For In Loop with Object properties] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSOOPPracts title="Go to JS OOP [For In Loop with Object properties] Practical Applications">
+                JS OOP Lesson9 [For In Loop with Object properties] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS OOP Course <span> JS OOP Lesson 10 [For In Loop with Object properties]  </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                JS OOP [For In Loop with Object properties] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS OOP [For In Loop with Object properties] Concept. </li>
+
+                    <li> JS OOP [For In Loop with Object properties] Importance & Benefits. </li>
+
+                    <li> JS OOP [For In Loop with Object properties] Syntax [Define + Access]. </li>
+
+                    <li> JS OOP [For In Loop with Object properties] Practical Application. </li>
+                </ol>
+
+                <p> &gt; Main New Syntax & Methods in this lesson are as following :</p>
+                <ol type="I">
+                    
+                    <li> {Object.defineProperty();} : JS OOP Define new Property and add it in an Object.</li>                    
+                    
+                    <li> {delete ObjName.PropName;} : JS OOP Delete an Property from an Object . </li>
+
+                    <li> {Configurable: true} : Property {Can} be Deleted Later from an Object . </li>
+                    
+                    <li> {Configurable: false} : Property {Can NOT} be Deleted Later from an Object  . </li>                    
+                    
+                    <li> {const ObjName = Object.freeze({PropName: "Value"})} : Defining a new Freezed Object {It's Properties Can Not be deleted later}. </li>                    
+                </ol>
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPCon" id="JSOOPCon">
+            <header>
+                <h3> JS OOP [For In Loop with Object properties] Concept: </h3>
+            </header>
+            
+            <p> =&gt; JS OOP [Delete Operator]: Is one of Commonly and usuallly used controling Object's Properties Method to (DELETE) the Property from Object in Javascript OOP.
+
+                <p> =&gt; JS OOP [Configurable Flag] : Flag(s) are the Attributes of Property's Properties in Object, and there are many Flags of Object's Property, but in this lesson we will study only [Configurable] Flag. </p>
+                
+                <p> =&gt; JS OOP [Configurable Flag: true-false] : This Flag or Attribute is about Detecting if the property will be able to be deleted or Not [by Property Delete Funtion Method] </p>
+            
+                <p> JS OOP [ const ObjName = Object.freeze({PropName: "Value"}); ] : Defining a Freezed Object {It's Properties Can Not be deleted later} even by using Delete Method . </p>                    
+            
+                <p> =&gt; JS OOP [For In Loop with Object properties] : These Methods will allow to developer the following programing features: </p>
+
+                <ol>
+                    <li> { Define Property }: The ability define a new Property(s) with certain Key Name , Value , and Flags/Attributes, AND add it to a certain Object.</li>
+                                        
+                    <li> { Delete Operator }: The ability to delete a certain property from a certain Object {with true Configurable flag}. </li>
+                    
+                    <li> { Configurable Flag: true-false }: The ability to detect the ability of Deletion Attribute/Property of a certain Object's Property. </li>
+                    
+                    <li> { Object.freeze({PropName: "Value"}); }: The ability to Define a whole Object with Undeletable Properties (Same like {configurable flag: flase}) . </li>
+                </ol>
+
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSOOPImp" id="JSOOPImp">
+            <header>
+                <h3> JS OOP [For In Loop with Object properties] Importance & Benefits: </h3>
+            </header>
+
+            <p> [For In Loop with Object properties Method] gives us the Following Features : <br>
+                <ul>
+                    <li> Great ability to create unlimitless count of Properties in any Object with Full controling of it's properties or Flags or Attributes</li>
+                    <li> Full Control of Object's Property(s) Delelting function, whether of the Whole Object {Freeze Object method}, OR Certain Object's Property {configurable Flag} , with all it's References form Memory and Garbag Collecting ability </li>
+                    <li> These Methods will give programer Great ability in dealing with advnaced Techologies such as [DOM, BOM, Bootstrap] . </li>                 
+                    <li> All the previous Featueres of Assinging Mehthod gives great programing ability to design more complicated Scripts and Functional operations </li>
+                </ul>
+        </section>
+
+        <!--------------------------------------------------------------------s---------------------------------->
+        <section class="JSOOPSyntx" id="JSOOPSyntx">
+            <header>
+                <h3> JS OOP [For In Loop with Object properties] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS OOP Defining Object by [For In Loop with Object properties] Methods as following : </p>
+            <div id="Code" class="Code">
+
+                // A) [Define New Property] Method Syntax :<br><br>                
+                // A1) Defining an empty Object: <br>
+                <span class=one></span> const objName = {}; <br><br>
+                
+                // A2) Defining and Adding a new Property in an Object + with Ability for Deleting Flag/Attribute (configurable:true) <br>
+                <span class=one></span> Object.defineProperty(objName, newPropertyName, {value: #Property Value, configurable:true); <br><br>
+                
+                // A3) Defining and Adding a new Property in an Object + without an Ability for Deleting Flag/Attribute (configurable:false) <br>
+                <span class=one></span> Object.defineProperty(objName, new Property Name, {value: #Property Value, configurable:false); <br><br>
+                                        
+                // A4) Printing the Whole Object after defining and adding the new Property: <br>
+                <span class=one></span> console.log(objName); <br><br>
+                
+                // A5) Printing the certain New Object's Property after defining and adding to the Object: <br>
+                <span class=one></span> console.log(objName.PropName); <br><br>
+                <span class=one></span> console.log(objName["PropName"]); <br><br>
+                //=========================================================== <br>
+                //=========================================================== <br><br>                
+                
+                // B) [Defining a new Freezed Object (Undeletable Object's Properties) ] :  <br> 
+                <span class=one></span> const FobjName = Object.freeze({propertyName: "Value"});<br><br>
+                
+                // B1) [Testing the ability for deleting a Property from Freezed Object {will give us [False]} ]: <br>                            
+                <span class=one></span> console.log(delete FobjName.propertyName); <br><br>
+                
+                // B2) [Printing the Whole Freezed Object after trying to delete it's Property [Will be Printed Successfully] ]: <br>                            
+                <span class=one></span> console.log(objName);  <br><br>
+                
+                // B3) [Printing the Property of Freezed Object after trying to delete it [Will be Printed Successfully] ]: <br>                            
+                <span class=one></span> console.log(objName.propertyName);  <br><br>                
+                //=========================================================== <br><br>                
+                
+                // C) [Deleting a Property from a Defined Object] : <br>
+                <span class=one></span> delete objName.PropName; <br><br>                            
+                <span class=one></span> delete objName["PropName"]; <br><br>                            
+                
+                // C1) Printing the Whole Object after Deleting a Property from the Object [Will print the Object WITH OUT of the Deleted Property] : <br>
+                <span class=one></span> console.log(objName); <br><br>
+                
+                // C2) Printing the certain New Object's Property after Deleting a Property from the Object [Will print Undefined because the property has been deleted successfutly]: <br>
+                <span class=one></span> console.log(objName.PropName); <br><br>
+                <span class=one></span> console.log(objName["PropName"]); <br><br>
+                
+                //============================================================= <br><br>                                                                
+                <br><br> =======================================================
+                <br><br> =======================================================
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPPract" id="JSOOPPract">
+            <header>
+                <h3> JS OOP [For In Loop with Object properties] General Practical Applications : </h3>
+            </header>
+
+            
+            <p> =&gt; Here one Major Application which include inner (4) Lesson Syntaxes Methods as follwoing :  &gt;&gt; <br>
+
+                <ol>
+                    <li> Delete Operator </li>
+                    <li> Configurable Flag </li>
+                    <li> Define New Property  </li>
+                    <li> Freeze Object </li>
+                    
+                                                            
+            <p> =&gt; There will be (3) Modes as following : <br>
+
+                <ul>
+                    <li> Defining a new Ordinaray Object with ability to [Add new property, Delete a definend property, Printing certain property and all object, Checking of delete property Syntax] </li>
+                    <li> Defining a new Freezed Object with ability to [Add new property, Delete a definend property, Printing certain property and all object, Checking of delete property Syntax]</li>
+                    
+                </ul>                    
+                <br>
+
+
+            <textarea id=txtarea class=txtarea> </textarea><br>
+            
+            <button class=btn onclick="objFor()"> Click to Start [Creating Object [by For Loop] applicaion  
+            </button>                                            
+            
+            <br>        
+            
+            <textarea id=txtarea1 class=txtarea1> </textarea><br>
+            
+            <button class=btn onclick="Display1()"> Click to Display JS code [objFor] 
+            </button>                                            
+            
+            <br>
+            <hr>            
+            <!-- ========================================================================================================== -->
+            
+            <textarea id=txtarea class=txtarea> </textarea><br>            
+            <br>            
+            <button class=btn onclick="objForIn1()"> Click to Start [Printing Pre-defined Object's Properties [by For In Loop]] applicaion  
+            </button>                                            
+            <br>            
+            
+            <textarea id=txtarea2 class=txtarea2> </textarea><br>            
+            <br>
+            <button class=btn onclick="Display2()"> Click to Display Js Code [objForIn1]
+            </button>                                            
+            
+            <br>
+            <hr>
+            
+            
+            <!-- ========================================================================================================== -->
+            <textarea id=txtarea class=txtarea> </textarea>
+            <br>            
+            <button class=btn onclick="objForIn2()"> Click to Start [Creating + Printing Object [by For In Loop] applicaion  
+            </button>                                            
+            <br>
+
+            <textarea id=txtarea3 class=txtarea3> </textarea><br>            
+            <br>
+            <button class=btn onclick="Display3()"> Click to Display Js Code [objForIn2]
+            </button>                                                        
+            <br>
+            <hr>
+            
+            <br>
+            
+            <script src="JSOOPForInObjProps.js">
+            </script>
+            
+                <hr>
+                
+            <!-- <div class=JSOOPForInObjProps>
+                    <code>
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+
+                        <span class=one></span> &lt;button class="btn" onclick="objCreator()"&gt;<br>                           
+                        <span class=two></span> Click to Start [OOP Object Click to Start [Object Control] Application] <br>         
+                        <span class=one></span> &lt;/button&gt; <br><br>                            
+
+                        <span class=one></span> &lt;script src="JSOOPDefObj.js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+
+                        /* global, cosole, document, alert, prompt */ <br>
+                        /* JSOOP [For In Loop with Object properties] */ <br>
+                        =======================================================<br><br>
+                        // Major Function :<br><br>
+                        
+                        function objForIn1() { <br>
+
+                            <span class=one></span> alert("Welcome to Printing [Pre-defined] Object's Properties [by For In Loop] "); <br>
+                            
+                            <span class=one></span> var value1 = prompt("Enter First property value : "), <br>
+                                <span class=two></span> value2 = prompt("Enter Second property value : "); <br><br>
+                                
+                            <span class=one></span> var final = '', <br>
+                                <span class=two></span> count = 0;  <br> <br>
+                                
+                            <span class=one></span> const newObj = { <br>
+                                <span class=two></span> name : value1, <br>
+                                <span class=two></span> age : value2, <br>                            
+                                <span class=two></span> }; <br> <br>
+                                
+                            <span class=one></span> // Priting all Object's properties Names: <br>
+                            
+                            <span class=one></span> console.log("Priting all Object's properties Names\n" + <br>
+                                <span class=two></span> Object.keys(newObj) + "\n=======================\n"); <br> <br>
+                                
+                            <span class=one></span> // Priting all Object's properties Values: <br><br>
+                                                    
+                            <span class=one></span> console.log("Priting all Object's properties Values\n" + <br>
+                                <span class=two></span> Object.values(newObj) + "\n=======================\n" ); <br><br>
+                            
+                            <span class=one></span> // Printing the Pre-Defined Object by for In Loop: <br><br>
+                                
+                            <span class=one></span> for (const info in newObj) { <br><br>
+                                    
+                                <span class=two></span> console.log("your property key names nubmer" + <br>
+                                    <span class=three></span> (count+1) + "as following : "); <br>             
+                                
+                                    <span class=three></span> console.log(info);<br> <br>
+                                    
+                                    
+                                <span class=two></span> console.log("your property [key values] number :" + <br>
+                                    <span class=three></span> (count+1) + "as following:"); <br> <br>           
+                                
+                                <span class=two></span> console.log(newObj[info]);<br>
+                                    
+                                                
+                                <span class=two></span> console.log("your properties [key names + values]" + <br>
+                                    <span class=three></span>(count+1) + " as following : "); <br>
+            
+                                <span class=two></span>console.log(info, newObj[info]); <br>
+                                    
+                                <span class=two></span> final += "Property number (" + (count+1) + ") :" + <br>
+                                    <span class=three></span>  info + " : " + newObj[info] + "\n"; <br>                                                                         
+                                
+                                <span class=two></span> count++; <br>
+                                    
+                            <span class=one></span> } <br>
+                                
+                            <span class=one></span>document.getElementById("txtarea").innerHTML +=  final; <br>
+                                                            
+                        } <br> 
+                        
+                    //====================================================================================================  <br>  
+                                     
+                    </code>
+                </div> -->
+        </section>
+
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------------------------------->
+        
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\alnoaman\Desktop\New folder\My Web Pages\Dndnha.Com.Elnhaya.Tetr.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 10 Video File:</h3>
+
+            <iframe
+                width="100%"
+                height="100%"
+                allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"
+                frameborder="0"
+                preload="yes"
+                src="https://www.youtube.com/embed/watch?v=Zo51hQJJWRM&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=10&controls=0&loop=1&autoplay=1&fs=1"
+            >
+            </iframe>
+
+            <!-- <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\10 JavaScript OOP For In Loop With Object Properties.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video> -->
+        </section>
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS OOP Lesson 10 [For In Loop with Object properties] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html> 

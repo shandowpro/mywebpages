@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> JS OOP Lesson 4 Additional Application on [ Defining Object With Object Literals Part 2 ] </title>
+    <link rel="stylesheet" href="JS OOP Additional Applications on Lesson 4.css" media="all" >
+    
+    <script>    
+                     
+    </script>     
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JS OOP Lesson 4 Additional Applications on [ Defining Object With Object Literals Part 2 ]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="Go to JS OOP main Topics" >
+                    JS OOP Additional Applications on [Defining Object With Object Literals Part 2] Main Topics </a> </li>           
+            <li> <a href=#LitDefApp1 title="Go to [Age Calculation] Application 1" >
+                    JS OOP [Age Calculation] Application 1 </a> </li>             
+            
+            <li> <a href=#LitDefApp2 title="Go to [Constellation Calculation] Application 2" >
+                    JS OOP [Constellation Calculation] Application 2 </a> </li>    
+                                    
+            <li> <a href=#LitDefApp3 title="Go to [Grades Calculation] Application 3" >
+                    JS OOP [Grades Calculation] Application 3 </a> </li>             
+            
+            <li> <a href=#LitDefApp4 title=" JS OOP [] Application 4 " > JS OOP [] Application 4 </a> </li>             
+                        
+                                                         
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>        
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to JS OOP Course <span> JS OOP Lesson 4 Additional Application on [ Defining Object With Object Literals Part 2 ] </span> 
+    </main> 
+<!-------------------------------------------------------------------------------------------------------------->                      
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+                
+            <header>                 
+                JS OOP Additional Applications on [Defining Object With Object Literals Part 2] Main Topics  :
+            </header>
+            
+            <article>                                                
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">                                                            
+                    <li> Application 1 [Age Calculation]. </li>               
+                                                            
+                    <li> Application 2 [Constellation Calculation]. </li>
+                    
+                    <li> Application 3 [Grades Calculation]. </li>
+                                                                                                                            
+                    <li> Application 4 [ Calculation].. </li>
+                </ol>    
+            </article>            
+        </Section>
+            
+        <!------------------------------------------------------------------------------------------------------>      
+        <!------------------------------------------------------------------------------------------------------>                              
+        <section class="LitDefApp1" id="LitDefApp1">
+            <header>
+                <h3>  JS OOP [Age Calculation] Application 1 :  </h3>                                                       
+            </header>
+            <p> =&gt; [Age Calculation]: In this Application, the user will Enter his age by years and the programe will                   Calculate his age by each Months, Weeks and Days . 
+                
+           </p>                                             
+                <br>
+                    
+                <textarea id=txtarea class=txtarea > </textarea><br>    
+
+                <button class=btn onclick="ageCalc()"> Click to Start [Age Calculation] Application 1 
+                </button>
+                    <br>
+
+                <script src="JSOOPLitDef2MultApp.js"> </script>                                        
+            <hr>
+
+                <div class=AgeCalculationApp1 >
+                    <code>
+                        // HTML Codes: <br>
+                        &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        &lt;/textarea&gt; <br><br>
+
+                        &lt;button class="btn" onclick="ageCalc"&gt;<br>                            
+                        &nbsp;&nbsp;Click to Start [Age Calculation] Application 1<br>                               
+                        &lt;/button&gt; <br><br>                            
+
+                        &lt;script src="JSOOPLitDef2MultApp.js"&gt;<br>                            
+                        &lt;/script&gt; <br><br>
+
+                        =======================================================<br><br>
+
+                        // JS Codes [JSOOPLitDef2MultApp.js] : <br><br>
+                        /* global alert, document, prompt, console */<br>
+                        /* jslint plusplus: true evil: true */ <br>
+                        /* [Age Calculation] Application 1 */ <br>
+                        // ========================================// <br>                             
+
+                        function ageCalc() { <br>
+    
+                        <span class=one ></span>alert("Welcome to Age Calculation Application [by Total Months, Weeks, Days] ...");
+
+                            var age = parseInt(prompt("Enter your Age By Years..."));
+
+                            let user={
+                                ageDays: (age*365),
+                                ageWeeks: (age*48),         
+                                ageMonths: (age*12),         
+
+                                getAgeByMonths: () => "Your Age by Months = " + user.ageMonths,
+
+                                getAgeByWeeks: () => "Your Age by Weeks = " + user.ageWeeks,
+
+                                getAgeByDays: () => "Your Age by Days = " + user.ageDays,                
+                            };
+
+
+
+                            var select = prompt("Press 1 to get your Age by Months \n Press 2 to get your Age by Weeks \n Press 3 to get your Age by  Days ...");
+
+                            if (select == "1") {
+                                    user.getAgeByMonths();
+
+                            } else if (select == "2") {
+                                    user.getAgeByWeeks();            
+
+                            } else if (select == "3") {
+                                    user.getAgeByDays();            
+
+                            } else {            
+                                    alert("Error Entry!");
+                            }
+
+                        }
+                        
+                        //////////////////////////////////////////////////////////<br><br><br>
+                                               
+                    </code>                                        
+                </div>                                                                       
+            
+        </section>
+                           
+        <!------------------------------------------------------------------------------------------------------>               
+        <section class="LitDefApp2" id="LitDefApp2">
+            <header>
+                <h3> JS OOP [Constellation  Calculation] Application 2   </h3>           
+            </header>
+
+            <p> =&gt; [Age Calculation]: In this Application, the user will Enter his age by years and the programe will                   Calculate his age by each Months, Weeks and Days . 
+                
+           </p>                                             
+                <br>
+                    
+                <textarea id=txtarea class=txtarea > </textarea><br>    
+
+                <button class=btn onclick="ageCalc()"> Click to Start [Age Calculation] Application 1 
+                </button>
+                    <br>
+
+                <script src="JSOOPLitDef2MultApp.js"> </script>                                        
+            <hr>
+
+                <div class=ConstCalculationApp2 >
+                    <code>
+                        // HTML Codes: <br>
+                        &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        &lt;/textarea&gt; <br><br>
+
+                        &lt;button class="btn" onclick="ageCalc"&gt;<br>                            
+                        &nbsp;&nbsp;Click to Start [Age Calculation] Application 1<br>                               
+                        &lt;/button&gt; <br><br>                            
+
+                        &lt;script src="JSOOPLitDef2MultApp.js"&gt;<br>                            
+                        &lt;/script&gt; <br><br>
+
+                        =======================================================<br><br>
+
+                        // JS Codes [JSOOPLitDef2MultApp.js] : <br><br>
+                        /* global alert, document, prompt, console */<br>
+                        /* jslint plusplus: true evil: true */ <br>
+                        /* [Age Calculation] Application 1 */ <br>
+                        // ========================================// <br>                             
+
+                        
+                        //////////////////////////////////////////////////////////<br><br><br>
+                                               
+                    </code>                                        
+                </div>                                                                                                       
+            
+        </section>
+                        
+        <!--------------------------------------------------------------------s---------------------------------->                                               
+        <section class="LitDefApp3" id="LitDefApp3">
+            <header>
+                <h3> JS OOP [Grades Calculation] Application 3 </h3>                     
+            </header>                                                
+                
+            <p> =&gt; [Grades Calculation]: In this Application, the user will Enter his age by years and the programe will               Calculate his age by each Months, Weeks and Days . 
+                
+           </p>                                             
+                <br>
+                    
+                <textarea id=txtarea class=txtarea > </textarea><br>    
+
+                <button class=btn onclick="gradeCalc()"> Click to Start [Age Calculation] Application 1 
+                </button>
+                    <br>
+
+                <script src="JSOOPLitDef2MultApp.js"> </script>                                        
+            <hr>
+
+                <div class=GradeCalculationApp3 >
+                    <code>
+                        // HTML Codes: <br>
+                        &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        &lt;/textarea&gt; <br><br>
+
+                        &lt;button class="btn" onclick="ageCalc"&gt;<br>                            
+                        &nbsp;&nbsp;Click to Start [Age Calculation] Application 1<br>                               
+                        &lt;/button&gt; <br><br>                            
+
+                        &lt;script src="JSOOPLitDef2MultApp.js"&gt;<br>                            
+                        &lt;/script&gt; <br><br>
+
+                        =======================================================<br><br>
+
+                        // JS Codes [JSOOPLitDef2MultApp.js] : <br><br>
+                        /* global alert, document, prompt, console */<br>
+                        /* jslint plusplus: true evil: true */ <br>
+                        /* [Age Calculation] Application 1 */ <br>
+                        // ========================================// <br>                             
+
+                        
+                        
+                        //////////////////////////////////////////////////////////<br><br><br>
+                                               
+                    </code>                                        
+                </div>                                                                                               
+            <hr>
+        </section>         
+            
+        <!------------------------------------------------------------------------------------------------------>                                               
+        <section class="LitDefApp4" id="LitDefApp4">
+            <header>
+                <h3> </h3>                     
+            </header> 
+            
+            <p> =&gt; 
+                
+           </p>                                             
+                <br>
+                    
+                <textarea id=txtarea class=txtarea > </textarea><br>    
+
+                <button class=btn onclick="test1()"> Click to Start [Date & Time ] Main Function part3 
+                                                    [now-parse-Convs] Application
+                </button>
+                    <br>
+
+                <script src="JSDateTimeFunction3.js"> </script>                                        
+            <hr>
+
+                <div class= >
+                    <code>
+                        // HTML Codes: <br>
+                        &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        &lt;/textarea&gt; <br><br>
+
+                        &lt;button class="btn" onclick="(test)"&gt;<br>                            
+                        &nbsp;&nbsp;Click to Start [Date & Time ] Main Function part3 (now-parse-Conv)                       Application<br>                               
+                        &lt;/button&gt; <br><br>                            
+
+                        &lt;script src="JSDateFunction3.js"&gt;<br>                            
+                        &lt;/script&gt; <br><br>
+
+                        =======================================================<br><br>
+
+                        // JS Codes [JSDateFunction3.js] : <br><br>
+                        /* global alert, document, prompt, console */<br>
+                        /* jslint plusplus: true evil: true */ <br>
+                        /* [Date & Time part3 - Function part 3 (now-parse-Conv)] Application */ <br>
+                        // ========================================// <br>                             
+
+                        function test1() { <br>                            
+    
+                                //////////////////////////////////////////////////////////<br><br><br>
+                                               
+                    </code>                                        
+                </div>                                                                       
+        <!-------------------------------------------------------------------------------------------------------------------->                 
+             
+        </section>                                                                
+<!-------------------------------------------------------------------------------------->                
+<!---------------------------------------------------------------------------------------->                                     
+    </div>
+        <!------------------------------------------------------------------------------------------------------>       
+    <!------------------------------------------------------------------------------------------------------>                                                                              
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="340"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3> 
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="385">
+               <input type="hidden" name="months" value="34">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num1">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file Function part 3 (now-parse-Conv)...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 3 Video File:</h3>
+                <video controls width="300" height="300" >
+                    <source src="C:\Users\alnoaman\Desktop\New folder\My Web Pages\4 JavaScript OOP\OOP JS Course\4 JavaScript OOP  Defining Object With Object Literals Part 2.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video>                          
+       </section>
+        
+    
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>
+    
+    
+    <script>
+        alert("Welcome to JS OOP");        
+    </script>
+    
+    
+    <script src="onmouseover.js"></script>
+            
+</body>
+</html>

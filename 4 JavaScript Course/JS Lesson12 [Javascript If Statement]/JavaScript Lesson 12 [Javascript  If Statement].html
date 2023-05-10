@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> JavaScript Lesson 12 [Javascript IF Statement] </title>
+    <link rel="stylesheet" href="JavaScript [Javascript If Statement].css" media="all" >
+    
+    <script src=IfStatment.js> </script>    
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JavaScript Lesson 12 [Javascript IF Statement]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="Go to Javascript main Topics" > JavaScript [IF Statement] Main Topics </a> </li>            
+            
+            <li> <a href=#JSIFStatementCon   title="Go to Javascript IF Statement Concept" > Javascript [IF Statements] Concept </a> </li>                                 
+            
+            <li> <a href=#JSIFStatementTypes title="Go to Javascript IF Statement Types" > Javascript [IF Statements] Types </a> </li>                       
+                       
+            <li> <a href=#JSIfElse  title="Go to Javascript IF If - Else If Example" > Javascript [ IF - Else If ]  </a> </li>                       
+            
+            <li> <a href=#JSIfElseIfElse   title="Go to Javascript IF IF If - Else If - Else Example" >  Javascript [ IF  - Else If - Else ]  </a> </li>                       
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to JavaScript Course <span> JavaScript Lesson 12 [Javascript IF Statement] </span> 
+    </main>
+<!-------------------------------------------------------------------------------------------------------------->                        
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>                 
+                JavaScript [IF Statement]
+            </header>
+            
+            <article>                                                
+                <p> &gt; The New object in this lesson as following (in one Tag):</p>
+                <ol type="A">                    
+                    <li> Main IF Statement Concept . </li>
+                    <li> IF Statement Types: </li>                                        
+                        <ol>
+                            <li> If - else one condition  </li>
+                            <li> If - else If - else </li>                            
+                        </ol>
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>                               
+        <section class="JSIFStatementCon" id="JSIFStatementCon">
+            <header>                
+                <h3> Main Concept of IF Statement :</h3>
+            </header>                    
+                <p> =&gt; [JS IF Statement] as it in any programing Languages If Statement is a Basic critical Function that there is no any JS File or Front End page is not containing a If Statement or function in it's codes . </p>                                                
+                <p> =&gt; [JS IF Statement] has severals programing Usages and applications such as following : </p>
+                    <ol type="A">
+                        <li>  Programing Events functions upon certain conditions </li>                                                    
+                
+                        <li> With other functions in Js it can be implenemt a programing dialog between page and User </li>
+                        
+                        <li> Multiple Specific Applicaitons basic on web JS. </li>
+                            
+                    </ol>                                                    
+        </section>                                                
+        <!------------------------------------------------------------------------------------------------------>                               
+        <section class="JSIFStatementTypes" id="JSIFStatementTypes">
+            <header>
+                <h3> IF Statement Main Types + Examples : </h3>                                              
+            </header>
+            
+            <p> =&gt; [JS IF Statement] main types such as : </p>
+                <ol type="A">
+                    <li> <h3 class="JSIfElse" id="JSIfElse"> [If - Else Statement Function]: </h3></li>
+                        <p> =&gt; [If - Else Statement Function] it is the basic form for Conditional if Statement for only one Condition, and it's unconditional State . </p>     
+                            
+                        <p> =&gt; [If - Else Statement Function] Code can also be written Directly in Browser Console FrameWork Page to Excute a Javascript Code certain code with Console Testing FrameWork , as following : </p>                                     
+                    
+                        <p> =&gt; [If - Else Statement Function] can be implemented by single values or Variables Mathematically and logically. </p>                                     
+                    
+                    <div class="JSIfElseExp">
+                        <Header>
+                            <h3> If - Else  Example [Js + Console]: </h3>
+                            <p> The Sourcing seperated JS Code Soure is [IfStatment.js]:</p>
+                        </Header>                                    
+                        <div id="testIfElse"> </div>      
+                        <script src="IfStatment1.js"></script>                        
+
+                        <button class=btn onclick="display()"> Click to Show [If-Else Statement] Function JS Code     
+                        </button> 
+                        
+                    </div>
+                                                                                                    
+                    <div class="JSIFStatementTypesExp1"> 
+                        <code>
+                            HTML Codes :<br>
+                            &nbsp; &nbsp; &lt;Div&gt; &lt;/Div&gt; <br>
+                            &nbsp; &nbsp; &lt; script src="IfStatment1.js" &gt; &nbsp; &lt; /script &gt; <br><br>                                                                                     
+                            JS Codes :<br>
+                            // Declaration of Some Vars:<br>
+                            var myAge = prompt("What is your Age?");<br><br>                            
+                            
+                            // If Functions (informing User about his age and premision result upon his age):<br> 
+                            if (myAge &lt; 18){<br>
+                            &nbsp; &nbsp; alert("You are underage ! ");<br>
+                            &nbsp; &nbsp; console("You are underage ! ");<br>    
+                            &nbsp; &nbsp; document.getElementById("testIfElse").innerHTML = "Sorry your <br>
+                            &nbsp; &nbsp; Age is " + myAge + "So You are not allowed to Enter";<br>
+                            } else {<br>
+                            &nbsp; &nbsp; alert("You are in Age ! ");<br>
+                            &nbsp; &nbsp; console("You are in Age ! ");<br>    
+                            &nbsp; &nbsp; document.getElementById("testIfElse").innerHTML = "Your Age is"<br>
+                            &nbsp; &nbsp; + myAge +<br>
+                            &nbsp; &nbsp; "So You are allowed to Enter";<br>
+                            }<br><br>                                                                     
+
+                            <textarea id="SourceCode" readonly></textarea>
+                        </code>
+                    </div>                                   
+                    <!---------------------------------------------------------------------------->    
+                    <li> <h3 class="JSIfElseIfElse" id="JSIfElseIfElse"> [If - Else If - Else]: </h3></li>    
+                        
+                        <p> =&gt; [If - Else If - Else] is more advanced of If statement , that is has more than one Condition in one statement.  </p>     
+                            
+                        <p> =&gt; [If - Else If - Else] Code can also be written Directly in Browser Console FrameWork Page to Excute a Javascript Code certain code with Console Testing             FrameWork. </p>                                     
+                    
+                        <p> =&gt; [If - Else If - Else] can be implemented by single values or Variables, or logical condition(s). </p>                                                                                             
+                        <div class="JSIfElseIfElseExp">
+                            <Header>
+                                <h3> If - Else If - Else   Example [Js + Console]: </h3>
+                                <p> The Sourcing seperated JS Code Soure is [IfStatment1.js]:</p>       
+                            </Header>    
+                                
+                            <div id="testIfElse1">                             
+                            </div>                                                         
+                            <script src="IfStatment1.js"></script>                                  
+                            
+                            <button class=btn onclick="display1()"> Click to Show [If - Else If - Else Statement] Function JS Code     
+                            </button> 
+
+                        </div>
+                    
+                        <div class="JSIFStatementTypesExp1"> 
+                            <code>
+                            HTML Codes :<br>
+                            &nbsp; &nbsp; &lt;Div&gt; &lt;/Div&gt; <br>
+                            &nbsp; &nbsp; &lt; script src="IfStatment1.js" &gt; &nbsp; &lt; /script &gt; <br><br>                                                                                     
+                            JS Codes :<br>
+                            // Declaration of Some Vars:<br>
+                            var myAge = prompt("What is your Age?");<br><br>                            
+                            
+                            // If Functions (informing User about his age and premision result upon his age):<br> 
+                            if (myAge &lt; 18){<br>
+                            &nbsp; &nbsp; alert("You are underage ! ");<br>
+                            &nbsp; &nbsp; console("You are underage ! ");<br>    
+                            &nbsp; &nbsp; document.getElementById("testIfElseElse").innerHTML = "Sorry<br>
+                            &nbsp; &nbsp; your Age is " + myAge + "So You are not allowed to Enter";<br>
+                            } else {<br>
+                            &nbsp; &nbsp; alert("You are in Age ! ");<br>
+                            &nbsp; &nbsp; console("You are in Age ! ");<br>    
+                            &nbsp; &nbsp; document.getElementById("testIfElse").innerHTML = "Your Age is"
+                            &nbsp; &nbsp; + myAge + "So You are allowed to Enter";<br>
+                            }<br><br>     
+                            
+                            <textarea id="SourceCode1" readonly></textarea>                      
+                            </code>
+                        </div>                                                                                   
+                <!---------------------------------------------------------------------------->               
+            </ol>
+        </section>
+    </div>    
+                                                                                    
+        <!------------------------------------------------------------------------------------------------------>                                                                              
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="200"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="22">
+               <IF Statement name="resultD"> </IF Statement>
+               <IF Statement name="resultM"> </IF Statement>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num2">
+               <input type="text" name="num2">
+               
+               <IF Statement name="Rsum"> Summition Result: </IF Statement><br>
+               <IF Statement name="Rsub"> Substraction Result: </IF Statement><br>
+               <IF Statement name="Rmult"> Multiply Result: </IF Statement><br>
+               <IF Statement name="Rdiv"> Division Result: </IF Statement>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 12 Video File:</h3>
+                <iframe			
+				width="100%"
+				height="100%"											
+				allowfullscreen
+				allowfullscreen="allowfullscreen"
+				mozallowfullscreen="mozallowfullscreen"
+				msallowfullscreen="msallowfullscreen"
+				oallowfullscreen="oallowfullscreen"
+				webkitallowfullscreen="webkitallowfullscreen"
+				frameborder="0"				
+				preload="yes"
+				src="https://www.youtube.com/embed/watch?v=cFjj7wW6wro&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=12&controls=0&loop=1&autoplay=1&fs=1" 				
+				>
+			</iframe>
+                <!-- <video controls width="300" height="300" >
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/12 If, Else If, Else Conditions.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                           -->
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>
+    
+    
+    <script>
+        alert("Welcome to JavaScript : Lesson 12 [ IF Statement]");        
+    </script>
+    
+    
+</body>
+</html

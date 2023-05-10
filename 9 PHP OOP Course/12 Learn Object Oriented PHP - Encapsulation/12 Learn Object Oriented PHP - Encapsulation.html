@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>12 Learn Object Oriented PHP - Encapsulation</title>
+    <link
+      rel="stylesheet"
+      href="12 Learn Object Oriented PHP - Encapsulation.css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      12 Learn Object Oriented PHP - Encapsulation
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to PHP OOP main Topics">
+            12 Learn Object Oriented PHP - Encapsulation Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPCon"
+            title="Go to  [PHP OOP 12 Learn Object Oriented PHP - Encapsulation] Concept"
+          >
+            12 Learn Object Oriented PHP - Encapsulation Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPImp"
+            title="Go to  [PHP OOP 12 Learn Object Oriented PHP - Encapsulation] Importance & Benefits"
+          >
+            12 Learn Object Oriented PHP - Encapsulation Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPSyntx"
+            title="Go to  [PHP OOP 12 Learn Object Oriented PHP - Encapsulation] Syntax"
+          >
+            12 Learn Object Oriented PHP - Encapsulation Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPPract"
+            title="Go to  [PHP OOP 12 Learn Object Oriented PHP - Encapsulation] Practical Applications"
+          >
+            12 Learn Object Oriented PHP - Encapsulation Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <main class="Welcome">
+      Welcome to PHP Course
+      <span> 12 Learn Object Oriented PHP - Encapsulation</span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          PHP [PHP OOP 12 Learn Object Oriented PHP - Encapsulation] Main Topics
+          :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>PHP OOP 5 [Encapsulation] used Operator {private}</li>
+            <li>PHP OOP 5 [Encapsulation] Incripting Data Method {sha1()}</li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPCon" id="PHPCon">
+        <header>
+          <h3>[PHP OOP Encapsulation] C1oncept:</h3>
+        </header>
+
+        <h2>
+          =&gt; PHP OOP [Encapsulation] : <br />
+          <ul>
+            <li>
+              Main Concept =&gt; <br />
+              <p>
+                It is a system to Securing Data by only accessing it by using
+                certain method , and not accepting the direct method
+              </p>
+              <p>It is usually used by any OOP System</p>
+              <p>It is also used beside the Incripting method {sha1()}</p>
+              <p>
+                This system prevent accesing to the Encapsulated peroptery
+                directly , but only by using the specfied Class Method created
+                for this puropose
+              </p>
+            </li>
+          </ul>
+        </h2>
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="PHPImp" id="PHPImp">
+        <header>
+          <h3>
+            PHP [PHP OOP 12 Learn Object Oriented PHP - Encapsulation]
+            Importance & Benefits :
+          </h3>
+        </header>
+
+        <p>
+          [Encapsulation] => Is very common and criticaly to use in Data
+          Security with any OOP application and PHP script <br />
+        </p>
+        <p>
+          [Encapsulation] => Safing Direct Accesing to data , wheter to Display
+          or Change <br />
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPSyntx" id="PHPSyntx">
+        <header>
+          <h3>
+            [ PHP OOP [12 Learn Object Oriented PHP - Encapsulation] Syntax &
+            Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Following is a simple syntax code written Emded in a HTML page
+          => <br />
+          Printing string text value from the server in the user website page
+        </p>
+
+        <p>=&gt; [Encapsulation] => <br /></p>
+
+        <p>Syntax: <br /></p>
+        <div id="Code" class="Code">
+          <span class="one"></span> &lt; ?php <br />
+
+          <span class="two"></span> A) Defining new Class {ClassName} with [Null
+          Property value] & [Method using (Parameter) Variable] : <br />
+
+          <span class="three"></span> class ClassName { <br />
+
+          <span class="four"></span> // Class Properties Definging (public
+          Variable) [with Null Property Value] {Not Encapsulated} : <br />
+          <span class="four"></span> private propertyName1; <br />
+
+          <span class="four"></span> // Class Method Defining to access to a
+          certain Property [To change the value] with Using (Parameter + $this +
+          Incription(sha1() ) ) : <br />
+          <span class="four"></span> public function MethodName1($Par) { <br />
+          <span class="five"></span> $this->propertyName1 = sha1($Par); <br />
+          <span class="four"></span> } <br /><br />
+
+          <span class="three"></span> } <br /><br />
+
+          <span class="three"></span> Defining/Creating new Object {objName}
+          with All Defined Properties & Methods : <br />
+          <span class="four"></span> $objName= new ClassName(); <br />
+
+          <span class="three"></span> Calling / Proccessing Object {objName}'s
+          Metods [To change the value of the value of the property] : <br />
+          <span class="four"></span> $objName-> MethodName1('value'); <br />
+          <br />
+
+          <span class="three"></span> Printing the Single property [Incripted +
+          Not Encapsulated] of created Object {after changing by method} :
+          <br />
+          <span class="four"></span> echo $objName-> PropertyName1; <br />
+          <br />
+
+          <span class="three"></span> Printing the Var_dump of new created
+          Object : <br />
+          <span class="four"></span> echo &lt; pre &gt; ; <br />
+          <span class="four"></span> echo var_dump($objName); <br />
+          <span class="four"></span> echo &lt; pre &gt; ; <br />
+          //=========================================================== <br />
+          <br />
+
+          <p>
+            =&gt; PHP new Syntax of the [Encapsulation] (2) Applications as
+            following : <br />
+          </p>
+
+          <ol type="A">
+            <li>
+              First Example => {[(lock Property) (Method : changing lock
+              value)]} + {object Incripted , Not Encapsulated }
+            </li>
+            <li>
+              Second Example => {[(lock Property) (Method : changing lock
+              value)]} + {object Incripted , Encapsulated }
+            </li>
+          </ol>
+          <hr />
+          //=========================================================== <br />
+          <br />
+          <br /><br />
+        </div>
+
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPPract" id="PHPPract">
+        <header>
+          <h3>PHPOOP [Encapsulation] General Practical Applications :</h3>
+        </header>
+
+        <p>In this lesson There is no appplied Examples = > as following :</p>
+
+        <ol type="A">
+          <li>
+            First Example => Definig Class {AppleDevices} => [Creating new Class
+            {Apple Device with non default values of Properties ()} + {(2)
+            Constants + (2) Methods [using the Constant & $ this inside methnod]
+            } + (1)Object[iphone] {iphone6plus with Customized Values} +
+            Printing Object var Dump] , and including the following steps :
+            <br />
+            <ul>
+              <li>
+                Defining and Creating new Class [AppleDevice] {with properties
+                default} : <br />
+                <ul>
+                  <li>Defining the Class Properties Values</li>
+                  <li>
+                    Defining the property by using the [Incripting , but not
+                    Encapsulated]
+                  </li>
+                  <li>
+                    Method (using Parameters + Incripting method) within the
+                    Method of -> To change all Properties vales [Securited]
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Defining and Creating new (1) Object : [iphone6plus] => from the
+                class {AppleDevice}
+              </li>
+              <li>
+                Processing the Method [Changing values of Encapsulated property]
+              </li>
+              <li>
+                Printing the property after changing by single method [This is
+                accepted to be dispalyed, due to the property is {public} and {
+                NOT private} (Not Encapsulated)]
+              </li>
+              <li>
+                Printing the var Dump Object[iphone6plus] after changing the
+                Without Encapsulated variable
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            Second Example => {[(lock Property) (Method : changing lock value)]}
+            + {object Incripted , Encapsulated } , and including the following
+            steps : <br />
+            <ul>
+              <li>
+                Defining and Creating new Class [AppleDevice] {with properties
+                default} : <br />
+                <ul>
+                  <li>Defining the Class Properties Values</li>
+                  <li>Defining an Encapsulated property [private]</li>
+                  <li>
+                    Method (using Parameters + Incripting method) within the
+                    Method of -> To change all Properties vales [Securited]
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Defining and Creating new (1) Object : [iphone7plus] => from the
+                class {AppleDevice}
+              </li>
+              <li>
+                Processing the Method [Changing values of the Encapsulated
+                property]
+              </li>
+              <li>
+                Printing the var Dump Object[iphone6plus] after changing the
+                Without Encapsulated variable
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+
+        <section id="sec" class="txtarea">
+          <a
+            class="btn"
+            href="http://localhost/PHPOOP%20Course/12%20Learn%20Object%20Oriented%20PHP%20-%20Encapsulation/12%20Learn%20Object%20Oriented%20PHP%20-%20Encapsulation.php"
+          >
+            {Main Page} [Display] => {12 Learn Object Oriented PHP -
+            Encapsulation} => Lesson 12 PHP File Webpage by Localhost
+          </a>
+          <br />
+          <br />
+
+          <a
+            class="btn"
+            href="12 Learn Object Oriented PHP - Encapsulation.php"
+          >
+            {Main Page} [Source Code] => {12 Learn Object Oriented PHP -
+            Encapsulation} => Lesson 12 PHP File Webpage by Localhost
+          </a>
+        </section>
+        <br />
+
+        <!-- <section id=sec class=txtarea >                                  
+                  <a class=btn href="http://localhost/PHP%20Course/95%20PHP%205%20In%20Arabic%20-%20Filter%20-%20Whats%20Filter%20&%20Why%20To%20Use%20it/check.php">  
+                    {Check Page} [Display] => {12 Learn Object Oriented PHP - Encapsulation} => {check.php} Webpage by Localhost 
+                </a> <br> <br>             
+                
+                <a class=btn href="check.php">  
+                    {Check Page} [Source Code] => {12 Learn Object Oriented PHP - Encapsulation} => {check.php} Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+        <!-- <script  src="14 PHP OOP  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="VideoSection">
+        <h3>Lesson 12 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=MBLg7Pbec0I&list=PLDoPjvoNmBAxXTPncg0W4lhVS32LO_xtQ&index=12&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\OOP PHP\12 Learn Object Oriented PHP  - Encapsulation.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to 12 Learn Object Oriented PHP - Encapsulation");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

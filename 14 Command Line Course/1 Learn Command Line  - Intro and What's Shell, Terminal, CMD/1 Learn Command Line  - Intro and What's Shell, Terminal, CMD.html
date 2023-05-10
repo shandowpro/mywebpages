@@ -1,0 +1,1335 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    
+    <!-- IE compatiblity Meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    
+    <!-- First Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" >    
+ 
+    <meta content="Learning Course" description="This is Lesson 35 of Bootstrap Course with title : Retouch 2 Media Query Fixes " >    
+
+    <title> 1 Learn Command Line  - Intro and What's Shell, Terminal, CMD </title>
+    
+    <link rel="stylesheet" href="1 Learn Command Line  - Intro and What's Shell, Terminal, CMD.css" media="all">        
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="all">
+    
+    <link rel="stylesheet" href="css/fontawesome.min.css" media="all"> 
+    
+    <link rel="stylesheet" href="css/all.min.css">                    
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Droid+Sans">
+
+    <link rel="stylesheet" href="css/style.css" media="all">
+ 
+    <link rel="stylesheet" href="css/media.css" media="all">
+    
+    <link rel="stylesheet" href="css/hover.css" media="all">
+
+    <link rel="stylesheet" href="css/animate.css" media="all">
+    
+    <link rel="stylesheet" href="css/default_theme.css" media="all">
+    
+            
+    <style>        
+       .custom {
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            margin: 10px auto;
+            border: 5px solid gray;    
+            background-color: #ccc;
+            text-align: center;
+        } 
+         
+        .dis {
+            border: 3px solid red;
+            border-radius: 30px;
+            width: 100%;        
+            text-align: center;
+            line-height: 2em;
+        }
+
+        .item{
+            color: red;
+            font-size: 30px;
+            font-family: monospace;
+            background-color: blue;
+        }
+        
+        .sh {            
+            background-color: blue;
+            color: #fff;
+            margin-bottom: 10px;
+            text-align:center;
+        }
+        
+    </style>
+    <!--[if It IE 9]>
+        <script src="js/html5shiv.min.js"> </script>
+        <script src="js/respond.min.js"> </script>
+    <[endif]!-->
+</head>
+
+<body>
+            
+    <!-------------------------------------------------------------------------------------------------------->
+    <header id="Main" class="Main wow fadeInDown" data-wow-duration="1s">
+        1 Learn Command Line  - Intro and What's Shell, Terminal, CMD
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+    <!-- Bootstrap Navigation Bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+        
+            <!-- 1] {Navbar Container / Header} : Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ToggleMenu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand hvr-pop" href="#"> Shindow Pro <span>lnc.</span> </a>
+            </div>
+        
+            <!-- 2] {Navbar Container / Menu Items} : Collect the nav links, forms, and other content for toggling -->
+            <div id="ToggleMenu" class="collapse navbar-collapse" >
+                
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li class="active"><a href="#MainC"> Main Topics <span class="sr-only">(current)</span></a></li>
+                    
+                    <li><a href="#JSDOMCon">Concept</a></li>
+                    <li><a href="#JSDOMImp">Importance & Benefits</a></li>
+                    <li><a href="#JSDOMSyntx">Syntax & Examples</a></li>
+                    <li><a href="#JSDOMPract">Practical Applications</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Hot Links <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#VideoSection" target="_self" class="videoLink"> Lesson Video </a></li>
+            
+                            <li role="separator" class="divider"></li>
+            
+                            <li><a href="http://shadi-pro.epizy.com" target="_blank"> My References </a></li>
+                            
+                            <li role="separator" class="divider"></li>
+                            
+                            <li><a href="http://shadi-cv.epizy.com" target="_blank"> My Personal Website </a></li>
+                            <!-- <li><a href="#">Something else here</a></li> -->
+                            <!-- <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>                            
+                            <li><a href="#">One more separated link</a></li> -->
+                        </ul>
+                    </li>
+                </ul>
+                
+                <!-- <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form> -->
+
+                <!-- <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul> -->
+
+            </div><!-- /.navbar-collapse -->
+
+        </div><!-- /.container-fluid -->
+
+        <a class="Home hvr-wobble-horizontal" href="#Main" title="Go to page header"> Home </a>
+        <a class="End hvr-wobble-horizontal" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!-- ------------------------ -->  
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
+        <span> Welcome to Git & GitHub Course | </span> <br>
+        1 Learn Command Line  - Intro and What's Shell, Terminal, CMD        
+    </main>
+    <!-- ---------------------------------------------------------------------------------------------------- -->
+    <!-- Options Tool box -->
+    <section class="option-box">
+        <!-- First Tool OPtion {Changing the color of the Whole the Website Template } -->
+                                
+            <div class="color-option text-center" style="float:left"> 
+                <h4> Color Options </h4>
+                <ul class="list-unstyled">
+                    <li data-value="css/default_theme.css"></li>
+                    <li data-value="css/blue_theme.css"></li>
+                    <li data-value="css/purple_theme.css"></li>
+                    <li data-value="css/yellow_theme.css"></li>
+                </ul>
+            </div>
+            
+            <i class="fas fa-gear fa-2x gear-option"></i>            
+                                                                
+    </section>    
+    <!-- ---------------------------------------------------------------------------------------------------- -->        
+        
+    <!-- About Section  -->
+    <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
+        <div class="container">      
+            <h2 class="h1" class="hidden-xs"> About Section => Intro and general theoritical concepts of the  <span><strong>  {Command Lines} </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson is theoritical about {CMD} only  </strong>       </span> </h3> 
+            <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->
+        </div>
+    </section>
+    <!-- ---------------------------------------- -->
+             
+    <!-- Footer Section -->
+    <section class="footer">
+        
+        <div class="container">
+            <div class="row">
+                <!-- First Column {Site Map + Social Media} -->
+                <div class="col-lg-4 col-md-6">
+                    <!-- 1) Site Map  -->
+                    <h3> Site Map </h3>
+                    <ul class="list-unstyled three-columns"> 
+                        <li> <a href="#myslider"> Home </a> </li>
+                        <li> <a href="#about"> About </a> </li>
+                        <li> <a href="#"> Company </a> </li>                        
+                        <li> <a> Design </a> </li>                        
+                        <li> <a> Solutions </a> </li>
+                        <li herf="#"> <a> Contact </a> </li>
+                        <li> <a> Services </a> </li>
+                        <li> <a> Activities </a> </li>
+                        <li> <a> Featured </a> </li>
+                        <li> <a href="http://shadi-pro.epizy.com">My Refs</a></li>
+                        <li> <a href="http://shadi-cv.epizy.com">My CV</a></li>
+                        <li> <a href="http://gtmatrix.com"> GTmatrix.com [Testing website online ]</a></li>
+                        <li> <a href="https://github.com/shindowpro/git-course" target="self">My Github Repo </a></li>
+                    </ul>
+                    
+                    <!-- 2) Social Media Links -->
+                    <ul class="list-unstyled social-list text-center"> 
+                        <li> <img src="img/social/facebook-48.png" alt="facebook"> </li>
+                        <li> <img src="img/social/twitter-48.png" alt="twitter"> </li>
+                        <li> <img src="img/social/whatsapp-48.png" alt="whatsapp"> </li>
+                        <li> <img src="img/social/google-plus-48.png" alt="google-plus"> </li>
+                        <li> <img src="img/social/linkedin-48.png" alt="linkedin"> </li>                        
+                        <li> <img src="img/social/tiktok-48.png" alt="tiktok"> </li>                        
+                        <li> <img src="img/social/mail-48.png" alt="mail"> </li>                        
+                        <li> <img src="img/social/instagram-48.png" alt="instagram"> </li>                        
+                        <li> <img src="img/social/rss-48.png" alt="rss"> </li>                                                
+                        <li> <img src="img/social/myspace-48.png" alt="myspace"> </li>                                                
+                        <li> <img src="img/social/bebo-48.png" alt="bebo"> </li>                                                
+                    </ul>                    
+                </div>
+            
+                <!-- Second column {Latest Articles} -->
+                <div class="col-lg-4 col-md-6">                
+                    <h3> Latest Articles </h3>
+
+                    <!-- First media -->
+                    <div class="media">
+                        <a href="#" class="pull-left"> 
+                            <img src="img/social/bebo-48.png" class="media-object" alt="" >
+                        </a>                    
+                        <div class="media-body">
+                            <h4 class="media-heading"> Programming </h4>
+                            This articles about the Programing and just for testing purposes for Display
+                        </div>
+                    </div> 
+                    
+                    <!-- Second media -->
+                    <div class="media">
+                        <a href="#" class="pull-left"> 
+                            <img src="img/social/facebook-48.png" class="media-object" alt="" >
+                        </a>                    
+                        <div class="media-body">
+                            <h4 class="media-heading"> Design </h4>
+                            This articles about the Design and just for testing purposes for Display
+                        </div>
+                    </div> 
+                    
+                    <!-- Third media -->
+                    <div class="media">
+                        <a href="#" class="pull-left"> 
+                            <img src="img/social/tiktok-48.png" class="media-object" alt="" >
+                        </a>                    
+                        <div class="media-body">
+                            <h4 class="media-heading"> Social </h4>
+                            This articles about the Social and just for testing purposes for Display
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- Third column {Featured Works} -->
+                <div class="col-lg-4 col-md-12 text-center">                
+                    <h3> Latest Articles </h3>
+                    <img src="img/footer/1.png" class="img-thumbnail" alt="image1">
+                    <img src="img/footer/2.png" class="img-thumbnail" alt="image2">
+                    <img src="img/footer/3.png" class="img-thumbnail" alt="image3">
+                    <img src="img/footer/4.png" class="img-thumbnail" alt="image4">                
+                </div>
+
+            </div>
+            
+        </div>
+
+        <!-- {copyright} -->
+        <div class="copyright1 text-center"> 
+            Copyright &copy; 2022 by <span> Shindow </span> lnc.
+        </div>        
+    
+    </section>        
+    <!-- ---------------------------------------- -->
+
+    <!-- {Hover.css} Library Gallery Samples -->        
+    <section class="hover-box text-center">
+        <div class="container hover-option text-center">
+
+            <h2 class="text-center"> Grow Hovering Group </h2>
+            <div class="row text-center">
+                <div class="col-lg-2 hvr-grow btn-danger"> Default Grow Hover Effect </div>    
+                <div class="col-lg-3"></div>    
+                <div class="col-lg-2 hvr-grow-rotate btn-primary"> Grow Rotate Hover Effect </div>                    
+                <div class="col-lg-3"></div>    
+                <div class="col-lg-2 hvr-icon-grow btn-info"> Icon Grow Hover Effect </div>                    
+            </div> <hr>
+            
+            <h2 class="text-center"> Shrink Hovering Group </h2>
+            <div class="row text-center">            
+                <div class="col-lg-5 hvr-shrink btn-danger"> Shrink Hover Effect </div>                    
+                <div class="col-lg-2"></div>                    
+                <div class="col-lg-5 hvr-icon-shrink btn-primary"> Icon Shrink Hover Effect </div>                    
+            </div> <hr>
+            
+            <h2 class="text-center"> Push Hovering Group </h2>
+            <div class="row text-center">
+                <div class="col-lg-5 hvr-push btn-danger"> Default Push Hover Effect </div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-5 hvr-icon-push btn-primary"> Icon Push Hover Effect </div>
+            </div> <hr>
+            
+            <h2 class="text-center"> Wobble Hovering Group </h2>
+            <div class="row text-center">
+                <div class="col-lg-3 hvr-wobble-vertical btn-danger"> Wobble Vertical Hover Effect </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-4 hvr-wobble-horizontal btn-primary"> Wobble Horizontal Hover Effect </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3 hvr-wobble-skew btn-info"> Wobble Skew Hover Effect </div>
+            </div> <br>
+        
+            <div class="row text-center">
+                <div class="col-lg-5 hvr-wobble-top btn-danger"> Wobble Top Hover Effect </div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-5 hvr-wobble-bottom btn-primary"> Wobble bottom Hover Effect </div>                        
+            </div> <br>
+            
+            <div class="row text-center">
+                <div class="col-lg-5 hvr-wobble-to-top-right btn-info"> Wobble to Top Right Hover Effect </div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-5 hvr-wobble-to-bottom-right btn-success"> Wobble Bottom Right Hover Effect </div>                            
+            </div>
+
+
+        <hr>
+        
+        <h2 class="text-center"> Buzz Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-2 hvr-buzz btn-danger"> Buzz Hover Effect </div>                    
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-icon-buzz btn-primary"> Icon Buzz Hover Effect </div>
+            <div class="col-lg-1"></div>                                
+            <div class="col-lg-2 hvr-buzz-out btn-danger"> Buzz out Hover Effect </div>                                
+            <div class="col-lg-1"></div>                                
+        </div> <hr>
+        
+        
+        <h2 class="text-center"> Bounce Hovering Group </h2>
+        <h3 class="text-center"> Default Bounce Hovering Group </h3>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-bounce-to-right btn-danger"> Bounce to right Hover Effect </div>                    
+            <div class="col-lg-1"></div>                                           
+            <div class="col-lg-4 hvr-bounce-to-left btn-primary"> Bounce to left Hover Effect </div>
+            <div class="col-lg-1"></div>                                            
+        </div> <br>
+        
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                                
+            <div class="col-lg-4 hvr-bounce-to-top btn-success"> Bounce to top Hover Effect </div>                                
+            <div class="col-lg-1"></div>                                
+            <div class="col-lg-4 hvr-bounce-to-bottom btn-info"> Bounce to bottom Hover Effect </div>                                
+            <div class="col-lg-1"></div>                                
+        </div> <hr>
+        
+        <h3 class="text-center"> Bounce In - Out Hovering Group </h3>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-bounce-in btn-danger"> Bounce in Hover Effect </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 hvr-bounce-out btn-primary"> Bounce out Hover Effect </div>
+            <div class="col-lg-1"></div>
+        </div> <hr>
+
+        <h2 class="text-center"> Pulse Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-10 hvr-pulse btn-danger"> Pulse Hover Effect </div>                    
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+                
+        <h2 class="text-center"> Fade Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-10 hvr-fade btn-danger"> Fade Hover Effect </div>                    
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Radial Out/In Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-radial-out btn-danger"> Radial Out Hover Effect </div>                    
+            <div class="col-lg-2"></div>                    
+            <div class="col-lg-4 hvr-radial-in btn-danger"> Radial In Hover Effect </div>                    
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Rectangle In/Out Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-rectangle-out btn-danger"> Rectangle Out Hover Effect </div>                    
+            <div class="col-lg-2"></div>                    
+            <div class="col-lg-4 hvr-rectangle-in btn-danger"> Rectangle In Hover Effect </div>                    
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Forward/Backword Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-forward btn-danger"> Forward Hover Effect </div>                    
+            <div class="col-lg-2"></div>                    
+            <div class="col-lg-4 hvr-backward btn-primary"> Backword Hover Effect </div>                    
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Shutter In Horizontal/Vertical Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-shutter-in-horizontal btn-danger"> Shutter in horizontal Hover Effect </div>                    
+            <div class="col-lg-2"></div>                    
+            <div class="col-lg-4 hvr-shutter-in-vertical btn-primary"> Shutter in Vertical Hover Effect </div>                    
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Shutter Out Horizontal/Vertical Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-shutter-out-horizontal btn-danger"> Shutter out horizontal Hover Effect </div>                    
+            <div class="col-lg-2"></div>                    
+            <div class="col-lg-4 hvr-shutter-out-vertical btn-primary"> Shutter out Vertical Hover Effect </div>                    
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Outline Out/In Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-outline-out btn-danger"> Outline Out horizontal Hover Effect </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-4 hvr-outline-in btn-primary"> Outline In Vertical Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Pop Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-10 hvr-pop btn-success"> Pop Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Hollow Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-10 hvr-hollow btn-success"> Hollow Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Trim Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-10 hvr-trim btn-success"> Trim Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Ripple In/Out Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-ripple-in btn-primary"> Ripple In Hover Effect </div>
+            <div class="col-lg-2"></div>                                
+            <div class="col-lg-4 hvr-ripple-out btn-danger"> Ripple Out Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Rotate Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-10 hvr-rotate btn-success"> Rotate Hover Effect </div>                    
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Float Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-10 hvr-float btn-primary"> Float Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+
+        <h2 class="text-center"> Sink Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-10 hvr-sink btn-danger"> Sink Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Bob Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-10 hvr-bob btn-success"> Bob Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+
+        <h2 class="text-center"> Hang Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-10 hvr-hang btn-info"> Hang Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Border Fade Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-10 hvr-border-fade btn-danger"> Border Fade Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+
+        <h2 class="text-center"> Round Corners Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-10 hvr-round-corners btn-success"> Round Corners Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Glow Corners Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-10 hvr-glow btn-success"> Glow Corners Hover Effect </div>
+            <div class="col-lg-1"></div>                    1
+        </div> <hr>
+        
+        <h2 class="text-center"> Shadow Hovering Group </h2>
+        <div class="row text-center">                                
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-shadow btn-danger"> Shadow Effect </div>                        
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-shadow-radial btn-success"> Shadow Radial Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <br>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-box-shadow-inset btn-info"> Box Shadow Inset Hover Effect </div>                        
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-box-shadow-outset btn-primary"> Box Shadow Outset Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>                    
+        
+        <h2 class="text-center"> Skew Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-3 hvr-skew-backward btn-danger"> Skew backward Hover Effect </div>            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-2 hvr-skew btn-danger"> Skew Hover Effect </div>            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-3 hvr-skew-forward btn-danger"> Skew forward Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+
+        <h2 class="text-center"> Underline Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-underline-from-center btn-danger"> Underline From Center Effect </div>                        
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-underline-reveal btn-success"> Underline Reveal Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <br>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-underline-from-left btn-info"> Underline From Left Hover Effect </div>                        
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-underline-from-right btn-primary"> Underline From Right Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+        
+        <h2 class="text-center"> Overline Hovering Group </h2>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-overline-from-center btn-danger"> Overline From Center Effect </div>                        
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-overline-reveal btn-primary"> Overline Reveal Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <br>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-overline-from-left btn-info"> Overline From Left Hover Effect </div>                        
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-overline-from-right btn-success"> Overline From Right Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <hr>
+
+        <h2 class="text-center"> CURLS Hovering Group </h2>
+        <div class="row text-center">                                 
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 hvr-curl-bottom-left btn-danger"> Curl bottom left Hover Effect </div>                    
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-curl-bottom-right btn-primary"> Curl bottom Right Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <br>            
+        <div class="row text-center">        
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 hvr-curl-top-left btn-info"> Curl top left Hover Effect </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 hvr-curl-top-right btn-success"> Curl top right Hover Effect </div>            
+            <div class="col-lg-1"></div>
+        </div> <hr> <hr>
+        
+        <h2 class="text-center"> Bubble Hovering Group </h2>
+        <div class="row text-center">                                 
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 hvr-bubble-bottom btn-danger"> Bubble bottom Hover Effect </div>                    
+            <div class="col-lg-1"></div>                    
+            <div class="col-lg-4 hvr-bubble-top btn-primary"> Bubble Top Hover Effect </div>
+            <div class="col-lg-1"></div>                    
+        </div> <br>            
+        <div class="row text-center">        
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 hvr-bubble-left btn-info"> Bubble Left Hover Effect </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 hvr-bubble-right btn-success"> Bubble Right Hover Effect </div>            
+            <div class="col-lg-1"></div>
+        </div> <hr> <hr>
+
+        <h3 class="text-center"> Bubble Float Hovering Group </h3>
+        <div class="row text-center">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 hvr-bubble-float-bottom btn-danger"> Bubble Float Bottom Hover Effect </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 hvr-bubble-float-top btn-info"> Bubble Float Top Hover Effect </div>
+            <div class="col-lg-1"></div>
+        </div> <br>                
+        <div class="row text-center">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 hvr-bubble-float-left btn-success"> Bubble Float Left Hover Effect </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 hvr-bubble-float-right btn-primary"> Bubble Float Right Hover Effect </div>
+            <div class="col-lg-1"></div>
+        </div> <hr>
+        
+        <h3 class="text-center"> Icon Hovering Group </h3>
+        <div class="row text-center">            
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2 hvr-icon-back btn-danger"> Icon Back Hover Effect </div>            
+            <div class="col-lg-2 col-lg-offset-0 hvr-icon-forward btn-info"> Icon Forward Hover Effect </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-2 hvr-icon-down btn-danger"> Icon Down Hover Effect </div>            
+            <div class="col-lg-2 hvr-icon-up btn-info"> Icon Up Hover Effect </div>
+            <div class="col-lg-1"></div>
+        </div> <br>
+        
+        <div class="row text-center">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2 hvr-icon-drop btn-danger"> Icon Drop Hover Effect </div>            
+            <div class="col-lg-2 col-lg-offset-0 hvr-icon-fade btn-info"> Icon Fade Hover Effect </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-2 hvr-icon-float btn-danger"> Icon Float Hover Effect </div>            
+            <div class="col-lg-2 hvr-icon-sink btn-info"> Icon Sink Hover Effect </div>
+            <div class="col-lg-1"></div>
+        </div>  <br>
+        <div class="row text-center">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2 hvr-icon-float-away btn-danger"> Icon Float Away Hover Effect </div>            
+            <div class="col-lg-2 col-offset-0 hvr-icon-sink-away btn-primary"> Icon Sink Away Hover Effect </div>                        
+            <div class="col-lg-2"></div>
+            <div class="col-lg-2 hvr-icon-pulse-shrink btn-info"> Icon Pulse Shrink Hover Effect </div>
+            <div class="col-lg-2 hvr-icon-pulse-grow btn-success"> Icon Pulse Grow Hover Effect </div>
+            <div class="col-lg-1"></div>                                    
+        </div> <hr>
+        
+        <h3 class="text-center"> Pulse Grow Hovering Group </h3>
+        <div class="row text-center">                                 
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10 hvr-icon-spin btn-danger"> Pulse Grow Hover Effect </div>                    
+            <div class="col-lg-1"></div>                                        
+        </div> <hr>
+        
+
+        <h2 class="text-center"> Mixing Hovering Group </h2>        
+        <h3 class="text-center"> Pulse Grow Hovering Group </h3>        
+        <div class="row text-center">                                 
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10 hvr-pulse-grow btn-danger"> Pulse Grow Hover Effect </div>                    
+            <div class="col-lg-1"></div>                                        
+        </div> <br>
+            
+        <h3 class="text-center"> Pulse Shrink Hovering Group </h3>        
+        <div class="row text-center">        
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10 hvr-pulse-shrink btn-primary"> Pulse Shrink Hover Effect </div>                    
+            <div class="col-lg-1"></div>
+        </div> <hr>
+        
+        <h3 class="text-center"> Back Pulse Hovering Group </h3>        
+        <div class="row text-center">        
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10 hvr-back-pulse btn-info"> Back Pulse Hover Effect </div>
+            <div class="col-lg-1"></div>
+        </div> <hr>
+        
+        <h3 class="text-center"> Sweep Hovering Group </h3>
+        <div class="row text-center">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-4 hvr-sweep-to-right btn-danger"> Sweep To Right Hover Effect </div>
+            <div class="col-lg-4 hvr-sweep-to-left btn-info"> Sweep To Left Hover Effect </div>
+        </div> <br>                
+        <div class="row text-center">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-4 hvr-sweep-to-bottom btn-info"> Sweep To Bottom Hover Effect </div>
+            <div class="col-lg-4 hvr-sweep-to-top btn-danger"> Sweep To Top Hover Effect </div>
+        </div> <hr>
+
+        <h2 class="text-center"> Float Shadow Hovering Group </h2>
+        <div class="row text-center">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10 hvr-float-shadow btn-success"> Float Shadow Hover Effect </div>
+            <div class="col-lg-1"></div>
+        </div> <hr>                        
+    
+        </div>        
+    </section>    
+    <i class="gear-option0 hvr-pulse-grow"> Hover.css</i>
+    <!-- ---------------------------------------- -->
+    
+    <!-- {wow.js} Library Animation Samples -->        
+    <section class="animation-box text-center">
+        <div class="container hover-option text-center">
+
+            <h2 class="text-center"> Bounce Animation Group </h2>
+            <div class="row text-center">
+                <div class="col-lg-12 wow bounce btn-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> Default Bounce Animation </div>
+            </div> <br> <br>            
+            <h3 class="text-center"> BounceIn Sub/Group </h3>
+            <div class="row text-center">            
+                <div class="col-lg-3 wow bounceInRight btn-danger" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> BounceIn Right Animation </div>
+                <div class="col-lg-1"></div>                    
+                <div class="col-lg-4 wow bounceIn btn-success" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> BounceIn Animation </div>
+                <div class="col-lg-1"></div>                    
+                <div class="col-lg-3 wow bounceInLeft btn-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> BounceIn Left Animation </div>
+            </div> <br>
+            <div class="row text-center">            
+                <div class="col-lg-5 wow bounceInUp btn-danger" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> BounceIn Up Animation </div>
+                <div class="col-lg-2"></div>                                    
+                <div class="col-lg-5 wow bounceInDown btn-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> BounceIn Down Animation </div>
+            </div> <br> <br>
+            
+            <h3 class="text-center"> BounceOut Sub/Group </h3>
+            <div class="row text-center">            
+                <div class="col-lg-3 wow bounceOutRight btn-danger" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> BounceOut Right Animation </div>
+                <div class="col-lg-1"></div>                    
+                <div class="col-lg-4 wow bounceOut btn-success" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> BounceOut Animation </div>
+                <div class="col-lg-1"></div>                    
+                <div class="col-lg-3 wow bounceOutLeft btn-primary" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> BounceOut Left Animation </div>
+            </div> <br>
+            <div class="row text-center">            
+                <div class="col-lg-5 wow bounceOutUp btn-danger" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> BounceOut Up Animation </div>
+                <div class="col-lg-2"></div>                                    
+                <div class="col-lg-5 wow bounceOutDown btn-primary" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> BounceOut Down Animation </div>
+            </div> <br> <hr> <br>
+            <!-- --------------------------- -->
+
+            <h2 class="text-center"> Pulse Animation </h2>
+            <div class="row text-center">
+                <div class="col-lg-12 wow pulse btn-danger" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> Pulse Animation </div>                
+            </div> <br><hr> <br>
+            <!-- --------------------------- -->
+            
+            <h2 class="text-center"> Shake Animation </h2>
+            <div class="row text-center">
+                <div class="col-lg-12 wow shake btn-info" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> Shake Animation </div>                
+            </div> <br><hr> <br>
+            <!-- --------------------------- -->
+         
+            <h2 class="text-center"> Swing Animation </h2>
+                <div class="row text-center">
+                <div class="col-lg-12 wow swing btn-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> Swing Animation </div>                
+            </div> <br><hr> <br>
+            <!-- --------------------------- -->
+            
+            <h2 class="text-center"> Tada Animation </h2>
+                <div class="row text-center">
+                <div class="col-lg-12 wow tada btn-success" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> Tada Animation </div>                
+            </div> <br><hr> <br>
+            <!-- --------------------------- -->
+            
+            <h2 class="text-center"> Wobble Animation </h2>
+                <div class="row text-center">
+                <div class="col-lg-12 wow wobble btn-danger" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> Wobble Animation </div>                
+            </div> <br><hr><br>
+            <!-- --------------------------- -->
+            
+            <h2 class="text-center"> FadeIn Animation Group </h2>
+            <div class="row text-center">
+                <div class="col-lg-12 wow fadeIn btn-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> Default FadeIn Animation </div>
+            </div> <br> <br>            
+            <h3 class="text-center"> FadeIn Animation Sub/Group </h3>
+            <div class="row text-center">            
+                <div class="col-lg-5 wow fadeInRight btn-danger" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> FadeIn Right Animation </div>
+                <div class="col-lg-2"></div>                    
+                <div class="col-lg-5 wow fadeInLeft btn-success" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> FadeIn Left Animation </div>                
+            </div> <br>
+            <div class="row text-center">            
+                <div class="col-lg-5 wow fadeInRightBig btn-danger" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> FadeIn Right Big Animation </div>
+                <div class="col-lg-2"></div>                    
+                <div class="col-lg-5 wow fadeInLeftBig btn-success" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> FadeIn Left Big Animation </div>                
+            </div> <br>
+            <div class="row text-center">            
+                <div class="col-lg-5 wow fadeInUp btn-danger" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> FadeIn Up Animation </div>
+                <div class="col-lg-2"></div>                    
+                <div class="col-lg-5 wow fadeInDown btn-success" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> FadeIn Down Animation </div>                
+            </div> <br> <br>
+            <div class="row text-center">            
+                <div class="col-lg-5 wow fadeInUpBig btn-danger" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> FadeIn Up Big Animation </div>
+                <div class="col-lg-2"></div>                    
+                <div class="col-lg-5 wow fadeInDownBig btn-success" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> FadeIn Down Big Animation </div>                
+            </div> <br> <br>
+            <!-- --------------------------------- -->
+            
+            <h2 class="text-center"> FadeOut Animation Group </h2>
+            <div class="row text-center">
+                <div class="col-lg-12 wow fadeOut btn-primary" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> Default FadeOut Animation </div>
+            </div> <br> <br>            
+            <h3 class="text-center"> FadeOut Sub/Group </h3>
+            <div class="row text-center">            
+                <div class="col-lg-5 wow fadeOutRight btn-danger" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> FadeOut Right Animation </div>
+                <div class="col-lg-2"></div>                    
+                <div class="col-lg-5 wow fadeOutLeft btn-success" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> FadeOut Left Animation </div>                
+            </div> <br>
+            <div class="row text-center">            
+                <div class="col-lg-5 wow fadeOutRightBig btn-danger" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> FadeOut Right Big Animation </div>
+                <div class="col-lg-2"></div>                    
+                <div class="col-lg-5 wow fadeOutLeftBig btn-success" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> FadeOut Left Big Animation </div>                
+            </div> <br>
+            <div class="row text-center">            
+                <div class="col-lg-5 wow fadeOutUp btn-danger" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> FadeOut Up Animation </div>
+                <div class="col-lg-2"></div>                    
+                <div class="col-lg-5 wow fadeOutDown btn-success" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> FadeOut Down Animation </div>                
+            </div> <br> <br>
+            <div class="row text-center">            
+                <div class="col-lg-5 wow fadeOutUpBig btn-danger" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> FadeOut Up Big Animation </div>
+                <div class="col-lg-2"></div>                    
+                <div class="col-lg-5 wow fadeOutDownBig btn-success" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> FadeOut Down Big Animation </div>
+            </div> <br> <br>  <hr> <br>
+            <!-- --------------------------------- -->
+            
+            <h2 class="text-center"> Flip Animation Group </h2>
+            <div class="row text-center">
+                <div class="col-lg-12 wow flip btn-info" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> Default Flip Animation </div>
+            </div> <br> <br>            
+            <h3 class="text-center"> FlipIn Sub/Group </h3>            
+            <div class="row text-center">            
+                <div class="col-lg-5 wow flipInX btn-danger" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> FlipIn X Horizontal Animation </div>
+                <div class="col-lg-2"></div>                                    
+                <div class="col-lg-5 wow flipInY btn-primary" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> FlipIn Y Vertical Animation </div>
+            </div> <br> <br>
+            <h3 class="text-center"> FlipOut Sub/Group </h3>            
+            <div class="row text-center">            
+                <div class="col-lg-5 wow flipOutX btn-danger" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> FlipOut X Horizontal Animation </div>
+                <div class="col-lg-2"></div>                                    
+                <div class="col-lg-5 wow flipOutY btn-primary" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> FlipOut Y Vertical Animation </div>
+            </div> <br> <br> <hr> <br>
+            <!-- ------------------------------------- -->
+                        
+            <h2 class="text-center"> LightSpeed Animation Group </h2>
+            <div class="row text-center">            
+                <div class="col-lg-5 wow lightSpeedIn btn-danger" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="200"> LightSpeed In Animation </div>
+                <div class="col-lg-2"></div>                    
+                <div class="col-lg-5 wow lightSpeedOut btn-success" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> lightSpeed Out Animation </div>                
+            </div> <br>  <br> <hr> <br>
+            <!-- ------------------------------------- -->
+
+            <h2 class="text-center"> Rotate Animation Group </h2>
+            <h3 class="text-center"> RotateIn Animation Group </h3>
+            <div class="row text-center">            
+                <div class="col-lg-3 wow rotateInDownLeft btn-danger" data-wow-duration="4s" data-wow-delay="2s" data-wow-offset="200"> RotateIn DownLeft Animation </div>
+                <div class="col-lg-1"></div>                    
+                <div class="col-lg-4 wow rotateIn btn-info" data-wow-duration="4s" data-wow-delay="2s" data-wow-offset="200"> Default RotateIn Animation </div>
+                <div class="col-lg-1"></div>                    
+                <div class="col-lg-3 wow rotateInDownRight btn-primary" data-wow-duration="4s" data-wow-delay="2s" data-wow-offset="200"> RotateIn DownRight Animation </div>
+            </div> <br>
+            <div class="row text-center">            
+                <div class="col-lg-5 wow rotateInUpLeft btn-danger" data-wow-duration="4s" data-wow-delay="2s" data-wow-offset="200"> RotateIn UpLeft Animation </div>
+                <div class="col-lg-2"></div>                                   
+                <div class="col-lg-5 wow rotateInUpRight btn-primary" data-wow-duration="4s" data-wow-delay="2s" data-wow-offset="200"> rotateIn UpRight Animation </div>
+            </div> <br> <br>
+            
+            <h3 class="text-center"> RotateOut Animation Group </h3>
+            <div class="row text-center">            
+                <div class="col-lg-3 wow rotateOutDownLeft btn-danger" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> RotateOut DownLeft Animation </div>
+                <div class="col-lg-1"></div>                    
+                <div class="col-lg-4 wow rotateOut btn-info" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> Default RotateOut Animation </div>
+                <div class="col-lg-1"></div>                    
+                <div class="col-lg-3 wow rotateOutDownRight btn-primary" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> RotateOut DownRight Animation </div>
+            </div> <br>
+            <div class="row text-center">            
+                <div class="col-lg-5 wow rotateOutUpLeft btn-danger" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> RotateOut UpLeft Animation </div>
+                <div class="col-lg-2"></div>                                   
+                <div class="col-lg-5 wow rotateOutUpRight btn-primary" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> rotateOut UpRight Animation </div>
+            </div> <br> <hr> <br>
+             <!-- --------------------------------------- -->
+            
+             <h2 class="text-center"> Slide Animation Group </h2>
+            <h3 class="text-center"> SlideIn Animation Group </h3>
+            <div class="row text-center">            
+                <div class="col-lg-3 wow slideInLeft btn-danger" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> RotateIn Left Animation </div>
+                <div class="col-lg-1"></div>                    
+                <div class="col-lg-4 wow slideInDown btn-info" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> SlideIn Down Animation </div>
+                <div class="col-lg-1"></div>                    
+                <div class="col-lg-3 wow slideInRight btn-primary" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> SlideIn Right Animation </div>
+            </div> <br> <br>            
+            
+            <h3 class="text-center"> SlideOut Animation Group </h3>
+            <div class="row text-center">            
+                <div class="col-lg-3 wow slideOutLeft btn-danger" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> SlideOut Left Animation </div>
+                <div class="col-lg-1"></div>                    
+                <div class="col-lg-4 wow slideOutUp btn-info" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> SlideOut Down Animation </div>
+                <div class="col-lg-1"></div>                    
+                <div class="col-lg-3 wow slideOutRight btn-primary" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="200"> SlideOut Right Animation </div>
+            </div> <br> <hr> <br>            
+             <!-- --------------------------------------- -->
+
+             <h2 class="text-center"> Hinge Animation </h2>
+                <div class="row text-center">
+                <div class="col-lg-12 wow hinge btn-primary" data-wow-duration="2s" data-wow-delay="3s" data-wow-offset="300"> Hinge Animation </div>                
+            </div> <br><hr> <br>
+            <!-- --------------------------- -->
+            
+            <h2 class="text-center"> RollIn Animation </h2>
+                <div class="row text-center">
+                <div class="col-lg-12 wow rollIn btn-success" data-wow-duration="2s" data-wow-delay="3s" data-wow-offset="200"> RollIn Animation </div>                
+            </div> <br><hr> <br>
+            <!-- --------------------------- -->
+            
+            <h2 class="text-center"> RollOut Animation </h2>
+                <div class="row text-center">
+                <div class="col-lg-12 wow rollOut btn-danger" data-wow-duration="2s" data-wow-delay="3s" data-wow-offset="200"> RollOut Animation </div>                
+            </div> <br><hr><br>
+            <!-- --------------------------- -->
+    
+        </div>        
+    </section>    
+    <i class="gear-option1 hvr-pulse-grow"> wow.js </i>
+    <!-- ---------------------------------------- -->
+
+    <!-- Page contents with Old CSS  -->
+    <div class="Post" id=post>
+        <Section  id="MainC" class="MainC">
+
+            <header>
+                Git & GitHub [1 Learn Command Line  - Intro and What's Shell, Terminal, CMD] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson will be => Main Theoritical Concepts about Command Lines </p>
+                <ol type="A">                                       
+                    <li> New Main Subjects :  <br>
+                        <ol> Main syntax and Theoritical of {CMD}, as following <br>
+                            <li> General Common Terminologies </li>
+                            <li> Reasons to study and use {CMD} </li>
+                            <li> Functions and processes can be done by {CMD} </li>
+                        </ol> 
+                    </li>
+                </ol>
+                                                    
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> 1 Learn Command Line  - Intro and What's Shell, Terminal, CMD Concept: </h3>
+            </header>
+                    
+            <p> This lesson => An Intro of Common Terminologies and Concepts about [CMD] , as following : <br>  </p>
+            
+            <h3> A) General Common Terminologies : </h3>
+            <ol>                 
+                <li> {Command line} => A line of Command Code written in Terminal Screen in your OS (Operating System) </li>
+                <li> {Shell} => Command line Interpreter </li>
+                <li> {Terminal} => Text Input/Output Environment </li>
+                <li> {CMD} => Original Shell of Microsoft DOS Opertaing System </li>
+                <li> {Power Shell} => Enhanced and powerful Version of {CMD} with great abilities appeared with Windows 10 </li>                
+            </ol>
+            <br> <hr> <br>  
+            
+            <h3> B) Reasons to study and use [CMD] : </h3>
+            <ol>                 
+                <li> Much more faster in Executing commands </li>                    
+                <li> It is a MUST and Essential Tool in some Functions and processes </li>
+                <li> Use Less System Resources -> Due to it's Texual Simple Screen , in comparison with [GUI] of some System </li>
+                <li> Ultra Fast Performance in processing your Commands </li>
+                <li> Ability to use [Intelligance Tab] Button => Which Auto Complete your Commands Pattern and Paths </li>
+                <li> Ability to [Loop Commands] => Which will repeat your Commands with certain Conditions  </li>
+                <li> Ability to use [Regular Expressions] => Which help in your Customizing your Commands upon certain Creteria </li>
+                <li> Command lines are the same like Codes </li>
+                <li> Command lines syntax are unified and not effected so much with kind of OS (exept windows OS which has some uniques Syntax) </li>
+                <li> Deal with {Package Managers} => Which is Essential Tool in some Technologies such as [Node.js || Jem in Roby Language] , To execute Processes and functions [such as : Install || Setup || Controling Issues] </li>
+                <li> Essential in {Git} commands for {GitHub} or any Git Service Platform : <br>
+                    <ul> 
+                        <li> It is important for proffisiont in {Git} to use both [GUI] & [CMD]  </li>
+                        <li> Using [CMD] in {Git} -> Will process Commands very Fast (incomparison of using {GUI} ) </li>
+                    </ul>
+                </li>                    
+                <li> Command line is an Accomulated Souce -> <br>
+                    <ul>
+                        <li> Which means that CMD still has the First Version Command syntax in the most recent Version of [CMD] </li>
+                        <li> Also that means you can execute the same Function or process by more than one Command Syntax </li>
+                    </ul>  
+                </li>
+                <li> Increase your writing or Typing Speed </li>
+            </ol>
+            <br> <hr> <br>
+                
+            <h3> C) Functions and Processes can be Done by {CMD} : </h3>
+            <ol>                                         
+                <li> {IP config} => Which is of your Network Configurations Data, and hard to access and get by using OS [GUI]  </li>
+                <li> {Moving All Text in Sub-Directories} with special Patterns => <br>
+                    <p> This can done by CMD pretty fast (specially when dealing with Huge Directory of many files) and take a long time by using [GUI] , due to depending on Windows services to execute (such as: Indexing , Fetching) </p>
+                </li>
+                <li> Delete Files with custome Extensions , and very fast proccessing </li>
+                <li> Change setting quickly -> Of any Application with simple commands and patterns </li>
+                <li> Create many Directories at Once  : By just one command you can execute Creating new files -> {mkdir css js assets images} </li>
+                <li> Edit System Files very quickly =>  such as : <br>
+                    <p> Used when Adding [IPs] in [Host] Folder to ensure that apps will be still in [Firewall] control </p>
+                    <p> Used when creating Cracks -> which include Batches -> that include Commands lines that deal with several system operations and implement it very fast, that will take long time when using GUI </p>
+                </li>
+                <li> Create Batches -> to Automate things like [Registery Editing] : <br>
+                    <p> Can be used with certain actions and processes with specified Patterns and conditions </p>
+                    <p> These Process can be done also by P.languages </p>
+                </li>                  
+            </ol>    
+            <br> <hr> <br>
+
+            <h3> D) Things to learn in this course : </h3>                
+            <ol>
+                <li> Windows CMD Commands </li>
+                <li> Unix System Commands [MAC , Linux] </li>
+                <li> Applications can be used to write by both Windows [CMD] & Unix System Commands [MAC , Linux] </li>
+            </ol>         
+            <br> <hr> <br>                           
+
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> Git & GitHub [1 Learn Command Line  - Intro and What's Shell, Terminal, CMD] Importance & Benefits : </h3>
+            </header>            
+                <ul>                                                 
+                    <li> Using [CMD] feature => Very Essential now a days, and critical for many programing Technologies </li>
+                    <li> Using [CMD] feature => Provide many tasks very fast with high performance </li>
+                </ul>                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> [1 Learn Command Line  - Intro and What's Shell, Terminal, CMD] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; [1 Learn Command Line  - Intro and What's Shell, Terminal, CMD} only Conceptual   </p>
+            
+             <!-- <div id="Code" class="Code">
+                
+                [1] {Create new File with Texual Content - CMD} : <br>
+                <span class= one></span> { echo 'Text Contents' > fileName.extension } <br><br>
+                                                                                
+                [2] {Display All Files contents List in current Folder - CMD} : <br>
+                <span class= one></span> { ls } <br><br>
+                
+                [3] {Adding All files to Staging Area - Git/CMD} : <br>
+                <span class= one></span> { git add * } <br><br>
+                
+                [4] {Display Stash All Files contents List in current Stash Storage - Git/CMD} : <br>
+                <span class= one></span> { git stash list } <br><br>
+
+                [5] {Stashing Files in Staging area  - Git/CMD} : <br>
+                <span class= one></span> { git stash } <br><br>
+                                                                                
+                [6] {UnStash Files from Stash Storage - Git/CMD} : <br>
+                <span class= one></span> { git stash pop } <br><br>                                                                                                                                                                                
+                
+                //=========================================================== <br> <br>                                                                
+            
+            <br><br>
+            </div>  -->
+            
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!-- <section class="JSDOMPract container" id="JSDOMPract">
+            <header>
+                <h3> Git & GitHub [1 Learn Command Line  - Intro and What's Shell, Terminal, CMD] => General Practical Applications : </h3>
+            </header>
+                        
+            <p> Using [cmd] For performing the {Stash} process in [Local Repo] until pushing it to the [remote repo]  </p>
+            
+             <div class=JSOOPObjConstTraining >                                        
+                    <code>                        
+                        // A] Main Scenario Commands in lessons : <br>
+                        // 1- Accessing the repo folder of project , by next code :  <br>
+                            <code> 
+                                <span class= one></span>  cd C:\Users\Eng-Shadi\Downloads\repos  <br><br>
+                            </code>  <br>
+                            
+                        // 2- Creating (2) Empty Files in project Dirctory : <br>
+                            <code> 
+                                <span class= one></span>  touch file1.txt file2.js  <br><br>
+                            </code>  <br>
+                        
+                        // 3- Adding Created new files to Staging Area : <br>
+                            <code> 
+                                <span class= one></span>  git add * <br><br>
+                            </code>  <br>
+
+                        // 4- Creating new file with Textual Contents : <br>
+                            <code> 
+                                <span class= one></span>  echo 'This Text is the file content' > File2.txt <br><br>
+                            </code>  <br>
+                        
+                        // 5- Checking for Current Stash List : <br>
+                            <code> 
+                                <span class= one></span> git stash list <br><br>
+                            </code>  <br>                            
+                        
+                        // 6- UnStash Files : <br>
+                            <code> 
+                                <span class= one></span> git stash pop <br><br>
+                            </code>  <br>                            
+                        
+                        // 7- Adding new File File2.txt to the Staging Area : <br>
+                            <code> 
+                                <span class= one></span> git add File2.txt <br><br>
+                            </code>  <br>
+                        
+                        // 8- Commiting all Files in Staging Area into the Local Repo : <br>
+                            <code> 
+                                <span class= one></span> git commit -m "Adding all Files into Staging Area" <br><br>
+                            </code>  <br>                              
+
+                        // 9- Pulling Remote Repo Contents : <br>
+                            <code> 
+                                <span class= one></span> git pull origin master <br><br>
+                            </code>  <br>                              
+
+                        // 10- Pushing [Local Repo] to [Remote Repo] Contents : <br>
+                            <code> 
+                                <span class= one></span> git push origin master <br><br>
+                            </code>  <br>                              
+                                               
+                        =======================================================<br><br><br>
+
+                    </code>                    
+                </div> 
+                 
+            <hr> <br> <br>                                        
+            <br>                
+            <hr>                        
+        </section> -->
+
+        <!-- <div class="btn" id="elem"> Element </div> <br>              -->
+                                
+        
+        <!-- <div id="note" class="dis"></div> <br> -->
+
+        <!-- <button class=btn onclick="test()"> Click to Start Bootstrap3 Design1 [ 21 Twitter Bootstrap 3 Design 1 - Section Price Table Part 2]  Application    
+        </button>  -->
+        
+        
+        <!-- <script  src="IntroWhatisBootstrap3.js">
+        </script> -->
+                                
+        <!-- <button id=btn class="btn0" onclick="display()">Display JS Code [plugins.js] file </button> -->
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+        
+    <aside>        
+        <section class="VideoSection" id="VideoSection">
+            <h3> Lesson 1 Video File: </h3>
+            <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\Command line\1 Learn Command Line  - Intro and What's Shell, Terminal, CMD.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video>
+        </section>
+        
+        <section class="Links">
+            <h3>Course Reaquirments : </h3>
+            <ul>
+                <li> HTML </li>                
+                <li> CSS3 </li>
+                <li> JS </li>
+                <li> Command line -> {cmder} </li>
+            </ul>
+        </section>
+        
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <!-- <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section> -->
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com" target="self">Google</a></li>
+                <li> <a href="https://youtube.com" target="self">Youtube</a></li>
+                <li> <a href="https://facebook.com" target="self">Facebook</a></li>
+                <li> <a href="http://shadi-pro.epizy.com" target="self">My Refs</a></li>
+                <li> <a href="http://shadi-cv.epizy.com" target="self">My CV</a></li>
+                <li> <a href="https://github.com/shindowpro/git-course" target="self">My Github Repo </a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer0">
+        All right reserved by &nbsp; &copy; &nbsp; Initiated by Shindow &trade;
+    </footer>
+
+
+<!-- loading overlay  -->
+    <section class="loading-overlay">
+        <div class="spinner">            
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>        
+        </div>
+    </section>
+
+    <!-- Scrolling top button -->
+    <section id="scroll-top">  
+       <i class="fas fa-chevron-up fa-2x fa-align-center"></i>
+    </section>
+
+    <script>
+        alert("Welcome to 1 Learn Command Line  - Intro and What's Shell, Terminal, CMD");
+    </script>
+    
+<!-- Resources files -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/plugins.js"></script>
+    
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+        </script>
+    
+    <script src="js/jquery.nicescroll.min.js"></script>
+    
+
+</body>
+
+</html>       

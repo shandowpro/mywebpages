@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Css Lesson 17 []</title>
+    <link rel="stylesheet" href="Float.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="title" id="title">Css/ Lesson 17 [Float](Left, Right, None) || [Clear](Left, Right, Both)</h1>
+                        
+        <fieldset class="index">
+            <legend class="index">Lesson Index</legend>            
+            <ol>
+                <li>First/ Float Property:</li>
+                <ul>                    
+                    <li> <a href="#none" title="Go to :None">Float: None [Default]</a></li>
+                    <li> <a href="#left" title="Go to :Left">Float: Left</a></li>
+                    <li> <a href="#right" title="Go to :Right">Float: Right</a></li>                    
+                </ul>
+                
+                <li> <a href="#clear" title="Go to :Clear">Second/ Clear Property</a></li>
+            </ol>
+        </fieldset>
+        
+        <h2 class="subtitle1">First/ Float Property:</h2>
+        
+        <fieldset id="none">            
+            <legend>(A)Float: None</legend>    
+            
+            <h2 class="subtitle">(1)None float value (Default Float) Concept:</h2>            
+            <p>The [None] default value of Float property is to cancel Floating of the element.</p>                    
+        </fieldset>
+    <!----------------------------------------------------------------------------------------------->        
+        <fieldset id="left">
+            <legend>(B)Float: left</legend>      
+            <h2 class="subtitle">(1)left Float Concept:</h2>            
+            <p>The element with left float will be floating towards left of page.</p>                    
+            
+            <h2 class="subtitle">(2)left Float elements Examples:</h2>
+            
+            <div class="expleft">                
+                <h3 class="subtitle0">Graphic Softwares:</h3>
+                <div class="floatleft">Adobe Photoshop</div>
+                <div class="floatleft">Illustrator</div>
+                <div class="floatleft">Corel Draw</div>
+            </div>
+        </fieldset>
+        
+    <!----------------------------------------------------------------------------------------------->        
+        <fieldset id="right">
+            <legend>(C)Float: Right</legend>    
+            <h2 class="subtitle">(1)Right Float Concept:</h2>            
+            <p>The element with right float will be floating towards right of page.</p>                    
+            
+            <h2 class="subtitle">(2)Right Float elements Examples:</h2>
+            <div class="expright">                
+                <h3 class="subtitle0">Graphic Softwares:</h3>
+                <div class="floatright">Adobe Photoshop</div>
+                <div class="floatright">Illustrator</div>
+                <div class="floatright">Corel Draw</div>
+            </div>
+        </fieldset>
+<!----------------------------------------------------------------------------------------------------------->        
+        <h2 class="subtitle1">Second/ Clear Property:</h2>
+        
+        <fieldset id="clear">
+            <legend>Clear property</legend>    
+            <h2 class="subtitle">(1)Clear Property Concept:</h2>            
+            <p> [Clear] property is improtant to deactivate [Float] property to the previous or following element/s<br>
+                therefore maintain the stability and acceptance of the page's elements format.<br>
+                [Clear] property need an separated element to be formated with it to be activated properly.<br>
+                [Clear] property has [3] values (Left, Right, Both).    
+            </p>
+                                        
+            <h2 class="subtitle">(2) Clear property with different values Examples:</h2>
+            
+            <h3 class="subtitle0">I) [Float:Left]+[Clear:Left] Example </h3>
+            
+            <h4 class='rtl'>Price Plans:</h4>        
+            <div class="floatleft">This is price plan one <span>100$</span></div>
+            <div class="floatleft">This is price plan two <span>150$</span></div>
+            <div class="floatleft">This is price plan three <span>200$</span></div>
+            
+            <hr class="clearleft"/>
+            
+            <h4 class='rtl'>Production Plans:</h4>
+            <div class="floatleft">This is production plan one <span>100$</span></div>
+            <div class="floatleft">This is production plan two <span>150$</span></div>
+            <div class="floatleft">This is production plan three <span>200$</span></div>
+            
+            <hr class="clearleft"/>
+            
+            <h4 class='rtl'>Logestics Plans:</h4>
+            <div class="floatleft">This is Logestics plan one <span>100$</span></div>
+            <div class="floatleft">This is Logestics plan two <span>150$</span></div>
+            <div class="floatleft">This is Logestcis plan three <span>200$</span></div>
+            <hr class="clearleft"/> <hr>
+            
+        <!-------------------------------------------------------------------------------------------------->
+            
+            <h3 class="subtitle0">II) [Float:Right]+[Clear:Right] Example </h3>
+            
+            <h4>Price Plans:</h4>        
+            <div class="floatright">This is price plan one <span>100$</span></div>
+            <div class="floatright">This is price plan two <span>150$</span></div>
+            <div class="floatright">This is price plan three <span>200$</span></div>
+            
+            <hr class="clearright"/>
+            
+            <h4>Production Plans:</h4>
+            <div class="floatright">This is production plan one <span>100$</span></div>
+            <div class="floatright">This is production plan two <span>150$</span></div>
+            <div class="floatright">This is production plan three <span>200$</span></div>
+            
+            <hr class="clearright"/>
+            
+            <h4>Logestics Plans:</h4>
+            <div class="floatright">This is Logestics plan one <span>100$</span></div>
+            <div class="floatright">This is Logestics plan two <span>150$</span></div>
+            <div class="floatright">This is Logestcis plan three <span>200$</span></div>
+            <hr class="clearright"/> <hr>
+        <!-------------------------------------------------------------------------------------->    
+            <h3 class="subtitle0">III) [Float:Left, Float:Right]+[Clear:Both] Example </h3>
+            
+            <h4 >Price Plans:</h4>        
+            <div class="floatleft">This is price plan one <span>100$</span></div>
+            <div class="floatleft">This is price plan two <span>150$</span></div>            
+            <div class="clearboth">This is a Clear:Both [div]</div>            
+            <div class="floatright">This is price plan three <span>200$</span></div>
+            <div class="floatright">This is price plan four <span>250$</span></div>
+            
+            <hr class="clearboth"/>
+            
+            <h4> Production Plans:</h4>
+            <div class="floatleft">This is production plan one <span>100$</span></div>
+            <div class="floatleft">This is production plan two <span>150$</span></div>            
+            <div class="clearboth">This is a Clear:Both [div]</div>            
+            <div class="floatright">This is production plan three <span>200$</span></div>
+            <div class="floatright">This is production plan four <span>250$</span></div>
+            
+            <hr class="clearboth"/>
+            
+            <h4>Logestics Plans:</h4>
+            <div class="floatleft">This is logestics plan one <span>100$</span></div>
+            <div class="floatleft">This is logestics plan two <span>150$</span></div>            
+            <div class="clearboth">This is a Clear:Both [div]</div>            
+            <div class="floatright">This is logestics plan three <span>200$</span></div>
+            <div class="floatright">This is logestics plan four <span>250$</span></div>
+            
+            <hr class="clearboth"/>                            
+        </fieldset>        
+    <!----------------------------------------------------------------------------------------------->        
+        <fieldset class="footer" id="footer">
+            This is the page Footer.
+        </fieldset>
+        <a class="home" href="#title" title="Go to page header">Home</a>
+        <a class="end" href="#footer" title="Go to page footer">End</a>
+    </div>
+</body>
+</html>

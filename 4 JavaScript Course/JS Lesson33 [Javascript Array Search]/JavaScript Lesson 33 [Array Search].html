@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Lesson 33 [Javascript Array Search]</title>
+    <link
+      rel="stylesheet"
+      href="JavaScript [Javascript Array Search].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JavaScript Lesson 33 [ Array Javascript Array Search ]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to Javascript main Topics">
+            [Javascript Array Search ] Main Topics
+          </a>
+        </li>
+        <li>
+          <a
+            href="#JsArrSearchCon"
+            title="Go to [Javascript Array Search ] Concept"
+          >
+            [Javascript Array Search ] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsArrSearchImp"
+            title="Go to [Javascript Array Search ] Importance & Benefits"
+          >
+            [Javascript Array Search ] Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsArrSearchMthds"
+            title="Go to [Javascript Array Search] main Methods"
+          >
+            [Javascript Array Search Main Methods ]
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsArrSearchMthd1"
+            title="Go to [Javascript Array Search] First Method                                   Syntax"
+          >
+            [Javascript Array Search (Start - End) Method ]
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsArrSearchMthd2"
+            title="Go to [Javascript Array Search] Second Method                                 Syntax"
+          >
+            [Javascript Array Search (End - Start) Method ]
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JavaScript Course
+      <span> JavaScript Lesson 33 [Javascript Array Search] </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>[Javascript Array Search ] Main Topics :</header>
+
+        <article>
+          <p>&gt; New Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>[Javascript Array Search] Concept.</li>
+
+            <li>[Javascript Array Search] Importance & Benefits .</li>
+
+            <li>[Javascript Array Search ] Methods & Syntaxes :</li>
+            <ul>
+              <li>A) [Start - End] Method</li>
+              <ol>
+                <li>Basic Search Function</li>
+                <li>Advanced Search Function</li>
+              </ol>
+
+              <li>B) [End - Start] Method</li>
+              <ol>
+                <li>Basic Search Function</li>
+                <li>Advanced Search Function</li>
+              </ol>
+            </ul>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrSearchCon" id="JsArrSearchCon">
+        <header>
+          <h3>[Javascript Array Search] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; [Array Search Function] : Is one of the most important
+          controling Function of Array in JS programing language as a concept
+          which allow to Search About the Index of specific Element in Array By
+          it's Value regardeless of the Data type of Array, using different
+          Methods.
+        </p>
+
+        <p>
+          =&gt; [Array Search Function] : Array Searching Function is Getting
+          the Index of Element Value Array's Element Based on (Zero-based) Using
+          Two Main Method ( Start - End ) or (End - Start) by Basic & Advanced
+          Searching Function .
+        </p>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JsArrSearchImp" id="JsArrSearchImp">
+          <header>
+            <h3>[Javascript Array Searching] Importance & Benefits:</h3>
+          </header>
+
+          <p>
+            =&gt; [Array Search] : Is Essential to any programmer or developer
+            to provide more Control of the Array by providing the Ability to
+            Find or Get Any Element's Index of any Array Type & make any
+            Programable Process.
+          </p>
+
+          <p>
+            =&gt; [Array Search] : Is Not only Essential to perform and
+            processing array's Element, but Also even with any Element in the
+            Web Page , using [HTML] , [CSS] programing Languages whether this
+            Element(s) was/were Word, Letter , Paragraph, Number of letters, and
+            pursing speicific action(s) or Function(s)
+          </p>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JsArrSearchMthds" id="JsArrSearchMthds">
+          <header>
+            <h3>[Javascript Array Search] Mains Methods:</h3>
+          </header>
+
+          <p>
+            =&gt;[Array Search Functions (Methods & syntaxs] are as following :
+          </p>
+          <!-------------------------------------------------------------------------------------->
+          <ol>
+            <li id="JsArrSearchMthd1">
+              <h3>
+                =&gt; Array Search (Start - End) Method
+                {ArrName.indexOf("Element Value");} ]:
+              </h3>
+            </li>
+
+            <p>
+              =&gt; [Search Function (Start - End) Method]: Is the most common
+              method usually used to Search / Find specific Element Index Array
+              in Js P.language, by the Acsecnding Arrangement of Array Index [0
+              - Last Array Index]
+            </p>
+
+            <p>=&gt;[Search (Start - End) Method] Syntax as following:</p>
+            <div id="Code" class="Code">
+              // Basic Search Function (Basic Searching on Element1 Index) :
+              <br />
+              var arrayName = ["Element1", "Element2", "Element3"];<br />
+              &nbsp;&nbsp; arrayItem = arrayName.indexOf("Element1 Value");<br />
+
+              document.getElementById("HTMLTagName").innerHTML = <br />
+              &nbsp;&nbsp; "Index of Element Value :" + arrayItem ;<br /><br />
+
+              // Advanced Search Function (Advanced Searching on Element1
+              Index): <br />
+              var arrayName = ["Element1", "Element2", "Element3"];<br />
+              &nbsp;&nbsp; arrayItem = arrayName.indexOf("Element1 Value");<br />
+
+              document.getElementById("HTMLTagName").innerHTML = <br />
+              &nbsp;&nbsp; "Index of Element Value :" + arrayItem ;<br /><br />
+            </div>
+            <!----------------------------------------------------------------------------------------------------------->
+            <li id="JsArrSearchMthd2">
+              <h3>
+                =&gt; Array Search (End - Start) Method
+                {ArrName.lastIndexOf("Element Value");} ]
+              </h3>
+            </li>
+
+            <p>
+              =&gt; [Search Function (End - Start)]: Is the most common method
+              usually used to Search / Find specific Element Index Array in Js
+              P.language, by the Descengly Arrangement of Array Index [Last
+              Array Index - 0]
+            </p>
+
+            <p>=&gt;[Search (End - Start) Method] Syntax as following:</p>
+            <div id="Code" class="Code">
+              // Basic Search Function (Basic Searching on Element1 Index) :
+              <br />
+              var arrayName = ["Element1", "Element2", "Element3"];<br />
+              &nbsp;&nbsp; arrayItem = arrayName.lastIndexOf("Element1
+              Value");<br />
+
+              document.getElementById("HTMLTagName").innerHTML = <br />
+              &nbsp;&nbsp; "Index of Element Value :" + arrayItem ;<br /><br />
+
+              // Advanced Search Function (Advanced Searching on Element1
+              Index): <br />
+              var arrayName = ["Element1", "Element2", "Element3"];<br />
+              &nbsp;&nbsp; arrayItem = arrayName.lastIndexOf("Element1
+              Value");<br />
+
+              document.getElementById("HTMLTagName").innerHTML = <br />
+              &nbsp;&nbsp; "Index of Element Value :" + arrayItem ;<br /><br />
+            </div>
+
+            <p>
+              Following Example User Will Search Specific Element in
+              Pre-Inserted Array to Get it's Index Using (Start - End ) Method &
+              (End - Start) Method , with each Basic And Advanced Function:
+            </p>
+
+            <div id="DisplayMainArr" class="JsArrSC"></div>
+            <br />
+
+            <div id="DisplaySearchBas" class="JsArrSC"></div>
+            <br />
+
+            <div id="DisplaySearchAdv" class="JsArrSC"></div>
+            <br />
+
+            <button onclick="Search()" class="btn">
+              Cilck to start Searching Arrays [Start - End] / [End - Start]
+              Method App
+            </button>
+
+            <script src="ArraySearch.js"></script>
+
+            <div class="JsArrSearchMthdsExp">
+              <code>
+                //HTML Codes :<br />
+                &lt;div id="DisplayMainArr" class="JsArrAddM"&gt;<br />
+                &lt;/div&gt;<br />
+
+                &lt;div id="DisplaySearchBas" class="JsArrAddM"&gt;<br />
+                &lt;/div&gt;<br />
+
+                &lt;div id="DisplaySearchAdv" class="JsArrAddM"&gt;<br />
+                &lt;/div&gt;<br />
+                &lt;button onclick="Search()"&gt;<br />
+                &nbsp;&nbsp; Cilck to start Searching Arrays [Start - End]
+                Method App <br />
+                &lt;/button&gt;<br />
+
+                &lt;script src="ArraySearch.js"&gt; &lt;/script&gt; <br /><br />
+
+                /* global alert, document, prompt */ <br />
+
+                /* Array Search Methods [Start - End] & [End - Start]
+                Application : */ : <br />
+
+                function Search() { <br />
+                var pass = prompt("Press (1) to Start the Appliction \n Press
+                any other key to Exit ...");<br />
+
+                &nbsp;&nbsp; if (pass == 1) {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to Array Searching
+                Application ...");<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; var choice = prompt(" Press (1) to
+                Choose [Start - End] Method \n Press (2) to Choose [End - Start]
+                Method");<br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp; switch (choice) {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 1 :<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome
+                to [Start - End] Array Search Method ...\n Lets Start Inserting
+                your Array..."); <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var count =
+                parseInt(prompt("Enter The Count of Your Array :")),<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; arr
+                = new Array (count);<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (i = 0; i
+                &lt; count; i++ ) {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                arr[i] = prompt("Enter your Element number (" + (i + 1) +
+                ")");<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var InternalM =
+                prompt("Press (1) for Basic Searching Function ... \n<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Press (2) for Advanced Searching Function ");<br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; switch
+                (InternalM) { <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                case 1 : <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                alert("Welcome to [Start - End] / (Basic) Search Method
+                ...");<br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                var ElV = prompt("Enter your Element Value your want to search
+                about it's Index ... " ),<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                SV = arr.indexOf(ElV); <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                document.getElementById("DisplayMainArr").innerHTML =<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                "Your Main Array : " + arr;<br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                document.getElementById("DisplaySearchBas").innerHTML =<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                "Your Element ( " + ElV + " ) Index is : " + "&lt;br&gt;" +
+                SV;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                break; <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                case 2 : <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                alert("Welcome to [Start - End] / (Advanced) Search Method
+                ...");<br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                var ElV = prompt("Enter your Element Value your want to search
+                about it's Index ... " ),<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                StartIndex = parseInt(prompt("Enter your Search Start Postion :
+                ")) - 1,<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                SV = arr.IndexOf(ElV, StartIndex); <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                document.getElementById("DisplayMainArr").innerHTML = <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                "Your Main Array : " + arr; <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                document.getElementById("DisplaySearchAdv").innerHTML = <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                "Your Element ( " + ElV + " ) Index is : " + "&lt;br&gt;" + SV;
+                <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                break;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                default : <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                alert("Invalid Entry!"); <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                break;<br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case 2 :<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome
+                to [Start - End] Array Search Method ...\n <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Lets Start Inserting your Array..."); <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var count =
+                parseInt(prompt("Enter The Count of Your Array :")), <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; arr = new Array
+                (count); <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (i = 0; i
+                &lt; count; i++ ) {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                arr[i] = prompt("Enter your Element number (" + (i + 1) +
+                ")");<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var InternalM =
+                prompt("Press (1) for Basic Searching Function ... \n <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Press (2) for Advanced Searching Function "); <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; switch
+                (InternalM) {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                case 1 :<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                alert("Welcome to [End - Start] / (Basic) Search Method ...");
+                <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                var ElV = prompt("Enter your Element Value your want to search
+                about it's Index ... " ), <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                SV = arr.lastIndexOf(ElV); <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                document.getElementById("DisplayMainArr").innerHTML = <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                "Your Main Array : " + arr; <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                document.getElementById("DisplaySearchBas").innerHTML = <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                "Your Element ( " + ElV + " ) Index is : " + "&lt;br&gt;" + SV;
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                break; <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                case 2 : <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                alert("Welcome to [End - Start] / (Advanced) Search Method
+                ..."); <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                var ElV = prompt("Enter your Element Value your want to search
+                about it's Index ... " ), <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                StartIndex = parseInt(prompt("Enter your Search Start Postion :
+                ")) - 1,<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                SV = arr.lastIndexOf(ElV, StartIndex);<br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                document.getElementById("DisplayMainArr").innerHTML =<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                "Your Main Array : " + arr;<br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                document.getElementById("DisplaySearchAdv").innerHTML =<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                "Your Element ( " + ElV + " ) Index is : " + "&lt;br&gt;" + SV;
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+                } break; } } else { alert("Good Bye ! "); } }
+              </code>
+            </div>
+
+            <!-------------------------------------------------------------------------------------------------------------->
+
+            <!-------------------------------------------------------------->
+          </ol>
+          <!---------------------------------------------------------------------------------------->
+        </section>
+      </section>
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="330"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="365" />
+          <input type="hidden" name="months" value="33" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to get basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num2" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg" />
+          Your browser Does Not Support the Audio file format...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 33 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=wknxkgWgdS0&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=33&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+        <!-- <video controls width="300" height="300">
+          <source
+            src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/33 Array Search.mp4"
+            type="video/mp4"
+          />
+          Your browser Does Not Support the Video file format...
+        </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JavaScript");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

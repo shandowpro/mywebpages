@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Create A Nice Form in HTML">
+    <title> Nice Form </title>
+    <link rel="stylesheet" href="Style.css">
+    <script>  </script>
+    <style>
+        body{background:#EFEFEF; font-family: Arial, Tahomas}
+        
+        fieldset{background:#FFF; padding:20px; border:1px solid #CCC; width:500px; margin:20px auto }
+        
+        legend{background:#FFF; padding:10px; border:1px solid #CCC}        
+        
+        label{margin-bottom:10px; display:block}
+        
+        input{margin-bottom:10px}
+        input[type="text"], input[type="password"], textarea{padding:8px; width:300px; display:block}
+        hr{border:1px solid #EEE}
+        
+        textarea{height:200px; margin-bottom:10px}
+    </style>
+</head>
+
+<body>
+    
+    <form name="Register" >
+        <fieldset>
+            <legend> Personal Information </legend>
+            <label> Username: </label>
+            <input type="text" name="Username">
+            
+            <label> Password:</label>
+            <input type="password" name="Password">
+                
+            <label> E-mail: </label>
+            <input type="text" name="E-mail">
+                
+            <label> Gender: </label>
+            <select name="Gender">
+                <option value="male"> Male </option>
+                <option value="female"> Female </option>
+            </select>
+        </fieldset>
+        
+        <fieldset>
+            <legend> Your Favourites </legend>
+            <label> Choose your favourite Text Editor: </label>
+            <input type="radio" name="Editor" value="Komodo"> Komodo <br>
+            <input type="radio" name="Editor" value="NetBeans"> NetBeans <br>
+            <input type="radio" name="Editor" value="Sublime Text"> Sublime Text
+            <hr>    
+            <label> Choose your favourite Browser: </label>
+            <input type="radio" name="Browser" value="Chrome"> Google Chrome <br>
+            <input type="radio" name="Browser" value="FireFox"> Mozilla FireFox <br>
+            <input type="radio" name="Browser" value="Opera"> Opera
+            <hr>
+            <label> Choose your favourite operating System: </label>
+            <input type="radio" name="os" value="Windows"> Windows <br>
+            <input type="radio" name="os" value="Linux"> Linux <br>
+            <input type="radio" name="os" value="Mac osx"> Mac osx
+            <hr>
+            <label> Choose your favourite Concerning Fields:</label>
+            <input type="checkbox" name="CField1" value="Sports"> Sports <br>
+            <input type="checkbox" name="CField2" value="Science"> Science <br>
+            <input type="checkbox" name="CField3" value="Arts"> Arts <br>
+            <input type="checkbox" name="CField4" value="Copmuter"> Copmuter <br>
+            <input type="checkbox" name="CField5" value="Social"> Social <br>
+            <input type="checkbox" name="CField6" value="Medical"> Medical <br>
+        </fieldset>
+        
+        <fieldset>
+            <legend> Your Message </legend>
+            <textarea> </textarea>
+            <input type="submit" value="Send Your Data">
+        </fieldset>
+                        
+    </form>
+    
+</body>
+</html>
