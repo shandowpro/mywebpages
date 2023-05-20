@@ -76,15 +76,23 @@
                         
             <h2> =&gt; [Reusable Components] Concept : <br>
                 <ul>
-                    <li> [Reusable Components] =>  <br>
+                    <li> [Reusable Components] => <br>
                         <ul>
                             <li> One of the Vue Model Parts, but has it's own Sub model in the Vue Script  </li>                             
                             <li> One of the most powerful concepts an tool in any Framework and various Libraries </li> 
-                            <li> Used for the repeated Websites Tempaltes Applications componets  </li>                             
-                            <li> {Reusable Componmnets} => Has it own Sub Model for each Component with in the main same Vue Model , and the (2) Parts : <br>
+                            <li> Used for the repeated Websites Tempaltes Applications components  </li>                             
+                            <li> {Reusable component} => Syntax is similer to the {on()} function in {JQUERY} => [  Vue.component('component-name', {data: function(){return {propName1 :"propvalue1", propName2 :"propvalue2", } }, template: 'element syntax html & vue'   } )  ]  </li>                             
+                            <li> {Reusable Components} => Has it own Sub Model for each Component with in the main same Vue Model , and the (2) Parts : <br>
                                 <ol> 
-                                    <li> {Template} => Contains the Template HTML Elements and Components like : (&lt;p&gt;)(&lt;div&gt;)(&lt;h1&gt;)  </li>
-                                    <li> {Data} =>  Contains the Data that will pass through template Elements like [Properties && Methods]   </li>
+                                    <li> {Data} => with following aspects : <br>
+                                        <ol> 
+                                            <li> Contains the new component Data that will be pass through into template Elements like [Properties && Methods]  </li>
+                                            <li> It is about a function of returning object elements of passed data </li>
+                                            <li> Contains the new component Data that will be pass through into template Elements like [Properties && Methods]  </li>
+
+                                        </ol> 
+                                     </li>
+                                    <li> {Template} => Contains the Template HTML Elements and Components like : (&lt;p&gt;)  (&lt;div&gt;)  (&lt;h1&gt;)  </li>
                                 </ol>    
                             </li>
                             <li> {Reusable Components} Best Practies => : <br>
@@ -95,7 +103,30 @@
                             </li>
                         </ul>
                     </li> <br>
-                                        
+
+                    <li> The full Ideal aned correct priorities in the Vue model until now: <br>
+                        <ol>
+                            <li> Vue Application </li>
+                            <li> Vue importing library script -> [calling Vue file]  </li>
+                            <li> Vue Model => including the following (in order) : (3 parts)  <br>
+                                <ol> 
+                                    <li> Decleration of the [new component] -> including following : (2 parts) <br> 
+                                        <ul> 
+                                            <li> [Vue new component data] => the data(properties) will be passed through the new component </li>
+                                            <li> [Vue new component Template] => the Syntax of the new component  </li>
+                                        </ul>     
+                                    </li>
+
+                                    <li> Decleration of the [Vue Intances] ->  will be passed through the Vue Application ->  including : (2 Parts)   <br>
+                                        <ul> 
+                                            <li> [Vue application Properties] </li> 
+                                            <li> [Vue application Methods/functions] </li> 
+                                        </ul>
+                                    </li>                                    
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
                 </ul>
             </h2>                                                                         
             
@@ -108,14 +139,14 @@
                 <h3> Vue.js [13 Learn VueJs In Arabic - Create Basic Reusable Components] Importance & Benefits : </h3>
             </header>
                         
-            <p> [Reusable Components] => Critical and Basic to create a full VueJS Complete Templates and arrangement their funtiontanlities   <br>
+            <p> [Reusable Components] => Critical and Basic to create a full VueJS Complete Templates and arrangement their funtionalities   <br>
             <p> [Reusable Components] => Has greate features to create full responsive Templates and some of backend Features  <br>
             <p> [Reusable Components] => Can Be used for several times with the a unique settings for each component <br>
                         
         </section>
 
         <!------------------------------------------------------------------------------------------------------>
-        <section class="PHPSyntx" id="PHPSyntx"> -->
+        <section class="PHPSyntx" id="PHPSyntx">
             <header>
                 <h3> [ Vue.js [13 Learn VueJs In Arabic - Create Basic Components] Syntax & Methods: </h3>
             </header>                 
@@ -124,24 +155,24 @@
                          
              <p> Syntax: <br> </p>            
                 <div id="Code" class="Code">                
-                    A)  Vue HTML Container  <br>
+                    A] Vue HTML Container  <br>
                     <span class= one></span> &lt; div id="app-one" &gt;  <br> 
                         <span class= two></span> &lt; h1 &gt; Welcome { { name } } to the Vue Application &lt; h1 &gt;  <br> 
                         <span class= two></span> &lt; componet-Name &gt; &lt; /componet-Name &gt; <br>                                                     
                     <span class= one></span> &lt; /div &gt;  <br> 
                     //=========================================================== <br> <br>
                     
-                    B)  VueJS Libraries Importing  <br>
+                    B]  VueJS Libraries Importing  <br>
                     <span class= one></span> &lt; script src="js/ vue.js " &gt;  &lt; /script &gt;  <br>                     
                     //=========================================================== <br> <br>
                     
-                    C)  VueJS Main Model  <br>
+                    C]  VueJS Main Model  <br>
                     <span class= one></span> &lt; script &gt;  <br>                     
                                                 
-                        <span class= two></span> // [Vue Component Main Model] Defining : <br> 
+                        <span class= two></span> // 1) [Vue new Component Main Model] Defining : <br> 
                         
                         <span class= two></span> Vue.component('componentName' , { <br> 
-                            <span class= three></span> // A) [Vue component Data] Defining : <br> 
+                            <span class= three></span> // A] [Vue component Data] Defining : <br> 
                             <span class= three></span> data: function() { <br> 
                                 <span class= four></span> return { <br> 
                                     <span class= five></span> name : 'shadi', <br> 
@@ -149,24 +180,29 @@
                                 <span class=four></span> } <br> 
                             <span class=three></span> }, <br>  <br>
                             
-                            <span class= three></span> // B) [Vue Component Template] Elements Defining : <br> 
+                            <span class= three></span> // B] [Vue Component Template] Elements Defining : <br> 
                             <span class= three></span> template: '&lt; p @click="count++" &gt; Hello { { name } } Your count is : { { count } } &lt; /p &gt;'  <br> 
                         <span class=two></span> }) <br> 
                         //=========================================================== <br> <br>
 
-                        <span class= two></span> // [Vue Model Instances] Defining : <br> 
+                        <span class= two></span> // 2) [Vue Model Instances] Defining : <br> 
 
                         <span class= two></span> var vm = new Vue({  <br>
-                            <span class= three></span> el: 'app-one' , <br> 
+                            <span class= three></span> el: 'app-one' , <br>
+                             
                             <span class= three></span> data: { <br> 
-                                <span class= four></span> prop1: 'value' { <br> 
-                                <span class= four></span> methodName: function() {}, <br>
-                                <span class=four></span> } <br> 
-                            <span class=three></span> }, <br>
-                        <span class=two></span> }) <br>  <br>
+                                <span class= four></span> prop1: 'value' , <br> 
+                                <span class= four></span> prop2: [], <br>
+                            <span class=three></span> } <br> 
+                        
+                            <span class= three></span> methods: { <br> 
+                                <span class= four></span> method1: function() { codes} <br> 
+                                <span class= four></span> method2: function() { codes} <br> 
+                            <span class=three></span> } <br> 
+                        <span class=two></span> }, <br>                        
                     
-                        //=========================================================== <br> <br>                                                                                                            
                     <span class= one></span> &lt; /script &gt;  <br>
+                        //=========================================================== <br> <br>                                                                                                            
                     <br><br> 
                </div> 
             <hr>
@@ -219,6 +255,7 @@
         <!-- The following is the main Vue application Container , which will be accessed by the Vue Framework using the Container [ID]   -->
         
         <!-- First Vue Application [Using Both {Creating new Component} + {Vue Model Instances}]  -->
+            <!-- 1) {Vue application} -->
             <div id="app-one">               
                 <h1> This is the First Vue Application : [ {{el}} ] </h1> <br> <br>
                 <p> Hello {{name}} </p>
@@ -226,13 +263,16 @@
             </div> 
 
 
-            <!-- The following is the main Vue Framework Importing Syntax [from Application Folder]  -->
+            <!-- 2) {Vue library} Importing main Vue Framework Syntax [from Application Folder]  -->
             <script src="js/vue.js"></script>
             
-            <!-- The following is the main Vue application Model Container Including => [{Vue Resuable component} + {Vue Model Instances}]  -->
+            <!-- 3) {Vue Model} Declaring and configuring main Vue application Model Container Including => 
+                a) Decleration of Vue Resuable component} -> [ new component name , new component data details , new component templates ] 
+                b) Decleration of {Vue Model Instances} ->  [ Instances name , instances properties , instances methods ]  -->
             <script> 
                 //  A) Vue new Component Defining : 
                 Vue.component('component-one', {
+                    // 1) Setting Data to be passed through into this component [as a returning object's elements] :
                     data: function() {
                         return {
                             name: 'Shadi (From component Datasource) ',
@@ -241,17 +281,20 @@
                         }
                     },
                     
-                    //  Vue new component Defining : 
+                    // 2) setting template to be used inside the component [as a string value] -> {could hold full HTML and vue syntax} : 
                     template: '<p @click="count++"> Hello {{name}} , {{message}} => Your Count is : {{count}} </p>',                
                 })
                 
-               //  B) Vue Model Instances Defining : 
+               //  B) Vue Model Instances [properties + methods] Defining : 
                 var vm = new Vue({
                     el: '#app-one',
                     data: {                        
                         el: 'app-one',
                         name: 'Pro (From Main Model Instance Datasource) ',
-                    }                    
+                    }, 
+                    methods: {
+                    }
+                
                 });
             </script>
         <!------------------------------------------------------------------------------------------------------>                                 
@@ -284,7 +327,8 @@
                 <li> Semantics </li>
                 <li> Api </li>
                 <li> New Attributes </li>
-                <li> Multimedia Elements </li>
+                <li
+                > Multimedia Elements </li>
             </ul>
         </section>
 
