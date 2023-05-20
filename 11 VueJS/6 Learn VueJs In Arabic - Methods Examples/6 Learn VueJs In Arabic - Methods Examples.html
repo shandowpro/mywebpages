@@ -264,7 +264,10 @@
                     {{'Third Test Result is: [' + completedTests[2].testResult + ']'}} <br> 
                 </p> <hr> <br>                
                 
-                <p> {{'[' + date + ']'}}  </p> <hr> <br>                                                
+                <p> {{'[' + date + ']'}}  </p> <hr> <br>
+                <p> {{'[' + fullAge + ']'}}  </p> <hr> <br>
+
+                <button @click="fulldate()"> Click to get this data full format   </button> <br>
                 <button @click="ageInDays()"> Click to get your age by days </button> <br>
                 
             </div>  <br> <hr>
@@ -282,6 +285,7 @@
                         el: 'app-one',
                         name: 'Shadi ',
                         age: 35,
+                        fullAge: 0 , 
                         isSubscribed : false,
                         skills: ['HTML', 'CSS' ,'JS'],
                         completedTests: [
@@ -304,9 +308,12 @@
                         sayWelcome: function() {
                             return 'Hello ' + name;
                         }, 
-                        ageInDays: function() {
+                        fulldate: function() {
                             this.date = 'Today Full Date is : ' + Date();
-                        }
+                        },
+                        // ageInDays: function() {
+                        //     this.fullAge = 'you age by days is : ' + (days() - (this.date * 365)) ;
+                        // }
                     }
                 });
             </script>
@@ -320,7 +327,7 @@
         <section class="VideoSection">
             <h3> Lesson 6 Video File:</h3>
             <video controls width="300" height="300">
-                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\Web Framework\Vue.js Frame Work\6 Learn VueJs In Arabic - Methods Examples.mp4" type="video/mp4">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\6 Learn VueJs In Arabic - Methods Examples.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
             </video>
         </section>

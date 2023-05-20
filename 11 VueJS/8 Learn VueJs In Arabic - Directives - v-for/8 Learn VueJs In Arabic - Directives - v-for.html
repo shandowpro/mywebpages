@@ -63,7 +63,7 @@
                 <p> &gt; Main Subjects in this lesson are as following : </p>
                 <ol type="A">
                     <li> [v - for] -> To loop inside the Array and Object and even inside an Array of objects </li>
-                    <li> [v - for] -> To can Reach each Array/Object value and Index </li>
+                    <li> [v - for] -> To can Reach each Array/Object Index, value and keyname  </li>
                 </ol>                                
             </article>
         </Section>
@@ -107,7 +107,7 @@
                         
             <p> =&gt; [Directives - v-for] => Following is a simple syntax code written of the Vue HTML Application & The Vue Script Model => </p>            
                                      
-             <p> Syntax: <br> </p>            
+             <!-- <p> Syntax: <br> </p>            
                 <div id="Code" class="Code">                
                     <span class= one></span> HTML Model :  <br>
                                         
@@ -137,7 +137,7 @@
                     </ol> <hr>                                                        
                     //=========================================================== <br> <br>                                                                                                            
                     <br><br> 
-               </div> 
+               </div>  -->
             <hr>
         </section>
 
@@ -147,7 +147,7 @@
                 <h3> Vue.js [Using Vue Directive {v - for}] General Practical Applications : </h3>
             </header>
             
-            <p> In this lesson will be (1) Application { Using Directive [v - for]= > as following :  </p>
+            <p> In this lesson will be (1) Application { Using Directive [v - for]= } > as following :  </p>
 
                  <ol type="A">
                                                             
@@ -164,8 +164,8 @@
                                     <li> Data elements : <br>
                                         <ol>
                                             <li> {el} property = It's Value is the Model Title string Value  </li>
-                                            <li> {titleText} property = It's Value is the v-text sytnax text </li>
-                                            <li> {titleHTML} property = It's Value is the v-html syntax code </li>
+                                            <li> {langs} normal array = It's Value is the v-text sytnax text </li>
+                                            <li> {completedTests} object array = It's Value is the v-html syntax code </li>                                            
                                         </ol>                                    
                                     </li>       
                                 </ul>    
@@ -179,17 +179,29 @@
         
         <!-- The following is the main Vue application Container , which will be accessed by the Vue Framework using the Container [ID]   -->
         
-        <!-- First Vue Application [Testing All Datatypes with in Vue Model Instances]  -->
+        <!-- First Vue Application [Looping inside normal array and object array with in Vue Model Instances]  -->
             <div id="app-one">              
                 <h1> This is the First Vue Application : [ {{el}} ] </h1>
                 <p> Welcome {{'Mr [' + name + ']'}}  </p> <hr> <br>
                 
+                <h2> Looping inside First simple array [with single value - with FIRST collection of variables to loop inside the array ] : </h2>
                 <ul>
                     <li v-for="(skill , index) in langs" > {{ index }} => {{ skill }} </li> <hr> <br>
                 </ul>
                 
+                <h2> Looping inside Second simple array [with single value - with SECOND collection of variables to loop inside the array ] : </h2>
+                <ul>
+                    <li v-for="(index , br) in browsers" > {{ index }} => {{ br }}  </li>
+                </ul>
+
+                <h2> Looping inside First Object array [with single value for each property] : </h2>
                 <ul>
                     <li v-for="(test , index) in completedTests" > {{ index }} => {{ test.testName }} || {{ test.testResult }}  </li> <hr> <br>
+                </ul>
+                
+                <h2> Looping inside First Object array [with array values for each property] : </h2>
+                <ul>
+                    <li v-for="(lvl , index) in plvls"> {{'Frontend level number' + (index + 1) }} : {{ lvl.frontend }} <br> {{'Backend level number' + (index + 1) }} : {{ lvl.backend}} <br> <br> </li>
                 </ul>
                                 
             </div>  <br> <hr>
@@ -205,22 +217,53 @@
                     data: {                        
                         el: 'app-one',
                         name: 'SHADI', 
-                        langs: ['Html', 'Css' ,'JS' , 'Vue.js'], // Normal Array 
                         
-                        completedTests: [                        //Array of Objects :
+                        // Normal Arrays :
+                        langs: ['Html', 'Css' ,'JS' , 'Vue.js'],  
+                        
+                        browsers: ['vscode', 'brackets' , 'lime' , 'lime' , 'netbeans'],
+
+                        // Array of Objects number 1 => {each object as elements with single value} :
+                        completedTests: [                        
+                            // first array element object [of single value for each object property]:
                             {
                                 testName:"test one",
                                 testResult:"90%",
                             },
+                            
+                            // second array element object [of single value for each object property] : 
                             {
                                 testName:"test two",
                                 testResult:"80%",
                             },
+                            
+                            // third array element object [of single value for each object property] :
                             {
                                 testName:"test three",
                                 testResult:"60%",
                             }
-                        ]
+                        ],
+
+                        // prgramming levels [Array of Objects number 2] => {each object as elements with array values } : 
+                        plvls: [ 
+                            // first array element object [of array value for each object property] :
+                            {
+                                frontend: ['html' , 'css' , 'js' ],
+                                backend: ['php' , 'mysql' ],
+                            },
+
+                            // second array element object [of array value for each object property] : 
+                            {
+                                frontend: ['dom' , 'bom' , 'jsoop' ],
+                                backend: ['phpoop' , 'mysql' , 'XAMMP' ],
+                            },
+                            
+                            // third array element object [of array value for each object property] :                            
+                            {
+                                frontend: ['react' , 'angular' , 'vue' ],
+                                backend: ['cmd' , 'api' ],
+                            },                            
+                        ],
                     }                    
                 });
             </script>
@@ -244,7 +287,7 @@
         <section class="VideoSection">
             <h3> Lesson 8 Video File:</h3>
             <video controls width="300" height="300">
-                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\Web Framework\Vue.js Frame Work\8 Learn VueJs In Arabic - Directives - v-for.mp4" type="video/mp4">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\8 Learn VueJs In Arabic - Directives - v-for.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
             </video>
         </section>

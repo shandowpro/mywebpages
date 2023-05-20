@@ -109,12 +109,12 @@
                 <h3> [ Vue.js [7 Learn VueJs In Arabic - Directives - v-text - v-htmls] Syntax & Methods: </h3>
             </header>
 
-            <p> =&gt; Following is a simple syntax code written Emded in a HTML page => <br>
+            <!-- <p> =&gt; Following is a simple syntax code written Emded in a HTML page => <br>
                 Printing string text value from the server in the user website page  </p>            
-            
-            <p> =&gt; [Inheritance] =>  <br> </p>
+             -->
+            <!-- <p> =&gt; [Inheritance] =>  <br> </p> -->
                          
-             <p> Syntax: <br> </p>            
+             <!-- <p> Syntax: <br> </p>            
                 <div id="Code" class="Code">                
                     <span class= one></span> &lt; ?php <br>                      
                     
@@ -200,7 +200,7 @@
                     </ol> <hr>                                                        
                     //=========================================================== <br> <br>                                                                                                            
                     <br><br> 
-               </div> 
+               </div>  -->
             <hr>
         </section>
 
@@ -214,7 +214,7 @@
 
                  <ol type="A">
                                                             
-                    <li> First Example => Creating a [Vue Application Container] with [Simple and Advanced Calling off Methods and properites with Different Datatypes of Instances] , and including the following steps : <br>
+                    <li> First Example => Creating a [Vue Application Container] with [Simple and Advanced Calling off Methods and properites with using directives {v-html && v-text}] , and including the following steps : <br>
                         <ul>
                             <li> Defining and Creating the [Vue Main Container] {app-one} , with including the following : <br> 
                                 <ul> 
@@ -225,7 +225,7 @@
                             </li>   
                             <li> Vue Model Contaning : 
                                 <ul>  
-                                    <li>  Data elements :
+                                    <li>  Data elements : <br>
                                         <ol>
                                             <li> {el} property = It's Value is the Model Title string Value  </li>
                                             <li> {titleText} property = It's Value is the v-text sytnax text </li>
@@ -242,14 +242,26 @@
         
         <!-- The following is the main Vue application Container , which will be accessed by the Vue Framework using the Container [ID]   -->
         
-        <!-- First Vue Application [Testing All Datatypes with in Vue Model Instances]  -->
+        <!-- First Vue Application [calling and testing Vue directives [v-html] || [v-text]  with in Vue Model Instances & Directives ]  -->
             <div id="app-one">              
                 <h1> This is the First Vue Application : [ {{el}} ] </h1>
                 <p> Welcome {{'Mr [' + name + ']'}}  </p> <hr> <br>
-                
+
+                <!-- Calling the instance in case of true condition by using directives + if condition -->
+                <h2> Calling the instance in case of true condition by using directives + if condition : </h2>
                 <p v-text="name? titleText : 'Your Name is not Set'"></p> <hr> <br>
-                <p v-html="name? titleHTML : 'Your Name is not Set'"></p> <hr> <br>
-                                
+                <p v-html="name? titleHTML : 'Your Name is not Set'"></p> <hr> <br>                 
+                
+                <!-- Attaching directly by using directives + instances (without using if condition) -->
+                <h2> Attaching directly by using directives + instances (without using if condition) : </h2>
+                <p v-text="titleText"></p> <hr> <br>                 
+                <p v-html="titleHTML"></p> <hr> <br>                 
+                
+                <!-- Attaching directly by using directives (without using instances) -->
+                <h2> Attaching directly by using directives (without using instances) : </h2>
+                <p v-text="'This text emeded by using vue directive'">  </p> <br> <hr>
+                <p v-html="'<div> this span has been attached by using vue directive [v-html] </div>'"> </p> <br> <hr>
+
             </div>  <br> <hr>
 
 
@@ -290,7 +302,7 @@
         <section class="VideoSection">
             <h3> Lesson 7 Video File:</h3>
             <video controls width="300" height="300">
-                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\Web Framework\Vue.js Frame Work\7 Learn VueJs In Arabic - Directives - v-text - v-html.mp4" type="video/mp4">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\7 Learn VueJs In Arabic - Directives - v-text - v-html.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
             </video>
         </section>

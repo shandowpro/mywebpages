@@ -3,6 +3,7 @@
 
 <html>
 
+
 <head>
 
     <meta charset="utf-8">
@@ -62,7 +63,7 @@
             <article>
                 <p> &gt; Main Subjects in this lesson are as following : </p>
                 <ol type="A">
-                    <li> [v-model=""] -> To Bind (Two Bind Method) to a HTML Element's Attribute value from the Vue Model  </li>
+                    <li> [v-model="Vue instance"] -> To Bind (Two ways Binding Method) to a HTML Element's Attribute value from the Vue Model , and vise versa </li>
                 </ol>                                
             </article>
         </Section>
@@ -79,7 +80,7 @@
                     <li> [v-model= "Vue Property"] =>  <br>
                         <ul>
                             <li> To Bind (Two Bind Method) to a HTML Element's Attribute value from the Vue Model </li> 
-                            <li> Similer to the {b-bind} , but with using (Two Ways Method Binding) </li> 
+                            <li> Similer to the {v-bind} , but with using (Two Ways Method Binding) </li> 
                             <li> It is one of the most important and usual Directives used in Vue Application </li>
                             <li> {v-model} => Deals with (3) main HTML elements : <br>
                                 <ol> 
@@ -100,11 +101,11 @@
                     
                     <li> Differences between [One Way Binding Method {v-bind}] && [Two Way Binding Method {v-model}] => <br>
                         <ol>                                                                                     
-                            <li> [One Way Binding Method] {v-bind} <br>
+                            <li> {v-bind} [One Way Binding Method]  <br>
                                 <p> Binding the Vue Property only FROM the Vue Model TO the HTML Element, and Vue Model Will Not respond to the Changing in Binded Value </p>
                             </li> 
-                            <li> [One Way Binding Method] {v-model} <br>
-                                <p> Binding the Vue Property in Both FROM the Vue Model TO the HTML Element and Vise Versa, and Vue Model Will respond to the Changing in Binded Value </p>
+                            <li> {v-model}  [Two Way Binding Method] <br>
+                                <p> Binding the Vue Property in Both FROM the Vue Model TO the HTML Element and Vise Versa, with integrated repondness to the Changing in Binded Value </p>
                             </li>                             
                         </ol>                    
                     </li>                                        
@@ -121,7 +122,10 @@
             </header>
             
             <p> [Directives] => Provides an Easy Methods to apply certain Insturctions on HTML Elements as an Element's Attribute Auto Functionality Responding , and therefore more Dynamicallay <br>
-            <p> [v-model]     => Critical in any Vue Application, when it is required to Two Ways Method bindind a Vue property value inside an HTML's Attribute and Vise Versa  <br>
+            
+            <p> [v-model]     => Critical in any Vue Application, when it is required to Two Ways bindind Method a Vue property value inside an HTML's Attribute and Vise Versa  <br>
+                        
+            <p> [v-model]     => provides auto responding to the changes in the binded Vue Instances, so it is affecting Vue model itself  <br>
                         
         </section>
 
@@ -232,7 +236,7 @@
                 <h3> Vue.js [Using Vue Directives {v-model}] General Practical Application : </h3>
             </header>
             
-            <p> In this lesson will be (1) Application { Using Directives [{v-model} ]= > as following :  </p>
+            <p> In this lesson will be (1) Application [ Using Directives [{v-model} ]= > as following :  </p>
 
                 <ol type="A">
                 
@@ -241,10 +245,15 @@
                             <li> Defining and Creating the [Vue Main Container] {app-one} , with including the following (6) : <br> 
                                 <ul> 
                                     <li> [input(text)] => Using the [v-model] to Bind (Two Ways Methods) between the Vue property inside a Html element's Attribute Value [input(text)]  </li>
+                                    
                                     <li> [input(checkbox) - Single Element] => Using the [v-model] to Bind (Two Ways Methods) between the Vue property inside a Html element's Attribute Checked Value [input(checkbox) - Single Element]  </li>
+                                    
                                     <li> [input(checkbox) - Multiple Elements] => Using the [v-model] to Bind (Two Ways Methods) between the Vue property inside a Html element's Attribute Checked Value [input(checkbox) - Multiple Elements]  </li>
+                                    
                                     <li> [input(radiobutton) - Multiple Elements]  => Using the [v-model] to Bind (Two Ways Methods) between the Vue property inside a Html element's Attribute Checked Value [input(radiobutton) - Multiple Elements]  </li>
+                                    
                                     <li> [textarea] => Using the [v-model] to Bind (Two Ways Methods) between the Vue property inside a Html element's Attribute Value [textarea]  </li>
+                                    
                                     <li> [Select Box] => Using the [v-model] to Bind (Two Ways Methods) between the Vue property inside a Html element's Attribute Selected Value [Select Box]  </li>
                                 </ul>
                             </li>                            
@@ -261,53 +270,128 @@
                 <h1> This is the First Vue Application : [ {{el}} ] </h1> <br> <br>
                 
                 <h2> This is the First Example : Using {v-model} with [input(text)] </h2> <br>
+                
                 <input type="text" placeholder="Binded Value by V-model" v-model="inputValue" > <hr> <br>
+                
                 <p> {V-model} Binding Input Field Value is:  {{ inputValue }}  </p> <br> <hr> <br>
+                <!-- -------------------------------------------------  -->
                 
                 <h2> This is the Second Example : Using {v-model} with [input(Checkbox) - Single] </h2> <br>
-                <input type="checkbox" value="Choice 1" v-model="cbValue" > 
-                <label> Choice 1 </lable>
-                <br> 
-                <p> {V-model} Binding Checkbox Checked Value is:  {{ cbValue }}  </p> <br> <hr> <br>
                 
+                <input type="checkbox" value="Choice 1" v-model="cbValue" > 
+                <label> Choice 1 </lable> <br>
+
+                <p> {V-model} Binding Checkbox Checked Value is:  {{ cbValue }}  </p> <br> <hr> <br>
+                <!-- -------------------------------------------------  -->
+            
                 <h2> This is the Third Example : Using {v-model} with [input(Checkbox) - Multiple] </h2> <br>                
+                
                 <input type="checkbox" value="Checkbox 1" id="Checkbox1" v-model="cbValues" > 
                 <label> Checkbox 1 </lable>
+                
                 <input type="checkbox" value="Checkbox 2" id="Checkbox2" v-model="cbValues" > 
-                <label> Checkbox 2 </lable>
+                <label> Checkbox 2 </lable>        
+                    
                 <input type="checkbox" value="Checkbox 3" id="Checkbox3" v-model="cbValues" > 
-                <label> Checkbox 3 </lable>
-                <br>
+                <label> Checkbox 3 </lable><br>
+
                 <p> {V-model} Binding Multiple Checkbox ALL Checked Values are :  {{ cbValues }}  </p> <br> <hr> <br>
+                <!-- -------------------------------------------------  -->
                 
                 <h2> This is the Fourth Example : Using {v-model} with [input(RadioButton) - Multiple] </h2> <br>                
+                
                 <input type="radio" value="Radio 1" id="Radio1" v-model="radValue" > 
                 <label> Radio Button 1 </lable>
+                
                 <input type="radio" value="Radio 2" id="Radio2" v-model="radValue" > 
                 <label> Radio Button 2 </lable>
+                    
                 <input type="radio" value="Radio 3" id="Radio3" v-model="radValue" > 
-                <label> Radio Button 3 </lable>
-                <br>
-                <p> {V-model} Binding Radio Button Checked Value is:  {{ radValue }}  </p> <br> <hr> <br>
+                <label> Radio Button 3 </lable>   <br>
                 
-                <h2> This is the Fifth Example : Using {v-model} with [textarea] </h2> <br>                
-                <textarea v-model="txtareaValue" >
-                </textarea>
-                <br>
-                <p> {V-model} Binding Text Area Value is:  {{ txtareaValue }}  </p> <br> <hr> <br>
+                <p> {V-model} Binding Radio Button Checked Value is:  {{ radValue }}  </p> <br> <hr> <br>
+                <!-- -------------------------------------------- -->
 
+                <h2> This is the Fifth Example : Using {v-model} with [textarea] </h2> <br>                
+ 
+                <textarea v-model="txtareaValue" >  </textarea>   <br>
+
+                <p> {V-model} Binding Text Area Value is:  {{ txtareaValue }}  </p> <br> <hr> <br>
+                <!-- ----------------------------------------------- -->
+                
                 <h2> This is the Sixth Example : Using {v-model} with [Select Box] </h2> <br>                
+            
                 <select v-model="selected"> 
                     <option disabled> Select one of the Following Choices </option>
                     <option> A </option>
                     <option> B </option>
                     <option> C </option>
-                </select>
-                <br>
-                <p> {V-model} Binding Select Box Selected Value is:  {{ selected }}  </p> <br> <hr> <br>
+                </select>  <br>
+                
+                <p> {V-model} Binding Select Box Selected option's Value is:  {{ selected }}  </p> <br> <hr> <br>
+                <!-- ------------------------------------------------------- -->
+                
+                <h2> This is the seventh Example [advanced arithmetic operation] by using (v-model with Radio Input ) :  </h2>
+
+                <label> Insert the first number : </label> <input  type="number" v-model="num1" placeholder="Insert first number"  >  <br>
+                <label> Insert the second number : </label> <input type="number" v-model="num2" placeholder="Insert second number"  >  <br>
+
+                <label> Choose your arithmetic operation : </label>
+                
+                <label> Addition </lable>
+                <input type="radio" value="Addition" id="add" v-model="operation" > <br>
+                
+                <label> Submition </lable>
+                <input type="radio" value="Submition" id="sub" v-model="operation" >  <br>
+                    
+                <label> Multiple </lable> 
+                <input type="radio" value="Multiply" id="mult" v-model="operation" > <br> 
+                
+                <label> Division </lable> 
+                <input type="radio" value="Division" id="div" v-model="operation" > <br>
+                
+                <p> Your numbers are : {{num1}}  {{num2}}  </p>                
+                <p v-if="operation == 'Addition' " > The result of {{operation}} =  {{num1 + num2}} </p>                
+                <p v-else-if="operation == 'Submition' " > The result of {{operation}} =  {{num1 - num2}} </p>                
+                <p v-else-if="operation == 'Multiply' " > The result of {{operation}} =  {{num1 * num2}}  </p>                
+                <p v-else-if="operation == 'Division' " > The result of {{operation}} =  {{num1 / num2}}  </p>                
+                <p v-else="operation == '' " > You have not choiced any option   </p>                
+                <!-- ---------------------------------------------------------------- -->
+
+                <h2> This is the eighth Example [advanced arithmetic operation] by using (v-model with Checkbox Input ) :  </h2>
+
+                <label> Insert the first number : </label> <input  type="number" v-model="num1" placeholder="Insert first number"  >  <br>
+                <label> Insert the second number : </label> <input type="number" v-model="num2" placeholder="Insert second number"  >  <br>
+
+                <label> Addition operation : </label>
+                <input type="checkbox"  id="add" value="Addition" v-model="operations"> <br>
+                
+                <label> Submition operation : </label> 
+                <input type="checkbox" id="sub" value="Submition" v-model="operations"> <br>
+                
+                <label> Multiply operation : </label>
+                <input type="checkbox" id="mult" value="Multiply" v-model="operations"> <br>
+                
+                <label> Division operation : </label>
+                <input type="checkbox" id="div" value="Division" v-model="operations"> <br>
+
+                <!-- <p>  {{'[' + (operations ? 'Is Subscribed' : 'Not Subscribed') + ']'}} </p> -->
+
+                    
+                <!-- <textarea @click="operations ? 'Calculation has been selected succesfully' : 'none' "> </textarea> -->
+ 
+                <p v-if="operations == 'Addition'" > {{ (num1 + num2) }} </p>
+                <p v-else-if="operations == 'Submition'" > {{ num1 - num2 }} </p>
+                <p v-else-if="operations == 'Multiply'" > {{ num1 * num2 }} </p>
+                <p v-else-if="operations == 'Division' " > {{ num1 / num2 }} </p>
+                <p v-else="operations" > You have not choosed any operation OR Choosed more than one operation  </p>
+
+                
+                <!-- <p>  {{  (operations ? 'Your operation has been run successfully' : 'Your operation has been canceled')  }} </p> -->
+                <!-- <button @click="disOp()"> calculate </button> -->
             </div> 
 
-
+            
             <!-- The following is the main Vue Framework Importing Syntax [from Application Folder]  -->
             <script src="js/vue.js"></script>
             
@@ -316,16 +400,55 @@
                 var vm = new Vue({
                     el: '#app-one',
                     data: {                        
+                        // Basic instances :
                         el: 'app-one',
-                        name: 'SHADI', 
+                        name: 'SHADI',
+
+                        // First section : 
+                        // <input> value for [text type] :
                         inputValue: "",
+
+                        // A] <input> [checkbox type] value for (single and multiple) :
+                        // 1) Single input empty value :
                         cbValue: "",
+                        
+                        // 2) Multiple input empty values [as an array due the {checkbox} ability for  multiple values at once choice] :
                         cbValues: [],                        
+                        
+                        // B] <input> value for [radio button type] (single and multiple) :  
+                        // 1) Single input empty value :
                         radValue: "",
+                        
+                        // 2) Multiple input empty values [as an accumlated string due the {radio button} not able for multiple values at once choice] :
                         radValues: "",
+                        
+                        // <textarea> value  :
                         txtareaValue: "",
+
+                        // <select> value for [selected option] {one string value for the once choice} :
                         selected : "",
-                    }                    
+
+
+                        // Second Section :
+                        // A] Insert (2) numbers + select operation [ + || - ||  * || / ] by using (input radiobox type)  : 
+                        num1 : 0 ,
+                        num2 : 0 ,
+                        operation : "",
+                        
+                        // A] Insert (2) numbers + select operation [ + || - ||  * || / ] by using (input checkbox type)  : 
+                        operations : [],
+                        disp: '',
+                    }, 
+                    methods: {
+                        dispOp : function() { 
+                            if (this.operations) {
+                                this.disp = 'Your operation has been run successfully ' ;
+                            } else {
+                                this.disp = 'Your operation has been not Initaited ! ' ;
+                            }
+                        }
+                    }   
+
                 });
             </script>
         <!------------------------------------------------------------------------------------------------------>                                 
@@ -338,7 +461,7 @@
         <section class="VideoSection">
             <h3> Lesson 12 Video File:</h3>
             <video controls width="300" height="300">
-                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\Web Framework\Vue.js Frame Work\12 Learn VueJs In Arabic - Directives - v-model.mp4" type="video/mp4">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\12 Learn VueJs In Arabic - Directives - v-model.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
             </video>
         </section>

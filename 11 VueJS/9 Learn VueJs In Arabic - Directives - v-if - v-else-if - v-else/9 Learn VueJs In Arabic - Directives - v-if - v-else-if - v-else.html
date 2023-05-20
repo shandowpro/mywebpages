@@ -62,9 +62,9 @@
             <article>
                 <p> &gt; Main Subjects in this lesson are as following : </p>
                 <ol type="A">
-                    <li> [v-if] -> To loop inside the Array and Object and even inside an Array of objects </li>
-                    <li> [v-else] -> To can Reach each Array/Object value and Index </li>
-                    <li> [v-else-if] -> To can Reach each Array/Object value and Index </li>
+                    <li> [v-if] -> To implement if condition inside html element with in inline responsive code </li>
+                    <li> [v-else] -> To implement else against conditions inside html element with in inline responsive code  </li>
+                    <li> [v-else-if] -> To implemement multiple conditions inside html element with in inline responsive code </li>
                 </ol>                                
             </article>
         </Section>
@@ -78,7 +78,6 @@
                         
             <h2> =&gt; Using Vue Directives within Vue Instances [properties && Methods] Concept : <br>
                 <ul>
-                    <li> [v - for] => Used to loop inside the Array and object and Array of Objects  </li>                    
                     <li> [v-if] => Also used as an element Attribute  </li>                    
                     <li> [v-else-if] => Can reach any element's value and index inside the array </li>                    
                     <li> [v-else] => Incase of looping inside the array of Objects => This directive can be used to reach any of Object's Properties's value by using the property KeyName </li>                    
@@ -205,14 +204,14 @@
         <!------------------------------------------------------------------------------------------------------>
         <section class="PHPPract" id="PHPPract"> 
              <header>
-                <h3> Vue.js [Using Vue Directives {v-if} - {v-else-if - {v-else}] General Practical Applications : </h3>
+                <h3> Vue.js [Using Vue Directives {v-if} - {v-else-if} - {v-else}] General Practical Applications : </h3>
             </header>
             
-            <p> In this lesson will be (1) Application { Using Directives [{v-if} - {v-else-if - {v-else}]= > as following :  </p>
+            <p> In this lesson will be (1) Application Using Directives [{v-if} - {v-else-if} - {v-else}]= > as following :  </p>
 
                  <ol type="A">
                                                             
-                    <li> First Example => Creating a [Vue Application Container] with [Simple and Advanced Loopig inside a simple array and Array of Objects ] , and including the following steps : <br>
+                    <li> First Example => Creating a [Vue Application Container] with [Simple and Advanced Looping inside a simple array and Array of Objects ] , and including the following steps : <br>
                         <ul>
                             <li> Defining and Creating the [Vue Main Container] {app-one} , with including the following : <br> 
                                 <ul> 
@@ -231,16 +230,29 @@
         
         <!-- First Vue Application [Testing All Datatypes with in Vue Model Instances]  -->
             <div id="app-one">              
-                <h1> This is the First Vue Application : [ {{el}} ] </h1>
+                <h1> This is the First Vue Application : [ {{el1}} ] </h1>
 
                 <p> Welcome {{'Mr [' + name + ']'}}  </p> <hr> <br>
                 
                 <p v-if="age > 50 "> You are too old ! => {{'[' + age + ']'}}  </p>
                 <p v-else-if="age > 14 && age <= 50 "> Your age is accepted => {{'[' + age + ']'}} </p>
-                <p v-else> You are too young ! => {{'[' + age + ']'}}  </p>
+                <p v-else> You are too young ! => {{'[' + age + ']'}}  </p> <br>
+
+                <h1> This is the second Vue application : [{{ el2 }}] </h1>
+                <p v-if="score > 90" > Your Grade is + {{score}} +  You passesed with A grade   </p>
+                <p v-else-if="score < 90 && score > 80" > You passesed with B grade    </p>
+                <p v-else-if="score < 80 && score > 70" >  You passesed with C grade    </p>
+                <p v-else-if="score < 70 && score > 60" >  You passesed with D grade    </p>
+                <p v-else> You are not passesed  </p>
+
                                 
             </div>  <br> <hr>
 
+            <!-- <div id="app-two"> 
+                <p> Hello {{ 'Mr [' + name + ']'  }} </p> <br>
+
+
+            </div> -->
 
             <!-- The following is the main Vue Framework Importing Syntax [from Application Folder]  -->
             <script src="js/vue.js"></script>
@@ -250,9 +262,11 @@
                 var vm = new Vue({
                     el: '#app-one',
                     data: {                        
-                        el: 'app-one',
+                        el1: 'app-one',
+                        el2: 'app-two',
                         name: 'SHADI', 
-                        age : 36
+                        age : 36,
+                        score : 65 
                     }                    
                 });
             </script>
@@ -266,7 +280,7 @@
         <section class="VideoSection">
             <h3> Lesson 9 Video File:</h3>
             <video controls width="300" height="300">
-                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\Web Framework\Vue.js Frame Work\9 Learn VueJs In Arabic - Directives - v-if - v-else-if - v-else.mp4" type="video/mp4">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\9 Learn VueJs In Arabic - Directives - v-if - v-else-if - v-else.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
             </video>
         </section>

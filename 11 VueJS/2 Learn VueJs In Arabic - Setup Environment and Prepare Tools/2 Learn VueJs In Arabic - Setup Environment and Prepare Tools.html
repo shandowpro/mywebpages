@@ -325,6 +325,20 @@
         </section>                     
         
         <!-- The following is the an example of the vue js Enviorenment -->
+  
+        <!-- First Vue element  -->
+        <div id="shadi">      
+            {{message}} <br>
+            <ul>
+                <li> Your information data are as following : <br>
+                <li> {{name}}
+                <li> {{age}}
+                <li> {{address}}
+                <li> {{email}}
+            </ul>
+         </div>
+         
+         <!-- Second Vue element -->
         <div id="elzero">  
             {{message}}
             <ul>  
@@ -333,19 +347,35 @@
             </ul>
         </div>      
 
-
+        <!-- calling vue.js file  -->
         <script src="js/vue.js"></script>
 
+        <!-- First Vue script configuartion data set -->
+        <script>  
+            new Vue({
+                el:'#shadi',
+                data:{
+                    message:'Welcome to the vue.js first data set',
+                    age : '33', 
+                    name: 'shadi', 
+                    address:'Cairo', 
+                    email: 'shadi@gamil.com' 
+                }       
+            })
+        </script>
+
+        <!-- second Vue script configuartion data set -->
         <script> 
             new Vue({
                 el: '#elzero',
                 data: {
-                    message: 'hello from Vue ',
+                    message: 'hello from Vue Second data set',
                     welcome: 'im Shadi ',
                     age: '35',
                 }
             });
         </script>
+            
         <!------------------------------------------------------------------------------------------------------>         
         <!---------------------------------------------------------------------------------------->
     </div>
@@ -356,7 +386,7 @@
         <section class="VideoSection">
             <h3> Lesson 2 Video File:</h3>
             <video controls width="300" height="300">
-                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\Web Framework\Vue.js Frame Work\2 Learn VueJs In Arabic - Setup Environment and Prepare Tools.mp4" type="video/mp4">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\2 Learn VueJs In Arabic - Setup Environment and Prepare Tools.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
             </video>
         </section>

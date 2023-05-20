@@ -236,7 +236,7 @@
 
                  <ol type="A">                                                                
                                                             
-                    <li> First Example  => Creating a [Vue Appliaion Container ] with [Simple Calling of one of the Data Instances] , and including the following steps : <br>                    
+                    <li> First Example  => Creating a [Vue Appliation Container ] with [Simple Calling of one of the Data Instances] , and including the following steps : <br>                    
                         <ul>
                             <li> Defining and Creating the [Vue Main Container] {app-one} , with including the folowing : <br> 
                                 <ul> 
@@ -261,7 +261,7 @@
                         <ul>
                             <li> Defining and Creating the [Vue Main Container] {app-three} , with including the folowing : <br> 
                                 <ul> 
-                                    <li> Head include the one of the vue Instances {Name.length > 4 ? name : 'The Name is too short'  )} </li>
+                                    <li> Head include the one of the vue Instances {Name.length &lt; 4 ? name : 'The Name is too short'  )} </li>
                                 </ul>
                             </li>                            
                         </ul>                                                                                    
@@ -328,7 +328,7 @@
         <!-- Second Vue Application  -->
             <div id="app-two">              
                 <h1> This is the Second Vue Application [ {{el}} ] </h1>
-                <h1> Welconme  [ {{name}} ] <br>
+                <h1> Welconme  [ {{ 'Mr ' + name}} ] <br>
                     your Name count is {{name.length}} 
                 </h1>
             </div>  <hr> <br>     
@@ -353,7 +353,9 @@
         <!-- Third Vue Application  -->
             <div id="app-three">              
                 <h1> This is the Third Vue Application [ {{el}} ] </h1> <br>
-                <h1> Result of the conditioal IF as following : [ {{name.length > 4 ? name : 'Your Name is less than 4 letters' }} ] </h1>
+                <h1> Result of the conditioal IF [by short functional if {condition ? true : false }] as following : [ {{name.length < 4 ? name : 'Your Name is too short' }} ] </h1>
+
+                <h1> The name value after upper casing as following : [ {{name.toUpperCase() }} ] </h1>
             </div>  <hr> <br>     
 
             <!-- The following is the main Vue Framework Importing Syntax [from Application Folder]  -->
@@ -374,8 +376,6 @@
         <!------------------------------------------------------------------------------------------------------>         
 
 
-
-
         <!---------------------------------------------------------------------------------------->
     </div>
     <!------------------------------------------------------------------------------------------------------>
@@ -385,7 +385,7 @@
         <section class="VideoSection">
             <h3> Lesson 4 Video File:</h3>
             <video controls width="300" height="300">
-                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\Web Framework\Vue.js Frame Work\4 Learn VueJs In Arabic - Create The Vue Instance.mp4" type="video/mp4">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\4 Learn VueJs In Arabic - Create The Vue Instance.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
             </video>
         </section>

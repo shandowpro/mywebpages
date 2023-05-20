@@ -73,7 +73,7 @@
                         
             <h2> =&gt; Using JS Datatypes within the [Vue Instances] Concept : <br>
                 <ul>
-                    <li> It is essetial to use any kind of JS Syntax inside the Vue Model as a Vue Instances Values Types , whether it was : <br>                                                             
+                    <li> It is essential to use any kind of JS Syntax inside the Vue Model as a Vue Instances Values Types , whether it was : <br>                                                             
                         <ol>
                             <li> String </li>
                             <li> Number </li>
@@ -262,21 +262,27 @@
         <!-- First Vue Application [Testing All Datatypes with in Vue Model Instances]  -->
             <div id="app-one">              
                 <h1> This is the First Vue Application : [ {{el}} ] </h1>
-                <p> Welcome {{'[' + name + ']'}}  </p> <hr> <br>
-                <p> Your Age {{'[' + age + ']'}} is Accepted </p> <hr> <br>
-                <p> Your Subscribtion Status is  {{'[' + (isSubscribed ? 'Is Subscribed' : 'Not Subscribed') + ']'}}  </p> <hr> <br>
-                <p> Your First Skill is {{'[' + skills[0] + ']'}} </p> <hr> <br>
-                <p> Your Second Skill is {{'[' + skills[1] + ']'}} </p> <hr> <br>
-                <p> Your Third Skill is {{'[' + skills[2] + ']'}} </p> <hr> <br>                
-                <p> The First Test Instances as following:  <br> 
+                <p> (string variable) Welcome  : {{'[' + name + ']'}}  </p> <hr> <br>
+
+                <p> (int variable) Your Age : {{'[' + age + ']'}} is Accepted </p> <hr> <br>
+
+                <p> (boolean + if Condition) Your Subscribtion Status is :  {{'[' + (isSubscribed ? 'Is Subscribed' : 'Not Subscribed') + ']'}}  </p> <hr> <br>
+
+                <p> (array element index 0 ) Your First Skill is {{'[' + skills[0] + ']'}} </p> <hr> <br>
+                <p> (array element index 1 ) Your Second Skill is {{'[' + skills[1] + ']'}} </p> <hr> <br>
+                <p> (array element index 2 ) Your Third Skill is {{'[' + skills[2] + ']'}} </p> <hr> <br>                
+                
+                <p> (array element index 1 object ) The First Test Instances as following:  <br> 
                     {{'First Test Name is: [' + completedTests[0].testName + ']'}} <br>
                     {{'First Test Result is: [' + completedTests[0].testResult + ']'}} <br> 
                 </p> <hr> <br>                
-                <p> The Second Test Instances as following:  <br> 
+                
+                <p> (array element index 2 object ) The Second Test Instances as following:  <br> 
                     {{'Second Test Name is: [' + completedTests[1].testName + ']'}} <br>
                     {{'Second Test Result is: [' + completedTests[1].testResult + ']'}} <br> 
                 </p> <hr> <br>                
-                <p> The Third Test Instances as following:  <br> 
+                
+                <p> (array element index 3 object ) The Third Test Instances as following:  <br> 
                     {{'Third Test Name is: [' + completedTests[2].testName + ']'}} <br>
                     {{'Third Test Result is: [' + completedTests[2].testResult + ']'}} <br> 
                 </p> <hr> <br>                
@@ -294,19 +300,34 @@
                     data: {
                         welcome: 'Welcome to the First Application ',
                         el: 'app-one',
+    
+                       //string variable : 
                         name: 'Shadi ',
+                        
+                        // intege(int) variable
                         age: 35,
+                        
+                        // boolean variable: 
                         isSubscribed : false,
+                        
+                        // array instance:  
                         skills: ['HTML', 'CSS' ,'JS'],
+                        
+                        // object instance:
                         completedTests: [
-                            {
+                           // first element(object) in the array : 
+                           {
                                testName: 'First-Test',
                                testResult: '70%'
                             },
+                            
+                            // second element(object) in the array : 
                             {
-                               testName: 'Second-Test',
-                               testResult: '80%'
+                                testName: 'Second-Test',
+                                testResult: '80%'
                             },
+
+                            // third element(object) in the array : 
                             {
                                testName: 'Thired Test',
                                testResult: '90%'
@@ -325,7 +346,7 @@
         <section class="VideoSection">
             <h3> Lesson 5 Video File:</h3>
             <video controls width="300" height="300">
-                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\Web Framework\Vue.js Frame Work\5 Learn VueJs In Arabic - Data Types Testing Examples.mp4" type="video/mp4">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\5 Learn VueJs In Arabic - Data Types Testing Examples.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
             </video>
         </section>

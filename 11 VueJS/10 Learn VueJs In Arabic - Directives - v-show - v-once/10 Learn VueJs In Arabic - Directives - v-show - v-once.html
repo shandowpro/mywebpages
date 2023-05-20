@@ -6,7 +6,9 @@
 <head>
 
     <meta charset="utf-8">
+
     <title> 10 Learn VueJs In Arabic - Directives - v-show - v-once </title>
+
     <link rel="stylesheet" href="10 Learn VueJs In Arabic - Directives - v-show - v-once.css" media="all">
 
     <style>
@@ -86,20 +88,21 @@
                     <li> [v-show] => <br>
                         <ul> 
                             <li> To make the Element be displayed only if the condition has return True </li>    
+                            
                             <li> Suits the Toggling Element such as [Element to be toggled between Show(display:show) and Hide(display:none) ] </li>
+                            
                             <li> Differences between the {v-show} && {v-if} :  <br>
                                 <ol> 
                                     <li> In Case of [True] Condition => Both kinds of Directives Will Display the value of the Vue Property  </li>
+                                    
                                     <li> In Case of [False] Condition => <br>
                                         <ul>                                             
-                                            <li> {v-show} => This directive will Only Toggle the (Display) Property to (None) Value </li>
-                                            <li> {v-if} => This Directive will Totally Remove the Element from the HTML script  </li>
+                                            <li> {v-show} => This Directive will Only Toggle the (Display) Property to (None) Value </li>
+                                            <li> {v-if}   => This Directive will Totally Remove the Element from the HTML script </li>
                                         </ul>
                                     </li>
                                 </ol>
-                            
                             </li>
-
                         </ul>                    
                     </li>                                        
                 </ul>
@@ -224,10 +227,10 @@
         <!------------------------------------------------------------------------------------------------------>
         <section class="PHPPract" id="PHPPract"> 
              <header>
-                <h3> Vue.js [Using Vue Directives {v-once} - {v-show] General Practical Application : </h3>
+                <h3> Vue.js [Using Vue Directives {v-once} - {v-show} ] General Practical Application : </h3>
             </header>
             
-            <p> In this lesson will be (1) Application { Using Directives [{v-once} - {v-show} ]= > as following :  </p>
+            <p> In this lesson will be (1) Application [ Using Directives [{v-once} - {v-show} ]= > as following :  </p>
 
                  <ol type="A">
                                                             
@@ -235,9 +238,11 @@
                         <ul>
                             <li> Defining and Creating the [Vue Main Container] {app-one} , with including the following : <br> 
                                 <ul> 
-                                    <li> Using the v-once to static Display the Name Property </li>                                     
-                                    <li> Using the v-show to Conditional Displaying the Age Property => To Toggling the Display [show - none] </li>
-                                    <li> Using the v-if to Conditional Displaying the Age Property => Show - Remove the Element  </li>
+                                    <li> Using the {v-once} to static Display the Name Variable Property </li>                                     
+                                    
+                                    <li> Using the {v-show} to Conditional Displaying the Age Variable Property => To Toggling the Display [show - none] </li>
+
+                                    <li> Using the {v-if} to Conditional Displaying the Age Variable property => Show - Remove the Element  </li>
                                 </ul>
                             </li>                            
                         </ul>                                                                                    
@@ -252,13 +257,23 @@
         <!-- First Vue Application [Testing All Datatypes with in Vue Model Instances]  -->
             <div id="app-one">              
                 <h1> This is the First Vue Application : [ {{el}} ] </h1>
-
-                <p v-once> Welcome {{'Mr [' + name + ']'}} => Using {v-once} </p> <hr> <br>
                 
+                <h2> Using [v-once] => to display VUE Variable only for only one time: </h2>
+                <p v-once> Welcome {{'Mr [' + name + ']'}} => Using {v-once} </p> <hr> <br>
+                <p> Testing a second display of the same variable displayed by v-once {{'Mr [' + name + ']'}} => Using {v-once} with out usgin the same Directive </p> <hr> <br>
+                
+                <h2> Using [v-show] => to display VUE Variable incase of implementing condition : </h2>
                 <p v-show = "age"> You are => {{'[' + age + ']'}} => Using {v-show}  </p>
+                
+                <h2> Using [v-if] => to display VUE Variable incase of implementing condition : </h2>
                 <p v-if = "age"> You are => {{'[' + age + ']'}} => Using {v-if}  </p>
-                                
+                
+                <h2> Using [v-show] => to display VUE Variable incase of implementing condition || remvoe and display certain value incase of not implementing condition : </h2>
+                <p v-if = "address"> Your address is  => {{'[' + address + ']'}} => Using {v-if}  </p>
+                <p v-else = "address"> Your address is  => {{'[ empty ]'}} => Using {v-else}  </p>
+            
             </div>  <br> <hr>
+
 
 
             <!-- The following is the main Vue Framework Importing Syntax [from Application Folder]  -->
@@ -271,7 +286,8 @@
                     data: {                        
                         el: 'app-one',
                         name: 'SHADI', 
-                        age : 36
+                        age : 36, 
+                        address: ''
                     }                    
                 });
             </script>
@@ -285,7 +301,7 @@
         <section class="VideoSection">
             <h3> Lesson 10 Video File:</h3>
             <video controls width="300" height="300">
-                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\Web Framework\Vue.js Frame Work\10 Learn VueJs In Arabic - Directives - v-show - v-once.mp4" type="video/mp4">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\10 Learn VueJs In Arabic - Directives - v-show - v-once.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
             </video>
         </section>
