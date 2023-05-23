@@ -104,6 +104,26 @@
                         </ul>
                     </li> <br>
 
+                    <li> The Differences between properties passed through the vue inxtances and properites passed through the vue compnonents as following : 
+                        <ul>
+                            <li> [Vue Instances properties] => <br>
+                                <p> will be public passed through any element in the {vue application} , not just in the {vue new component}  </p>
+                                <p> Declaration method -> can be declared in the [Vue instances model] properties [with in (Data:) section ] </p>
+                                <p> calling method -> can be Called by inside vue { { } } , in any place of the Vue application [[but Can Not be Called in new declared Vue component]]  </p>
+                            </li> <br>
+                            
+                            <li> [Vue new component properties] => <br>
+                                <p> will be private passed through only just in the {vue new component} </p>
+                                <p> Decleration method -> can be declared in the [Vue new component model] passed properties [with in (Data:) section ] </p>
+                                <p> calling method -> Called by inside vue { { } } , but only to be called and used in the new Vue component </p>
+                            </li>
+                        </ul>
+                        <p> Niether {Defined Properties of Vue Instances} can be used in the {Vue new component} <br> 
+                             NOR New {Defined Properties of Vue new component} can be used in the {Vue Application outside the defined Vue component} 
+                        </p> 
+                    </li>
+
+   
                     <li> The full Ideal aned correct priorities in the Vue model until now: <br>
                         <ol>
                             <li> Vue Application </li>
@@ -181,7 +201,8 @@
                             <span class=three></span> }, <br>  <br>
                             
                             <span class= three></span> // B] [Vue Component Template] Elements Defining : <br> 
-                            <span class= three></span> template: '&lt; p @click="count++" &gt; Hello { { name } } Your count is : { { count } } &lt; /p &gt;'  <br> 
+                            <span class= three></span> template: '&lt; p @click="count++" &gt; Hello { { name } }<br>
+                                <span class= four></span> Your count is : { { count } } &lt; /p &gt;'  <br> 
                         <span class=two></span> }) <br> 
                         //=========================================================== <br> <br>
 
@@ -199,7 +220,7 @@
                                 <span class= four></span> method1: function() { codes} <br> 
                                 <span class= four></span> method2: function() { codes} <br> 
                             <span class=three></span> } <br> 
-                        <span class=two></span> }, <br>                        
+                        <span class=two></span> }); <br>                        
                     
                     <span class= one></span> &lt; /script &gt;  <br>
                         //=========================================================== <br> <br>                                                                                                            
@@ -232,7 +253,7 @@
                                             </li> <br>
                                             <li> Component Template : <br>
                                                 <ol> 
-                                                    <li> Element=> &lt; p &gt; => Including a Vue Function </li>                                                  
+                                                    <li> Element=> &lt; p &gt; => Including a Vue Function by using (@click="") </li>                                                  
                                                 </ol>
                                             </li>
                                         </ol>
@@ -256,10 +277,14 @@
         
         <!-- First Vue Application [Using Both {Creating new Component} + {Vue Model Instances}]  -->
             <!-- 1) {Vue application} -->
-            <div id="app-one">               
+            <div id="app-one" style="border:solid red 2px ">               
                 <h1> This is the First Vue Application : [ {{el}} ] </h1> <br> <br>
                 <p> Hello {{name}} </p>
-                <component-one> </component-one>     
+                <p> {{insPro}} </p>
+                <p> {{message}} </p>
+                <!-- <input v-model="age" type="text" placeholder="insert your age"/>  -->
+                <!-- <component-one> </component-one> -->
+                <component-two> </component-two>
             </div> 
 
 
@@ -271,19 +296,40 @@
                 b) Decleration of {Vue Model Instances} ->  [ Instances name , instances properties , instances methods ]  -->
             <script> 
                 //  A) Vue new Component Defining : 
-                Vue.component('component-one', {
-                    // 1) Setting Data to be passed through into this component [as a returning object's elements] :
+                //  First Vue component => 1) Setting Data to be passed through into this component [as a returning object's elements] :
+                // 2) Setting template to be used inside the component [as a string value] -> {could hold full HTML and vue syntax} : 
+
+                // Vue.component('component-one', {
+                //     data: function() {
+                //         return {
+                //             name: 'Shadi (From component Datasource) ',
+                //             count: 0,
+                //             message : 'Welcome to the Vue Reusable Component Application',
+                //         }
+                //     },
+                    
+                //     template: '<p @click="count++" style="color:red; border: 3px solid blue"> Hello {{name}} , {{message}} => Your Count is : {{count}}  </p>',                
+                // });
+
+
+                // Second Vue component => 1) Setting Data to be passed through this component [as a returning object's elements] : 
+                // Setting template to be used inside the component [as a string value] -> {could hold full HTML and vue syntax}
+                
+                Vue.component('component-two', {
                     data: function() {
                         return {
-                            name: 'Shadi (From component Datasource) ',
-                            count: 0,
-                            message : 'Welcome to the Vue Reusable Component Application',
+                            name : 'shadi',
+                            country: 'Egypt',
+                            age:'35',
+                            testAge: '', 
+                            style1: 'border:solid 3px brown',
                         }
                     },
+
+                    template: '<div type="text" style="border:solid 3px brown" placeholder="insert your age" >  Hello {{name}} <br> {{age > 30 ? "Your age is accepted " : "Your age is NOT accepted !" }} <br> you Are from {{country}} </div>',
                     
-                    // 2) setting template to be used inside the component [as a string value] -> {could hold full HTML and vue syntax} : 
-                    template: '<p @click="count++"> Hello {{name}} , {{message}} => Your Count is : {{count}} </p>',                
-                })
+                });
+                // template: '<div style="border:solid 3px brown" >  Hello {{}} <br> {{  }} <br> you Are from {{}} </div>',
                 
                //  B) Vue Model Instances [properties + methods] Defining : 
                 var vm = new Vue({
@@ -291,10 +337,11 @@
                     data: {                        
                         el: 'app-one',
                         name: 'Pro (From Main Model Instance Datasource) ',
+                        insPro: 'this text comming from vue instance model ',
+                        age : '22', 
                     }, 
                     methods: {
                     }
-                
                 });
             </script>
         <!------------------------------------------------------------------------------------------------------>                                 

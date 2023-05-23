@@ -13,11 +13,11 @@
     <!-- First Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1" >    
  
-    <meta content="Learning Course" description="This is Lesson 6 Adding Tools & Libraries " >    
+    <meta content="Learning Course" description="This is Lesson 8 Create & Test Languages Files " >    
     
-    <title> 6 Adding Tools & Libraries </title>
-    
-    <link rel="stylesheet" href="6 Adding Tools & Libraries.css" media="all">        
+    <title> 8 Create & Test Languages Files   </title>
+        
+    <link rel="stylesheet" href="8 Create & Test Languages Files.css" media="all">        
     
     <link rel="stylesheet" href="css/bootstrap.min.css" media="all">
     
@@ -206,7 +206,7 @@
             
    <!-------------------------------------------------------------------------------------------------------->
     <header id="Main" class="Main wow fadeInDown" data-wow-duration="1s">
-        6 Adding Tools & Libraries
+        8 Create & Test Languages Files
     </header>
 
 <!-------------------------------------------------------------------------------------------------------->
@@ -292,7 +292,7 @@
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
         <span> Welcome to JQuerry Course | </span> <br>
-        6 Adding Tools & Libraries        
+        8 Create & Test Languages Files        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
     <!-- Options Tool box -->
@@ -317,8 +317,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => E-commerece website Fullstack  <span><strong> { Adding Tools and libraries} for project </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong>  {  Adding Tools and libraries } to included files of  the project </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section => E-commerece website Fullstack  <span><strong> { 8 Create & Test Languages Files } for project </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong>  {  8 Create & Test Languages Files } and include it within the proeject file </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1083,16 +1083,14 @@
         <Section  id="MainC" class="MainC">
 
             <header>
-                FS online store [6 Adding Tools & Libraries()] Main Topics : <br>
+                FS online store [8 Create & Test Languages Files()] Main Topics : <br>
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => adding Tools and libraries for the project </p>
+                <p> &gt; Main Subjects in this lesson will be => Create test languges files  for the project </p>
                 <li> Main Subjects :  <br>                         
                 <ol type="A">                                       
-                    <li> Main Libraires and framworks to be attached to the project files </li>
-                    <li> How to copying files from libraries to hthe online store files tree   </li>
-                    <li> Calling files with in the script of the files of project included files  </li>
+                    <li>   </li>
                 </ol>
             </article>
         </Section>  
@@ -1101,221 +1099,125 @@
         <!------------------------------------------------------------------------------>
         <section class="JSDOMCon" id="JSDOMCon">
             <header>
-                <h3> 6 Adding Tools & Libraries concept : </h3>
+                <h3> 8 Create & Test Languages Files concept : </h3>
             </header>
             <p> </p>
             
-            <p> Main Libraries, Tools, and framworks to be added and called to the files of included project files  , such as : <br>
+            <p> Importance of {    } file , as following  : <br>
                 <ul> 
-                    <li> {bootstrap} -> <br>
-                        <ul>     
-                            <li> Version [3.3.6] </li>
-                            <li> Usages : Will be used commonly for responsive desings and creating nice and proffiecient elements [buttons , tables , ....] </li>
-                            <li> Required Files copied into our project : <br>
-                               <ol>
-                                    <li> {fonts} folder  => All Folder => into => { htdocx/eCommerce/admin/layout/fonts } (override) </li>
-                                    <li> {css} folder => {bootstrap.css} && {bootstrap.min.css} (override) => into =>  { htdocx/eCommerce/admin/layout/css/ } (inside folder) </li>
-                                    <li> {js} folder =>  {bootstrap.min.js} only => into => { htdocx/eCommerce/admin/layout/js/ } (inside folder) </li>
-                                </ol>       
-                            </li>
-
-                            <li> Method to attach/calling {bootstrap} files -> inside the included project script files : <br>
-                                <code>
-                                    // A] inside {header.php} file: <br>
-                                    <span class="one"></span> &lt; !DOCTYPE html &gt; <br>
-                                    <span class="one"></span> &lt; html &gt; <br>
-                                        <span class="two"></span> &lt; head &gt; <br>
-                                            <span class="three"></span> &lt; title &gt; header &lt; /title &gt; <br>
-                                            <span class="three"></span> &lt; meta charset="utf-8" / &gt; <br>
-                                            <span class="three"></span> &lt; link rel=stylesheet" href="htdocx/eCommerce/admin/layout/css/bootstrap.min.css" /&gt; <br>
-                                            <span class="three"></span> &lt; link rel=stylesheet" href="htdocx/eCommerce/admin/layout/css/admin.css" /&gt;  [my custom (with name: control || admin || backend ) css file {must be after all other css files }] <br>
-                                        <span class="two"></span> &lt; /head &gt; <br> <br>
-
-                                        <span class="two"></span> &lt; body &gt; <br>
-
-                                    <br> <hr> <br>
-
-                                    // B] inside {footer.php} file: <br>
-                                            <span class="three"></span> &lt; div class="footer" &gt; <br>
-                                                <span class="four"></span> This is footer <br>
-                                            <span class="three"></span> &lt;/div &gt; <br> 
-                                            
-                                            <span class="three"></span> &lt; script src="htdocx/eCommerce/admin/layout/js/jquery-1.12.1.min.js" &gt; &lt;/script &gt; [jquery is required for runing bootstrap - so it must be before the bootstrap code ] <br>
-                                            <span class="three"></span> &lt; script src="htdocx/eCommerce/admin/layout/js/bootstrap.min.js" &gt; &lt;/script &gt; [bootstrap must be after the jquery file to be run] <br> 
-
-                                        <span class="two"></span> &lt;/body &gt; <br> 
-                                    <span class="one"></span> &lt;/html &gt; <br> 
-                                </code>    
-                            </li> <br> <br>
-
-                            <li> Testing the respoding to the attached files {bootstrap} & {jquery} : <br>
-                                <code>
-                                    // *] inside {index.php} file: <br>
-                                    <span class="one"></span> &lt;?php  <br>
-
-                                        <span class="two"></span> include "header.php"; <br>
-                                    
-                                            <span class="three"></span> Welcome to index file  <br>
-                                            <span class="three"></span> &lt; div class="btn btn-danger btn-block" &gt;  <br>
-                                                <span class="four"></span>  Testing bootstrap attached files  <br>
-                                            <span class="three"></span> &lt; /div  &gt;  <br>
-                                       
-                                        <span class="two"></span> include "footer.php"; <br>
-                                    <span class="one"></span> ?&gt; <br>
-                                    <br> <hr> <br>
-                                </code>
-                            </li>
-                        </ul>
-                    </li> <br> <hr> <br>
+                    <li> Saving a lot of time and Performance in calling and importing Routs and Paths of files included files with in the project  <br>
+                    <li> Saving a lot of time and Performance incase of modifying Routs and Paths of files included files with in the project , specilally in many pages files project  <br> </li>
+                </ul>
                     
-                    <li> {jquery} -> <br>
-                        <ul>     
-                            <li> Version [1.12.1]  </li>
-                            <li> Usages :  <br>
-                                <ol>
-                                    <li> For creating critical functions, methods and events to produced advanced Performance </li>
-                                    <li> For critcial for bootstrap working </li>
-                                    <li> Used in both frontend || backend purposes </li>
-                                </ol>       
-                            </li>
+            <P> Where to put the {init.php} file [init.php file location in project tree files] :  </br>
+                {admin/init.php}  
+            </P> 
 
-                            <li> Required Files copied into our project : <br>
-                                <ol>
-                                     <li> {js} folder =>  {jquery-1.12.1.min.js} only => into => { htdocx/eCommerce/admin/layout/js/ } (inside folder) </li>
-                                 </ol>       
-                             </li>
- 
-                             <li> Method to attach/calling {jquery} file -> inside the included project script files : <br>
-                                 <code>
-                                     // inside {footer.php} file: <br>
-                                            <span class="three"></span> &lt; div class="footer" &gt; <br>
-                                                <span class="four"></span> This is footer <br>
-                                            <span class="three"></span> &lt;/div &gt; <br> 
-                                                
-                                            <span class="three"></span> &lt; script src="htdocx/eCommerce/admin/layout/js/jquery-1.12.1.min.js" &gt; &lt;/script &gt; [jquery is required for runing bootstrap - so it must be before the bootstrap code ] <br>
-                                            <span class="three"></span> &lt; script src="htdocx/eCommerce/admin/layout/js/bootstrap.min.js" &gt; &lt;/script &gt; [bootstrap must be after the jquery file to be run] <br> 
+            <p> {init.php} file content : <br>
+                <ul> 
+                    <li> Routs/paths of important file (that is commonly used repeatedly in our included files , such as  <br>
+                        <ol> 
+                            <li> {tpl} => a shortcut of [includes/templated]  </li>
+                            <li> {css} => a shortcut of [layout/css]  </li>
+                            <li> {js} => a shortcut of [layout/css]  </li>
+                        </ol>
+                    </li>
 
-                                        <span class="two"></span> &lt;/body &gt; <br> 
-                                    <span class="one"></span> &lt;/html &gt; <br> 
-                                 </code>    
-                             </li> 
-                        </ul> 
-                    </li>  <br> <hr> <br>
-
+                    <li> Functions files -> [later lessons] </li>
                     
-                    <li> {font-awesome} -> <br>
-                        <ul>     
-                            <li> Version [4.5.0] </li>
-                            
-                            <li> Usages : <br>
-                                <ol>
-                                    <li> To abtain nice and high performing font icons </li>
-                                </ol>
-                            </li>
-
-                            <li> Required Files copied into our project : <br>
-                                <ol>
-                                     <li> {fonts} folder => all folder => into => { htdocx/eCommerce/admin/layout/fonts } (override folder) </li>
-                                     <li> {css} folder => {font-awesome.min.css} only => into => { htdocx/eCommerce/admin/layout/css/ } (inside folder) </li>
-                                 </ol>       
-                             </li>
- 
-                             <li> Method to attach/calling { font-awesome } file -> inside the included project script files : <br>
-                                // A] inside {header.php} file: <br>
-                                    <span class="one"></span> &lt; !DOCTYPE html &gt; <br>
-                                    <span class="one"></span> &lt; html &gt; <br>
-                                        <span class="two"></span> &lt; head &gt; <br>
-                                            <span class="three"></span> &lt; title &gt; header &lt; /title &gt; <br>
-                                            <span class="three"></span> &lt; meta charset="utf-8" / &gt; <br>
-                                            <span class="three"></span> &lt; link rel=stylesheet" href="htdocx/eCommerce/admin/layout/css/bootstrap.min.css" /&gt; <br>
-                                            <span class="three"></span> &lt; link rel=stylesheet" href="htdocx/eCommerce/admin/layout/css/font-awesome.min.css" /&gt; <br>
-                                            <span class="three"></span> &lt; link rel=stylesheet" href="htdocx/eCommerce/admin/layout/css/admin.css" /&gt;  [my custom (with name: control || admin || backend ) css file {must be after all other css files }] <br>
-                                        <span class="two"></span> &lt; /head &gt; <br> <br>
-
-                                        <span class="two"></span> &lt; body &gt; <br>
-
-                                    <br> <hr> <br>
-                                </code>    
-                            </li> <br>
-
-                            <li> Testing the respoding to the attached files {font awesome}  &  {jquery} : <br>
-                                <code>
-                                    // *] inside {index.php} file: <br>
-                                    <span class="one"></span> &lt;?php  <br>
-                                        <span class="two"></span> include "includes/templates/header.php"; <br>
-                                            <span class="three"></span> Welcome to index file  <br>
-                                            <span class="three"></span> &lt; i class="fa fa-home fa=5x" &gt; &lt; /i &gt; [calling font awesome class for testing ]  <br>
-                                        <span class="two"></span> include "includes/templates/footer.php"; <br>
-                                    <span class="one"></span> ?&gt; <br>
-                                    <br> <hr> <br>
-                                </code>
-                            </li>
-                        </ul>    
-                    </li> <br> <hr> <hr> <br>
+                    <li> Langs files -> [later lessons] </li>
                 </ul>
             </p>
+
+            <p> How and where Calling/include {init.php} file in project files : <br>
+                <ul> 
+                    <li> {index.php} -> to be included before any php including code [even before header file] -> in order to effect all other after icluded php files  </li> 
+                    <li> {header.php} -> to use imported [Routs || Functions|| Langs] variables with in included files sources {such as css & js [bootstrap, fontawsome , jquery] with in script and link in header} </li> 
+                    <li> {footer.php} -> to use imported [Routs || Functions|| Langs] variables with in included files sources {such as js [bootstrap, jquery] with in script and link in footer} </li> 
+                </ul>
+            </p>
+
+            <p>  </p>
+
             
-             <p> Pratical Example on [Practical application on adding and attaching libraries and tools files into included files [components]  "header.php" & "footer.php" & "index.php"  Method ] ->  : <br> </p>
+             <p> Pratical Example on [Practical application on creating {init.php} file , and include it "header.php" & "footer.php" & "index.php"  Method ] ->  : <br> </p>
                 <ol type="A">
+
+                   <li>  A] Creating the {init.php} file, and edit it's contents , as following : <br> 
+                       
+                       <code>
+                            // {init.php} : <br>
+                            <span class="one"></span> &lt;?php   <br>
+                                <span class="two"></span> // {Routs variables} : <br>
+                                <span class="two"></span> $tpl = 'includes/templates/';  <br>
+                                <span class="two"></span> $css = 'includes/css/';  <br>
+                                <span class="two"></span> $js = 'includes/js/';  <br>
+                           <span class="one"></span> ?&gt;   <br>
+                       </code>                                
+                    </li> <br>
+                    <!-- ------------------------------------------------ -->
                     
-                    <li> A] Full included file [header.php || header.inc] after calling all libraries and tools inside the script : <br> 
+                    <li> B] Adding the {init.php} file in [index.php] : [adding Routs files name variables with in included files paths 
+                        (header.php) & (footer.php) <br> 
+                        <code> 
+                            // {index.php} : <br>
+                            <span class="one"></span> &lt;? php   <br>
+                                <span class="two"></span> include 'init.php' ; <br>
+                                <span class="two"></span> include $tpl . 'header.php' ; <br>
+                            <span class="one"></span> ?&gt;   <br>
+                                    
+                            <span class="one"></span> &lt;? php   <br>
+                                <span class="two"></span> include $tpl . 'footer.php' ; <br>
+                            <span class="one"></span> ?&gt;   <br>
+                                
+                        </code>
+                    </li> <br>
+
+                    <!-- ---------------------------------------- -->
+
+                    <li> C] Adding/attaching  the {init.php} file within [header.php] it's self : [adding Routs files name variables with in included files paths 
+                        (link elements) : <br> 
+                        
                         <code>
                             // {header.php} : <br>
-                            <span class="one"></span> &lt; !DOCTYPE html &gt; <br>
-                            <span class="one"></span> &lt; html &gt; <br>
-                                <span class="two"></span> &lt; head &gt; <br>
-                                    <span class="three"></span> &lt; title &gt; header &lt; /title &gt; <br>
-                                    <span class="three"></span> &lt; meta charset="utf-8" / &gt; <br>
-                                    <span class="three"></span> &lt; link rel=stylesheet" href="htdocx/eCommerce/admin/layout/css/bootstrap.min.css" /&gt; <br>
-                                    <span class="three"></span> &lt; link rel=stylesheet" href="htdocx/eCommerce/admin/layout/css/font-awesome.min.css" /&gt; <br>
-                                    <span class="three"></span> &lt; link rel=stylesheet" href="htdocx/eCommerce/admin/layout/css/admin.css" /&gt;  [my custom (with name: control || admin || backend ) css file {must be after all other css files }] <br>
-                                <span class="two"></span> &lt; /head &gt; <br> <br>
+                            <span class="one"></span> &lt; !DOCTYPE html &gt;   <br>
+                                <span class="two"></span> &lt; html &gt;  <br>
+                                    
+                                    <span class="three"></span> &lt; head &gt;  <br>
+                                        <span class="four"></span> &lt; meta charset="utf-8" &gt;  <br>
+                                        <span class="four"></span> &lt; title &gt; header page &lt; /title &gt;  <br>
+                                        <span class="four"></span> &lt; link rel="stylesheet"  href=" &lt?php echo $css ?&gt; bootstrap.css" /&gt;   <br>
+                                        <span class="four"></span> &lt; link rel="stylesheet"  href=" &lt?php echo $css ?&gt; fontawsome.min.css" /&gt;   <br>
+                                        <span class="four"></span> &lt; link rel="stylesheet"  href=" &lt?php echo $css ?&gt; mycss.css" /&gt;   <br>
+                                    <span clas="three"></span> &lt; /head &gt;  <br>
 
-                                <span class="two"></span> &lt; body &gt; <br>
-                            <br> <hr> <br>
+                                    <span class="three"></span> &lt; body &gt;   <br>
+
                         </code> <br> <br>                                                                
                     </li>
-                    <!-- ------------------------------------------------ -->
-                    <!-- ------------------------------------------------ -->                                       
+                    <!-- ------------------------------------------------  -->
+                    <!-- ------------------------------------------------  -->
                     
-                    <li> B] Full included file [footer.php || footer.inc] after calling all libraries and tools inside the script : <br>
+                    <li> D] Adding/attaching the {init.php} file within in [footer.php || footer.inc] it's self : <br> 
                         <code>
                             // {footer.php} : <br>
 
-                                    <span class="three"></span> &lt; div class="footer" &gt; <br>
+                                    <span class="three"></span> &lt; div class="footer" &gt;  <br>
                                         <span class="four"></span> This is footer <br>
-                                    <span class="three"></span> &lt;/div &gt; <br> <br>
-                        
-                                    <span class="three"></span> &lt; script src="htdocx/eCommerce/admin/layout/js/jquery-1.12.1.min.js" &gt; &lt;/script &gt; [must be before the bootstrap file] <br>   
-                                    <span class="three"></span> &lt; script src="htdocx/eCommerce/admin/layout/js/bootstrap.min.js" &gt; &lt;/script &gt; [must be after the jquery file] <br>    
+                                    <span class="three"></span> &lt; div class="footer" &gt; <br>
+                                    
+                                    <span class="three"></span> &lt; script src="&lt;?php echo $js; ?&gt; jquery.12.1.min.js" &gt;   &lt; /script &gt;   <br>
+                                    <span class="three"></span> &lt; script src="&lt;?php echo $js; ?&gt; bootstrap.min.js" &gt;   &lt; /script &gt;   <br>
+                                    <span class="three"></span> &lt; script src="&lt;?php echo $js; ?&gt; backend.js" &gt;   &lt; /script &gt;   <br>
                                 <span class="two"></span> &lt; /body &gt;  <br>
-                            
-                            <span class="one"></span> &lt; /html &gt;  <br>
 
-                        </code> <br> <br>                                                                
-                    </li>
-                    <!-- ------------------------------------------------ -->
-                    <!-- ------------------------------------------------ -->                                       
                     
-                    <li> C] Full script Third {Assembled page} file [index.php] => after adding all libraries and tools  : <br> 
-                        <code>
-                            // {index.php} : <br>
+                           <span class="one"></span> &lt; /html &gt;  <br>
 
-                                <span class="one"></span> &lt; ?php  <br>
-                                    <span class="two"></span> include "C:\xampp\htdocs\eCommerce\includes\templates\header.php"; <br>
-                                <span class="one"></span> ? &gt; <br>
-                                
-                                <span class="one"></span> welcome to Index Assembled page [after adding all libraries and tools ] <br>
-                                
-                                <span class="one"></span> &lt; ?php <br>
-                                    <span class="two"></span> include "C:\xampp\htdocs\eCommerce\includes\templates\footer.php"; <br>
-                                <span class="one"></span> ?&gt; <br>
                         </code> <br> <br>                                                                
                     </li>
                     <!-- ------------------------------------------------ -->
-                    <!-- ------------------------------------------------ -->                                               
-                    <!-- ------------------------------------------------ -->                                        
-                    <!-- ------------------------------------------------ -->                                        
+                    <!-- ------------------------------------------------ -->                                                           
                 </ol>
             </p>
 
@@ -1329,7 +1231,7 @@
                     </a> <br> <br> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/lessons/5%20Include%20the%20Main%20Required%20Files/">  
-                        <button id=btn class="btn0" onclick="display()"> Display FS online store This lesson [6 Adding Tools & Libraries] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Display FS online store This lesson [8 Create & Test Languages Files] file </button>
                     </a> <br>  <hr> <br> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/includes/templates/header.php">  
@@ -1405,14 +1307,14 @@
         </section>
 
         <!------------------------------------------------------------------------------------------------------>
-        <!------------------------------------------------------------------------------------------------------> 
+        <!------------------------------------------------------------------------------------------------------>
 
         <section class="JSDOMImp" id="JSDOMImp">
             <header>
-                <h3> FS online store [6 Adding Tools & Libraries] Importance & Benefits : </h3>
+                <h3> FS online store [8 Create & Test Languages Files] Importance & Benefits : </h3>
             </header>            
                 <ul>                                                                     
-                    <li> Assembling Project/application files with including php code & addding attached libraries and tools > will add great nice effects with fast Performance to web site  </li>  
+                    <li> Assembling Project/application fioles with including php code => will save great time in both cases of rendering or calling the index page and other pages of the project && in case of modifications with in project components Source files </li>  
                 </ul>                                                               
         </section>
 
@@ -1420,7 +1322,7 @@
 
         <section class="JSDOMSyntx" id="JSDOMSyntx">
             <header>
-                <h3> [6 Adding Tools & Libraries] Syntax & Methods: </h3>
+                <h3> [8 Create & Test Languages Files] Syntax & Methods: </h3>
             </header>   
 
              <p> =&gt;  Scenario Procedures :   </p>
@@ -1471,7 +1373,7 @@
         <!------------------------------------------------------------------------------------------------------>
         <section class="JSDOMPract container" id="JSDOMPract">
             <header>
-                <h3> CMD [6 Adding Tools & Libraries()]  => {this lesson can be accessed throuh the github repo [webpages] } </h3>
+                <h3> CMD [8 Create & Test Languages Files()]  => {this lesson can be accessed throuh the github repo [webpages] } </h3>
             </header>
                         
             <!-- <p> Using [cmd] For performing Scenario of controling with [Directories] processes and functions:   </p>
@@ -1560,11 +1462,12 @@
     <!------------------------------------------------------------------------------------------------------>
     <!------------------------------------------------------------------------------------------------------>
         
-    <aside>        
+    <aside>   
+        <i class="icon-bar"> </i>     
         <section class="VideoSection" id="VideoSection">
-            <h3> Lesson 6 Video File: </h3>
+            <h3> Lesson 8 Video File: </h3>
             <video controls width="300" height="300">
-                <source src="E:\Web videos lessons\Web Apps\Create eCommerce Shop With PHP, MySQL, jQuery, Bootstrap\6 Adding Tools & Libraries.mp4" type="video/mp4">
+                <source src="E:\Web videos lessons\Web Apps\Create eCommerce Shop With PHP, MySQL, jQuery, Bootstrap\8 Create & Test Languages Files.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
             </video>
         </section>
@@ -1688,7 +1591,7 @@
     </section>
 
     <script>
-        alert("Welcome to 6 Adding Tools & Libraries");
+        alert("Welcome to 8 Create & Test Languages Files");
     </script>
     
 <!-- Resources files -->

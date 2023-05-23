@@ -317,8 +317,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => E-commerece website Fullstack  <span><strong> { Adding Tools and libraries} for project </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong>  {  Adding Tools and libraries } to included files of  the project </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section => E-commerece website Fullstack  <span><strong> { Creating init.php file } for project </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong>  {  Creating init.php file } and include it within the proeject file </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1087,12 +1087,13 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => adding Tols and libraries for the project </p>
+                <p> &gt; Main Subjects in this lesson will be => Creating the init.php file for the project </p>
                 <li> Main Subjects :  <br>                         
                 <ol type="A">                                       
-                    <li> Main Libraires and framworks to be attached to the project files </li>
-                    <li> How to copying files from libraries to hthe online store files tree   </li>
-                    <li> Calling files with in the script of the files of project included files  </li>
+                    <li> Importance of {init.php} file  </li>
+                    <li> Where to put the {init.php} file [init.php file location in project tree files]  </li>
+                    <li> How Calling/include {init.php} file in project files    </li>
+                    <li> Usages of {init.php} file in project files    </li>
                 </ol>
             </article>
         </Section>  
@@ -1105,119 +1106,121 @@
             </header>
             <p> </p>
             
-            <p> Main Libraries, Tools, and framworks to be added and called to the files of included project files  , such as : <br>
+            <p> Importance of {init.php} file , as following  : <br>
                 <ul> 
-                    <li> {bootstrap} -> <br>
-                        <ul>     
-                            <li> Version [3.3.6] </li>
-                            <li> Usages : Will be used commonly for responsive desings and creating nice and proffiecient elements [buttons , tables , ....] </li>
-                            <li> Required Files copied for our project : <br>
-                               <ol>
-                                    <li> {fonts} folder  => All Folder  </li>
-                                    <li> {css} folder => {bootstrap.css} && {bootstrap.min.css} </li>
-                                    <li> {js} folder =>  {bootstrap.min.js} only </li>
-                                </ol>       
-                            </li>
-                            <li> Path to copy to :  </li>
-                        </ul>
-                    </li> <br> <hr> <br>
+                    <li> Saving a lot of time and Performance in calling and importing Routs and Paths of files included files with in the project  <br>
+                    <li> Saving a lot of time and Performance incase of modifying Routs and Paths of files included files with in the project , specilally in many pages files project  <br> </li>
+                </ul>
                     
-                    <li> {jquery} -> <br>
-                        <ul>     
-                            <li> Version [1.12.1]  </li>
-                            <li> Usages :  <br>
-                                <ol>
-                                    <li> For creating critical functions, methods and events to produced advanced Performance </li>
-                                    <li> For critcial for bootstrap working </li>
-                                    <li> Used in both frontend || backend purposes </li>
-                                </ol>       
-                            </li>
-                            <li> Required Files copied for our project </li>
-                            <li> Path to copy to :  </li>
-                        </ul> 
-                    </li>  <br> <hr> <br>
+            <P> Where to put the {init.php} file [init.php file location in project tree files] :  </br>
+                {admin/init.php}  
+            </P> 
 
+            <p> {init.php} file content : <br>
+                <ul> 
+                    <li> Routs/paths of important file (that is commonly used repeatedly in our included files , such as  <br>
+                        <ol> 
+                            <li> {tpl} => a shortcut of [includes/templated]  </li>
+                            <li> {css} => a shortcut of [layout/css]  </li>
+                            <li> {js} => a shortcut of [layout/css]  </li>
+                        </ol>
+                    </li>
+
+                    <li> Functions files -> [later lessons] </li>
                     
-                    <li> {font-awesome} -> <br>
-                        <ul>     
-                            <li> Version [4.5.0] </li>
-                            
-                            <li> Usages : <br>
-                                <ol>
-                                    <li>  </li>
-                                </ol>
-                            </li>
-
-                            <li> Required Files copied for our project : <br>
-                                <ol>
-                                    <li> </li>
-                                </ol>    
-                            </li>
-                            
-                            <li> Path to copy to :  </li>
-                        </ul>    
-                    </li> <br> <hr> <hr> <br>
+                    <li> Langs files -> [later lessons] </li>
                 </ul>
             </p>
+
+            <p> How and where Calling/include {init.php} file in project files : <br>
+                <ul> 
+                    <li> {index.php} -> to be included before any php including code [even before header file] -> in order to effect all other after icluded php files  </li> 
+                    <li> {header.php} -> to use imported [Routs || Functions|| Langs] variables with in included files sources {such as css & js [bootstrap, fontawsome , jquery] with in script and link in header} </li> 
+                    <li> {footer.php} -> to use imported [Routs || Functions|| Langs] variables with in included files sources {such as js [bootstrap, jquery] with in script and link in footer} </li> 
+                </ul>
+            </p>
+
+            <p>  </p>
+
             
-             <p> Pratical Example on [Practical application on creating included files [components]  "header.php" & "footer.php" & "index.php"  Method for basic and advanced features ] ->  : <br> </p>
+             <p> Pratical Example on [Practical application on creating {init.php} file , and include it "header.php" & "footer.php" & "index.php"  Method ] ->  : <br> </p>
                 <ol type="A">
 
+                   <li>  A] Creating the {init.php} file, and edit it's contents , as following : <br> 
+                       
+                       <code>
+                            // {init.php} : <br>
+                            <span class="one"></span> &lt;?php   <br>
+                                <span class="two"></span> // {Routs variables} : <br>
+                                <span class="two"></span> $tpl = 'includes/templates/';  <br>
+                                <span class="two"></span> $css = 'includes/css/';  <br>
+                                <span class="two"></span> $js = 'includes/js/';  <br>
+                           <span class="one"></span> ?&gt;   <br>
+                       </code>                                
+                    </li> <br>
+                    <!-- ------------------------------------------------ -->
                     
-                    <li> A) Creating First included file [header.php || header.inc] : <br> 
+                    <li> B] Adding the {init.php} file in [index.php] : [adding Routs files name variables with in included files paths 
+                        (header.php) & (footer.php) <br> 
+                        <code> 
+                            // {index.php} : <br>
+                            <span class="one"></span> &lt;? php   <br>
+                                <span class="two"></span> include 'init.php' ; <br>
+                                <span class="two"></span> include $tpl . 'header.php' ; <br>
+                            <span class="one"></span> ?&gt;   <br>
+                                    
+                            <span class="one"></span> &lt;? php   <br>
+                                <span class="two"></span> include $tpl . 'footer.php' ; <br>
+                            <span class="one"></span> ?&gt;   <br>
+                                
+                        </code>
+                    </li> <br>
+
+                    <!-- ---------------------------------------- -->
+
+                    <li> C] Adding/attaching  the {init.php} file within [header.php] it's self : [adding Routs files name variables with in included files paths 
+                        (link elements) : <br> 
+                        
                         <code>
-                            // header.php : <br>
-                            <!-- <span class="one"></span> &lt; ?php    <br> -->
+                            // {header.php} : <br>
                             <span class="one"></span> &lt; !DOCTYPE html &gt;   <br>
                                 <span class="two"></span> &lt; html &gt;  <br>
                                     
                                     <span class="three"></span> &lt; head &gt;  <br>
                                         <span class="four"></span> &lt; meta charset="utf-8" &gt;  <br>
                                         <span class="four"></span> &lt; title &gt; header page &lt; /title &gt;  <br>
+                                        <span class="four"></span> &lt; link rel="stylesheet"  href=" &lt?php echo $css ?&gt; bootstrap.css" /&gt;   <br>
+                                        <span class="four"></span> &lt; link rel="stylesheet"  href=" &lt?php echo $css ?&gt; fontawsome.min.css" /&gt;   <br>
+                                        <span class="four"></span> &lt; link rel="stylesheet"  href=" &lt?php echo $css ?&gt; mycss.css" /&gt;   <br>
                                     <span clas="three"></span> &lt; /head &gt;  <br>
 
                                     <span class="three"></span> &lt; body &gt;   <br>
 
                         </code> <br> <br>                                                                
                     </li>
-                    <!-- ------------------------------------------------ -->
-                    <!-- ------------------------------------------------ -->                                       
+                    <!-- ------------------------------------------------  -->
+                    <!-- ------------------------------------------------  -->
                     
-                    <li> B) Creating Second included file [footer.php || footer.inc] : <br> 
+                    <li> D] Adding/attaching the {init.php} file within in [footer.php || footer.inc] it's self : <br> 
                         <code>
-                            // footer.php : <br>
+                            // {footer.php} : <br>
 
                                     <span class="three"></span> &lt; div class="footer" &gt;  <br>
                                         <span class="four"></span> This is footer <br>
                                     <span class="three"></span> &lt; div class="footer" &gt; <br>
                                     
+                                    <span class="three"></span> &lt; script src="&lt;?php echo $js; ?&gt; jquery.12.1.min.js" &gt;   &lt; /script &gt;   <br>
+                                    <span class="three"></span> &lt; script src="&lt;?php echo $js; ?&gt; bootstrap.min.js" &gt;   &lt; /script &gt;   <br>
+                                    <span class="three"></span> &lt; script src="&lt;?php echo $js; ?&gt; backend.js" &gt;   &lt; /script &gt;   <br>
                                 <span class="two"></span> &lt; /body &gt;  <br>
-                            <span class="one"></span> &lt; /html &gt;  <br>
 
-                        </code> <br> <br>                                                                
-                    </li>
-                    <!-- ------------------------------------------------ -->
-                    <!-- ------------------------------------------------ -->                                       
                     
-                    <li> C) Creating Third {Assembling page} file [index.php] =>  by using [PHP] including code  : <br> 
-                        <code>
-                            // index.php : <br>
+                           <span class="one"></span> &lt; /html &gt;  <br>
 
-                                <span class="one"></span> &lt; ?php  <br>
-                                    <span class="two"></span> include "C:\xampp\htdocs\eCommerce\includes\templates\header.php"; <br>
-                                <span class="one"></span> ? &gt; <br>
-                                
-                                <span class="one"></span> welcome to Index Assembled page <br>
-                                
-                                <span class="one"></span> &lt; ?php <br>
-                                    <span class="two"></span> include "C:\xampp\htdocs\eCommerce\includes\templates\footer.php"; <br>
-                                <span class="one"></span> ? &gt; <br>
                         </code> <br> <br>                                                                
                     </li>
                     <!-- ------------------------------------------------ -->
-                    <!-- ------------------------------------------------ -->                                               
-                    <!-- ------------------------------------------------ -->                                        
-                    <!-- ------------------------------------------------ -->                                        
+                    <!-- ------------------------------------------------ -->                                                           
                 </ol>
             </p>
 
@@ -1226,38 +1229,50 @@
             <ol class="codes" >                    
                 <li> Page Sources : </li>
                 <code> 
+                    <!-- Main project folder in localhost -->
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/">  
                         <button id=btn class="btn0" onclick="display()"> Display FS online store main Course Index in [localhost] file </button>
                     </a> <br> <br> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/lessons/5%20Include%20the%20Main%20Required%20Files/">  
-                        <button id=btn class="btn0" onclick="display()"> Display FS online store This lesson [7 Create init.php File] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Display FS online store This lesson [8 Create & Test Languages Files] file </button>
                     </a> <br>  <hr> <br> 
                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/includes/templates/header.php">  
+                    <!-- {header page} of project in localhost -->
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/admin/includes/templates/header.php">  
                         <button id=btn class="btn0" onclick="display()"> Display FS online store included {header page} [header.php] file </button>
                     </a> <br>  
                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="file:///C:/xampp/htdocs/eCommerce/includes/templates/header.php">  
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="file:///C:/xampp/htdocs/eCommerce/admin/includes/templates/header.php">  
                         <button id=btn class="btn0" onclick="display()"> Source FS online store included {header page} [header.php] file </button>
                     </a> <br> <hr> <br> 
                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/includes/templates/footer.php">  
+                    <!-- {footer page} of project in localhost -->
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/admin/includes/templates/footer.php">  
                         <button id=btn class="btn0" onclick="display()"> Display FS online store included {footer page} [footer.php] file </button>
                     </a> <br> 
                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="file:///C:/xampp/htdocs/eCommerce/includes/templates/footer.php">  
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="file:///C:/xampp/htdocs/eCommerce/admin/includes/templates/footer.php">  
                         <button id=btn class="btn0" onclick="display()"> Source FS online store included {footer page} [footer.php] file </button>
                     </a> <br> <hr> <br> 
                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/includes/templates/index.php">  
+                    <!-- {index page} of project in localhost -->
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/admin/index.php">  
                         <button id=btn class="btn0" onclick="display()"> Display FS online store included {index page} [index.php] file </button>
                     </a> <br>   
                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="file:///C:/xampp/htdocs/eCommerce/includes/templates/index.php">  
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="file:///C:/xampp/htdocs/eCommerce/admin/index.php">  
                         <button id=btn class="btn0" onclick="display()"> Source FS online store included {index page} [index.php] file </button>
                     </a> <br> <hr> <br> 
                     
+                    <!-- {init page} of project in localhost -->
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/admin/init.php">  
+                        <button id=btn class="btn0" onclick="display()"> Display FS online store included {init page} [init.php] file </button>
+                    </a> <br>   
+                    
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="file:///C:/xampp/htdocs/eCommerce/admin/init.php">  
+                        <button id=btn class="btn0" onclick="display()"> Source FS online store included {init page} [init.php] file </button>
+                    </a> <br> <hr> <br>
                 </code>                 
             </ol>
 
@@ -1462,11 +1477,12 @@
     <!------------------------------------------------------------------------------------------------------>
     <!------------------------------------------------------------------------------------------------------>
         
-    <aside>        
+    <aside>   
+        <i class="icon-bar"> </i>     
         <section class="VideoSection" id="VideoSection">
             <h3> Lesson 7 Video File: </h3>
             <video controls width="300" height="300">
-                <source src="C:\Users\hp\Videos\pLanguages\web\3 Web Application\Create eCommerce Shop With PHP, MySQL, jQuery, Bootstrap\7 Create init.php File.mp4" type="video/mp4">
+                <source src="E:\Web videos lessons\Web Apps\Create eCommerce Shop With PHP, MySQL, jQuery, Bootstrap\7 Create init.php File.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
             </video>
         </section>
