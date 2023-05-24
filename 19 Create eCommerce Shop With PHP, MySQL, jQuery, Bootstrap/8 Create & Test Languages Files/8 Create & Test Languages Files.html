@@ -1087,10 +1087,11 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Create test languges files  for the project </p>
+                <p> &gt; Main Subjects in this lesson will be => Create test languges files [en.php || ar.php] for the project </p>
                 <li> Main Subjects :  <br>                         
                 <ol type="A">                                       
-                    <li>   </li>
+                    <li> {en.php}  => to be called to for importing the english words  </li>
+                    <li> {ar.php}  => to be called to for importing the arabic words  </li>
                 </ol>
             </article>
         </Section>  
@@ -1103,67 +1104,131 @@
             </header>
             <p> </p>
             
-            <p> Importance of {    } file , as following  : <br>
+            <p> Importance of languages files , as following  : <br>
                 <ul> 
-                    <li> Saving a lot of time and Performance in calling and importing Routs and Paths of files included files with in the project  <br>
-                    <li> Saving a lot of time and Performance incase of modifying Routs and Paths of files included files with in the project , specilally in many pages files project  <br> </li>
-                </ul>
-                    
-            <P> Where to put the {init.php} file [init.php file location in project tree files] :  </br>
-                {admin/init.php}  
-            </P> 
-
-            <p> {init.php} file content : <br>
-                <ul> 
-                    <li> Routs/paths of important file (that is commonly used repeatedly in our included files , such as  <br>
-                        <ol> 
-                            <li> {tpl} => a shortcut of [includes/templated]  </li>
-                            <li> {css} => a shortcut of [layout/css]  </li>
-                            <li> {js} => a shortcut of [layout/css]  </li>
-                        </ol>
-                    </li>
-
-                    <li> Functions files -> [later lessons] </li>
-                    
-                    <li> Langs files -> [later lessons] </li>
+                    <li> Make calling of certain words of phraes with certain language more dynamically <br>
+                    <li> Easy to be modified for much more addition words </li>
+                    <li> Easy to be called or inclueded with certain pages </li>
                 </ul>
             </p>
-
-            <p> How and where Calling/include {init.php} file in project files : <br>
-                <ul> 
-                    <li> {index.php} -> to be included before any php including code [even before header file] -> in order to effect all other after icluded php files  </li> 
-                    <li> {header.php} -> to use imported [Routs || Functions|| Langs] variables with in included files sources {such as css & js [bootstrap, fontawsome , jquery] with in script and link in header} </li> 
-                    <li> {footer.php} -> to use imported [Routs || Functions|| Langs] variables with in included files sources {such as js [bootstrap, jquery] with in script and link in footer} </li> 
-                </ul>
-            </p>
-
-            <p>  </p>
-
             
-             <p> Pratical Example on [Practical application on creating {init.php} file , and include it "header.php" & "footer.php" & "index.php"  Method ] ->  : <br> </p>
+            <p> available methods to be used in languaages files to be used in calling words : <br>
+                <ul> 
+                    <li> {define} method </li>
+                    <li> {array} method => To be used in this course </li>
+                    <li> {getText()} function </li>
+                </ul>
+            </p>
+
+            <P>  Contents of the each language files {en.php} || {ar.php} || <br> : 
+                <ul> 
+                    <li> lang($phrase) function: <br>
+                        <p> Has ($phrase) Argument|| parameter -> to pass through any value of key Name array to be printed inside index|| any other page </p>
+                        <p> Has Array of all words to be called by using it's keyName [according it's language]  </p>
+                    </li> <br>
+                    
+                    <li> $lang() Associated array : <br>
+                        <p> Has each word to be called in the website , seperated in pages and sections  </p>
+                        <p> It's keysName's values differs from in each language file  </p>
+                    </li>
+                </ul>
+            </P>
+
+            <p> Steps to create and use the languages files : <br> 
+                <ul> 
+                    <li> with in {admin/includes/langs/ } create each language file for each langutage  to be used in the website => {en.php || ar.php}  </li>
+                    <li> including the langauge files in the index.php [upon used language] </li>
+                    <li> writing the lang() function and $lang[] associated array with in each language file </li>
+                    <li> The lang() function must have return with array of ($phrase) parameter to be the inserted value to passed through into the $lang[] associated array to call it's keyname  with it's value </li>
+                </ul>
+            </p>
+            
+            <p> Lanuguage file mechanism of working  : <br>
+                <ul> 
+                    <li> Including {ar.php} || {en.php} after creating the language files with it's all lang function and array  </li>
+                    <li> Calling the required value by putting it's keyname with in the lang method parameter  </li> 
+                </ul>
+            </p>   <br>
+
+            <p> Pratical Example on [Practical application on creating {en.php} || {ar.php} file , and include it in "index.php"] ->  : <br> </p>
                 <ol type="A">
 
-                   <li>  A] Creating the {init.php} file, and edit it's contents , as following : <br> 
-                       
+                   <li>  A] Setting up the {en.php} file, and adding it's script , as following : <br>
                        <code>
-                            // {init.php} : <br>
+                            // {en.php} : <br>
                             <span class="one"></span> &lt;?php   <br>
-                                <span class="two"></span> // {Routs variables} : <br>
-                                <span class="two"></span> $tpl = 'includes/templates/';  <br>
-                                <span class="two"></span> $css = 'includes/css/';  <br>
-                                <span class="two"></span> $js = 'includes/js/';  <br>
+                                <span class="two"></span> // {Creating lang() function } : <br>
+                                <span class="two"></span> function($phrase) {  <br>
+                                    <span class="three"></span> $lang = array( <br>
+
+                                        <span class="four"></span> // Home page section:  <br>
+                                        <span class="four"></span> 'MESSAGE' => 'Welcome to our website', <br>
+                                        <span class="four"></span> 'Admin' => 'Administration', <br> <br>
+                                        
+                                        <span class="four"></span> // Settings page section:  <br>
+                                        <span class="four"></span> 'USER' => 'Ali', <br>
+                                        <span class="four"></span> 'Moderator' => 'Shadi', <br> <br>
+                                    <span class="three"></span> ); <br>
+
+                                    <span class="three"></span> return $lang[$phrase];   <br>
+                                <span class="two"></span> } <br>
+                           <span class="one"></span> ?&gt;   <br>
+                       </code> <hr>
+
+                       <code>
+                            // {ar.php} : <br>
+                            <span class="one"></span> &lt;?php   <br>
+                                <span class="two"></span> // {Creating lang() function } : <br>
+                                <span class="two"></span> function($phrase) {  <br>
+                                    <span class="three"></span> $lang = array( <br>
+
+                                        <span class="four"></span> // Home page section:  <br>
+                                        <span class="four"></span> 'MESSAGE' => 'اهلا وسهلا', <br>
+                                        <span class="four"></span> 'Admin' => 'المدير', <br> <br>
+                                        
+                                        <span class="four"></span> // Settings page section:  <br>
+                                        <span class="four"></span> 'USER' => 'علي', <br>
+                                        <span class="four"></span> 'Moderator' => 'شادي', <br> <br>
+                                    <span class="three"></span> ); <br>
+
+                                    <span class="three"></span> return $lang[$phrase];   <br>
+                                <span class="two"></span> } <br>
                            <span class="one"></span> ?&gt;   <br>
                        </code>                                
                     </li> <br>
                     <!-- ------------------------------------------------ -->
                     
-                    <li> B] Adding the {init.php} file in [index.php] : [adding Routs files name variables with in included files paths 
-                        (header.php) & (footer.php) <br> 
+                    <li> B] Including and using the {en.php} & {ar.php} file in english & arabic index page [index.php] : 
+                        <p> 1) including the {en.php} file inside the english page [index.php] </p>
                         <code> 
                             // {index.php} : <br>
                             <span class="one"></span> &lt;? php   <br>
                                 <span class="two"></span> include 'init.php' ; <br>
                                 <span class="two"></span> include $tpl . 'header.php' ; <br>
+                                <span class="two"></span> include 'admin/includes/languages/en.php' ; <br>
+                            <span class="one"></span> ?&gt;   <br>
+                            
+                            
+                            <span class="one"></span> &lt;?php  <br>
+                                <span class="two"></span> echo lang('MESSAGE'); -> [will pring the value of the inserted parameter as array kayname]  <br>
+                            <span class="one"></span> ?&gt;   <br>
+                                    
+                            <span class="one"></span> &lt;? php   <br>
+                                <span class="two"></span> include $tpl . 'footer.php' ; <br>
+                            <span class="one"></span> ?&gt;   <br> 
+                        </code> <hr> <br>
+
+                        <p> 2) including the {ar.php} file inside the english page [index.php] </p>
+                        <code> 
+                            // {index.php} : <br>
+                            <span class="one"></span> &lt;? php   <br>
+                                <span class="two"></span> include 'init.php' ; <br>
+                                <span class="two"></span> include $tpl . 'header.php' ; <br>
+                                <span class="two"></span> include 'admin/includes/languages/en.php' ; <br>
+                            <span class="one"></span> ?&gt;   <br>
+                                                        
+                            <span class="one"></span> &lt;?php  <br>
+                                <span class="two"></span> echo lang('MESSAGE'); -> [will pring the value of the inserted parameter as array kayname]  <br>
                             <span class="one"></span> ?&gt;   <br>
                                     
                             <span class="one"></span> &lt;? php   <br>
@@ -1174,50 +1239,7 @@
                     </li> <br>
 
                     <!-- ---------------------------------------- -->
-
-                    <li> C] Adding/attaching  the {init.php} file within [header.php] it's self : [adding Routs files name variables with in included files paths 
-                        (link elements) : <br> 
-                        
-                        <code>
-                            // {header.php} : <br>
-                            <span class="one"></span> &lt; !DOCTYPE html &gt;   <br>
-                                <span class="two"></span> &lt; html &gt;  <br>
-                                    
-                                    <span class="three"></span> &lt; head &gt;  <br>
-                                        <span class="four"></span> &lt; meta charset="utf-8" &gt;  <br>
-                                        <span class="four"></span> &lt; title &gt; header page &lt; /title &gt;  <br>
-                                        <span class="four"></span> &lt; link rel="stylesheet"  href=" &lt?php echo $css ?&gt; bootstrap.css" /&gt;   <br>
-                                        <span class="four"></span> &lt; link rel="stylesheet"  href=" &lt?php echo $css ?&gt; fontawsome.min.css" /&gt;   <br>
-                                        <span class="four"></span> &lt; link rel="stylesheet"  href=" &lt?php echo $css ?&gt; mycss.css" /&gt;   <br>
-                                    <span clas="three"></span> &lt; /head &gt;  <br>
-
-                                    <span class="three"></span> &lt; body &gt;   <br>
-
-                        </code> <br> <br>                                                                
-                    </li>
-                    <!-- ------------------------------------------------  -->
-                    <!-- ------------------------------------------------  -->
-                    
-                    <li> D] Adding/attaching the {init.php} file within in [footer.php || footer.inc] it's self : <br> 
-                        <code>
-                            // {footer.php} : <br>
-
-                                    <span class="three"></span> &lt; div class="footer" &gt;  <br>
-                                        <span class="four"></span> This is footer <br>
-                                    <span class="three"></span> &lt; div class="footer" &gt; <br>
-                                    
-                                    <span class="three"></span> &lt; script src="&lt;?php echo $js; ?&gt; jquery.12.1.min.js" &gt;   &lt; /script &gt;   <br>
-                                    <span class="three"></span> &lt; script src="&lt;?php echo $js; ?&gt; bootstrap.min.js" &gt;   &lt; /script &gt;   <br>
-                                    <span class="three"></span> &lt; script src="&lt;?php echo $js; ?&gt; backend.js" &gt;   &lt; /script &gt;   <br>
-                                <span class="two"></span> &lt; /body &gt;  <br>
-
-                    
-                           <span class="one"></span> &lt; /html &gt;  <br>
-
-                        </code> <br> <br>                                                                
-                    </li>
-                    <!-- ------------------------------------------------ -->
-                    <!-- ------------------------------------------------ -->                                                           
+                                                          
                 </ol>
             </p>
 
@@ -1226,6 +1248,7 @@
             <ol class="codes" >                    
                 <li> Page Sources : </li>
                 <code> 
+                    <!-- Main project folder in localhost -->
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/">  
                         <button id=btn class="btn0" onclick="display()"> Display FS online store main Course Index in [localhost] file </button>
                     </a> <br> <br> 
@@ -1234,28 +1257,40 @@
                         <button id=btn class="btn0" onclick="display()"> Display FS online store This lesson [8 Create & Test Languages Files] file </button>
                     </a> <br>  <hr> <br> 
                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/includes/templates/header.php">  
+                    <!-- {header page} of project in localhost -->
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/admin/includes/templates/header.php">  
                         <button id=btn class="btn0" onclick="display()"> Display FS online store included {header page} [header.php] file </button>
                     </a> <br>  
                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="file:///C:/xampp/htdocs/eCommerce/includes/templates/header.php">  
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="file:///C:/xampp/htdocs/eCommerce/admin/includes/templates/header.php">  
                         <button id=btn class="btn0" onclick="display()"> Source FS online store included {header page} [header.php] file </button>
                     </a> <br> <hr> <br> 
                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/includes/templates/footer.php">  
+                    <!-- {footer page} of project in localhost -->
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/admin/includes/templates/footer.php">  
                         <button id=btn class="btn0" onclick="display()"> Display FS online store included {footer page} [footer.php] file </button>
                     </a> <br> 
                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="file:///C:/xampp/htdocs/eCommerce/includes/templates/footer.php">  
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="file:///C:/xampp/htdocs/eCommerce/admin/includes/templates/footer.php">  
                         <button id=btn class="btn0" onclick="display()"> Source FS online store included {footer page} [footer.php] file </button>
                     </a> <br> <hr> <br> 
                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/includes/templates/index.php">  
+                    <!-- {index page} of project in localhost -->
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/admin/index.php">  
                         <button id=btn class="btn0" onclick="display()"> Display FS online store included {index page} [index.php] file </button>
                     </a> <br>   
                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="file:///C:/xampp/htdocs/eCommerce/includes/templates/index.php">  
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="file:///C:/xampp/htdocs/eCommerce/admin/index.php">  
                         <button id=btn class="btn0" onclick="display()"> Source FS online store included {index page} [index.php] file </button>
+                    </a> <br> <hr> <br> 
+                    
+                    <!-- {init page} of project in localhost -->
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/admin/init.php">  
+                        <button id=btn class="btn0" onclick="display()"> Display FS online store included {init page} [init.php] file </button>
+                    </a> <br>   
+                    
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="file:///C:/xampp/htdocs/eCommerce/admin/init.php">  
+                        <button id=btn class="btn0" onclick="display()"> Source FS online store included {init page} [init.php] file </button>
                     </a> <br> <hr> <br> 
                     
                 </code>                 
