@@ -13,11 +13,11 @@
     <!-- First Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1" >    
  
-    <meta content="Learning Course" description="This is Lesson 8 Create & Test Languages Files " >    
+    <meta content="Learning Course" description="This is Lesson 10 Connect To Database " >    
     
-    <title> 8 Create & Test Languages Files   </title>
+    <title> 10 Connect To Database   </title>
         
-    <link rel="stylesheet" href="8 Create & Test Languages Files.css" media="all">        
+    <link rel="stylesheet" href="10 Connect To Database.css" media="all">        
     
     <link rel="stylesheet" href="css/bootstrap.min.css" media="all">
     
@@ -206,7 +206,7 @@
             
    <!-------------------------------------------------------------------------------------------------------->
     <header id="Main" class="Main wow fadeInDown" data-wow-duration="1s">
-        8 Create & Test Languages Files
+        10 Connect To Database
     </header>
 
 <!-------------------------------------------------------------------------------------------------------->
@@ -292,7 +292,7 @@
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
         <span> Welcome to JQuerry Course | </span> <br>
-        8 Create & Test Languages Files        
+        10 Connect To Database        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
     <!-- Options Tool box -->
@@ -317,8 +317,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => E-commerece website Fullstack  <span><strong> { 8 Create & Test Languages Files } for project </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong>  {  8 Create & Test Languages Files } and include it within the proeject file </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section => E-commerece website Fullstack  <span><strong> { 10 Connect To Database } for project </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong>  {  10 Connect To Database } and Table [users]   </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1083,16 +1083,15 @@
         <Section  id="MainC" class="MainC">
 
             <header>
-                FS online store [8 Create & Test Languages Files()] Main Topics : <br>
+                FS online store [10 Connect To Database ] Main Topics : <br>
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Create test languges files [en.php || ar.php] for the project </p>
+                <p> &gt; Main Subjects in this lesson will be => Create main database of the for the project </p>
                 <li> Main Subjects :  <br>                         
                 <ol type="A">                                       
-                    <li> {en.php}  => to be called to for importing the english words  </li>
-                    <li> {ar.php}  => to be called to for importing the arabic words  </li>
-                    <li> {index.php}  => including ar.php || en.php files in the index files to import lang function  </li>
+                    <li> Database => with one of (3) methods </li>
+                    <li> {users}  => one of Database tables with (8) columns  </li>
                 </ol>
             </article>
         </Section>  
@@ -1101,60 +1100,142 @@
         <!------------------------------------------------------------------------------>
         <section class="JSDOMCon" id="JSDOMCon">
             <header>
-                <h3> 8 Create & Test Languages Files concept : </h3>
+                <h3> 10 Connect To Database concept : </h3>
             </header>
             <p> </p>
             
-            <p> Importance of languages files , as following  : <br>
+            <p> Main methods to create the database , as following  : <br>
                 <ul> 
-                    <li> Make calling of certain words of phraes with certain language more dynamically <br>
-                    <li> Easy to be modified for much more addition words </li>
-                    <li> Easy to be called or inclueded with certain pages </li>
+                    <li> phpMyadmin interface => Will be used in this course  <br>
+                    <li> CMD => command line Terminal  </li>
+                    <li> PHP files </li>
                 </ul>
             </p>
             
-            <p> available methods to be used in languaages files to be used in calling words : <br>
+            <p> Database properties : <br>
                 <ul> 
-                    <li> {define} method </li>
-                    <li> {array} method => [To be used in this course] </li>
-                    <li> {getText()} function </li>
+                    <li> { Database Name } => shop </li>
+                    <li> { Database charset } => [utf8_general_ci]  </li>
+                    <li> { Database type} => [innodb] </li>
+                    <li> { Database Tables number} => [8 columns] </li>
                 </ul>
             </p>
 
-            <P>  Contents of the each language files {en.php} || {ar.php} || <br> : 
+            <P> Main Tables in the database : <br> 
                 <ul> 
-                    <li> lang($phrase) function: <br>
-                        <p> Has ($phrase) Argument|| parameter -> to pass through any value of key Name array to be printed inside index|| any other page </p>
-                        <p> Has Array of all words to be called by using it's keyName [according it's language]  </p>
+                    <li> {Users} => this table of Users, Admin and Moderators, and include the following [8] columns : <br>
+                        <ol> 
+                            <li> [UserID] column , with following properties : <br>
+                                <ul> 
+                                    <li>  Name : UserID </li>
+                                    <li>  type : INT  </li>
+                                    <li>  length : 11   </li>
+                                    <li>  default : none   </li>
+                                    <li>  index : primary   </li>
+                                    <li>  A_I : checked   </li>
+                                    <li>  collation : -  [no need to write arabic insert]   </li>
+                                    <li>  comment :  username to be used for login  </li>
+                                </ul>
+                            </li> <br>
+                            
+                            <li> [Username] column , with following properties : <br>
+                                <ul> 
+                                    <li>  Name : username  </li>
+                                    <li>  type : varchar  </li>
+                                    <li>  length : 255   </li>
+                                    <li>  default : none   </li>
+                                    <li>  collation : utf8_general_ci   </li>
+                                    <li>  comment :  username to be used for login  </li>
+                                </ul>
+                            </li> <br>
+                            
+                            <li> [Password] column , with following properties : <br>
+                                <ul> 
+                                    <li>  Name : password  </li>
+                                    <li>  type : varchar -> [will be changed later] </li>
+                                    <li>  length : 255   </li>
+                                    <li>  default : none   </li>
+                                    <li>  collation : utf8_general_ci   </li>
+                                    <li>  comment :  password to be used for user login  </li>
+                                    <li>  Note :  password will must be encrypted [usually by using certain technologies : (sha1) -> will be studied later in this course  ] </li>
+                                </ul>
+                            </li> <br>
+                            
+                            <li> [Email] column , with following properties : <br>
+                                <ul> 
+                                    <li>  Name : email  </li>
+                                    <li>  type : varchar  </li>
+                                    <li>  length : 255   </li>
+                                    <li>  default : none   </li>
+                                    <li>  collation : utf8_general_ci   </li>
+                                </ul>
+                            </li> <br>
+                            
+                            <li> [FullName] column , with following properties : <br>
+                                <ul> 
+                                    <li>  Name : fullname  </li>
+                                    <li>  type : varchar  </li>
+                                    <li>  length : 255   </li>
+                                    <li>  default : none   </li>
+                                    <li>  collation : utf8_general_ci   </li>
+                                    <li>  comment : User Full name which will be dispalyed for other , not the username it's self  </li>
+                                </ul>
+                            </li> <br>
+                            
+                            <li> [GroupIP] column , with following properties : <br>
+                                <ul> 
+                                    <li>  Name : GroupIP  </li>
+                                    <li>  type : INT  </li>
+                                    <li>  length : 11   </li>
+                                    <li>  default : as defined: 0 -> [0: normal user || 1: Admin user] </li>
+                                    <li>  collation : utf8_general_ci   </li>
+                                    <li>  comment : Identify of user group [to detect if he is normal user or admin]  </li>
+                                </ul>
+                            </li> <br>
+                                                 
+                            <li> [TrustStatus] column , with following properties : <br>
+                                <ul> 
+                                    <li>  Name : TrustStatus  </li>
+                                    <li>  type : INT  </li>
+                                    <li>  length : 11   </li>
+                                    <li>  default : as defined: 0 -> [0: normal user || 1: trusted seller/trader ] </li>
+                                    <li>  collation : utf8_general_ci   </li>
+                                    <li>  comment : Identify Seller Rank [to detect if he is normal or trusted seller/trader ]   </li>
+                                </ul>
+                            </li> <br>
+
+                            <li> [RegStatus] column , with following properties : <br>
+                                <ul> 
+                                    <li>  Name : RegStatus  </li>
+                                    <li>  type : INT  </li>
+                                    <li>  length : 11   </li>
+                                    <li>  default : as defined: 0 -> [0: pended user || 1: accepted user ] </li>
+                                    <li>  collation : utf8_general_ci   </li>
+                                    <li>  comment : Identify Seller Rank [to detect if he is normal or trusted seller/trader ]   </li>
+                                </ul>
+                            </li>
+                        </ol>
                     </li> <br>
-                    
-                    <li> $lang() Associated array : <br>
-                        <p> Has each word to be called in the website , seperated in pages and sections  </p>
-                        <p> It's keysName's values differs from in each language file  </p>
-                    </li>
+
+                    <li> {items} : not studied yet [late] </li>                    
+
+                    <li> {categories} : not studied yet [late] </li>                    
+ 
+                    <li> {settings} : not studied yet [late] </li>                                        
                 </ul>
             </P>
 
-            <p> Steps to create and use the languages files : <br> 
+            <p> Notes : <br> 
                 <ul> 
-                    <li> with in {admin/includes/langs/ } create each language file for each langutage  to be used in the website => {en.php || ar.php}  </li>
-                    <li> including the langauge files in the index.php [upon used language] </li>
-                    <li> writing the lang() function and $lang[] associated array with in each language file </li>
-                    <li> The lang() function must have return with array of ($phrase) parameter to be the inserted value to passed through into the $lang[] associated array to call it's keyname  with it's value </li>
+                    <li> about {RegStatus} => This feature will provide the ablity filter the new created users accounts by accept || reject new registrated users [will save database from undesired || error enteries] </li>
+                    <li> by accepting the jnew regestrated users by admin || moderate => the value of this field will change from 0 -> 1   </li>
                 </ul>
             </p>
-            
-            <p> Lanuguage file mechanism of working  : <br>
-                <ul> 
-                    <li> Including {ar.php} || {en.php} after creating the language files with it's all lang function and array  </li>
-                    <li> Calling the required value by putting it's keyname with in the lang method parameter  </li> 
-                </ul>
-            </p>   <br>
 
-            <p> Pratical Example on [Practical application on creating {en.php} || {ar.php} file , and include it in "index.php"] ->  : <br> </p>
+            <p> Pratical Example on [Practical application on creating database {shop} & table{users} , by using {phpMyAdmin} ->  : <br> </p>
                 <ol type="A">
 
-                   <li>  A] Setting up the {en.php} file, and adding it's script , as following : <br>
+                   <!-- <li>  A] Setting up the {en.php} file, and adding it's script , as following : <br>
                        <code>
                             // {en.php} : <br>
                             <span class="one"></span> &lt;?php   <br>
@@ -1196,10 +1277,10 @@
                                 <span class="two"></span> } <br>
                            <span class="one"></span> ?&gt;   <br>
                        </code>                                
-                    </li> <br>
+                    </li> <br> -->
                     <!-- ------------------------------------------------ -->
                     
-                    <li> B] Including and using the {en.php} & {ar.php} file in english & arabic index page [index.php] : 
+                    <!-- <li> B] Including and using the {en.php} & {ar.php} file in english & arabic index page [index.php] : 
                         <p> 1) including the {en.php} file inside the english page [index.php] </p>
                         <code> 
                             // {index.php} : <br>
@@ -1237,7 +1318,7 @@
                             <span class="one"></span> ?&gt;   <br>
                                 
                         </code>
-                    </li> <br>
+                    </li> <br> -->
 
                     <!-- ---------------------------------------- -->
                                                           
@@ -1255,7 +1336,7 @@
                     </a> <br> <br> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="http://localhost/eCommerce/lessons/5%20Include%20the%20Main%20Required%20Files/">  
-                        <button id=btn class="btn0" onclick="display()"> Display FS online store This lesson [8 Create & Test Languages Files] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Display FS online store This lesson [10 Connect To Database] file </button>
                     </a> <br>  <hr> <br> 
                     
                     <!-- {header page} of project in localhost -->
@@ -1365,10 +1446,10 @@
 
         <section class="JSDOMImp" id="JSDOMImp">
             <header>
-                <h3> FS online store [8 Create & Test Languages Files] Importance & Benefits : </h3>
+                <h3> FS online store [10 Connect To Database] Importance & Benefits : </h3>
             </header>            
                 <ul>                                                                     
-                    <li> Assembling Project/application fioles with including php code => will save great time in both cases of rendering or calling the index page and other pages of the project && in case of modifications with in project components Source files </li>  
+                    <li> Assembling Project/application files with including php code => will save great time in both cases of rendering or calling the index page and other pages of the project && in case of modifications with in project components Source files </li>  
                 </ul>                                                               
         </section>
 
@@ -1376,7 +1457,7 @@
 
         <section class="JSDOMSyntx" id="JSDOMSyntx">
             <header>
-                <h3> [8 Create & Test Languages Files] Syntax & Methods: </h3>
+                <h3> [10 Connect To Database] Syntax & Methods: </h3>
             </header>   
 
              <p> =&gt;  Scenario Procedures :   </p>
@@ -1427,7 +1508,7 @@
         <!------------------------------------------------------------------------------------------------------>
         <section class="JSDOMPract container" id="JSDOMPract">
             <header>
-                <h3> CMD [8 Create & Test Languages Files()]  => {this lesson can be accessed throuh the github repo [webpages] } </h3>
+                <h3> CMD [10 Connect To Database()]  => {this lesson can be accessed throuh the github repo [webpages] } </h3>
             </header>
                         
             <!-- <p> Using [cmd] For performing Scenario of controling with [Directories] processes and functions:   </p>
@@ -1519,9 +1600,9 @@
     <aside>   
         <i class="icon-bar"> </i>     
         <section class="VideoSection" id="VideoSection">
-            <h3> Lesson 8 Video File: </h3>
+            <h3> Lesson 10 Video File: </h3>
             <video controls width="300" height="300">
-                <source src="E:\Web videos lessons\Web Apps\Create eCommerce Shop With PHP, MySQL, jQuery, Bootstrap\8 Create & Test Languages Files.mp4" type="video/mp4">
+                <source src="E:\Web videos lessons\Web Apps\Create eCommerce Shop With PHP, MySQL, jQuery, Bootstrap\10 Connect To Database.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
             </video>
         </section>
@@ -1645,7 +1726,7 @@
     </section>
 
     <script>
-        alert("Welcome to 8 Create & Test Languages Files");
+        alert("Welcome to 10 Connect To Database");
     </script>
     
 <!-- Resources files -->
