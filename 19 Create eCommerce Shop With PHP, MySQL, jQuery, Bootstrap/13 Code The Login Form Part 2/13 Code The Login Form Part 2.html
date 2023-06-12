@@ -317,8 +317,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => E-commerece website Fullstack  <span><strong> { Coding scenario to Login Form Part 1 } for project </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong>  {  Coding scenario to Login Form Part 1 }  </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section => E-commerece website Fullstack  <span><strong> { Coding scenario to Login Form Part 2 } for project </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong>  {  Coding scenario to Login Form Part 2 }  </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1091,7 +1091,8 @@
                 <li> Main Subjects :  <br>                         
                 <ol type="A">                                       
                     <li> Modify {index.php}  </li>
-                    <li> Modify {Database => shop}  </li>
+                    <li> Modify {Database => shop} -> Table -> [users] -> field -> [username ]-> "Unique" </li>
+                    <li> Create { dashboard.php}  </li>
                 </ol>
             </article>
         </Section>  
@@ -1102,44 +1103,62 @@
             <header>
                 <h3> 13 Code The Login Form Part 2 concept : </h3>
             </header>
-            <p> Adding action to the form of returning the form to the php page + with post method </p>
+            <p> Start [session] in the Form page -> {index.php} page -> before any other code   +  printing the array of session value [if it exsited] </p>
  
-            <p> Adding check condition with in the first section of the {index.php} page, containing the following Scenario's procedures : <br>
+            <p> {index.php} =>  Adding check condition [if the session variable is existed {using isset() method} ] with in the first section of the {index.php} page, containing the following Scenario's procedures : <br>
                 <ol> 
-                    <li> Checking if the comming data from the login Form is by using {REQUEST_METHOD => POST} , and proceding the following procedures if True </li>
-                    <li> Setting the following variables : <br> 
+                    <li> Redirecting code {header();} if the session variable is existed and with cetain value of a unique field name [$username] variable of Form , as followin : <br>
+                        <span class="one"> if ( isset ($_SESSION['username'] ) ) { <br>
+                            <span class="two">  header('Location: dashboard.php') ;  <br>
+                                <!-- <span class="two">  exit() ; <br> -->
+                        <span class="one"> } <br>
+                    </li> <br>
+
+
+                    <li> Defining a {$_session} variable with value of  within conditional if of {$count} variable is bigger than [0] , as following  : <br> 
                         <ul> 
-                            <li> {$username} => will be set by the post value comming from username input's name attriubte in the Form => { $_POST['user'] }  </li>
-                            <li> {$password} => will be set by the post value comming from password input's name attriubte in the Form => { $_POST['pass'] }  </li>
-                            <li> {$hashedPass} => will be set by the the Hashed value of the previous password Variable , using [sha1] encryption method => { sha1($password) }  </li>
+                            <li> $_SESSION['Username'] = $username ;  => [ definging a Session variable with value of the username variable ] </li>
+                            <li> using {exit();} to prevent any Error in case of non ablity to access the {dashasborad.php} page </li>
                         </ul>    
+                    </li> <br>
+                </ol>
+            </p> <br>
+            
+            <p> {Database} =>  Adding {unique} property to the {username} field in table [user] data in [shop] DB -> in the [users] table [to prevent abilty to login in form by the same username more than one time ] , using one the follwing mehtods <br>
+                       
+                <ol> 
+                    <li> Manual method in the [phpMyAdmin] -> from structure tab </li>
+                    <li> CMD method in the [commandline] -> with the following code : <br>
+                        { alter table users add unique uername;  }   <br>                          
                     </li>
-                    <li> Inserting the user data in [shop] DB -> in the [users] table , using manual method in the [phpMyAdmin], as following : <br>
-                        <ul> 
-                            <li>  username -> shadi  </li>
-                            <li>  password -> 123456, function -> sha1 </li>
-                            <li>  Emain -> shadisayed.68911@gmail.com </li>
-                            <li>  groupID -> 1 -> as admin user </li>
-                            <li>  regStatus -> 0 or 1 => [will be studied later] </li>
-                        </ul>
-                    
-                    </li>
-                    <li>  Checking if the posted useranme and password is existed in the database ,by following steps : <br>
-                        <ul> 
-                            <li> creating statement with prerpare() with select mysql statement [inquiry abuot username , password, groupID] </li>
-                            <li> Executing previous statement as array, by passing through defiend varaibles into it </li>
-                            <li> Creating a [count] variable of previous statement result statement , using built-in [rowCount()] method  </li>
-                            <li> Printing the result of previous count variable , and Creating hte following if condition according it's value   </li>
-                            <li> Printing a welcome message with the value of the username and password["Hashed Encryption"]    </li>
-                        </ul>
-                    </li>
-                </ol>                              
-            <p>
+                </ol>
+ 
+            <p> {dashboard.php} => Checking if the Session variable is existed [with the defiened unique value (username)] OR Not , to confirm if the user is comming from the Login Form or NOT : <br>
+                <li> 
+                    <ul> 
+                        <li> In case of condition is [true]  => [the user is comming legally from the Form page { index.php } : <br> 
+                            The page will be display Welecome message with the loged in Admin + content of the {dashboard.php}    
+                        </li>
+                        
+                        <li> In case of condition is [false]  => [the user is comming In-legally outside the Form page { index.php } : <br> 
+                            The page will directly Re-direct user to the {index.php} (log in Form) again + exit(); code   
+                        </li>
+                        
+                    </ul>
+                </li>
+            </p>
 
             <p> Notes : <br> 
                 <ul> 
-                    <li> With using only count variable => will get confirmation about existanse of hte inserted user's username and password , but not get checked if he is in admin or not  </li>
-                    <li> With using count variable  & groupID field of DB in the inquiry statement => will get confirmation about existanse of hte inserted user's username and password & Checkout if he is Admin or not   </li>
+                    <li>  In the future => there will be several methods to validation form data : <br> 
+                        <ol>
+                            <li>  Using {Client} Side => [like using form and input attributes] </li>
+                            <li>  Using {Server} Side => [like using PHP procudures code] </li>
+                            <li>  Using Database Side => [like using MYSQL Code scripts] </li>
+                        </ol>
+                    </li> <br>
+
+                    <li> There are more advanced methods to get confirmation about the entered user by the log inn form, will give more dynamically performance , but more complicated, will be studied in future   </li>
                 </ul>
             </p>
 
@@ -1150,6 +1169,10 @@
                        <code>
                             // {index.php} : <br>
                             <span class="one"></span> &lt;?php   <br>
+                                <span class="two"></span>  if(isset($_SESSION['uername'])) {   <br>
+                                    <span class="three"></span> header(' Location: dashboard.php ') ;  <br>
+                                <span class="two"></span> }  <br>
+
                                 <span class="two"></span>  include 'init.php' ;  <br>
                                 <span class="two"></span>  include $tpl . 'header.php' ;  <br>
                                 <span class="two"></span>  include 'includes/languages/english.php ' ;  <br> 
@@ -1182,11 +1205,13 @@
                                     <span class="three"></span>  echo $count ;  <br> <br>
                                 
                                     <span class="three"></span>  // 7] Getting if condition of the value of resulted [count] <br>
-                                        <span class="four"></span> -> [and welcome with user incase if he is an admin] <br> 
+                                        <span class="four"></span> -> [and welcome with user incase if he is an admin]  + <br> 
+                                        <span class="four"></span> -> [Defining a session of username by the input username value come from the Login Form ]  <br> 
                                     <span class="three"></span>  if ($count > 0 )  { <br> <br>
                                         <span class="four"></span>  echo 'Welcome Admin ' . $username;  <br> 
+                                        <span class="four"></span>   $_SESSION['username'] = $username;  => [Defining the registrated Session username ] <br> 
                                 <span class="two"></span>  }  <br> <br> <br>
-
+                            <span class="one"></span>  }  <br> <br> <br>
 
                             <span class="one"></span> ?&gt;   <br> <br>
                                 
@@ -1210,10 +1235,24 @@
                             <span class="one"></span> ?&gt;   <br> <br>
                                                                 
                        </code> <hr>
-                                
-                    </li> <br> 
+         
+                    </li> <br>
+                    
                     <!-- ------------------------------------------------ -->
                     
+                    <li> B] Adding Checking conditional if in the targeted page {dashboard.php} [to get confirmation about user legal direcion ] <br>
+                        <code> 
+                            // {dashboard.php} : <br>
+                            <span class="one"></span> &lt;?php   <br>
+                                <span class="two"></span>  if(isset($_SESSION['uername'])) {   <br>
+                                    <span class="three"></span> echo 'Welcome message with the user' . $_SESSION['username'] ; <br>
+                                <span class="two"></span> } else { <br>
+                                    <span class="three"></span> header(' Location: index.php ') ; => [Returning back to the Login Form ] <br>
+                                <span class="two"></span> }  <br>
+                                
+                            <span class="one"></span> ?&gt;  <br>
+                        </code>
+                    </li>
                 </ol>
             </p>
 
