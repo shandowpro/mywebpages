@@ -1,4 +1,4 @@
-//  3 New Way To Create Variable - Const
+//  4 Arrow Function - Syntax and Examples
 /* Main lessons functions :
     1- Const Type of scoping [block scope] 
     2- Non Ability to const Re-Declaration
@@ -10,7 +10,7 @@
 // 3 New Way To Create Variable - {Const} :
 function myTest() {
     'use strict' ;
-    alert('Welcome to 3 New Way To Create Variable - {Const} ') ;
+    alert('Welcome to 4 Arrow Function - Syntax and Examples ') ;
     
     var x = prompt( ' Please choose one of functions from below options : \n   1] Const Type of scoping [block scope] \n    2] Ability to Re-Declaration of Const variable \n    3] Ability to Re-Asssignment of Const variable \n  4]  Modifying const variables values of Const   [ array ]  \n   5]  Modifying const variables values of Const  [ object ]   ');    
 
