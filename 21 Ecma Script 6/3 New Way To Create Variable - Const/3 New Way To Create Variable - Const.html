@@ -317,8 +317,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new method {let} to declare varialble in ES6   <span><strong> use {let} to define the variables in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> comparison between { var || let } methods to create variables in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section => new method {const} to declare varialble in ES6   <span><strong> use {const} to define fixed the variables in JS ES6  </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { const } method to create fixed variables in ES6 </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1086,14 +1086,13 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {let} method & comparison standards , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about {const} method properties standards , as following :   </p>
                 <li> Main Subjects :  <br>                         
                 <ol type="A">                                       
-                    <li> Type of scoping [function scope vs block scope]  </li>
-                    <li> Ability to Re-Declaration  </li>                
-                    <li> Ability to Re-Asssignment  </li>                
-                    <li> Result of accessing undefined Variables </li>                
-                    <li> Global/Block Accessibilty , and relation with {window} object's properties  </li>                               
+                    <li> Const Type of scoping [block scope]  </li>
+                    <li> Non Ability to const Re-Declaration  </li>
+                    <li> Non Ability to const Re-Asssignment  </li>
+                    <li> Different types of const object [single const || array const || object const ]  </li>
                 </ol>
             </article>
         </Section>
@@ -1106,162 +1105,98 @@
             </header>
 
             <ol> 
-                <li> Type of scoping [{var} => Function scope VS {let} => block scrope]: <br>
-                    <h4> {var} method :  </h4>
-                    <p> Has a Functional scope accessibility => this means the accessibilty to the variable from inside nested functional Scope ,  as following example :  <br>
-                        <code>  
-                            <span class="one"></span> function varTest() {  <br>
-                                <span class="two"></span> var x = 1;  <br>
-                                
-                                <span class="two"></span> if(true) {  <br>
-                                    <span class="three"></span> var x = 3;  -> [This is an (Accepte) [Re-Decleration] of the same variable -> So it will response to changing to new value ] <br>
-                                    <span class="three"></span> console.log('Variable value inside the function = ' , x);  <br>
-                                <span class="two"></span> }  <br>
-
-                                <span class="two"></span> console.log(x) ; <br>
-                                <span class="two"></span> return 'Done';  <br>
-                            <span class="one"></span> } <br>
-                            <span class="one"></span> varTest(); => Executing function <br>
-                        </code>
-                    </p>
-                    <p> The result of the prevoius exmaple => [3 , 3 , Done] => The variable(which is defined by {var} method) is accessible and able to Re-Defined  </p>
-                    <hr> <br>
+                <li> Const Type of scoping [ block scrope] : <br>
                     
-                    <h4> {let} method :  </h4>
-                    <p> Has a Block scope accessibility => this means the Un accessibilty to the variable from inside nested functional Scope , but only inside the same block  as following example :  <br>
+                    <h4> {const} method with single const variable :  </h4>
+                    <p> Altough it is a Constant with fixed value and and Not redeined or re assigned  , but due to it's Block scope accessibility => it can considered as new const inside block scope , as following example :  <br>
                         <code>  
-                            <span class="one"></span> function letTest() {  <br>
-                                <span class="two"></span> let x = 1;  <br>
+                            <span class="one"></span> function constTest() {  <br>
+                                <span class="two"></span> const x = 1;  <br>
                                 
                                 <span class="two"></span> if(true) {  <br>
-                                    <span class="three"></span> let x = 3;  -> [This is a  [Decleration] of new variable , (NOT the upper variable - due to UnAccessibilty)  ]  <br>
-                                    <span class="three"></span> console.log('Variable value inside the function = ' , x);  <br>
+                                    <span class="three"></span> const x = 3;  -> [This is a new [Decleration] of new const , (will be considered as new const)  ]  <br>
+                                    <span class="three"></span> console.log('Const value inside the block scope = ' , x);  <br>
                                 <span class="two"></span> }  <br>
 
                                 <span class="two"></span> console.log(x) ; <br>
                                 <span class="two"></span> return 'Done';  <br>
                             <span class="one"></span> } <br>
-                            <span class="one"></span> letTest(); => Executing function <br>
+                            <span class="one"></span> constTest(); => Executing function <br>
                         </code>
                     <hr> <br>
-                    <p> The result of the prevoius exmaple => [1 , 3 , Done] => The variable(which is defined by {var} method) is accessible and able to Re-Defined  </p>
+                    <p> The result of the prevoius exmaple => [1 , 3 , Done] => The Const(which is defined by {const} method) is accepted to Re-Defined as new [const] </p>
                 </li>
                 <hr> <br> <hr> <br>
 
-                <li> Ability to Re-Declaration :   <br>
-                    <h4> {var} method :  </h4>
-                    <p> Defined variable by var can be re-Declared./re-Defined ,  as following example :  <br>
-                        <code>  
-                            <span class="one"></span> var x = 1;  <br>
-                            <span class="one"></span> var x = 2;  <br>
-                            
-                            <span class="one"></span> console.log(x);  <br>
-                            <span class="one"></span> display => Accepting the re-Decleration  <br>
-                            
-                        </code>
-                    </p>
-                    <p> The result of the prevoius exmaple => [2] => Accepting the re-Decleration </p>
-                    <hr> <br>
+                <li> NON Ability to Re-Declaration :   <br>
                     
-                    <h4> {let} method :  </h4>
-                    <p> Defined variable by {let} can be Re-Declared /Re-Defined, as following example :  <br>
+                    <h4> {const} method :  </h4>
+                    <p> Defined variable by {const} can NOT be Re-Declared /Re-Defined, as following example :  <br>
                         <code>  
-                            <span class="one"></span> let x = 1;  <br>
-                            <span class="one"></span> let x = 2;  <br>
+                            <span class="one"></span> const x = 1;  <br>
+                            <span class="one"></span> const x = 2; =>  [Will through an error]  <br>
                             
-                            <span class="one"></span> console.log(x);  <br>
                             <span class="one"></span> display => Not Accepting the Re-Decleration [ Error Syntax ]  <br>    
                         </code>
                     </p>
                     <hr> <br>
-                    <p> The result of the prevoius exmaple => [Error Syntax] => Not accepting Re-Decleration   </p>
+                    <p> The result of the prevoius exmaple => [Error Syntax] => {const} will Not accepting Re-Decleration   </p>
                 </li>    
                 <hr> <br> <hr> <br>
                 
-                <li> Ability to Re-Asssignment  <br> 
-                    <p> Defined variable by {var} can be Re-Assigment new value ,as following example :  <br>
-                        <code>  
-                            <span class="one"></span> var x = 1;  <br>
-                            <span class="one"></span> x = 2;  <br>
-                            
-                            <span class="one"></span> console.log(x);  <br>
-                            <span class="one"></span> display => [2]  <br>
-                            
-                        </code>
-                    </p>
-                    <p> The result of the prevoius exmaple => [2] => Accepting the Re-Assignment </p> 
-                    <br><hr>
+                <li> NON Ability to Re-Asssignment  <br> 
                     
-                    <p> Defined variable by {let} can be re-Assignment by new value, as following example :  <br>
+                    <p> Defined variable by {const} can NOT be Re-Assignment new value, as following example :  <br>
                         <code>  
-                            <span class="one"></span> let x = 1;  => [variable Decleration & Assignment]  <br>
-                            <span class="one"></span> x = 2;  => [variable Re-Assignment] <br>
+                            <span class="one"></span> const x = 1;  => [const variable Decleration & Assignment]  <br>
+                            <span class="one"></span> x = 2;  => [const variable Not accepting Re-Assignment] <br>
                             
                             <span class="one"></span> console.log(x);  <br>
-                            <span class="one"></span> display => [2]  <br>
+                            <span class="one"></span> display => [ Error ]  <br>
                             
                         </code>
                     </p>
-                    <p> The result of the prevoius exmaple => [2] => Accepting the Re-Assignment </p>    
+                    <p> The result of the prevoius exmaple => [Error] => const NOT Accepting the Re-Assignment </p>    
                 </li>
                 <hr> <br> <hr> <br>                
                 
                 
-                <li> Result of accessing undefined Variables [Access varaible before Defining ] <br>
-                    <p> Accessing Un-Declared variable by {var} will be assingned by {undeifined} value by default ,as following example :  <br>
+                <li> Modifying const value [single || array || object ] :  <br>
+                    <p> 1] Modifing the {value} of the single const variable , as following example :  <br>
                         <code>  
-                            <span class="one"></span> console.log(x); => [ Accessing the variable before it is definition ] <br>
-                            <span class="one"></span> var x = 1 ;  => [ Defining the variable after accessing it  ] <br>
+                            <span class="one"></span> const SETTINGS = 1 ; || const SETTINGS; => [ Defining the single const variable (with value or empty value)  ] <br>
                             
-                            <span class="one"></span> display => [undefined] value  <br>
-                        </code>
-                    </p>
-                    <p> The result of the prevoius exmaple => [undefiend] => Not present Error althuogh the variable is not defined </p> 
-                    <br><hr>
-                    
-                    <p> Accessing Un-Declared variable by {let} will be present an {Reference Error} by default , as following example :  <br>
-                        <code>  
-                            <span class="one"></span> console.log(x); => [ Accessing the variable before it is definition ] <br>
-                            <span class="one"></span> let x = 1 ;  => [ Defining the variable after accessing it  ] <br>
+                            <span class="one"></span> SETTINGS = 3 ;  => [ Not accepting re-Assignment single const value  ] <br>
                             
                             <span class="one"></span> display => [Reference Error] value  <br>
                         </code>
                     </p>
-                    <p> The result of the prevoius exmaple => [Reference Error] => NOT Accepting Accessing the Variable defined by {let} before defining it </p>    
+                    <p> The result of the previous exmaple => [Reference Error] => Const single variable NOT Accepting re-Assignment it's value  </p>   
+                    <br> <hr> <br> 
+                    
+                    <!-- im here >>>>>>>>>>>>>>>>>> -->
+                    <p> 2] Modifing the the {array} const variable , as following example :  <br>
+                        <code>  
+                            <span class="one"></span> const SETTINGS = [] ; || const SETTINGS = ['elem1' , 'elem2' , 'elem3'] ; => [ Defining the array const variable (with initiatvies values or empty value)  ] <br>
+                            
+                            <span class="one"></span> SETTINGS = ['elem4' , 'elem5' , 'elem6' ] ;  => [ Not accepting re-Assignment array const it self  ] <br>
+                            
+                            <span class="one"></span> SETTINGS.push( 'elem4' , 'elem5' , 'elem6' ) ;  => [ Accepting adding new elements to const array's values by only used { object.push(); } method  ] <br>
+                            
+                            <span class="one"></span> display => [Reference Error] when trayign to modify the array it self or properites values by default method   <br>
+                        </code>
+                    </p>
+                    <p> The result of the previous exmaple => [Reference Error] => Const single variable NOT Accepting re-Assignment it's value  </p>    
                 </li>                
-                <hr> <br> <hr> <br>                
                 
-                
-                <li> Global/Block Accessibility , and relation with {window} object's properties <br>
-                    <p> Defined variable by {var} attidute as global document object [window] , as following example :  <br>
-                        <code>  
-                            <span class="one"></span> var x = 1;  <br>
-                            
-                            <span class="one"></span> console.log(window.x);  <br>
-                            <span class="one"></span> display => [1]  <br>            
-                        </code>
-                    </p>
-                    <p> The result of the prevoius exmaple => [1] => Defined variable using {var} method will be considered as global variable => Then will be globally accessed, as one of the Global object's properites {like [window] }  </p>    
-                    <br> <hr>
-
-                    <p> Defined variable by {let} attidute as block object , Not as an global Object's properites , as following example :  <br>
-                        <code>  
-                            <span class="one"></span> var x = 1;  <br>
-                            
-                            <span class="one"></span> console.log(window.x);  <br>
-                            <span class="one"></span> display => [Error]  <br>                            
-                        </code>
-                    </p>
-                    <p> The result of the prevoius exmaple => [Error] => Defined variable using {let} method will be NOT be considered as global variable , and will be deny access by global Object , because it is only block access   </p>    
-                </li>                               
                 <hr> <br> <hr> <br>                
             </ol>
 
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> {let}  ->  gives more organized Accessibilty, control and Performance of varialbes in window object model of webpage  </li>
-                    <li> {let}  ->  organized Accessibilty gives more security advantage within window object model of webpage  </li>
+                    <li> {const}  ->  gives chance to create fixed variable with ES peroperties  </li>
+                    <li> {const}  ->  gives advantages  when it become as array or object  </li>
                 </ul>
             </p>
                                                                      
