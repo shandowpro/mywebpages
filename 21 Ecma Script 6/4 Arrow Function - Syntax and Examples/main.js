@@ -1,38 +1,39 @@
 //  4 Arrow Function - Syntax and Examples
 /* Main lessons functions :
-    1- Const Type of scoping [block scope] 
-    2- Non Ability to const Re-Declaration
-    3- Non Ability to const Re-Asssignment 
-    4- Modifying const variables  value [single || array || object ]  
+    1- Regular Function syntax defined by [Default method] & [Assined to variable method]
+    2- Main basic syntax of arrow function 
+    3- {Arrow function} Shortcut methods with different (3) cases and conditons according to number of  [parameters & statement]  
 */
 // ---------------------------------------------------------------------
 
-// 3 New Way To Create Variable - {Const} :
+// 4 Arrow Function - Syntax and Examples :
 function myTest() {
     'use strict' ;
     alert('Welcome to 4 Arrow Function - Syntax and Examples ') ;
     
-    var x = prompt( ' Please choose one of functions from below options : \n   1] Const Type of scoping [block scope] \n    2] Ability to Re-Declaration of Const variable \n    3] Ability to Re-Asssignment of Const variable \n  4]  Modifying const variables values of Const   [ array ]  \n   5]  Modifying const variables values of Const  [ object ]   ');    
+    var dis = document.getElementById('note');
+     
+    var x = prompt(' Please choose one of functions from below options : \n  1] Test and print Regular Function syntax defined by [Default method] & [Assined to variable method]  \n  2] Tet and print Main basic syntax of arrow function \n  3] Test and print {Arrow function} Shortcut methods with different cases ( Shorten {Arrow function} by [One statement] & [No parameters] methods ) \n   4] Shorten {Arrow function} by [One statement] & [One parameter] methods \n  5] Shorten {Arrow function} by [One statement] & [Multiple parameters] method  ');    
 
     if (x == 1 ) {
         
-        testConst();
+        regFunc();
 
     } else if (x == 2) {
     
-        testConstReDec();
+        arrowBFunc();
         
     } else if (x == 3) {
     
-        testConstReAss()       
+        arrowShortFunc1();       
     
     } else if (x == 4) {
 
-        modConstArr();
+        arrowShortFunc2();
     
     } else if (x == 5) {
 
-        modConstObj();
+        arrowShortFunc3();
 
     } else {
         alert('No option has been selected !');
@@ -40,155 +41,148 @@ function myTest() {
 
     // =========================================================================
 
-    // 1] Const Type of scoping [block scope] : 
-    function testConst() {
-        // [Defining the const variable + Assignment ] :
-        const SETTINGS = 1;  
-        
-        if (true){
-            // [Re-Definging the const variable with the same name  + Re-Assignment ] {to considered as a new const } :
-            const SETTINGS = 3;   
+    // 1] Regular Function syntax defined by [Default method] & [Assined to variable method] : 
+    function regFunc() {
+        alert('Welcome to Test and print Regular Function syntax defined by [Default method] & [Assined to variable method]  ');
 
-            // [printing the const variable after re-definition and re-assignemnt inside the conitional if block ] : 
-            console.log('Const Variable SETTINGS value inside the if conditional = ' , SETTINGS );  
+        dis.innerHTML = '';
+        
+        function regDefFunc() {
+            return 'Return of Regular function by defined by the Default method = ' , 1 ;
         }
 
-        // [printing the variable after Re-definition and re-assignemnt outside the conitional if block ] : 
-        console.log('Const Variable SETTINGS value outside the if conditional = ' , SETTINGS );
+        regDefFunc();
 
-        return 'Done';
-    }
-    // -------------------------------
-
-
-    // 2] Ability to Re-Declaration of Const variable : 
-    function testConstReDec() {
-        alert('Not able to re declare the same const variable!');
-
-        const A = 1;
-        // const A = 3;
-
-        console.log(A) ;
-    }
-    // -------------------------------
-
-    // 3] Ability to Re-Asssignment of Const variable:
-    function testConstReAss() {
-        alert('Not able to re assign the same const variable!');
-
-        const B = 3;
-        // const B = '';
-
-        console.log(B) ;
-    }
-    // -------------------------------
-
-    // 4] Modifying const variables values with Const cases types of  [ array || object ]  : 
-
-    //  a) Modifying {array const} method :
-    function modConstArr() {
-
-        // Modifying the [const array] elements values :
-
-        alert('Welcome to the Modifying the array elements values by using [default method || push method ] ');
+        console.log('Regular Function Return by using Default method : ' , regDefFunc() ) ;
+        console.log('Regular Function Syntax by using Default method : '  , regDefFunc ) ;
         
-        var z = prompt("please insert [1] to apply modifications on array elements values by using default method \n please insert [2] to apply modifications on array elements values by using push method  ");
+        dis.innerHTML = 'Regular Function Return by using Default method : ' + regDefFunc() + '<br>' + 
+                    'Regular Function Syntax by using Default method : ' + regDefFunc() + '<br>' ;
         
-        if (z == 1) {
+        // ------------------------
 
-            alert('Defining the const array , and modifying[adding new elements] to it\'s values -> {using default method} ') ;
-            // Defining the [const array]  : 
-            const arrConst1 = [] ;
-            
-            // Modifying the const array values [by using default mehtod]  : 
-            arrConst1 = ['elem1' , 'elem2' , 'elem3'] ;
-            
-            // printing the const array after Modifying values [by using default mehtod]  : 
-            console.log(arrConst1);
+        let regAssFunc =  function() {
+            return 'Return of Regular function by defined by the assigned method =' , 1 ;
+        }  
 
-        } else if (z == 2) {
-            alert('Defining the const array , and modifying[adding new elements] to it\'s values -> {using push method} ') ;
-            
-            // Defining the const array  : 
-            const arrConst1 = ['elem1' , 'elem2' , 'elem3'] ;
-            
-            // Modifying the const array values [by using default mehtod]  : 
-            arrConst1.push('elem4' , 'elem5' , 'elem6');
-            
-            // printing the const array after Modifying values [by using push mehtod]  : 
-            console.log(arrConst1 );
-        }
+        regAssFunc();
+
+        console.log('Regular Function Return by using assigned method : ' , regAssFunc() ) ;
+        console.log('Regular Function Syntax by using assigned method : '  , regAssFunc ) ;
+
+        dis.innerHTML += 'Regular Function Return by using assigned method : ' + regAssFunc() + '<br>' + 
+                    'Regular Function Syntax by using assigned method : ' + regAssFunc + '<br>' ;
+        
+    }
+    // =============================================================
+
+    // 2] Main basic syntax of arrow function :
+    function arrowBFunc() {
+        alert('Welcome to Test and print Arrow Basic Function syntax [without shortcuts cases] ');
+
+        dis.innerHTML = '';
+
+        let  arrowBFunc = () =>  100 ;
+
+        arrowBFunc();
+       
+        console.log('Arrow Function Return by Basic Method [without shortcuts cases] : ' , arrowBFunc() ) ;
+        console.log('Arrow Function Syntax by using Basic Method [without shortcuts cases] : '  , arrowBFunc ) ;
+       
+        dis.innerHTML += 'Arrow Function Return by using assigned method : ' + arrowBFunc() + '<br>' + 
+                    'Arrow Function Syntax by using assigned method : ' + arrowBFunc + '<br>' ;
+        
+
+    }
+    // =========================================================
+
+    // 3] {Arrow function} Shortcut methods with different cases and conditons according to number of  [parameters & statement]  : 
+
+    //  a) Shorten {Arrow function} by [One statement] & [No parameters] methods :
+    function arrowShortFunc1() {
+
+        alert('Welcome to Test and print Shorten Arrow Function syntax by [One statement] & [No parameters] ' );
+
+        dis.innerHTML = '';
+
+        let  arrowOneSFunc1 = () =>  100 ;
+
+        arrowOneSFunc1();
+
+        console.log('Short Arrow Function Return by [One statement] & [No parameters] : ' , arrowOneSFunc1() ) ;
+        console.log('Short Arrow Function Syntax by [One statement] & [No parameters] : '  , arrowOneSFunc1 ) ;
+       
+        dis.innerHTML += 'Short Arrow Function Return by [One statement] & [No parameters] : ' + arrowOneSFunc1() + '<br>' + 
+                    'Short Arrow Function Syntax by [One statement] & [No parameters] : ' + arrowOneSFunc1 + '<br>' ;
+    
+        // ---------------------------------
+        
+        let  arrowOneSFunc2  = _ =>  200 ;
+
+        arrowOneSFunc2();
+
+        console.log('Short Arrow Function Return by [One statement] & [No parameters] : ' , arrowOneSFunc2() ) ;
+        console.log('Short Arrow Function Syntax by [One statement] & [No parameters] : '  , arrowOneSFunc2 ) ;
+       
+        dis.innerHTML += 'Short Arrow Function Return by [One statement] & [No parameters] : ' + arrowOneSFunc2() + '<br>' + 
+                    'Short Arrow Function Syntax by [One statement] & [No parameters] : ' + arrowOneSFunc2 + '<br>' ;
+    
     }
     // --------------------------------------------------------------------------
 
-    //   b) Modifying {object const} method :
-    function modConstObj() {
+    //  b) Shorten {Arrow function} by [One statement] & [One parameter] methods :
+    function arrowShortFunc2() {
 
-        // Modifying the Object elements values :
+        alert('Welcome to Test and print Shorten Arrow Function syntax by [One statement] & [One parameters] ' );
 
-        alert('Welcome to the Modifying the Object elements values by using [default method || single property method ] ');
+        dis.innerHTML = '';
+
+        let  arrowOneSOnePFunc1 = (param) => param * 100 ;
+
+        arrowOneSOnePFunc1(100);
+
+        console.log('Short Arrow Function Return by [One statement] & [One parameter] : ' , arrowOneSOnePFunc1() ) ;
+        console.log('Short Arrow Function Syntax by [One statement] & [One parameter] : '  , arrowOneSOnePFunc1 ) ;
+       
+        dis.innerHTML += 'Short Arrow Function Return by [One statement] & [One parameter] : ' + arrowOneSOnePFunc1() + '<br>' + 
+                    'Short Arrow Function Syntax by [One statement] & [One parameter] : ' + arrowOneSOnePFunc1 + '<br>' ;
+    
+        // ---------------------------------
         
-        var z = prompt("please insert [1] to apply modifications on Object elements values by using [default method] \n please insert [2] to apply modifications on Object elements values by using [single property method] \n 3] modiifying single eleemnt using {freeze} method " );
-        
-        if (z == 1) {
+        let  arrowOneSOnePFunc2 = param => param * 100 ;
 
-            alert('Defining the const Object , and modifying[adding new elements(Keynames + values) ] to it\'s values -> {using default method} ') ;
-            // Defining the const Object : 
-            const objConst1 = {} ;
-            
-            // Modifying the const Object values [by using default mehtod]  : 
-            objConst1 = {  
-                'elem1' : 'value1'  ,
-                'elem2' : 'value2'  ,
-                'elem3' : 'value3'  ,
-            
-            } ;
-            
-            // printing the const Object after Modifying values [by using default mehtod]  : 
-            console.log(objConst1);
+        arrowOneSOnePFunc2(200);
 
-        } else if (z == 2) {
-            alert('Defining the const Object , and modifying[adding new elements(Keynames + values) ] to it\'s values -> {using single method} ') ;
-            
-            // Defining the const object : 
-            const objConst1 = {  
-                'name' : 'shadi'  ,
-                'age' : '36'  ,
-                'address' : 'cairo'  ,   
-            } ;
-
-            // Modifying the const object values [by using single mehtod]  : 
-            objConst1.name = 'Ali';
-
-            // printing the const object after Modifying values [by using single mehtod]  : 
-            console.log(objConst1);
-            
-        } else if (z == 3)  {
-            
-            alert('Defining the const Object , and modifying[adding new elements(Keynames + values) ] to it\'s values -> {using single method + freeze method} ') ;
-            
-            // Defining the const object : 
-            const objConst1 = {  
-                'name' : 'shadi'  ,
-                'age' : '36'  ,
-                'address' : 'cairo'  ,   
-            } ;
-
-            // Using the Freeze method on the object :
-            Object.freeze(objConst1) ;  
-
-            // Modifying the const object values [by using single mehtod] -> [This new element will not be Resopnding ] : 
-            objConst1.name = 'Ali';
-
-            // printing the const object after Modifying values [by using single mehtod]  : 
-            console.log(objConst1 );
- 
-        } else  {
-            alert('Error Entry! ');
-        }
+        console.log('Short Arrow Function Return by [One statement] & [One parameter] : ' , arrowOneSOnePFunc2() ) ;
+        console.log('Short Arrow Function Syntax by [One statement] & [One parameter] : '  , arrowOneSOnePFunc2 ) ;
+       
+        dis.innerHTML += 'Short Arrow Function Return by [One statement] & [One parameter] : ' + arrowOneSOnePFunc2() + '<br>' + 
+                    'Short Arrow Function Syntax by [One statement] & [One parameter] : ' + arrowOneSOnePFunc2 + '<br>' ;
+    
     }
-    //===========================================================
+    // ---------------------------------------------------------------------------
 
+    //  c) Shorten {Arrow function} by [One statement] & [Multiple parameters]  methods :
+    function arrowShortFunc3() {
+
+        alert('Welcome to Test and print Shorten Arrow Function syntax by [One statement] & [Multiple  parameters] ' );
+
+        dis.innerHTML = '';
+
+        let  arrowOneSMulPFunc = (param1 , param2) => param1 * param2 ;
+
+        arrowOneSMulPFunc(10,20);
+        
+
+        console.log('Short Arrow Function Return by [One statement] & [Mul parameter] : ' , arrowOneSMulPFunc() ) ;
+        console.log('Short Arrow Function Syntax by [One statement] & [Mul parameter] : '  , arrowOneSMulPFunc ) ;
+       
+        dis.innerHTML += 'Short Arrow Function Return by [One statement] & [Mul parameters] : ' + arrowOneSMulPFunc() + '<br>' + 
+                    'Short Arrow Function Syntax by [One statement] & [Mul parameters] : ' + arrowOneSMulPFunc + '<br>' ;
+    }
+
+    //===========================================================
+    
     function display() {
         document.getElementById("note").innerHTML = myTest + "\n\n" + "=".repeat(90) + "\n\n";
     }

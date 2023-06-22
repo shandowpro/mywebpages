@@ -1094,10 +1094,10 @@
                 <p> &gt; Main Subjects in this lesson will be => Information about {const} method properties standards , as following :   </p>
                 <li> Main Subjects :  <br>                         
                 <ol type="A">                                       
-                    <li> Const Type of scoping [block scope]  </li>
-                    <li> Non Ability to const Re-Declaration  </li>
-                    <li> Non Ability to const Re-Asssignment  </li>
-                    <li> Different types of const object [single const || array const || object const ]  </li>
+                    <li> Concept of the arrow function   </li>
+                    <li> syntax of Arrow function </li>
+                    <li> Comparison & Converting the {Regular function} to {Arrow function}  </li>
+                    <li> When to use each Type of Function  </li>
                 </ol>
             </article>
         </Section>
@@ -1108,129 +1108,81 @@
             <header>
                 <h3> 4 Arrow Function - Syntax and Examples concept : </h3>
             </header>
-
+           
+            <p> Arrow function is a shortcut of the Relgular function , to achieve easier syntax and saving time in writing code  </p>
+            
+            <p> Arrow function will not aband the regular function , and both of two types will keep used in ES6 standards   </p>
+                        
             <ol> 
-                <li> Const Type of scoping [ block scope ] : <br>
-                    
-                    <h4> {const} method with single const variable :  </h4>
-                    <p> Altough it is a Constant with fixed value and and Not redeined or re assigned  , but due to it's Block scope accessibility => it can considered as new const inside block scope , as following example :  <br>
-                        <code>  
-                            <span class="one"></span> function constTest() {  <br>
-                                <span class="two"></span> const x = 1;  <br>
-                                
-                                <span class="two"></span> if(true) {  <br>
-                                    <span class="three"></span> const x = 3;  -> [This is a new [Decleration] of new const , (will be considered as new const)  ]  <br>
-                                    <span class="three"></span> console.log('Const value inside the block scope = ' , x);  <br>
-                                <span class="two"></span> }  <br>
+                <li> Regular Function [Default definition method & Assigned to variable method] syntax : <br>
 
-                                <span class="two"></span> console.log(x) ; <br>
-                                <span class="two"></span> return 'Done';  <br>
+                    <h4> {Regular function} by default method  :  </h4>
+                        <code>  
+                            <span class="one"></span> function regDefFunc() {  <br>
+                                <span class="two"></span> return 1;  <br>
                             <span class="one"></span> } <br>
-                            <span class="one"></span> constTest(); => Executing function <br>
+                        </code> <br> <br>
+                    
+                    <h4> {Regular function} by [Assigned to variable]  method  :  </h4>
+                        <code>                                
+                            <span class="one"></span> let regAssgFunc = function () {  <br>
+                                <span class="two"></span> return 1;  <br>
+                            <span class="one"></span> }  <br> <br>
                         </code>
                     <hr> <br>
-                    <p> The result of the prevoius exmaple => [1 , 3 , Done] => The Const(which is defined by {const} method) is accepted to Re-Defined as new [const] </p>
                 </li>
                 <hr> <br> <hr> <br>
+    
+                <li> Arrow Function Assigned to variable method] Basic syntax : <br>
 
-                <li> NON Abilitiy to Re-Declaration :   <br>
-                    
-                    <h4> {const} method :  </h4>
-                    <p> Defined variable by {const} can NOT be Re-Declared /Re-Defined, as following example :  <br>
+                    <h4> {Arrow function} by [Assigned to variable] method  :  </h4>
                         <code>  
-                            <span class="one"></span> const x = 1;  <br>
-                            <span class="one"></span> const x = 2; =>  [Will through an error]  <br>
-                            
-                            <span class="one"></span> display => Not Accepting the Re-Decleration [ Error Syntax ]  <br>    
+                            <span class="one"></span> let arrowBasicFunc = () => 1;  <br>
                         </code>
-                    </p>
                     <hr> <br>
-                    <p> The result of the prevoius exmaple => [Error Syntax] => {const} will Not accepting Re-Decleration   </p>
-                </li>    
-                <hr> <br> <hr> <br>
-                
-                <li> NON Ability to Re-Asssignment  <br> 
-                    
-                    <p> Defined variable by {const} can NOT be Re-Assignment new value, as following example :  <br>
-                        <code>  
-                            <span class="one"></span> const x = 1;  => [const variable Decleration & Assignment]  <br>
-                            <span class="one"></span> x = 2;  => [const variable Not accepting Re-Assignment] <br>
-                            
-                            <span class="one"></span> console.log(x);  <br>
-                            <span class="one"></span> display => [ Error ]  <br>
-                            
-                        </code>
-                    </p>
-                    <p> The result of the prevoius exmaple => [Error] => const NOT Accepting the Re-Assignment </p>    
                 </li>
-                <hr> <br> <hr> <br>                
-                
-                
-                <li> Modifying const value [single || array || object ] :  <br>
-                    <p> 1] Modifing the {value} of the single const variable , as following example :  <br>
-                        <code>  
-                            <span class="one"></span> const SETTINGS = 1 ; || const SETTINGS; => [ Defining the single const variable (with value or empty value)  ] <br>
-                            
-                            <span class="one"></span> SETTINGS = 3 ;  => [ Not accepting re-Assignment single const value  ] <br>
-                            
-                            <span class="one"></span> display => [Reference Error] value  <br>
-                        </code>
-                    </p>
-                    <p> The result of the previous exmaple => [Reference Error] => Const single variable NOT Accepting re-Assignment it's value  </p>   
-                    <br> <hr> <br> 
-                    
-                    <p> 2] Modifing the the {array} const variable , as following example :  <br>
-                        <code>  
-                            <span class="one"></span> const SETTINGS = [] ; || const SETTINGS = ['elem1' , 'elem2' , 'elem3'] ; => [ Defining the array const variable (with initiatives values or empty value) ] <br>
-                            
-                            <span class="one"></span> SETTINGS = ['elem4' , 'elem5' , 'elem6' ] ;  => [ Not accepting re-Assignment array const it self  ] <br>
-                            
-                            <span class="one"></span> SETTINGS.push( 'elem4' , 'elem5' , 'elem6' ) ;  => [ Accepting adding new elements to const array's values by only used { object.push(); } method  ] <br>
-                            
-                            <span class="one"></span> display => [Reference Error] when trying to modify the array it self or properites values by default method   <br>
-                        </code>
-                    </p>
-                    <p> The result of the previous exmaple => [Reference Error] => Const array variable NOT Accepting Re-Assignment it's value by  using default method  , only the push method </p>    
-                    <p> The Const array variable NOT Accepting Re-Assignment it's value by using default method, only the push method </p>    
-                    <br> <hr> <br>
+                <hr> <br> <hr> <br>
+    
+                <li> Shortcut Arrow Function Syntax : <br>
 
-                    <p> 3] Modifing the the {object} const variable , as following example :  <br>
-                       
-                        => [ Defining the object const variable (with initiatives values or empty value) ] <br>
+                    <h4> Shorten {Arrow function} by [One statement] & [No parameters]  methods  :  </h4>
+                        <p> First method [empty brackets] : <br>
                         <code>  
-                            <span class="one"></span> const SETTINGS = {} ; || const SETTINGS = {'prop1' : 'value1' , 'prop2' : 'value2' , 'prop3' : 'value3' } ; <br>                        
-                            
-                            <span class="one"></span> SETTINGS = {'prop4' : 'value4' , 'prop5' : 'value5' , 'prop6' : 'value6' } ;  => [ Not accepting re-Assignment object const it self  ] <br>
-                            
-                            <span class="one"></span> SETTINGS.prop1 = 'value7' ;  => [ Accepting changing one of the object's property  ] <br>
-                            
-                            <span class="one"></span> display => [Reference Error] when trying to modify the const object's varialble it self by default method , but accept one of it's property's value   <br>
+                            <span class="one"></span> let arrowFunc = () => 1;  <br>
                         </code> <br>
-
-                        => [ Defining the object const variable (with initiatives values or empty value) ] <br>
+                        
+                        <p> Second method [underscore]: <br>
                         <code>  
-                            <span class="one"></span> const SETTINGS = {'prop1' : 'value1' , 'prop2' : 'value2' , 'prop3' : 'value3' } ; <br>                        
-                            
-                            <span class="one"></span> object.freeze(SETTINGS);  => [ Freezing single Re-Assignment of const object ] <br>
-                            
-                            <span class="one"></span> SETTINGS.prop1 = 'value7' ;  => [ NOT Accepting single changing of the object's property value  ] <br>
-                          
-                            <span class="one"></span> console.log(SETTINGS) ;  => [ printing object's properties value without changing the changed value after using (freeze) method ] <br>
-                            
-                            <span class="one"></span> display =>  No change will be displayed with in object's properites values  <br>
+                            <span class="one"></span> let arrowFunc =  _  =>  1;  <br>
                         </code>
-                    </p>
-                    <p> The result of the previous exmaple => using object freeze mehtod will prevent the ablitity of single property of Const object Re-Assignment  </p>    
+                    <hr> <br> <br>
                     
-                </li>                
+                    <h4> Shorten {Arrow function} by [One statement] & [One parameter]  methods  :  </h4>
+                        <p> First method [with brackets]: <br>
+                        <code>  
+                            <span class="one"></span> let arrowFunc = (param) => param * 1;  <br>
+                        </code>
+                        <br> <br>
+                    
+                        <p> Second method [without brackets] : <br>
+                        <code>  
+                            <span class="one"></span> let arrowFunc =  param  => param * 1;  <br>
+                        </code> <hr> <br> <br>
 
-                <hr> <br> <hr> <br>                
+                    <h4> Shorten {Arrow function} by [One statement] & [Multiple parameters]  methods  :  </h4>
+                        <p> [using Brackets] Method : <br>
+                        <code>  
+                            <span class="one"></span> let arrowFunc = (param1 , param2) => param1 * param2 ;  <br>
+                        </code> <hr> <br> <br>
+                </li>
+                <hr> <br> <hr> <br>
             </ol>
+            <!-- --------------------------- -->
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> {const}  ->  gives chance to create fixed variable with ES peroperties  </li>
-                    <li> {const}  ->  gives advantages when it become as array or object  </li>
+                    <li> {Arrow functions}  ->  gives chance to summerize the code of Regular Function -> to provide shorter and easier code  </li>
+                    <li> {Arrow functions}  ->  Has it's best pracitse cases  </li>
                 </ul>
             </p>
                                                                      
@@ -1475,9 +1427,11 @@
         <script src="main.js"></script> 
         
         <br><br><br>
+        
+        <div id="note" class="dis"></div> <br><br><br><br>
+
          <!-- <button class="btn" id="elem" onclick="display()"> Click to view source code of [main.js] file  </button> <br>              -->
         
-        <!-- <div id="note" class="dis"></div> <br><br><br><br> -->
         
         
         
