@@ -1,39 +1,39 @@
 //  5 Arrow Function And This Value
 /* Main lessons functions :
-    1- Regular Function syntax defined by [Default method] & [Assined to variable method]
-    2- Main basic syntax of arrow function 
-    3- {Arrow function} Shortcut methods with different (3) cases and conditons according to number of  [parameters & statement]  
+    1- [This] Reference value in the Regular function  
+    2- {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }
+    3- {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value }
 */
 // ---------------------------------------------------------------------
 
-// 5 Arrow Function And This Value :
+// 5 Arrow Function And [This] operator  :
 function myTest() {
     'use strict' ;
     alert('Welcome to 5 Arrow Function And This Value ') ;
     
     var dis = document.getElementById('note');
      
-    var x = prompt(' Please choose one of functions from below options : \n  1] Test and print Regular Function syntax defined by [Default method] & [Assined to variable method]  \n  2] Tet and print Main basic syntax of arrow function \n  3] Test and print {Arrow function} Shortcut methods with different cases ( Shorten {Arrow function} by [One statement] & [No parameters] methods ) \n   4] Shorten {Arrow function} by [One statement] & [One parameter] methods \n  5] Shorten {Arrow function} by [One statement] & [Multiple parameters] method  ');    
+    var x = prompt(' Please choose one of functions from below options : \n  1] [This] Reference value in the Regular function \n  2] {This} Reference value in the Arrow function  \n  3] {This} attidute value in the both {Arrow function} & {Regular Function }  ');    
 
     if (x == 1 ) {
         
-        regFunc();
+        regFuncValue();
 
     } else if (x == 2) {
     
-        arrowBFunc();
+        regFuncThis();
         
     } else if (x == 3) {
     
-        arrowShortFunc1();       
+        arrowFuncThis();       
     
-    } else if (x == 4) {
+    // } else if (x == 4) {
 
-        arrowShortFunc2();
+    //     arrowShortFunc2();
     
-    } else if (x == 5) {
+    // } else if (x == 5) {
 
-        arrowShortFunc3();
+    //     arrowShortFunc3();
 
     } else {
         alert('No option has been selected !');
@@ -41,147 +41,93 @@ function myTest() {
 
     // =========================================================================
 
-    // 1] Regular Function syntax defined by [Default method] & [Assined to variable method] : 
-    function regFunc() {
-        alert('Welcome to Test and print Regular Function syntax defined by [Default method] & [Assined to variable method]  ');
+    // 1] Test and print [This] Reference value in the Regular function :
+    function regFuncValue() {
+        alert('Welcome to Test and print [This] Reference value in the Regular function  ');
 
         dis.innerHTML = '';
-        
-        function regDefFunc() {
-            return 'Return of Regular function by defined by the Default method = ' , 1 ;
+
+
+        // Assigning the element innerHTML by the value of it's caller funtion :
+        let regFuncVal1 = function() {
+            document.getElementById('note').innerHTML = this;
         }
-
-        regDefFunc();
-
-        console.log('Regular Function Return by using Default method : ' , regDefFunc() ) ;
-        console.log('Regular Function Syntax by using Default method : '  , regDefFunc ) ;
         
-        dis.innerHTML = 'Regular Function Return by using Default method : ' + regDefFunc() + '<br>' + 
-                    'Regular Function Syntax by using Default method : ' + regDefFunc() + '<br>' ;
+        // Executing the [this] 's refers value within {Regular function} by using built-in {window} object  & {onload} event :
+        window.onload = regFuncVal1;
         
+        // ---------------------------------------
+        
+        // Executing the [this] 's refers value within {Regular function} by using built-in {button} object  & {addEventLister} event  :
+        document.getElementById('elem').addEventListener( 'click' , regFuncVal1);         
+        // ---------------------------------------
+        
+        // console.log('Regular Function of calling function by using [this] operator : ' , regFuncVal1() ) ;
+        console.log('Regular Function Syntax by using Default method : '  ,  regFuncVal1 ) ;
+        
+        dis.innerHTML = 'Regular Function Syntax by using Default method : ' +  regFuncVal1 + '<br>' ;
+
         // ------------------------
 
-        let regAssFunc =  function() {
-            return 'Return of Regular function by defined by the assigned method =' , 1 ;
-        }  
-
-        regAssFunc();
-
-        console.log('Regular Function Return by using assigned method : ' , regAssFunc() ) ;
-        console.log('Regular Function Syntax by using assigned method : '  , regAssFunc ) ;
-
-        dis.innerHTML += 'Regular Function Return by using assigned method : ' + regAssFunc() + '<br>' + 
-                    'Regular Function Syntax by using assigned method : ' + regAssFunc + '<br>' ;
-        
     }
     // =============================================================
 
-    // 2] Main basic syntax of arrow function :
-    function arrowBFunc() {
-        alert('Welcome to Test and print Arrow Basic Function syntax [without shortcuts cases] ');
+    // 2] {This} usages and attidute value within the [Regular function] => { Auto counter application upon [this] value }:
+    function regFuncThis() {
+        alert('Welcome to Test and print {this} usages and attidute value within the [Regular function] ');
 
         dis.innerHTML = '';
 
-        let  arrowBFunc = () =>  100 ;
+        let regFuncThisApp = function () {
+            let that = this;
+            this.age = 0;
 
-        arrowBFunc();
+            setInterval( function(){
+                that.age++ ;
+                console.log(that.age);
+            }, 1000 );
+
+            // Executing the current fuction by Extracting new object form the constrcutor function : 
+            let user = new regFuncThisApp();   
+        }
+
        
-        console.log('Arrow Function Return by Basic Method [without shortcuts cases] : ' , arrowBFunc() ) ;
-        console.log('Arrow Function Syntax by using Basic Method [without shortcuts cases] : '  , arrowBFunc ) ;
+        // console.log('Regular Function : ' , regFuncThisApp() ) ;
+        console.log('Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : '  , regFuncThisApp ) ;
        
-        dis.innerHTML += 'Arrow Function Return by using assigned method : ' + arrowBFunc() + '<br>' + 
-                    'Arrow Function Syntax by using assigned method : ' + arrowBFunc + '<br>' ;
+        dis.innerHTML += 'Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : ' + regFuncThisApp + '<br>' ;
         
+    }
+    // =========================================================
+    
+    // 3] {This} usages and Attidute value within the [Arrow function] => { Auto counter application upon [this] value }:
+    function arrowFuncThis() {
+        alert('Welcome to Test and print {this} usages and attidute value within the [Arrow function] ');
 
+        dis.innerHTML = '';
+
+        let arrowFuncThisApp = function()  {
+         
+            this.age = 0;
+
+            setInterval( () => {
+                this.age++ ;
+                console.log(this.age);
+            }, 1000 );
+        
+            // Executing the current fuction by Extracting new object form the constrcutor function : 
+            let user = new arrowFuncThisApp();
+        }
+    
+        // console.log('Regular Function : ' , regFuncThisApp() ) ;
+        console.log('Arrow Function Syntax by using directly [this] Method : '  , arrowFuncThisApp ) ;
+       
+        dis.innerHTML += 'Arrow Function Syntax by using directly [this] Method : '  + arrowFuncThisApp + '<br>' ;
+        
     }
     // =========================================================
 
-    // 3] {Arrow function} Shortcut methods with different cases and conditons according to number of  [parameters & statement]  : 
-
-    //  a) Shorten {Arrow function} by [One statement] & [No parameters] methods :
-    function arrowShortFunc1() {
-
-        alert('Welcome to Test and print Shorten Arrow Function syntax by [One statement] & [No parameters] ' );
-
-        dis.innerHTML = '';
-
-        let  arrowOneSFunc1 = () =>  100 ;
-
-        arrowOneSFunc1();
-
-        console.log('Short Arrow Function Return by [One statement] & [No parameters] : ' , arrowOneSFunc1() ) ;
-        console.log('Short Arrow Function Syntax by [One statement] & [No parameters] : '  , arrowOneSFunc1 ) ;
-       
-        dis.innerHTML += 'Short Arrow Function Return by [One statement] & [No parameters] : ' + arrowOneSFunc1() + '<br>' + 
-                    'Short Arrow Function Syntax by [One statement] & [No parameters] : ' + arrowOneSFunc1 + '<br>' ;
-    
-        // ---------------------------------
-        
-        let  arrowOneSFunc2  = _ =>  200 ;
-
-        arrowOneSFunc2();
-
-        console.log('Short Arrow Function Return by [One statement] & [No parameters] : ' , arrowOneSFunc2() ) ;
-        console.log('Short Arrow Function Syntax by [One statement] & [No parameters] : '  , arrowOneSFunc2 ) ;
-       
-        dis.innerHTML += 'Short Arrow Function Return by [One statement] & [No parameters] : ' + arrowOneSFunc2() + '<br>' + 
-                    'Short Arrow Function Syntax by [One statement] & [No parameters] : ' + arrowOneSFunc2 + '<br>' ;
-    
-    }
-    // --------------------------------------------------------------------------
-
-    //  b) Shorten {Arrow function} by [One statement] & [One parameter] methods :
-    function arrowShortFunc2() {
-
-        alert('Welcome to Test and print Shorten Arrow Function syntax by [One statement] & [One parameters] ' );
-
-        dis.innerHTML = '';
-
-        let  arrowOneSOnePFunc1 = (param) => param * 100 ;
-
-        arrowOneSOnePFunc1(100);
-
-        console.log('Short Arrow Function Return by [One statement] & [One parameter] : ' , arrowOneSOnePFunc1() ) ;
-        console.log('Short Arrow Function Syntax by [One statement] & [One parameter] : '  , arrowOneSOnePFunc1 ) ;
-       
-        dis.innerHTML += 'Short Arrow Function Return by [One statement] & [One parameter] : ' + arrowOneSOnePFunc1() + '<br>' + 
-                    'Short Arrow Function Syntax by [One statement] & [One parameter] : ' + arrowOneSOnePFunc1 + '<br>' ;
-    
-        // ---------------------------------
-        
-        let  arrowOneSOnePFunc2 = param => param * 100 ;
-
-        arrowOneSOnePFunc2(200);
-
-        console.log('Short Arrow Function Return by [One statement] & [One parameter] : ' , arrowOneSOnePFunc2() ) ;
-        console.log('Short Arrow Function Syntax by [One statement] & [One parameter] : '  , arrowOneSOnePFunc2 ) ;
-       
-        dis.innerHTML += 'Short Arrow Function Return by [One statement] & [One parameter] : ' + arrowOneSOnePFunc2() + '<br>' + 
-                    'Short Arrow Function Syntax by [One statement] & [One parameter] : ' + arrowOneSOnePFunc2 + '<br>' ;
-    
-    }
-    // ---------------------------------------------------------------------------
-
-    //  c) Shorten {Arrow function} by [One statement] & [Multiple parameters]  methods :
-    function arrowShortFunc3() {
-
-        alert('Welcome to Test and print Shorten Arrow Function syntax by [One statement] & [Multiple  parameters] ' );
-
-        dis.innerHTML = '';
-
-        let  arrowOneSMulPFunc = (param1 , param2) => param1 * param2 ;
-
-        arrowOneSMulPFunc(10,20);
-        
-
-        console.log('Short Arrow Function Return by [One statement] & [Mul parameter] : ' , arrowOneSMulPFunc() ) ;
-        console.log('Short Arrow Function Syntax by [One statement] & [Mul parameter] : '  , arrowOneSMulPFunc ) ;
-       
-        dis.innerHTML += 'Short Arrow Function Return by [One statement] & [Mul parameters] : ' + arrowOneSMulPFunc() + '<br>' + 
-                    'Short Arrow Function Syntax by [One statement] & [Mul parameters] : ' + arrowOneSMulPFunc + '<br>' ;
-    }
-
-    //===========================================================
+   //===========================================================
     
     function display() {
         document.getElementById("note").innerHTML = myTest + "\n\n" + "=".repeat(90) + "\n\n";
