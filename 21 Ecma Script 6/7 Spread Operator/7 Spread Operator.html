@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => Templates literal  {Templates strings} Syntax  <span><strong> applicatins in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> Templates Literals { Templates strings } Syntax in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section => Spread operator  {Spread contax} Syntax  <span><strong> applicatins in JS ES6  </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> Spread operator {Spread contax } Syntax in ES6 </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1091,14 +1091,15 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about { Template Literals }  concept , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about { Spread Operator }  concept , as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                                           
-                    <li> Strings || embeded variables || embeded conditional if in the old JS </li>
-                    <li> Strings || embeded variables || embeded conditional if in the new js ES6 </li>
-                    <li> Full Advanced Applications Strings || embeded variables || embeded conditional if  </li>
+                    <li> Basic comparisonal printing and display of the array elements the old JS & new js ES6 </li>
+                    <li> Merging & Copying between two arrays & adding new element by using in the [old JS & new js ES6] </li>
+                    <li> Applying the elements of array into the function's Arguments by using old JS & new js ES6 </li>
+                    <li> Applying Math operations on the array elements by using old JS & new js ES6 </li>
                 </ol>
             </article>
         </Section>
@@ -1110,140 +1111,160 @@
                 <h3> 7 Spread Operator concept : </h3>
             </header>
            
-            <p> {Strings || embeded Variables || Embeded Conditional if}  in the old default JS => Syntax properites : <br>  
+            <p> {Spread} mehtod concept : <br>  
+                Extract the Array/Object into Elements to be able to be dealet as values within other operations or purpuses  
+            </p>
+
+            
+            <p> Following functions can be applied on Array & Object by each old and ES Js  , as following : <br>  
                 <ul> 
-                    <li> Single [String] syntax => <br>
+                    <li> Printing syntax => <br>
                         <ol>
-                            <li> Start and end with [`  `] istead of the single and double qoute  </li>
-                            <li> New line of string [without using any other symbol] to start a new line of string  </li>
+                                                    
+                            <li> Printing Elements as both values and Array/object format : <br>
+                                <ul> 
+                                    <li> Using ES6 Js {spread}: <br>
+                                        <code>
+                                            <span class="one"></span> // Defining the array and object:  <br>
+                                            <span class="one"></span> let arr = [1, 2, 3 ] ; <br>
+                                                <span class="two"></span> obj = {"1" : "shadi", "2" : "ahemed", "3" : "mohamed"} ; <br> <br>
+
+
+                                            <span class="one"></span> // Printing the array & object as object & array format :  <br>
+                                            <span class="one"></span> console.log(arr)  ; <br>
+                                            <span class="one"></span> console.log(obj)  ; <br> <br> 
+
+                                            <span class="one"></span> // Printing the array & object as values [using spread] :  <br>
+                                            <span class="one"></span> console.log(...arr)  ; <br>
+                                            <span class="one"></span> console.log(...obj)  ; <br> <br>
+                                        </code>                                    
+                                    </li>
+                                </ul>
+                            </li> <br> <hr> </br>
+
+                            <li> Merging between arrays/object by copying one inside other + adding new elements by [push] method  : <br>
+                                <ul> 
+                                    <li> Using old Js { concat() }: <br>
+                                        <code>
+                                            <span class="one"></span> // Defining the 2 arrays , and merging first array inside second array + adding new elements :  <br>
+                                            <span class="one"></span> let arr1 = [1, 2, 3 ] ; <br>
+                                                <span class="two"></span> arr2 = [].concat( arr1  , 4, 5 ) ; <br> <br>
+                                                
+                                            <span class="one"></span> // Pushing a new element in to the second array :  <br> <br>
+                                            <span class="one"></span> arr2.push(7) ; <br> <br>
+
+
+                                            <span class="one"></span> // Printing the 2 arrays first before, second after merging  :  <br>
+                                            <span class="one"></span> console.log(`The first array before merging: <br>
+                                                <span class="two"></span> ${arr1}`)  ; <br> <br>
+
+                                            <span class="one"></span> console.log(` The second array after merging & pushing new element : <br> 
+                                                <span class="two"></span> ${arr2}  `)  ; <br> <br> 
+                                        </code>                                    
+                                    </li>
+
+                                    <li> Using ES6 Js {spread}: <br>
+                                        <code>
+                                            <span class="one"></span> // Defining the 2 arrays , and merging first array inside second array + adding new elements  :  <br>
+                                            <span class="one"></span> let arr1 = [1, 2, 3 ] ; <br>
+                                                <span class="two"></span> arr2 = [ ...arr1 , 4 , 5  , 6 ] ; <br> <br>
+
+                                            <span class="one"></span> // Pushing a new element in to the second array :  <br> <br>
+                                                <span class="one"></span> arr2.push(7) ; <br> <br>
+    
+
+                                            <span class="one"></span> // Printing the 2 arrays first before, second after merging  :  <br>
+                                            <span class="one"></span> console.log(`The first array before merging: <br>
+                                                <span class="two"></span> ${arr1}`)  ; <br> <br>
+
+                                            <span class="one"></span> console.log(` The second array after merging & pushing new element : <br>                                            
+                                                <span class="two"></span> ${arr2}  `)  ; <br> <br> 
+
+                                        </code>                                    
+                                    </li>
+                                </ul>
+                            </li> <br> <br>
+                            
+                            <li> Applying the array elements into a function parameters : <br>
+                                <ul> 
+                                    <li> Using old Js { func.apply(void 0, arr ) }: <br>
+                                        <code>
+                                            <span class="one"></span> // Defining the array :  <br>
+                                            <span class="one"></span> let arr = [1, 2, 3 ] ; <br>
+                                            
+                                            <span class="one"></span> // Defining the function with (3) arguments :  <br>
+                                            <span class="one"></span> function sum(x, y , z) {  <br>
+                                                <span class="two"></span> return x + y + z;   <br>
+                                            <span class="one"></span> }  <br>
+
+                                            <span class="one"></span> // Processing and Printing function by using the array elements  :  <br>
+                                            <span class="one"></span> console.log(`The function result as following : <br>
+                                                <span class="two"></span> ${ sum.apply(void 0, arr ) } `)  ; <br> <br>
+                                            
+                                        </code>                                    
+                                    </li>
+
+                                    <li> Using new ES6 Js { spread } method: <br>
+                                        <code>
+                                            <span class="one"></span> // Defining the array :  <br>
+                                            <span class="one"></span> let arr = [1, 2, 3 ] ; <br>
+                                            
+                                            <span class="one"></span> // Defining the function with (3) arguments :  <br>
+                                            <span class="one"></span> function sum(x, y , z) {  <br>
+                                                <span class="two"></span> return x + y + z;   <br>
+                                            <span class="one"></span> }  <br>
+
+                                            <span class="one"></span> // Processing and Printing function by using the array elements  :  <br>
+                                            <span class="one"></span> console.log(`The function result as following : <br>
+                                                <span class="two"></span> ${ sum(...arr) } `)  ; <br> <br>
+                                        </code>                                    
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li> Applying math operation {Math.min()} on array elements  : <br>
+                                <ul> 
+                                    <li> Using old Js { Math.min.apply(Math, arr ) }: <br>
+                                        <code>
+                                            <span class="one"></span> // Defining the array :  <br>
+                                            <span class="one"></span> let arr = [1, 2, 3, -100, -200 ] ; <br>
+                                        
+                                            <span class="one"></span> // Processing and Printing math operation by using old JS method:  <br>
+                                            <span class="one"></span> console.log(`The min value of the array as following : <br>
+                                                <span class="two"></span> ${ Math.min.apply(Math, arr ) } `)  ; <br> <br>
+                                        </code>                                    
+                                    </li>
+
+                                    <li> Using new ES6 Js { spread } method: <br>
+                                        <code>
+                                            <span class="one"></span> // Defining the array :  <br>
+                                            <span class="one"></span> let arr = [1, 2, 3, -100, -200 ] ; <br>
+                                        
+                                            <span class="one"></span> // Processing and Printing math operation by using new ES6 JS method:  <br>
+                                            <span class="one"></span> console.log(`The min value of the array as following : <br>
+                                                <span class="two"></span> ${ Math.min(...arr) } `)  ; <br> <br>
+                                        </code>                                    
+                                    </li>
+                                </ul>
+                            </li>
                         </ol>                        
                     </li> <br>
 
-                    <li> Embeded [Variable] syntax => <br>
-                        <ol>
-                            <li> Starting with ${varName} Dollar sing and curly brackets (without using any other symbols) </li>
-                        </ol>                        
-                    </li> <br>
-
-                    <li> Embeded [Conditonal if] syntax => <br>
-                        <ol>
-                            <li> Starting with ${Condition ? True Action : False Action} Dollar sign and curly brackets  </li>
-                        </ol>                        
-                    </li> 
-                    
                 </ul>    
             </p>
         
-            <ol> 
-                <li> 1] Syntax of [Strings] in the {old JS} || in new {ES6} : <br>
-
-                    <h4> A] { Only String} by the [old JS] : </h4>
-                        <p> One line of string : </p>
-                        <code>                             
-                            <span class="one"></span> let str1 = " This a one line of the string " ; <br>
-                        </code> <br> <br>
-                    
-                        <p> Multiple lines of String : </p>
-                        <code>                             
-                            <span class="one"></span> let str2 = " This a one line of the string \n This is another line of the string " ; <br>
-                        </code> <br> <br>
-                    
-                    <h4> B] { Only String} by the [ES6] : </h4>
-                        <p> One line of string : </p>
-                        <code>                             
-                            <span class="one"></span> let str1 = ` This a one line of the string ` ; <br>
-                        </code> <br> <br>
-                    
-                        <p> Multiple lines of String : </p>
-                        <code>                             
-                            <span class="one"></span> let str2 = ` This a one line of the string <br>
-                                <span class="two"></span>  This a one line of the string ` ; <br>
-                        </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-                <!-- ------------------------------------------------------- -->
-
-                <li> 2] Syntax of [ Embded vairable with string ] in the {old JS} || in new {ES6} : <br>
-
-                    <h4> A] { Embded (variable) with string } by the [old JS] : </h4>
-                        <code>                             
-                            <span class="one"></span> let name = "Shadi" , <br>
-                                <span class="two"></span> age = 36 ; <br><br>
-
-                            <span class="one"></span> let str1 = " Hello im " + name + " from Egypt /n im " + age ; <br>
-                        </code> <br> <br>
-                        
-                    <h4> B] { Embded variable with string } by the [ES6] : </h4>
-                        <code>                             
-                            <span class="one"></span> let name = "Shadi" , <br>
-                                <span class="two"></span> age = 36 ; <br><br>
-
-                            <span class="one"></span> let str1 = ` Hello im ${name} from Egypt  <br>
-                                <span class="two"></span> im  ${age}  `; <br>
-                        </code> <br> <br>
-                    
-                </li>
-                <hr> <br> <hr> <br>
-                <!-- ------------------------------------------------------- -->
-                
-                <li> 3] Syntax of [ Embded (conditional If) with string ] in the {old JS} || in new {ES6} : <br>
-
-                    <h4> A] { Embded (conditional If) with string + Variables } by the [old JS] : </h4>
-                        <code>                             
-                            <span class="one"></span> let name = "Shadi" , <br>
-                                <span class="two"></span> age = 36 , <br>
-                                <span class="two"></span> kind = "Male" ; <br> <br>
-
-                            <span class="one"></span> let str1 = " Hello im " + (kind === "Male" ? "Mr" : "Mrs") + <br>
-                                <span class="two"></span> " " + name + " from Egypt /n im " + age +  " years old " ; <br>
-                        </code> <br> <br>
-                        
-                    <h4> B] { Embded (conditional If) with string + Variables } by the [ES6] : </h4>
-                        <code>                             
-                            <span class="one"></span> let name = "Shadi" , <br>
-                                <span class="two"></span> age = 36 , <br> 
-                                <span class="two"></span> kind = "Male" ; <br> <br>
-
-                            <span class="one"></span> let str2 = ` Hello im  ${kind === "Male" ? "Mr" : "Mrs"}  ${name}  from Egypt   <br>
-                                <span class="two"></span>   im ${age} years old ` ; <br>
-                        </code> <br> <br> 
-                </li>
-                <hr> <br> <hr> <br>
-                <!-- ------------------------------------------------------- -->
-                
-                <li> 4] Using [ Templates literal HTML in advanced frameworks ] in new {ES6} : <br>
-
-                    <h4> A] { Embded (conditional If) with string + Variables } by the [old JS] : </h4>
-                        <code>                             
-                            <span class="one"></span> let name = "Shadi" , <br>
-                                <span class="two"></span> age = 36 , <br>
-                                <span class="two"></span> kind = "Male" ; <br> <br>
-
-                            <span class="one"></span> let str1 = " Hello im " + (kind === "Male" ? "Mr" : "Mrs") + <br>
-                                <span class="two"></span> " " + name + " from Egypt /n im " + age +  " years old " ; <br>
-                        </code> <br> <br>
-                        
-                    <h4> B] { Embded (conditional If) with string + Variables } by the [ES6] : </h4>
-                        <code>                             
-                            <span class="one"></span> let name = "Shadi" , <br>
-                                <span class="two"></span> age = 36 , <br> 
-                                <span class="two"></span> kind = "Male" ; <br> <br>
-
-                            <span class="one"></span> let str2 = ` Hello im  ${kind === "Male" ? "Mr" : "Mrs"}  ${name}  from Egypt   <br>
-                                <span class="two"></span>   im ${age} years old ` ; <br>
-                        </code> <br> <br> 
-                </li>
-                <hr> <br> <hr> <br>
-                <!-- ------------------------------------------------------- -->
-
-            </ol>
             <!-- --------------------------- -->
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> The Templates literal/string make writing string much more easier with advanced controling with emdeding abitliies, and avoid many syntax erros  </li>
-                    <li> The Templates literal/string is the basic in writing embeded HTML,CSS codes and recent JS in one script   </li>
-                    <li> The Templates literal/string ids critical in codes and script in recent frameworks [react.js || Vue.js || angular.js] </li>
+                    <li> The ES6 solved severals errors or longer script of writing codes by the old Js , specially in folowing issues :
+                        <ol> 
+                            <li> Merging between Arrays  </li>
+                            <li> Writing array 's elements values </li>
+                            <li> Applying arrays elements into the function's arguments/parameters </li>
+                            <li> Applying mathematical operations on arrays elements  </li>
+                        </ol>   
+                    </li>
                 </ul>
             </p>
                                                                      
@@ -1483,7 +1504,7 @@
             -->                        
         </section> 
 
-        <button type="button" class="btn" onclick="myTest()"> Click to Start [ (this) operator testing with both functions ] method   Application </button>
+        <button type="button" class="btn" onclick="myTest()"> Click to Start [ (spread) method testing with both old and ES6 methods ] Application </button>
 
         <script src="main.js"></script> 
         
@@ -1503,7 +1524,7 @@
         
     <aside>        
         <section class="VideoSection" id="VideoSection">
-            <h3> Lesson 6 Video File: </h3>
+            <h3> Lesson 7 Video File: </h3>
             <video controls width="300" height="300">
                 <source src="E:\Web videos lessons\Web Framworks\\Ecma Script 6\7 Spread Operator.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
