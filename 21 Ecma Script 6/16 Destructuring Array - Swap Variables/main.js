@@ -1,26 +1,24 @@
-// 15 Destructuring Array Part 2 :
+// 16 Destructuring Array - Swap Variables:
 /* Main lessons functions :
-   1- Destructuring Array's Elements with [ Nested multi levels array ]  
-   2- Destructuring Array's Elements with [Default Values of non existed elements in the main array & nested multi levels array] 
-   3- Destructuring Array's Elements with [ Escaped with Nested multi levels array] 
-   4- Destructuring Array's Elements with [ Rest operator with Nested multi levels array]
+   1- Destructuring Array's 
+   2- Destructuring Array's 
+   3- Destructuring Array's 
+   4- Destructuring Array's 
  */
 // ---------------------------------------------------------------------
 
-// 15 Destructuring Array Part 2 :
+// 16 Destructuring Array - Swap Variables:
 
 function myTest() {
   "use strict";
-  alert("Welcome to 15 Destructuring Array Part 2 ");
+  alert("Welcome to 16 Destructuring Array - Swap Variables");
 
   var dis = document.getElementById("note");
 
   var x = prompt(
     ` Please choose one of following functions from below  :
-    1- Destructuring Array's Elements with [ Nested multi levels array ]  
-    2- Destructuring Array's Elements with [ Default Values of non existed elements in the main array & nested multi levels array] 
-    3- Destructuring Array's Elements with [ Escaped with Nested multi levels array] 
-    4- Destructuring Array's Elements with [ Rest operator with Nested multi levels array]
+    
+
     `
   );
 
