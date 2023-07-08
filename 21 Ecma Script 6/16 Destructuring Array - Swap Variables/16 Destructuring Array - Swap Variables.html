@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section =>  {Destructuring array } Syntax  <span><strong> Destructuring array methods part2 in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <span> <strong> { Destructuring Array part2 } Syntax in ES6 </strong> Extra information about Destructuring & Advanced Examples   </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section =>  {Destructuring array Swaping variables } Syntax  <span><strong> Swaping by using Destructuring  methods part3 in JS ES6  </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <span> <strong> { Destructuring Array part2 } Syntax in ES6 </strong> using Destruturing for better and easier method to Swaping between Variables   </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -339,15 +339,13 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => concept Information about {Destructuring Array} & Syntax & Practical Example , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => concept Information about {Destructuring Array - Swaping varialbes } & Syntax & Practical Example , as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                     <p> Destructuring with advnaced exmples , as following:  </p>
                  <ol type="A">                                                                               
-                     <li> { Destructuring Array's Elements with [ Nested multi levels array ] }  </li>
-                     <li> { Destructuring Array's Elements with [ Default Values of non existed elements in the main array & nested multi levels array] }  </li>
-                     <li> { Destructuring Array's Elements with [ Escaped with Nested multi levels array] }  </li>
-                     <li> { Destructuring Array's Elements with [ Rest operator with Nested multi levels array] }  </li>
+                     <li> { Swaping between (2) variables by using old JS [ Stashing varialbe] }  </li>
+                     <li> { Swaping between (2) variables by using new ES6 [ Destructuring mehtod] }  </li>
                 </ol>
             </article>
         </Section>
@@ -361,153 +359,44 @@
            
             <p> Advanced Examples on Destructuring/Extraction Array's properites with [Multi levels Nested array] & [default values of non existed elements in the Multi levels Nested array] & [with Escaped elements form the Multi levels Nested array] & [Rest operator Multi levels with Nested array] : <br>  
                 <ol> 
-                    <li> Destructuring/Extracting variables from Nested multi-Levels array of the extracted variables by using by (Re-Declaring) in [ES6 JS] syntax => <br>        
+                    <li> Swaping between (2) variables by using old JS [ Stashing varialbe]  syntax => <br>        
                        <code>
-                            <span class="one"></span> // Defining the Array Variable : <br>
-                            <span class="one"></span> const foodArr = [ <br>
-                                <span class="two"></span> "burder", <br>
-                                <span class="two"></span> "pizza", <br>
-                                <span class="two"></span> "rise" , <br>
-                                <span class="two"></span> "meat" ,  <br>
-                                <span class="two"></span> "checken" , <br>
-                                <span class="two"></span> [  <br>
-                                    <span class="three"></span> "Apple" ,   <br>
-                                    <span class="three"></span> "Orange" ,  <br>
-                                    <span class="three"></span> "Banana" ,   <br>
-                                    <span class="three"></span> [   <br>
-                                        <span class="four"></span> "orange1" ,   <br> 
-                                        <span class="four"></span> "orange2" ,   <br> 
-                                        <span class="four"></span> "orange3"   <br> 
-                                    <span class="three"></span> ]  <br> 
-                                <span class="two"></span> ]  <br>
-                            <span class="one"></span> ] <br> <br>
-
-                            <span class="one"></span> // Destructuring Multi levels Nested Array by (Re-Declaring) of object's properties : <br>
-                            <span class="one"></span> const [one,two,three,four,five,[fr1,fr2,fr3,[o1,o2,o3]]] = foodArr ; <br> <br>                                
+                            <span class="one"></span> // Defining the (2) Variables : <br>
+                            <span class="one"></span> var var1 = 'value1',  <br>
+                                <span class="two"></span>  var2 = 'value2'; <br>
                                 
-                            <span class="one"></span> Printing the Destructed variables from multi level nested array in the console :  <br> 
-                            <span class="one"></span> console.log( `My favourite Food are : ${one} ,  ${two} , ${three} , ${four} , ${five}  <br> <br>
-                            <span class="one"></span>  and My favourite fruit are : ${fr1} ,  ${fr2} , ${fr3}  <br> <br>
-                            <span class="one"></span>  and My favourite orange are : ${o1} ,  ${o2} , ${o3}`); <br> <br>
+                            <span class="one"></span> // Defining Stashing variable with one of the two variables : <br>
+                            <span class="one"></span> var stash = var1 ; <br> <br>                                
+                                
+                            <span class="one"></span> // Assingnment the first variable with each other variable values : <br>
+                            <span class="one"></span> var1 = var2 ; <br> <br>                                
+                                
+                            <span class="one"></span> // Assingnment the second variable with stash values : <br>
+                            <span class="one"></span> var2 = stash ; <br> <br>                               
+                                
+                            <span class="one"></span> Printing the both variables after being Swaped in the console :  <br> 
+                            <span class="one"></span> console.log( `The first variabl is : ${var1}  <br>
+                                <span class="two"></span> The second variable is : ${var2} `); <br> <br> 
                         </code> <br> <br>
                     </li> <br> <hr> </br>
                     
-                    <li> Destructuring/Extracting variables from [Nested multi-Levels] array of the extracted variables + using [Default Values of non existed elements in the main array] using by (Re-Declaring) in [ES6 JS] syntax => <br>        
-                        <code>
-                            <span class="one"></span> // Defining the Array Variable : <br>
-                            <span class="one"></span> const foodArr = [ <br>
-                                <span class="two"></span> "burder", <br>
-                                <span class="two"></span> "pizza", <br>
-                                <span class="two"></span> "rise" , <br>
-                                <span class="two"></span> "meat" ,  <br>
-                                <span class="two"></span> "checken" , <br>
-                                <span class="two"></span> [  <br>
-                                    <span class="three"></span> "Apple" ,   <br>
-                                    <span class="three"></span> "Orange" ,  <br>
-                                    <span class="three"></span> "Banana" ,   <br>
-                                    <span class="three"></span> [   <br>
-                                        <span class="four"></span> "orange1" ,   <br> 
-                                        <span class="four"></span> "orange2" ,   <br> 
-                                        <span class="four"></span> "orange3"   <br> 
-                                    <span class="three"></span> ]  <br> 
-                                <span class="two"></span> ]  <br>
-                            <span class="one"></span> ] <br> <br>
-
-                            <span class="one"></span> // Destructuring Multi levels Nested Array by (Re-Declaring) of object's properties : <br>
-                            <span class="one"></span> const [one,two,three,four,five,[fr1,fr2,fr3,fr4 = "defV", [o1,o2,o3,o4="defV"]]] = foodArr ; <br> <br>                                
+                    <li> Swaping between (2) variables by using new ES6 JS [Direct Destructuring]  syntax => <br>        
+                       <code>
+                            <span class="one"></span> // Defining the (2) Variables : <br>
+                            <span class="one"></span> var var1 = 'value1',  <br>
+                                <span class="two"></span>  var2 = 'value2'; <br>
+                       
                                 
-                            <span class="one"></span> Printing the Destructed variables from multi level nested array in the console :  <br> 
-                            <span class="one"></span> console.log( `My favourite Food are : ${one} ,  ${two} , ${three} , ${four} , ${five}  <br> <br>
-                            <span class="one"></span>  and My favourite fruit are : ${fr1} ,  ${fr2} , ${fr3} , ${fr4}  <br> <br>
-                            <span class="one"></span>  and My favourite orange are : ${o1} ,  ${o2} , ${o3} , ${o4} `); <br> <br>
+                            <span class="one"></span> // Direct Destructuring method : <br>
+                            <span class="one"></span> [var1 , var2] = [var2, var1] ; <br> <br>                               
+                                
+                            <span class="one"></span> Printing the both variables after being Swaped in the console :  <br> 
+                            <span class="one"></span> console.log( `The first variabl is : ${var1}  <br>
+                                <span class="two"></span> The second variable is : ${var2} `); <br> <br> 
                         </code> <br> <br>
-
                     </li> <br> <hr> </br>
                     
-                    <li> Destructuring/Extracting variables from [Nested multi-Levels] array of the extracted variables + using [Default Values of non existed elements in the main array] using by (Re-Declaring) in [ES6 JS] syntax => <br>        
-                        <code>
-                            <span class="one"></span> // Defining the Array Variable : <br>
-                            <span class="one"></span> const foodArr = [ <br>
-                                <span class="two"></span> "burder", <br>
-                                <span class="two"></span> "pizza", <br>
-                                <span class="two"></span> "rise" , <br>
-                                <span class="two"></span> "meat" ,  <br>
-                                <span class="two"></span> "checken" , <br>
-                                <span class="two"></span> [  <br>
-                                    <span class="three"></span> "Apple" ,   <br>
-                                    <span class="three"></span> "Orange" ,  <br>
-                                    <span class="three"></span> "Banana" ,   <br>
-                                    <span class="three"></span> [   <br>
-                                        <span class="four"></span> "orange1" ,   <br> 
-                                        <span class="four"></span> "orange2" ,   <br> 
-                                        <span class="four"></span> "orange3"   <br> 
-                                    <span class="three"></span> ]  <br> 
-                                <span class="two"></span> ]  <br>
-                            <span class="one"></span> ] <br> <br>
-
-                            <span class="one"></span> // Destructuring Multi levels Nested Array by (Re-Declaring) of object's properties : <br>
-                            <span class="one"></span> const [one,two,three,four,five,[fr1,fr2,fr3,fr4 = "defV", [o1,o2,o3,o4="defV"]]] = foodArr ; <br> <br>                                
-                                
-                            <span class="one"></span> Printing the Destructed variables from multi level nested array in the console :  <br> 
-                            <span class="one"></span> console.log( `My favourite Food are : ${one} ,  ${two} , ${three} , ${four} , ${five}  <br> <br>
-                            <span class="one"></span>  and My favourite fruit are : ${fr1} ,  ${fr2} , ${fr3} , ${fr4}  <br> <br>
-                            <span class="one"></span>  and My favourite orange are : ${o1} ,  ${o2} , ${o3} , ${o4} `); <br> <br>
-                        </code> <br> <br>
-
-                    </li> <br> <hr> </br>
-                    
-                    <li> Extracting variables from object using [Multi Nested levels Array] + [Default values of non existed] + [Escaped Elements by using [ES6 JS] syntax => <br> 
-                        <code>
-                            <span class="one"></span> // Defining the Array Variable : <br>
-                            <span class="one"></span> const foodArr = [ <br>
-                                <span class="two"></span> "burder", <br>
-                                <span class="two"></span> "pizza", <br>
-                                <span class="two"></span> "rise" , <br>
-                                <span class="two"></span> "meat" ,  <br>
-                                <span class="two"></span> "checken" , <br>
-                                <span class="two"></span> [  <br>
-                                    <span class="three"></span> "Apple" ,   <br>
-                                    <span class="three"></span> "Orange" ,  <br>
-                                    <span class="three"></span> "Banana" ,   <br>
-                                    <span class="three"></span> [   <br>
-                                        <span class="four"></span> "orange1" ,   <br> 
-                                        <span class="four"></span> "orange2" ,   <br> 
-                                        <span class="four"></span> "orange3"   <br> 
-                                    <span class="three"></span> ]  <br> 
-                                <span class="two"></span> ]  <br>
-                            <span class="one"></span> ] <br> <br>
-
-                            <span class="one"></span> // Destructuring [Multi levels Nested Array] + [default values of non existed] + [Escaping elements] by (Re-Declaring) of object's properties : <br>
-                            <span class="one"></span> const [one,,three,,five,[fr1,,fr3,fr4 = "defFr4", [o1,o2,,o4="defO4"]]] = foodArr ; <br> <br>                                
-                                
-                            <span class="one"></span> Printing the Destructed variables from [Multi levels Nested Array] + [default values of non existed] + [Escaping elements]  in the console :  <br> 
-                            <span class="one"></span> console.log( `My favourite Food are : ${one} , ${three} ,  ${five}  <br>
-                            <span class="one"></span>  and My favourite fruit are : ${fr1} , ${fr3} , ${fr4}  <br> 
-                            <span class="one"></span>  and My favourite orange are : ${o1} ,  ${o2} , ${o4} `); <br>
-                    </li> <br> <hr> </br>
-
-                    <li> Destructuring/Extracting variables from Nested multi-Levels array + merging [Rest operator] of the extracted variables by using by (Re-Declaring) in [ES6 JS] syntax => <br>        
-                        <code>
-                             <span class="one"></span> // Defining the Array Variable : <br>
-                             <span class="one"></span> const foodArr = [ <br>
-                                 <span class="two"></span> "burder", <br>
-                                 <span class="two"></span> "pizza", <br>
-                                 <span class="two"></span> "rise" , <br>
-                                 <span class="two"></span> "meat" ,  <br>
-                                 <span class="two"></span> "checken" , <br>
-                                 <span class="two"></span> "rice" , <br>
-                                 <span class="two"></span> "vegatables" , <br>
-                                 <span class="two"></span> "fruit" <br>
-                             <span class="one"></span> ] <br> <br>
- 
-                             <span class="one"></span> // Destructuring simple Array + with using [Rest Operator] by (Re-Declaring) of object's properties : <br>
-                             <span class="one"></span> const [one,two,three, ...otherElems] = foodArr ; <br> <br>
-                                 
-                             <span class="one"></span> Printing the Destructed variables from simple array + with using Rest operator in the console: <br> 
-                             <span class="one"></span> console.log( `My favourite Food are : ${one} ,  ${two} , ${three} , ${otherElems} `); <br> <br>
-                         </code> <br> <br>
-                     </li> <br> <hr> </br>
-
+  
                 </ol>    
             </p>
         
@@ -515,24 +404,7 @@
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> The ES6 {Destructuring} provides ability of Extracting certain Object's properties in to customized variables   </li>
-                    <li> The ES6 {Destructuring} can be used in advanced examples specaily in dealing with complex object </li>
-                    <li> All previous features mixed can be used in {Destructuring}  array , such as <br> 
-                        <ul> 
-                            <li> Ability to Re-Assign predefined variables within extracted variables  </li>
-                            <li> Ability to Re-declare Extracted Variables with Non existed propeties in the main array by using Default values </li>
-                            <li> Ability to Re-declare Extracted Variables without certain Array Elements [Escaping Elements from Destructuring] </li>
-                        </ul>
-                    </li>
-
-                    <li> All previous features mixed can be used in {Destructuring} complex object , such as <br> 
-                        <ul> 
-                            <li> Destructuring variables from multi levels Nested array </li>
-                            <li> Destructuring variables from the main array/multi levels Nested array Default values of non existed Elements  </li>
-                            <li> Destructuring variables from the main array/multi levels Nested array Default values with Escaping some elements  </li>
-                            <li> Destructuring variables from the main array/multi levels Nested array Rest Operator with the extracted main array's/ multi levels Nested array's elements  </li>
-                        </ul>
-                    </li>
+                    <li> The ES6 {Destructuring} provide much more easier and simple method to Swaping between (2) variables than the old JS method  </li> 
                 </ul>
             </p>
                                                                      
@@ -772,7 +644,7 @@
             -->                        
         </section> 
 
-        <button type="button" class="btn" onclick="myTest()"> Click to Start [ Destructuring Array part 3 Swap variables  { ||  ||   }  methods in ES6 methods ] Application </button>
+        <button type="button" class="btn" onclick="myTest()"> Click to Start [ Destructuring Array part 3 Swap variables  { old Js by stashing || ES6 by Desutructuring   }  methods in ES6 methods ] Application </button>
 
         <script src="main.js"></script> 
         

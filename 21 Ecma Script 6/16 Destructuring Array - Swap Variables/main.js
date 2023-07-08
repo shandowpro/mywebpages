@@ -1,9 +1,7 @@
 // 16 Destructuring Array - Swap Variables:
 /* Main lessons functions :
-   1- Destructuring Array's 
-   2- Destructuring Array's 
-   3- Destructuring Array's 
-   4- Destructuring Array's 
+   1- Swaping by old JS   
+   2- Swaping by new ES6 JS   
  */
 // ---------------------------------------------------------------------
 
@@ -17,26 +15,26 @@ function myTest() {
 
   var x = prompt(
     ` Please choose one of following functions from below  :
-    
-
+      1- Swaping by old JS   
+      2- Swaping by new ES6 JS   
     `
   );
 
   if (x == 1) {
   
-    desMLArr();
+    oldSwap();
   
   } else if (x == 2) {
   
-    desMLArrDefV();
+    desSwap();
 
-  } else if (x == 3) {
+  // } else if (x == 3) {
 
-    desMLArrDefVEscElem();
+    // desMLArrDefVEscElem();
 
-  } else if (x == 4) {
+  // } else if (x == 4) {
 
-    desArrRes();
+  // desArrRes();
 
   // } else if (x == 5) {
 
@@ -48,130 +46,81 @@ function myTest() {
 
   // =========================================================================
 
-  // 1] Destructuring Array's Elements with [ Nested multi levels array ]   :
-  function desMLArr() {
+  // 1] Swaping by old JS :
+  function oldSwap() {
     alert(
-      "Welcome to Using Destructuring Array's Elements with [ Nested multi levels array ]   "
+      "Welcome to Using Swaping by old JS"
     );
 
     dis.innerHTML = "";
 
-    // Defining [Multi levels Nested Array] :
-    const food = [ 'Burger', 'Pizza' , 'Rice' , 'Meat' , 'Checken' , ['banana' , 'apple' , 'mango' , ['orange1' , 'orange2' , 'orange3'] ] ];
+    // Defining [2 variables] :
+    var book = 'video', 
+        video = "book"  ;
       
-    // Destructuring the [Multi levels Nested array] into several variables by using ES6 js [Re-Decleration]   :
-    const [one , two , three , four , five , [ fr1 , fr2 , fr3  , [ o1 ,o2  , o3 ] ] ] = food;
+    // Define Stashing variable with first of two variables :
+    var stash = book ; 
 
-    // printing the extracted variables from the [Multi levels nested Array] by using [Re-Decleration] :
+   // Allocating the two variables values into each other [inorder to set one of them by the right value ]: 
+     book = video ;
+
+   // Allocating the second variable value into stash : 
+      video = stash;
+
+
+    // printing the both variables being swaped by using old js:
     console.log(`
-      1] Extracted variables from the [Multi levels Nested array] by using [Re-Decleration] [Ordinary Destructuring]: 
-        My favourite meals are  ${one} , ${two} , ${three} , ${four} ,${five} 
-        My favourite fruit are  ${fr1} , ${fr2} , ${fr3}  
-        My favourite orange type are  ${o1} , ${o2} , ${o3}  
-    `);
+      1] Swaped variables [by using old Js method] as following : 
+         first varaiable [video] is :   ${video}
+         second varaiable [book] is :   ${book}
+      `);
 
-    dis.innerHTML += ` 1] Extracted variables from the [Multi levels Nested array] by using [Re-Decleration] [Ordinary Destructuring]: 
-    My favourite meals are  ${one} , ${two} , ${three} , ${four} ,${five}
-    My favourite fruit are  ${fr1} , ${fr2} , ${fr3}  
-    My favourite orange type are  ${o1} , ${o2} , ${o3}  
-  ` ;
+    dis.innerHTML += ` 1] Swaped variables [by using old Js method] as following : 
+    first varaiable [video] is :   ${video}
+    second varaiable [book] is :   ${book}
+ `;
   }
 
   // =============================================================
-    // 2] Destructuring Array's Elements with [ Default Values of non existed elements in the main array & nested multi levels array]  :
-  function desMLArrDefV() {
+    // 2] Swaping by new ES6 JS :
+  function desSwap() {
 
       alert(
-        "Welcome to Using Destructuring Array's Elements with [ Default Values of non existed elements in the main array & nested multi levels array]  "
+        "Welcome to Using Swaping by new ES6 JS "
       );
 
       dis.innerHTML = "";
 
-    // Defining Multi levles Nested Array :
-    const food = [ 'Burger', 'Pizza' , 'Rice' , 'Meat' , 'Checken' , ['banana' , 'apple' , 'mango' , ['orange1' , 'orange2' , 'orange3'] ] ];
-        
-    // Destructuring the [Multi levels Nested array] + [non existed elements default values] into several variables by using ES6 js [Re-Decleration]   :
-    const [one , two , three , four , five , six="def Food" , [ fr1 , fr2 , fr3 , [ o1 ,o2, o3 , o4 = 'def orange' ] ] ] = food;
+      // Defining [2 variables] :
+      var book = 'video', 
+          video = "book"  ;
+    
 
-    // printing the extracted variables from the [Multi levels nested Array] + [non existed elements default values] by using [Re-Decleration] :
-    console.log(`
-      2] Extracted variables from the [Multi levels Nested array] + [non existed elements default values]  by using [Re-Decleration] [Ordinary Destructuring]: 
-        My favourite meals are  ${one} , ${two} , ${three} , ${four} , ${five} , ${six}
-        My favourite fruit are  ${fr1} , ${fr2} , ${fr3}  
-        My favourite orange type are  ${o1} , ${o2} , ${o3} , ${o4}  
-    `);
+      // Direct swaping using the ES6 new mehtod :
+      [video, book] = [book, video];
 
-    dis.innerHTML += ` 2] Extracted variables from the [Multi levels Nested array] + [non existed elements default values] by using [Re-Decleration] [Ordinary Destructuring]: 
-    My favourite meals are  ${one} , ${two} , ${three} , ${four} , ${five} , ${six}
-    My favourite fruit are  ${fr1} , ${fr2} , ${fr3}  
-    My favourite orange type are  ${o1} , ${o2} , ${o3} , ${o4}
+      // printing the both variables being swaped by using old js:
+      console.log(`
+        1] Swaped variables [by using old Js method] as following : 
+          first varaiable [video] is :   ${video}
+          second varaiable [book] is :   ${book}
+        `);
+
+      dis.innerHTML += ` 1] Swaped variables [by using old Js method] as following : 
+      first varaiable [video] is :   ${video}
+      second varaiable [book] is :   ${book}
   `;
 
  }
  
   // =============================================================
     // 3] Destructuring Array's Elements with [Escaped elements with Nested multi levels array]  :
-  function desMLArrDefVEscElem() {
 
-      alert(
-        "Welcome to Use Destructuring Array's Elements with [Escaped elements with Nested multi levels array] "
-      );
 
-      dis.innerHTML = "";
-    
-    // Defining [Multi levels Nested Array] :
-    const food = [ 'Burger', 'Pizza' , 'Rice' , 'Meat' , 'Checken' , ['banana' , 'apple' , 'mango' , ['orange1' , 'orange2' , 'orange3'] ] ];
-        
-    // Destructuring the [Multi levels Nested array] + [Escaped elements] into several variables by using ES6 js [Re-Decleration]   :
-    const [one , , three , four , , [ fr1 , , fr3 , [ o1 ,o2, ] ] ] = food;
-
-    // printing the extracted variables from the [Multi levels nested Array] + [Escaped elements] by using [Re-Decleration] :
-    console.log(`
-      Main array elements are: ${food}
-      3] Extracted variables from the Multi levels Nested array + [Escaped elements] by using [Re-Decleration] [Ordinary Destructuring]: 
-        My favourite meals are  ${one} , ${three} , ${four} 
-        My favourite fruit are  ${fr1} , ${fr3}  
-        My favourite orange type are  ${o1} , ${o2}  
-    `);
-
-    dis.innerHTML += ` Main array elements are: ${food}
-    3] Extracted variables from the [Multi levels Nested array] + [Escaped Elements]  by using [Re-Decleration] [Ordinary Destructuring]: 
-    My favourite meals are : ${one} , ${three} , ${four} 
-    My favourite fruit are : ${fr1} , ${fr3}  
-    My favourite orange type are :  ${o1} , ${o2}
-  `;
-
-  }
   // =============================================================
 
   // 4] Destructuring Array's Elements with [ Rest operator with simple array] :
-  function desArrRes() {
-
-      alert(
-        "Welcome to Use Destructuring Array's Elements with [Rest operator with simple array] "
-      );
-
-      dis.innerHTML = "";
-    
-     // Defining Array :
-     const food = [ 'Burger', 'Pizza' , 'Rice' , 'Meat' , 'Checken' , 'fruit' , 'vegetable' ];
-      
-
-     // Destructuring the simple array into several variables by using ES6 js [Re-Decleration] + [Rest operator with simple array] :
-     const [one , two , three , ...otherFood  ]  = food;
- 
-     // printing the extracted variables from the array by using [Re-Decleration] + [Rest Operator with simple array] :
-     console.log(`Main Array is ${food} 
-       4] Extracted variables from the array by using [Re-Decleration] + [Rest Operator with simple array] :
-         My favourite meals are  ${one} , ${two} , ${three} , ${otherFood}  
-     `);
- 
-     dis.innerHTML += ` Main Array is ${food}
-      4] Extracted variables from the array by using [Re-Decleration] + [Rest Operator with simple array]  : 
-      My favourite meals are ${one} , ${two} , ${three} , ${otherFood} 
-       ==================================
-     `;    
-  }
+  
   // =============================================================
 }
 
