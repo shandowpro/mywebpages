@@ -1,9 +1,12 @@
 // 20 Set vs Array :
 /* Main lessons functions :
-  1- Shorthand object property VALUE [incase of assigning predefined ] by using [old JS] & [new ES6]
-  2- Shorthand in Object method syntax by using [old JS] & [new ES6]  
-  3- Shorthand in Assigning Computed object property's KEYNAME by using [old JS] & [new ES6]
-*/
+  1- Defining Set() and get datatype of {set()}
+  2- Testing the Iterable types to be used with the set
+  3- Comparison between array and set [Unique values]
+  4- Comparison between array and set [Using Index]
+  5- Comparison between array and set [Ability to be assigned each other]
+  6- Set ability of using [Spread operator]
+  */
 // ---------------------------------------------------------------------
 
 // 20 Set vs Array:
@@ -16,31 +19,38 @@ function myTest() {
 
   var x = prompt(
     ` Please choose one of following functions from below  :
-    1- Shorthand object assigning property VALUE [incase of assigning predefined ]
-    2- Shorthand in Object method syntax
-    3- shorthand in Assigning Computed dynamic object property's KEYNAME 
+    1- Defining Set() and get datatype of {set()}
+    2- Testing the Iterable types to be used with the set
+    3- Comparison between array and set [Unique values]
+    4- Comparison between array and set [Using Index]
+    5- Comparison between array and set [Ability to be assigned each other]
+    6- Set ability of using [Spread operator]
     `
   );
 
   if (x == 1) {
   
-    ObjAssVarProp();
+    defSetDataType();
   
   } else if (x == 2) {
   
-    ObjDefMethod();
+    testIterTypesSet();
 
   } else if (x == 3) {
 
-    objDynPropKeyName();
+    compUinque();
 
-  // } else if (x == 4) {
+  } else if (x == 4) {
 
-  // desArrRes();
+    compIndx();
 
-  // } else if (x == 5) {
+  } else if (x == 5) {
 
-  // allFuncsObj();
+    setInside();
+
+  } else if (x == 6) {
+
+    setSpread();
 
   } else {
     alert("No option has been selected !");
@@ -48,49 +58,36 @@ function myTest() {
 
   // =========================================================================
 
-  // 1] Shorthand object assigning property [incase of assigning predefined ] => [by using old JS] & [ES6]  :
-  function ObjAssVarProp() {
+  // 1] Defining Set() and get datatype of {set()} :
+  function defSetDataType() {
     alert(
-      "Welcome to Using Shorthand object assigning property's VALUES [incase of assigning predefined ] => [by using old JS] & [ES6]  "
+      "Welcome to Using Defining Set() and get datatype of {set()}  "
     );
 
     dis.innerHTML = "";
 
-    // Defining external variable :
-      const username  = 'shadi',   
-          city  = 'cairo';   
+    // Defining Set object  :
+      let mySet  = new Set();   
     
-    
-    // Defining main  Object including properties VALUES of predefined variables [by using old Js] :
-    const obj = {
-      username : username,
-      city : city  
-    } ;
-
-    // Defining main Object including properties VALUES with predefined variables [by using ES6 Js] :
-    const obj1 = {
-      username,
-      city  
-    } ;
       
-    // printing the  Object after adding new properties of perdifed variables by using [old JS] & [ES6] :
+    // printing the Set Object Datatype :
     
-    console.log('1] Object [by using old JS] as following : ');
-    console.log(obj);
+    console.log('1] Set Object [datatype] as following : ');
+    console.log(typeof mySet);
     
-    console.log('1] Object [by new ES6 JS] as following : ');
-    console.log(obj1);
+    console.log('2] Set Object [content] as following : ');
+    console.log(mySet);
 
     
-    dis.innerHTML += `1] Object [by using old JS] as following :  `;
-    dis.innerHTML +=  obj ;
-    dis.innerHTML += `1] Object [by using new ES6 JS] as following : `;
-    dis.innerHTML +=   obj1 ;
+    dis.innerHTML += `'1] Set Object [datatype] as following : '`;
+    dis.innerHTML +=  typeof mySet ;
+    dis.innerHTML += `2] Set Object [content] as following : `;
+    dis.innerHTML +=   mySet ;
   }
 
   // =============================================================
-    // 2] Shorthand in Object method syntax by using [old JS] & [new ES6] :
-  function ObjDefMethod() {
+    // 2] Testing the Iterable types to be used with the set :
+  function testIterTypesSet() {
 
       alert(
         "Welcome to Using Shorthand in Object method syntax by using [old JS] & [new ES6] "
@@ -98,89 +95,150 @@ function myTest() {
 
       dis.innerHTML = "";
 
-     // Defining main Object including method [by using old js] :
-     const obj = {
-      myMethod : function(param) {
-        return param;  
-      } 
-    } ;
+     // Defining differnent  data type variables :
+        let str = "Shadi",
+            num = 55,
+            strNum = '236';
 
-    // Defining main Object including method [by using new ES6 js] :
-     const obj1 = {
-      myMethod (param) {
-        return param;  
-      }  
-    } ;
+    // Looping inside each type of defiend variables [string] :
+    dis.innerHTML += `1] Looping inside [string variable] as following : ` ;  
+    console.log('1] Looping inside [string variable] as following : ');
 
-  // Printing the object's method :
-    console.log(`2] Object method return by [using old] JS :`);
-    console.log(obj.myMethod('This is the return of the object method from parameter'));
+    for (let i = 0;  i < str.length ; i++) {
+        console.log(str[i]);
+        dis.innerHTML += str[i];
+     }
     
-    console.log(`2] Object method return by shorthand method [using new ES6] JS :`)
-    console.log(obj1.myMethod('the return of the object method from parameter'));
-
     
-    dis.innerHTML += `2] Object's method [by using old JS] as following :  `;
-    dis.innerHTML +=  obj.myMethod('This is the return of the object method by old JS from parameter')  ;
-    dis.innerHTML += `2] Object's method [by using new ES6 JS] as following : `;
-    dis.innerHTML +=  obj1.myMethod('This is the return of the object by new ES6 JS from parameter') ;
-
+     // Looping inside each type of defiend variables [numeric] :
+     dis.innerHTML += `2] Looping inside [Number variable] as following : ` ;  
+     console.log('2] Looping inside [Number variable] as following : ');
+ 
+     for (let i = 0;  i < num.length ; i++) {
+        console.log(num[i]);
+     }
+    
+     // Looping inside each type of defiend variables [texual numeric] :
+     dis.innerHTML += `3] Looping inside [Texual Number variable] as following : ` ;  
+     console.log('3] Looping inside [Texual Number variable] as following : ');
+ 
+     for (let i = 0;  i <  strNum.length ; i++) {
+        console.log(strNum[i]);
+     }
+  
+  
   }
   
-  
   // =============================================================
-    // 3] Shorthand in Assigning Computed object property's keyname by using [old JS] & [new ES6] :
-    function objDynPropKeyName() {
+    // 3] Comparison between array and set [Unique values] :
+    function compUinque() {
 
       alert(
-        "Welcome to Using Shorthand in Assigning Computed object property's KEYNAME by using [old JS] & [new ES6] "
+        "Welcome to Using Comparison between array and set [Unique values]  "
       );
 
       dis.innerHTML = "";
 
-  // Define the variable to be used into assign new property KEYNAME  :   
-    const myVar = 'newKey';
+  // Define the array and Set object variables to test accepting Unique variables :   
+    let myArr =  [1,2,3,4,4]  , 
+        mySet = new Set([1,2,3,4,4]);
 
-  // Defining main Object [by old method ]  :
-     const obj = {
-      username : 'shadi'
-    } ;
-    
-    // Adding and Assign new property's KEYNAME Dynamically (the value of predefined varaible) to the object by [using old Js] :
-    obj[myVar] = 'Prop value';     
-
-  
-  // Defining main Object with shorthand method to add new property KEYNAME [by using Dynamic predefined variable value]  by using [ES6] :
-     const obj1 = {
-      username : 'shadi',
-      [myVar] : 'Prop value' 
-    } ;
-
-  // Printing the object by both the methods of [old Js] & [ES Js] :
+  // Printing the {Set object} & [Array] with repeated values :
  
-    console.log(`3] Object including computed dynamic KEYNAME  by using [old JS] : `) ;  
-    console.log(obj);
-    
-    
-    console.log(`3] Object including computed dynamic KEYNAME  by using [new ES6 JS] : `) ; 
-    console.log(obj1);
-  
+    console.log(`1] Set Object with repeated contents as following : `) ;  
+    console.log(mySet);
  
-    dis.innerHTML += `3] Object including computed dynamic KEYNAME  by using [old JS] : ` ;
-    dis.innerHTML +=   obj ;    
-    dis.innerHTML += 'Object including computed dynamic KEYNAME  by using new [ES6 JS] :' ;
-    dis.innerHTML +=   obj1 ;  
-
+    console.log(`2] Array with repeated contents as following : `) ;  
+    console.log(myArr);
+ 
+    dis.innerHTML += `1] Set Object with repeated contents as following : ` ;  
+    dis.innerHTML += mySet;
+ 
+    dis.innerHTML +=`2] Array with repeated contents as following : ` ;  
+    dis.innerHTML += myArr ;
+ 
   }  
 
   // =============================================================
 
-  // 4] Destructuring Array's Elements with [ Rest operator with simple array] :
-  
+  // 4] Comparison between array and set [Using Index] :
+  function compIndx() {  
+    alert(
+        "Welcome to Using Comparison between array and set [Using Index]  "
+      );
+
+      dis.innerHTML = "";
+
+      // Define the array and Set object variables to test accepting Unique variables :   
+      let myArr =  [1,2,3,4,4]  , 
+          mySet = new Set([1,2,3,4,4]);
+
+      // Printing the {Set object} & [Array] with repeated values :
+      console.log(`1] Printing one of element inside {Set Object} by using index[undefined] as following : `) ;  
+      console.log(mySet[1]);
+
+      console.log(`2] Printing one of element inside [Array] by using index[value] as following : `) ;  
+      console.log(myArr[1]);
+
+      dis.innerHTML += `1] Printing one of element inside {Set Object} by using index[undefined] as following : ` ;  
+      dis.innerHTML += mySet[1] ;
+
+      dis.innerHTML +=`2] Printing one of element inside [Array] by using index[value] as following : ` ;  
+      dis.innerHTML += myArr[1] ;
+
+
+  }
   // =============================================================
+
+  // 5] Comparison between array and set [Ability to be assigned each by other]:
+  function setInside() {
+    alert(
+        "Welcome to Using Comparison between array and set [Ability to be assigned each other] "
+      );
+
+    dis.innerHTML = "";
+
+    // Defining the Set object and Array : 
+      let myArr = [1 , 2 , 3];
+      let mySet = new Set(myArr);
+
+    // Printing the {Set object} after assigning the array inside the set object :
+    console.log(`1] Printing the {Set Object} after assigning the Array inside the set object as following : `) ;  
+    console.log(mySet);
+    
+    dis.innerHTML += `1]  Printing the {Set Object} after assigning the Array inside the set object as following : ` ;  
+    dis.innerHTML += mySet;
+
+  }
+  // =============================================================
+
+  // 6] Set ability of using [Spread operator] :
+  function setSpread() {
+    alert(
+      "Welcome to Using Set ability of using [Spread operator] "
+    );
+
+    dis.innerHTML = "";
+
+    // Defining the Set object and Array : 
+      let myArr = [1 , 2 , 3] ,
+          mySet = new Set(myArr);
+    
+    // Printing the Set object with using spread operator : 
+      console.log('Set Object contents with using spread operator , as following :');
+      console.log([...mySet]);
+
+      dis.innerHTML += 'Set Object contents with using spread operator , as following :';
+      dis.innerHTML += [...mySet] ;
+
+  }
+
+  // =============================================================
+
 }
 
 function display() {
   document.getElementById("note").innerHTML =
     myTest + "\n\n" + "=".repeat(90) + "\n\n";
 }
+
