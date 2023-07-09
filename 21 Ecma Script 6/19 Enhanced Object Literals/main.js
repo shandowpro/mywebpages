@@ -1,15 +1,15 @@
-// 18 Destructuring Function Parameters:
+// 19 Enhanced Object Literals:
 /* Main lessons functions :
   1- Assignment object properites values in function's parameters  => [by using old JS]  
   2- Assignment object properites values in function's parameters  => [by Destructring object inside function by ES6 JS] 
  */
 // ---------------------------------------------------------------------
 
-// 18 Destructuring Function Parameters:
+// 19 Enhanced Object Literals:
 
 function myTest() {
   "use strict";
-  alert("Welcome to 18 Destructuring Function Parameters");
+  alert("Welcome to 19 Enhanced Object Literals");
 
   var dis = document.getElementById("note");
 
