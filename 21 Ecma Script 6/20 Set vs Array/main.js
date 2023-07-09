@@ -1,4 +1,4 @@
-// 19 Enhanced Object Literals:
+// 20 Set vs Array :
 /* Main lessons functions :
   1- Shorthand object property VALUE [incase of assigning predefined ] by using [old JS] & [new ES6]
   2- Shorthand in Object method syntax by using [old JS] & [new ES6]  
@@ -6,11 +6,11 @@
 */
 // ---------------------------------------------------------------------
 
-// 19 Enhanced Object Literals:
+// 20 Set vs Array:
 
 function myTest() {
   "use strict";
-  alert("Welcome to 19 Enhanced Object Literals");
+  alert("Welcome to 20 Set vs Array");
 
   var dis = document.getElementById("note");
 
