@@ -1,13 +1,12 @@
 // 21 Set Methods :
 /* Main lessons functions :
-  1- Defining Set() and get datatype of {set()}
-  2- Testing the Iterable types to be used with the set
-  3- Comparison between array and set [Unique values]
-  4- Comparison between array and set [Using Index]
-  5- Comparison between array and set [Ability to be assigned each other - Set object can be assigned by array ]
-  6- Set ability of using [Spread operator - just like the Array [...set]
+  1- Adding new element(s) [single + multiple] to object {set()}
+  2- Delete  element(s) [single {.delete() } + multiple {.clear() } ] from the object {set()}
+  3- Checking for certain content in Object {set()}
+  4- Getting the length/size of elements in the Set object
   */
-// ---------------------------------------------------------------------
+  
+  // ---------------------------------------------------------------------
 
 // 21 Set Methods:
 
@@ -19,38 +18,36 @@ function myTest() {
 
   var x = prompt(
     ` Please choose one of following functions from below  :
-    1- Defining Set() and get datatype of {set()}
-    2- Testing the Iterable types to be used with the set
-    3- Comparison between array and set [Unique values]
-    4- Comparison between array and set [Using Index]
-    5- Comparison between array and set [Ability to be assigned each other]
-    6- Set ability of using [Spread operator]
+    1- Adding new element(s) [single + multiple] to object {set()}
+    2- Delete  element(s) [single {.delete() } + multiple {.clear() } ] from the object {set()}
+    3- Checking for certain content in Object {set()}
+    4- Getting the length/size of elements in the Set object
     `
   );
 
   if (x == 1) {
   
-    defSetDataType();
+    setAddElems();
   
   } else if (x == 2) {
   
-    testIterTypesSet();
+    setDelElems();
 
   } else if (x == 3) {
 
-    compUinque();
+    setCheckElems();
 
   } else if (x == 4) {
 
-    compIndx();
+    setGetLen();
 
-  } else if (x == 5) {
+  // } else if (x == 5) {
 
-    setInside();
+    // setInside();
 
-  } else if (x == 6) {
+  // } else if (x == 6) {
 
-    setSpread();
+    // setSpread();
 
   } else {
     alert("No option has been selected !");
@@ -58,197 +55,109 @@ function myTest() {
 
   // =========================================================================
 
-  // 1] Defining Set() and get datatype of {set()} :
-  function defSetDataType() {
+  // 1] Adding new element(s) [single + multiple] to object {set()} :
+  function setAddElems() {
     alert(
-      "Welcome to Using Defining Set() and get datatype of {set()}  "
+      "Welcome to Adding new element(s) [single + multiple] to object {set()} "
     );
 
     dis.innerHTML = "";
 
-    // Defining Set object  :
-      let mySet  = new Set();   
+    // Defining Set object  [with adding new multiple elements by using {iteralble string}  ] :
+      let mySet  = new Set('Shadi');   
     
-      
-    // printing the Set Object Datatype :
+    // Adding new single value string to the predfined Set object  by using {.add()} method  :
+      mySet.add('shadi')  ;   
     
-    console.log('1] Set Object [datatype] as following : ');
-    console.log(typeof mySet);
-    
-    console.log('2] Set Object [content] as following : ');
+    // printing the Set Object after adding new multiple Elements [using Iterable string] :
+    console.log('1] Final Set Object after adding new multiple Elements [using Iterable string] & adding single value using [ .add() method] as following : ');
     console.log(mySet);
+        
+    dis.innerHTML += `1] Final Set Object after adding new multiple Elements [using Iterable string] & adding single value using [ .add() method] as following : '`;
+    dis.innerHTML +=  mySet ;
 
-    
-    dis.innerHTML += `'1] Set Object [datatype] as following : '`;
-    dis.innerHTML +=  typeof mySet ;
-    dis.innerHTML += `2] Set Object [content] as following : `;
-    dis.innerHTML +=   mySet ;
   }
 
   // =============================================================
-    // 2] Testing the Iterable types to be used with the set :
-  function testIterTypesSet() {
+    // 2] Delete element(s) [single {.delete() } + All {.clear() } ] from the object {set()} :
+  function setDelElems() {
 
       alert(
-        "Welcome to Using Shorthand in Object method syntax by using [old JS] & [new ES6] "
+        "Welcome to Delete element(s) [single {.delete() } + All {.clear() } ] from the object {set()} "
       );
 
       dis.innerHTML = "";
 
-     // Defining differnent  data type variables :
-        let str = "Shadi",
-            num = 55,
-            strNum = '236';
-
-    // Looping inside each type of defiend variables [string] :
-    dis.innerHTML += `1] Looping inside [string variable] as following : ` ;  
-    console.log('1] Looping inside [string variable] as following : ');
-
-    for (let i = 0;  i < str.length ; i++) {
-        console.log(str[i]);
-        dis.innerHTML += str[i];
-     }
+    // Defining Set object [with adding new multiple elements by using {Iteralble string} + adding single value by using {.add() } using chain method ] :
+      let mySet  = new Set('Shadi').add('shadi');   
     
-    
-     // Looping inside each type of defiend variables [numeric] :
-     dis.innerHTML += `2] Looping inside [Number variable] as following : ` ;  
-     console.log('2] Looping inside [Number variable] as following : ');
- 
-     for (let i = 0;  i < num.length ; i++) {
-        console.log(num[i]);
-     }
-    
-     // Looping inside each type of defiend variables [texual numeric] :
-     dis.innerHTML += `3] Looping inside [Texual Number variable] as following : ` ;  
-     console.log('3] Looping inside [Texual Number variable] as following : ');
- 
-     for (let i = 0;  i <  strNum.length ; i++) {
-        console.log(strNum[i]);
-     }
+    // Delete single element from the set object using [.delete() ] :
+        mySet.delete('s');
   
+    // Printing the Set object after deleting the single element  : 
+    console.log("2] Set object After Deleting a Single Element ['s'] , as following  : ");
+    console.log(mySet);
+
+    dis.innerHTML += `2] Set Object after adding new multiple Elements [using Iterable string] & adding single value using [ .add() method] as following : '`;
+    dis.innerHTML +=  mySet ;
+
+    // Delete All elements from the set object using [.clear() ] :
+    mySet.clear();
   
+
+    // Printing the Set object after deleting All elements from Set object by using [.clear() ]  : 
+    console.log("2] Set object after deleting All elements from Set object by using [.clear() ] , as following  : ");
+    console.log(mySet);
+
+    dis.innerHTML += `2] Set object after deleting All elements from Set object by using [.clear() ] as following : '`;
+    dis.innerHTML +=  mySet ;
+
   }
   
   // =============================================================
-    // 3] Comparison between array and set [Unique values] :
-    function compUinque() {
+  // 3] /Checking for certain content in Object {set()} :
+  function setCheckElems() {
 
       alert(
-        "Welcome to Using Comparison between array and set [Unique values]  "
+        "Welcome to Checking for certain content in Object {set()}  "
       );
 
       dis.innerHTML = "";
+    
+    // Defining Set object [with adding new multiple elements by using {Iteralble string} + adding single value by using {.add() } using chain method ] :
+      let mySet  = new Set('Shadi').add('shadi');   
 
-  // Define the array and Set object variables to test accepting Unique variables :   
-    let myArr =  [1,2,3,4,4]  , 
-        mySet = new Set([1,2,3,4,4]);
-
-  // Printing the {Set object} & [Array] with repeated values :
- 
-    console.log(`1] Set Object with repeated contents as following : `) ;  
-    console.log(mySet);
- 
-    console.log(`2] Array with repeated contents as following : `) ;  
-    console.log(myArr);
- 
-    dis.innerHTML += `1] Set Object with repeated contents as following : ` ;  
-    dis.innerHTML += mySet;
- 
-    dis.innerHTML +=`2] Array with repeated contents as following : ` ;  
-    dis.innerHTML += myArr ;
- 
+    // Printing the result of Checking for certain single value in the set object [using {.has() } ] : 
+        console.log(`3] The result of checking for 's' inside the set object is : ${mySet.has('S')}`);
+        console.log(`3] The result of checking for 'shadi' inside the set object is : ${mySet.has('shadi')}`);
+        console.log(`3] The result of checking for 'SHADI' inside the set object with using advanced function {.toLowerCase()} is : ${mySet.has('SHADI'.toLowerCase()) } `);
+                
+        dis.innerHTML += `3] The result of checking for 's' inside the set object is : ${mySet.has('s')}`;
+        dis.innerHTML += `3] The result of checking for 'shadi' inside the set object is : ${mySet.has('shadi')}` ;
+        dis.innerHTML += `3] The result of checking for 'SHADI' inside the set object with using advanced function {.toLowerCase()} is : ${mySet.has('SHADI'.toLowerCase()) } ` ;        
+        
   }  
 
   // =============================================================
 
-  // 4] Comparison between array and set [Using Index] :
-  function compIndx() {  
+  // 4] Getting the length/size of elements in the Set object :
+  function setGetLen() {  
     alert(
-        "Welcome to Using Comparison between array and set [Using Index]  "
-      );
-
-      dis.innerHTML = "";
-
-      // Define the array and Set object variables to test accepting Unique variables :   
-      let myArr =  [1,2,3,4,4]  , 
-          mySet = new Set([1,2,3,4,4]);
-
-      // Printing the {Set object} & [Array] with repeated values :
-      console.log(`1] Printing one of element inside {Set Object} by using index[undefined] as following : `) ;  
-      console.log(mySet[1]);
-
-      console.log(`2] Printing one of element inside [Array] by using index[value] as following : `) ;  
-      console.log(myArr[1]);
-
-      dis.innerHTML += `1] Printing one of element inside {Set Object} by using index[undefined] as following : ` ;  
-      dis.innerHTML += mySet[1] ;
-
-      dis.innerHTML +=`2] Printing one of element inside [Array] by using index[value] as following : ` ;  
-      dis.innerHTML += myArr[1] ;
-
-
-  }
-  // =============================================================
-
-  // 5] Comparison between array and set [Ability to be assigned each by other]:
-  function setInside() {
-    alert(
-        "Welcome to Using Comparison between array and set [Ability to be assigned each other] "
+        "Welcome to Getting the length/size of elements in the Set object "
       );
 
     dis.innerHTML = "";
+      
+    // Defining Set object [with adding new multiple elements by using {Iteralble string} + adding single value by using {.add() } using chain  method ] :
+      let mySet  = new Set('Shadi').add('shadi');   
 
-    // Defining the Set object and Array : 
-      let myArr = [1 , 2 , 3];
-      let mySet = new Set(myArr);
 
-    // Printing the {Set object} after assigning the array inside the set object :
-    console.log(`1] Printing the {Set Object} after assigning the Array inside the set object as following : `) ;  
-    console.log(mySet);
+    // Printing the number of elements in the set object [using {.size() } ] : 
+        console.log(`4] The result of checking for 's' inside the set object is : ${mySet.size} `);
+                
+        dis.innerHTML += `4] The result of checking for 's' inside the set object is : ${mySet.size}  `;
     
-    dis.innerHTML += `1]  Printing the {Set Object} after assigning the Array inside the set object as following : ` ;  
-    dis.innerHTML += mySet;
-
   }
-  // =============================================================
-
-  // 6] Set ability of using [Spread operator] :
-  function setSpread() {
-    alert(
-      "Welcome to Using Set ability of using [Spread operator] "
-    );
-
-    dis.innerHTML = "";
-
-    // Defining the Set object and Array : 
-      let myArr = [1 , 2 , 3] ,
-          myObj = {'name' :'shadi' , 'age':36 , 'city' :'cairo'}, 
-          myObj1 = {...myObj}, 
-          mySet = new Set(myArr), 
-          mySet1 = new Set([1 , 2 , 3]);
-
-    console.log( myObj1);
-    
-    // Printing the Set object with using spread operator : 
-      console.log('Set Object contents with using spread operator , as following :');
-      console.log([...mySet]);
-      console.log([...mySet1]);
-      
-      dis.innerHTML += 'Set Object contents[assinged Array] with using spread operator , as following :';
-      dis.innerHTML += [...mySet] ;
-      dis.innerHTML += mySet ;
-
-      dis.innerHTML += 'Set Object contents[simple elements] with using spread operator , as following :';
-      dis.innerHTML += [...mySet1] ;
-      dis.innerHTML += mySet1 ;
-      
-      dis.innerHTML += myObj ;
-      dis.innerHTML += myObj1 ;
-      
-      // console.log( {...myObj} ); => {this is wrong }
-      // dis.innerHTML += { ...myObj } => {this is wrong} ;
-  }
-
   // =============================================================
 
 }
