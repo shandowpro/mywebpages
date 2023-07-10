@@ -1,4 +1,4 @@
-// 20 Set vs Array :
+// 21 Set Methods :
 /* Main lessons functions :
   1- Defining Set() and get datatype of {set()}
   2- Testing the Iterable types to be used with the set
@@ -9,11 +9,11 @@
   */
 // ---------------------------------------------------------------------
 
-// 20 Set vs Array:
+// 21 Set Methods:
 
 function myTest() {
   "use strict";
-  alert("Welcome to 20 Set vs Array");
+  alert("Welcome to 21 Set Methods");
 
   var dis = document.getElementById("note");
 
