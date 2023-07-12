@@ -1,4 +1,4 @@
-// 23 Map Methods :
+// 24 Symbol Part 1 :
 /* Main lessons functions :
   1- {mapObj.size} method 
   2- {mapObj.get()} method 
@@ -9,11 +9,11 @@
 
   // ---------------------------------------------------------------------
 
-// 23 Map Methods:
+// 24 Symbol Part 1:
 
 function myTest() {
   "use strict";
-  alert("Welcome to 23 Map Methods");
+  alert("Welcome to 24 Symbol Part 1");
 
   var dis = document.getElementById("note");
 
