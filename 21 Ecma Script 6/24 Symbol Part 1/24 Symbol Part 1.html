@@ -321,9 +321,9 @@
         
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
-        <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => { Main method of dealing with  Map object  }  Syntax  <span><strong>  provides addition features of dealign with map object  in syntax in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <span> <strong> {Methods and functions to deal with  map() Object }  in ES6 </strong> provides main features and control </span> </h3> 
+        <div class="container">         
+            <h2 class="h1" class="hidden-xs"> About Section => { Symbol part1  }  Syntax  <span><strong>  provides another type of dtatype with special characteristics in syntax in JS ES6  </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <span> <strong> { Basics of the symbols variables syntax , usages , Improtance for object  }  in ES6 </strong> provides main features and control </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -337,16 +337,13 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => concept Information about {  Set and Array } & Syntax & Practical Example , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => concept Information about { Symbol variable datatype] } & Syntax & Practical Example , as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
-                    <p> Conceptual and Syntax Comparisonal exmples , as following:  </p>
+                    <p> Conceptual and Syntax , and practical exmples for usages , as following:  </p>
                  <ol type="A">                                                                               
-                     <li> mapObj.size </li>
-                     <li> mapObj.get()  </li>
-                     <li> mapObj.has()  </li>
-                     <li> mapObj.delete()  </li>
-                     <li> mapObj.clear()  </li>
+                     <li> Symbol variable datatype => Basic syntax [Defining + Assigning description ] </li>
+                     <li> Symbol variable datatype => Practical Examples on usages of symbols with objects  </li>
                 </ol>
             </article>
         </Section>
@@ -358,68 +355,105 @@
                 <h3> 24 Symbol Part 1 concept : </h3>
             </header>
 
-            <p> Main features and properites of Map() object :
+            <p> Main properties of the Symbols variables  :
                 <ul>
-                    <li> Usng the methods of hte Map object will provides adnvanceed in dealing map object </li>
+                    <li> It is a new datatype provided by the ES6 </li>
+                    <li> It can be considred as a {Primvitive} datatype like [string , number , Boolean ] , which has the following properties :.
+                        <ol> 
+                            <li> Not an object </li>
+                            <li> Has No Methods  </li>
+                        </ol>    
+                    </li>
+                    <li> It is {Unique} => Can not be repeated [Even if it has declared several times , each varialbe is unique  ] </li>
+                    <li> It is {Immutable} => Can not be Edit  </li>
                 </ul>
             </p>
 
-            <p> 1] Main methods of Map() Object  : <br>  
+            <p> Main Syntax of defining and assignement :
                 <ol> 
-                    <li> {mapObj.size} => Geting the length/size of the map object syntax => <br>        
+                    <li> {Declaring empty  Variable of Symbol datatype } =>  syntax => <br>        
                        <code>
-                            
-                            <span class="one"></span> // Define an Map object and assign some elements inside while decleration : <br>
-                            <span class="one"></span> let myMap = new Map([['username' , 'Shadi'], ['age' , '30'], ['city' , 'Cairo'] ]);  <br>
+                            <span class="one"></span> Declaring Empty Symbol variable :   <br>
+                            <span class="one"></span> let mySymbol =  Symbol() ;  <br>
 
-                            <span class="one"></span> // Printing Geting the size in the [Map object] by using {size}:  <br>
-                                <span class="two"></span> console.log(`Map object length/size is:  ${myMap.size}`);  <br> <br>
+                       </code>
+                    </li>
 
+                    <li> {Get the datatype of Symbol variable} =>  syntax => <br>        
+                        <code>
+                            <span class="one"></span> // Printing the datatype of the Symbol varialbe  :  <br>
+                                <span class="two"></span> console.log(`Symbol variable datatype  is:  ${typeof mySymbol }`); => [will display (symbol)] <br> <br>
+                        </code>
+                    </li>
+
+                    <li> {Declaring Variable of Symbol datatype with description} =>  syntax => <br>        
+                        <code>
+                        <span class="one"></span> // Assigning a Description of the Symbol varialbe  :  <br>
+                            <span class="one"></span> let mySymbol =  Symbol('Testing) ;  <br>
                         </code> <br> <br>
-                    </li> <br> <hr> </br>
+                    </li> <br> <hr> </br>    
                 <!-- ======================================= -->
-                    <li> {mapObj.get()} => Geting the value of certain property by using it's keyname in the map object syntax => <br>        
-                       <code>
-                            <span class="one"></span> // Printing the value of a certain property in the [Map object] by using {get( )} :  <br>
-                            <span class="two"></span> console.log(`The value of elemet with keyName['propKeyName']  is:  ${myMap.get('propKeyName') } `);  <br> <br>
+                </ol>                         
+            </p>   
+            <!-- --------------------------- -->
+        
+            <p> Practical Examples on usages and properties of symbols with objects :
+                <ol> 
+                    <li> { Checking for the {unique} of the symbol varialbe } by using Idnentical Equal method  =>  syntax => <br>          
+                        <code>
+                            <span class="one"></span> Printing the object :   <br>
+                            <span class="one"></span> let mySymbolOne =  Symbol() ,  <br>
+                            <span class="one"></span> let mySymbolTwo =  Symbol() ; <br> <br>
                             
-                        </code> <br> <br>
-                    </li> <br> <hr> </br>
-                <!-- ======================================= -->
-                    <li> {mapObj.has()} => Check if the map object has certain element value with using its keyname  syntax => <br>        
-                       <code>
+                            <span class="one"></span> Printing the Result of Identiacal Equality of the both Symbols arialbes object :   <br>
+                            <span class="one"></span> console.log(mySymbolOne === mySymbolTwo ) ; => [Display {False} because of each one is unique] <br>                       
+                        </code>
+                    </li>
+
+                    <li> { Checking of ability to display the object's property of symbol type } by using serveral methods  =>  syntax => <br>          
+                        <code>
+
+                            <span class="one"></span> Decalring the symbol varialbe which will be used as Dynamic property keyname  : <br>
+                            <span class="one"></span> let mySymbol =  Symbol('testing') ;  <br>
                             
-                            <span class="one"></span> // Define an Map object and assign some elements inside while decleration : <br>
-                            <span class="one"></span> let myMap = new Map([ ['username' , 'Shadi'], ['age' , '30'], [false , 'boolean value'] ]);  <br>
+                            <span class="one"></span> Decalring the object with different properties datatypes including [symbol Dynamic property keyname ]  :   <br>
+                            <span class="one"></span> let myObj =  {   <br>
+                                <span class="two"></span> username : 'shadi' , <br>
+                                <span class="two"></span>  website : 'shadipro.com' , <br>
+                                <span class="two"></span>  [mySymbol] : 'This propery is hidden from Iteration' ; <br>
+                            <span class="one"></span> } ;  <br>
 
-                            <span class="one"></span> // Checking if the  [Map object] has certain element of certain keyname  by using {has}:  <br>
-                                <span class="two"></span> console.log(`Reasult of checking of existance certain element in Map object  is:  ${myMap.has(false)}`);  <br> <br>
-
-                        </code> <br> <br>
-                    </li> <br> <hr> </br>
-                <!-- ======================================= -->
-                    <li> {mapObj.delete()} => Deleting certain single element from the map object syntax => <br>        
-                       <code>
+                            <span class="one"></span> 1] Printing the object's all properties using Looping inside the object using {for(){} } & expression {Object.enteries(objName)} : <br>
+                            <span class="one"></span> for (let val of Object.enteris(myObj) { <br>
+                                <span class="two"></span> console.log(val); => [Will print all object's properties (Except the property of symbol keyname ) ] 
+                            <span class="one"></span>  } <br> <hr> <br> <br>
                             
-                            <span class="one"></span> // Deleting certain element from Map object by using {map.delete()}:  <br>
-                                <span class="two"></span> myMap.delete('propName') ;  <br> <br>
-
-                        </code> <br> <br>
-                    </li> <br> <hr> </br>
-                <!-- ======================================= -->
-                    
-                    <li> {mapObj.clear()} => Deleting all elements from the map object syntax => <br>        
-                       <code>
+                            <span class="one"></span> 2] Printing the object's all properties using Expression {Object.getOwnPropertyNames(objName)} : <br>
+                            <span class="one"></span> console.log(Object.getOwnPropertyNames(objName) ); => [Will print all object's properties (Except the property of symbol keyname)  ]
+                            <span class="one"></span>  } <br> <hr> <br> <br>
                             
-                            <span class="one"></span> // Deleting all elements from Map object by using {map.clear()}:  <br>
-                                <span class="two"></span> myMap.clear() ;  <br> <br>s
+                            <span class="one"></span> 3] Printing the object's all properties using Expression {Object.keys(objName)} : <br>
+                            <span class="one"></span> console.log(Object.getOwnPropertyNames(objName) ); => [Will print all object's properties keynames (Except the property's keyname of symbol keyname)  ]
+                            <span class="one"></span>  } <br> <hr> <br> <br>
+                            
+                            <span class="one"></span> 4] Printing the object's all properties using Expression {JSON.stringfy(objName)} : <br>
+                            <span class="one"></span> console.log(Object.stringfy(objName) ); => [Will print all object's properties in string form (Except the property of symbol keyname)  ]
+                            <span class="one"></span>  } <br> <hr> <br> <br>
 
-                        </code> <br> <br>
-                    </li> <br> <hr> </br>
+                            <span class="one"></span> 5] Printing the object's only properties of symbols using Expression {Object.getOwnPropertySymbols(objName)} : <br>
+                            <span class="one"></span> console.log(Object.getOwnPropertySymbols(objName) ); => [Will print only object's properties with property of symbol keyname ]
+                            <span class="one"></span>  } <br> <hr> <br> <br>
+                       </code>
+                    </li>
+
+                    <li> {Printing the object properites [including the symbol property keyname] =>  syntax => <br>          
+                        <code>
+                            <span class="one"></span> Printing the whole object properites :   <br>
+                            <span class="one"></span> consloe.log(myObj) ; <br>
+                       </code>
+                    </li>
+                    <br> <hr> </br>    
                 <!-- ======================================= -->
-
-                <!-- ======================================= -->
-
                 </ol>         
             </p>   
             <!-- --------------------------- -->
@@ -428,13 +462,12 @@
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> The ES6 { methods} provide advanced features in dealing with map object , such as : <br>
+                    <li> The ES6 {Symbols} & {Symbols Description}  provide advanced features in dealing with object , such as : <br>
                         <ol> 
-                            <li> {mapObj.size} => To get the current size/count of Map object is handy in some application such as [geting the current count of a certain select box and then peruse certtain action [such as adding live search head input field]  ] </li>
-                            
-                            <li> {mapObj.has() } => To check for the existance of certain element by using it's keyname > is very critical in some application  to persue certain action    </li>
-
-                            <li> {mapObj.clear() } => To delete all elements from certain container [such as : list Cart of items when click on the clear button ]   > is very critical in some application  to persue certain action    </li>
+                            <li> Using Symbols variables in object properties will prevent some Errors could occur due to Duplication or Overriding between objects , which may happen due of using the default Object ClassName  </li>
+                            <li> More useful in {privacy} when needing to hiding some data in the object [by using the Symbols within property's keyname  ] </li>
+                            <li> Used in some built-in functions such as [Protocols Symbols] => which is defining the way the object is being Iterated/Looped </li>
+                            <li> Used in some other built-in functions will be studied later  </li>
                         </ol>
                     </li> 
                 </ul>
@@ -676,7 +709,7 @@
             -->                        
         </section> 
 
-        <button type="button" class="btn" onclick="myTest()"> Click to Start [ Destructuring Array part 3 Swap variables  { old Js by stashing || ES6 by Desutructuring   }  methods in ES6 methods ] Application </button>
+        <button type="button" class="btn" onclick="myTest()"> Click to Start [ Symbol Part1  {  ES6  }  ] Application </button>
 
         <script src="main.js"></script> 
         

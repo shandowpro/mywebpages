@@ -1,12 +1,8 @@
 // 24 Symbol Part 1 :
 /* Main lessons functions :
-  1- {mapObj.size} method 
-  2- {mapObj.get()} method 
-  3- {mapObj.has()} method 
-  4- {mapObj.delete()} method 
-  5- {mapObj.clear()} method 
+  1- Basic syntax [Defining + Assigning description ] of the Symbols variables datatype
+  2- Practical Examples on usages of symbols with objects and properites 
 */
-
   // ---------------------------------------------------------------------
 
 // 24 Symbol Part 1:
@@ -19,32 +15,29 @@ function myTest() {
 
   var x = prompt(
     ` Please choose one of following functions from below  :
-    1- {mapObj.size} method 
-    2- {mapObj.get()} method 
-    3- {mapObj.has()} method 
-    4- {mapObj.delete()} method 
-    5- {mapObj.clear()} method     `
+    1- Basic syntax [Defining + Assigning description ] of the Symbols variables datatype
+    2- Practical Examples on usages of symbols with objects and properites `
     );
 
   if (x == 1) {
   
-    mapSize();
+    basicSymb();
   
   } else if (x == 2) {
   
-    mapGet();
-    
-  } else if (x == 3) {
-    
-    mapHas();
-    
-  } else if (x == 4) {
+    usgPropsSymb();
 
-    mapDelete();
+  // } else if (x == 3) {
+    
+    // mapHas();
+    
+  // } else if (x == 4) {
 
-  } else if (x == 5) {
+    // mapDelete();
 
-    mapClear();
+  // } else if (x == 5) {
+
+    // mapClear();
 
   // } else if (x == 6) {
 
@@ -53,133 +46,103 @@ function myTest() {
   } else {
     alert("No option has been selected !");
   }
-
   // =========================================================================
 
-  // 1] {mapObj.size} method :
-  function mapSize() {
+  // 1] Basic syntax [Defining + Assigning description ] of the Symbols variables datatype :
+  function basicSymb() {
     alert(
-      "Welcome to {mapObj.size} method  "
+      "Welcome to Basic syntax [Defining + Assigning description ] of the Symbols variables datatype  "
     );
 
     dis.innerHTML = "";
 
-    // Defining [Map object] and assign some elements with different datatypes  :
-      let myMap  = new Map([  ['Name', 'shadi']  , ['age' , '30' ] , ['city' , 'cairo'] , [false , 'boolean value'] , [function myFucn() {} , 'function value' ] ]);   
+    // Defining Empty Symbol variable   :
+      const mySmb  = Symbol();   
       
-    // Geting the size of the map object :
-        console.log(`The count of the map object ${myMap.size}`) ;   
-        dis.innerHTML += `The count of the map object ${myMap.size}` ;   
-    // -------------------------------------------
+    // Getting the datatype of the symbol variable :
+        console.log(`The datatype of the Symbol variable ${typeof mySmb}`) ;   
+        dis.innerHTML += `The datatype of the Symbol variable ${typeof mySmb} ` ;   
 
-    // // Printing the [Default Object] after assingning new [[Single Elements]] using [Direct Assign method] & [Notation Method]  :
-    // console.log('1] [Default Object] after assingning new [[Single Element]] using [Direct Assign method] & [Notation Method] as following : ');
-    // console.log(myObj);
-    
-    // dis.innerHTML += '1] [Default Object] after assingning new [[Single Element]] using [Direct Assign method] & [Notation Method] as following : ' ;
-    // dis.innerHTML += myObj ;
-        
+    // Printing the symbol variable :
+        console.log(`The  Symbol variable ${mySmb}`) ;   
+        dis.innerHTML += `The  Symbol variable ${mySmb} ` ;   
+
+
+    // Defining Empty Symbol variable with description   :
+      const mySmb1  = Symbol('Testing');   
+      
+  
+    // Printing the symbol variable with description  :
+        console.log(`The  Symbol variable ${mySmb1}`) ;   
+        dis.innerHTML += `The  Symbol variable ${mySmb1} ` ;   
     //  -------------------------------------------
   }
 
   // =============================================================
-  // 2] {mapObj.get()} method :
-  function mapGet() {
+  // 2] Practical Examples on usages of symbols with objects and properites  :
+  function usgPropsSymb() {
 
       alert(
-        "Welcome to {mapObj.get()} method  "
+        "Welcome to Practical Examples on usages of symbols with objects and properites    "
       );
 
       dis.innerHTML = "";
 
-      // Defining [Map object] and assign some elements with different datatypes :
-      let myMap  = new Map([  ['Name', 'shadi']  , ['age' , '30' ] , ['city' , 'cairo'] , [false , 'boolean value'] , [function myFucn() {} , 'function value' ] ]);   
-  
-      // Geting the vlaue of certain element with certian keyname [false] of the map object :
-          console.log(`The value of Element with keyname [false] the map object ${myMap.get(false)}`) ;   
-          dis.innerHTML += `The value of Element with keyname [false] the map object ${myMap.get(false)}`  ;   
-      // -------------------------------------------
-  
-      // // Printing the [Default Object] after assingning new [[Single Elements]] using [Direct Assign method] & [Notation Method]  :
-      // console.log('1] [Default Object] after assingning new [[Single Element]] using [Direct Assign method] & [Notation Method] as following : ');
-      // console.log(myObj);
+      // Defining Empty Symbol variable with description   :
+      const mySmb  = Symbol('Testing');   
+    
+      // Defining object using Symbol variable as one of it's property keyname  [Dynamic property keyname]  :
+      let myObj  = {
+        username : 'Shadi' ,
+        website : 'shadi.com' ,
+        [mySmb] : 'This is symbol variable Dynamic property keyname '
+      };   
+    
+    // 1] Checking if the symbols variable is identically equaled:
+      // Declaring (2) variables with the same type of Symbols datatypes :
+        const mySymbolOne = Symbol('testing1'),
+        mySymbolTwo = Symbol('testing2') ;
+
+      // Printing the Result of Identiacal Equality of the both Symbols Variables object :
+        console.log(mySymbolOne === mySymbolTwo ) ;  // => [Display {False} because of each one is unique] 
+    // ---------------------------------------------------
       
-      // dis.innerHTML += '1] [Default Object] after assingning new [[Single Element]] using [Direct Assign method] & [Notation Method] as following : ' ;
-      // dis.innerHTML += myObj ;
-          
-        //  -------------------------------------------
+    // 2] Checking if the symbols property keynames within the object can be displayed [using severals methods]:
+      // a) Declaring another object and Symbol variable for Testing : 
+        const mysymbol = Symbol('NewTesting');
+      
+        let myTestObj = {
+          username : 'Shadi' , 
+          website : 'shadi.com' , 
+          [mysymbol] : 'This is hte  suymbol varialbe to be hidden from user'  
+        };
+    
+      // b) Looping inside the object properties using {for(){} } & expression {Object.enteries(objName)} Method : 
+        for (let val of Object.enteries(myTestObj) ) {
+          console.log(val); // => [This Display all object properites except the symbol property keyname   ] 
+        }
+    
+      // c) Printing the object's all properties using Expression { Object.getOwnPropertyNames(objName) } Method : 
+        console.log( Object.getOwnPropertyNames(myTestObj) ); 
+
+      // d) Printing the object's all properties's keynames using Expression {Object.keys(objName)} Method : 
+        console.log( Object.keys(myTestObj) ); 
+
+      // e) Printing the object's all properties in form of string using Expression {JSON.stringfy(objName)} Method : 
+        console.log( JSON.stringify(myTestObj) ); 
+
+    
+      // f) Printing the object's only properties of symbols using Expression {Object.getOwnPropertySymbols(objName)} method : 
+        console.log( Object.getOwnPropertySymbols(myTestObj) ); 
+
+        
+      // g) Printing the object's whole properties including symbols using Expression {Object.getOwnPropertySymbols(objName)} method : 
+        console.log( myTestObj ); 
+
   }
   
   // =============================================================
-  // 3] {mapObj.has()} method :
-  function mapHas() {
 
-      alert("Welcome to {mapObj.has()} method ");
-
-      dis.innerHTML = "";
- 
-      // Defining [Map object] and assign some elements with different datatypes :
-      let myMap  = new Map([  ['Name', 'shadi']  , [30 , '30' ] , ['city' , 'cairo'] , [false , 'boolean value'] , [function myFucn() {} , 'function value' ] ]);   
-  
-      // Checking for existance of certain element in the map object :
-          console.log(`The Result of existance of  Element with keyname [30] the map object ${myMap.has(30)}`) ;   
-          dis.innerHTML += `The value of Element with keyname [30] the map object ${myMap.has(30)}`  ;   
-      // -------------------------------------------
-  
-    }
-    
-    
-    // =============================================================
-    // 4] {mapObj.delete()} method  :
-    function mapDelete() {
-
-      alert(
-        "Welcome to {mapObj.delete()} method  "
-      );
-
-      dis.innerHTML = "";
-
-      // Defining [Map object] and assign some elements with different datatypes :
-      let myMap  = new Map([  ['Name', 'shadi']  , [30 , '30' ] , ['city' , 'cairo'] , [false , 'boolean value'] , [function myFucn() {} , 'function value' ] ]);   
-    
-      // Delete one element of keyname [false] from the map object using {map.delete() } :
-        myMap.delete(false) ;
-
-
-      //  Printing count of the map object after deletion of one element :
-          console.log(`The count of map object after deletion of one element is:  ${myMap.size} `) ;   
-          dis.innerHTML += `The count of map object after deletion of one element is:  ${myMap.size} ` ;   
-      // -------------------------------------------
-      
-      
-  }
-  
-  // =============================================================
-  // 5] {mapObj.clear()} method  :
-  function mapClear() {
-
-      alert(
-        "Welcome to  {mapObj.clear()} method    "
-      );
-
-      dis.innerHTML = "";
-
-
-      // Defining [Map object] and assign some elements with different datatypes :
-      let myMap  = new Map([  ['Name', 'shadi']  , [30 , '30' ] , ['city' , 'cairo'] , [false , 'boolean value'] , [function myFucn() {} , 'function value' ] ]);   
-    
-      // Delete all elements from the map object using {map.clear() } :
-        myMap.clear() ;
-    
-    
-      //  Printing count of the map object after Clear all elements from the map object :
-          console.log(`The count of map object after deletion of all elements is:  ${myMap.size} `) ;   
-          dis.innerHTML += `The count of map object after deletion of all elements is:  ${myMap.size} ` ;   
-      // -------------------------------------------
-
-
-  }
-  
   // =============================================================
 
 }
@@ -188,4 +151,3 @@ function display() {
   document.getElementById("note").innerHTML =
     myTest + "\n\n" + "=".repeat(90) + "\n\n";
 }
-
