@@ -60,12 +60,17 @@ function myTest() {
       const mySmb  = Symbol();   
       
     // Getting the datatype of the symbol variable :
-        console.log(`The datatype of the Symbol variable ${typeof mySmb}`) ;   
-        dis.innerHTML += `The datatype of the Symbol variable ${typeof mySmb} ` ;   
+        console.log(`The datatype of the Symbol variable`) ;   
+        console.log(typeof mySmb) ;   
+        // dis.innerHTML += `The datatype of the Symbol variable ${typeof mySmb} ` ;   
+        // dis.innerHTML += `The datatype of the Symbol variable ${typeof mySmb} ` ;   
 
     // Printing the symbol variable :
-        console.log(`The  Symbol variable ${mySmb}`) ;   
-        dis.innerHTML += `The  Symbol variable ${mySmb} ` ;   
+        console.log(`The Symbol variable is : `) ;   
+        console.log(mySmb) ;   
+        
+        // dis.innerHTML += `The  Symbol variable ` ;   
+        // dis.innerHTML += mySmb  ;   
 
 
     // Defining Empty Symbol variable with description   :
@@ -73,8 +78,9 @@ function myTest() {
       
   
     // Printing the symbol variable with description  :
-        console.log(`The  Symbol variable ${mySmb1}`) ;   
-        dis.innerHTML += `The  Symbol variable ${mySmb1} ` ;   
+        console.log(`The  Symbol variable `) ;   
+        console.log(mySmb1) ;   
+        // dis.innerHTML += `The  Symbol variable ${mySmb1} ` ;   
     //  -------------------------------------------
   }
 
@@ -101,7 +107,7 @@ function myTest() {
     // 1] Checking if the symbols variable is identically equaled:
       // Declaring (2) variables with the same type of Symbols datatypes :
         const mySymbolOne = Symbol('testing1'),
-        mySymbolTwo = Symbol('testing2') ;
+              mySymbolTwo = Symbol('testing2') ;
 
       // Printing the Result of Identiacal Equality of the both Symbols Variables object :
         console.log(mySymbolOne === mySymbolTwo ) ;  // => [Display {False} because of each one is unique] 
@@ -111,16 +117,16 @@ function myTest() {
       // a) Declaring another object and Symbol variable for Testing : 
         const mysymbol = Symbol('NewTesting');
       
-        let myTestObj = {
+        const myTestObj = {
           username : 'Shadi' , 
           website : 'shadi.com' , 
-          [mysymbol] : 'This is hte  suymbol varialbe to be hidden from user'  
+          [mysymbol] : 'This is the symbol varialbe to be hidden from user'  
         };
     
       // b) Looping inside the object properties using {for(){} } & expression {Object.enteries(objName)} Method : 
-        for (let val of Object.enteries(myTestObj) ) {
-          console.log(val); // => [This Display all object properites except the symbol property keyname   ] 
-        }
+        // for (let val of Object.enteries(myTestObj) ) {
+        //   console.log(val); // => [This Display all object properites except the symbol property keyname   ] 
+        // }
     
       // c) Printing the object's all properties using Expression { Object.getOwnPropertyNames(objName) } Method : 
         console.log( Object.getOwnPropertyNames(myTestObj) ); 
