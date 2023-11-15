@@ -503,6 +503,7 @@
                         <p> Due this Router is created to be activated by clicking on the button , not as [Link] => SO we need to define this router manually , not as default router as we do in the link [inside the impoted functional component {ProductItem}    ]    </p>
                         <p> Due we use a static data of products , we will assgning product data [props] values  manually , just for coneptual dispalying , but will re-assgning these [props] values by using dynamic data from backend database in future in next lesson [using the {End Points} & {Pre-Rendering} ]   <p>
                         
+                        <p> A] Define the page Router functional compment of the   :     </p>
                         <code style="font-size:smaller">
 
                             <span class="one"></span> // Importing/calling component function {} : <br>
@@ -529,6 +530,24 @@
                          </code> 
                     </li>  <br>  <hr> <br> <br> 
 
+                    <p> B] Inisde the {ProductItem} & before the (return) => Define the function responsible to Navigate to the {ProductDetailsPage} using the product's Id property Dynamic Router data by [click on button] , to use it to Dynmaic Navigation to product Id (which is being uysed in dynamic router) [by pushing it to the defined router varialbe array List]   : </p>
+                        <code>     
+                            <span class="one"></span> function showDetailsHandler() { <br>
+                                <span class="two"></span> // when click on the button [show more details] the product ID will be pushed into the router list => [to presenet the dynamic router of the current product ] : <br>
+                                <span class="two"></span> router.push(`/${props.id}`) ; <br>
+                            <span class="one"></span> } <br>    <br>
+                        </code>    
+
+                    <p> C] Inside the (return) of {ProductItem} =>  adding the button holding the calling of the function of Generating the {Dynamic Router} [using this product id] to navigate to the this product dynamic page router  : </p>
+                        <code> 
+                            <span class="one"></span> return (  <br>
+                                <span class="two"></span> &lt;button onClick={showDetailsHandler} &gt;  <br>
+                                    <span class="three"></span> Show Details <br>
+                                <span class="two"></span> &lt;/ button  &gt;  <br>        
+                            <span class="one"></span>  ) ; <br>
+                        
+                        </code>
+                    <br>  <hr> <br> <br> 
                 </ol>                
             </p>
 
