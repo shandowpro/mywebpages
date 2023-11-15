@@ -1,0 +1,1253 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 20 [3D Transform - Transform Origin, Style] </title>
+    <link rel="stylesheet" href="CSS3 Lesson20 3D Transform - Transform Origin, Style.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 20 [3D Transform - Transform Origin, Style]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 3D Transform - Transform Origin, Style main Topics">
+                [ 3D Transform - Transform Origin, Style ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to 3D Transform - Transform Origin, Style [3D Transform - Transform Origin, Style ] Concept">
+                [ 3D Transform - Transform Origin, Style ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to 3D Transform - Transform Origin, Style [3D Transform - Transform Origin, Style ] Importance & Benefits">
+                [ 3D Transform - Transform Origin, Style ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to 3D Transform - Transform Origin, Style [3D Transform - Transform Origin, Style ] Syntax">
+                [ 3D Transform - Transform Origin, Style ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to 3D Transform - Transform Origin, Style [3D Transform - Transform Origin, Style ] Practical Applications">
+                [ 3D Transform - Transform Origin, Style ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 20 [3D Transform - Transform Origin, Style ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                3D Transform - Transform Origin, Style Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [3D Transform - Transform Origin, Style] Concept. </li>                       
+                    
+                    <li> [3D Transform - Transform Origin, Style] Importance & Benefits. </li>
+
+                    <li> [3D Transform - Transform Origin, Style] Syntax [Exmaple]. </li>
+                    
+                     <li> [3D Transform - Transform Origin, Style] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    
+                    <ul>
+                        <li> Basic concept about {Transform-Origin} , and it;s advanced features to contol the Transform Axe  </li>
+                        <li> Basic concept about {Transform-Style} , and it's advanced features to control the preserving the 3D tranform</li>                            
+                        <li> The Differences between the {Transform-origin} & {perspective-origin} </li>                         
+                    </ul>                   
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [3D Transform - Transform Origin, Style] Concept: </h3>
+            </header>
+                        
+            <ul>
+                <li>A) {Transform-Origin} main Concept :</li>
+                    <ol>
+                        <li> It a contorling tool of transforming aixe of the Element while performing the Transform effect </li>
+                                            
+                        <li> This property Require {transforming} Effect first to be Activated on the Element </li>                                    
+                                                                                    
+                        <li> It can accept the following types of aspects/values/Parameters (the Same of {perspective-origin} ): </li> <br> 
+                    
+                            <ul>                        
+                                <li> [Percentage]  => by (X %) (Y %) </li>
+                                <li> [Direction Name]  => by Direction name (left, right , top , botttom , center)  </li>                                                                                        
+                            </ul>                    
+                    
+                        <li>The Differences between {Transform-origin} & {perspective-origin} as following: </li>
+                            <ul>
+                                <li>{Transform-origin} => Controling (position) of the Element Trasnforming Axe {regaless of the Type of the Transforing}</li>
+                                <li>{perspective-origin} => Controling (position) of the viewer of the Element Trasnforming Axe {regaless of the Type of the Transforing}</li>
+                            </ul>
+                    </ol>
+                                            
+                <li> B) {Transform-Style} :</li>                    
+                    <ol>
+                        <li> It is a tool to control the {3D} Transforming element Display/Show. and it is being set into the Parent Container. And (2) Following options :</li>
+                            <ul>
+                                <li> [Flat]: It is the Default opition of this property. and it is to keep the transforming Element with Flat mode  </li>
+                                <li> [Preserve-3d]: This option keep the transforming Element with 3D mode {parent Containe & it's Children Elements} </li>
+                            </ul>                        
+                        <li> [Flat, reserve-3d] => [Flat]: This mode will ont display all kinds of the Transforming Effect in {3D} Successfully [specially the Z-Effect types] such as {translateZ} <br>
+                                     but in [reserve-3d] :will display all featrues of all kinds of 3d Successfully  </li>                    
+                    </ol>
+            </ul>            
+                        
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+            <section class="CSS3Imp" id="CSS3Imp">
+                <header>
+                    <h3> [3D Transform - Transform Origin, Style ] Importance & Benefits: </h3>
+                </header>
+                
+                <p> =&gt; [3D Transform - Transform Origin, Style ] : This Advanced property enabling the following features & imporatance : <br>            
+                    <ul>                                                                
+                        <li> Adding Extraodinary features to the 3D-Transforming Elements, by controling the Axies of Transforming Effects  </li>                                                
+                        <li> Great control of 3d Environment {Amount of 3D Scale & Angle of User Viwe}  </li>  
+                        <li> Ability of using multiple Child Elements inside the parent Container with Different kinds of transforming types </li>   
+                        <li> Ability to have more control on activating 3D mode on spcsific containers & deactivating it on the others </li>                           
+                        <li> 3D Transform Origin, Style property will provide unique effects specilaly when merged with 
+                            other 3D Transform properties animations effects  </li>                        
+                    </ul>                                                 
+            </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ 3D Transform - Transform Origin, Style] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [3D Transform - Transform Origin, Style] Syntax as following :<br><br>                                                    
+                
+                    <span class=two></span> //a)  [HTML] file  : <br>                                          
+                
+                        <span class=three></span> &lt;div class='container1' &gt;   <br>
+                            <span class=four></span> &lt; div class='element1' &gt; <br>                          
+                            <span class=four></span> &lt; div class='element2' &gt; <br>                          
+                            <span class=four></span> &lt; div class='element3' &gt; <br>                          
+                        <span class=three></span> &lt; /div &gt;  <br>                        
+                        
+                        <span class=three></span> &lt;div class='container2' &gt;   <br>
+                            <span class=four></span> &lt; div class='element1' &gt; <br>                                                      
+                            <span class=four></span> &lt; div class='element2' &gt; <br>                                                      
+                            <span class=four></span> &lt; div class='element3' &gt; <br>                                                      
+                        <span class=three></span> &lt; /div &gt;  <br>                        
+                            
+                        <span class=three></span> &lt;div class='container3' &gt;   <br>                        
+                            <span class=four></span> &lt; div class='element1' &gt; <br>                                                      
+                            <span class=four></span> &lt; div class='element2' &gt; <br>                                                      
+                            <span class=four></span> &lt; div class='element3' &gt; <br>                                                      
+                        <span class=three></span> &lt; /div &gt;  <br>                        
+                        
+                        <br> <br>                                        
+
+                // ------------------------------------------------------------------------------ <br><br>
+                
+            // (1) [3D Transform - Transform Origin, Style] + [Element with (2) kinds of 3d-Transform: rotate() & translateZ() & scale()] Syntax as following :<br><br> 
+
+            <span class= one></span> // A) {Transform-origin} => [different type of Containers with 3 types of transforming ] and [3 Elements of 3 types of 3D- transform-origin]  Syntaxes:  <br>
+                    
+                <span class=two></span> // {Example1: container1 with [{Rotating Effect} to all it's child] & 3 vlaues of the Transform-origin to each child} : [Result : {All elements will be transformed in to it's assigned Transform effect type & displayed in [Transfrom-sytle:preserve-3d] mode }: <br>
+                        <span class=three></span> body {  <br>
+                            <span class=four></span> perspective: 600px ; <br>
+                        <span class=three></span>  }  <br>                                              
+
+                        <!-- a) Container1:  3d-transforming : Rotating Effect  -->
+                        <span class=three></span> .container1 {  <br>                                                                              
+                            <span class=four></span> widht:500px; <br>                                                                                                                          
+                            <span class=four></span> height: 600px; <br>                                                                                                                          
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> position: ralative; <br>                            
+                        <span class=three></span>  }  <br>                                              
+                            
+                        <!-- a) Container2 / 1) Element1 : transform-origin: center right  -->
+                        <span class=three></span> .element1 {  <br>                                                  
+                            <span class=four></span> position: absolute; <br>
+                            <span class=four></span> left:0px; <br>
+                            <span class=four></span> top:0px; <br>           
+                            <span class=four></span> background-color:#f00; <br>                                                                   
+                            <span class=four></span> transition: all 1s ease-in-out ; <br>
+                        <span class=three></span>  }  <br>                                                                                                              
+                            
+                        <span class=three></span> .element1:hover {  <br>                                                  
+                            <span class=four></span> Transform: rotate(360deg) ; <br>
+                            <span class=four></span> Transform-origin: center right; <br>
+                        <span class=three></span>  }  <br>                                                                                              
+                            <!-- ------------------------------------------------ -->
+                            
+                        <!-- a) Container1 / 2) Element2 : transform-origin: center left  -->
+                        <span class=three></span> .element2 {  <br>                                                  
+                            <span class=four></span> position: absolute; <br>
+                            <span class=four></span> left:0px; <br>
+                            <span class=four></span> top:0px; <br>           
+                            <span class=four></span> background-color:#00f; <br>                                                                  
+                            <span class=four></span> transition: all 1s ease-in-out ; <br>
+                            <span class=three></span>  }  <br>                                                                                                              
+                            
+                            <span class=three></span> .element2:hover {  <br>                                                  
+                                <span class=four></span> Transform: rotate(360deg) ; <br>
+                            <span class=four></span> Transform-origin: center left; <br>
+                        <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->
+
+                    <!-- a) Container1 / 3) Element3 : transform-origin: center top  -->
+                    <span class=three></span> .element3 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                                               
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br>                                                                                                              
+                    
+                    <span class=three></span> .element3:hover {  <br>                                                  
+                        <span class=four></span> Transform: rotate(360deg) ; <br>
+                        <span class=four></span> Transform-origin: center top; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->
+                    
+                    <!-- a) Container1 / 4) Element4 : transform-origin: center bottom  -->
+                    <span class=three></span> .element4 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                                                   
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br> 
+                    
+                    <span class=three></span> .element4:hover {  <br>                                                  
+                        <span class=four></span> Transform: rotate(360deg) ; <br>
+                        <span class=four></span> Transform-origin: center bottom; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->                        
+                    
+                    <!-- a) Container1 / 5) Element5 : transform-origin: right center  -->                        
+                    <span class=three></span> .element5 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                                                                               
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br>                                                                                                              
+
+                    <span class=three></span> .element5:hover {  <br>                                                  
+                        <span class=four></span> Transform: rotate(360deg) ; <br>
+                        <span class=four></span> Transform-origin: right center; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->                        
+
+                    <!-- a) Container1 / 6) Element6 : transform-origin: left center  -->
+                    <span class=three></span> .element6 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                       
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br>                                                                                                              
+                    
+                    <span class=three></span> .element6:hover {  <br>                                                  
+                        <span class=four></span> Transform: rotate(360deg) ; <br>
+                        <span class=four></span> Transform-origin: left center; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->                        
+
+                    <!-- a) Container1 / 7) Element7 : transform-origin: top center  -->
+                    <span class=three></span> .element7 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                                                                               
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br>                                                                                                              
+                                        
+                <span class=three></span> .element7:hover {  <br>                                                  
+                    <span class=four></span> Transform: rotate(360deg) ; <br>
+                    <span class=four></span> Transform-origin: top center ; <br>
+                <span class=three></span>  }  <br>                                                  
+                <!-- ------------------------------------------------ -->                        
+                
+                    <!-- a) Container1 / 8) Element8 : transform-origin: bottom center  -->
+                    <span class=three></span> .element8 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                       
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br>                                                                                                              
+                
+                    <span class=three></span> .element8:hover {  <br>                                                  
+                        <span class=four></span> Transform: rotate(360deg) ; <br>
+                        <span class=four></span> Transform-origin: bottom center ; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->                        
+                                                                                                                                                                                
+                    <!-- ------------------------------------------------------------------------ -->
+            <span class=one></span>  ====================================================================  <br>                                              
+                <span class=two></span> // {Example2: container2 & [{TranslateZ Effect} to all it's child] & 3 vlaues transforming of the Transform-origin} : [Result : {All elements will be transformed in to it's assigned Transform effect type & displayed in [Transfrom-sytle:preserve-3d] mode }: <br>
+                    <!-- a) Container2:  3d-transforming : TranslatingZ Effect  -->
+                    <span class=three></span> .container2 {  <br>
+                        <span class=four></span> widht:500px; <br>                                                                                                                          
+                        <span class=four></span> height: 600px; <br>                                                                                                                          
+                        <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=four></span> dispaly: block; <br>                                                                                                                              
+                        <span class=four></span> position: ralative; <br>                            
+                    <span class=three></span>  }  <br>                                              
+                        
+                    <!-- a) Container2 / 1) Element1 : transform-origin: center right  -->
+                    <span class=three></span> .element1 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#f00; <br>                                                                   
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br>                                                                                                              
+                        
+                    <span class=three></span> .element1:hover {  <br>                                                  
+                        <span class=four></span> Transform: translateZ(100px) ; <br>
+                        <span class=four></span> Transform-origin: center right; <br>
+                    <span class=three></span>  }  <br>                                                                                              
+                        <!-- ------------------------------------------------ -->
+                    
+                    <!-- a) Container2 / 2) Element2 : transform-origin: center left  -->
+                    <span class=three></span> .element2 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#00f; <br>                                 
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                                                             
+                    <span class=three></span>  }  <br>                                                                                                              
+
+                    <span class=three></span> .element2:hover {  <br>                                                  
+                        <span class=four></span> Transform: translateZ(100px) ; <br>
+                        <span class=four></span> Transform-origin: center left; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->
+
+                    <!-- a) Container2 / 3) Element3 : transform-origin: center top  -->
+                    <span class=three></span> .element3 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                                               
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br>                                                                                                              
+                    
+                    <span class=three></span> .element3:hover {  <br>                                                  
+                        <span class=four></span> Transform: translateZ(100px) ; <br>
+                        <span class=four></span> Transform-origin: center top; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->
+                    
+                    <!-- a) Container2 / 4) Element4 : transform-origin: center bottom  -->
+                    <span class=three></span> .element4 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                       
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br> 
+                    
+                    <span class=three></span> .element4:hover {  <br>                                                  
+                        <span class=four></span> Transform: translateZ(100px) ; <br>
+                        <span class=four></span> Transform-origin: center bottom; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->                        
+                    
+                    <!-- a) Container2 / 5) Element5 : transform-origin: right center  -->                        
+                    <span class=three></span> .element5 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                     
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br>                                                                                                              
+
+                    <span class=three></span> .element5:hover {  <br>                                                  
+                        <span class=four></span> Transform: translateZ(100px) ; <br>
+                        <span class=four></span> Transform-origin: right center; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->                        
+
+                    <!-- a) Container2 / 6) Element6 : transform-origin: left center  -->
+                    <span class=three></span> .element6 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                       
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br>                                                                                                              
+                    
+                    <span class=three></span> .element6:hover {  <br>                                                  
+                        <span class=four></span> Transform: translateZ(100px) ; <br>
+                        <span class=four></span> Transform-origin: left center; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->                        
+
+                    <!-- a) Container2 / 7) Element7 : transform-origin: top center  -->
+                    <span class=three></span> .element7 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                                                                               
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                                                        
+                    <span class=three></span>  }  <br>                                                           
+
+                                        
+                <span class=three></span> .element7:hover {  <br>                                                  
+                    <span class=four></span> Transform: translateZ(100px) ; <br>
+                    <span class=four></span> Transform-origin: top center ; <br>
+                <span class=three></span>  }  <br>                                                  
+                <!-- ------------------------------------------------ -->                        
+                
+                    <!-- a) Container2 / 8) Element8 : transform-origin: bottom center  -->
+                    <span class=three></span> .element8 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                     
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                              
+                    <span class=three></span>  }  <br>                                                                                                              
+                
+                    <span class=three></span> .element8:hover {  <br>                                                  
+                        <span class=four></span> Transform: translateZ(100px) ; <br>
+                        <span class=four></span> Transform-origin: bottom center ; <br>
+                    <span class=three></span>  }  <br>                                                  
+                        <!-- ------------------------------------------------ -->                                                                                                                                                                                                                         
+                    <!-- ------------------------------------------------------------------------ -->
+            <span class=one></span>  ====================================================================  <br>                                              
+                <span class=two></span> // {Example3: container3 & [{ScaleZ Effect} to all it's child] & 3 vlaues transforming of the Transform-origin} : [Result : {All elements will be transformed in to it's assigned Transform effect type & displayed in [Transfrom-sytle:preserve-3d] mode }: <br>
+                    <!-- a) Container3:  3d-transforming : ScaleZ Effect  -->
+                    <span class=three></span> .container3 {  <br>
+                        <span class=four></span> widht:500px; <br>                                                                                                                          
+                        <span class=four></span> height: 600px; <br>                                                                                                                          
+                        <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=four></span> dispaly: block; <br>                                                                                                                              
+                        <span class=four></span> position: ralative; <br>                            
+                    <span class=three></span>  }  <br>                                              
+                        
+                    <!-- a) Container3 / 1) Element1 : transform-origin: center right  -->
+                    <span class=three></span> .element1 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#f00; <br>                                                                   
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br>                                                                                                              
+                        
+                    <span class=three></span> .element1:hover {  <br>                                                  
+                        <span class=four></span> Transform: scaleZ(1.5) ; <br>
+                        <span class=four></span> Transform-origin: center right; <br>
+                    <span class=three></span>  }  <br>                                                                                              
+                        <!-- ------------------------------------------------ -->
+                    
+                    <!-- a) Container3 / 2) Element2 : transform-origin: center left  -->
+                    <span class=three></span> .element2 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#00f; <br>                                 
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                                                             
+                    <span class=three></span>  }  <br>                                                                                                              
+
+                    <span class=three></span> .element2:hover {  <br>                                                  
+                        <span class=four></span> Transform: scaleZ(1.5) ; <br>
+                        <span class=four></span> Transform-origin: center left; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->
+
+                    <!-- a) Container3 / 3) Element3 : transform-origin: center top  -->
+                    <span class=three></span> .element3 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                                               
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br>                                                                                                              
+                    
+                    <span class=three></span> .element3:hover {  <br>                                                  
+                        <span class=four></span> Transform: scaleZ(1.5) ; <br>
+                        <span class=four></span> Transform-origin: center top; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->
+                    
+                    <!-- a) Container3 / 4) Element4 : transform-origin: center bottom  -->
+                    <span class=three></span> .element4 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                       
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br> 
+                    
+                    <span class=three></span> .element4:hover {  <br>                                                  
+                        <span class=four></span> Transform: scaleZ(1.5) ; <br>
+                        <span class=four></span> Transform-origin: center bottom; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->                        
+                    
+                    <!-- a) Container3 / 5) Element5 : transform-origin: right center  -->                        
+                    <span class=three></span> .element5 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                     
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br>                                                                                                              
+
+                    <span class=three></span> .element5:hover {  <br>                                                  
+                        <span class=four></span> Transform: scaleZ(1.5) ; <br>
+                        <span class=four></span> Transform-origin: right center; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->                        
+
+                    <!-- a) Container3 / 6) Element6 : transform-origin: left center  -->
+                    <span class=three></span> .element6 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                       
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                            
+                    <span class=three></span>  }  <br>                                                                                                              
+                    
+                    <span class=three></span> .element6:hover {  <br>                                                  
+                        <span class=four></span> Transform: scaleZ(1.5) ; <br>
+                        <span class=four></span> Transform-origin: left center; <br>
+                    <span class=three></span>  }  <br>                                                  
+                    <!-- ------------------------------------------------ -->                        
+
+                    <!-- a) Container3 / 7) Element7 : transform-origin: top center  -->
+                    <span class=three></span> .element7 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                                                                               
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                                                        
+                    <span class=three></span>  }  <br>                                                           
+                                        
+                <span class=three></span> .element7:hover {  <br>                                                  
+                    <span class=four></span> Transform: scaleZ(1.5) ; <br>
+                    <span class=four></span> Transform-origin: top center ; <br>
+                <span class=three></span>  }  <br>                                                  
+                <!-- ------------------------------------------------ -->                        
+                
+                    <!-- a) Container3 / 8) Element8 : transform-origin: bottom center  -->
+                    <span class=three></span> .element8 {  <br>                                                  
+                        <span class=four></span> position: absolute; <br>
+                        <span class=four></span> left:0px; <br>
+                        <span class=four></span> top:0px; <br>           
+                        <span class=four></span> background-color:#080; <br>                                     
+                        <span class=four></span> transition: all 1s ease-in-out; <br>                              
+                    <span class=three></span>  }  <br>                                                                                                              
+                
+                    <span class=three></span> .element8:hover {  <br>                                                  
+                        <span class=four></span> Transform: scaleZ(1.5) ; <br>
+                        <span class=four></span> Transform-origin: bottom center ; <br>
+                    <span class=three></span>  }  <br>                                                  
+                        <!-- ------------------------------------------------ -->                                                                                                                                                                                                                         
+                    <!-- ------------------------------------------------------------------------ -->
+                <span class=two></span>  ====================================================================  <br>                                                                                                              
+                <span class=two></span>  ====================================================================  <br>                                                                      
+                <span class=two></span>  ====================================================================  <br>                                                                      
+    
+            <span class= one></span> // B) {Transform-Style} => [3 Different types of Containers with (3) types of Transforming] and [2 Elements of 2 types of 3D- transform-Style & with one transform-origin: center center]  Syntaxes:  <br>
+                
+                <!-- B) Tranasform-style => Example 1: conatianer1 : Rotate() effect -->
+                <span class=two></span> // {Example1: container1 with [{Rotating Effect} to all it's child] & (3) vlaues of the Transform-origin to each child}: <br>
+                        <span class=three></span> body {  <br>
+                            <span class=four></span> perspective: 600px ; <br>
+                        <span class=three></span>  }  <br>                                              
+
+                        <!-- b) Container1:  3d-transforming : Rotating Effect  -->
+                        <span class=three></span> .container1 {  <br>                                                                              
+                            <span class=four></span> widht:500px; <br>                                                                                                                          
+                            <span class=four></span> height: 600px; <br>                                                                                                                          
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> position: ralative; <br>                            
+                        <span class=three></span>  }  <br>                                              
+                            
+                        <!-- b) Container1 / 1) Element1 :  transform-style: flat ; transform-origin: center center ; Transition: all 1s ease-in-out  -->
+                        <span class=three></span> .element1 {  <br>                                                  
+                            <span class=four></span> position: absolute; <br>
+                            <span class=four></span> left:0px; <br>
+                            <span class=four></span> top:0px; <br>           
+                            <span class=four></span> background-color:#f00; <br>                                                                   
+                            <span class=four></span> transition: all 1s ease-in-out ; <br>
+                            <span class=four></span> Transform-origin: center center; <br>
+                            <span class=four></span> transfrom-style: flat ; <br>
+                        <span class=three></span>  }  <br>                                                                                                              
+                            
+                        <span class=three></span> .element1:hover {  <br>                                                  
+                            <span class=four></span> Transform: rotate(360deg) ; <br>
+                        <span class=three></span>  }  <br>                                                                                              
+                            <!-- ------------------------------------------------ -->
+                            
+                        <!-- b) Container1 / 2) Element2 :  transform-style: preserve-3d ; transform-origin: center center ; Transition: all 1s ease-in-out  -->
+                        <span class=three></span> .element2 {  <br>                                                  
+                            <span class=four></span> position: absolute; <br>
+                            <span class=four></span> left:0px; <br>
+                            <span class=four></span> top:0px; <br>           
+                            <span class=four></span> background-color:#f00; <br>                                                                   
+                            <span class=four></span> transition: all 1s ease-in-out ; <br>
+                            <span class=four></span> Transform-origin: center center; <br>
+                            <span class=four></span> transfrom-style: preserve-3d ; <br>
+                        <span class=three></span>  }  <br>                                                                                                              
+                            
+                        <span class=three></span> .element2:hover {  <br>                                                  
+                            <span class=four></span> Transform: rotate(360deg) ; <br>
+                        <span class=three></span>  }  <br>                                                                                              
+                        <!-- ------------------------------------------------ -->                                                                        
+                        <!-- ------------------------------------------------ -->                                                    
+                    
+                    <!-- B) Tranasform-style => Example 2: container2 : translatez() effect -->
+                    <span class=two></span> // {Example2: container2 with [{TranslateZ() Effect} to all it's child] & (3) vlaues of the Transform-origin to each child} : <br>
+                        <span class=three></span> body {  <br>
+                            <span class=four></span> perspective: 600px ; <br>
+                        <span class=three></span>  }  <br>                                              
+
+                        <!-- b) Container2:  3d-transforming : translateZ() Effect  -->
+                        <span class=three></span> .container2 {  <br>                                                                              
+                            <span class=four></span> widht:500px; <br>                                                                                                                          
+                            <span class=four></span> height: 600px; <br>                                                                                                                          
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> position: ralative; <br>                                                        
+                        <span class=three></span>  }  <br>                                              
+                            
+                        <!-- b) Container2 / 1) Element1 :  transform-style: flat ; transform-origin: center center ; Transition: all 1s ease-in-out  -->
+                        <span class=three></span> .element1 {  <br>                                                  
+                            <span class=four></span> position: absolute; <br>
+                            <span class=four></span> left:0px; <br>
+                            <span class=four></span> top:0px; <br>           
+                            <span class=four></span> background-color:#f00; <br>                                                                   
+                            <span class=four></span> transition: all 1s ease-in-out ; <br>
+                            <span class=four></span> Transform-origin: center center; <br>
+                            <span class=four></span> transfrom-style: flat ; <br>
+
+                        <span class=three></span>  }  <br>                                                                                                              
+                            
+                        <span class=three></span> .element1:hover {  <br>                                                  
+                            <span class=four></span> Transform: tranaslateZ(100px) ; <br>
+                        <span class=three></span>  }  <br>                                                                                              
+                            <!-- ------------------------------------------------ -->
+                            
+                        <!-- b) Container2 / 2) Element2 :  transform-style: preserve-3d ; transform-origin: center center ; Transition: all 1s ease-in-out  -->
+                        <span class=three></span> .element2 {  <br>                                                  
+                            <span class=four></span> position: absolute; <br>
+                            <span class=four></span> left:0px; <br>
+                            <span class=four></span> top:0px; <br>           
+                            <span class=four></span> background-color:#f00; <br>                                                                   
+                            <span class=four></span> transition: all 1s ease-in-out ; <br>
+                            <span class=four></span> Transform-origin: center center; <br>
+                            <span class=four></span> transfrom-style: preserve-3d ; <br>
+                        <span class=three></span>  }  <br>                                                                                                              
+                            
+                        <span class=three></span> .element2:hover {  <br>                                                  
+                            <span class=four></span> Transform: tranaslateZ(100px) ; <br>
+                        <span class=three></span>  }  <br>                                                                                              
+                        <!-- ------------------------------------------------ -->                                                    
+                        <!-- ------------------------------------------------ -->                                                    
+                        <!-- ------------------------------------------------ -->                                                    
+                    
+                    <!-- b) Tranasform-style => Example 3: conatianer3 : scaleZ() effect -->
+                    <span class=two></span> // {Example2: container2 with [{scaleZ() Effect} to all it's child] & (3) vlaues of the Transform-origin to each child} : <br>
+                        <span class=three></span> body {  <br>
+                            <span class=four></span> perspective: 600px ; <br>
+                        <span class=three></span>  }  <br>                                              
+
+                        <!-- b) Container3:  3d-transforming : scaleZ() Effect  -->
+                        <span class=three></span> .container3 {  <br>                                                                              
+                            <span class=four></span> widht:500px; <br>                                                                                                                          
+                            <span class=four></span> height: 600px; <br>                                                                                                                          
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> position: ralative; <br>                                                        
+                        <span class=three></span>  }  <br>                                              
+                            
+                        <!-- b) Container3 / 1) Element1 :  transform-style: flat ; transform-origin: center center ; Transition: all 1s ease-in-out  -->
+                        <span class=three></span> .element1 {  <br>                                                  
+                            <span class=four></span> position: absolute; <br>
+                            <span class=four></span> left:0px; <br>
+                            <span class=four></span> top:0px; <br>           
+                            <span class=four></span> background-color:#f00; <br>                                                                   
+                            <span class=four></span> transition: all 1s ease-in-out ; <br>
+                            <span class=four></span> Transform-origin: center center; <br>
+                            <span class=four></span> transfrom-style: flat ; <br>
+
+                        <span class=three></span>  }  <br>                                                                                                              
+                            
+                        <span class=three></span> .element1:hover {  <br>                                                  
+                            <span class=four></span> Transform: scaleZ(1.5) ; <br>
+                        <span class=three></span>  }  <br>                                                                                              
+                            <!-- ------------------------------------------------ -->
+                            
+                        <!-- b) Container3 / 2) Element2 :  transform-style: preserve-3d ; transform-origin: center center ; Transition: all 1s ease-in-out  -->
+                        <span class=three></span> .element2 {  <br>                                                  
+                            <span class=four></span> position: absolute; <br>
+                            <span class=four></span> left:0px; <br>
+                            <span class=four></span> top:0px; <br>           
+                            <span class=four></span> background-color:#f00; <br>                                                                   
+                            <span class=four></span> transition: all 1s ease-in-out ; <br>
+                            <span class=four></span> Transform-origin: center center; <br>
+                            <span class=four></span> transfrom-style: preserve-3d ; <br>
+                        <span class=three></span>  }  <br>                                                                                                              
+                            
+                        <span class=three></span> .element2:hover {  <br>                                                  
+                            <span class=four></span> Transform: scaleZ(1.5) ; <br>
+                        <span class=three></span>  }  <br>                                                                                              
+                        <!-- ------------------------------------------------ -->                                                    
+                        <!-- ------------------------------------------------ -->                                                    
+                // ------------------------------------------------------------------------------ <br><br>                                                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                                                                                
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                                                                
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="JSDOMPract">
+
+            <header>
+                <h3> [3D Transform - Transform Origin, Style] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following is the Applied example of { [3D-Transform-origin] & [3d-Transform-style] with different kinds of Transforms } : <br>
+                
+            <p> (2) Fieldsets contain (3) sections for each (of 3 types of transform types) && Each Section has all options available in the Property of this section as following:  </p>
+            
+            <ul>
+                <li> A) First Fieldset: { Tranform-origin }: And it has (3) Sections as following :  </li>                                                        
+                    <ol>
+                        <li> Rotate() Effect : and it has (6) sub Secitons as follwing : </li>                      
+                            <ul>
+                                <li> (1) Sub Section : Rotate Transform With [transform-origin: right center] </li>
+                                <li> (2) Sub Section : Rotate Transform With [transform-origin: left center] </li>
+                                <li> (3) Sub Section : Rotate Transform With [transform-origin: top center] </li>
+                                <li> (4) Sub Section : Rotate Transform With [transform-origin: bottom center] </li>
+                                <li> (5) Sub Section : Rotate Transform With [transform-origin: center center] </li>
+                            </ul>
+
+                        <li> Transalte() Effect </li>        
+                            <ul>
+                                <li> (1) Sub Section : Transalte Transform With [transform-origin: right center] </li>
+                                <li> (2) Sub Section : Transalte Transform With [transform-origin: left center] </li>
+                                <li> (3) Sub Section : Transalte Transform With [transform-origin: top center] </li>
+                                <li> (4) Sub Section : Transalte Transform With [transform-origin: bottom center] </li>
+                                <li> (5) Sub Section : Transalte Transform With [transform-origin: center center] </li>
+                            </ul>
+
+                        <li> Scale() Effect </li>        
+                            <ul>
+                                <li> (1) Sub Section : Scale Transform With [transform-origin: right center] </li>
+                                <li> (2) Sub Section : Scale Transform With [transform-origin: left center] </li>
+                                <li> (3) Sub Section : Scale Transform With [transform-origin: top center] </li>
+                                <li> (4) Sub Section : Scale Transform With [transform-origin: bottom center] </li>
+                                <li> (5) Sub Section : Scale Transform With [transform-origin: center center] </li>
+                            </ul>
+                    </ol>   
+            
+                <!-- ========================================================================= -->
+                <li> B) Second Fieldset: { Transform-Style }: And it has (3) Sections with fixed tranform-origin: center center as following :  </li>                                                        
+                    <ol>
+                        <li> Rotate() Effect : and it has (2) sub Secitons as following : </li>                      
+                            <ul>
+                                <li> (1) Sub Section : Rotate(360deg) Transform With [transform-style: flat] </li>
+                                <li> (2) Sub Section : Rotate(360deg) Transform With [transform-style: preserve-3d] </li>                                
+                            </ul>
+                            
+                        <li> Translate() Effect </li>        
+                            <ul>
+                                <li> (1) Sub Section : TranslateZ Transform With [transform-style: flat] </li>
+                                <li> (2) Sub Section : TranslateZ Transform With [transform-style: preserve-3d] </li>                                                                
+                            </ul>
+                            
+                        <li> Scale() Effect </li>        
+                            <ul>
+                                <li> (1) Sub Section : ScaleZ Transform With [transform-style: flat] </li>
+                                <li> (2) Sub Section : ScaleZ Transform With [transform-style: preserve-3d] </li>
+                            </ul>
+                    </ol>   
+            </ul>                                                
+
+            <!-- -------------------------------------------------------------------------------------- -->                                                            
+                <br>
+                <hr>
+        <!-- ========================================================================= -->
+    <!-- Still have to Write the CSS3 Codes : >>>>>>>>>>>>>>>>>> -->
+            
+            <!-- A) Transform-Origin Application  -->
+            <fieldset class='Transform-Origin'>  
+                <legend> Transform-Origin Property only: </legend>
+                
+                <!-- Transform-Origin / Rotating : 360deg   -->
+                <fieldset class="Rotate">
+                    <legend> all Children Elements: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: Different Values + Transform-style: preserve-3d} </legend>
+                    
+                    <div class='Rot-Center-Center'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: center center + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                            
+                    
+                    <div class='Rot-Right-Center'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: right center + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                            
+                    
+                    <div class='Rot-Left-Center'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: left center + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                            
+                    
+                    <div class='Rot-Top-Center'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: top center + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                            
+                    
+                    <div class='Rot-Bottom-Center'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: bottom center + Tranasform-style: preserve-3d}
+                    </div> <hr> <br> 
+                    <!-- ---------------------------------------------------------------------------------------- -->
+                    
+                    <div class='Rot-Center-Right'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: center right + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Rot-Center-Left'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: center left + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Rot-Center-Top'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: center top + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Rot-Center-Bottom'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: center bottom + Tranasform-style: preserve-3d}
+                    </div> <hr> <br>                                                                           
+                    <!-- ---------------------------------------------------------------------------------------- -->
+                    
+                    <div class='Rot-Right-Top'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: right top + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Rot-Right-Bottom'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: right bottom + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Rot-Left-Top'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin:  left top + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Rot-Left-Bottom'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: left bottom + Tranasform-style: preserve-3d}
+                    </div> <hr> <br>                                                                           
+
+                    <br> <br>                                                                        
+                </fieldset>
+                <!-- --------------------------------------------- -->
+                <!-- --------------------------------------------- -->                
+                
+                <!--Transform-Origin / Translating : 100px   -->
+                <fieldset class="Translate">
+                    <legend> B) Translate fieldSet: All Children Elements: {3D-Transform}: TransalteZ(100px) + {containers}:Transform-Origin: Different Values + Tranasform-style: preserve-3d} </legend>                    
+                    
+                    <div class='Trans-Center-Center'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin: Center center + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                            
+                    
+                    <div class='Trans-Right-Center'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin: right center + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                            
+                    
+                    <div class='Trans-Left-Center'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin: left center + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                            
+                    
+                    <div class='Trans-Top-Center'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin: top center + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                            
+                    
+                    <div class='Trans-Bottom-Center'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin: bottom center + Tranasform-style: preserve-3d}
+                    </div>  <hr> <br>                                                                            
+                    <!-- ---------------------------------------------------------------------------------------- -->
+                    
+                    <div class='Trans-Center-Right'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin: center right + Transform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Trans-Center-Left'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin: center left + Transform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Trans-Center-Top'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin: center top + Transform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Trans-Center-Bottom'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin: center bottom + Transform-style: preserve-3d}
+                    </div>  <hr>  <br>                                                                           
+                    <!-- ---------------------------------------------------------------------------------------- -->
+                    
+                    <div class='Trans-Right-Top'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin: right top + Transform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Trans-Right-Bottom'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin: right bottom + Transform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Trans-Left-Top'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin:  left top + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Trans-Left-Bottom'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin: left bottom + Tranasform-style: preserve-3d}
+                    </div> <hr>  <br>                                                                           
+                    <br> <br>                                                                        
+                </fieldset>                
+                <!-- ---------------------------------------------------------------------------------------- -->
+                <!-- ---------------------------------------------------------------------------------------- -->
+                
+                <!--Transform-Origin / Scaling  : 1.5   -->
+                <fieldset class="Scale">
+                    <legend> C) ScaleZ fieldSet: All Children Elements: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: Different Values + Tranasform-style: preserve-3d} </legend>
+                    
+                    <div class='Scale-Center-Center'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: center center + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                            
+                    
+                    <div class='Scale-Right-Center'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: right center + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                            
+                    
+                    <div class='Scale-Left-Center'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: left center + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                            
+                    
+                    <div class='Scale-Top-Center'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: top center + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                            
+                    
+                    <div class='Scale-Bottom-Center'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: bottom center + Tranasform-style: preserve-3d}
+                    </div>  <hr> <br>
+                    <!-- ---------------------------------------------------------------------------------------- -->
+                    
+                    <div class='Scale-Center-Right'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: center right + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Scale-Center-Left'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: center left + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Scale-Center-Top'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: center top + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Scale-Center-Bottom'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: center bottom + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+                    <br>  <hr> <br>                                                                        
+                    <!-- ---------------------------------------------------------------------------------------- -->
+                    
+                    <div class='Scale-Right-Top'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: right top + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Scale-Right-Bottom'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: right bottom + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Scale-Left-Top'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: left top + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+
+                    <div class='Scale-Left-Bottom'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: left bottom + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                           
+                    <br> <br>                                                                        
+                </fieldset>                
+                <br><br><hr>
+            </fieldset>                                                                                        
+        <!-- ========================================================================================= -->            
+        <!-- ========================================================================= -->                                                                                     
+        <!-- ========================================================================= -->                                              
+            <hr>                
+            <hr>                               
+            
+            <!-- B) Transform-Style Application  -->
+            <fieldset class='Transform-Style'>  
+                <legend> Transform-Style Property only: </legend>
+                
+                <!-- B) Transform-Style / Rotating : 360deg   -->         
+                <fieldset class="Rotate">
+                    <legend> A)Transform-Style/ 1) Rotate Effect: All Children Elements: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: center center + Transform-style: Flat, preserve-3d} </legend>
+                    
+                    <div class='Rot-Flat'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: center center + Tranasform-style: Flat}
+                    </div> <br>                                                                            
+                    
+                    <div class='Rot-Preserve'>
+                        Element: {3D-Transform}: Rotate(360deg) + {containers}:Transform-Origin: center center + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                            
+                                        
+                    <br> <br>                                                                        
+                </fieldset>   
+                
+                <hr>
+                <!-- --------------------------------------------- -->
+                <!-- --------------------------------------------- -->                
+                
+                <!-- B) Transform-Style / Translating : 100px   -->         
+                <fieldset class="Translate">
+                    <legend> B) Transform-Style/  2) Translate Effect: All Children Elements: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin: center center + Transform-style: Flat, preserve-3d} </legend>
+                    
+                    <div class='Trans-Flat'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin:  Center center + Transform-style: Flat}
+                    </div> <br>                                                                            
+                    
+                    <div class='Trans-Preserve'>
+                        Element: {3D-Transform}: TranslateZ(100px) + {containers}:Transform-Origin: center center + Tranasform-style: preserve-3d}
+                    </div> <br>                                                                                                                    
+                    <br> <br>                                                                        
+                </fieldset>                
+
+                <hr> <br>
+                <!-- ---------------------------------------------------------------------------------------- -->
+                <!-- ---------------------------------------------------------------------------------------- -->
+                
+                <!-- B) Transform-Style / Scaling : 1.5   -->         
+                <fieldset class="Scale">
+                    <legend> B) Transform-Style/  3) Scale Effect: All Children Elements: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: center center + Transform-style: Flat, preserve-3d} </legend>
+                    
+                    <div class='Scale-Flat'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: Center center + Transform-style: Flat}
+                    </div> <br>                                                                            
+                    
+                    <div class='Scale-Preserve'>
+                        Element: {3D-Transform}: ScaleZ(1.5) + {containers}:Transform-Origin: center center + Transform-style: preserve-3d}
+                    </div> <br>                                                                                                                    
+                    <br> <br>                                                                        
+                </fieldset>                                
+                <!-- ---------------------------------------------------------------------------------------- -->                
+                <!-- ---------------------------------------------------------------------------------------- -->
+                <!--  C) Transform-Style-Multiple elements: -->
+                <fieldset class="Trans-Style-Mult">
+                    <legend> B) Transform-Style-Multiple /  4) Effects: (3) Children Elements: With different {3D-Transform} Effects: ScaleZ(1.5) + {containers}:Transform-Origin: center center + Transform-style: Flat, preserve-3d} </legend>
+                    
+                    <header>
+
+                        <h3> (1) Parent Container {with Following Setting} : </h3>
+                            <ul>
+                                <li> Transform-Origin : center center  </li>
+                                <li> Transform-Style: Flat {in fixed Mode} & Preserve-3d in Hovering </li>
+                                <li> perspective : 1000px  </li>
+                            </ul>                            
+                        <br>
+                        <hr>
+
+                        <h3> (3) Children elements as following {in Fixed Mode}: </h3>
+                            <ul>
+                                <li> Child1 : RotateX(30deg) + TranslateX(100px) + ScaleZ(1)  </li>
+                                <li> Child2 : RotateX(-40deg) + TranslateY(100px) + ScaleZ(1.2)  </li>
+                                <li> Child3 : RotateY(70deg) + TranslateZ(100px) + ScaleZ(1.5)  </li>
+                            </ul>
+                    </header>
+
+                    <div class='Parent'>                        
+                        <div class='Child1'>
+                            Element: {3D-Transform}:  RotateX(30deg) + TranslateX(100px) + ScaleZ(1)  || Transform-Origin: center center }
+                        </div> <br>                                                                                                                    
+
+                        <div class='Child2'>
+                            Element: {3D-Transform}:  RotateX(-40deg) + TranslateY(100px) + ScaleZ(1.2)  || Transform-Origin: center center }
+                        </div> <br>                                                                                                                    
+
+                        <div class='Child3'>
+                            Element: {3D-Transform}:  RotateY(70deg) + TranslateZ(100px) + ScaleZ(1.5)  || Transform-Origin: center center }
+                        </div> <br>                                                                                                                    
+
+                    </div> <br>                                                                            
+                    
+                    <br> <br>                                                                        
+                </fieldset>                
+
+                <br><br><hr> 
+            </fieldset>                                                                                        
+        <!-- ========================================================================================= -->            
+        <!-- ========================================================================= -->                                                                                     
+        <!-- ========================================================================= -->                                              
+            <hr>                
+            <hr>                               
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 20 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=auOQt69OyJo&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=20&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>1
+            
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\20 Css3 - 3D Transform - Transform Origin, Style.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 20 [3D Transform - Transform Origin, Style ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

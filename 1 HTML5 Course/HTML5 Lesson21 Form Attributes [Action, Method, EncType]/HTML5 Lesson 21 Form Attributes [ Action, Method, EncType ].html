@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 21 Form Attributes [Action, Method, EncType] </title>
+    <link rel="stylesheet" href="HTML5 Form Attributes [Action, Method, EncType].css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">  </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 21 Form Attributes [Action, Method, EncType]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="HTML5 Form Attributes [Action, Method, EncType] + Vip Attributes for Input [Disabled , Required] Main Concept" > HTML5 Form new Attributes Main Concept </a> </li>            
+            <li> <a href=#FormActionNTag   title="Go to Form Attribute / AutoComplete" > Form Attribute =>                       Action  </a> </li>     
+            <li> <a href=#FormMethodNTag   title="Go to Input Attribute / AutoFocus" > Input Attribute =>                       Method  </a> </li>     
+            <li> <a href=#FormEncTypeNTag   title="Go to Form Attribute / NoValidate" > Form Attribute =>                       EncType </a> </li>   
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> Lesson 21 {Form Attributes [Action, Method, EncType] }                              </span> 
+    </main>
+
+<!-------------------------------------------------------------------------------------------------------------->                        
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>                 
+                HTML5 Form new Attributes => [Action, Method, EncType] Concept 
+            </header>
+            
+            <article>                                                
+                <p> &gt; The New HTML5 Form new Attributes in this lesson as following :</p>
+                <ol>                    
+                    <li> &lt;  Form &nbsp;&nbsp; Action &nbsp; &gt;  </li>           
+                    <li> &lt;  Form &nbsp;&nbsp; Method &nbsp; &gt;  </li>           
+                    <li> &lt;  Form &nbsp;&nbsp; EncType &nbsp; &gt;  </li>                     
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>
+        
+        <section class="FormActionNTag" id="FormActionNTag">
+            <header>
+                Form Attribute [ &lt; form  &nbsp; action = "" &gt; ] <br>
+                Input override Attribute [ &lt; input &nbsp; formaction = "" &nbsp; &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Form Attribute [Action] Concept: </h1>
+                    <p> =&gt; [Action Attribute] is one of the old Form Attributes in HTML4 and HTML5.
+                    <p> =&gt; [Action Attribute] is to specify the location or file in server where the Form inputs               fields data will go <span class="FixSpace">to,</span> and once it has been sent to the               server the Back End langauage will start process it and then send it 
+                              <span class="FixSpace">to</span> the data base by database language like Mysql.          
+                    <p> =&gt; [Action Attribute] if it was empty or unspecified => the action of the form will be the             current page by <span class="FixSpace">default.</span>          
+                    
+                    <h1> Input override Attribute [FormAction = ""] Concept: </h1>
+                    <p> =&gt; [FormAction Attribute] is one of the new Form Input override Attributes in HTML5.
+                    <p> =&gt; [FormAction Attribute] is to specify another location or file in server to specific Input           (type="submit" <span class="FixSpace">or</span> type="image" only) where the Form inputs             fields data will go to.         
+                    <p> =&gt; [FormAction Attribute] is Valid only for Form Input with Type (Submit) or (Image) only,             and can NOT <span class="FixSpace">work</span> with Input with type (Button).          
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Input Override Attribute [FormAction] Usages: </h1>                    
+                    <p> =&gt; It mainly designed to specify a special Action value (location File) to another Submit               Input in the form, <span class="FixSpace">to</span> allow sending the same the whole form           inputs value to more than one Actions. </p>                         
+                    <p> =&gt; This over Attribute can only work with each (Submit & Image) Input Types, And also can               work with <span class="FixSpace">input</span> type (button) but with previous programing             by javascript. </p>             
+                </header>
+                
+                <header class="FormActionExp">
+                    <h1>Example:</h1>
+                    <p> The next form is containing (2) types of Action, one for the Form main submit default , and         other is <span class="FixSpace">specified</span> for the secondary submit input.</p>
+                    <section>
+                        <h3> Fulfill your data within the form and Sending it to the (2) <mark>different Acitons</mark> : </h3>
+                        <form action="process.php">
+                            
+                            <p>Enter your Username: </p>
+                            <input type="text" name="username1" > <br>                           
+                            
+                            <p>Enter your password: </p>
+                            &nbsp;<input type="password" name="password" > <br>                           
+                            
+                            <input type="submit" value="Send Default">
+                            <input type="submit" value="Send Other" formaction="other.php">                            
+                        </form>
+                    </section>
+                    
+                    <div class="FormActionExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Fulfill your data within the form and Sending it to the (2)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; different Acitons : &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form &nbsp; action="process.php" &gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt; Enter your Username: &lt;p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "text"&nbsp; name="uswername1"&nbsp; &gt;<br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt; Enter your password: &lt;p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "password"&nbsp; name="password"&nbsp; &gt;<br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "send Default"  &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "send Other" &nbsp;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; formaction="other.php"  &gt;<br><br>     
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+    <!------------------------------------------------------------------------------------------------------>
+        
+        <section class="FormMethodNTag" id="FormMethodNTag">
+            <header>
+                Form Attribute [ &lt; form  &nbsp; method = "" &gt; ] <br>
+                Input override Attribute [ &lt; input &nbsp; formmethod = "" &nbsp; &gt; ]                
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Form Attribute [Method] Concept: </h1>
+                    <p> =&gt; [Method Attribute] is one of the old Form Attributes in HTML4 and HTML5.
+                    <p> =&gt; [Method Attribute] is to specify the location or file in server where the Form inputs               fields data <span class="FixSpace">will</span> go to, and once it has been sent to the               server the Back End langauage will start process it and then 
+                              <span class="FixSpace">send</span> it to the data base by database language like Mysql.          
+                    <p> =&gt; [Method Attribute] if it was empty or unspecified => the action of the form will be the             current page by <span class="FixSpace">default.</span>          
+                    
+                    <h1> Input override Attribute [ FormMethod = "" ] Concept: </h1>
+                    <p> =&gt; [FormMethod Attribute] is one of the new Form Input override Attributes in HTML5.
+                    <p> =&gt; [FormMethod Attribute] is to specify another location or file in server to specific Input           (type="submit" <span class="FixSpace">or</span> type="image" only) where the Form inputs             fields data will go to.         
+                    <p> =&gt; [FormMethod Attribute] is Valid only for Form Input with Type (Submit) or (Image) only,             and can <span class="FixSpace">NOT</span> work with Input with type (Button).          
+                    <h1> =&gt; Override [FormMethod Attribute] / [Method Attribute] has (2) main Types:</h1>
+                        <ol>
+                            <li> [Get] => Which is mean to send the Form data to the located Action & Show it in the          Upper address bar to the user.</li>
+                            <li> [Post] => Which is mean to send the Form data to the located Action only <mark>With          out</mark> Showing it in the Upper address bar to the user.</li>
+                        </ol>
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Input Override Attribute [ FormMethod ] Usages: </h1>                    
+                    <p> =&gt; It mainly designed to specify a special Action value (location File) to another Submit               Input in the form, <span class="FixSpace">to</span> allow sending the same the whole form           inputs value to more than one Actions. </p>                         
+                    <p> =&gt; This over Attribute can only work with each (Submit & Image) Input Types, And also can               work with <span class="FixSpace">input</span> type (button) but with previous programing             by javascript. </p>             
+                </header>
+                
+                <header class="FormMethodExp">
+                    <h1>Example:</h1>
+                    <p> The next form is containing (2) <mark>Types of Methods</mark> Submit, Basic Form Method by (Get)     Type, and <span class="FixSpace">Secondary</span> is by (Post) Type.</p>
+                    <section>
+                        <h3> Fulfill your data within the form and Send it to the (2) different Acitons : </h3>
+                        
+                        <form action="process.php" method="get">
+                            
+                            <p>Enter your Username: </p>
+                            <input type="text" name="username2" > <br><br>                           
+                            
+                            <p>Enter your password: </p>
+                            <input type="password" name="password" > <br>                           
+                            
+                            <input type="submit" value="Send Get">
+                            <input type="submit" value="Send Post" formmethod="post">                            
+                        </form>
+                    </section>
+                    
+                    <div class="FormMethodExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Fulfill your data within the form and Send it to the (2)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; different Methods : &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form &nbsp; action="process.php" &nbsp; method = "get"&gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt; Enter your Username: &lt;p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "text"&nbsp; name="username2"&gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt; Enter your password: &lt;p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "password"&nbsp; name="password"&gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "send Get"  &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "send Post" &nbsp;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; formmethod="post"  &gt;<br><br>     
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br> 
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+    <!-------------------------------------------------------------------------------------------------------------->
+        
+        <section class="FormEncTypeNTag" id="FormEncTypeNTag">
+            <header>
+                Form Attribute: [ &lt; form &nbsp; EncType = "" &gt; ] <br> 
+                Input override Attribute: [ &lt; input &nbsp; formEnctype = "" &nbsp; &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Form New Attribute [EncType] Concept: </h1>
+                    <p> =&gt; [EncType Attribute] is one of the new Form Attribute in HTML5.
+                    
+                    <p> =&gt; [EncType Attribute] is property meant by Encoding form's data which is being sent to the             server (Action), and this Encoding has (3) Types:</p>
+                        <ol>
+                            <li> Default Type [EncType = "application/x-www-form-urlencoded"]: </li>
+                                <p> This is the default Value of EncType Form Attribute</p>
+                                <p> This Type is Encoding the whole Form Data by Hexa Coding for Special Characters & + for Spaces by a Encoding System Called [ASCIIHEX] Value. </p>
+                            
+                            <li> Without Endcoding Type [EncType = "multipart/formdata"] </li>
+                                <p> This Type is not Encoding any part of Form data </p>
+                                <p> This Type is usually used in case of uploading Files to the servers as it is {input     type = "file"} </p>
+                            
+                            <li> Text-plain </li>
+                                <p> This Type is Encoding the spaces only. </p>
+                                <p> This Type is usually used in [Debugging processes]. </p>
+                        </ol>
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Form [EncType] Attribute Usages: </h1>                    
+                    <p> =&gt; It mainly designed to secure the form data sent to the server & selecting the suitable               method to it. 
+                    <p> =&gt; It can be programatically used in Events to as an actions or reactions to make                       change by page or any of <span class="FixSpace">its</span> element/s using Javascript               codes in Front End & PHP Codes in Back End. </p>             
+                    <p> =&gt; It can be applied as a Form's Attribute for the whole Form's Input Feilds, OR for special           Submit Input Field. </p>             
+                </header>
+                
+                <header class="FormEncTypeExp">
+                    <h1>Example:</h1>
+                    <p> Using Different types of Encoding of Form's input fields</p>
+                    <section>
+                        <h3> Enter a vaild value into following input fields with different (3) Encoding types: </h3> <br>
+                        <form>
+                            
+                            <p> Enter your Username: </p>
+                            <input type="text" name="username3" autocomplete> <br><br>   
+                            
+                            <p> Enter your Password: </p>
+                            <input type="password" name="password3" autocomplete> <br><br>   
+                            
+                            <p> Enter your Email: </p>
+                            <input type="email" name="email3" autocomplete> <br><br>   
+                            
+                            <input type="submit"  name="submit-DefaultEnc" value="Send-DefaultEnc" formenctype="application/x-www-form-urlencoded">
+                            <p>Encoding input feilds using ( <mark> Default Enctype </mark> Property )</p><br>
+                                                        
+                            <input type="submit"  name="submit-NonEnc" value="Send-NonEnc" formenctype="multipart/form-data">
+                            <p>Encoding input feilds using ( <mark> Multipart/form-data Enctype [ Non Encoding ] </mark> Property ) </p><br>                            
+                            
+                            
+                            
+                            <input type="submit"  name="submit-SpaceEnc" value="Send-SpaceEnc" formenctype="multipart/form-data">
+                            <p>Encoding input feilds using ( <mark> Text-plain Enctype [ Only Spaces Encoding ] </mark> Property ) </p>                            
+                                                        
+                        </form>
+                    </section>
+                    
+                    <div class="FormEncTypeExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Enter a vaild value into (2) input fields with different status of <br> 
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Autocomplete property : &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form &nbsp; action="process.php" &nbsp; method = "get"&gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt; Enter your Username: &lt;p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "text"&nbsp; name="username2"&gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt; Enter your password: &lt;p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "password"&nbsp; name="password"&gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "send Get"  &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "send Post" &nbsp;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; formmethod="post"  &gt;<br><br>     
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                             
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+    <!------------------------------------------------------------------------------------------------------>
+        
+        
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="12">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num1">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 21 Video File:</h3>
+                <video controls width="300" height="300" autoplay>
+                    <source src="C:/Users/hp/Videos/pLanguages/web/1 Web Designing Front End/A HTML/2 HTML 5/HTML 5/21 Form Attributes - Form [ Action, Method, EncType ].mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                        
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

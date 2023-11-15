@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Lesson 25 [Javascript Array Intro]</title>
+    <link rel="stylesheet" href="JavaScript [Array Intro].css" media="all" />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JavaScript Lesson 25 [JavaScript Array Intro]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to Javascript main Topics">
+            [Javascript Array ] Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a href="#JsArrCon" title="Go to [Javascript Array ] Concept">
+            [Javascript Array] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsArrImp"
+            title="Go to [Javascript Array ] Importance & Benefits"
+          >
+            [Javascript Array] Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a href="#JsArrSynx" title="Go to [Javascript Array ] Syntax Methods">
+            [Javascript Array] Syntax Methods & Ways
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JavaScript Course
+      <span> JavaScript Lesson 25 [Javascript Array Intro] </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>[ Javascript Array] Main Topics :</header>
+
+        <article>
+          <p>&gt; New Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>[Javascript Array] Concept.</li>
+
+            <li>[Javascript Array] Importance & Benefits .</li>
+
+            <li>[Javascript Array] Syntax Methods.</li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrCon" id="JsArrCon">
+        <header>
+          <h3>[Javascript Array] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; [Array] : Is a special Variable which is holding and Storing
+          mulutiple Values of unified Data Type
+        </p>
+
+        <p>
+          =&gt; [Array] : Is a very important Element in any Programing
+          Language, and has the same Concept in any language with some
+          differences in Syntax Methods
+        </p>
+
+        <p>
+          =&gt; [Array] : Is dealing with it's elements by an Index, and JS is a
+          (Zero Based Index Type), Which is meaning it Begain With (0) Number.
+        </p>
+        <p>
+          =&gt; [Array] : Is has a Count or length for it's elements or
+          Components.
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrImp" id="JsArrImp">
+        <header>
+          <h3>[Javascript Array] Importance & Benefits:</h3>
+        </header>
+
+        <p>
+          =&gt; [Array] : Is Essential in dealing with big amounts of variables
+          of same Datatype.
+        </p>
+
+        <p>
+          =&gt; [Array] : Is providing very useful benefits and features in
+          [Adding, Editing, Deleting] Array Elements by merging it with some
+          other JS Advanced Functions such as (Looping Statements) to make
+          dealing with Arrays More Dynamically
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrSynx" id="JsArrSynx">
+        <header>
+          <h3>[Javascript Array] Syntax Methods:</h3>
+        </header>
+        <ol>
+          <li><h3>=&gt; [JS Array Constractor Method] :</h3></li>
+          <ul>
+            <p>=&gt; This Method is not Recommeded to use</p>
+
+            <li>[Constractor Method / Default Decleration]:</li>
+            <p>This Method Array Declaration as following:</p>
+            <div>var arrayName = new Array();</div>
+
+            <p>To Add Array's Elements Values (as Defualt Way) as following:</p>
+            <div>arrayName[Element's Index Number] = Element's Value;</div>
+
+            <p>
+              To Type All Array's Elements Values (Defualt Way) in console as
+              following:
+            </p>
+            <div>console.log(arrayName);</div>
+
+            <p>
+              To Type a specific one Array's Element Value in console as
+              following:
+            </p>
+            <div>console.log(arrayName[Element's Index Number]);</div>
+
+            <li>
+              [Constractor Method / Short Way] Array's Element Inserting :
+            </li>
+            <p>
+              In short Way we write Array Decleration Code in only one Line, but
+              it is NOT useful when dealing with big Amount of Elements, and
+              hard to read the very wide Code
+            </p>
+
+            <div>
+              var arrayName = new Array("Element 1 Value", "Element 2 Value",
+              "Element 3 Value");
+            </div>
+
+            <p>[Constractor Method / Short Way] Practical Example</p>
+
+            <div class="JsArrSynxExp">
+              // Js Array Constractor Method / Short Way:
+              <code>
+                var friends = new array("Shadi", "Sayed", "Mohammed",
+                "Ahmed");<br /><br />
+
+                // Typing All Array Elements in Console Frame Work:<br />
+                console.log(friends);<br /><br />
+
+                // Typing Specific Array Element (by it's Index) in Console
+                Frame Work:<br />
+                console.log(friends[0]);&nbsp;&nbsp;//Typing Array's First
+                Element <br />
+                console.log(friends[1]);&nbsp;&nbsp;//Typing Array's Second
+                Element <br />
+                console.log(friends[2]);&nbsp;&nbsp;//Typing Array's Third
+                Element <br />
+                console.log(friends[3]);&nbsp;&nbsp;//Typing Array's Fourth
+                Element <br />
+                console.log(friends[4]);&nbsp;&nbsp;//Typing Array's Fifth
+                Element <br />
+              </code>
+            </div>
+
+            <li>[Constractor Method / Long Way] Array's Element Inserting :</li>
+            <p>
+              In Long Way we write Array Decleration Code in multiple lines by
+              writing each Element in a line Accendenly, So it can be long Code
+              Vertically but to read whole Code
+            </p>
+
+            <div>
+              var arrayName = new Array( <br />
+              &nbsp; &nbsp; "Element 1 Value", <br />
+              &nbsp; &nbsp; "Element 2 Value", <br />
+              &nbsp; &nbsp; "Element 3 Value" <br />
+              );
+            </div>
+
+            <p>[Constractor Method / Short Way] Practical Example</p>
+
+            <div class="JsArrSynxExp">
+              // Js Array Constractor Method / Long Way:
+
+              <code>
+                var friends = new array( <br />
+                &nbsp; &nbsp; "Shadi", <br />
+                &nbsp; &nbsp; "Sayed", <br />
+                &nbsp; &nbsp; "Mohammed",<br />
+                &nbsp; &nbsp; "Ahmed" <br />
+                &nbsp;&nbsp;); <br /><br />
+
+                // Typing All Array Elements in Console Frame Work: <br />
+                console.log(friends); <br /><br />
+
+                // Typing Specific Array Element (by it's Index) in Console
+                Frame Work:<br />
+                console.log(friends[0]);&nbsp; &nbsp;//Typing Array's First
+                Element <br />
+                console.log(friends[1]);&nbsp; &nbsp;//Typing Array's Second
+                Element <br />
+                console.log(friends[2]);&nbsp; &nbsp;//Typing Array's Third
+                Element <br />
+                console.log(friends[3]);&nbsp; &nbsp;//Typing Array's Fourth
+                Element <br />
+                console.log(friends[4]);&nbsp; &nbsp;//Typing Array's Fifth
+                Element <br />
+              </code>
+            </div>
+          </ul>
+
+          <li><h3>=&gt; [JS Array Literal Method] :</h3></li>
+          <p>=&gt; This Method is Recommeded to use</p>
+
+          <li>[Literal Method / Default Decleration]:</li>
+          <p>This Method Array Declaration as following:</p>
+          <div>var arrayName = [];</div>
+
+          <p>To Add Array's Elements Values (as Defualt Way) as following:</p>
+          <div>arrayName[Element's Index Number] = Element's Value;</div>
+
+          <p>
+            To Type All Array's Elements Values (Defualt Way) in console as
+            following:
+          </p>
+          <div>console.log(arrayName);</div>
+
+          <p>
+            To Type a specific one Array's Element Value in console as
+            following:
+          </p>
+          <div>console.log(arrayName[Element's Index Number]);</div>
+
+          <li>[Literal Method / Short Way] Array's Element Inserting :</li>
+          <p>
+            In short Way we write Array Decleration Code in only one Line, but
+            it is NOT useful when dealing with big Amount of Elements, and hard
+            to read the very wide Code
+          </p>
+
+          <div>
+            var arrayName = ["Element 1 Value", "Element 2 Value", "Element 3
+            Value"];
+          </div>
+
+          <p>[Literal Method / Short Way] Practical Example</p>
+
+          <div class="JsArrSynxExp">
+            // Js Array Literal Method / Short Way:
+            <code>
+              var friends = ["Shadi", "Sayed", "Mohammed", "Ahmed"];<br /><br />
+
+              // Typing All Array Elements in Console Frame Work:<br />
+              console.log(friends);<br /><br />
+
+              // Typing Specific Array Element (by it's Index) in Console Frame
+              Work:<br />
+              console.log(friends[0]);&nbsp;&nbsp;//Typing Array's First Element
+              <br />
+              console.log(friends[1]);&nbsp;&nbsp;//Typing Array's Second
+              Element <br />
+              console.log(friends[2]);&nbsp;&nbsp;//Typing Array's Third Element
+              <br />
+              console.log(friends[3]);&nbsp;&nbsp;//Typing Array's Fourth
+              Element <br />
+              console.log(friends[4]);&nbsp;&nbsp;//Typing Array's Fifth Element
+              <br />
+            </code>
+          </div>
+
+          <li>[Literal Method / Long Way] Array's Element Inserting :</li>
+          <p>
+            In Long Way we write Array Decleration Code in multiple lines by
+            writing each Element in a line Accendenly, So it can be long Code
+            Vertically but to read whole Code
+          </p>
+
+          <div>
+            var arrayName = [ <br />
+            &nbsp; &nbsp; "Element 1 Value", <br />
+            &nbsp; &nbsp; "Element 2 Value", <br />
+            &nbsp; &nbsp; "Element 3 Value" <br />
+            ];
+          </div>
+
+          <p>[Literal Method / Short Way] Practical Example</p>
+
+          <div class="JsArrSynxExp">
+            // Js Array Literal Method / Long Way:
+
+            <code>
+              var friends = [ <br />
+              &nbsp; &nbsp; "Shadi", <br />
+              &nbsp; &nbsp; "Sayed", <br />
+              &nbsp; &nbsp; "Mohammed",<br />
+              &nbsp; &nbsp; "Ahmed" <br />
+              &nbsp;&nbsp;]; <br /><br />
+
+              // Typing All Array Elements in Console Frame Work: <br />
+              console.log(friends); <br /><br />
+
+              // Typing Specific Array Element (by it's Index) in Console Frame
+              Work:<br />
+              console.log(friends[0]);&nbsp; &nbsp;//Typing Array's First
+              Element <br />
+              console.log(friends[1]);&nbsp; &nbsp;//Typing Array's Second
+              Element <br />
+              console.log(friends[2]);&nbsp; &nbsp;//Typing Array's Third
+              Element <br />
+              console.log(friends[3]);&nbsp; &nbsp;//Typing Array's Fourth
+              Element <br />
+              console.log(friends[4]);&nbsp; &nbsp;//Typing Array's Fifth
+              Element <br />
+            </code>
+          </div>
+        </ol>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Intro</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="250"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="365" />
+          <input type="hidden" name="months" value="25" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to get basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num2" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg" />
+          Your browser Does Not Support the Audio file format...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 25 Video File:</h3>
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=acwdyijipPQ&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=25&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+        <!-- <video controls width="300" height="300">
+          <source
+            src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/25 Array Intro.mp4"
+            type="video/mp4"
+          />
+          Your browser Does Not Support the Video file format...
+        </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JavaScript");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

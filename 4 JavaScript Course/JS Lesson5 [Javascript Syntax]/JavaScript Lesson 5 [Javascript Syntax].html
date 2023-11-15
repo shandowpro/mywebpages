@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> JavaScript Lesson 5 [Javascript Syntax] </title>
+    <link rel="stylesheet" href="JavaScript [Javascript Syntax].css" media="all" >
+    
+    <script src="Test.js"> </script>
+    
+    </head>
+
+<body>
+    <header class="Main" id="Main">
+        JavaScript Lesson 5 [Javascript Syntax]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="JavaScript [Javascript Syntax] Main Concept" > [Javascript Syntax] Main Concept" </a> </li>            
+            <li> <a href=#JSIntro Console  title="Go to Introduction Javascript Syntax" >
+                    Introduction Javascript [Syntax] </a> </li>
+            <li> <a href=#JSErrors Console  title="Go to Public Errors" >
+                    [Public Errors] </a> </li>
+            <li> <a href=#JSComments Console  title="Go to Javascript Comments" >
+                    Javascript [Comments] </a> </li>
+            <li> <a href=#JSVars Console  title="Go to Javascript Variables" > 
+                    Javascript [Variables] </a> </li>
+            <li> <a href=#JSConStats Console  title="Go to Javascript Conditional Statements" >
+                    Javascript[Conditional Statements] </a> </li>     
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to JavaScript Course <span> JavaScript Lesson 5 [Javascript Syntax] </span> 
+    </main>
+<!-------------------------------------------------------------------------------------------------------------->                        
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>                 
+                JavaScript [Syntax]
+            </header>
+            
+            <article>                                                
+                <p> &gt; The New Topics in this lesson as following :</p>
+                <ol type="A">                    
+                    <li> Introduction about JS Syntax. </li>
+                    <li> Public Errors. </li>
+                    <li> Comments. </li>
+                    <li> Variables(Vars). </li>
+                    <li> Conditional Statements. </li>                                        
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>       
+        <section class="JSIntro" id="JSIntro">
+            <header>                
+                JavaScript Introduction
+            </header>
+            
+            <article>
+
+                <h2> Main Information about JS Coding Language: </h2>
+                <p> =&gt; [JS] is a very big Programing language, so it has more than one Method or Approach to code, but with the same Syntax Rules.                                                       
+                <p> =&gt; Lesson Will concern on the easeist and readable Way or [Best Practise] to Code with JS.                                                                               
+                <p> =&gt; [JS] has alot of FrameWorks and liabraries, But in this Course We will learn the main Language Code Source.                                                                               
+            </article>       
+        </section>
+
+    <!------------------------------------------------------------------------------------------------------>   
+          <section class="JSErrors" id="JSErrors">
+            <header>                
+                JavaScript [Common Errors]
+            </header>
+            
+            <article>
+
+                <h2> Common Errors in coding with JS Code In External Style: </h2>
+                <p> =&gt; When Writing an External JS File there is a major common mistake many Devs are making which is as following:
+                    <div>
+                        Starting with &lt; Script &gt; is not right ...<br>
+                        but the right method is to Start writing the code <mark>Immediately</mark>.
+                    </div>
+                    
+                <p> =&gt; When Writing an External JS File and using Console Codes , you Must Add the following Code Above for preventing any Undeclared Errors as following:
+                
+                    <div>/*global console*/ </div>
+
+                <header class="JSErrorsExp">
+                    <h1> In following , there is an Standard Sample of JS Code :</h1>               
+
+                    <section>
+                        <h3> This is a simple function to call a specific Element from HTML File and Add a text inside: </h3>
+                        <p> There is a Div Element in Html file with ID="test", and the following code is to Add a simple text inside:</p>
+                    </section>
+
+                    <div class="JSErrorsExp1">                                            
+                        <code>                             
+                            document.getElementById("test").innerHTML="Hello JS From Javascript file"; <br>      
+                        </code>                    
+                    </div>
+            </header>             
+
+            </article>       
+        </section>              
+    
+<!------------------------------------------------------------------------------------------------------------>  
+         <section class="JSComments" id="JSComments">
+            <header>                
+                JavaScript [Comments]
+            </header>
+            
+            <article>
+
+                <h2> Comments in JS Coding Language: </h2>
+                <p> =&gt; [JS] other programing languages has their comments Code, and it is being Written as following:                                                       
+                    <div>
+                        <code>
+                            // Comment Text
+                        </code>
+                    </div>
+
+                <p> =&gt; [JS Comments ] can be written before the Code or After the code, but not iniside the code itself.                                                       
+                    
+                    
+                <header class="JSCommentsExp">
+                    <h1> Comment Code Examples:</h1>               
+
+                    <section>
+                        <h3> Following codes is about using Comments Js Coding in case Before the JS code: </h3>
+                    </section>
+
+                    <div class="JSCommentsExp1">                                            
+                        <code> 
+                            // This is Comment Before This Code from JS Comment Code ... <br>
+                            document.getElementById("test").innerHTML="Hello Form JS File"; <br>
+                        </code>                    
+                    </div>
+                    
+                    <section>
+                        <h3> Following codes is about using Comments Js Coding in case Beside (after) the JS code: </h3>
+                    </section>
+
+                    <div class="JSCommentsExp1">                                            
+                        <code> 
+                            document.getElementById("test").innerHTML="Hello Form JS File"; 
+                            // This is Comment Beside (after) This Code from JS Comment Code ...
+                        </code>                    
+                    </div>
+            </header>             
+
+            </article>       
+        </section>              
+<!-------------------------------------------------------------------------------------------------------------->
+        <section class="JSVars" id="JSVars">
+            <header>                
+                JavaScript [Variables]
+            </header>
+            
+            <article>
+
+                <h2> Main Variables Types of JS Coding Language: </h2>
+                
+                <p> =&gt; [JS] as any other progring Language has Variables types which considered as Data Containers of specific Type of Data.                                                       
+                <p> =&gt; [JS] is a [Sensitive Case] language, and commonly use [Camel Letter Case] in it's coding Syntax.                                                       
+                
+                <p> =&gt; [Cammel Case] which is used by JS Coding Source is recommended to be used when declerating new Variables in JS page source, to be available in smart Editor Manual for           Dev user.                                                        
+                
+                <p> =&gt; This Lesson Will consern on the Variables Syntax in [JS] instead of Variables Types itself.                                                       
+                
+                <p> =&gt; [JS] as any other programing language has main Data type of Variables, such as following:
+                    <ul>
+                        <li> String Variable [Text Data] </li>
+                        <li> Number Variable [Numeric Data] </li>
+                    </ul>
+
+                <header class="JSVarsExp">
+                    <h1> [Examples on Variables] :</h1>               
+
+                    <section>
+                        <h3> Example [String Variable] Code: </h3>
+                        <p> Writing the [name] String Variable Value + [X] Number Value inside the Div Element with ID [test] in [othertest.js] JS Code </p>
+                    </section>
+                    
+                    <div id="test">
+                        <script src="othertest.js"></script>
+                    </div>
+                    
+                    <div class="JSVarsExp1">                                            
+                        <code> 
+                            // Decleration of [String Vars].. <br>
+                            var<br>
+                            &nbsp; &nbsp; name = "Shadi Sayed Mohammed",<br>     
+                            &nbsp; &nbsp; Name = "Ahmed",<br>
+                            &nbsp; &nbsp; firstName = "Shadi",<br>     
+                            &nbsp; &nbsp; theLastName = "Ahmed";<br><br>
+                            
+                            // Simple Functions of Chrome Console .. <br>
+                            console.log(name);<br>
+                            console.log(Name);<br><br>
+                            
+                            // Simple Functions Internal div Element of html Page .. <br>
+                            document.getElementById("test").innerHTML=firstName;<br>
+                            document.getElementById("test").innerHTML=theLastName;<br>                           
+                            document.getElementById("test").innerHTML=name;<br>                           
+                            document.getElementById("test").innerHTML=Name;<br>                           
+                        </code>                    
+                    </div>
+                                                            
+                    <section>
+                        <h3> Example [Number Variable] Code: </h3>
+                    </section>
+
+                    <div class="JSVarsExp1">                                            
+                        <code> 
+                            // Decleration of [Number Vars].. <br>
+                            var<br>
+                            &nbsp; &nbsp; x = 10, <br>     
+                            &nbsp; &nbsp; y = 20, <br>
+                            &nbsp; &nbsp; z = 100"; <br><br>                                 
+                            
+                            // Simple Functions of Chrome Console .. <br>
+                            console.log(x); <br>
+                            console.log(x+y); <br>
+                            console.log(x-y); <br>
+                            console.log(x*y); <br>
+                            console.log(x/y); <br><br>
+                            
+                            // Simple Functions Internal div Element of html Page .. <br>
+                            document.getElementById("test").innerHTML=firstName; <br>
+                            document.getElementById("test").innerHTML=theLastName; <br>                           
+                            document.getElementById("test").innerHTML=name; <br>                           
+                            document.getElementById("test").innerHTML=Name; <br>                           
+                        </code>                    
+                    </div>
+            </header>             
+            </article>       
+        </section>              
+<!-------------------------------------------------------------------------------------------------------------->
+        
+        <section class="JSConStats" id="JSConStats">
+            <header>                
+                JavaScript [Conditional Statements]
+            </header>
+            
+            <article>                
+                <p> =&gt; [JS] as any other programing language has Conditional Statements Codes.                                                      
+                <p> =&gt; This Lesson Will concern on the Conditional Statement JS Syntax Code with JS instead of Conditional Statements concept itself .                                                       
+                <p> =&gt; [JS Conditional Statement] has commonly Types just like other programing languages as Examples (If-else Statement) & (If Statement).                                                       
+                <p> =&gt; [JS Conditional Statement] <mark>(If Statement Syntax)</mark>  as following:          
+                
+                <div>            
+                    <code>
+                        If (Condition/s) {<br>
+                        &nbsp; &nbsp; [Statement/s] <br>    
+                        }                
+                    </code>    
+                </div>                            
+
+                <header class="JSConStatsExp">
+                    <h1> [If Statement] JS Code Examples:</h1>               
+
+                    <section>
+                        <h3> Following codes is about using [if-else Statement] (Positive Condition) with Chrome Console Example 1: </h3>
+                        <!--------
+                        <div id="test1">
+                            <script src="IfStatment.js">
+                            </script>                        
+                        </div>
+                        ----->
+                    </section>
+
+                    <div class="JSConStatsExp1">                                            
+                        <code> 
+                            /*global console*/<br>
+                            // Decleration of [Number Vars].. <br>
+                            var<br>
+                            &nbsp; &nbsp; x = 10, <br>     
+                            &nbsp; &nbsp; y = 10, <br>
+                            &nbsp; &nbsp; z = 100"; <br><br>                                 
+                            
+                            // If Statement Function .. <br>
+                            if (x===y) { <br>
+                            &nbsp; &nbsp; console.log("Equiled Vars"); <br>
+                            } else { <br>
+                            &nbsp; &nbsp; console.log("UnEquiled Vars"); <br>                            
+                            }                                              
+                        </code>                    
+                    </div>
+                    
+                    <section>
+                        <h3> Following codes is about using [if-else Statement] (Negative Condition) with Chrome Console Example 2: </h3>
+                        
+                        <!----<div id="test2">
+                            <script src="IfStatment.js">
+                            </script>
+                        </div>                        
+                        -->
+                    </section>
+
+                    <div class="JSConStatsExp1">                                            
+                        <code> 
+                            /*global console*/<br>
+                            // Decleration of [Number Vars].. <br>
+                            var<br>
+                            &nbsp; &nbsp; x = 10, <br>     
+                            &nbsp; &nbsp; y = 20, <br>
+                            &nbsp; &nbsp; z = 100"; <br><br>                                 
+                            
+                            // If Statement Function ... <br>
+                            if (x!==y) { <br>
+                            &nbsp; &nbsp; console.log("UnEquiled Vars"); <br>
+                            } else { <br>
+                            &nbsp; &nbsp; console.log("Equiled Vars"); <br>                            
+                            }                                              
+                        </code>                    
+                    </div>
+            </header>             
+            </article>       
+        </section>                  
+    </div>    
+    
+<!-------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="200"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="22">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num2">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 5 Video File:</h3>
+                <iframe			
+				width="100%"
+				height="100%"											
+				allowfullscreen
+				allowfullscreen="allowfullscreen"
+				mozallowfullscreen="mozallowfullscreen"
+				msallowfullscreen="msallowfullscreen"
+				oallowfullscreen="oallowfullscreen"
+				webkitallowfullscreen="webkitallowfullscreen"
+				frameborder="0"				
+				preload="yes"
+				src="https://www.youtube.com/embed/watch?v=S-MGBBtI-48&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=5&controls=0&loop=1&autoplay=1&fs=1" 				
+				>
+			</iframe>
+                
+                <!-- <video controls width="300" height="300" autoplay>
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/5  JavaScript Syntax.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                           -->
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>
+    
+    
+    <script>
+        alert("Welcome to JavaScript : Lesson 5 [Javascript Syntax]");
+        document.write("<p> This paragraph from Iternal Script code");
+    </script>
+</body>
+</html>

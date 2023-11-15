@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS OOP Lesson 6 [ Defining Object With New Keyword ]</title>
+    <link
+      rel="stylesheet"
+      href="JS OOP Lesson6 [Defining Object With New Keyword].css"
+      media="all"
+    />
+    <script src="JSOOPDefObjNewMthd.js"></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JS OOP Lesson 6 [Defining Object With New Keyword]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS OOP main Topics">
+            JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]] Main
+            Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPCon"
+            title="Go to JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]] Concept"
+          >
+            JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPImp"
+            title="Go to JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]] Importance & Benefits"
+          >
+            JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]]
+            Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPSyntx"
+            title="Go to JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]] Syntax"
+          >
+            JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]] Syntax &
+            Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPApp1"
+            title="Go to JS OOP [Defining Object With New Keyword] Practical Application"
+          >
+            JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]] {User
+            Object Creator Application}
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPApp2"
+            title="Go to JS OOP [Defining Object With New Keyword] Calculation user1"
+          >
+            JS OOP Lesson6 [Defining Object With New Keyword] {user Object
+            Calculation}
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS OOP Course
+      <span> JS OOP Lesson 6 [Defining Object With New Keyword] </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]] Main Topics
+          :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>
+              JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]]
+              Concept.
+            </li>
+
+            <li>
+              JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]]
+              Importance & Benefits.
+            </li>
+
+            <li>
+              JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]]Syntax
+              [Advanced Access].
+            </li>
+
+            <li>
+              JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]]
+              Practical Applications {User Object Creator}.
+            </li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPCon" id="JSOOPCon">
+        <header>
+          <h3>
+            JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]] Concept:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]] :
+          This Lesson Will Present the following Points: <br />
+        </p>
+
+        <ol>
+          <li>
+            An advanced Method to Create a new Object by {new Object();} Method
+            with {Unspecified Count of Properties or Functions}
+          </li>
+          <li>
+            An Advanced and more Accurate method to Assing Property Name & Value
+          </li>
+          <li>An Advanced Method to</li>
+        </ol>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSOOPImp" id="JSOOPImp">
+        <header>
+          <h3>
+            JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]]
+            Importance & Benefits:
+          </h3>
+        </header>
+
+        <p>
+          Defining Object by {new Object();} Method gives us the Following
+          Features : <br />
+        </p>
+        <ul>
+          <li>
+            This Method is Critical in advaned Web Desining and Developing Web
+            applications, which provides the ability to create mulutiple
+            Functions in one object {Object Constructor}
+          </li>
+
+          <li>
+            This Method is the basic one in more advanced web-Designing and
+            web-Development Technologies such as [DOM], [BOM], [J-Querry]
+          </li>
+
+          <li>
+            This Method provides more easier, flexible and profficient Method to
+            Design and develop web applications
+          </li>
+
+          <li>
+            The Ability to Combine this Method with other JS Functions such as
+            (Looping, Arrays) to Create the Object Properties {Names + Values},
+            and Object Functions.
+          </li>
+        </ul>
+      </section>
+
+      <!----------------------------------------------------------------------------------------------------->
+      <section class="JSOOPSyntx" id="JSOOPSyntx">
+        <header>
+          <h3>
+            JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]] Syntax &
+            Methods in All (3) Advanced Cases:
+          </h3>
+        </header>
+
+        <div id="Code" class="Code">
+          // A) [Accessing Object's Identifiers that has special Characters in
+          its Identifier/Property Name] by {Bracket Notaion Method} Syntax :<br /><br />
+
+          <span class="one"></span> let objName = new Object(); <br />
+          <span class="one"></span> objName.Prop1Name = "Value1";<br />
+          <span class="one"></span> objName.Prop2Name = "Value2";<br />
+          <span class="one"></span> objName.Prop3Name = "Value3";<br />
+
+          ======================================================= <br />
+
+          // B) [Accessing Object's Identifiers Values that have been created by
+          {new Object();} Method] by {Bracket Notaion Method} Syntax :<br /><br />
+
+          <span class="one"></span> console.log(objName["Prop1Name"]); <br />
+          <span class="one"></span> console.log(objName["Prop2Name"]); <br />
+          <span class="one"></span> console.log(objName["Prop3Name"]); <br />
+
+          ======================================================= <br />
+
+          // C) [Accessing Object's Identifiers Values that have been created by
+          {new Object();} Method] by {Bracket Notaion Method} Syntax :<br /><br />
+
+          <span class="one"></span> console.log(objName.Prop1Name); <br />
+          <span class="one"></span> console.log(objName.Prop2Name); <br />
+          <span class="one"></span> console.log(objName.Prop3Name); <br />
+
+          =======================================================<br /><br />
+          =======================================================<br /><br />
+          =======================================================<br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSOOPApp1" id="JSOOPApp1">
+        <header>
+          <h3>
+            JS OOP [JS OOP Lesson6 [Defining Object With New Keyword]] First
+            Application : {User Object Creator} :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; This Practical Application on Object Creation using {new
+          Object();} Method & Reaching all Created Object's Properites Names and
+          Values by both Accessability Methods [Dot Notaion] & [Bracket
+          Notation] &gt;&gt; <br />
+        </p>
+
+        <p>
+          =&gt; This Practical Application [User object Creator] , which will
+          include following : <br />
+        </p>
+
+        <ul>
+          <li>
+            All Object Identifiers/Properties Numbers will be assinged by the
+            User
+          </li>
+          <li>
+            All Object Identifiers/Properties Names will be entered by User
+          </li>
+          <li>
+            All Object Identifiers/Properties Values will be entered by User
+          </li>
+          <li>
+            Both Accessability Methods [JS OOP Lesson6 [Defining Object With New
+            Keyword]] will Be Used in this Application + Ordinary Method
+          </li>
+        </ul>
+
+        <br />
+
+        <textarea id="txtarea" class="txtarea"> </textarea> <br />
+
+        <button class="btn" onclick="userObj1()">
+          Click to Start [user Object Creator by {new Object();} Method]
+        </button>
+
+        <textarea id="txtarea1" class="txtarea1"> </textarea>
+
+        <button class="btn" onclick="Display1()">
+          Click to display Js Code
+        </button>
+
+        <br />
+
+        <script src="JSOOPDefObjNewMthd.js"></script>
+        <hr />
+
+        <!-- <div class="JSOOPObjDef">
+          <code>
+            // HTML Codes: <br />
+            <span class="one"></span> &lt;textarea id="txtarea1" class="txtarea1"&gt;<br />
+            <span class="one"></span> &lt;/textarea&gt; <br /><br />
+
+            <span class="one"></span> &lt;button class="btn" onclick="userObj1()"&gt;<br />
+            <span class="two"></span> Click to Start [user Object Creator by {new Object();} Method] <br />
+            <span class="one"></span> &lt;/button&gt; <br /><br />
+
+            <span class="one"></span> &lt;script src="JSOOPDefObjNewMthd.js"&gt;<br />
+            <span class="one"></span> &lt;/script&gt; <br /><br />
+
+            =======================================================<br /><br />
+
+            /* JSOOP : Defining Object by [new Object();] Method {First Application user Object Creator Application} */<br><br>
+
+              function userObj1() {<br><br>
+                  
+              <span class= one></span> alert("Welcome to {user Object Creator Application} by new Object Mehthod"); <br>
+                  
+              <span class= one></span> var userObj = new Object(); <br>
+              <span class= one></span> var userarrN = new Array(); <br>
+              <span class= one></span> var userarrV = new Array(); <br><br>
+                  
+              <span class= one></span> var meth0 = '', <br>
+              <span class= two></span> meth1 = '', <br>
+              <span class= two></span> meth2 = '', <br>
+              <span class= two></span> meth3 = '', <br>
+              <span class= two></span> meth0 = '', <br>
+              <span class= two></span> i = 0; <br> <br>
+                                  
+              <span class= one></span> var count1 = parseInt(prompt("Enter the Number of Properties you wish to create in your Object")); <br><br>
+                  
+              // The following Code is to Recieving Object Names And Values from the user:<br> <br>
+              
+              <span class= one></span> for (i = 0; i < count1 ; i++) { <br>
+              
+                <span class= two></span> userarrN[i] = prompt("Enter your Property name number " + (i+1)); <br>
+                <span class= two></span> userarrV[i]= prompt("Enter your Property Value of Property Number " + (i+1)); <br>
+
+                <span class= two></span> userObj[userarrN[i]] = userarrV[i]; <br>        
+                      
+                <span class= two></span> meth0 += " Object Property Number (" + (i+1) +  ") as following : \n" + <br>
+                  <span class= three></span> userarrN[i] + " : " + userObj[userarrN[i]] +<br>
+                  <span class= three></span>  "\n ======================================= \n "; <br>                                      
+              <span class= one></span> } <br> <br>
+                  
+                          
+              // [First Function] The Following Function is to Dispaly the {all Object elements} by <br> 
+              <span class= one></span>{Simple Shortcut Method} [ObjName] :<br><br>
+                  
+              <span class= one></span> userObj.DisAllObj1 = function () { <br>
+                <span class= two></span> return "All your Object Name &Value by [Simple Shortcut Method] as following : \n"  + meth0; <br>
+              <span class= one></span> }; <br>
+              //========================================================================= <br><br>
+
+                  
+              // [Second Function] The Following Function is to Dispaly the {all Object elements} by<br>
+              <span class= one></span> {Allocated Propereties by Arrays Method} [ObjName.PropertyName] :<br><br>
+
+              <span class= one></span>for (a = 0; a < count1; a++ ) { <br>
+              <span class= two></span>meth1 += "Your Object Name & Value number " + (a+1) + " as following : \n" + userarrN[a] + <br>
+              <span class= three></span>" : " + userObj[userarrN[a]] + "\n =======================================\n" ; <br>
+              <span class= one></span> } <br> <br>
+                  
+              <span class= one></span> userObj.DisAllObj2 = function () {<br>
+              <span class= two></span> return meth1;  <br>            
+              <span class= one></span> }; <br>
+              //=========================================================================== <br><br>
+
+              // [Third Function] The Following Function is to Dispaly the {all Object Properties Names} Only: <br> <br>
+              <span class= one></span> for ( b= 0; b < count1; b++ ) { <br>
+              <span class= two></span> meth2 += `Your (Object Name) number ${b+1} as following : \n ${[userarrN[b]]} <br>
+              <span class= three></span> \n ======================================= \n `; <br>           
+              <span class= one></span> } <br><br>
+                  
+              <span class= one></span> userObj.DisAllObjNames = function () {  <br>
+              <span class= two></span> return meth2; <br>
+              <span class= one></span>}; <br>
+              //============================================================================ <br><br>
+
+
+              // [Fourth Function] The Following Function is to Dispaly the {all Object Properties Values} Only: <br><br>
+              <span class= one></span> for (c = 0; c < count1; c++ ) { <br>
+              <span class= two></span> meth3 += `Your (Object Value) number ${c+1} as following : \n ${userObj[userarrN[c]]} <br>
+              <span class= three></span> \n ======================================= \n `;<br>                    
+              <span class= one></span> } <br> <br>
+                  
+              <span class= one></span> userObj.DisAllObjValues = function () { <br>
+              <span class= two></span> return meth3; <br>
+              <span class= one></span> }; <br>
+              //================================================================================== <br> <br>
+                  
+              // [Fifth Function] The Following Function is to Dispaly the {Certain Object Properties Name & Value}: <br><br>
+
+              <span class= one></span> userObj.DisOneObj = function () { <br>
+              <span class= two></span> var oneObjNum = parseInt(prompt("Enter your Object Nubmer To Display it's name and Value...")); <br>
+                      
+              <span class= two></span> meth0 = 'Your Object Property Number (' + oneObjNum + ') as following :]\n' + <br>
+              <span class= three></span>  userarrN[oneObjNum-1] + " : " + userObj[userarrN[oneObjNum-1]] + <br>
+              <span class= three></span>  "\n============================================\n"; <br><br>
+                      
+              <span class= two></span> document.getElementById("txtarea").innerHTML = meth0; <br>
+                      
+              <span class= two></span> alert(meth0); <br>                        
+
+              <span class= one></span> }; <br>
+                      
+              //===================================================================================== <br> <br>
+              
+              <span class= one></span> var mthd = prompt("Press (1) to Display your [All Object Elements & Contaning <br>
+                <span class= two></span> by {Simple Shortcut Method}] \n<br>
+                
+                <span class= two></span>  Press (2) to [Display All Object Elements & Contaning <br>
+                <span class= two></span> by {Allocated Propereties by Arrays Method}]......\n <br>              
+                
+                <span class= two></span> Press (3) to [Display your Object's Names]... \n <br>
+                
+                <span class= two></span> Press (4) to [Display your Object's Values]\n <br>
+                
+                <span class= two></span> Press(5) to Display certain property..."); <br> <br>
+                      
+              <span class= one></span> if (mthd == "1") {  <br>                                        
+                          
+                <span class= two></span> document.getElementById("txtarea").innerHTML = userObj.DisAllObj1(); <br>
+                          
+                <span class= two></span> alert(userObj.DisAllObj1()); <br>
+                          
+                <span class= two></span> console.log(userObj);  <br> <br>               
+                            
+              <span class= one></span> } else if (mthd == "2") { <br>
+                      
+                <span class= two></span> document.getElementById("txtarea").innerHTML = userObj.DisAllObj2(); <br>
+                  
+                <span class= two></span>alert(userObj.DisAllObj2()); <br>
+                      
+                <span class= two></span> console.log(userObj); <br> <br>                                            
+                      
+              <span class= one></span> } else if (mthd == "3") { <br>        
+                      
+                <span class= two></span> document.getElementById("txtarea").innerHTML = userObj.DisAllObjNames(); <br>
+                      
+                <span class= two></span>alert(userObj.DisAllObjNames());<br> <br>                      
+
+              <span class= one></span> } else if (mthd == "4") { <br>        
+                      
+                <span class= two></span> document.getElementById("txtarea").innerHTML = userObj.DisAllObjValues(); <br>
+                
+                <span class= two></span> alert(userObj.DisAllObjValues()); <br> <br>
+                                                              
+              <span class= one></span> } else if (mthd == "5") { <br>        
+                      
+                <span class= two></span> userObj.DisOneObj();  <br>            
+                                          
+              <span class= one></span> } else { <br>
+                <span class= two></span> alert("Error Entry!"); <br>
+              <span class= one></span> }<br>
+              }            
+          </code>
+      </div> -->
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPApp2" id="JSOOPApp2">
+        <header>
+          <h3>
+            JS OOP [Defining Object With New Keyword]] Second Application :
+            {User Object Calculation }:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; This Practical Application on Object Creation using {new
+          Object();} Method & Reaching all Created Object's Properites Names and
+          Values + Processing Some Calculations &gt;&gt; <br />
+        </p>
+
+        <p>
+          =&gt; This Practical Application [User object Creator] , which will
+          include following : <br />
+        </p>
+
+        <ul>
+          <li>
+            All Object Identifiers/Properties Numbers will be assinged by the
+            User
+          </li>
+          <li>
+            All Object Identifiers/Properties Names will be entered by User
+          </li>
+          <li>
+            All Object Identifiers/Properties Values will be entered by User
+          </li>
+          <li>
+            Both Accessability Methods [JS OOP Lesson6 [Defining Object With New
+            Keyword]] will Be Used in this Application + Ordinary Method
+          </li>
+          <li>
+            Abililty to Access and Display certain property of Object Value and
+            Name.
+          </li>
+        </ul>
+
+        <br />
+
+        <textarea id="txtarea1" class="txtarea1"> </textarea><br />
+
+        <button class="btn" onclick="userCalc()">
+          Click to Start [user Calculation {new Object();} Method]
+        </button>
+
+        <textarea id="txtarea2" class="txtarea2"> </textarea>
+
+        <button class="btn" onclick="Display2()">
+          Click to display Js Code
+        </button>
+
+        <br />
+
+        <script src="JSOOPDefObjNewMthd.js"></script>
+        <hr />
+
+        <!-- <div class="JSOOPObjDef">
+              <code>
+                // HTML Codes: <br />
+                <span class="one"></span> &lt;textarea id="txtarea1" class="txtarea1"&gt;<br />
+                <span class="one"></span> &lt;/textarea&gt; <br /><br />
+
+                <span class="one"></span> &lt;button class="btn" onclick="userObj1()"&gt;<br />
+                  <span class="two"></span> Click to Start [user Calculation {new Object();} Method] <br />
+                <span class="one"></span> &lt;/button&gt; <br /><br />
+
+                <span class="one"></span> &lt;script src="JSOOPDefObjNewMthd.js"&gt;<br />
+                <span class="one"></span> &lt;/script&gt; <br /><br />
+
+                =======================================================<br /><br />
+
+                /* global console, document, alert, prompt */ <br />              
+                /* JSOOP : Defining Object by [new Object();] Method {Second Application - user Object Creator Application} */ <br>
+                =======================================================<br /><br />            
+
+                function userCalc() { <br>
+                <span class = one></span> alert("Welcome to [Calculator] App ..."); <br>
+
+                <span class = one></span> var myObj = new Object(), <br>
+                <span class = two></span> objVarAll = "", <br>
+                <span class = two></span> objVarV = "", <br>
+                <span class = two></span> objVarC = ""; <br> <br>
+                        
+                <span class = one></span> var Nums = new Array(), <br>
+                <span class = two></span> Names = new Array(), <br>
+                <span class = two></span> NumsCount = prompt("Enter the Count of your Numbers..."); <br> <br>
+                        
+                // Inserting the Numbers upon user Entered Count: <br>
+                <span class = one></span> for (a = 0; a < NumsCount; a++) { <br>
+                <span class = two></span>Nums[a] = parseInt(prompt("Enter your Number with count (" + (a + 1) + " )")); <br>
+                <span class = one></span> } <br>  <br>
+                    
+                // Setting the Object Properties Names (Names Array) & Values (Numbers Array): <br>
+                <span class = one></span> for (b = 0; b < NumsCount; b++) { <br> <br>
+                <span class = two></span> // Defining Object Properties Names as (Names Array Elements) as Fixed Content <br>
+                <span class = three></span> + changing Counting number:<br>
+                <span class = two></span> Names[b] = "Number (" + (b + 1) + ")"; <br><br>
+                <span class = two></span> //Defining Object Properties Values as (Nums Array Elements - <br>
+                <span class = three></span> which has been inserted already by uesr): <br>
+                <span class = two></span> myObj[Names[b]] = Nums[b];  <br>
+                <span class = one></span> } <br>
+                //============================================================================== <br> <br>
+                    
+                <span class = one></span> for (c = 0; c < NumsCount; c++) {<br>
+                <span class = two></span> objVarAll += "Your Object number " + (c + 1) + " as following:\n" + Names[c] + " : " +<br>
+                <span class = three></span>  myObj[Names[c]] + "\n==========================================\n"; <br>
+                <span class = one></span>} <br> <br>
+
+                <span class = one></span> myObj.DisplayAll = function() { <br>
+                <span class = two></span> return objVarAll; <br>         
+                <span class = one></span> } <br>
+                //================================================================================ <br><br>
+                    
+                <span class = one></span> for (c = 0; c < NumsCount; c++) { <br>
+                <span class = two></span> objVarN += "Your Object Property Name number " + (c + 1) + " as following:\n" + Names[c] + <br>
+                <span class = three></span>  "\n==========================================\n";<br>
+                <span class = one></span> } <br> <br>
+                        
+                <span class = one></span> myObj.DisplayNames = function() { <br>                        
+                <span class = two></span> return objVarN; <br>        
+                <span class = one></span> } <br>
+                //================================================================================ <br> <br>
+                    
+                <span class = one></span>for (c = 0; c < NumsCount; c++) { <br>
+                <span class = two></span> objVarV += "Your Object Property Value number " + (c + 1) + " as following:\n" + myObj[Names[c]] +<br>
+                <span class = three></span> "\n==========================================\n"; <br>
+                <span class = one></span>} <br><br>
+                    
+                <span class = one></span> myObj.DisplayValues = function() { <br>                                        
+                <span class = two></span> return objVarV; <br>         
+                <span class = one></span> } <br>    
+                //================================================================================ <br><br>                                        
+                
+                <span class = one></span> myObj.DisplayCertain = function () { <br>
+                        
+                <span class = two></span> var ElementNum = parseInt(prompt("Enter the number of your Object Property")); <br>
+                      
+                <span class = two></span> objVarC = "Your Object Property Value number " + (ElementNum) + " as following:\n" +<br>
+                <span class = three></span>  Names[ElementNum-1] + " : " + myObj[Names[ElementNum-1]] +<br>
+                <span class = three></span> "\n==========================================\n";<br>
+                        
+                <span class = two></span> alert(objVarC); <br>
+                <span class = two></span> document.getElementById("txtarea1").innerHTML = objVarC; <br>                 
+                <span class = one></span> }; <br>
+                                
+                //================================================================================ <br><br>
+                    
+                <span class = one></span> var mthd = prompt("Choose your Accessing Method ....\n <br>
+                <span class = two></span> Press (1) to Display All Object Properties Names & Values \n <br>
+                <span class = two></span> Press (2) to Display All Object Properties Names only\n <br>
+                <span class = two></span> Press (3) to Display All Object Properites Values only\n <br>
+                <span class = two></span> press (4) to Display Certain Object Property ..."); <br><br>
+                    
+                <span class = one></span> if (mthd == "1") {<br><br>
+                <span class = two></span> alert(myObj.DisplayAll()); <br>
+                <span class = two></span>document.getElementById("txtarea1").innerHTML = myObj.DisplayAll(); <br> <br>
+                                          
+                <span class = one></span> } else if (mthd == "2") { <br><br>         
+                <span class = two></span> alert(myObj.DisplayNames()); <br>
+                <span class = two></span> document.getElementById("txtarea1").innerHTML = myObj.DisplayNames(); <br>
+                        
+                <span class = one></span>} else if (mthd == "3") { <br> <br>
+                <span class = two></span> alert(myObj.DisplayValues()); <br>
+                <span class = two></span> document.getElementById("txtarea1").innerHTML = myObj.DisplayValues(); <br> <br>
+                    
+                <span class = one></span>} else if (mthd == "4") { <br><br>
+                <span class = two></span> myObj.DisplayCertain(); <br>
+                        
+                <span class = one></span> } else { <br><br>
+                <span class = two></span>alert("Error Entry!");<br>
+                <span class = two></span>document.getElementById("txtarea1").innerHTML = "Error Entry!";<br>
+                <span class = one></span> } <br>
+                }
+              </code>
+          </div> -->
+      </section>
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg" />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 6 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=vL166vZzp6A&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=6&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+          <source
+            src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\6 JavaScript OOP Defining Object With New Keyword.mp4"
+            type="video/mp4"
+          />
+          Your browser Does Not Support the Video file ...
+        </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert(
+        "Welcome to JS OOP / Lesson 6 [ Defining Object With New Keyword ]"
+      );
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

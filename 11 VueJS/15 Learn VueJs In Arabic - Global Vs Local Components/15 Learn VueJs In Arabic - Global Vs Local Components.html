@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 15 Learn VueJs In Arabic - Global Vs Local Components </title>
+    <link rel="stylesheet" href="15 Learn VueJs In Arabic - Global Vs Local Components.css" media="all">
+
+    <style>
+        .span{color: red ; font-weight:bold};
+    </style>
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        15 Learn VueJs In Arabic - Global Vs Local Components
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 15 Learn VueJs In Arabic - Global Vs Local Components ">
+                15 Learn VueJs In Arabic - Global Vs Local Components Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to  [15 Learn VueJs In Arabic - Global Vs Local Components ] Concept">
+                15 Learn VueJs In Arabic - Global Vs Local Components Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to  [15 Learn VueJs In Arabic - Global Vs Local Components ] Importance & Benefits">
+                15 Learn VueJs In Arabic - Global Vs Local Components Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to  [15 Learn VueJs In Arabic - Global Vs Local Components] Syntax">
+                15 Learn VueJs In Arabic - Global Vs Local Components Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to  [15 Learn VueJs In Arabic - Global Vs Local Components] Practical Applications">
+                15 Learn VueJs In Arabic - Global Vs Local Components Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <main class="Welcome"> Welcome to Vue.js Course <span> 15 Learn VueJs In Arabic - Global Vs Local Components </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                Vue.js [15 Learn VueJs In Arabic - Global Vs Local Components] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following : </p>
+                <ol type="A">
+                    
+                    <li> [Main Local Component Decleration ] -> With in the Vue Script <br>
+                        var varName = { <br>                        
+                            <span class="one"> data: function() { <br> 
+                                <span class="two"> propertName1: property1Value, <br>
+                                <span class="two"> propertName2: property2Value, <br>
+                            <span class="one"> }, <br> <br>
+
+                            <span class="one"> template: 'HTML Element', <br>
+                        } <br>
+                    </li> <br><br> <hr>
+                    
+                    <li> [Main Global Component Decleration ] -> With in the Vue Script <br>
+                        Vue.component('comp-name1', { <br>                        
+                            <span class="one"> data: function() { <br> 
+                                <span class="two"> propertName1: property1Value, <br>
+                                <span class="two"> propertName2: property2Value, <br>
+                            <span class="one"> }, <br> <br>
+
+                            <span class="one"> props: ['passed propName1', 'passed propName2', 'passed propName3'], <br> <br>
+
+                            <span class="one"> template: 'HTML Element', <br> <br>
+                        } <br>
+                    </li> <br><br> <hr>
+
+                    <li> [Adding Local Component into main Vue Model] ->   <br>
+                        <span class="one"> var vm = new Vue({ <br>
+                            <span class="two"> el: 'Vue Html Id'<br> 
+                            
+                            <span class="two"> data: { <br> 
+                                <span class="three"> propertName1: property1Value, <br>
+                            <span class="two"> }, <br> 
+
+                            <span class="two"> components: { <br>                         
+                                <span class="three"> comp-name1 with (kabab-case): CompName1 (PascalCase) <br>
+                            <span class="two"> } <br>
+                        <span class="one"> } <br>
+                    </li>
+                </ol>                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> [Global Vs Local Components] Concept: </h3>
+            </header>
+                        
+            <h2> =&gt; [Global Vs Local Components] Concept : <br>                    
+                <ul>
+                    <li> The {Local component} => Is a located registration / Scope , which will NOT be displayed in normal Vue Component, unless it will be Defiened and Called </li>
+
+                    <li> The main Purpose of creating the Local component =>  For the limited/uncommon Usage Copmponent , which will be called for certain position  </li>
+
+                    <li> Main Differences between {Global Component} && {Local Component} following : <br>
+                        <ul>
+                            <li> {Global Component} => Can be Called and Accessed with General Scope from any location in the Vue Application </li>
+                            <li> {Local Component} => Can be Called and Accessed with Certain Scope from specified location in the Vue Application [If only it has been Added in to the Main Vue Model] </li>                        
+                        </ul>                    
+                    </li>
+                </ul>
+            </h2>                                                                         
+            
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> Vue.js [Global Vs Local Components] Importance & Benefits : </h3>
+            </header>
+                        
+            <p> [Local Components] => Provides a certain, limited and certain usages for the  => Vue Application  <br>            
+                        
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx"> -->
+            <header>
+                <h3> [ Vue.js [ Global Vs Local Components] Syntax & Methods: </h3>
+            </header>                 
+            
+            <p> =&gt; [ Global Component Vs Local Component ] =>  <br> </p>
+                         
+             <p> Syntax: <br> </p>            
+                <div id="Code" class="Code">                
+                    A)  Vue HTML Container  <br>
+                    <span class= one></span> &lt; div id="app-one" &gt;  <br>                         
+                        <!-- [Global Component Name] with [Kabab-case] -->
+                        <span class= two></span> Calling the Global Component by (kabab-case) : <br>
+                        <span class= two></span> &lt; comp-name &gt; &lt; /comp-name &gt; <br>
+                        
+                        OR <br>
+
+                        <!-- [Global Component Name] with [PascalCase] -->
+                        <span class= two></span> Calling the Global Component by (PascalCase) : <br>
+                        <span class= two></span> &lt;  CompName &gt; &lt; /CompName &gt; <br>  <br> <hr> <br>
+                        
+                        
+                        <!-- [Local Component Name1] with [Kabab-case] -->
+                        <span class= two></span> Calling the Global Component by (kabab-case) : <br>
+                        <span class= two></span> &lt; comp-name1 &gt; &lt; /comp-name1 &gt; <br>
+                        
+                        OR <br>
+                        
+                        <!-- [Local Component Name1] with [PascalCase] -->
+                        <span class= two></span> Calling the Global Component by (PascalCase) : <br>
+                        <span class= two></span> &lt; CompName1 &gt; &lt; /CompName1 &gt; <br>
+                    <span class= one></span> &lt; /div &gt;  <br> 
+                    //=========================================================== <br> <br>
+                    
+                    B)  VueJS Libraries Importing  <br>
+                    <span class= one></span> &lt; script src="js/ vue.js " &gt;  &lt; /script &gt;  <br>                     
+                    //=========================================================== <br> <br>
+                    
+                    C)  VueJS Main Model  <br>
+                    <span class= one></span> &lt; script &gt;  <br>                     
+                                                
+                        <span class= two></span> // 1) [Vue Main Model] Defining : <br> 
+                        
+                        <span class= two></span> var vm = new Vue({ <br>
+                            <span class= three></span> el: '#Vue Html Id', { <br>
+                            
+                            <span class= three></span> data: { <br>
+                                <span class= four></span> propName1: propValue1 <br>
+                                <span class= four></span> propName1: propValue1 <br>
+                            <span class= three></span> } <br>
+
+                            <span class= three></span> method: { <br>    
+                                <span class= four></span> methodName: function() {}, <br>
+                            <span class=three></span> }, <br>
+                            
+                            <span class= three></span> props : ['passedProp1 (form Global name)', 'passedProp2 (from Local1: name1)', 'passedProp3 (from Local2 : name2)'],  <br>
+                            
+                            <span class= three></span> // Adding Local component(s) to the Main Vue Model : <br>
+                            <span class= three></span> component: { <br>
+                                <span class= four></span> 'comp-name1' (kabab-case): CompName1 (PascalCase) <br>
+                                <span class= four></span> 'comp-name2' (kabab-case): CompName2 (PascalCase) <br>
+                            <span class=three></span> }, <br> <br> <hr>                                                                                                                                                                            
+                        <span class=two></span> }); <br> <hr> <br> <br>
+                        //=========================================================== <br> <br>
+                                                                
+                        <span class= two></span> 2) {Global Component} Defining : <br> 
+                        <span class= two></span> Vue.component('CompNameGlob' , { <br> 
+                            
+                            <span class= three></span> // 2-a) [Vue Global component Data] Defining : <br>                             
+                            <span class= three></span> data: function() { <br> 
+                                <span class= four></span> return { <br> 
+                                    <span class= five></span> name : 'shadi', <br> 
+                                    <span class= five></span> count : 0 <br> 
+                                <span class=four></span> } <br> 
+                            <span class=three></span> }, <br>  <br>                                                                                        
+
+                            <span class= three></span> // 2-b) [Vue Global Component Template] Elements Defining : <br> 
+                            <span class= three></span> template: '&lt; p @click="count++" &gt; Hello { { name } } Your count is : { { count } } &lt; /p &gt;'  <br> <br>
+                        <span class=two></span> }); <br> 
+                        //=========================================================== <br> <br>
+
+                        <span class= two></span> 3) {Local Component 1} Defining : <br> 
+                        <span class= two></span> var CompNameLoc1 = { <br> 
+                            
+                            <span class= three></span> // 3-a) [Vue Local component 1 Data] Defining : <br>
+                            <span class= three></span> data: function() { <br> 
+                                <span class= four></span> return { <br> 
+                                    <span class= five></span> name1 : 'shadi1', <br> 
+                                    <span class= five></span> count1 : 0 <br> 
+                                <span class=four></span> } <br>
+                            <span class=three></span> }, <br>  <br>                                                                                        
+
+                            <span class= three></span> // 3-b) [Vue Global Component Template] Elements Defining : <br> 
+                            <span class= three></span> template: '&lt; p &gt; Hello This is Local Component 1 Test  &lt; /p &gt;'  <br> <br>
+                        <span class=two></span> }) <br> 
+                        //=========================================================== <br> <br>
+                        
+                        <span class= two></span> 4) {Local Component 2} Defining : <br> 
+                        <span class= two></span> var CompNameLoc2 = { <br> 
+                            
+                            <span class= three></span> // 4-a) [Vue Local component 2 Data] Defining : <br>
+                            <span class= three></span> data: function() { <br> 
+                                <span class= four></span> return { <br> 
+                                    <span class= five></span> name2 : 'shadi2', <br> 
+                                    <span class= five></span> count2 : 0 <br> 
+                                <span class=four></span> } <br>
+                            <span class=three></span> }, <br>  <br>                                                                                        
+
+                            <span class= three></span> // 4-b) [Vue Local Component Template] Elements Defining : <br> 
+                            <span class= three></span> template: '&lt; p &gt; Hello This is Local Component 2 Test  &lt; /p &gt;'  <br> <br> 
+                        <span class=two></span> }) <br> 
+                        //=========================================================== <br> <br>
+                                            
+                    <span class= one></span> &lt; /script &gt;  <br>
+                    <br><br> 
+               </div> 
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPPract" id="PHPPract"> 
+             <header>
+                <h3> Vue.js [Global & Local Components] General Practical Application : </h3>
+            </header>
+            
+            <p> In this lesson will be (1) Application { Global Vs Local Components} ]= > as following :  </p>
+
+                <ol type="A">
+                
+                    <li> First Example => Creating a [Vue Application Container] with {Vue Model Instances} + [{Vue Resuable component [1 Global , 2 Local]} + ] , and including the following steps : <br>
+                        <ul>
+                            <li> Defining and Creating the [Vue Main Container {app-one}] with HTML Element has passed Data from Vue Model to the Component => Including the following (3) Main Parts : <br> 
+                                <ul> 
+                                    <li> {Vue Reusable Component} => Using the [component-one] , including the following main (3) Parts : <br>
+                                        <ol type="A"> 
+                                            <li> {HTML Element} => Including the following Vue (3) Components :  <br>
+                                                <ul> 
+                                                    <li> (1) Global component : [CompNameGlob1] </li>
+                                                    <li> (2) Local components [CompNameLoc1 , CompNameLoc2]  </li>
+                                                </ul>                                                                    
+                                            </li>
+                                            
+                                            <li> Each Component Include the Following  : <br>
+                                                <ol>                                                     
+                                                    <li> properties => {name:'shadi' , count : 0} => (Global-Local Component Main Properties) </li>
+                                                    <li> Template => (Global-Local Component Main Template)</li>
+                                                    <li> props : ['name', 'name1' , 'name2'] => (Global-Local Component Passed Properties form Main Model to components)</li>
+                                                </ol>
+                                            </li> <br>
+                                        </ol>
+                                    </li>
+                                
+                                    <li> {Vue Model Instances} => Including the following Instances : <br>
+                                        <ul> 
+                                            <li> el = '#app-one' </li>
+                                            <li> data : { Inlcluding (1): Property => Message = 'Welcome to the Vue Application' } </li>
+                                            <li> component : ['CompNameLoc1', 'CompNameLoc2']</li>
+                                        </ul>                                                                    
+                                    </li>                                    
+                                </ul>
+                            </li>                            
+                        </ul>                                                                                    
+                    </li>      
+                </ol> <hr>                  
+                                                                         
+        </section>                     
+        
+        <!-- The following is the main Vue application Container , which will be accessed by the Vue Framework using the Container [ID]   -->
+        
+        <!-- First Vue Application [Using Both {Creating new Component} + {Vue Model Instances}]  -->
+            <div id="app-main"> 
+                
+                <comp-glob :el0="el0"></comp-glob> <br>
+                                
+                <comp-loc-one :el1="el1"></comp-loc-one> <br> <br>
+                
+                <comp-loc-two :el2="el2"></comp-loc-two> <br>
+                                                
+                <!-- -------------------------------------------------------------- -->
+            
+            </div> 
+
+        
+            <!-- The following is the main Vue Framework Importing Syntax [from Application Folder]  -->
+            <script src="js/vue.js"></script>
+            
+            <!-- The following is the main Vue application Model Container Including => [{Vue Resuable component} + {Vue Model Instances}]  -->
+            <script> 
+                
+                //  A) Vue new (Global Component) : [comp-glob] Defining : 
+                Vue.component('CompGlob', {                    
+                    data: function() {
+                        return {                            
+                            count: 0
+                        }
+                    },                                                            
+                    props: ['el0','el1', 'el2' ],
+                    template: '<p> This is Vue [Global Component] => {{el0}} : (From Passeed Property from Vue Model) </p> <br> ',
+                });
+                            
+                //  B) Vue new (Local Component) : [comp-loc-one] Defining : 
+                var CompLocOne = {
+                    data: function() {
+                        return {                            
+                            count: 0
+                        }
+                    },
+                    props: ['el0','el1', 'el2' ],
+                    template: '<span> This is Vue [First Local Component] => {{el1}} : (From Passeed Property from Vue Model) </span>',
+                };
+
+                //  C) Vue new (Local Component) : [comp-loc-two] Defining : 
+                var CompLocTwo = {
+                    data: function() {
+                        return {                            
+                            count: 0
+                        }
+                    },
+                    props: ['el0','el1', 'el2' ],
+                    template: '<span> This is Vue [Second Local Component] => {{el2}} : (From Passeed Property from Vue Model) </span>',
+                };
+                            
+                //  D) Vue (Main Model) Defining : 
+                var vm = new Vue({
+                    el: '#app-main',                         
+                    data: {                                                                        
+                        el0: 'CompGlob',
+                        el1: 'comp-loc1',
+                        el2: 'comp-loc2', 
+                    },  
+                    
+                    //  *) Adding Local Components toi the main Vue Model {components} instance : 
+                    components: {
+                        'comp-loc-one' : CompLocOne,
+                        'comp-loc-two' : CompLocTwo,
+                    },
+                    
+                });                
+                
+            </script>
+        <!-- =========================================================================================================== -->
+            
+        <!------------------------------------------------------------------------------------------------------>                                 
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection">
+            <h3> Lesson 15 Video File:</h3>
+            <video controls width="300" height="300">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\15 Learn VueJs In Arabic - Global Vs Local Components.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video>
+        </section>
+        
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU:
+                 <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter>
+                 &nbsp;&nbsp;&nbsp; Uploading: 
+                 <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open style="display: flex; width:100%">
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://shadi-pro.epizy.com"> My Personal Reference </a></li>
+                <li> <a href="https://shadi-cv.epizy.com"> My Personal Resume </a></li>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 15 Learn VueJs In Arabic - Global Vs Local Components");
+    </script>
+
+    
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

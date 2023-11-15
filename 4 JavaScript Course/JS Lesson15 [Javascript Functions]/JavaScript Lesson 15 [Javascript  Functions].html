@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> JavaScript Lesson 15 [Javascript Functions] </title>
+    <link rel="stylesheet" href="JavaScript [Javascript Functions].css" media="all" >
+    
+    <script src='FunctionwithIFStatement.js'> </script>    
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JavaScript Lesson 15 [Javascript Functions]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="Go to Javascript main Topics" > 
+                    JavaScript [Logical Functions] Main Topics </a> </li>            
+            
+            <li> <a href=#JSFunCon   title="Go to Javascript Functions Concept" >        
+                    Javascript [Functions] Concept </a> </li>                                 
+            
+            <li> <a href=#JSFunImp title="Go to Javascript Functions Types" >
+                    Javascript [Functions] Importance, Usages, Benefits </a> </li>                       
+
+            <li> <a href=#JSFunExps title="Go to Javascript Functions Types" > 
+                    Javascript [Functions] Elements, Examples </a> </li>                       
+            
+            <li> <a href=#JSFunCall title="Go to Javascript Functions Types" >
+                    Javascript [ Functions Calling Methods ] </a> </li>                       
+
+            <li> <a href=#JSFunVar title="Go to Javascript Functions Types" > 
+                    Javascript [ Functions with Variables ] </a> </li>                                   
+
+            <li> <a href=#JSFunIfCon title="Go to Javascript Functions Types" > 
+                    Javascript [ Functions with If conditions ] </a> </li>                                   
+                                   
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to JavaScript Course <span> JavaScript Lesson 15 [Javascript Functions] </span> 
+    </main>
+<!-------------------------------------------------------------------------------------------------------------->                        
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+            
+            <header>                 
+                JavaScript [Functions]
+            </header>
+            
+            <article>                                                
+                <p> &gt; The New object in this lesson as following (in one Tag):</p>
+                <ol type="A">                    
+                    <li> Main Functions Concept . </li>
+                    <li> Main Functions Importance, Benefits . </li>                    
+                    <li> Functions Examples: </li>                                        
+                        <ol>
+                            <li> Functions Calling Methods </li>
+                            <li> Functions with Varibles </li>
+                            <li> Functions with If Conditions </li>
+                        </ol>
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>                               
+        <section class="JSFunCon" id="JSFunCon">
+            <header>                
+                <h3> Main Concept of Functions :</h3>
+            </header>                    
+                <p> =&gt; [JS Functions] as it in any programing Languages Functions are an Essential component of any programing Langauages as overall. </p>                                                            
+                <p> =&gt; [JS Function] is a Sequence of order(s) and codes which can be called by main Js File or HTML File (Script Tag) directly(by main JS code) or indirectly (using Element Events) </p>
+                
+        </section>                                                
+        <!------------------------------------------------------------------------------------------------------>                               
+        <section class="JSFunImp" id="JSFunImp">
+            <header>
+                <h3> Functions Importance, Advantages and Usages: </h3>                                              
+            </header>
+            
+                <p> =&gt; [JS Functions] can provides several Features and Advantages in programing purposes such as :  </p>
+                    <ol type="A">
+                        <li>  Programing Events functions upon certain conditions and Events in HTML file (Tags and elements) to implement certian Codes or Procedures. </li>                       
+                        
+                        <li> Multiple Specific Applicaitons basic on Front web by JS. </li>
+
+                        <li> Critical and Essential for many programing Functions and Methods. </li>
+                            
+                        <li> Can be seperated progarming Container for certain group of Codes and Procedures which can be Called or Invoke inside other HTML Element's events, Functions, or other html Pages.</li>                        
+                        
+                        <li> It is Critical to Improve Page Loading Speed & Performance.</li>                        
+                        <li> It can Save time by prevent repeating calling codes which save time and size.</li>                        
+                    </ol>                                                    
+<!----------------------------------------------------------------------------------------------------------->
+
+            <section class="JSFunExps" id="JSFunExps">
+            <header>                
+                <h3> Main Types, Components Examples of Functions :</h3>
+            </header>                                    
+                    <ol type="A">
+                        <li> <h3 class="JSFunCall" id="JSFunCall">  [ Functions Calling Methods]: </h3></li>
+
+                            <p> =&gt; [Functions Calling] there are (2) different methods to <mark>Call or Invoke</mark> to be Excecuted internally or Externally: </p>     
+                        
+                            <lu>
+                                <li> [Direct Method (Internally)]: </li>
+                                <p> =&gt; Writing Function Code inside the <mark>JS file</mark> and Calling it by seperated Code, then Calling the Js Whole File from Html File using (Script Tag Src by the name of JS File Containing this code) </p>       
+                                                                                                                                    
+                                    <div id="FunIntCall">
+                                            <code>
+                                                //HTML File :<br>
+                                                &lt;script src="File.Js"&gt; &nbsp;&nbsp; &lt;/script&gt;<br><br>        
+                                                
+                                                //JS File :<br>
+                                                function sayHi() {<br>
+                                                &nbsp;&nbsp; alert("Hello User")<br>
+                                                } <br>
+                                                sayHi();<br><br>                                                                                                
+                                            </code>                                
+                                    </div>                                                                
+                                
+                                <li> [InDirect Method (Externally)]: </li>
+                                
+                                    <p> =&gt; Writing Function Code inside the <mark>JS file</mark> with out Calling it by seperated Code, then Calling the Js code from Html File using an Certain event of a certian Attribute Tag (Such as Button & and Event like [onclick] ) </p>                 
+                                
+                                    <div class="JSFunExp">
+                                        <button onclick="sayHi()">Click to Activate Function</button>
+                                        <script src="Functions with Int Vars.js"></script>
+                                    </div>
+
+                                <button class=btn onclick="display()"> Click to Show [And Application] Function JS Code     
+                                </button> 
+
+                                                                
+                            <div id="FunExtCall">
+                                <code>
+                                    
+                                    //HTML File :<br>
+                                    &lt;button onclick="sayHi()"&gt;  Click to Call the<br> &nbsp;&nbsp; Function<br> &lt;/button&gt;<br>         
+                                    &lt;script src="File.Js"&gt; &nbsp;&nbsp; &lt;/script&gt;<br>         
+                                    //JS File :<br>
+                                    function sayHi() {<br>
+                                    &nbsp;&nbsp; alert("Hello User");<br>
+                                    } <br><br>
+
+                                    <textarea id="SourceCode" readonly></textarea>                                                                                                             
+                                </code>                                
+                            </div>                                    
+                            </lu>
+                                    
+            <!------------------------------------------------------------------------------------------------->
+                        <li> <h3 class="JSFunVar" id="JSFunVar">  [ Functions with Variabels]: </h3></li>
+
+                            <p> =&gt; Functions can Contain and deal with Variable with different types of DataTypes but with in it's scope, but not outside of it's scope. </p>                                     
+                            <p> =&gt; Functions will Not responde to Outsider Variables will, until they be declared before and outside of Function Scope. </p>                                     
+                        
+                            <p> =&gt; Responding of Function to each Internal and External Variables depends on the location of Variable Declaration Code, and if it was (Before-After), (Inside-Outside) the Function Scope. </p>                                     
+                            <p> =&gt; Function as Default respond to Internal Vars , but to respond and deal with the External Vars , Vars Declearation Line Must be before the Function and Not After. </p>                                     
+                            
+                            <div class="JSFunExps">
+                                <Header>
+                                    <h3> [Functions with Internal & External Variables]  Example [ Js ]: </h3>
+
+                                    <p>  [Calling Var inside Function by Interanl Method] The Sourcing seperated JS Code Soure is [Functions with Int Vars.js]: </p>
+                                </Header>                                    
+
+                                <div class="JSFunExp">
+                                    <button onclick="sayHi()">Click to Activate Function</button>
+                                    <script src="Functions with Int Vars.js"></script>
+
+
+                                    <button class=btn onclick="display1()"> Click to Show [And Application] Function JS Code     
+                                    </button> 
+
+                                    </div>
+                            </div>
+
+                            <div class="JSFunExp1"> 
+                                <code>
+                                    HTML Codes :<br>
+                                    &nbsp; &nbsp; &lt;Div id="InternalCallVar" &gt; &lt;/Div&gt; <br>
+                                    &nbsp; &nbsp; &lt; script src = "Functions with Int Vars.js" &gt; &nbsp; &lt; /script &gt; <br><br>                                                                                     
+                                    // JS Codes :<br>                                    
+                                    
+                                    // Internal Calling Functions with Vars:<br>
+                                    function sayHi() <br>                                   
+                                    &nbsp;&nbsp; alert("Welcome to Javascript!");<br>
+
+                                    &nbsp;&nbsp; var myName = prompt("Please enter your Name:");<br>
+                                    
+                                    &nbsp;&nbsp; document.getElementById("InternalCallVar").innerHTML =<br> &nbsp;&nbsp; &nbsp;&nbsp;"Welcome to JS Lesson 15, " + myName;<br>
+                                    }<br>                                    
+
+                                    sayHi();
+
+                                    <textarea id="SourceCode1" readonly></textarea> 
+                                                                                       
+                                </code>
+                            </div>                                   
+                    <!---------------------------------------------------------------------------->    
+                    <li> <h3 class="JSFunIfCon" id="JSFunIfCon"> [Function with IF Statement]: </h3></li>    
+                        
+                        <p> =&gt; If Statment within Function scope will provide much more advanced Application and Abilities for the programmer to gain much Control to variables Values and creating different condition upon it. </p>      
+                            
+                        <p> =&gt; Also using Variables with Conditions Statement within Fucntions will enhance the performance also .  </p>                                                                         
+                                                                               
+                        <div class="JSFunExp">
+                            <Header>
+                                <h3> [ Function + Vars and If Condition Statements ] Example: </h3>
+                                <p> The Sourcing seperated JS Code Soure is [Function with If Statement.Js]+button calling :</p> 
+                            </Header>    
+                            <div class="JSFunExp" id="FunctionIF">
+                                <button onclick="userForm()"> Click to Activate Function </button>
+                                <script src="Function%20with%20IF%20Statement.js"></script>
+                            </div>
+
+                            <button class=btn onclick="display2()"> Click to Show [And Application] Function JS Code     
+                            </button> 
+
+                        <div class="JSFunExp1"> 
+                            <code>
+                                HTML Codes :<br>
+                                &nbsp;&nbsp; &lt;Div&gt; &lt;/Div&gt; <br>
+                                &nbsp;&nbsp; &lt; script src="Function with IF Statement.js" &gt;<br>
+                                &nbsp;&nbsp; &lt;/script &gt; <br><br>                                                                                     
+                                JS Codes :<br>
+                                var pass = prompt("Welcome to Function & If Condition App"+ <br>
+                                &nbsp; &nbsp; "&lt;br&gt;" + "Press any key to start the app>>>");<br>
+ 
+                                function userForm() {<br>
+
+                                &nbsp; &nbsp; if (pass !== "") {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var name = prompt("Please insert your name :");<br>
+
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var age = prompt("Please insert your Age :");<br> 
+                                
+                                &nbsp;&nbsp;&nbsp;&nbsp;if (name != "" || age != "") {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Hello" + name +<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Welcome to Function + If Statement App!");<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("").innerHTML = "You Are<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Welcome to Lesson 15 of JS";<br>            
+                                &nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert("One or more of you data input fields is missing<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !");<br>                                   
+                                &nbsp;&nbsp;&nbsp;&nbsp;} else { <br>
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  alert("Good Bye!");<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                }
+
+                                <textarea id="SourceCode2" readonly></textarea>                                                                                                             
+
+                            </code>
+                    </div>
+                </div>
+                                                                                                                
+                <!---------------------------------------------------------------------------->                   
+                </ol>
+            </section>
+        </section>                              
+    </div>    
+                                                                                    
+        <!------------------------------------------------------------------------------------------------------>                                                                              
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="200"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="22">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num2">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 15 Video File:</h3>
+                <iframe			
+				width="100%"
+				height="100%"											
+				allowfullscreen
+				allowfullscreen="allowfullscreen"
+				mozallowfullscreen="mozallowfullscreen"
+				msallowfullscreen="msallowfullscreen"
+				oallowfullscreen="oallowfullscreen"
+				webkitallowfullscreen="webkitallowfullscreen"
+				frameborder="0"				
+				preload="yes"
+				src="https://www.youtube.com/embed/watch?v=HVdszMOML00&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=16&controls=0&loop=1&autoplay=1&fs=1" 				
+				>
+			</iframe>
+                <!-- <video controls width="300" height="300" autoplay>
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/15 Function - Basic.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                           -->
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>
+    
+    
+    <script>
+        alert("Welcome to JavaScript");        
+    </script>
+    
+    <!--
+    <script src="Logical Operator.js"></script>
+    -->
+    
+    
+</body>
+</html

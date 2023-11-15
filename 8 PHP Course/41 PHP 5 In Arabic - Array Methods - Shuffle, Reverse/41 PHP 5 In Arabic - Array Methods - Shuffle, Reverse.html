@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse </title>
+    <link rel="stylesheet" href="41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse.css" media="all">
+    
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse
+    </header>
+<!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to PHP main Topics">
+                41 PHP 5  - Array Methods - Shuffle, Reverse Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to PHP [41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse] Concept">
+                41 PHP 5  - Array Methods - Shuffle, Reverse Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to PHP [41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse] Importance & Benefits">
+                41 PHP 5  - Array Methods - Shuffle, Reverse Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to PHP [41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse] Syntax">
+                41 PHP 5  - Array Methods - Shuffle, Reverse Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to PHP [41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse] Practical Applications">
+                41 PHP 5  - Array Methods - Shuffle, Reverse Practical Applications </a> </li>
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+        
+    <main class="Welcome"> Welcome to PHP Course <span> 41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                PHP [41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse] Main Topics :
+            </header>
+            
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+
+                <ol type="A">                                                            
+                    <li> Reversing Methods of [Indexed array]'s Elements's Values as following : <br>
+                        <ol> 
+                            <li> {$newArray = array_reverse(mainArrayName)} => Default method  </li>
+                            
+                            <li> Advanced Reversing Methods of Indexed array's Elements' Values : <br> 
+                                <ol>
+                                    <li> {$newArray = array_reverse(mainArrayName, false)} => To reverse the array WITHOUT preserving the Elements's index nubmer </li>
+                                    <li> {$newArray = array_reverse(mainArrayName, true)} => To reverse the array WITH preserving the Elements's index nubmer </li>
+                                </ol>                                
+                            </li>
+                        </ol>
+                    </li> <hr>                       
+                    
+                    <li> Shuffling Methods of [Indexed array]'s Elements's Values as following :  <br>
+                         <p> {Shuffle(arrayName)} => To random re-arrange array elemnts, every time of processing the Shuffle Method </p>                          
+                    </li>                                            
+                </ol>                                                
+
+            </article>
+        </Section>        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> PHP [41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse] </h3>
+            </header>
+                        
+            <h2> [PHP Array Methods - Reversing && Shuffling ] => Indexed Array Methods -  Concept: </h2>
+                <ol type="A">                                                            
+                    <li> Reversing Methods of [Indexed array]'s Elements's Values as following : <br>
+                        <ol> 
+                            <li> Default Reversing Methods of Indexed array's Elements' Values : <br>
+                                <p> {$newArray = array_reverse(mainArrayName)} => Default method </p>
+                            </li>
+                            
+                            <li> Advanced Reversing Methods of Indexed array's Elements' Values : <br> 
+                                <p>  {$newArray = array_reverse(mainArrayName, preserve option)} => Advanced method , with preserve option, as following : <br>
+                                    <ul>
+                                        <li> {$newArray = array_reverse(mainArrayName, false)} => To reverse the array WITHOUT preserving the Elements's index nubmer </li>
+                                        <li> {$newArray = array_reverse(mainArrayName, true)} => To reverse the array WITH preserving the Elements's index nubmer </li>
+                                    </ul>
+                                </p>                                          
+                            </li>
+                        </ol>
+                    </li>
+                    
+                    <li> Shuffling Methods of [Indexed array]'s Elements's Values as following :  <br>
+                         <p> Shuffling Method => To random re-arrange array elemnts, every time of processing the Shuffle Method </p> 
+                         <p> {Shuffle(arrayName)} => shuffle Do Not need to put in a nother Array Variable , and processed directly. </p>
+                    </li>
+                                            
+                </ol>                                                    
+            
+                <br> <br> <hr>
+                <!-------------------------------------------  -->                                                                                                                                                                                                                              
+            </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> PHP [41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse] Importance & Benefits: </h3>
+            </header>
+            
+            <ul> 
+                <li> Reversing is different froim the sorting, because it just reversing the elements Not arranging them. </li>
+                <li> Reversing Method is providing the ability to control the relation between the Elements and it's indexes by Preserving </li>
+                <li> Shuffling is very Important in advanced programing functionality, by providing the random arrangment  </li>
+            </ul>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ 41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse] Syntax & Methods: </h3>
+            </header>        
+
+            <p> =&gt; In this after setting up the application => We will create a simple PHP File && Running it by [Local Server] </p>
+            
+            <p> =&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} : <br>
+                <p> Using [Array  Methods - Reversing && Shuffling ] => has following ( 2 ) main Examples : </p> 
+                                
+                    <ol type="A">        
+                        <li> First Example [Reversing - Preseving ] => {array_reverse(arrayName)} && { array_reverse(arrayName, preserve) } Method: <br>
+                            <ul>
+                                <li> $reversedArrayName = array_reverse(array Name);   => The Default Reversing Method in the Indexed array's Elements. </li>
+                                <li> $reversedArrayName = array_reverse(array Name, preserve);   => The Advanced Reversing Method in the Indexed array's Elements. {2 preserving options } as following :  <br>
+                                    <ol>
+                                        <li> $reversedArrayName = array_reverse(array Name, false) => The advanced Reversing Method in the array's Elements according to {preserve : false} : Without keeping the relation indexes of the reversed elements </li>
+                                        <li> $reversedArrayName = array_reverse(array Name, true) => The advanced Reversing Method in the array's Elements according to {preserve : true} : With keeping the relation indexes of the reversed elements </li>                                        
+                                    </ol>
+                                </li>                            
+                            </ul>
+                        </li>
+
+                        <li> Second Example => {shuffle(ArrayName)} Method: <br>
+                            <ul>
+                                <li> {shuffle(ArrayName)} => The random re-arranging the Array elements without any creteria  </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </P>                                                            
+                <!-- ================================================================= -->
+                                               
+                <h2>  B)  Html page :  </h2> <br>                    
+                        <span class='one'> &lt; !DOCTYPE html &gt; </span> <br>
+                            <span class='two'> &lt; html &gt; </span> <br>
+                                <span class='three'> &lt; /head &gt;</span> <br>
+                                    <span class='four'> &lt; title &gt; &lt;? php echo $title; ?&gt;  &lt; /title &gt;  </span> <br>
+                                    <span class='four'> &lt; link rel="stylesheet" href="41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse" media="all" &gt;  </span> <br>
+                                <span class='three'> &lt; /head &gt; </span>  <br> <br>                                
+                                <span class='three'>&lt; body &gt; </span> <br>                            
+                                
+                                <span class='three'>&lt; /body &gt; </span> <br>
+                                <span class='two'>&lt;/html &gt; </span> <br>
+                                ---------------------------------------------------------------------------- <br>
+                                ---------------------------------------------------------------------------- <br>                      
+                   <br><br> <hr>                                                                                                                                  
+            <br><br>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+         <section class="PHPPract" id="PHPPract"> 
+            <header>
+                <h3> PHP [41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here (2) Major Applications PHP [ Sorting Elements from Array ] as following =>  <br><br>
+
+                <ol type="A">        
+                    <li> First Example [Reversing - Preseving ] => {array_reverse(arrayName)} && { array_reverse(arrayName, preserve) } Method: <br>
+                        <ul>
+                            <li> $reversedArrayName = array_reverse(array Name);   => The Default Reversing Method in the Indexed array's Elements, and include :  <br>
+                                <ul>  
+                                    <li> Printing the array before reversing  </li>
+                                    <li> Allocating the array after default reversing in to another array variable & Printing it </li>
+                                </ul>                                
+                            </li>
+                            
+                            <li> $reversedArrayName = array_reverse(array Name, preserve);   => The Advanced Reversing Method in the Indexed array's Elements. {2 preserving options } as following :  <br>
+                                <ol>
+                                    <li> $reversedArrayName = array_reverse(array Name, false) => The advanced Reversing Method in the array's Elements according to {preserve : false} : Without keeping the relation indexes of the reversed elements, including the following: <br> 
+                                        <ul>
+                                            <li> Printing the array before reversing  </li>
+                                            <li> Allocating the array after advanced reversing without presevance [false] in to another array variable & Printing it </li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li> $reversedArrayName = array_reverse(array Name, true) => The advanced Reversing Method in the array's Elements according to {preserve : true} : With keeping the relation indexes of the reversed elements , including the following: <br> 
+                                        <ul>
+                                            <li> Printing the array before reversing  </li>
+                                            <li> Allocating the array after advanced reversing with presevance [true] in to another array variable & Printing it </li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </li>                            
+                        </ul>
+                    </li>
+
+                    <li> Second Example => {shuffle(ArrayName)} Method: <br>
+                        <ul>
+                            <li> {shuffle(ArrayName)} => The random re-arranging the Array elements without any creteria , including the following: <br>
+                                <ul>
+                                    <li> Printing the array before reversing </li>
+                                    <li> Processing the shuffling Method  </li>
+                                    <li> Printing the array after shuffling </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+
+             <!-- <section id=sec class=txtarea >                                  
+                 <a href="http://localhost/PHP%20Course/41%20PHP%205%20In%20Arabic%20-%20Array%20Methods%20-%20Shuffle,%20Reverse/41%20PHP%205%20In%20Arabic%20-%20Array%20Methods%20-%20Shuffle,%20Reverse.php">  
+                    {41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse} => Lesson 41 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+
+            <section id=sec class=txtarea >                                  
+                <a class=btn href="http://localhost/PHP%20Course/41%20PHP%205%20In%20Arabic%20-%20Array%20Methods%20-%20Shuffle,%20Reverse/41%20PHP%205%20In%20Arabic%20-%20Array%20Methods%20-%20Shuffle,%20Reverse.php">  
+                   {Main Page} [Display] => {41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse} => Lesson 41 PHP File Webpage by Localhost
+               </a> <br> <br>             
+               
+               <a class=btn href="41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse.php">  
+                   {Main Page} [Source Code] => {41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse} => Lesson 41 PHP File Webpage by Localhost
+               </a>             
+           </section> <br> 
+            
+             <!-- <script  src="14 PHP 5 In Arabic - Comparison Operators.php">
+                 
+            </script> 
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+                
+        </section>                           
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 41 Video File:</h3>
+            
+            <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=XgaY8E8n5Ao&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=41&controls=0&loop=1&autoplay=1&fs=1"    
+        >
+        </iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\41 PHP 5 In Arabic - Array Methods - Shuffle, Reverse.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shandow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 41 PHP 5 - Array Methods - Shuffle, Reverse");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

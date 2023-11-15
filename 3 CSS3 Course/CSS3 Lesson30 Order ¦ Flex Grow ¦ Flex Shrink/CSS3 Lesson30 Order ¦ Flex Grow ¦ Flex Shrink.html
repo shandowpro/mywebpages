@@ -1,0 +1,530 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 30 [ Order ¦ Flex Grow ¦ Flex Shrink] </title>
+    <link rel="stylesheet" href="CSS3 Lesson30 Order ¦ Flex Grow ¦ Flex Shrink.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 30 [CSS3  Order ¦ Flex Grow ¦ Flex Shrink]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to CSS3  Order ¦ Flex Grow ¦ Flex Shrink main Topics">
+                [ CSS3  Order ¦ Flex Grow ¦ Flex Shrink ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to CSS3   Order ¦ Flex Grow ¦ Flex Shrink [CSS3   Order ¦ Flex Grow ¦ Flex Shrink ] Concept">
+                [ CSS3  Order ¦ Flex Grow ¦ Flex Shrink ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to CSS3   Order ¦ Flex Grow ¦ Flex Shrink [CSS3  Order ¦ Flex Grow ¦ Flex Shrink ] Importance & Benefits">
+                [ CSS3  Order ¦ Flex Grow ¦ Flex Shrink ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to CSS3   Order ¦ Flex Grow ¦ Flex Shrink [CSS3   Order ¦ Flex Grow ¦ Flex Shrink ] Syntax">
+                [ CSS3  Order ¦ Flex Grow ¦ Flex Shrink ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to CSS3   Order ¦ Flex Grow ¦ Flex Shrink [CSS3  Order ¦ Flex Grow ¦ Flex Shrink ] Practical Applications">
+                [ CSS3  Order ¦ Flex Grow ¦ Flex Shrink ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 30 [CSS3  Order ¦ Flex Grow ¦ Flex Shrink ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                CSS3 Lesson30  Order ¦ Flex Grow ¦ Flex Shrink Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [CSS3 Lesson30  Order ¦ Flex Grow ¦ Flex Shrink] Concept. </li>                       
+                    
+                    <li> [CSS3 Lesson30  Order ¦ Flex Grow ¦ Flex Shrink] Importance & Benefits. </li>
+
+                    <li> [CSS3 Lesson30  Order ¦ Flex Grow ¦ Flex Shrink] Syntax [Examples]. </li>
+                    
+                     <li> [CSS3 Lesson30  Order ¦ Flex Grow ¦ Flex Shrink] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>                    
+                    <ul>
+                        <li> Basic concept about {order: # Numeric value } </li> 
+                        <li> Basic concept about {flex-grow: # Numeric value } </li> 
+                        <li> Basic concept about {flex-shrink: # Numeric value } </li>                     
+                    </ul>                   
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class=CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [CSS3 Lesson30 Order ¦ Flex Grow ¦ Flex ShrinkContent] Concept: </h3>
+            </header>
+                      
+                <p> {Order ¦ Flex Grow ¦ Flex ShrinkContent}: These properties are allocated to the parent Container (Children Element => part:1) <br>
+                                                                                                    
+                <ul>
+                    <li>  First (Order) :  <br>
+                                        
+                        <p> [Order] => This property to set cdrtain order of arranging children inside the parent container <br>
+                                    
+                        <p> [Order] => This property is being for each single element by value of desired arrange / order  <br>
+                        
+                        <p> [Order] => This property not needs to arrange items in HTML script   <br>
+                                                        
+                        <p> [Order] => This property is Requiring following conditions:  <br>
+                            <ol>
+                                <li>  Parent Container => {display: flex} to be activated  . </li>                                                     
+                            </ol>                                                    
+                    </li>
+                    <!-- ------------------------------------------------------ -->
+
+                    <li>  Second (Flex-Grow) :  <br>
+
+                        <p> [Flex Grow] => Is one of the (Children Elements => part:1)   <br>
+                            
+                        <p> [Flex Grow] => This property to control growing ratio of the certian child Element {incase of parent container width changed} <br>
+                                
+                        <p> [Flex Grow] => The default value is : {0}: Which means not to grow when parent container's width changed & {use auto Total width dividing }  <br>
+                            
+                        <p> [Flex Grow] => This property is Requiring following conditions:  <br>
+                            <ol>
+                                <li>  Parent Container => {display: flex} to be activated  . </li>                                                         
+                                <li>  Changing in parent container width . </li>
+                            </ol>
+                                
+                        <p> [Align-Items] => This property can be assinged wtih one following values : <br>
+                            <ol>
+                                <li> {0} : The Disabling Value (not to activate Child grow if parent conatiner changed ) </li>
+                                <li> {1} : The Default Value Activate the flex grow by ratio of [1 time of setted child element width] {if parent conatiner changed & there enough space for one/more child elements} </li>
+                                <li> {2 -> ...} : Activate the flex grow by ratio of [2 -> ... time of setted child element width] {if parent conatiner changed & there enough space for one/more child elements}  </li>                                                 
+                            </ol>                                        
+                    </li>
+                    <!-- ------------------------------------------------------------------------------------------- -->
+                    <li>  Third (Flex-shrink) :  <br>
+
+                        <p> [Flex-shrink] => Is one of the (Children Elements => part:1)   <br>
+                            
+                        <p> [Flex-shrink] => This property to control shrinking ratio of the certian child Element {Decrease of parent container width changed} <br>
+                                
+                        <p> [Flex-shrink] => The default value is : {1}: Which means not to shrink when parent container's width changed & {use auto width dividing }  <br>
+                            
+                        <p> [Flex-shrink] => This property is Requiring following conditions:  <br>
+                            <ol>
+                                <li>  Parent Container => {display: flex} to be activated  . </li>                                                         
+                                <li>  Changing in parent container width . </li>
+                            </ol>
+                                
+                        <p> [Flex-shrink] => This property can be assinged with one following values : <br>
+                            <ol>
+                                <li> {0} : The Disabling Value (not to activate Child shrink if parent container's width changed ) </li>
+                                <li> {1} : The Defuault value to Activate the flex shrink by ratio of [1 time of setted child element width] {if parent conatiner changed} </li>
+                                <li> {2 -> ...} : Activate the flex shrinking by ratio of [2 -> ... time of setted child element width] {if parent conatiner changed }  </li>
+
+                            </ol>                                        
+                    </li>
+                </ul>
+                <!-- ------------------------------------------------------ -->                                                                                                                        
+                                                        
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+        <section class="CSS3Imp" id="CSS3Imp">
+            <header>
+                <h3> [CSS3 Lesson30  Order ¦ Flex Grow ¦ Flex Shrink ] Importance & Benefits: </h3>
+            </header>
+            
+            <p> =&gt; [CSS3 Lesson30  Order ¦ Flex Grow ¦ Flex Shrink ] : This Advanced property enabling the following features & imporatance : <br>            
+                <ul>                                                                
+                    <li> Providing better, easier, practical, shortcut and profficent Renposive Desiging [Specially Mobile Scalls], Much more easier way than old methods </li>
+                    <li> Using {order} => Provides useful methods sort the children elements inside the parent contianer </li>
+                    <li> Using {order} & {media} togther => Provides very easy method & tools for controling children inside the parent container (in different scales ) in comparison with the old methods  </li>
+                    <li> Using {flex-grow} & {flex-shrink} => Provides greate tool to control children size & sclaes {specailly in different sales & media & responsive desiging}  </li>
+                </ul>                                                 
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ CSS3  Order ¦ Flex Grow ¦ Flex Shrink] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // (*) [CSS3  Order ¦ Flex Grow ¦ Flex Shrink] Syntax as following :<br><br>
+                <span class='one'></span> //a)  [HTML] file  : <br>                                          
+                    <!-- A) Order -->                                        
+                        <span class=three></span> &lt; section class='Order'  &gt; <br>
+                            
+                            <span class=four></span>  &lt; div class='one' &gt;  Div 1  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div class='two' &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div class='three' &gt;  Div 3  &lt; /div &gt; <br>
+                            
+                            <span class=four></span>  &lt; div class='four' &gt;  Div 4  &lt; /div &gt; <br>
+                            
+                        <span class=three></span> &lt; /section &gt;  <br>s <br>
+                        // ----------------------------------------------------------------------------- <br><br>                    
+                                                            
+                        <span class=three></span> &lt; section class='Flex-Grow'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div class='one' &gt;  Div 1  &lt; /div &gt;  <br>
+                                
+                            <span class=four></span>  &lt; div class='two' &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div class='three' &gt;  Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=three></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                            
+                                                            
+                        <span class=three></span> &lt; section class='Flex-Shrink'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div class='one' &gt;  Div 1  &lt; /div &gt;  <br>
+                                
+                            <span class=four></span>  &lt; div class='two' &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div class='three' &gt;  Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=three></span> &lt; /section &gt;  <br> <br>
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                                        
+                        
+                    <br> <br>  <hr>                                                                                                                                                                    
+                    // ------------------------------------------------------------------------------ <br><br>
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                                                                                                                                                                        
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                
+                        <br> <br>  <hr>                                                           
+                    <span class='one'></span> //b)  [CSS3] file  : <br>                                          
+                        <!-- Setting main Containers  -->
+                        <span class=two></span> .Order, .Flex-Grow, .Flex-Shrink {  <br>                            
+                            <span class=three></span> display: flex; <br>
+                            <span class=three></span> margin: 50px auto ; <br>
+                            <span class=three></span> width: 800px; <br>
+                            <span class=three></span> height: 400px; <br>
+                            <span class=three></span> border: 3px solid #EEE; <br>                            
+                            <span class=three></span> border-radius: 20px ; <br>                            
+                        <span class=two></span> }  <br> <br>
+                        
+                        <span class=two></span> .Order div {  <br>                            
+                            <span class=three></span> display: flex; <br>
+                            <span class=three></span> margin: 50px auto ; <br>
+                            <span class=three></span> width: 180px; <br>
+                            <span class=three></span> height: 500px; <br>
+                            <span class=three></span> border: 3px solid #EEE; <br>                            
+                            <span class=three></span> border-radius: 20px ; <br>                            
+                        <span class=two></span> }  <br> <br>
+                        
+                        <!-- Customized Setting each Child in first Container   -->                        
+                        <span class=two></span> .Order .One {  <br>                            
+                            <span class=three></span> background-color: #080; <br>                                                        
+                            <span class=three></span> order: 4; <br>                            
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Order .Two {  <br>                            
+                            <span class=three></span> background-color: #f00; <br>                                                        
+                            <span class=three></span> order: 3; <br>                            
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Order .Three {  <br>                            
+                            <span class=three></span> background-color: #f0f; <br>
+                            <span class=three></span> order: 2; <br>                            
+                        <span class=two></span> }  <br> <br>
+
+                        <span class=two></span> .Order .Four {  <br>                            
+                            <span class=three></span> background-color: #00f; <br>
+                            <span class=three></span> order: 1; <br>                            
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                                                                                                    
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>            
+                        
+                        <!-- Customized Setting each Children in Second Container   -->                        
+                        <span class=two></span>   .Flex-Grow .One {  <br>                                 
+                            <span class=three></span> flex-grow: 0 <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>   .Flex-Grow .Two {  <br>                                 
+                            <span class=three></span> flex-grow: 1; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                                            
+                        <span class=two></span>   .Flex-Grow .Three {  <br>                                 
+                            <span class=three></span> flex-grow: 2; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>                        
+                        <!-- Customized Setting each Children in Third Container   -->                        
+                        <span class=two></span>   .Flex-Shrink .One {  <br>                                 
+                            <span class=three></span> flex-shrink: 0 <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                        
+                        <span class=two></span>   .Flex-Shrink .Two {  <br>                                 
+                            <span class=three></span> flex-shrink: 1; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                            
+                        <span class=two></span>   .Flex-Shrink .Three {  <br>                                 
+                            <span class=three></span> flex-shrink: 2; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>                        
+                    // ------------------------------------------------------------------------------ <br><br>
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="CSS3Pract" >
+
+            <header>
+                <h3> [CSS3 Order ¦ Flex Grow ¦ Flex ShrinkContent] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following are Applied examples of { Order ¦ Flex Grow ¦ Flex Shrink} new feature/ property with all it's all Values} : <br>
+                
+            <p> (1) Main Fieldset Multiple as following:  </p>                        
+            <ul>                    
+                <li> First Section {Order} => A container has (4) Children </li>
+                <li> Second Section {Flex-Grow} => A container has (3) Children (with different Values of [Flex-Grow] property ) </li>
+                <li> Third Section {Flex-Shrink} => A container has (3) Children (with different Values of [Flex-Shrink] property ) </li>                                            
+                <!-- ========================================================================= -->                                                
+                <!-- ========================================================================= -->                
+            </ul>                                                
+            <hr><br><br>
+            <!-- ========================================================================= -->                                                        
+                    <fieldset class='MainF'>                                                  
+                        <legend> Main Parent Container => Order Property || Flex-Grow Property || Flex-Shrink Property </legend>
+                    
+                        <!-- A)  {Order} Application1  -->
+                        
+                        <header>  1) Order Property : [With different Values] </header>
+                        
+                        <section class='Order'>                                                                                                
+                            
+                            <div class='One'>                     
+                                This div (Child) Number by order property is [4]
+                            </div>                        
+                            
+                            <div class='Two'>                     
+                                This div (Child) Number by order property is [3]
+                            </div>                        
+                            
+                            <div class='Three'>                     
+                                This div (Child) Number by order property  is [2]
+                            </div>                                        
+                            
+                            <div class='Four'>                     
+                                This div (Child) Number by order property is [1]
+                            </div>                                        
+                        </section>                      
+                        <hr> <br> <br>
+                        <!-- ------------------------------------------------------------------------- -->                
+   
+                        <!-- B)  {Flex-Grow} Application2  -->
+                        <header>  2) Flex-Grow Property : [With different Values] </header>
+                        
+                        <section class='Flex-Grow'>                            
+                            <div class='One'>                     
+                                This Div (Child) Will Not be Flex-grown  
+                            </div>                        
+                            
+                            <div class='Two'>                     
+                                This Div (Child) Will be Flex-grown by [1] times 
+                            </div>                        
+                            
+                            <div class='Three'>                     
+                                This Div (Child) Will be Flex-grown by [5] times 
+                            </div>                                        
+                        </section>
+                        <!-- ------------------------------------------------------------------------- -->                
+                        <!-- ------------------------------------------------------------------------- -->                
+                        
+                        <!-- C)  {Flex-Shrink} Application3  -->
+                        <header>  3) Flex-Shrink Property : [With different Values] </header>
+                        
+                        <section class='Flex-Shrink'>                            
+                            <div class='One'>                     
+                                This Div (Child) Will Not be Flex-grown {will not be Shrinked if container Shrinked}
+                            </div>                        
+                            
+                            <div class='Two'>                     
+                                This Div (Child) Will be Flex-grown by [1] 
+                            </div>                        
+                            
+                            <div class='Three'>                     
+                                This Div (Child) Will be Flex-grown by [3] 
+                            </div>                                        
+
+                        </section>
+                        <!-- ------------------------------------------------------------------------- -->                
+                        <!-- ------------------------------------------------------------------------- -->                
+                      
+                        
+                    <!-- ------------------------------------------------------------------------- -->                                                                        
+                    <!-- ------------------------------------------------------------------------- -->                                                                                                                                      
+                    <!-- --------------------------------------------------------------------- -->                            
+                </fieldset>
+                <!-- --------------------------------------------------------------------- -->                                                            
+                <br><hr> <br>        
+                <!-- --------------------------------------------------------------------- -->                                                            
+                            
+            <!-- --------------------------------------------------------------------- -->                                            
+            <br><hr> <br>                        
+            <br><hr> <br>        
+            <!-- --------------------------------------------------------------------- -->                            
+        <!-- --------------------------------------------------------------------- -->                                                    
+        </section>                    
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 30 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=XPcOcBuuTgA&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=30&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\30 Css3 - Order ¦ Flex Grow ¦ Flex Shrink.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 30 [CSS3  Order ¦ Flex Grow ¦ Flex Shrink ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>6 Learn Object Oriented PHP - Class Properties Change</title>
+    <link
+      rel="stylesheet"
+      href="6 Learn Object Oriented PHP - Class Properties Change.css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      6 Learn Object Oriented PHP - Class Properties Change
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to PHP main Topics">
+            6 Learn Object Oriented PHP - Class Properties Change Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPCon"
+            title="Go to PHP [PHP OOP   6 Learn Object Oriented PHP - Class Properties Change] Concept"
+          >
+            6 Learn Object Oriented PHP - Class Properties Change Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPImp"
+            title="Go to PHP [PHP OOP   6 Learn Object Oriented PHP - Class Properties Change] Importance & Benefits"
+          >
+            6 Learn Object Oriented PHP - Class Properties Change Importance &
+            Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPSyntx"
+            title="Go to PHP [PHP OOP   6 Learn Object Oriented PHP - Class Properties Change] Syntax"
+          >
+            6 Learn Object Oriented PHP - Class Properties Change Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPPract"
+            title="Go to PHP [PHP OOP   6 Learn Object Oriented PHP - Class Properties Change] Practical Applications"
+          >
+            6 Learn Object Oriented PHP - Class Properties Change Practical
+            Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <main class="Welcome">
+      Welcome to PHP Course
+      <span> 6 Learn Object Oriented PHP - Class Properties Change</span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          PHP [PHP OOP 6 Learn Object Oriented PHP - Class Properties Change]
+          Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>
+              PHP OOP 5 [Class Properties Change] Visibiltly Markers [basics]
+              (advanced next lesson).
+            </li>
+            <li>PHP OOP 5 [Class Properties Change] Pracrtical Exmaples .</li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPCon" id="PHPCon">
+        <header>
+          <h3>[PHP OOP Class Properties Change] Concept:</h3>
+        </header>
+
+        <h2>
+          =&gt; OOP [Class Properties Change] : <br />
+          <ul>
+            <li>
+              Main Concepst =&gt; <br />
+              <p>
+                It is avaiable to Change the properties of the defined Objects
+                after create it from the class
+              </p>
+              <p>
+                The Object's properties can be as class default OR be Customized
+                after creating the Object {by using -> object assinging porperty
+                opertaor } [without using the $ sign ]
+              </p>
+            </li>
+          </ul>
+        </h2>
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="PHPImp" id="PHPImp">
+        <header>
+          <h3>
+            PHP [PHP OOP 6 Learn Object Oriented PHP - Class Properties Change]
+            Importance & Benefits :
+          </h3>
+        </header>
+
+        <p>
+          [Class Properties Change] => Are very critical to detect each new
+          Objects new properties will be created from this Class <br />
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPSyntx" id="PHPSyntx">
+        <header>
+          <h3>[ PHP OOP 6 Class Properties Change ] Syntax & Methods:</h3>
+        </header>
+
+        <p>
+          =&gt; Following is a simple syntax code written Emded in a HTML page
+          => <br />
+          Printing string text value from the server in the user website page
+        </p>
+
+        <p>=&gt; [Class] & [Object] main Syntax as following : <br /></p>
+
+        <p>Syntax: <br /></p>
+        <div id="Code" class="Code">
+          <span class="one"></span> &lt; ?php <br />
+
+          <span class="two"></span> Defining new Class {ClassName} [with default
+          properties values] : <br />
+          <span class="three"></span> class ClassName{ <br />
+          <span class="four"></span> public propertyName1 = "value" ; <br />
+          <span class="four"></span> public propertyName1 = 'value' ; <br />
+          <span class="four"></span> private propertyName2 = 'value'; <br />
+          <span class="four"></span> protected propertyName3 = 'value'; <br />
+          <span class="three"></span> } <br /><br />
+
+          <span class="two"></span> Defining new Class {ClassName} [with non
+          properties values] : <br />
+          <span class="three"></span> class ClassName{ <br />
+          <span class="four"></span> public propertyName1; <br />
+          <span class="four"></span> public propertyName1; <br />
+          <span class="four"></span> private propertyName2; <br />
+          <span class="four"></span> protected propertyName3; <br />
+          <span class="three"></span> } <br /><br />
+
+          <span class="two"></span> Defining new Object {objName} with Null
+          parameter value : <br />
+          <span class="three"></span> $objName= new ClassName(); <br />
+
+          <span class="two"></span> Changing / Assinging Object {objName} with
+          Customized parameter value : <br />
+          <span class="three"></span> $objName-> propertyName1 = "value"; <br />
+          <span class="three"></span> $objName-> propertyName2 = "value"; <br />
+          <span class="three"></span> $objName-> propertyName3 = "value"; <br />
+          <br />
+
+          <span class="two"></span> Printing the Var_dump of new created Object
+          : <br />
+          <span class="three"></span> echo &lt; pre &gt; ; <br />
+          <span class="four"></span> echo var_dump($objName); <br />
+          <span class="three"></span> echo &lt; pre &gt; ; <br />
+
+          <span class="one"></span> &gt; <br />
+          //=========================================================== <br />
+          <br />
+          <p>=&gt; PHP new Syntax of the (1) as following : <br /></p>
+
+          <ol type="A">
+            <li>
+              First Example {Apple Devices} => [Creating new Class {Apple Device
+              with non default values of Properties} + (2)Object {iphone6plus
+              with Customized Values} + Printing Object var Dump]
+            </li>
+            <li>
+              Second Example {Apple Devices} => [Creating new Class {Apple
+              Device with default values of Properties} + (2)Object {iphone6plus
+              with Default Values} + Printing Object var Dump]
+            </li>
+          </ol>
+          <hr />
+
+          //=========================================================== <br />
+          <br />
+
+          <br /><br />
+        </div>
+
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPPract" id="PHPPract">
+        <header>
+          <h3>
+            PHP [Class Properties Change] General Practical Applications :
+          </h3>
+        </header>
+
+        <p>
+          In this lesson will be (2) Application [Practical Exmpales of creating
+          new class{with Public Properties} and objects {with Null + custoimized
+          Properites Values}] = > as following :
+        </p>
+
+        <ol type="A">
+          <li>
+            First Example {Apple Devices} => [Creating new Class {Apple Device
+            with non default values of Properties} + (2)Object {iphone6plus with
+            Customized Values} + Printing Object var Dump] , and including the
+            following steps : <br />
+            <ul>
+              <li>
+                Definging and Creating new Class [AppleDevice] {with default
+                properties}
+              </li>
+              <li>
+                Definging and Creating new (2) Objects : [iphone6plus] &
+                [iphone7plus] => from the class {AppleDevice}
+              </li>
+              <li>
+                Changing/Assigning the propertries values (Customized Properites
+                Values) of the Defined objects [iphone6plus]
+              </li>
+              <li>
+                Changing/Assigning the propertries values (Customized Properites
+                Values) of the Defined objects [iphone7plus]
+              </li>
+              <li>
+                Printing the var Dump Object[iphone6plus] & Object[iphone6plus]
+                created from the class [AppleDevice]
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            Second Example {Apple Devices} => [Creating new Class [Default
+            properties values] {Apple Device with non default values of
+            Properties} + (2)Object {iphone6plus with Customized Values} +
+            Printing Object var Dump] , and including the following steps :
+            <br />
+            <ul>
+              <li>
+                Definging and Creating new Class [AppleDevice1] {with default
+                values}
+              </li>
+              <li>
+                Definging and Creating new (2) Objects : [iphone6plus] &
+                [iphone7plus] => from the class {AppleDevice}
+              </li>
+              <li>
+                Changing/Assigning the propertries values (Customized Properites
+                Values) of the Defined objects [iphone6plus]
+              </li>
+              <li>
+                Printing the var Dump Object[iphone6plus] (with Customized
+                properties values) created from the class [AppleDevice]
+              </li>
+              <li>
+                Printing the var Dump Object[iphone7plus] (with Default
+                properties values) created from the class [AppleDevice]
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+
+        <section id="sec" class="txtarea">
+          <a
+            class="btn"
+            href="http://localhost/PHPOOP%20Course/6%20Learn%20Object%20Oriented%20PHP%20-%20Class%20Properties%20Change/6%20Learn%20Object%20Oriented%20PHP%20-%20Class%20Properties%20Change.php"
+          >
+            {Main Page} [Display] => {6 Learn Object Oriented PHP - Class
+            Properties Change} => Lesson 6 PHP File Webpage by Localhost
+          </a>
+          <br />
+          <br />
+
+          <a
+            class="btn"
+            href="6 Learn Object Oriented PHP - Class Properties Change.php"
+          >
+            {Main Page} [Source Code] => {6 Learn Object Oriented PHP - Class
+            Properties Change} => Lesson 6 PHP File Webpage by Localhost
+          </a>
+        </section>
+        <br />
+
+        <!-- <section id=sec class=txtarea >                                  
+                 <a class=btn href="http://localhost/PHP%20Course/95%20PHP%205%20In%20Arabic%20-%20Filter%20-%20Whats%20Filter%20&%20Why%20To%20Use%20it/check.php">  
+                    {Check Page} [Display] => {6 Learn Object Oriented PHP - Class Properties Change} => {check.php} Webpage by Localhost 
+                </a> <br> <br>             
+                
+                <a class=btn href="check.php">  
+                    {Check Page} [Source Code] => {6 Learn Object Oriented PHP - Class Properties Change} => {check.php} Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+        <!-- <script  src="14 PHP OOP  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="VideoSection">
+        <h3>Lesson 6 Video File:</h3>
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=66_rXS938mQ&list=PLDoPjvoNmBAxXTPncg0W4lhVS32LO_xtQ&index=6&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\OOP PHP\6 Learn Object Oriented PHP - Class Properties Change.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to 6 Learn Object Oriented PHP - Class Properties Change");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

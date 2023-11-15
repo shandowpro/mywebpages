@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" >
+    <meta name="description" content="Testing Form Elements (Tags) and its Attributes" >     
+    
+    <title> Form Testing </title>
+    
+    <link rel="Stylesheet" href="style.css" >
+    
+    <style>
+        div{background:black}
+        h1{border:3px solid green; color:blue; padding:5px; font-size:30px; text-align:center; font-weight:italic; background:lightgreen }
+        legend{background:#DDD; padding:5px; border:1px solid #CCC}
+        fieldset{margin-bottom:20px; background:#EFEFEF; padding:10px; border:1px solid #CCC}        
+    </style>
+    
+    <script>
+        function SayHello(){alert("Hello HTML");}
+    </script>
+    
+</head>
+
+<body>
+    <div>
+        <h1> Form Sample </h1>
+        <form name="register" >        
+            <fieldset class="Field1">
+                <legend> Personal Information </legend>
+                
+                <label> Username </label>
+                <input type="text" name="username" placeholder="Enter you Username here" maxlength="20"> <br> <br>                
+                            
+                <label> Password </label>
+                <input type="password" name="Password" placeholder="Enter your password here" maxlength="15"> <br>
+                
+                <input type="checkbox" name="RememberUser">
+                <label> Remember me </label> <br> <br>
+                
+                <label> Upload your CV </label>
+                <input type="file" > <br> <br>
+                
+                <label> Type below any additional information about your Experiecnes: </label> <br> <br>            
+                <textarea rows="6" cols="60"> Write your Experiences and previous Career... </textarea> <br>
+            </fieldset>            
+            
+            <fieldset class="Field2">
+                <legend> Prefers Informations </legend>
+                
+                <label> Choose your Browser: </label> <br>
+                <input type="radio" name="browser" value="Chrome"  > Google Chrome     <br>
+                <input type="radio" name="browser" value="FireFox" > Mozilla FireFox   <br>
+                <input type="radio" name="browser" value="Explorer"> Internet Explorer <br>
+                <input type="radio" name="browser" value="Opera"   > Opera             <br>
+                    
+                <label> Choose your Mobile: </label> <br>
+                <input type="radio" name="mobile" value="Iphone"  > Iphone   <br>
+                <input type="radio" name="mobile" value="Samsung" > Samsung  <br>
+                <input type="radio" name="mobile" value="Nokia"   > Nokia    <br>
+                <input type="radio" name="mobile" value="Huwawi"  > Huwawi   <br>
+                
+                <label>Choose your favourite contact Time: </label>
+                <select name="ContactTime">
+                    <optgroup label="Shrot Period">
+                        <option value="1"> day </option>
+                        <option value="2"> 3 days </option>
+                        <option value="3"> week </option>
+                    </optgroup>
+                    <optgroup label="Moderate Period">
+                        <option value="4"> 2 weeks </option>
+                        <option value="5"> 3 weeks </option>
+                        <option value="6"> 1 Month </option>
+                    </optgroup>
+                    <optgroup label="Long Period">
+                        <option value="7"> 2 Months </option>
+                        <option value="8"> 3 Months </option>
+                        <option value="9"> 6 Months </option>
+                    </optgroup>
+                </select> <br>        
+            </fieldset>
+            
+            <fieldset class="Field3">
+                <legend> Suggestions & Submit </legend>
+    
+                <label> Write down your Suggestion and Complains: </label> <br>       
+                <textarea rows="10" cols="60"> Write your comments... </textarea> <br>
+                
+                <input type="button" value="Say Hello" name="Say Hello" onclick="SayHello();" > 
+                                
+                <input type="reset" value="Reset Fields" name="reset"> <br><br>
+                
+                <input name="SubmitData" type="submit" value="Sign In"> <br>
+                
+            </fieldset>                            
+        </form>    
+    </div>    
+</body>
+</html>

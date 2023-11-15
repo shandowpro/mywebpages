@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS OOP Lesson 7 [Defining Object by Object.create()]</title>
+    <link
+      rel="stylesheet"
+      href="JS OOP Lesson7 [Defining Object with Object.create()].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JS OOP Lesson7 [Defining Object with Object.create()]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS OOP main Topics">
+            JS OOP Lesson7 [Defining Object with Object.create()] Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPCon"
+            title="Go to JS OOP [Defining Object with Object.create()] Concept"
+          >
+            JS OOP Lesson7 [Defining Object with Object.create()] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPImp"
+            title="Go to JS OOP [Defining Object with Object.create()] Importance & Benefits"
+          >
+            JS OOP Lesson7 [Defining Object with Object.create()] Importance &
+            Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPSyntx"
+            title="Go to JS OOP [Defining Object with Object.create()] Syntax"
+          >
+            JS OOP Lesson7 [Defining Object with Object.create()] Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPPract"
+            title="Go to JS OOP [Defining Object with Object.create()] Practical Applications"
+          >
+            JS OOP Lesson7 [Defining Object with Object.create()] Practical
+            Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS OOP Course
+      <span> JS OOP Lesson 7 [Defining Object with Object.create()] </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          JS OOP [Defining Object with Object.create()] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>JS OOP [Defining Object with Object.create()] Concept.</li>
+
+            <li>
+              JS OOP [Defining Object with Object.create()] Importance &
+              Benefits.
+            </li>
+
+            <li>
+              JS OOP [Defining Object with Object.create()] Syntax [Define +
+              Access].
+            </li>
+
+            <li>
+              JS OOP [Defining Object with Object.create()] Practical
+              Applications.
+            </li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPCon" id="JSOOPCon">
+        <header>
+          <h3>JS OOP [Defining Object with Object.create()] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JS OOP [Defining Object with Object.create()]: is one of famous
+          Method to define the Object in Javascript.
+        </p>
+
+        <p>
+          =&gt; JS OOP [Defining Object With Object.create()] : It is different
+          Method from the previous two methods (by Literals, by New key word) :
+        </p>
+
+        <p>
+          =&gt; JS OOP [Defining Object With Object.create()] : Additional
+          Features are :
+        </p>
+
+        <ol>
+          <li>Prarent Object's Properties Inheritance :</li>
+
+          <p>This is about Getting the same properites of the Parent Object.</p>
+          <br />
+
+          <li>
+            The Ability to modify the Inherated Properites in new Child Object.
+          </li>
+          <br />
+        </ol>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSOOPImp" id="JSOOPImp">
+        <header>
+          <h3>
+            JS OOP [Defining Object with Object.create()] Importance & Benefits:
+          </h3>
+        </header>
+
+        <p>
+          [Defining Object with Object.create() Method] gives us the Following
+          Features : <br />
+        </p>
+        <ul>
+          <li>
+            The ability to Create Object with multiple Property for each
+            property as an internal Sub Object, which called [Listed Object].
+          </li>
+
+          <li>
+            The ability to Create Internal Method(s)/Function(s) inside each
+            Listed Object(s).
+          </li>
+
+          <li>
+            The abililty to Make Multiple Processes and complicated Calculations
+            on Listed Objects properties Values + Main Properties Values through
+            Internal Objects Methods or Functions OR Main Object Method(s)/
+            Function(s).
+          </li>
+
+          <li>
+            The Ability to Call any of Internal Listed Objects Properties Values
+            through the Objects Internal Functions or Methods or Main Object
+            Functions/Method(s) OR other Objects's Methods or Outer Seperated
+            Functions.
+          </li>
+
+          <li>
+            The Ability to write a short Form of Funtion/Method Defining or
+            Declaration Script, by using [Arrow Function] Method, wether for the
+            Main Object Method OR Internal Listed Object Property(s).
+          </li>
+        </ul>
+      </section>
+
+      <!--------------------------------------------------------------------s---------------------------------->
+      <section class="JSOOPSyntx" id="JSOOPSyntx">
+        <header>
+          <h3>
+            JS OOP [Defining Object with Object.create()] Syntax & Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; JS OOP Defining Object by [Object.create()] Method as following
+          :
+        </p>
+        <div id="Code" class="Code">
+          // A) [ Defining of {Listed Object} Property inside Main Object]
+          Syntax :<br /><br />
+          <span class="one"></span> let mainobjName ={ <br />
+          <span class="two"></span> Key1Name: "Value",<br />
+          <span class="two"></span> Key2Name: "Value",<br />
+          <span class="two"></span> Key3Name: true,<br />
+
+          <span class="two"></span> // Internal Function defined by [Arrow
+          Function Method]: <br />
+          <span class="two"></span> funcName2: () => 'This is ${this.Key1Name}
+          and this is ${this.Key2Name}',<br />
+          <br />
+
+          <span class="two"></span> // Internal Function defined by [Default
+          Function Method] with {Internal Condition}: <br />
+          <span class="two"></span> funcName1: function () { <br />
+          <span class="three"></span> return ' ${this.Key3Name ?
+          ${this.Key1Name} : ${this.Key2Name} } '; <br />
+          <span class="two"></span> }, <br /><br />
+          <span class="one"></span> }; <br />
+          ======================================================= <br /><br />
+
+          <br /><br />
+          // B) [ Defining of [Child Object from Main Object] by
+          {Object.create()} Method Syntax :<br /><br />
+          <span class="one"></span> let childObjName =
+          Object.create(mainobjName) <br /><br />
+
+          <span class="two"></span> Key1Name: "Value",<br />
+          <span class="two"></span> Key2Name: "Value",<br />
+
+          <span class="two"></span> Key3Names: { <br />
+          <span class="three"></span> Key3Name1: "Value", <br />
+          <span class="three"></span> Key3Name2: "Value", <br />
+          <span class="three"></span> Key3Name3: "Value", <br />
+          <br />
+
+          <span class="three"></span> //[Internal Function with (Default
+          Method)]: <br />
+          <span class="three"></span> MethodName1: function () { <br />
+          <span class="four"></span> return 'Text
+          ${objName.Key3Names.Key3Name1}' ; <br />
+          <span class="three"></span> }, <br />
+          <br />
+
+          <span class="three"></span> //[Internal Function with (Arrow Method)
+          (Shortcut)]: <br />
+          <span class="three"></span> MethodName2: =&gt; () 'Text
+          ${objName.Key3Names.Key3Name2}', <br />
+
+          <span class="two"></span> }, <br />
+
+          <span class="one"></span> }; <br />
+          ======================================================= <br /><br />
+          // E) [ Final Form of Object and All of it's elements (Listed Objects
+          + Intreanl Arrow Functions)] Syntax :<br /><br />
+          <span class="one"></span> let objName ={ <br /><br />
+
+          <span class="two"></span> Key1Name: "Value",<br />
+          <span class="two"></span> Key2Name: "Value",<br />
+
+          <span class="two"></span> Key3Names: { <br />
+          <span class="three"></span> Key3Name1: "Value", <br />
+          <span class="three"></span> Key3Name2: "Value", <br />
+          <span class="three"></span> Key3Name3: "Value", <br />
+          <br />
+
+          <span class="three"></span> //[Internal Function with Default Method]:
+          <br />
+          <span class="three"></span> MethodName1: function () { <br />
+          <span class="four"></span> return 'Text
+          ${objName.Key3Names.Key3Name1}' ; <br />
+          <span class="three"></span> }, <br />
+          <br />
+
+          <span class="three"></span> //[Internal Function with (Arrow Method)
+          (Shortcut)]: <br />
+          <span class="three"></span> MethodName2: =&gt; () 'Text
+          ${objName.Key3Names.Key3Name2}', <br />
+          <span class="two"></span> }, <br /><br />
+
+          <span class="two"></span> //[Main Object Function with Default
+          Method]: <br />
+          <span class="two"></span> MethodName1: function () { <br />
+          <span class="three"></span> return 'Text
+          ${objName.Key3Names.Key3Name2}' ; <br />
+          <span class="two"></span> }, <br />
+          <br />
+
+          <span class="two"></span> //[Main Object Function with (Arrow Method)
+          (Shortcut)]: <br />
+          <span class="two"></span> MethodName2: =&gt; () 'Text
+          ${objName.Key3Names.Key3Name3}', <br />
+
+          <span class="one"></span> }; <br />
+          ======================================================= <br /><br />
+          ======================================================= <br /><br />
+          ======================================================= <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPPract" id="JSOOPPract">
+        <header>
+          <h3>
+            JS OOP [Defining Object with Object.create()] Practical Applications
+            :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Here (2) Practical Application on Object Defining and all it's
+          properties Methods by [Literals] &gt;&gt; <br />
+        </p>
+
+        <ol>
+          <li>First Application [User Information] :</li>
+          <p>
+            =&gt; The First Object Practical Application [User Information],
+            which will include following : <br />
+          </p>
+
+          <ul>
+            <li>All the Object Properties</li>
+            <li>Methods Declaration by Part1</li>
+            <li>Accessing & Printing Objects Properies</li>
+            <li>Accessing & Printing Objects Method's Returns</li>
+          </ul>
+          <p>
+            =&gt; This Pracitcal Application will recieve the user Data with in
+            an Object properties, and will dispaly it with in Object Method<br />
+
+            <li>Second Application [Basic Arthmetic] :</li>
+          </p>
+
+          <p>
+            =&gt; This Pracitcal Application will recieve (2) Numbers form user
+            as Object properties Values, and will execute the Basic Arthmetic
+            Operation as Object Methods upon user Desire.<br />
+          </p>
+
+          <p>
+            =&gt; The Second Object Practical Application [Basic Arthmetic],
+            which will include following operations: <br />
+          </p>
+
+          <ul>
+            <li>Summition Operation</li>
+            <li>Substraction Operation</li>
+            <li>Multiply Operation</li>
+            <li>Divsion Operation</li>
+          </ul>
+        </ol>
+
+        <br />
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <button class="btn" onclick="basic()">
+          Click to Start [Basic Arthmetic Calculations]
+        </button>
+
+        <br />
+
+        <textarea id="txtarea1" class="txtarea1"> </textarea><br />
+
+        <button class="btn" onclick="Display()">
+          Click to Display JS Code
+        </button>
+
+        <br />
+
+        <hr />
+        <br />
+        <!--============================================================================================================ -->
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <button class="btn" onclick="app1()">
+          Click to Start [Basic Arthmetic Calculations]
+        </button>
+
+        <br />
+
+        <textarea id="txtarea2" class="txtarea2"> </textarea><br />
+
+        <button class="btn" onclick="Display1()">
+          Click to Display JS Code
+        </button>
+        <br />
+
+        <script src="JSOOPDefObjCreate.js"></script>
+        <hr />
+
+        <!-- <div class=JSOOPObjDefCreate1>
+                    <code>
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+
+                        <span class=one></span> &lt;button class="btn" onclick="basic()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Basic Arthmetic Calculations] <br>         
+                        <span class=one></span> &lt;/button&gt; <br><br>                            
+
+                        <span class=one></span> &lt;script src="JSOOPDefObjCreate.js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+
+                        =======================================================<br><br>
+
+                        /* global, cosole, document, alertk, prompt */ <br>
+                        /* JSOOP [ Defining Object with {Object.create()} Method ] */ <br>
+                        =======================================================<br><br>
+                        function basic() { <br><br>
+
+                        <span class=one></span> var all = ""; <br><br>
+                        
+                        <span class=one></span> var mainObj = { <br>
+                            <span class=two></span> hasDiscount: true,<br>
+                            <span class=two></span> showMsg: function () { <br>
+                                <span class=three></span> if (this.hasDiscount) { <br>
+                                    <span class=four></span> return 'You Have Discount'; <br>                                        
+                                    <span class=three></span> } else { <br>
+                                        <span class=four></span> return 'You Don\'t Have Discount'; <br>
+                                    <span class=three></span> } <br>
+                                <span class=two></span> }, <br>        
+                        <span class=one></span>}; <br> <br>
+                            
+                        <span class=one></span> all += `The Main Object Elements as following : \n ${mainObj.hasDiscount} \n<br>
+                        <span class=two></span> ${mainObj.showMsg()}\n ===========================================\n`; <br> <br>
+                                
+                        //================================================================================== <br><br>
+                        
+                        <span class=one></span> let otherObj = Object.create(mainObj); <br><br>
+                            
+                            <span class=one></span> otherObj.hasDiscount = false; <br> <br>
+                            
+                            <span class=one></span> all += `The First Child Object with changing the property Value is : \n<br>
+                                <span class=two></span> ${otherObj.hasDiscount} \n ${otherObj.showMsg()} \n =======================================\n`; <br> <br>
+                            
+                            //================================================================================ <br><br>   
+                            <span class=one></span> let lastObj = Object.create(mainObj); <br><br>
+                            
+                            <span class=one></span> all += `The Last Child Object without changing the property Value is : \n <br>
+                                <span class=two></span> ${lastObj.hasDiscount} \n ${lastObj.showMsg()} \n ==========================================\n`; <br> <br>       
+                            //===============================================================================  <br><br> 
+                            
+                            <span class=one></span> document.getElementById("txtarea").innerHTML = all; <br> <br>
+                            
+                            <span class=one></span> alert(all); <br>                            
+                        }                        
+                    </code>
+                </div> -->
+      </section>
+
+      <!-------------------------------------------------------------------------------------------------------------------->
+      <!-------------------------------------------------------------------------------------------------------------------->
+      <!--
+
+            <section class="LitDefApp2" id="LitDefApp2">
+                <header>
+                    <h3> JS OOP [Constellation Calculation] Application 2 </h3>
+                </header>
+                
+                <p> =&gt; [Age Calculation]: In this Application, the user will Enter his age by years and the programe will Calculate his age by each Months, Weeks and Days .
+                    
+                </p>
+                <br>
+                
+                <textarea id=txtarea2 class=txtarea2> </textarea><br>
+                
+            <button class=btn onclick="ConstCalc()"> Click to Start [Constellation Calculation] Application 2 
+                </button>
+                <br>
+                
+                <script src="JSOOPLitDef2MultApp.js">
+                </script>
+                <hr>
+                
+                <div class=JSOOPObjDefCreate2>
+                    <code>
+                        // HTML Codes: <br>
+                        &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        &lt;/textarea&gt; <br><br>
+                        
+                        &lt;button class="btn" onclick="ConstCalc"&gt;<br>                            
+                        &nbsp;&nbsp;Click to Start [Constellation Calculation] Application 2<br>                               
+                        &lt;/button&gt; <br><br>                            
+                        
+                        &lt;script src="JSOOPLitDef2MultApp.js"&gt;<br>                            
+                        &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        // JS Codes [JSOOPLitDef2MultApp.js] : <br><br>
+                        /* global alert, document, prompt, console */<br>
+                        /* jslint plusplus: true evil: true */ <br>
+                        /* [Constellation Calculation] Application 2 */ <br>
+                        // ========================================// <br>                             
+                        
+                                                
+                        //////////////////////////////////////////////////////////<br><br><br>
+                        
+                    </code>
+                </div>
+                
+            </section>
+        -->
+
+      <!-------------------------------------------------------------------------------------->
+      <!--        
+            <section class="LitDefApp3" id="LitDefApp3">
+                <header>
+                    <h3> JS OOP [Grade Calculation] Application 3 </h3>           
+                </header>
+                
+                <p> =&gt; [Grade Calculation]: In this Application, the user will Enter his age by years and the programe will                   Calculate his age by each Months, Weeks and Days . 
+                    
+                </p>                                             
+                <br>
+                
+                <textarea id=txtarea3 class=txtarea3 > </textarea><br>    
+                
+                <button class=btn onclick="GradeCalc()"> Click to Start [Grade Calculation] Application 3 
+                </button>
+                <br>
+                
+                <script src="JSOOPLitDef2MultApp.js"> </script>                                        
+                <hr>
+                
+                <div class=GradeCalculationApp3 >
+                    <code>
+                        // HTML Codes: <br>
+                        &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        &lt;/textarea&gt; <br><br>
+                        
+                        &lt;button class="btn" onclick="GradCalc"&gt;<br>                            
+                        &nbsp;&nbsp;Click to Start [Grade Calculation] Application 3<br>                               
+                        &lt;/button&gt; <br><br>                            
+                        
+                        &lt;script src="JSOOPLitDef2MultApp.js"&gt;<br>                            
+                        &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        // JS Codes [JSOOPLitDef2MultApp.js] : <br><br>
+                        /* global alert, document, prompt, console */<br>
+                        /* jslint plusplus: true evil: true */ <br>
+                        /* [Grade Calculation] Application 3 */ <br>
+                        // ========================================// <br>                             
+                        
+                        
+                        //////////////////////////////////////////////////////////<br><br><br>
+                        
+                    </code>                                        
+                </div>                                                                                                       
+                
+            </section>        
+        -->
+
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg" />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 7 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=1yRc6Yi1RdQ&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=7&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+            <source src="C:\Users\alnoaman\Desktop\New folder\My Web Pages\4 JavaScript OOP\OOP JS Course\7 JavaScript OOP  Defining Object With Object.create.mp4" type="video/mp4">
+            Your browser Does Not Support the Video file ...              
+        </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert(
+        "Welcome to JS OOP / Lesson 7 [Defining Object by Object.create()] "
+      );
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

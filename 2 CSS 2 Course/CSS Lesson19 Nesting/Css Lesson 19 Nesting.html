@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Css Lesson 19 [Nesting]</title>
+    <link rel="stylesheet" href="Nesting.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="title" id="title">Css/ Lesson 19 [Nesting]( Solo Nesting, Nesting + Grouping ) </h1>
+                        
+        <fieldset class="index">
+            <legend class="index">Lesson Index</legend>            
+            <ol>
+                <li class="Listtitle"> First/ Nesting:</li>
+                    <ol type="A">                    
+                        <li> <a href="#NestingSS" title="Go to :Nesting same type, Same parent"> 
+                            Nesting multiple Elements of same type within the same Parent </a>
+                        </li>
+                        
+                        <li> <a href="#NestingDS" title="Go to :Nesting different type, Same parent">
+                            Nesting multiple Elements of different types within the same Parent </a>
+                        </li>                                                   
+                    </ol>
+                    
+                <li class="Listtitle"> Second/ Nesting + Grouping:</li>
+                    <ol type="A">
+                        <li> <a href="#N_GSD" title="Go to : Nesting & Grouping same type, different parent"> 
+                            Nesting + Grouping multiple Elements of same type within the different Parents </a></li>
+                        
+                        <li> <a href="#N_GDD" title="Go to : Nesting & Grouping different type, different parent">
+                            Nesting + Grouping multiple Elements of different type within the different Parents </a></li>                    
+                    </ol>
+                    
+            </ol>
+        </fieldset>
+    <!----------------------------------------------------------------------------------------------->        
+        <div class="first">
+            <h2 class="subtitle1">First/ Nesting Similar type of Elements:</h2>
+            
+            <fieldset id="NestingSS" class="NestingSS">            
+                <legend>(A) Nesting multiple Elements of <span>Same Type</span> within the <span>Same Parent</span></legend>    
+                
+                <div class="divA1">
+                    Div 1 (Parent 1)
+                    <h3 class="caption1"> Head 1 of div 1</h3>                                                             
+                    <h3 class="caption11"> Head 2 of div 1</h3>
+                    <h3 class="caption111"> Head 3 of div 1</h3>                                                             
+                    <div id='display' class='display'>
+                        .ParentclassName h3 {Css Properties}<br>
+                        #ParentIdName h3 {Css Properties}
+                    </div>
+                </div>
+                
+                <div class="divA2">
+                    Div 2 (Parent 2)
+                    <h3 class="caption2"> Head 1 of div 2</h3>                                                                                                     
+                    <h3 class="caption22"> Head 2 of div 2</h3>
+                    <h3 class="caption222"> Head 3 of div 2</h3>
+                    <div id='display' class='display'>
+                        .ParentclassName h3 {Css Properties} <br>
+                        #ParentIdName h3 {Css Properties}
+                    </div>
+
+                </div>
+                
+                <div class="divA3">
+                    Div 3 (Parent 3)
+                    <h3 class="caption3"> Head 1 of div 3</h3>                                                                                 
+                    <h3 class="caption33"> Head 2 of div 3</h3>
+                    <h3 class="caption333"> Head 3 of div 3</h3>             
+                    <div id='display' class='display'>
+                        .ParentclassName h3 {Css Properties} <br>
+                        #ParentIdName h3 {Css Properties}
+                    </div>
+                </div>
+            </fieldset>
+        <!----------------------------------------------------------------------------------------------->        
+            <fieldset id="NestingDS" class="NestingDS">
+                <legend>(B)Nesting multiple Elements of <span>Different Types</span> within the <span>Same Parent</span></legend>      
+                
+                <div class="divB1">                    
+                    Div 1 (Parent 1)
+                    <h3 class="caption1"> Head of div 1</h3>                                                                                 
+                    <p> This is Paragraph of Div 1 </p>                    
+                    <div id='display' class='display'>
+                        #ParentIdName h3, #ParentIdName p, #ParentIdName div {Css Properties} <br>
+                        .ParentClassName h3, .ParentClassName p, .ParentClassName div {Css Properties}
+                    </div>
+                </div>
+                
+                <div class="divB2">
+                    Div 2 (Parent 2)
+                    <h3 class="caption2"> Head of div 2</h3>                                                             
+                    <p> This is Paragraph of Div 2 </p>                    
+                    <div id='display' class='display'>
+                        #ParentIdName h3, #ParentIdName p, #ParentIdName div {Css Properties} <br>
+                        .ParentClassName h3, .ParentClassName p, .ParentClassName div {Css Properties}
+                    </div>
+                </div>
+                
+                <div class="divB3">
+                    Div 3 (Parent 3)
+                    <h3 class="caption3"> Head of div 3</h3>                                                             
+                    <p> This is Paragraph of Div 3 </p>                    
+                    <div id='display' class='display'>
+                        #ParentIdName h3, #ParentIdName p, #ParentIdName div {Css Properties} <br>
+                        .ParentClassName h3, .ParentClassName p, .ParentClassName div {Css Properties}
+                    </div>
+                </div>    
+            </fieldset>                    
+        
+        </div>
+        
+    <!----------------------------------------------------------------------------------------------------------->        
+        <div class="second" id="second">
+            <h2 class="subtitle1">Second/ Nesting + Grouping:</h2>
+            
+            <fieldset id="N_GSD" class="N_GSD">
+                <legend>(A)Nesting + Grouping multiple Elements of <span>Same Type</span> within the <span>Different Parents</span> </legend>        
+                    
+                <div class="divC1">
+                    Div 1 (Parent 1)
+                    <h3 class="caption1"> Head of div 1</h3>                                                             
+                    <p> This is Paragraph of Div 1 </p>                
+                    <div id='display' class='display'>
+                        #ParentIdName h3 {Css Properties} <br>
+                        #ParentIdName p {Css Properties} <br>
+                        #ParentIdName div {Css Properties} <br> <br>
+                        
+                        .ParentClassName h3 {Css Properties} <br>
+                        .ParentClassName p {Css Properties} <br>
+                        .ParentClassName div {Css Properties}
+
+                    </div>
+                </div>                                
+                
+                <div class="divC2">
+                    Div 2 (Parent 2)
+                    <h3 class="caption2"> Head of div 2</h3>                                                             
+                    <p> This is Paragraph of Div 2 </p>
+                    <div id='display' class='display'>
+                        #ParentIdName h3 {Css Properties} <br>
+                        #ParentIdName p , #ParentIdName div {Css Properties} <br> <br>
+                         
+                        .ParentClassName h3 {Css Properties} <br>
+                        .ParentClassName p , .ParentClassName div {Css Properties}
+                        
+                    </div>
+                </div>
+                
+                <div class="divC3">
+                    Div 3 (Parent 3)
+                    <h3 class="caption3"> Head of div 3</h3>                                                                               
+                    <p> This is Paragraph of Div 3 </p>                    
+                    <div id='display' class='display'>
+                        #ParentIdName p {Css Properties} <br>
+                        #ParentIdName h3 , #ParentIdName div {Css Properties} <br> <br>
+                         
+                        .ParentClassName p {Css Properties} <br>
+                        .ParentClassName h3 , .ParentClassName div {Css Properties}
+                    </div>
+                </div>
+                
+            </fieldset>    
+            <!----------------------------------------------------------------------------------------------------------->
+            <fieldset id="N_GDD" class="N_GDD">
+                <legend> Nesting + Grouping multiple Elements of <span>Different Type</span> within the <span>Different Parents</span> </legend>    
+                
+                <div class="divD1">
+                    Div 1 (Parent 1)
+                    <h3 class="caption1"> Head of div 1</h3>                                                                               
+                    <p> This is Paragraph of Div 1 </p>                    
+                    <div id='display' class='display'>
+                        #ParentIdName p {Css Properties} <br>
+                        #ParentIdName h3 , #ParentIdName div {Css Properties} <br> <br>
+                         
+                        .ParentClassName p {Css Properties} <br>
+                        .ParentClassName h3 , .ParentClassName div {Css Properties}
+                    </div>
+                </div>                                
+                
+                <div class="divD2">
+                    Div 2 (Parent 2)
+                    <h3 class="caption2"> Head of div 2</h3>                                                                               
+                    <p> This is Paragraph of Div 2 </p>                    
+                    <div id='display' class='display'>
+                        #ParentIdName p {Css Properties} <br>
+                        #ParentIdName h3 , #ParentIdName div {Css Properties} <br> <br>
+                         
+                        .ParentClassName p {Css Properties} <br>
+                        .ParentClassName h3 , .ParentClassName div {Css Properties}</div>
+                </div>
+                
+            </fieldset>    
+        </div>
+
+    <!---------------------------------------------------------------------------------------------------------------------------->        
+        <footer class="footer" id="footer">
+            This is the page Footer.
+        </footer>
+        <a class="home" href="#title" title="Go to page header">Home</a>
+        <a class="end" href="#footer" title="Go to page footer">End</a>
+    </div>
+</body>
+</html>

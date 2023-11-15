@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 20 Form Attributes [AutoComplete, AutoFocus, NoValidate] </title>
+    <link rel="stylesheet" href="HTML5 Form Attributes [AutoComplete, AutoFocus, NoValidate].css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">  </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 20 Form Attributes [AutoComplete, AutoFocus, NoValidate]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="HTML5 Form Attributes [AutoComplete, AutoFocus, NoValidate] + Vip Attributes for Input [Disabled , Required] Main Concept" > HTML5 Form new Attributes + Vip Input Attributes Main Concept </a> </li>
+            <li> <a href=#InputDisabledNTag   title="Go to Input Attribute / Disabled" > Input Attribute =>                     Disabled   </a> </li>     
+            <li> <a href=#InputRequiredNTag   title="Go to Input Attribute / Required" > Input Attribute =>                     Required   </a> </li>     
+            <li> <a href=#FormAutoCompleteNTag   title="Go to Form Attribute / AutoComplete" > Form/Input Attribute =>                 AutoComplete   </a> </li>     
+            <li> <a href=#InputAutoFocusNTag   title="Go to Input Attribute / AutoFocus" > Input Attribute =>                       AutoFocus      </a> </li>     
+            <li> <a href=#FormNoValidateNTag   title="Go to Form Attribute / NoValidate" > Form Attribute =>                   NoValidate     </a> </li>   
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> Lesson 20 {Input vip Attributes [Disabled,Required] + Form                          Attributes [AutoComplete, AutoFocus, NoValidate] } </span> </main>
+
+<!-------------------------------------------------------------------------------------------------------------->                        
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>
+                HTML5 Input new Attributes => [Disabled, Required] Concept 
+                HTML5 Form new Attributes => [AutoComplete, AutoFocus, NoValidate] Concept 
+            </header>
+            
+            <article>                
+                <p> &gt; The New HTML5 Input new Attributes in this lesson as following :</p>
+                <ol>                    
+                    <li> &lt;  Input &nbsp;&nbsp; Disabled &nbsp; &gt;  </li>           
+                    <li> &lt;  Input &nbsp;&nbsp; Required &nbsp; &gt;  </li>           
+                </ol><br>    
+                <p> &gt; The New HTML5 Form new Attributes in this lesson as following :</p>
+                <ol>                    
+                    <li> &lt;  Form &nbsp; input &nbsp; AutoComplete &nbsp; &gt;  </li>           
+                    <li> &lt;  Form &nbsp; input &nbsp; AutoFocus &nbsp; &gt;  </li>           
+                    <li> &lt;  Form &nbsp;&nbsp; NoValidate &nbsp; &gt;  </li>                     
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>
+        
+        <section class="InputDisabledNTag" id="InputDisabledNTag">
+            <header>
+                Input Attribute [ &lt; input  &nbsp; disabled &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Input Attribute [Disabled] Concept: </h1>
+                    <p> =&gt; [Disabled Attribute] is one of the new important properties of Input in HTML5.
+                    <p> =&gt; [Disabled Attribute] is to Cancel any Inserting / Editing Process in a specific input               field .          
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Input [Disabled Attribute] Usages: </h1>                    
+                    <p> =&gt; It mainly designed to cancel any inserting process or Editing by user with out pre-                 programing efforts. </p>                         
+                    <p> =&gt; It can be programatically used in Events to as an actions or reactions to make                       change by page or any of <span class="FixSpace">its</span> element/s using Javascript               codes in front end. </p>             
+                </header>
+                
+                <header class="InputDisabledExp">
+                    <h1>Example:</h1>
+                    <p> The next input field is disabled for Enter/Edit.</p>
+                    <section>
+                        <h3> This input Field is Disabled: </h3>
+                        <form>
+                            <p>Disabled Field: </p>
+                            <input type="text" disabled > <br>                           
+                            <input type="submit" value="Send">
+                        </form>
+                    </section>
+                    
+                    <div class="InputDisabledExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; This input Field is Disabled: &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form&gt; <br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; Disabled Field: <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "text"&nbsp; disabled&nbsp; &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "send"  &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+    <!------------------------------------------------------------------------------------------------------>
+        
+        <section class="InputRequiredNTag" id="InputRequirdNTag">
+            <header>
+                Input New Attribute [ &lt; input  Required &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Input New Attribute [Required] Concept: </h1>
+                    <p> =&gt; [Required Attribute] is one of the new important properties of Input in HTML5.
+                    <p> =&gt; [Required Attribute] is to Obligate the Inserting / Editing Process in a specific input             field, And can <span class="FixSpace">NOT</span> Accept the empty field.                     
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Input [Required Attribute] Usages: </h1>                    
+                    <p> =&gt; It mainly designed to Obligate inserting/Editing process by user with out 
+                              pre-programing efforts. </p>                         
+                    <p> =&gt; It can be programatically used in Events to as an actions or reactions to make                       change by page or any of <span class="FixSpace">its</span> element/s using Javascript               codes in front end. </p>                              
+                </header>
+                
+                <header class="InputRequiredExp">
+                    <h1>Example:</h1>
+                    <p> Entering Required Input Field </p>
+                    <section>
+                        <h3> Inserting obligated Entry in the input required field: </h3><br>
+                        <form>
+                            <p>You must Enter a valid value in the following input <mark>(Required)</mark> Field :</p>
+                            <input type="text" required  > <br>       
+                            <input type="submit"  value="submit">
+                        </form>
+                    </section>
+                    
+                    <div class="InputRequiredExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Inserting obligated Entry in the input required field: &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form&gt; <br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; You must Enter a valid value in the following input Field : <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "text"&nbsp; required &nbsp; &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "submit"&nbsp; value = "send"  &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+    <!-------------------------------------------------------------------------------------------------------------->
+        
+        <section class="FormAutocompleteNTag" id="FormAutocompleteNTag">
+            <header>
+                (Form / Form's Input) New Attribute:<br>
+                [ &lt; input &nbsp; autocomplete="off" (autocomplete "on" as default) &gt; ] <br>
+                [ &lt; from &nbsp; autocomplete="off" (autocomplete "on" as default) &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> (Form / Form's Input) New Attribute [Autocoplete] Concept: </h1>
+                    <p> =&gt; [Autocomplete Attribute] is one of the new (Form / Form's Input) Attribute in HTML5.
+                    
+                    <p> =&gt; [Autocomplete Attribute] is property allowing to show the user the previous Entries                 inserted in the <span class="FixSpace">input</span> field or the Whole Form when it is               activated "on" which is the defaulted value, but can be 
+                              <span class="FixSpace">canceled</span> or deactivated by giving it "off" value within the desired input field Tag's Attributes. 
+                    
+                    <p> =&gt; [Autocomplete Attribute] is mainly designed to deactivate input field/form to acheive               secured field <span class="FixSpace">Input</span> entries within Form by canceling this             property, or activate it by default.
+                    
+                </header>
+                
+                <header>
+                    <h1> Main & Features of (Form / Form's Input) [Autocomplete] Attribute Usages: </h1>                    
+                    <p> =&gt; It mainly designed to secure specific input fields contents by canceling or deactivating             this property for <span class="FixSpace">the</span> desired input field. 
+                    <p> =&gt; It can be programatically used in Events to as an actions or reactions to make                       change by page or any of <span class="FixSpace">its</span> element/s using Javascript               codes in front end. </p>             
+                </header>
+                
+                <header class="FormAutocompleteExp">
+                    <h1>Example:</h1>
+                    <p> Inserting values in two different [Autocomplete] property value (on,off) in Form itself or it's     input fields</p>
+                    <section>
+                        <h3> Enter a vaild value into (2) input fields with different status of Autocomplete property : </h3> <br>
+                        <form>
+                            
+                            <p>Insert a valid value into the First input field ( <mark>Activated AutoComplete</mark> Property) : </p>
+                            <input type="email" name="email1" autocomplete> <br><br>   
+                            
+                            <p>Insert a valid into the Second input field (<mark>Non-Activated AutoComplete</mark> Property) :</p>
+                            <input type="email" name="email2" autocomplete="off"> <br><br>    
+                            
+                            <input type="submit"  name="submit-autocomplete" value="Send">
+                        </form>
+                    </section>
+                    
+                    <div class="FormAutocompleteExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Enter a vaild value into (2) input fields with different status of &nbsp;&nbsp;&nbsp;&nbsp;Autocomplete property : &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form&gt; <br>
+                                                        
+                            &nbsp;&nbsp;&nbsp;&nbsp; Insert a valid into the First input field (Activated AutoComplete &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property) :<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "text"&nbsp; name = "email1"&nbsp; &gt;<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; Insert a valid into the Second input field (Non-Activated<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; AutoComplete Property) :<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "text"&nbsp; name = "email2"&nbsp; &nbsp;&nbsp; autocomplete="off" &nbsp; &gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; name="submit-autocomplete" &nbsp;value= "send"&nbsp;  &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+    <!------------------------------------------------------------------------------------------------------>
+        
+        <section class="InputAutoFocusNTag" id="InputAutoFocusNTag">
+            <header>
+                Form => Input New Attribute [ &lt; input &nbsp; autofocus="on" / "off" &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Form Input New Attribute [Autofocus] Concept: </h1>
+                    <p> =&gt; [Autofocus Attribute] is one of the new Form Input field Attributes in HTML5. 
+
+                    <p> =&gt; [Autofocus Attribute] is a property to make the cursor inside a certain desired input               field within the <span class="FixSpace">form</span> once the page is loaded.                    
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Form Input [Autofocus Attribute] Usages: </h1>                    
+                    <p> =&gt; It can be be programatically used in Events to as an actions or reactions to change                 the Value of certain <span class="FixSpace">input</span> or element/s of page using                 Javascript codes. </p>       
+                    <p> =&gt; It provide an easy method to set the cursor inside a certain input field. </p> 
+                </header>
+                
+                <header class="InputAutoFocusExp">
+                    <h1>Example:</h1>
+                    <p> Setting the cursor inside a specific input field </p>
+                    <section>
+                        <h3> The Cursor will be inside the following input field once the page is loaded<mark>(AutoFocus)</mark>: </h3><br>
+                        <form>                            
+                            <input type="text"  name="username"  autofocus="on"  autocomplete="off"  /> <br>      
+                            <input type="submit"  name="submit-autofocus" value="Submit"  />
+                        </form>
+                    </section>
+                    
+                    <div class="InputAutoFocusExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; The Cursor will be inside the following input field once the page is loaded: &lt;/h3&gt; <br>
+                            &nbsp;&nbsp; &lt;form&gt; <br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "text"&nbsp; name = "username" &nbsp; autofocus="on" &nbsp; autocomplete="off" &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "submit"&nbsp; value = "send"  &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+        <section class="FormNoValidateNTag" id="FormNoValidateNTag">
+            <header>
+                Form New Attribute [ &lt; form &nbsp; novalidate &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Form New Attribute [NoValidate] Concept: </h1>
+                    <p> =&gt; [NoValidate Attribute] is one of the new Form (itself) Attributes in HTML5.  
+                    <p> =&gt; [NoValidate Attribute] is to cancel the auto Validating property of the input field                 Contents, by only add <span class="FixSpace">it</span> within The Form Attributes.
+                                        
+                    <p> =&gt; [NoValidate Attribute] is mainly made to cancel Validation Process by certain conditions             (by trusting <span class="FixSpace">certain</span> users accounts)
+                    
+                    <p> =&gt; The Default Validation Property of any input field in any Form is Activated Validation,             but NoValidate  <span class="FixSpace">is</span>Deactivating this property for the input fields in allocated Form.
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Form Attribute [NoValidate] Usages: </h1>                    
+                    <p> =&gt; It mainly designed to remove Validating property over a certain person or account in                 certain Form. 
+                    <p> =&gt; It can be programatically used in Events to as an actions or reactions to make               change by page or any of <span class="FixSpace">its</span> element/s using Javascript codes in front end. </p>             
+                </header>
+                
+                <header class="FormNoValidateExp">
+                    <h1>Example:</h1>
+                    <p> Inserting Values into input field without validating its values</p>
+                    <section>
+                        <h3> Enter Entries in all input fields with in Form <mark>without Validating</mark> Property : </h3> <br>
+                        <form novalidate>
+                            <p>Insert your contents in following input fields without Validation property:</p><br>
+                            
+                            <p>Enter Username :</p>
+                            <input type="text" name="username1" required> <br>    
+                            
+                            <p>Enter Password :</p>
+                            <input type="password" name="password"> <br>   
+                            
+                            <p>Enter Email :</p>
+                            <input type="email" name="emaill">   <br>  
+                            
+                            <p>Enter Url :</p>
+                            <input type="url" name="url" >        <br>
+                            
+                            <input type="submit"  name="submitdate" value="Send">
+                        </form>                                              
+                    </section>
+                    
+                    <div class="FormNoValidateExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Enter Entries in all input fields with in Form without Validating &nbsp;&nbsp;&nbsp; Property : &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form &nbsp; novalidate &gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; Insert your contents in following Form into all it's input fields<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; without Validation property:<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; Enter Username1:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "text"&nbsp; name = "username1"&nbsp; &gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; Enter Password:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "password"&nbsp; name = "password"&nbsp; &gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; Enter Email:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "email"&nbsp; name = "emaill"&nbsp; &gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; Enter Url:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "url"&nbsp; name = "url"&nbsp; &gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; name="submitdata" &nbsp; value = "name" &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+    <!-------------------------------------------------------------------------------------------------------------->
+       
+        
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="12">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num1">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 20 Video File:</h3>
+                <video controls width="300" height="300" autoplay>
+                    <source src="C:/Users/hp/Videos/pLanguages/web/1 Web Designing Front End/A HTML/2 HTML 5/HTML 5/20 Form Attributes - AutoComplete, AutoFocus, NoValidate.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                        
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

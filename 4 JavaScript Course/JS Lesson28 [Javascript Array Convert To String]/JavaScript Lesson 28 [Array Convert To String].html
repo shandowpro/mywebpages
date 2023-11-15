@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Lesson 28 [Javascript Array Convert To String]</title>
+    <link
+      rel="stylesheet"
+      href="JavaScript [Javascript Array Convert To String].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JavaScript Lesson 28 [JavaScript Array Convert To String]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to Javascript main Topics">
+            [Javascript Array Convert To String ] Main Topics
+          </a>
+        </li>
+        <li>
+          <a
+            href="#JsArrConvStrCon"
+            title="Go to [Javascript Array Convert To String ] Concept"
+          >
+            [Javascript Array Convert To String] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsArrConvStrImp"
+            title="Go to [Javascript Array Convert To String] Importance &                 Benefits"
+          >
+            [Javascript Array Convert To String] Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsArrConvStrSyn"
+            title="Go to [Javascript Array Convert To String] Syntax & Methods"
+          >
+            [Javascript Array Convert To String] Syntax & Methods</a
+          >
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JavaScript Course
+      <span> JavaScript Lesson 28 [Javascript Array Convert To String] </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>[Javascript Array Converting to String ] Main Topics :</header>
+
+        <article>
+          <p>&gt; New Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>[Javascript Array Convert To String] Concept.</li>
+
+            <li>
+              [Javascript Array Convert To String] Importance & Benefits .
+            </li>
+
+            <li>[Javascript Array Convrting to String ] Syntax & Methods.</li>
+            <ul>
+              <li>First Method [ ArrayName.toString(); ]</li>
+              <li>Second Method [ ArrayName.toLocaleString(); ]</li>
+              <li>Third Method [ ArrayName.join(); ]</li>
+            </ul>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrConvStrCon" id="JsArrConvStrCon">
+        <header>
+          <h3>[Javascript Array Convert To String] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; [Array Convert To String ] : Is a method to convert Array
+          Elements to one String Value seperated by Array default Sign (,) or by
+          a specific customized seperators.
+        </p>
+        <p>
+          =&gt; [Array Convert to String] : Usaually been Used in any Designing
+          or Web-Application or any other Type of applications.
+        </p>
+
+        <p>
+          =&gt; [Array Convert To String] : Has (3) Methods as following :
+          <br />
+        </p>
+
+        <ul>
+          <li>ArrayName.toString();</li>
+          <li>ArrayName.toLocaleString();</li>
+          <li>ArrayName.join();</li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrConvStrImp" id="JsArrConvStrImp">
+        <header>
+          <h3>[Javascript Array Convert To String] Importance & Benefits:</h3>
+        </header>
+
+        <p>
+          =&gt; [Array Convert To String] : Is Essential to any programmer or
+          developer to provide more Control of the Array by providing the
+          Ability to Merge Between all Array Elements (Regardless of Array
+          Type).
+        </p>
+
+        <p>
+          =&gt; [Array Convert To String] : Is Essential to Convert any Non
+          Textual Variable to Text Value, and Not only for the Array of any
+          other type .
+        </p>
+
+        <p>
+          =&gt; [Array Convert To String] : It can help to get a special format
+          of Date using one of converting to String Method.
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrConvStrSyn" id="JsArrConvStrSyn">
+        <header>
+          <h3>[Javascript Array Convert to String] Syntax Methods:</h3>
+        </header>
+
+        <p>
+          =&gt;[Array Convert to String]: There are (3) Main Method to Convert
+          Array To String Value:
+        </p>
+
+        <ol>
+          <li><h3>=&gt;[ ArrayName.toString(); ]</h3></li>
+
+          <p>
+            =&gt;[ArrayName.toString();]: Is one of the Array's Convertion To
+            String Value Method, which allow to Convert the Array All Elements
+            in to one Merged Textual Value
+          </p>
+
+          <p>
+            =&gt;[First Array's Convert to String Method] Syntax as following:
+          </p>
+          <div id="Code" class="Code">
+            var arrayName = ["Element1", "Element2", "Element3"],<br />
+            strVar = arrayName.toString();<br />
+
+            console.log(arrayName);<br />
+            console.log(strVar);<br />
+            document.getElementById("HTMLTagName").innerHTML = "Array Original
+            Format :" +<br />
+            arrayName + "&lt;br&gt;" + "Array String Format :" + strVar;<br />
+          </div>
+
+          <p>
+            Following Example User Will Insert a simple Texual Array with (3)
+            elements, and Application Will Type it's Elements with (Array
+            Format) & (String Format) after Converting it to String [Using First
+            Method] Practical Example will be as following:
+          </p>
+
+          <div id="DisplayArr1" class="JsArrConvStrSyn"></div>
+
+          <button onclick="Conv1()" class="btn">
+            Cilck to start Array Convert to String App [By First Method]
+          </button>
+
+          <script src="ArrayConvStr.js"></script>
+
+          <div class="JsArrConvStrSynExp">
+            <code>
+              //HTML Codes :<br />
+              &lt;div id="DisplayArr1" class="JsArrConvStrSyn"&gt;<br />
+              &lt;/div&gt;<br />
+
+              &lt;button onclick="Conv1()"&gt;Cilck to start Array Convert to
+              String App [By First Method] <br />
+              &lt;/button&gt;<br />
+              &lt;script src="ArrayConvStr.js"&gt; &lt;/script&gt; <br /><br />
+
+              // Js Codes (ArrayConvert to StringGet.js):<br />
+              /* Global alert, prompt, document */ <br />
+              // Converting Array Elements to String Value:<br />
+              // First Array Convertion to String Method :<br /><br />
+
+              function Conv1(){<br />
+              &nbsp; &nbsp; var arr = [];<br />
+              &nbsp; &nbsp;&nbsp; &nbsp; arr.length = prompt("Enter your Array
+              Count:");<br />
+              &nbsp; &nbsp;&nbsp; &nbsp;arrCount = arr.length;<br />
+
+              &nbsp; &nbsp; for (i = 0; i &lt; arrCount; i++){<br />
+              &nbsp; &nbsp;&nbsp; &nbsp; arr[i] = prompt("Enter your Array
+              Element Number : " + (i + 1) );<br />
+              }<br />
+
+              &nbsp; &nbsp; var strArray = arr.toString();<br />
+
+              &nbsp; &nbsp; alert("Your Array elements [with String Format] are:
+              " + strArray);<br />
+              &nbsp; &nbsp; document.getElementById("DisplayArr1").innerHTML
+              =<br />
+              &nbsp; &nbsp;&nbsp; &nbsp; "Your Array elements [with Array
+              Original Format] are: " + arr + "&lt;br&gt;" +<br />
+              &nbsp; &nbsp;&nbsp; &nbsp; "Your Array elements [with String
+              Format] are: " + strArray;<br />
+              }
+            </code>
+          </div>
+
+          <!-------------------------------------------------------------------------------------------------------------->
+          <li><h3>=&gt;[Second Method / ArrayName.toLocaleString(); ]</h3></li>
+
+          <p>
+            =&gt;[ArrayName.toLocaleString();]: Is one of the Array's Convertion
+            To String Value Method, which allow to Convert the Array All
+            Elements one Merged Textual Value or even to Convert the date Value
+            Type to Strings
+          </p>
+
+          <p>
+            =&gt; This Method Usually used to convert Date Data type due to it
+            returns the String original format applicable to Date Format with
+            out having any errors
+          </p>
+
+          <p>
+            =&gt; The Follownig (2) Examples will use the Second Method to
+            Convert to String Value
+          </p>
+
+          <ul>
+            <li>Converting Date Value to string Value :</li>
+            <div id="DisplayArr2" class="JsArrConvStrSyn"></div>
+
+            <button onclick="Conv2()" class="btn">
+              Cilck to start Date Value to String App [By Second Method]
+            </button>
+
+            <script src="ArrayConvStr.js"></script>
+
+            <div class="JsArrConvStrSynExp">
+              <code>
+                //HTML Codes :<br />
+                &lt;div id="DisplayArr2" class="JsArrConvStrSyn"&gt;<br />
+                &lt;/div&gt;<br />
+
+                &lt;button onclick="Conv2()"&gt;Cilck to start Array Convert to
+                String App [By Second Method] <br />
+                &lt;/button&gt;<br />
+
+                &lt;script src="ArrayConvStr.js"&gt; &lt;/script&gt;
+                <br /><br />
+
+                // Js Codes (ArrayConvStr.js):<br />
+                /* Global alert, prompt, document */ <br />
+                // Converting Array Elements to String Value:<br />
+                // Second Array Convertion to String Method :<br /><br />
+
+                function Conv2(){<br />
+                &nbsp; &nbsp; var myDate = new Date(),<br />
+                &nbsp; &nbsp; strDate = myDate.toLocaleString();<br />
+
+                &nbsp; &nbsp; alert("Current Date [with Original Date Format]
+                is: " + myDate);<br />
+
+                &nbsp; &nbsp; alert("Current Date [with your Locale PC Date
+                Format] is: " + strDate);<br />
+
+                &nbsp; &nbsp; document.getElementById("DisplayArr2").innerHTML
+                =<br />
+                &nbsp; &nbsp;&nbsp; &nbsp;"Current Date [with Original Date
+                Format] is: <br />
+                &nbsp; &nbsp;&nbsp; &nbsp; " + myDate + "&lt;br&gt;" +<br />
+                &nbsp; &nbsp;&nbsp; &nbsp; "Current Date [with your Locale PC
+                Date Format] is: " + strDate;<br />
+                }
+              </code>
+            </div>
+            <!---------------------------------------------------------------------->
+            <li>Converting Date Value to string Value :</li>
+            <div id="DisplayArr21" class="JsArrConvStrSyn"></div>
+
+            <button onclick="Conv21()" class="btn">
+              Cilck to start Array Convert to String App [By Second Method]
+            </button>
+
+            <script src="ArrayConvStr.js"></script>
+
+            <div class="JsArrConvStrSynExp">
+              <code>
+                //HTML Codes :<br />
+                &lt;div id="DisplayArr2" class="JsArrConvStrSyn"&gt;<br />
+                &lt;/div&gt;<br />
+
+                &lt;button onclick="Conv2()"&gt;Cilck to start Array Convert to
+                String App [By Second Method] <br />
+                &lt;/button&gt;<br />
+
+                &lt;script src="ArrayConvStr.js"&gt; &lt;/script&gt;
+                <br /><br />
+
+                // Js Codes (ArrayConvStr.js):<br />
+                /* Global alert, prompt, document */ <br />
+                // Converting Array Elements to String Value:<br />
+                // Second Array Convertion to String Method :<br /><br />
+
+                function Conv21(){<br />
+                &nbsp; &nbsp; var arr = [];<br />
+                &nbsp; &nbsp; arr.length = prompt("Enter your Array Count:"),<br />
+                &nbsp; &nbsp; var arrCount = arr.length;<br />
+
+                &nbsp; &nbsp; for (i = 0; i &lt; arrCount; i++){<br />
+                &nbsp; &nbsp;&nbsp; &nbsp; arr[i] = prompt("Enter your Array
+                Element Number : " + (i + 1) );<br />
+                } <br />
+
+                &nbsp; &nbsp; alert("Your Array elements [with Array Original
+                Format] are: " + arr);<br />
+
+                &nbsp; &nbsp; var strArray = arr.toLocaleString();<br />
+
+                &nbsp; &nbsp; alert("Your Array elements [with String Format]
+                are: " + strArray);<br /><br />
+
+                &nbsp; &nbsp; document.getElementById("DisplayArr1").innerHTML
+                =<br />
+                &nbsp; &nbsp;&nbsp; &nbsp;"Your Array elements [with Array
+                Original Format] are: " + arr + "&lt;br&gt;" +<br />
+                &nbsp; &nbsp;&nbsp; &nbsp; "Your Array elements [with String
+                Format] are: " + strArray;<br />
+                }
+              </code>
+            </div>
+          </ul>
+
+          <!----------------------------------------------------------------------------------------------------------->
+          <!--- Join Method Customized Seperatores: -->
+          <li><h3>=&gt;[Third Method / ArrayName.join(); ]</h3></li>
+
+          <p>
+            =&gt; Join Method Provides more Features in Controling Seperators
+            Formats by giving the ability to add Customized Seperator or even
+            Non Seperators (Empty Spaces).
+          </p>
+
+          <p>
+            =&gt;[ArrayName.join();]: Is one of the Array's Convertion To String
+            Value Method, which allow to Convert the Array All Elements one
+            Merged Textual Value but with more featuers to Seperators Formats
+            according to developer desire.
+          </p>
+
+          <p>
+            Following Example Developer Will Insert a simple Texual Array with
+            (user desire count) elements, and Application Will Type it's
+            Elements with (Array Format) & (String Format) after Converting it
+            to String [Using Third Method with Default Format] Practical Example
+            will be as following:
+          </p>
+
+          <p>
+            =&gt; The Follownig (3) Examples will use the Third Method to
+            Convert to String Value with different Type of seperator Formats :
+          </p>
+
+          <ul>
+            <li>
+              Join Function Converting Method (Default/ customized Format
+              seperators):
+            </li>
+
+            <p>
+              =&gt;[Third Array's Convert to String Method] Syntax as following:
+            </p>
+            <div id="Code" class="Code">
+              var arrayName = ["Element1", "Element2", "Element3"],<br />
+              &nbsp;&nbsp; strVar = arrayName.join();<br />
+
+              console.log(arrayName);<br />
+              console.log(strVar);<br />
+              document.getElementById("HTMLTagName").innerHTML =<br />
+              &nbsp;&nbsp; "Array Original Format :" + arrayName + "&lt;br&gt;"
+              + <br />
+              &nbsp;&nbsp; "Array String Format :" + strVar;<br />
+            </div>
+
+            <p>
+              Following Example Developer Will Insert a simple Texual Array with
+              (user desire) elements, and Application Will Type it's Elements
+              with (Array Format) & (String Format) after Converting it to
+              String [Using Third Method with Defualt Format] Practical Example
+              will be as following:
+            </p>
+
+            <div id="DisplayArr31" class="JsArrConvStrSyn"></div>
+
+            <button onclick="ConvJoin1()" class="btn">
+              Cilck your Array to String [By Third Method (join) with Default
+              Seperators]
+            </button>
+
+            <script src="ArrayConvStr.js"></script>
+
+            <div class="JsArrConvStrSynExp">
+              <code>
+                //HTML Codes :<br />
+                &lt;div id="DisplayArr31" class="JsArrConvStrSyn"&gt;<br />
+                &lt;/div&gt;<br />
+
+                &lt;button onclick="ConvJoin1()"&gt;Cilck to start Date Convert
+                to String App [By Third Method] <br />
+                &lt;/button&gt;<br />
+                &lt;script src="ArrayConvStr.js"&gt; &lt;/script&gt;
+                <br /><br />
+
+                // Js Codes (ArrayConvert to StringGet.js):<br />
+                /* Global alert, prompt, document */ <br />
+                // Converting Array Elements to String Value:<br />
+                // Third Method to Convert Array Elements to String [by Default
+                Seperators] : <br /><br />
+
+                function ConvJoin1(){<br />
+                &nbsp; &nbsp; var arr = [],<br />
+                &nbsp; &nbsp; &nbsp; &nbsp; arr.length = prompt("Enter your
+                Array Elements Count :"),<br />
+                &nbsp; &nbsp; arrCount = arr.length; <br />
+
+                &nbsp; &nbsp; for (i = 0; i &lt; arrCount; i++){<br />
+                &nbsp; &nbsp; &nbsp; &nbsp; arr[i] = prompt("Enter your Array
+                Element Number : " + (i + 1) );<br />
+                &nbsp; &nbsp; } <br />
+
+                &nbsp; &nbsp; alert("Your Array elements [with Array Original
+                Format] are: " + arr);<br />
+                &nbsp; &nbsp; var strArray = arr.join();<br />
+
+                &nbsp; &nbsp; alert("Your Array elements [with String Format]
+                are: " + strArray);<br />
+
+                &nbsp; &nbsp; document.getElementById("DisplayArr31").innerHTML
+                =<br />
+                &nbsp; &nbsp; &nbsp; &nbsp; "Your Array elements [with Array
+                Original Format] are: " +<br />
+                &nbsp; &nbsp; &nbsp; &nbsp; arr + "<br />" + "Your Array
+                elements [with String Customized Format<br />
+                &nbsp; &nbsp; &nbsp; &nbsp; (Default Seperators) ] are: " +
+                strArray;<br />
+                }
+              </code>
+            </div>
+
+            <li>
+              Join Function Converting Method (by Customized Seperators (-)):
+            </li>
+            <p>
+              =&gt;[Third Array's Convert to String Method] Syntax as following:
+            </p>
+            <div id="Code" class="Code">
+              var arrayName = ["Element1", "Element2", "Element3"],<br />
+              &nbsp;&nbsp; strVar = arrayName.join();<br />
+
+              console.log(arrayName);<br />
+              console.log(strVar);<br />
+              document.getElementById("HTMLTagName").innerHTML = "Array Original
+              Format :" + arrayName + "&lt;br&gt;" + "Array String Format :" +
+              strVar;<br />
+            </div>
+
+            <p>
+              Following Example Developer Will Insert a simple Texual Array with
+              (user desire) elements, and Application Will Type it's Elements
+              with (Array Format) & (String Format) after Converting it to
+              String [Using Third Method with Customized Seperator Format (-)]
+              Practical Example will be as following:
+            </p>
+
+            <div id="DisplayArr32" class="JsArrConvStrSyn"></div>
+
+            <button onclick="ConvJoin2()" class="btn">
+              Cilck your Array to String [By Third Method (join) with Seperator
+              Format (-)]
+            </button>
+
+            <script src="ArrayConvStr.js"></script>
+
+            <div class="JsArrConvStrSynExp">
+              <code>
+                //HTML Codes :<br />
+                &lt;div id="DisplayArr32" class="JsArrConvStrSyn"&gt;<br />
+                &lt;/div&gt;<br />
+
+                &lt;button onclick="ConvJoin2()"&gt;Cilck to start Date Convert
+                to String App [By Third Method [by Customized Seperators (-)]
+                <br />
+                &lt;/button&gt;<br />
+                &lt;script src="ArrayConvStr.js"&gt; &lt;/script&gt;
+                <br /><br />
+
+                // Js Codes (ArrayConvStr.js):<br />
+                /* Global alert, prompt, document */ <br />
+                // Converting Array Elements to String Value:<br />
+                // Third Array Convertion to String Method [by Customized
+                Seperators (-)]:<br /><br />
+
+                function ConvJoin2(){<br />
+                &nbsp; &nbsp; var arr = [],<br />
+                &nbsp; &nbsp;&nbsp; &nbsp; arr.length = prompt("Enter your Array
+                Elements Count :"),<br />
+                &nbsp; &nbsp;&nbsp; &nbsp; arrCount = arr.length;<br />
+
+                &nbsp; &nbsp; for (i = 0; i &lt; arrCount; i++){<br />
+                &nbsp; &nbsp;&nbsp; &nbsp; arr[i] = prompt("Enter your Array
+                Element Number : " + (i + 1) );<br />
+                &nbsp; &nbsp; }<br /><br />
+
+                &nbsp; &nbsp; alert("Your Array elements [with Array Original
+                Format] are: " + arr);<br />
+                &nbsp; &nbsp; var strArray = arr.join("-");<br />
+
+                &nbsp; &nbsp; alert("Your Array elements [with String Format]
+                are: " + strArray);<br />
+
+                &nbsp; &nbsp; document.getElementById("DisplayArr32").innerHTML
+                =<br />
+                &nbsp; &nbsp; "Your Array elements [with Array Original Format]
+                are: " + arr + "&lt;br&gt;" +<br />
+                &nbsp; &nbsp;&nbsp; &nbsp; "Your Array elements [with Array
+                Original Format] are: " + arr +<br />
+                &nbsp; &nbsp;&nbsp; &nbsp; "Your Array elements [with Array
+                Original Format] are: " + arr +"<br />" +<br />
+                &nbsp; &nbsp; &nbsp;&nbsp; "Your Array elements [with String
+                Customized Format (-) Seperators] are: " + strArray;<br />
+                }
+              </code>
+            </div>
+
+            <li>
+              Join Function Converting Method (by Customized Seperators (Empty
+              Spaces)):
+            </li>
+            <p>
+              =&gt;[Third Array's Convert to String Method] Syntax as following:
+            </p>
+            <div id="Code" class="Code">
+              var arrayName = ["Element1", "Element2", "Element3"],<br />
+              &nbsp;&nbsp; strVar = arrayName.join(-additional space-);<br />
+
+              console.log(arrayName);<br />
+              console.log(strVar);<br />
+              document.getElementById("HTMLTagName").innerHTML =<br />
+              &nbsp;&nbsp; "Array Original Format :" + arrayName +<br />
+              &nbsp;&nbsp; "&lt;br&gt;" + "Array String Format :" + strVar;<br />
+            </div>
+
+            <p>
+              Following Example Developer Will Insert a simple Texual Array with
+              (user desire) elements, and Application Will Type it's Elements
+              with (Array Format) & (String Format) after Converting it to
+              String [Using Third Method with Customized Seperator Format (-)]
+              Practical Example will be as following:
+            </p>
+
+            <div id="DisplayArr33" class="JsArrConvStrSyn"></div>
+
+            <button onclick="ConvJoin3()" class="btn">
+              Cilck your Array to String [By Third Method (join) (Empty Spaces)]
+            </button>
+
+            <script src="ArrayConvStr.js"></script>
+
+            <div class="JsArrConvStrSynExp">
+              <code>
+                //HTML Codes :<br />
+                &lt;div id="DisplayArr31" class="JsArrConvStrSyn"&gt;<br />
+                &lt;/div&gt;<br />
+
+                &lt;button onclick="ConvJoin3()"&gt;Cilck to start Date Convert
+                to String App [By Third Method] <br />
+                &lt;/button&gt;<br />
+                &lt;script src="ArrayConvStr.js"&gt; &lt;/script&gt;
+                <br /><br />
+
+                // Js Codes (ArrayConvStr.js):<br />
+                /* Global alert, prompt, document */ <br />
+                // Converting Array Elements to String Value:<br />
+                // Third Array Convertion to String Method [by Customized
+                Seperators (Empty Spaces)]:<br /><br />
+
+                function ConvJoin3(){<br />
+                &nbsp; &nbsp; var arr = [];<br />
+                &nbsp; &nbsp; &nbsp; &nbsp; arr.length = prompt("Enter your
+                Array Elements Count :"),<br />
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;arrCount =
+                arr.length;<br /><br />
+
+                &nbsp; &nbsp;for (i = 0; i &lt; arrCount; i++){<br />
+                &nbsp; &nbsp;&nbsp; &nbsp; arr[i] = prompt("Enter your Array
+                Element Number : " + (i + 1) );<br />
+                &nbsp; &nbsp;}<br />
+
+                &nbsp; &nbsp;alert("Your Array elements [with Array Original
+                Format] are: " + arr);<br />
+                &nbsp; &nbsp; var strArray = arr.join(" ");<br />
+
+                &nbsp; &nbsp; alert("Your Array elements [with String Format]
+                are: " + strArray);<br />
+
+                &nbsp;&nbsp;document.getElementById("DisplayArr33").innerHTML
+                =<br />
+                &nbsp; &nbsp;&nbsp; &nbsp;"Your Array elements [with Array
+                sOriginal Format] are: " + arr + "&lt;br&gt;" +<br />
+                &nbsp; &nbsp;&nbsp; &nbsp; "Your Array elements [with String
+                Customized Format <br />
+                &nbsp; &nbsp;&nbsp; &nbsp; (Empty Spaces) Seperators] are: " +
+                strArray;<br />
+                }
+              </code>
+            </div>
+          </ul>
+        </ol>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+
+      <!------------------------------------------------------------------------------------------------------>
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="280"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="365" />
+          <input type="hidden" name="months" value="28" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to get basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num2" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg" />
+          Your browser Does Not Support the Audio file format...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 28 Video File:</h3>
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=HivFvZIPygY&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=28&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+        <!-- <video controls width="300" height="300">
+          <source
+            src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/28 Array Methods - Convert To String.mp4"
+            type="video/mp4"
+          />
+          Your browser Does Not Support the Video file format...
+        </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JavaScript");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

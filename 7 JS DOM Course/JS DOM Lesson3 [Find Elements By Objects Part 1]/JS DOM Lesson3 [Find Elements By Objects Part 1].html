@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS OOP Lesson 3 [Find Elements By Object]</title>
+    <link
+      rel="stylesheet"
+      href="JS DOM Lesson3 [Find Elements By Objects Part 1].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JS OOP Lesson 3 [Find Elements By Object]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS OOP main Topics">
+            JS OOP Lesson3 [Find Elements By Object ] Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMCon"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Concept"
+          >
+            JS OOP Lesson3 [Find Elements By Object ] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMImp"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Importance & Benefits"
+          >
+            JS OOP Lesson3 [Find Elements By Object ] Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMSyntx"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Syntax"
+          >
+            JS OOP Lesson3 [Find Elements By Object] Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMPract"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Practical Applications"
+          >
+            JS OOP Lesson3 [Find Elements By Object ] Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS OOP Course
+      <span> JS OOP Lesson 3 [Find Elements By ID Class Tag ] </span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          JS OOP [Class Static Properties and Methods ] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>JS OOP [Find Elements By Object ] Concept.</li>
+
+            <li>JS OOP [Find Elements By Object ] Importance & Benefits.</li>
+
+            <li>
+              JS OOP [Find Elements By Object ] Syntax [Definition + Access].
+            </li>
+
+            <li>JS OOP [Find Elements By Object ] Practical Application.</li>
+          </ol>
+
+          <p>&gt; Main new Methods in this lesson are as following :</p>
+          <ul>
+            <li>Accessing title Element = document.title; }</li>
+            <li>Accessing images Element = document.images; }</li>
+            <li>Accessing forms Element = document.forms; }</li>
+          </ul>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMCon" id="JSDOMCon">
+        <header>
+          <h3>JS OOP [Find Elements By Object] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [Find elements by Object]: It refers to accessing
+          elements in web page as an object(s) as following:
+        </p>
+        <ul>
+          <li>
+            {main Parent Object} =&gt; which is the main object's name, which
+            has an index(due to there are Many elements in page)
+          </li>
+
+          <li>
+            {Child} =&gt; Which is each the a delt as a property inside the main
+            object {parent element}, it be accessd by it's pragraming name
+            {attribute : name}
+          </li>
+
+          <li>
+            {Other child's properties } =&gt; Which are the property's values
+            {child attributes}.
+          </li>
+        </ul>
+
+        <p>
+          =&gt; JS HTML DOM [Find elements by Object]: Is one of accessing
+          Methods to elements in Web page , with differences in syntax
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSDOMImp" id="JSDOMImp">
+        <header>
+          <h3>JS OOP [Find Elements By Object ] Importance & Benefits:</h3>
+        </header>
+
+        <p>
+          [DOM Find Elements By Object] gives us the Following Features : <br />
+        </p>
+        <ul>
+          <li>
+            It is more advanced method to access to specific parent & child
+            Elements & it's ceratin attributes {properties}
+          </li>
+
+          <li>
+            gives more features to pragrmaing functions speacially in DOM
+            programing Technique
+          </li>
+
+          <li>Much more easier method than other methods .</li>
+
+          <li>Much more accurate method than other methods .</li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMSyntx" id="JSDOMSyntx">
+        <header>
+          <h3>[ JS HTML DOM Find Element by Object ] Syntax & Methods:</h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [finding & Accessing Elements by Object Methnod]
+          Conceptual Syntax as following :
+        </p>
+
+        <div id="Code" class="Code">
+          // A) JS HTML DOM Defining variable with certian Element of web page
+          by [DOM] Syntax as following :<br /><br />
+          <span class="one"></span>var ElementVar =
+          document.getElementById('ElementID'); <br />
+
+          //=========================================================== <br />
+          <br />
+
+          // B) JS HTML DOM [changing Defined element Value by {Documnet title}]
+          Syntax as following :<br /><br />
+          <span class="one"></span>ElementVar.innerHTML = document.title; <br />
+          //=========================================================== <br />
+          <br />
+
+          // C) JS HTML DOM [changing Defined element Value by {Documnet
+          images}] Syntax as following :<br /><br />
+          <span class="one"></span> // 1) Adding images {Count} in Whole page :
+          <br />
+          <span class="two"></span>ElementVar.innerHTML =
+          document.images.length; <br />
+          //=========================================================== <br />
+          <br />
+
+          <span class="one"></span> // 2) Adding [certain image]'s {source} :
+          <br />
+          <span class="two"></span>ElementVar.innerHTML =
+          document.images[x].src; <br />
+          //=========================================================== <br />
+          <br />
+
+          <span class="one"></span> // 3) Adding [certain image]'s {width} :
+          <br />
+          <span class="two"></span>ElementVar.innerHTML =
+          document.images[x].width; <br />
+          //=========================================================== <br />
+          <br />
+
+          <span class="one"></span> // 4) Adding [certain image]'s {height} :
+          <br />
+          <span class="two"></span>ElementVar.innerHTML =
+          document.images[x].height; <br />
+          //=========================================================== <br />
+          //=========================================================== <br />
+          <br />
+
+          // D) JS HTML DOM [changing Defined element Value by {Document certian
+          form's child element's Attribute}] Syntax as following :<br /><br />
+
+          <span class="one"></span> // 1) Adding an input's{value} of Certain
+          Form in web Page : <br />
+          <span class="two"></span>ElementVar.innerHTML =
+          document.forms[index].input'Name.value; <br />
+          //=========================================================== <br />
+          <br />
+
+          <span class="one"></span> // 2) Adding an input's{type} of Certain
+          Form in web Page : <br />
+          <span class="two"></span>ElementVar.innerHTML =
+          document.forms[index].input'Name.type; <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMPract" id="JSDOMPract">
+        <header>
+          <h3>
+            JS OOP [Find Elements By Object] General Practical Applications :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Here one Major Application will include following Function/Tasks
+          : &gt;&gt; <br />
+        </p>
+        <ol></ol>
+        <br />
+
+        <section id="sec" class="secClass">
+          <img
+            src="C:\Users\hp\Desktop\My Web Pages\5 JS DOM Course\Lesson 3"
+            title="image1"
+            alt="img1"
+          />
+          <br />
+          <img
+            src="C:\Users\hp\Desktop\My Web Pages\5 JS DOM Course\Lesson 3"
+            title="image2"
+            alt="img2"
+          />
+          <br />
+          <img
+            src="C:\Users\hp\Desktop\My Web Pages\5 JS DOM Course\Lesson 3"
+            title="image3"
+            alt="img3"
+          />
+          <br />
+        </section>
+        <br />
+
+        <form
+          id="form1"
+          class="form1"
+          action="default action1"
+          target="default Target2"
+          title="First Form"
+        >
+          <input
+            type="text"
+            name="x1"
+            value="first input field in first Form"
+            id="inputId1"
+            class="input1Class"
+          />
+          <input
+            type="text"
+            name="x2"
+            value="second input field in first Form"
+            id="inputId2"
+            class="input2Class"
+          />
+        </form>
+
+        <form
+          id="form2"
+          class="form2"
+          action="default action2"
+          target="default Target2"
+          title="Second Form"
+        >
+          <input
+            type="text"
+            name="z1"
+            value="first input field in second form"
+            id="inputId3"
+            class="input3Class"
+          />
+          <input
+            type="text"
+            name="z2"
+            value="second input field in second form"
+            id="inputId4"
+            class="input4Class"
+          />
+        </form>
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <script src="FindElemByObject.js"></script>
+
+        <button class="btn" onclick="test()">
+          Click to Start [Testing finding elements by Object ] Application
+        </button>
+
+        <br />
+
+        <hr />
+        <button id="btn" class="btn" onclick="display()">
+          Display JS Code
+        </button>
+
+        <div class="JSOOPObjConstTraining">
+          <code>
+            // HTML Codes: <br />
+            <span class="one"></span> &lt;textarea id="txtarea"
+            class="txtarea"&gt;<br />
+            <span class="one"></span> &lt;/textarea&gt; <br /><br />
+
+            <span class="one"></span> &lt;button class="btn"
+            onclick=test"()"&gt;<br />
+            <span class="two"></span> Click to Start [Testing Find Elements By
+            Object ] Application <br />
+            <span class="one"></span> &lt;/button&gt; <br /><br />
+
+            <span class="one"></span> &lt;script
+            src="FindElemByObject.js"&gt;<br />
+            <span class="one"></span> &lt;/script&gt; <br /><br />
+
+            =======================================================<br /><br />
+
+            /* global document, alert, prompt */ <br />
+            /* JSOOP [Find Elements By Object] */ <br />
+            template-string-converter.enable; <br /><br />
+
+            <textarea id="SourceCode" readonly></textarea>
+          </code>
+        </div>
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 3 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=eX2_qBZnZXA&list=PLDoPjvoNmBAxx97QDMOCpzxbu1ZHJ4i7i&index=3&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\HTML JS Dom\3 JS HTML Dom Find Elements By Objects Part 1.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JS OOP Lesson 3 [Find Elements By  ID Class Tag ] ");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

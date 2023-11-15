@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> JavaScript Lesson 60 [ Date - Function part 1 (get) ] </title>
+    <link rel="stylesheet" href="JavaScript [ Date - Function part 1 ].css" media="all" >
+    
+    <script>    
+                     
+    </script>     
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JavaScript Lesson 60 [ Date - Function part 1 (get) ] 
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="Go to Javascript main Topics" >
+                    [ JavaScript [ Date - Function part 1 (get) ] ] Main Topics </a> </li>                                                  
+            
+            <li> <a href=#JSDateFunction1Con title="Go to [JavaScript [ Date - Function part 1 (get) ]] Concept" >
+                    [ JavaScript [ Date - Function part 1 (get) ] ] Concept </a> </li>             
+
+            <li> <a href=#JSDateFunction1Imp title="Go to [JavaScript [ Date - Function part 1 (get) ]] 
+                    Importance & Benefits" >
+                    [ JavaScript [ Date] - Function part 1 (get) ] Importance & Benefits </a> </li>    
+            
+            <li> <a href=#JSDateFunction1Syntx title="Go to [JavaScript [ Date - Function part 1 (get) ] ] 
+                    main Syntax">
+                    [ JavaScript [ Date - Function part 1 (get) ] ] Main Syntax & Methods </a> </li>            
+            
+            <li> <a href=#JSDateFunction1Pract title="Go to [JavaScript [ Date - Function part 1 (get) ] ] 
+                    Practical Application">
+                    [ JavaScript [ Date - Function part 1 (get) ] ] Practical Application </a> </li>             
+                           
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>        
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to JavaScript Course <span> JavaScript Lesson 60 [JavaScript [ Date - Function part 1 (get) ]
+        { Date - Part 3} </span> 
+    </main> 
+<!-------------------------------------------------------------------------------------------------------------->                      
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+                
+            <header>                 
+                [JavaScript [ Date - Function part 1 (get) ] Main Topics :
+            </header>
+            
+            <article>                                                
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">                                                            
+                    <li> Javascript [ Date ] Concept </li>               
+                                                            
+                    <li> JavaScript [ Date ] Importance & Benefits. </li>
+                    
+                    <li> JavaScript [ Date ] Date Methods and Syntax </li>
+                        <ol>
+                            <li> Original Functions :</li>
+                            <ul>                                
+                                <li> getDate(): Get the Day Index Number of the current Month of Give Date            Function (1-31)</li>
+                                
+                                <li> getDay(): Get the Day Index Number of the current Week Give Date Function        (0-6) </li>
+                                
+                                <li> getFullYear(): Get the Year Number Function (Long Number Form) of Given Date </li>
+                                
+                                <li> getHours(): Get the Hour Number of given Time Function </li>
+                                
+                                <li> getMinutes(): Get the Hour Number of given Time Function  </li>
+                                
+                                <li> getSeconds(): Get the Seconds Number of given Time Function  </li>
+                                
+                                <li> getMilliSeconds(): Get the MilliSeconds Number of given Time Function  </li>
+                                
+                                <li> getTime(): Get the Total MilliSeconds Number Form 1970 until Now or given        Time Function</li>
+                                
+                                <li> getTimezoneOffset(): Get the Difference of UTC & Local Time by MilliSeconds      Number Function  </li>                                                                
+                            </ul>
+                            
+                            <li> UTC (Universal Time) Functions :</li>
+                            <ul>
+                                <li> getUTCDate(): Get the UTC Day Index Number of the current Month of Give Date      Function (1-31)</li>
+                                
+                                <li> getUTCDay(): Get the UTC Day Index Number of the current Week Give Date          Function (0-6) </li>                                
+                                
+                                <li> getUTCHours(): Get the UTC Hour Number of given Time Function </li>
+                                
+                                <li> getUTCMinutes(): Get the UTC Minutes Number of given Time Function  </li>
+                                
+                                <li> getUTCSeconds(): Get the UTC  Seconds Number of given Time Function  </li>   
+                                
+                                <li> getUTCMilliSeconds(): Get the UTC MilliSeconds Number of given Time Function  </li>         
+                            </ul>                                                                                
+                        </ol>                                                            
+                    <li> JavaScript [ Date ] Practical Application </li>                                                                             
+                </ol>    
+            </article>            
+        </Section>
+            
+        <!------------------------------------------------------------------------------------------------------>      
+        <!------------------------------------------------------------------------------------------------------>                              
+        <section class="JSDateFunction1Con" id="JSDateFunction1Con">
+            <header>
+                <h3>  JavaScript [ Date - Function part 1 (get) ]] Concept:  </h3>                                                       
+            </header>
+            
+            <p> =&gt; JavaScript [ Date - Function part 1 (get) ] : This Lesson Will Present a Public Concept of           Date Specific Extraction Function part 1 (get) in any JS Particularly and Practical General           Examples. 
+            
+            <p> =&gt; JavaScript [ Date - Function part 1 (get) ] : Date & Time Function part 1 (get) are the               same in all promgraming Languages in Syntax and Rules. 
+            
+            <p> =&gt; JavaScript [ Date - Function part 1 (get) ] : Date & Time Extractoin Function part 1 (get)           has 2 types or Modes, which are : </p> 
+            
+                    <ul>
+                        <li>Original Date Extracion Mode :</li>
+                            <p>This is The Date & Time of current Date or Given Date </p>
+                                        
+                        <li> UTC Date Extracion Mode : </li>
+                            <p>This is the same concept of the Date & Time Functions but with the UTC </p>
+                    </ul>
+                                        
+            <p> =&gt; JavaScript [ Date - Function part 1 (get) ] : In JS programing language there are (9)                 {Main} foramts to [Enter] Date and time as Following :  
+                <ol>
+                    <li> getDate(): Get the Day Index Number of the current Month of Give Date Function (0-31)</li>
+                    <li> getDay(): Get the Day Index Number of the current Week Give Date Function (0-6) </li>
+                    <li> getFullYear(): Get the Year Number Function (Long Number Form) of Given Date </li>
+                    <li> getHours(): Get the Hour Number of given Time Function </li>
+                    <li> getMinutes(): Get the Hour Number of given Time Function  </li>
+                    <li> getSeconds(): Get the Seconds Number of given Time Function  </li>
+                    <li> getMilliSeconds(): Get the MilliSeconds Number of given Time Function </li>
+                    <li> getTime(): Get the MilliSeconds Number Form 1970 until Now or given Time Function </li>
+                    <li> getTimezoneOffset(): Get the Difference of UTC & Local Time by Minutes Number Function  </li>     
+                </ol>
+                                                                         
+        </section>
+                           
+        <!------------------------------------------------------------------------------------------------------>               
+        <section class="JSDateFunction1Imp" id="JSDateFunction1Imp">
+            <header>
+                <h3> JavaScript [ Date - Function part 1 (get) ] Importance & Benefits:  </h3>           
+            </header>
+
+            <p> =&gt; JavaScript [ Date - Function part 1 (get) ] : Due to the importance of Date (get) in any             P.Language,  JS it gives us the Following Features Rules in dealing with Date and Time  :  <br>                                                     
+                <ul>
+                    <li> The ability to extract specific Value of given Date and Time in JS Multiple Function to      Dispaly or Process </li>                           
+                    
+                    <li> The abililty to use Certain date or Current Date . </li>
+                    
+                    <li> The abililty to extract a Certain partial Date-Time of Certain Date-Time . </li>
+                    
+                    <li> The abililty to Make some Process on Date Partial Contents or Elements with built-in          Functions (Time Zone Differences Calculations between The Universal Time Zone and Local      Time Zone by Minutes {+}: West of Gerinitch, {-}: East of Gerinitch). </li>
+                    
+                    <li> The abililty to mix and merge between (get) function Date & Time Methods and Functions        to make more accuratc Date and time Calculations . </li>                                                                              
+               </ul>
+            
+        </section>
+                        
+        <!--------------------------------------------------------------------s---------------------------------->                                               
+        <section class="JSDateFunction1Syntx" id="JSDateFunction1Syntx">
+            <header>
+                <h3> [ JavaScript [ Date - Function part 1 (get) ]] Mains Syntax & Methods:  </h3>                     
+            </header>                                                
+                
+            <p> =&gt; JS Random Functions can be as following : </p>                                                     
+                                
+                <div id="Code" class="Code">                                
+
+                    // A) [ Original Current Date Time Function ] Syntax :<br><br>                             
+                    
+                    &nbsp;&nbsp; // 1) [Get the Day Index Number of the current Month of Give Date Function (0-31)] Syntax :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp;  DateVariable.getDate(); <br>   
+                    =======================================================<br><br>                    
+                                        
+                    &nbsp;&nbsp; // 2) [Get the Day Index Number of the current Week of Give Date Function (0-6)] Syntax :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp;  DateVariable.getDay(); <br>   
+                    
+                    =======================================================<br><br>                                             
+                                        
+                    &nbsp;&nbsp; // 3) [Get the Year Number Function (Long Number Form) of Given Date Syntax :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp;  DateVariable.getFullYear(); <br>   
+                    
+                    =======================================================<br><br>                                                            
+                    &nbsp;&nbsp; // 4) [Get the Hour Number of given current Time Function ] :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp;  DateVariable.getHours(); <br>   
+                    
+                    =======================================================<br><br>                                             
+                                                            
+                    &nbsp;&nbsp; // 5) [ Get the minutes Number of given Current Time Function] :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp;  DateVariable.getMinutes(); <br>   
+                    
+                    =======================================================<br><br>                                        
+                    
+                    &nbsp;&nbsp; // 6) [Get the Seconds Number of given Time Function] :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp;  DateVariable.getSeconds(); <br>   
+                    
+                    =======================================================<br><br>                                       
+                    
+                    &nbsp;&nbsp; // 7) [Get the MilliSeconds Number of given Current Time Function ] :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp;  DateVariable.getMilliSeconds(); <br>   
+                    
+                    =======================================================<br><br>                                                                                                                   
+                    &nbsp;&nbsp; // 8) [ Get the MilliSeconds Number Form 1970 until Now or given Time Function ] :<br><br>     
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp; Get the Total MilliSeconds Number Form 1970 until Now Function: <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; CurrentDateVariable.getTime(); <br><br>   
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp; Get the Total MilliSeconds Number Form 1970 until Now or given Time Function: <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; DateVariable.getTime(); <br>   
+                    
+                    =======================================================<br><br>                                        
+                                                            
+                    &nbsp;&nbsp; // 9) [Get the Difference of UTC & Local Time by Minutes Number Function ] :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp;  DateVariable.getTimezoneOffset(); <br>   
+                    
+                    =======================================================<br><br>                                             
+                    =======================================================<br><br>                                        
+                    
+                    // B) [ UTC Date Time Function ] Syntax :<br><br>                             
+                                    
+                    &nbsp;&nbsp; // 1) [Get the Day Index Number of the UTC Month of Given Date Function (1-31) <br>         
+                    &nbsp;&nbsp;&nbsp;&nbsp; of UTC] Syntax :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp; DateVariable.getUTCDate(); <br>   
+                    =======================================================<br><br>                    
+                                        
+                    &nbsp;&nbsp; // 2) [Get the Day Index Number of the current Week of Given Date Function (0-6) <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; of UTC] Syntax :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp; DateVariable.getUTCDay(); <br>   
+                    
+                    =======================================================<br><br>                                                                                                                        
+                    &nbsp;&nbsp; // 3) [Get the Hour Number of given Time by UTC Function ] :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp; DateVariable.getUTCHours(); <br>   
+                    
+                    =======================================================<br><br>                                             
+                                                            
+                    &nbsp;&nbsp; // 4) [ Get the Minutes Number of given Time by UTC Function] :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp; DateVariable.getUTCMinutes(); <br>   
+                    
+                    =======================================================<br><br>                                        
+                    
+                    &nbsp;&nbsp; // 5) [Get the Seconds Number of given Time by UTC Function] :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp; DateVariable.getUTCSeconds(); <br>   
+                    
+                    =======================================================<br><br>                                       
+                    
+                    &nbsp;&nbsp; // 6) [Get the MilliSeconds Number of given Time by UTC Function ] :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp; DateVariable.getUTCMilliSeconds(); <br>   
+                    
+                    =======================================================<br><br>                                                                                                                   
+                    &nbsp;&nbsp; // 7) [ Get the MilliSeconds Number Form 1970 until Now or given Time by UTC <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; Function ] :<br><br>     
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp; Get the Total MilliSeconds Number Form 1970 until Now Function: <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; CurrentDateVariable.getTime(); <br><br>   
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp; Get the Total MilliSeconds Number Form 1970 until given custome Time Function: <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; DateVariable.getTime(); <br>   
+                    
+                    =======================================================<br><br>                                     
+                    =======================================================<br><br>                                     
+                    =======================================================<br><br>                                                                                
+                </div>                                            
+            <hr>
+        </section>         
+            
+        <!------------------------------------------------------------------------------------------------------>                                               
+        <section class="JSDateFunction1Pract" id="JSDateFunction1Pract">
+            <header>
+                <h3> JavaScript [ Date - Function part 1 (get) ] Practical Applications :  </h3>                     
+            </header> 
+            
+            <p> =&gt; Here (1) Practical Application, which will include All Available Date & Time's (9) Function           part 1 (get) of with (2) Modes {Original - UTC} JavaScript as following : <br>
+           </p>                                             
+                    
+                <textarea id=txtarea class=txtarea > </textarea><br>    
+
+                <button class=btn onclick="mthd()"> Click to Start [Date & Time ] Main Function part1 Application
+                </button>
+                    <br>
+
+                <script src="JSDateTimeFunction1.js"> </script>                                        
+            <hr>
+
+                <div class=JSDateFunction1 >
+                    <code>
+                        // HTML Codes: <br>
+                        &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        &lt;/textarea&gt; <br><br>
+
+                        &lt;button class="btn" onclick="mthd()"&gt;<br>                            
+                        &nbsp;&nbsp;Click to Start [Date & Time ] Main Function part1 Application<br>                               
+                        &lt;/button&gt; <br><br>                            
+
+                        &lt;script src="JSDateFunction1.js"&gt;<br>                            
+                        &lt;/script&gt; <br><br>
+
+                        =======================================================<br><br>
+
+                        // JS Codes [JSDateFunction1.js] : <br><br>
+                        /* global alert, document, prompt, console */<br>
+                        /* jslint plusplus: true evil: true */ <br>
+                        /* [Date & Time part3 - Function part 1 (get)] Application */ <br>
+                        // ========================================// <br>
+
+                                function mthd() { <br>
+                                &nbsp;&nbsp; "use strict"; <br><br>
+
+                                &nbsp;&nbsp; MainLoop: <br><br>
+                                
+                                &nbsp;&nbsp; do { <br> <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; function mthd() { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; "use strict"; <br>                            
+                                &nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to Date & Time part3 - Function part 1 (get) "); <br><br> 
+                                &nbsp;&nbsp;&nbsp;&nbsp; do { <br><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var meth = prompt("Please Choose your Date & Time Function Mode ...\n <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (1) Original Mode Date & Time \n<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (2) UTC Mode of Date & Time \n Press any other key to exit ..."); <br><br>
+
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (meth !== "1" && meth !== "2") {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Error entry!");<br>                
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } else { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var CustDate = new Date();<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (meth == "1"){ <br>  
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do  { <br><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to Date & Time Mode 1 [Original Date-Function]");<br><br>
+                        
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var fun = prompt(" Choose Date/Time Function from Below ... \n <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (1) For [Get Day Index of Month] \n <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (2) For [Get Day Index of Week] \n<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (3) For [Get Full Year Number] \n <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (4) For [Get Hours Number] \n <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (5) For [Get Minutes Number] \n <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (6) For [Get Seconds Number] \n <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (7) For [Get MilliSeconds Number] \n <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (8) For [Get Total Time Number by MilliSeconds (from 1970-Now)] \n <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (9) For [Get Time Zone Differnece Number by Minutes] or Press any other key to Exit ..");<br><br>
+                        
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; switch (fun) {<br><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "1": <br><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp; alert("Welcome to [Get Day Index of Month] "); <br><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp; var DayMInd = CustDate.getDate(); <br><br>
+
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Day Month Index Number is " + DayMInd); <br><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your Day Index Month Nubmer is " + DayMInd;<br><br>
+                        
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br> <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "2": <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Get Day Index of Week] "); <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var DayWInd = CustDate.getDay(); <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Day Index Week Number is " + DayWInd); <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML =<br><br>                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your Day Index Weeek Nubmer is " + DayWInd; <br><br>
+
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br><br>
+
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "3": <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Get Full Year Number] "); <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var FullYear = CustDate.getFullYear(); <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Year Full Number is " + FullYear); <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your Year Full Nubmer is " + FullYear; <br><br>                                         
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br><br>
+ 
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "4": <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Get Hours Number] "); <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var HourNum = CustDate.getHours(); <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Hour Number is " + HourNum); <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your Hour Nubmer is " + HourNum; <br><br>                                               
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "5": <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Get Minutes Number] "); <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var MinNum = CustDate.getMinutes(); <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Minutes Number is " + MinNum); <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your Minutes Nubmer is " + MinNum; <br><br>                                            
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "6":<br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Get Seconds Number] ");<br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var SecondsNum = CustDate.getSeconds();<br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Seconds Number is " + SecondsNum);<br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML =<br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your Seconds Nubmer is " + SecondsNum;<br>                                        
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "7":
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Get MilliSeconds Number] "); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var MilliSNum = CustDate.getMilliseconds(); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your MilliSeconds Number is " + MilliSNum); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your MilliSeconds Nubmer is " + MilliSNum;  <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "8": <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Get Total Time Number by MilliSeconds (from 1970-Now)] "); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var TotTimeMS = CustDate.getTime(); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Total Time by MilliSeconds [From 1970 - Now] is \n" + TotTimeMS); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your Total Time by MilliSeconds [From 1970 - Now] is \n" + TotTimeMS; <br> 
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "9":<br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Get Time Zone Differnece Number by Minutes] "); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var TZDiff = CustDate.getTimezoneOffset(); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Time zone differnece by Minutes is \n" + TZDiff);<br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your Time zone differnece by Minutes is \n" + TZDiff;  <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; default: <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert ("Error Entry!"); <br>                             
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br><br>               
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var a = prompt("Press (1) to Re-start the [Original Mode] date Function, or any other key to Exit ..."); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } while (a == "1"); <br><br>
+                               
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } else if (meth == "2") { <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do { <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to Date & Time Mode 2 [UTC Mode Function]... "); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var fun = prompt("Choose UTC Date/Time Function from Below ... \n Press (1) For [Get UTC Day Index of Month] \n<br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (2) For [Get UTC Day Index of Week] \n <br> 
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (3) For [Get UTC Hours Number] \n<br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (4) For [Get UTC Minutes Number] \n <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                               Press (5) For [Get UTC Seconds Number] \n <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                               Press (6) For [Get UTC MilliSeconds Number] \nOr Press any other key to Exit ..");<br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; switch (fun) { <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "1": <br>                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aslert("Welcome to [Get UTC Day Index of Month] "); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var UDayMInd = CustDate.getUTCDate(); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your UTC Day Month Index Number is " + UDayMInd); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your UTC Day Index Month Nubmer is " + UDayMInd; <br>               
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "2": <br> <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Get UTC Day Index of Week] "); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var UDayWInd = CustDate.getUTCDay(); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your UTC Day Index Week Number is " + UDayWInd); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your UTC Day Index Weeek Nubmer is " + UDayWInd; <br>               
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>                                                
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "3": <br><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Get UTC Hours Number] "); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var UHourNum = CustDate.getUTCHours(); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your UTC Hour Number is " + UHourNum); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your UTC Hour Nubmer is " + UHourNum; <br>                           
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "4": <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Get UTC Minutes Number] "); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var UMinNum = CustDate.getUTCMinutes(); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your UTC Minutes Number is " + UMinNum); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your UTC Minutes Nubmer is " + UMinNum; <br>                         
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>                            
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "5": <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Get UTC Seconds Number] "); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var USecondsNum = CustDate.getUTCSeconds(); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your UTC Seconds Number is " + USecondsNum); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your UTC Seconds Nubmer is " + USecondsNum; <br>                     
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case "6": <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [Get UTC MilliSeconds Number] "); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var UMilliSNum = CustDate.getUTCMilliseconds(); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your UTC MilliSeconds Number is " + UMilliSNum); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your UTC MilliSeconds Nubmer is " + UMilliSNum; 
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your UTC MilliSeconds Nubmer is " + UMilliSNum; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; default: <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Error Entry!s"); <br>   
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break; <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }  <br>           
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var b = prompt("Press (1) to Re-start the [UTC Mode]  date Function, or any other key to Exit ..."); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } while (b == "1"); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var z = prompt("Press 1 to restart the whole Application ,\nPress any other key to exit"); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (z !== "1") { <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Good Bye!"); <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } else { <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Let's Restart"); <br>                               
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } while (z == "1");<br>                 
+                               &nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                                }<br>
+                                //////////////////////////////////////////////////////////<br><br><br>
+                                               
+                            </code>                                        
+                        </div>                                                                       
+        <!-------------------------------------------------------------------------------------------------------------------->                 
+             
+        </section>                                                                
+<!-------------------------------------------------------------------------------------->                
+<!---------------------------------------------------------------------------------------->                                     
+    </div>
+        <!------------------------------------------------------------------------------------------------------>       
+    <!------------------------------------------------------------------------------------------------------>                                                                              
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="340"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3> 
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="385">
+               <input type="hidden" name="months" value="34">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num1">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file Function part 1 (get)...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+            <h3> Lesson 60 Video File:</h3>
+
+            <iframe
+                width="100%"
+                height="100%"
+                allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"
+                frameborder="0"
+                preload="yes"
+                src="https://www.youtube.com/embed/watch?v=RD-UOqZSI50&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=60&controls=0&loop=1&autoplay=1&fs=1"
+            >
+            </iframe>
+
+            <!-- <video controls width="300" height="300" >
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics\60 Date - Date Functions part 1 (get).mp4" type="video/mp4">
+                Your browser Does Not Support the Video file Function part 1 (get)...              
+            </video>                           -->
+       </section>
+        
+    
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>
+    
+    
+    <script>
+        alert("Welcome to JavaScript");        
+    </script>
+    
+    
+    <script src="onmouseover.js"></script>
+            
+</body>
+</html>

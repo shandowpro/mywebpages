@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Lesson 36 [JS String Methods - Locate A String]</title>
+    <link
+      rel="stylesheet"
+      href="JavaScript [ String Methods - Locate A String].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JavaScript Lesson 36 [ Javascript String Methods - Locate A String (Part
+      2) ]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to Javascript main Topics">
+            [Javascript String Methods - Locate A String ] Main Topics
+          </a>
+        </li>
+        <li>
+          <a
+            href="#JsStrLoctCon"
+            title="Go to [Javascript Array practise (General Revision) ] Concept"
+          >
+            [Javascript String Methods - Locate A String ] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsStrLoctImp"
+            title="Go to [Javascript String Methods - Locate A String ] Importance &               Benefits"
+          >
+            [Javascript String Methods - Locate A String ] Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsStrLoctMthds"
+            title="Go to [Javascript String Methods - Locate A String ] main Methods"
+          >
+            [Javascript String Methods - Locate A String Main Methods ]
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsStrLoctMthd1"
+            title="Go to [Javascript String Methods - Locate A String ] First Method               Syntax"
+          >
+            [Javascript { StringName.indexOf("Searching Text", Starting Index);
+            } Function ]
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsStrLoctMthd2"
+            title="Go to [Javascript String Methods - Locate A String ] Second Method               Syntax"
+          >
+            [Javascript { StringName.lastIndexOf("Searching Text", Starting
+            Index); } Function ]
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsStrLoctMthd3"
+            title="Go to [Javascript String Methods - Locate A String ] Third Method               Syntax"
+          >
+            [Javascript { StringName.search("Searching Text - includes RE"); }
+            Function ]
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JavaScript Course
+      <span>
+        JavaScript Lesson 36 [Javascript String Methods - Locate A String]
+      </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          [Javascript String Methods - Locate A String ] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>[Javascript String Methods - Locate A String ] Concept.</li>
+
+            <li>
+              [Javascript String Methods - Locate A String ] Importance &
+              Benefits of using all of Array Methods .
+            </li>
+
+            <li>
+              [Javascript String Methods - Locate A String ] Methods & Syntaxes
+              :
+            </li>
+            <ol>
+              <li>
+                {String Variable Name.indexOf("Searching Word", Starting
+                Searching Index) } Function
+              </li>
+
+              <li>
+                {String Variable Name.lastIndexOf("Searching Word", Starting
+                Searching Index) } Function
+              </li>
+
+              <li>
+                {String Variable Name.search("Searching Word - Included RE") }
+                Function
+              </li>
+            </ol>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsStrLoctCon" id="JsStrLoctCon">
+        <header>
+          <h3>[ Javascript String Methods ] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; [ String Methods - Searching ] : Is critical in any Programing
+          language to have control on Texutal Variables , and Know to how to
+          Get/ Find a partial String's Index by Several Methods Which includes :
+          <br />
+        </p>
+        <ul>
+          <li>[From First - End Searching ]</li>
+
+          <li>[From End - Start Searching].</li>
+
+          <li>[Regular Experssion Searching].</li>
+        </ul>
+
+        <p>
+          Several Searching / finding Methods is Critical to Exceed the ultimate
+          Proficency of Searching And Finding processing Scripts and Codes
+          Diversity in String Variable Control and in any programing Functions .
+          <!------------------------------------------------------------------------------------------------------>
+        </p>
+
+        <section class="JsStrLoctImp" id="JsStrLoctImp">
+          <header>
+            <h3>[ Javascript String Methods ] Importance & Benefits:</h3>
+          </header>
+
+          <p>
+            =&gt; [String Methods - String Searching] : Is Essential to any
+            programmer or developer to provide Full Control on the String
+            (Texual) and have the Ability of reaching specific Texual Data of a
+            Texual Value .
+          </p>
+
+          <p>
+            =&gt; [String Methods - String Searching ] : String Control Methods
+            is Essential in Validation Process and Entry Control by [Finding -
+            Modifying] Processes .
+          </p>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JsStrLoctMthds" id="JsStrLoctMthds">
+          <header>
+            <h3>[ Javascript String Methods ] Mains Methods:</h3>
+          </header>
+          <ul>
+            <li>
+              { StringName.indexOf("Searching Text", Starting Index); } Method :
+            </li>
+            <p>
+              Which Get the Index of matched Index of Inserted Texual Value
+              inside the Function.
+            </p>
+            <p>
+              This Method Will Search [From Start to End] for the INDEX or
+              inserted Texual Value .
+            </p>
+            <p>
+              This Method is Letter Case Sensitive to the Inserted Searching
+              Value .
+            </p>
+            <p>
+              Searching process Will Start from the Inserted Index, but if there
+              was nothing inserted in Index Starting Position, the Default will
+              be {0}.
+            </p>
+
+            <li>
+              { StringName.lastIndexOf("Searching Text", Starting Index); }
+              Method :
+            </li>
+            <p>
+              Which Get the Index of matched Index of Inserted Texual Value
+              inside the Function.
+            </p>
+            <p>
+              This Method Will Search [End to Start] for the INDEX or inserted
+              Texual Value.
+            </p>
+            <p>
+              This Method is Letter Case Sensitive to the Inserted Searching
+              Value .
+            </p>
+            <p>
+              Searching process Will Start from the Inserted Index, but if there
+              was nothing inserted in Index Starting Position, the Default will
+              be {0}.
+            </p>
+
+            <li>
+              {StringVariableName.search("Searching Word - Included RE") }
+              Method :
+            </li>
+            <p>
+              Which Get the Index of matched Index of Inserted Texual Value
+              inside the Function.
+            </p>
+            <p>
+              This Method Will Search From Start to End for the INDEX or
+              inserted Texual Value .
+            </p>
+            <p>
+              This Method is Letter Case Sensitive to the Inserted Searching
+              Value .
+            </p>
+            <p>
+              This Method has no Index to Enter, but instead, it provide the
+              ablility to use the Regular Expression Rules {Will Be Taken in
+              Later Lessons}.
+            </p>
+            <p>
+              This Method we Shall not use the Double Quoting signs "" IN CASE
+              of using [RE], but in Case of not Using [RE] we can use the Double
+              Quoting Signs .
+            </p>
+          </ul>
+
+          <p>
+            =&gt; The following includes Practical Examples on [String Fuctions
+            and Methods] :
+          </p>
+          <!-------------------------------------------------------------------------------------->
+
+          <ol>
+            <li id="JsStrLoctMthd1">
+              <h3>
+                =&gt; A) { StringName.indexOf("Searching Text", Starting Index);
+                } Method :
+              </h3>
+            </li>
+
+            <p>
+              =&gt; [StringName.indexOf("Searching Text", Starting Index);]
+              Method Syntax as following:
+            </p>
+            <div id="Code" class="Code">
+              var myString = "I love javascript and In Love with PHP"; <br />
+              console.log(myString.indexOf("Love", Starting Search Index));
+              <br />
+            </div>
+            <br /><br />
+
+            <div id="Mthd1" class="JsArrSC"></div>
+
+            <button class="btn" onclick="mthd1()">
+              Click to Start [StringName.indexOf("Searching Text", Starting
+              Index);] Method
+            </button>
+
+            <script src="StringLocateMethods.js"></script>
+            <hr />
+
+            <div class="JsStrConvMthdExp">
+              <code>
+                // HTML Codes: <br />
+                &lt;div id="Mthd1" class="JsArrSC"&gt;<br />
+                &lt;/div&gt; <br /><br />
+
+                &lt;button class="btn" onclick="mthd1()"&gt;<br />
+                &nbsp;&nbsp; Click to Start [StringName.indexOf("Searching
+                Text", Starting<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; Index);] Method<br />
+                &lt;/button&gt; <br /><br />
+
+                &lt;script src="StringLocateMethods.js"&gt; <br />
+                &lt;/script&gt; <br /><br />
+                =======================================================<br /><br />
+
+                // JS Codes : <br />
+
+                function mthd1() { <br />
+                &nbsp;&nbsp; alert("Welcome to String Searching Method1
+                [.indexOf();]");<br /><br />
+
+                &nbsp;&nbsp; var myString = prompt("Enter your Main Text"),<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; word = prompt("Enter The Word to Search
+                And Find"),<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; IndexStart = prompt("Enter your Search
+                Start index... "),<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; IndexW = myString.indexOf(word,
+                IndexStart);<br /><br />
+
+                &nbsp;&nbsp; if (IndexW == -1) {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; alert("Your Word Is Not Exsistened in
+                the main Word!");<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                document.getElementById("Mthd1").innerHTML =<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your Word Is Not Existened
+                in the main Word!";<br />
+
+                &nbsp;&nbsp; } else { <br />
+                &nbsp;&nbsp;&nbsp;&nbsp; alert("Your Word has Been found
+                Successfuly!"); <br />
+                &nbsp;&nbsp;&nbsp;&nbsp; alert("Your Word's Index is" +
+                IndexW);<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                document.getElementById("Mthd1").innerHTML = "Your Word has Been
+                found<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Successfuly!" +
+                "&lt;br&gt;" + "Your Word's Index is : " + IndexW;<br />
+                &nbsp;&nbsp; }<br />
+                }
+              </code>
+            </div>
+
+            <!----------------------------------------------------------------------------------------------------------->
+            <li id="JsStrLoctMthd2">
+              <h3>
+                =&gt; B) { StringName.lastIndexOf("Searching Text", Starting
+                Index); } Method :
+              </h3>
+            </li>
+
+            <div id="Code" class="Code">
+              var myString = "I love javascript and In Love with PHP"; <br />
+              console.log(myString.lastIndexOf("Love", Starting Search Index));
+              <br />
+            </div>
+
+            <div id="Mthd2" class="JsArrSC"></div>
+
+            <button class="btn" onclick="mthd2()">
+              Click to Start [ { StringName.lastIndexOf("Searching Text",
+              Starting Index); } Method]
+            </button>
+
+            <script src="StringLocateMethods.js"></script>
+            <hr />
+
+            <div class="JsStrConvMthdExp">
+              <code>
+                // HTML Codes: <br />
+                &lt;div id="Mthd2" class="JsArrSC"&gt;<br />
+                &lt;/div&gt; <br /><br />
+
+                &lt;button class="btn" onclick="mthd2()"&gt;<br />
+                &nbsp;&nbsp; Click to Start [StringName.lastIndexOf("Searching
+                Text", Starting<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; Index);] Method<br />
+                &lt;/button&gt; <br /><br />
+
+                &lt;script src="StringLocateMethods.js"&gt; <br />
+                &lt;/script&gt; <br /><br />
+                =======================================================<br /><br />
+
+                // JS Codes : <br />
+
+                function mthd2() { <br />
+                &nbsp;&nbsp; alert("Welcome to String Searching Method2
+                [.lastIndexOf();]");<br /><br />
+
+                &nbsp;&nbsp; var myString = prompt("Enter your Main Text"),<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; word = prompt("Enter The Word to Search
+                And Find"),<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; IndexStart = prompt("Enter your Search
+                Start index... "),<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; IndexW = myString.lastIndexOf(word,
+                IndexStart);<br /><br />
+
+                &nbsp;&nbsp; if (IndexW == -1) {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; alert("Your Word Is Not Existened in
+                the main Word!");<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                document.getElementById("Mthd2").innerHTML =<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your Word Is Not Existened
+                in the main Word!";<br />
+
+                &nbsp;&nbsp; } else { <br />
+                &nbsp;&nbsp;&nbsp;&nbsp; alert("Your Word has Been found
+                Successfuly!"); <br />
+                &nbsp;&nbsp;&nbsp;&nbsp; alert("Your Word's Index is" +
+                IndexW);<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                document.getElementById("Mthd2").innerHTML = "Your Word has Been
+                found<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Successfully!" +
+                "&lt;br&gt;" + "Your Word's Index is : " + IndexW;<br />
+                &nbsp;&nbsp; }<br />
+                }
+              </code>
+            </div>
+            <!----------------------------------------------------------------------------------------------------------->
+            <li id="JsStrLoctMthd3">
+              <h3>
+                =&gt; C) {String Variable Name.search("Searching Word - Included
+                RE") } Method :
+              </h3>
+            </li>
+
+            <div id="Code" class="Code">
+              var myString = "I love javascript and In Love with PHP"; <br />
+              console.log(myString.search("Love")); <br />
+            </div>
+
+            <div id="Mthd3" class="JsArrSC"></div>
+
+            <button class="btn" onclick="mthd3()">
+              Click to Start [ {StringVariableName.search("Searching Word -
+              Included/Not Included RE") } Method]
+            </button>
+
+            <script src="StringLocateMethods.js"></script>
+            <hr />
+
+            <div class="JsStrConvMthdExp">
+              <code>
+                // HTML Codes: <br />
+                &lt;div id="Mthd3" class="JsArrSC"&gt;<br />
+                &lt;/div&gt; <br /><br />
+
+                &lt;button class="btn" onclick="mthd3()"&gt;<br />
+                &nbsp;&nbsp; Click to Start [StringName.search("Searching
+                Text");] Method<br />
+                &lt;/button&gt; <br /><br />
+
+                &lt;script src="StringLocateMethods.js"&gt; <br />
+                &lt;/script&gt; <br /><br />
+                =======================================================<br /><br />
+
+                // JS Codes : <br />
+
+                function mthd3() { <br />
+                &nbsp;&nbsp; alert("Welcome to String Searching Method3
+                [.search();]");<br /><br />
+
+                &nbsp;&nbsp; var myString = prompt("Enter your Main Text"),<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; word = prompt("Enter The Word to Search
+                And Find"),<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; IndexW = myString.search(word);<br /><br />
+
+                &nbsp;&nbsp; if (IndexW == -1) {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; alert("Your Word Is Not Existened in
+                the main Word!");<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                document.getElementById("Mthd3").innerHTML =<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Your Word Is Not Existened
+                in the main Word!";<br />
+
+                &nbsp;&nbsp; } else { <br />
+                &nbsp;&nbsp;&nbsp;&nbsp; alert("Your Word has Been found
+                Successfuly!"); <br />
+                &nbsp;&nbsp;&nbsp;&nbsp; alert("Your Word's Index is" +
+                IndexW);<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                document.getElementById("Mthd3").innerHTML = "Your Word has Been
+                found<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Successfully!" +
+                "&lt;br&gt;" + "Your Word's Index is : " + IndexW;<br />
+                &nbsp;&nbsp; }<br />
+                }
+              </code>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------------->
+            <!-------------------------------------------------------------------------------------------------------------->
+          </ol>
+          <!---------------------------------------------------------------------------------------->
+        </section>
+      </section>
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="365" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to get basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num2" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg" />
+          Your browser Does Not Support the Audio file format...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 36 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=3_U-7RhGDR8&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=36&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+        <!-- <video controls width="300" height="300" >
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/36 Strings Methods - Locate A String.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file format...              
+            </video>                           -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JavaScript");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

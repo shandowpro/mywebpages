@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 14 [2D Transform - Matrix()] </title>
+    <link rel="stylesheet" href="CSS3 Lesson14 [2D Transform - Matrix].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 14 [2D Transform - Matrix()]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 2D Transform - Matrix() main Topics">
+                [ 2D Transform - Matrix() ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to 2D Transform - Matrix() [2D Transform - Matrix() ] Concept">
+                [ 2D Transform - Matrix() ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to 2D Transform - Matrix() [2D Transform - Matrix() ] Importance & Benefits">
+                [ 2D Transform - Matrix() ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to 2D Transform - Matrix() [2D Transform - Matrix() ] Syntax">
+                [ 2D Transform - Matrix() ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to 2D Transform - Matrix() [2D Transform - Matrix() ] Practical Applications">
+                [ 2D Transform - Matrix() ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 14 [2D Transform - Matrix() ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                2D Transform - Matrix() Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [2D Transform - Matrix()] Concept. </li>                       
+                    
+                    <li> [2D Transform - Matrix()] Importance & Benefits. </li>
+
+                    <li> [2D Transform - Matrix()] Syntax [Exmaple]. </li>
+                    
+                     <li> [2D Transform - Matrix()] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    
+                    <ul>
+                        <li> Basic concept about matrix property as a advanced method to control all 2D transform Properties  </li> 
+
+                    </ul>                   
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [2D Transform - Matrix()] Concept: </h3>
+            </header>
+                        
+            <p> =&gt; [2D Transform - Matrix()] : This is one of CSS3 advancd Properties to control the Element all transform Properties Matrix (by controoloing speicfic Element Value) . <br>
+            
+            <p> =&gt; [2D Transform - Matrix()] : This is one of CSS3 {2D Transform} Properties Functions, which has the same in 3D Transform  . <br>
+            
+            <p> =&gt; [2D Transform - Matrix(a, b, c, d, e , x , y ) ] => It is containing following {6} aspects/values/sub propeties  . <br> 
+
+                <ul>
+                    <li> [a]  => [ ScaleX : Horizontal Scaling value] </li>
+                    <li> [b]  => [ SkewY : Vertical Skewing Angel ] </li>
+                    <li> [c]  => [ SkewX : Horizontal Skewing Angel ]</li>
+                    <li> [d]  => [ ScaleY : Vertical Scaling ]</li>
+                    <li> [x]  => [ TranslateX : Horizontal tanslating value ] </li>
+                    <li> [y]  => [ TranslateY : Vertical tanslating value ] </li>
+                </ul>
+                
+                
+            <p> =&gt; Each 2D-tranform Property can be controled by the Matrix() property as following : <br>                
+                <ul>                                                            
+                    <li> {transform : translate()} => [ transform: Matrix(1 , 0 , 0 , 1 , +/-x , +/-y) ] => Can be controled by changing [x & Y] of tranlate value + beside the zeroing other value properties </li> <br>                                            
+                    <li> {transform : scale()} => [ transform: Matrix(+/-a , 0 , 0 , +/-b , 0 , 0) ] => Can be controled by changing [a & d] of scale value + beside the zeroing other value properties </li> <br>                                            
+                    <li> {transform : rotate()} => [ transform: Matrix(Calc value of degree , .5 , -.5 , Calc value of degree , 0 , 0) ] => Can be controled by changing [a & d] of scale with the same value as a circle cos (degree) + beside the (b , c) of skewing values with [.5 , -.5] + other value can be zero </li> <br>                                            
+                    <li> {transform : All Combined()} => [ transform: Matrix(.86 , .5 , -.5 , .86 , value , value) ] => This will control all propeites of 2d-tranform </li> <br>                                            
+                    <li> {transform : Customized() [ X-Fliping element ]} => [ transform: Matrix(-1 , 0 , 0 , 1 , 0 , 0) ] => This will Flip the Element Horizontally  </li> <br>                                            
+                    <li> {transform : Customized() [ Y-Fliping element ]} => [ transform: Matrix(1 , 0 , 0 , -1 , 0 , 0) ] => This will Flip the Element Vertically  </li> <br>                                            
+                </ul>                
+                                
+            <p> =&gt; This Matrix property's live changing  can be acheived by [inspect element] option in browser {as all other properties}   <br>                
+            
+            <p> =&gt; This Matrix property's will gives great effect [sensivity] when using with transition property   <br>                
+            
+            <p> =&gt; This Matrix property's will gives great effect [great animation effects ] when using with animation property   <br>                
+                
+            </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+            <section class="CSS3Imp" id="CSS3Imp">
+                <header>
+                    <h3> [2D Transform - Matrix() ] Importance & Benefits: </h3>
+                </header>
+
+                <p> =&gt; [2D Transform - Matrix() ] : This Advanced property enabling the following features : <br>            
+                    <ul>                                                                
+                        <li> Using the [Transform-Matrix()(as a compinend properites whch include all other 2D transform effects in one property</li>
+                        <li> Matrix property include Calculations & Angles & Equations => that contorol all 2D-transform effects  </li>                                                                           
+                        <li> Matrix property will unique effects specilaly when merged with animations effects {which will be studied will later lessons}  </li>                                                                          
+                        <li> This Property is will be great in Designing nice Templates specilaly when using with (Animation Property- will be taken in future) <li>                                                             
+                    </ul>                                
+                 
+            </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ 2D Transform - Matrix ] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [2D Transform - Matrix()] Syntax as following :<br><br>                                                    
+                
+                    <span class=two></span> //a)  [HTML] file  : <br>                                          
+                
+                        <span class=three></span> &lt; img src='' alt='' &gt;  
+                       
+                        <br> <br>
+                                        
+                // ------------------------------------------------------------------------------ <br><br>
+                <span class= one></span> // A) [Translate() by Matrix()] : {Exmaple1} / [2D Transform - Matrix() => Processing Translate ] General {Fixed Mode} Syntax:  <br>                                                              
+                    <span class=two></span> img {  <br>                                                  
+                        <span class=three></span> margin: 40px; <br>                                                                          
+                        <span class=three></span> padding: 3px; <br>                                                                          
+                        <span class=three></span> width: 400px; <br>                                                                          
+                        <span class=three></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=three></span> Transform: Matrix(1,0,0,1,value,value); <br>
+                    <span class=two></span>  }  <br>                                              
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+
+                <span class=one></span> // {Example2} / [2D Transform - Matrix() => Processing Translate ] General {Dynamic Mode} Syntax:  <br>                                                              
+                    <span class=two></span> img {  <br>                                                  
+                        <span class=three></span> margin: 40px; <br>                                                                          
+                        <span class=three></span> padding: 3px; <br>                                                                          
+                        <span class=three></span> width: 400px; <br>                                                                          
+                        <span class=three></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=three></span> transition: all 1s ease-in-out; <br>
+                    <span class=two></span>  }  <br>                                              
+                        // ------------------------------------------------------------------------------ <br><br>
+                    <hr>
+
+                    <span class=two></span> img:hover {  <br>                                                  
+                        <span class=three></span> Transform: Matrix(1,0,0,1,value,value); <br>                        
+                    <span class=two></span>  }  <br>                                              
+
+            // ------------------------------------------------------------------------------ <br><br>                                                                                                        
+            // ------------------------------------------------------------------------------ <br><br>                                                                                                        
+
+                <span class= one></span> // B) [Scale() by Matrix()] : {Exmaple1} / [2D Scale - Matrix() => Processing Scaling ] General {Fixed Mode} Syntax:  <br>                                                              
+                    <span class=two></span> img {  <br>                                                  
+                        <span class=three></span> margin: 40px; <br>                                                                          
+                        <span class=three></span> padding: 3px; <br>                                                                          
+                        <span class=three></span> width: 400px; <br>                                                                          
+                        <span class=three></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=three></span> Transform: Matrix(value,0,0,value,0,0); <br>
+                    <span class=two></span>  }  <br>                                              
+                // ------------------------------------------------------------------------------ <br><br>                                                                            
+
+                <span class=one></span> // {Example2} / [2D Transform - Matrix() => Processing Scaling ] General {Dynamic Mode} Syntax:  <br>                                                              
+                    <span class=two></span> img {  <br>                                                  
+                        <span class=three></span> margin: 40px; <br>                                                                          
+                        <span class=three></span> padding: 3px; <br>                                                                          
+                        <span class=three></span> width: 400px; <br>                                                                          
+                        <span class=three></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=three></span> transition: all 1s ease-in-out; <br>
+                    <span class=two></span>  }  <br>                                              
+                        // ------------------------------------------------------------------------------ <br><br>
+                    <hr>
+
+                    <span class=two></span> img:hover {  <br>                                                  
+                        <span class=three></span> Transform: Matrix(value,0,0,value,0,0); <br>                        
+                    <span class=two></span>  }  <br>                                              
+
+            // ------------------------------------------------------------------------------ <br><br>                                                            
+            // ------------------------------------------------------------------------------ <br><br>                                                            
+                                            
+                <span class= one></span> // C) [Rotate() by Matrix()] : {Exmaple1} / [2D Rotate - Matrix() => Processing Rotating ] General {Fixed Mode} Syntax:  <br>                                                              
+                    <span class=two></span> img {  <br>                                                  
+                        <span class=three></span> margin: 40px; <br>                                                                          
+                        <span class=three></span> padding: 3px; <br>                                                                          
+                        <span class=three></span> width: 400px; <br>                                                                          
+                        <span class=three></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=three></span> Transform: Matrix(cos value deg , .5 , -.5 , cos value deg , 0 , 0); <br>
+                    <span class=two></span>  }  <br>                                              
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                                                           
+                <span class=one></span> // {Example2} / [2D Transform - Matrix() => Processing Rotating ] General {Dynamic Mode} Syntax:  <br>                                                              
+                    <span class=two></span> img {  <br>                                                  
+                        <span class=three></span> margin: 40px; <br>                                                                          
+                        <span class=three></span> padding: 3px; <br>                                                                          
+                        <span class=three></span> width: 400px; <br>                                                                          
+                        <span class=three></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=three></span> transition: all 1s ease-in-out; <br>
+                    <span class=two></span>  }  <br>                                              
+                        // ------------------------------------------------------------------------------ <br><br>
+                    <hr>
+
+                    <span class=two></span> img:hover {  <br>                                                  
+                        <span class=three></span> Transform: Matrix(cos value deg , .5 , -.5 , cos value deg , 0 , 0); <br>
+                    <span class=two></span>  }  <br>                                              
+
+            // ------------------------------------------------------------------------------ <br><br>                                                            
+            // ------------------------------------------------------------------------------ <br><br>                                                            
+                                            
+                <span class= one></span> // D) [ {Exmaple1} / [2D All Combined properties  - Matrix() => Processing all 2D transform properties ] General {Fixed Mode} Syntax:  <br>                                                              
+                    <span class=two></span> img {  <br>                                                  
+                        <span class=three></span> margin: 40px; <br>                                                                          
+                        <span class=three></span> padding: 3px; <br>                                                                          
+                        <span class=three></span> width: 400px; <br>                                                                          
+                        <span class=three></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=three></span> Transform: Matrix(cos value deg , .5 , -.5 , cos value deg , value , value); <br>
+                        <span class=two></span>  }  <br>                                              
+                        // ------------------------------------------------------------------------------ <br><br>                                                            
+                        
+                <span class=one></span> // {Example2} / [2D Transform - Matrix() => Processing all properties ] General {Dynamic Mode} Syntax:  <br>                                                              
+                    <span class=two></span> img {  <br>                                                  
+                        <span class=three></span> margin: 40px; <br>                                                                          
+                        <span class=three></span> padding: 3px; <br>                                                                          
+                        <span class=three></span> width: 400px; <br>                                                                          
+                        <span class=three></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=three></span> transition: all 1s ease-in-out; <br>
+                    <span class=two></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>
+                    <hr>
+                    
+                    <span class=two></span> img:hover {  <br>                                                                          
+                        <span class=three></span> Transform: Matrix(cos value deg , .5 , -.5 , cos value deg , value , value); <br>
+                    <span class=two></span>  }  <br>                                              
+
+            // ------------------------------------------------------------------------------ <br><br>                                                            
+            // ------------------------------------------------------------------------------ <br><br>                                                            
+                                            
+                <span class= one></span> // E) [ {Exmaple1} / [2D costomized property  - Matrix() => Processing X-Flip property ] General {Fixed Mode} Syntax:  <br>                                                              
+                    <span class=two></span> img {  <br>                                                  
+                        <span class=three></span> margin: 40px; <br>                                                                          
+                        <span class=three></span> padding: 3px; <br>                                                                          
+                        <span class=three></span> width: 400px; <br>                                                                          
+                        <span class=three></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=three></span> Transform: Matrix(-1 , 0 , 0 , 1 , 0 , 0); <br>
+                        <span class=two></span>  }  <br>                                              
+                        // ------------------------------------------------------------------------------ <br><br>                                                            
+                        
+                <span class=one></span> // {Example2} / [2D Transform - Matrix() => Processing X-Flip property  ] General {Dynamic Mode} Syntax:  <br>                                                              
+                    <span class=two></span> img {  <br>                                                  
+                        <span class=three></span> margin: 40px; <br>                                                                          
+                        <span class=three></span> padding: 3px; <br>                                                                          
+                        <span class=three></span> width: 400px; <br>                                                                          
+                        <span class=three></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=three></span> transition: all 1s ease-in-out; <br>
+                    <span class=two></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>
+                    <hr>
+                    
+                    <span class=two></span> img:hover {  <br>                                                                          
+                        <span class=three></span> Transform: Matrix(-1 , 0 , 0 , 1 , 0 , 0); <br>
+                    <span class=two></span>  }  <br>                                              
+
+            // ------------------------------------------------------------------------------ <br><br>                                                            
+            // ------------------------------------------------------------------------------ <br><br>                                                            
+                                            
+                <span class= one></span> // F) [ {Exmaple1} / [2D costomized property  - Matrix() => Processing Y-Flip property ] General {Fixed Mode} Syntax:  <br>                                                              
+                    <span class=two></span> img {  <br>                                                  
+                        <span class=three></span> margin: 40px; <br>                                                                          
+                        <span class=three></span> padding: 3px; <br>                                                                          
+                        <span class=three></span> width: 400px; <br>                                                                          
+                        <span class=three></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=three></span> Transform: Matrix(1 , 0 , 0 , -1 , 0 , 0); <br>
+                        <span class=two></span>  }  <br>                                              
+                        // ------------------------------------------------------------------------------ <br><br>                                                            
+                        
+                <span class=one></span> // {Example2} / [2D Transform - Matrix() => Processing X-Flip property  ] General {Dynamic Mode} Syntax:  <br>                                                              
+                    <span class=two></span> img {  <br>                                                  
+                        <span class=three></span> margin: 40px; <br>                                                                          
+                        <span class=three></span> padding: 3px; <br>                                                                          
+                        <span class=three></span> width: 400px; <br>                                                                          
+                        <span class=three></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=three></span> transition: all 1s ease-in-out; <br>
+                    <span class=two></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>
+                    <hr>
+                    
+                    <span class=two></span> img:hover {  <br>                                                                          
+                        <span class=three></span> Transform: Matrix(1 , 0 , 0 , -1 , 0 , 0); <br>
+                    <span class=two></span>  }  <br>                                              
+            
+                //=========================================================== <br> <br>                                    
+                //=========================================================== <br> <br>                                                      
+                //=========================================================== <br> <br>                                                                                    
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="JSDOMPract">
+
+            <header>
+                <h3> [2D Transform - Matrix] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following is the Applied example of [2D-Transform: Matrix(Value)] syntax : &gt;&gt; <br>
+                <ul>
+                    <li> (2) Fieldsets contain (3) section (each section is Matrixd by Certain defferent (2) Methods) for each as following:  </li> 
+                    
+                    <ol>
+                        <li> First Fieldset [Fixed Mode] :</li>
+                            <ul>
+                                <li> First Section => Matrixd by {First Method (2 values for Each dimension)}   </li>                                         
+                                <li> Second Section => Matrixd by {First Method (1 value for both dimensions)}   </li>                                                                         
+                                
+                                <li> Third Section => Matrixd by {Second Method (2 values for Each dimension)}   </li>                                                                         <li> Fourth Section => Matrixd by {First Method (1 value for both dimensions)}   </li>                                                                                                                                         
+                            </ul>
+                        
+                        <li> Second Fieldset [Dynamic Mode] :</li>
+                            <ul>
+                                <li> First Section => Matrixd by {First Method (2 values for Each dimension)}   </li>                                         
+                                <li> Second Section => Matrixd by {First Method (1 value for both dimensions)}   </li>                                                                         
+                                
+                                <li> Third Section => Matrixd by {Second Method (2 values for Each dimension)}   </li>                                                                         <li> Fourth Section => Matrixd by {First Method (1 value for both dimensions)}   </li>                                                                         
+                            </ul>
+                    </ol>                    
+                </ul>                
+                <br>
+                <hr>
+
+        <!-- A] First Mode/Fixed Mode=> Procesing all other properties by Matrix by static mode  -->
+            <fieldset class='FixedMode'>  
+                <legend> Matrix() => First Mode {Fixed Mode} </legend>
+            
+            <!-- 1) Translaing  -->
+                <section class='sec1'>                
+                    <h3> Following sections will be translated property by [original method] & [Matrix method]  </h3>
+                    
+                    <div class='transOrg'>
+                        <h4> This Section will be {translated} by [original method]</h4>                 
+                    </div> <br>
+                    
+                    <hr>                                        
+                    
+                    <div class='transMat'>
+                        <h4> This Section will be {translated} by [Matrix method]</h4>                                         
+                    </div> <br>
+                                                                                                                                    
+                </section>
+                <hr>
+                
+            <!-- 2) Scaling  -->
+                <section class='sec2'>
+                    
+                    <h3> Following sections will be scaled property by [original method] & [Matrix method]  </h3>
+                    
+                    <div class='sclOrg'>
+                        <h4> This Section will be {scaled} by [original method]</h4>                 
+                    </div> <br>
+                    
+                    <hr>                                        
+                    
+                    <div class='sclMat'>
+                        <h4> This Section will be {scaled} by [Matrix method]</h4>                                         
+                    </div> <br>
+                                                                                                                                    
+                </section>
+                
+                <hr>
+                
+            <!-- 3) Rotating  -->
+                <section class='sec3'>
+                    
+                    <h3> Following sections will be {Rotated} property by [original method] & [Matrix method]  </h3>
+                    
+                    <div class='rotOrg'>
+                        <h4> This Section will be {rotated} by [original method]</h4>                 
+                    </div> <br>
+                    
+                    <hr>                                        
+                    
+                    <div class='rotMat'>
+                        <h4> This Section will be {rotated} by [Matrix method]</h4>                                         
+                    </div> <br>
+                                                                                                                                    
+                </section>                
+                
+                <hr>
+                
+                
+            <!-- 4) All 2D-Transform properties   -->
+                <section class='sec4'>
+                    
+                    <h3> Following sections will be {All Transform} properties by [Original method] & [Matrix method]  </h3>
+                    
+                    <div class='allOrg'>
+                        <h4> This Section will be {All Transform} properties by [original method]</h4>                 
+                    </div> <br>
+                    
+                    <hr>                                        
+                    
+                    <div class='allMat'>
+                        <h4> This Section will be {All Transform} properties by [Matrix method]</h4>                                         
+                    </div> <br>
+                                                                                                                                    
+                </section>                
+                
+                <hr>
+                
+            <!-- 5) Customized 2D-Transform {X-Flip}/{Y-Flip} property   -->
+                <section class='sec5'>
+                    
+                    <h3> Following sections will be {Customized} properties by [X-flip] & [Y-flip]  </h3>
+                    
+                    <div class='xFlip'>
+                        <h4> This Section will be {X-Flip} in to the right/left side</h4>                 
+                    </div> <br>
+                    
+                    <hr>                                        
+                    
+                    <div class='yFlip'>
+                        <h4> This Section will be {Y-Flip} in to the top/bottom side</h4>                                         
+                    </div> <br>
+                                                                                                                                    
+                </section>                
+                
+                <hr>
+                
+            </fieldset>                                                                
+            <hr>
+            <hr>
+        
+            
+        <!-- B] Second Mode/dynamic Mode=> Procesing all other properties by Matrix by Dynamic mode  -->
+            <fieldset class='DynamicMode'>  
+                <legend> Matrix() => Second Mode {Dynamic Mode} </legend>
+            
+            <!-- 1) Translaing  -->
+                <section class='sec1'>                
+                    <h3> Following sections will be translated property by [original method] & [Matrix method]  </h3>
+                    
+                    <div class='DtransOrg'>
+                        <h4> This Section will be {translated} by [original method]</h4>                 
+                    </div> <br>
+                    
+                    <hr>                                        
+                    
+                    <div class='DtransMat'>
+                        <h4> This Section will be {translated} by [Matrix method]</h4>                                         
+                    </div> <br>
+                                                                                                                                    
+                </section>
+                <hr>
+                
+            <!-- 2) Scaling  -->
+                <section class='sec2'>
+                    
+                    <h3> Following sections will be scaled property by [original method] & [Matrix method]  </h3>
+                    
+                    <div class='DsclOrg'>
+                        <h4> This Section will be {scaled} by [original method]</h4>                 
+                    </div> <br>
+                    
+                    <hr>                                        
+                    
+                    <div class='DsclMat'>
+                        <h4> This Section will be {scaled} by [Matrix method]</h4>                                         
+                    </div> <br>
+                                                                                                                                    
+                </section>
+                
+                <hr>
+                
+            <!-- 3) Rotating  -->
+                <section class='sec3'>
+                    
+                    <h3> Following sections will be {Rotated} property by [original method] & [Matrix method]  </h3>
+                    
+                    <div class='DrotOrg'>
+                        <h4> This Section will be {rotated} by [original method]</h4>                 
+                    </div> <br>
+                    
+                    <hr>                                        
+                    
+                    <div class='DrotMat'>
+                        <h4> This Section will be {rotated} by [Matrix method]</h4>                                         
+                    </div> <br>
+                                                                                                                                    
+                </section>                
+                
+                <hr>
+                
+                
+            <!-- 4) All 2D-Transform properties   -->
+                <section class='sec4'>
+                    
+                    <h3> Following sections will be {All Transform} properties by [Original method] & [Matrix method]  </h3>
+                    
+                    <div class='DallOrg'>
+                        <h4> This Section will be {All Transform} properties by [original method]</h4>                 
+                    </div> <br>
+                    
+                    <hr>                                        
+                    
+                    <div class='DallMat'>
+                        <h4> This Section will be {All Transform} properties by [Matrix method]</h4>                                         
+                    </div> <br>
+                                                                                                                                    
+                </section>                
+                
+                <hr>
+                
+            <!-- 5) Customized 2D-Transform {X-Flip}/{Y-Flip} property   -->
+                <section class='sec5'>
+                    
+                    <h3> Following sections will be {Customized} properties by [X-flip] & [Y-flip]  </h3>
+                    
+                    <div class='DxFlipOrg'>
+                        <h4> This Section will be {X-Flip} in to the right/left side => by Original Translate Method</h4>                 
+                    </div> <br>
+                    
+                    <div class='DxFlip'>
+                        <h4> This Section will be {X-Flip} in to the right/left side => by Matrix Method</h4>                 
+                    </div> <br>
+                    
+                    <hr>                                        
+                    
+                    <div class='DyFlip'>
+                        <h4> This Section will be {Y-Flip} in to the top/bottom side => by Matrix Method</h4>                                         
+                    </div> <br>
+                                                                                                                                    
+                    <div class='DyFlipOrg'>
+                        <h4> This Section will be {Y-Flip} in to the top/bottom side => by Original Translate Method</h4>                                         
+                    </div> <br>
+                                                                                                                                    
+                </section>                
+                
+                <hr>
+                
+            </fieldset>                                                                
+            <hr>
+            <hr>
+                                                                                                           
+            
+            <!-- --------------------------------------------------------------------- -->                        
+
+            <hr>
+            <hr>            
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+    
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 14 Video File:</h3>
+            
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=ko1k4aTxh9M&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=14&index=13&index=12&index=11&index=10&index=9&index=8&index=7&index=6&index=5&index=4&index=3&index=2&controls=0&loop=1&autoplay=1&fs=1" 				
+            >
+        </iframe>
+            
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\14  Css3   - 2D Transform - Matrix.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 14 [2D Transform - Matrix() ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

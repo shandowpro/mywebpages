@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Css Lesson 29 [Media]</title>
+    <link rel="stylesheet" href="Media.css" media="all">
+    <style>
+        
+    </style>           
+</head>
+
+<body>
+    <a class="home" href="#title" title="Go to page header">Home</a>
+    <a class="end" href="#footer" title="Go to page footer">End</a>
+    <!------------------------------------------------------------------>
+    <h1 id="title" class="title"> Css Lesson 29 [Media Tag (Page Screen Type)]</h1>
+    <!------------------------------------------------------------------>
+    <fieldset class="index">
+        <legend>Index</legend>
+        <ol type="A">
+            <li> <a href="#MainC" title="Go to Main Concept of [Media] Tag" > [Element's Media Controling ] Main Concept</a> </li>                        
+            <li> [Media Controling ] : </li>
+            <ol class="Types">
+                <li> <a href="#Control1" title="Go to Media Control 1" > Media Control :[ Method 1 (In HTML Page) ] </a> </li> 
+                <li> <a href="#Control2" title="Go to Media Control 2" > Media Control :[ Method 2 ((In CSS Page)) ]  </a> </li>            
+            </ol>
+            <li> [Media Types] : </li>
+            <ol class="Types">
+                <li> <a href="#Type1" title="Go to Media Type 1" > Media Type : [ All ] (Default) </a> </li> 
+                <li> <a href="#Type2" title="Go to Media Type 2" > Media Type : [ Screen ] </a> </li>
+                <li> <a href="#Type3" title="Go to Media Type 3" > Media Type : [ Print ] </a> </li>
+                <li> <a href="#Type4" title="Go to Media Type 4" > Media Type : [ Specified Value ] </a> </li>            
+            </ol>                                     
+        </ol>
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>
+
+    <fieldset id="MainC" class="MainC">
+        <legend> [ Media ] Main Concept</legend>
+        <p> The Media Tag is a an special attribute for &lt;Link&gt; Tag that is provide several Methods to display the page in certian multimedia devices [ TV, Print, ... ].</p>        
+        <p> [Media] type can be totally specified for 1 CSS file (as over all) and applied for 1 web-page or more than 1 web-page (multiple Pages) at the same time by Css &nbsp; &nbsp; File multiple allocating [HTML Method].</p>
+        <p> [Media] type can be partially specified for certain webpage elements and specifying other type of Media for other elements, in CSS page [CSS Method].</p>
+        
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>
+    
+    <fieldset id="Control1" class="Control1">
+        <legend> Media Control 1 [ HTML Method ] </legend>
+            
+            <h2 class="title1"> Media Control [ Method 1 (In HTML Page) ] Concept: </h2>
+            <p> Main Concept of Media Control by HTML method is specifing the Media type for the <span class="vip">whole</span> HTML WebPage with in the html pagecode itself.</p>
+            <p> This can be done through the &lt;Link&gt; Tag in [Media] Attribute.</p>
+            
+            <h2 class="title1"> Media Control [ Method 1 (In HTML Page) ] Syntax: </h2>
+            
+            <div class="Code">
+                <span class="CodeTitle"> HTML Coding Page Editor: </span> <br>
+                <span class="point">=&gt;</span> &nbsp; &nbsp; <span class="tag"> &lt; Link </span>&nbsp; <span class="attribute">rel=</span>"stylesheet" &nbsp; <span class="attribute">href=</span>"filename.css" &nbsp; <span class="attribute">media=</span> "All" <span class="tag">/&gt;</span> </span> <br>
+                <span class="point">=&gt;</span> &nbsp; &nbsp; <span class="tag"> &lt; Link </span>&nbsp; <span class="attribute">rel=</span>"stylesheet" &nbsp; <span class="attribute">href=</span>"filename.css" &nbsp; <span class="attribute">media=</span> "Screen" <span class="tag">/&gt;</span> </span> <br>
+                <span class="point">=&gt;</span> &nbsp; &nbsp; <span class="tag"> &lt; Link </span>&nbsp; <span class="attribute">rel=</span>"stylesheet" &nbsp; <span class="attribute">href=</span>"filename.css" &nbsp; <span class="attribute">media=</span> "Print" <span class="tag">/&gt;</span> </span> <br>
+            </div>
+                            
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>    
+    
+    <fieldset id="Control2" class="Control2">
+        <legend> Media Control 2 [ Css Method ] </legend>
+            
+            <h2 class="title1"> Media Control [ Method 2 (In CSS Page) ] Concept: </h2>
+            <p> Main Concept of Media Control by CSS method is specifing the Media type for partial CSS properties of some elements in webpage with in the CSS pagecode.</p>
+            <p> This can be done through the CSS Coding page.</p>
+            
+            <h2 class="title1"> Media Control [ Method 2 (In CSS Page) ] Syntax: </h2>
+            
+            <div class="Code">
+                <span class="CodeTitle"> CSS Coding Page Editor: </span> <br>
+                <span class="point"> =&gt;</span> &nbsp; &nbsp; <span class="tag"> @Media &nbsp; All { &nbsp; &nbsp; </span>  Element Name <span class="css"> { </span> <span class="attribute"> Css Properties : Property Value </span> <span class="css"> } </span> <span class="tag">&nbsp; &nbsp; } </span> </span> <br>
+                <span class="point"> =&gt;</span> &nbsp; &nbsp; <span class="tag"> @Media &nbsp; Screen { &nbsp; &nbsp; </span>  Element Name <span class="css"> { </span> <span class="attribute"> Css Properties : Property Value </span> <span class="css"> } </span> <span class="tag">&nbsp; &nbsp; } </span> </span> <br>
+                <span class="point"> =&gt;</span> &nbsp; &nbsp; <span class="tag"> @Media &nbsp; Print { &nbsp; &nbsp; </span>  Element Name <span class="css"> { </span> <span class="attribute"> Css Properties : Property Value </span> <span class="css"> } </span> <span class="tag">&nbsp; &nbsp; } </span> </span> <br>
+            </div>
+            
+    </fieldset>
+<!------------------------------------------------------------------------------------------------------------------>
+
+    <fieldset id="Type1" class="Type1">
+        <legend> Media Type : [ All ] (Default) </legend>
+            
+            <h2 class="title1"> Media Type [ All ] (Default) Concept: </h2>
+            <p> Main Concept of Media Type [All] is that the Css properties completly or partially will be applicable to <span class="vip"> ALL </span> kinds of devices and modes.</p>
+            <p> This can be applied completly on the whole page by the &lt;Link&gt; Tag in [Media] Attribute, or partially on some page elements by Css coding page.</p>
+            
+            <h2 class="title1"> Media Type [ All ] Syntax: </h2>
+            
+            <div class="Code">
+                <span class="CodeTitle"> HTML Coding Page Editor: </span> <br>
+                <span class="point"> Completly (HTML Method) =&gt;</span> &nbsp; &nbsp; <span class="tag"> &lt; Link </span>&nbsp; <span class="attribute">rel=</span>"stylesheet" &nbsp; <span class="attribute">href=</span>"filename.css" &nbsp; <span class="attribute">media=</span> "All" <span class="tag">/&gt;</span> </span> <br>
+                <span class="CodeTitle"> CSS Coding Page Editor: </span> <br>
+                <span class="point"> Partially (Css Method) =&gt;</span> &nbsp; &nbsp; <span class="tag"> @Media &nbsp; All { &nbsp; &nbsp; </span>  Element Name <span class="css"> { </span> <span class="attribute"> Css Properties : Property Value </span> <span class="css"> } </span> <span class="tag">&nbsp; &nbsp; } </span> </span> <br>                                       
+            </div>
+            
+    </fieldset>
+
+<!------------------------------------------------------------------------------------------------------------------>
+
+    <fieldset id="Type2" class="Type2">
+        <legend> Media Type : [ Screen ] (Default) </legend>
+            
+            <h2 class="title1"> Media Type [ Screen ] Concept: </h2>
+            <p> Main Concept of Media Type [ Screen ] is that the Css properties completly or partially will be applicable to Screen Devices <span class="vip">ONLY</span>.</p>
+            <p> This can be applied completly on the whole page by the &lt;Link&gt; Tag in [Media] Attribute, <span> or </span> partially on some page elements by Css coding page.</p>
+            
+            <h2 class="title1"> Media Type [ Screen ] Syntax:  </h2>
+            
+            <div class="Code">
+                <span class="CodeTitle"> HTML Coding Page Editor: </span> <br>
+                <span class="point"> Completly (HTML Method) =&gt;</span> &nbsp; &nbsp; <span class="tag"> &lt; Link </span>&nbsp; <span class="attribute">rel=</span>"stylesheet" &nbsp; <span class="attribute">href=</span>"filename.css" &nbsp; <span class="attribute">media=</span> "Screen" <span class="tag">/&gt;</span> </span> <br>
+                <span class="CodeTitle"> CSS Coding Page Editor: </span> <br>
+                <span class="point"> Partially (Css Method) =&gt;</span> &nbsp; &nbsp; <span class="tag"> @Media &nbsp; Screen { &nbsp; &nbsp; </span>  Element Name <span class="css"> { </span> <span class="attribute"> Css Properties : Property Value </span> <span class="css"> } </span> <span class="tag">&nbsp; &nbsp; } </span> </span> <br>               
+            </div>
+            
+    </fieldset>
+    
+<!------------------------------------------------------------------------------------------------------------------>
+
+<fieldset id="Type3" class="Type3">
+        <legend> Media Type : [ Print ] </legend>
+            
+            <h2 class="title1"> Media Type [ Print ] Concept: </h2>
+            <p> Main Concept of Media Type [ Screen ] is that the Css properties completly or partially will be applicable to Print Views <span class="vip">ONLY</span>.</p>
+            <p> This can be applied completly on the whole page by the &lt;Link&gt; Tag in [Media] Attribute, <span> or </span> partially on some page elements by Css coding page.</p>
+            
+            <h2 class="title1"> Media Type [ Print ] Syntax:  </h2>
+            
+            <div class="Code">
+                <span class="CodeTitle"> HTML Coding Page Editor: </span> <br>
+                <span class="point"> Completly (HTML Method) =&gt;</span> &nbsp; &nbsp; <span class="tag"> &lt; Link </span>&nbsp; <span class="attribute">rel=</span>"stylesheet" &nbsp; <span class="attribute">href=</span>"filename.css" &nbsp; <span class="attribute">media=</span> "Print" <span class="tag">/&gt;</span> </span> <br>
+                <span class="CodeTitle"> CSS Coding Page Editor: </span> <br>
+                <span class="point"> Partially (Css Method) =&gt;</span> &nbsp; &nbsp; <span class="tag"> @Media &nbsp; Print { &nbsp; &nbsp; </span>  Element Name <span class="css"> { </span> <span class="attribute"> Css Properties : Property Value </span> <span class="css"> } </span> <span class="tag">&nbsp; &nbsp; } </span> </span> <br>                                   
+            </div>
+            
+    </fieldset>
+    
+<!------------------------------------------------------------------------------------------------------------------>
+
+<fieldset id="Type4" class="Type4">
+        <legend> Media Type : [ Specified Value ] </legend>
+            
+            <h2 class="title1"> Media Type : [ Specified Value ] Concept: </h2>
+            <p> Main Concept of Media Type [ Screen ] is that the Css properties completly or partially will be applicable to Specified Devices with certain given dimensions <span class="vip">ONLY</span>.</p>
+            <p> This can be applied completly on the whole page by the &lt;Link&gt; Tag in [Media] Attribute, <span> or </span> partially on some page elements by Css coding page.</p>
+            
+            <h2 class="title1"> Media Type : [ Specified Value ] Syntax:  </h2>
+            
+            <div class="Code">
+                <span class="CodeTitle"> HTML Coding Page Editor: </span> <br>
+                            ???? <br>   
+                <span class="CodeTitle"> CSS Coding Page Editor: </span> <br>
+                            ???? <br>
+            </div>
+            
+    </fieldset>
+    
+<!------------------------------------------------------------------------------------------------------------------>        
+    
+    <fieldset id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </fieldset>
+    
+</body>
+</html>
+

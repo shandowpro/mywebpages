@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 13 HTML5 New Form elements [Datalist] </title>
+    <link rel="stylesheet" href="HTML5 New Form Elements [Datalist].css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">        
+    </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 13 HTML5 New Form Elements [Datalist]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="HTML5 New Form Elements Datalist Main Concept" > HTML5 New Form Elements        [Datalist] Main Concept </a> </li>
+            <li> <a href=#DatalistNTag   title="Go to Datalist Tag" > Datalist Tag  </a> </li>         
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> Lesson 13 {Datalist} </span> </main>
+
+<!-------------------------------------------------------------------------------------------------------------->                        
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>
+                HTML5 New Form Elements [Datalist] Concept 
+            </header>
+            
+            <article>                
+                <p> &gt; The New HTML5 Form Elements in this lesson as following :</p>
+                
+                <ol>
+                    <li> &lt; input &nbsp; list = "List name"  &nbsp; &gt; </li>                    
+                    <li> &lt; datalist &nbsp; id = "list name" &gt; &nbsp; &nbsp; &lt; /datalist &gt; </li>       
+                    <li> &lt; option &nbsp; value="" &gt; &nbsp; </li>             
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>
+      
+        <section class="DatalistNTag" id="DatalistNTag">
+            <header>
+                Datalist Tag [ &lt; datalist &gt; &lt; /datalist &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> [Datalist Tag] Concept: </h1>
+                    <p> =&gt; [Datalist Tag] is to display a list of data below with in upper input list type. 
+                    <p> =&gt; [Datalist Tag] must be identified by id by value of it's upper input list name in             the form. 
+                    <p> =&gt; [Datalist Tag] allow to activate (Auto Suggest) feature used in Ajax with simple             way. 
+                    <p> =&gt; [Datalist Tag] includes data with in [option tag] one for each value below datalist           tag. 
+                    <p> =&gt; [Datalist Tag] usually be followed by submit button to record the choosed value               from Datalist.
+                    <p> =&gt; [Datalist Tag] is like the database for the [Input list], so the [Datalist]'s id must be with the same value <span class="FixSpace"> of [Input list]. Also the [Option] is the data of this database (datalist)</span>.
+                </header>
+                
+                <header>
+                    <h1> Main & Features of [Datalist] Tag Usages: </h1>                    
+                    <p> =&gt; Provides an advanced way to display and control data with in a list more                     proffeciently. </p>
+                    <p> =&gt; Allowing [Auto Suggest] Feature with choosing from available data below. </p>
+                    <p> =&gt; The [Auto Suggest] of Datalist more easy and simple from Ajax. </p>                 
+                </header>
+                
+                <header class="DatalistExp">
+                    <h1>Example:</h1>
+                    <p> This is the best Browser Poll </p>
+                    <section>
+                        <h3>What is your favourate browser? </h3>
+                        <form>
+                            <input list="Browsers">                            
+                            <datalist id="Browsers">
+                                <option value="Chrome">
+                                <option value="Firefox">
+                                <option value="Safari">
+                                <option value="Opera">
+                                <option value="Internet Explorer">
+                                <option value="Baidu">
+                            </datalist>
+                            <input type="submit" value="Choose">
+                        </form>
+                    </section>
+                    
+                    <div class="DatalistExp1">                                            
+                        <code> 
+                            &lt;aside&gt; <br>                            
+                            &nbsp;&nbsp;&lt;section&gt; <br>                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt; What is your favourate browser? &lt;/h3&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;form&gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; list = "browsers" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;datalist &nbsp; id = "browsers" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option &nbsp; value = "Chrome" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option &nbsp; value = "Firefox" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option &nbsp; value = "Safari" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option &nbsp; value = "Opera" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option &nbsp; value = "Internet Explorer" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option &nbsp; value = "Baidu" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;datalist &nbsp; id = "browsers" &gt;<br>     
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type = "submit" &gt;<br>     
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;/form&gt;<br>
+                            &nbsp;&nbsp;&lt;/section&gt;<br>
+                            &lt;/aside&gt; <br>                            
+                        </code>                    
+                    </div>   
+                </header>                                                                               
+            </article>                
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+        
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

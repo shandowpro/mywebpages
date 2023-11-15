@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>73 PHP 5 In Arabic - File System - Scandir</title>
+    <link
+      rel="stylesheet"
+      href="73 PHP 5 In Arabic - File System - Scandir.css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      73 PHP 5 In Arabic - File System - Scandir
+    </header>
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to PHP main Topics">
+            73 PHP 5 In Arabic - File System - Scandir Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a href="#PHPCon" title="Go to PHP [File System - Scandir] Concept">
+            73 PHP 5 In Arabic - File System - Scandir Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPImp"
+            title="Go to PHP [File System - Scandir] Importance & Benefits"
+          >
+            73 PHP 5 In Arabic - File System - Scandir Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a href="#PHPSyntx" title="Go to PHP [File System - Scandir] Syntax">
+            73 PHP 5 In Arabic - File System - Scandir Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPPract"
+            title="Go to PHP [File System - Scandir] Practical Applications"
+          >
+            73 PHP 5 In Arabic - File System - Scandir Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <main class="Welcome">
+      Welcome to PHP Course
+      <span> 73 PHP 5 In Arabic - File System - Scandir</span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          PHP5 [ File System Function - [ 73 PHP 5 In Arabic - File System -
+          Scandir] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main new Subjects in this lesson are as following :</p>
+
+          <ol>
+            File System Function / scandir :
+            <br />
+            <li>
+              scandir(Full Directory/Folder name path, sort type , context) =>
+              [scaning for the inner files]
+            </li>
+            <li>
+              is_file(Full File name path) => [checking if the selected is a
+              file]
+            </li>
+            <li>
+              is_dir(Full Directory/Folder name path) => [checking if the
+              selected is a folder/directory]
+            </li>
+          </ol>
+
+          <hr />
+        </article>
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="PHPCon" id="PHPCon">
+        <header>
+          <h3>PHP [73 PHP 5 In Arabic - File System - Scandir]</h3>
+        </header>
+
+        <h2>
+          [PHP - File System Function - [ 73 PHP 5 In Arabic - File System -
+          Scandir] => Concept:
+        </h2>
+        <ol>
+          <li>
+            [PHP - File System Function/method syntax [scandir()] as following :
+          </li>
+
+          <li>
+            scandir(Full Directory/Folder name path, Sort type , Context) =>
+            <br />
+            <ol>
+              <li>
+                To search inside the directory/folder contains [Inner files]
+              </li>
+              <li>
+                Include the following : <br />
+                <ul>
+                  <li>
+                    File Full Path Name => of the desired directory/folder
+                  </li>
+                  <li>
+                    Sort Type => Advanced feature to assign the displaying
+                    sorting type
+                  </li>
+                  <li>Context => Advanced feature Will be taken later</li>
+                </ul>
+              </li>
+              <li>
+                The Result of displayed inner files must be declared as Array
+              </li>
+            </ol>
+          </li>
+          <li>
+            is_file(Full File name path) => [checking if the selected is a file]
+            : usually used with in foreach loop to check if the elemment is a
+            file
+          </li>
+
+          <li>
+            is_dir(Full Directory/Folder name path) => [checking if the selected
+            is a folder/directory] : usually used with in foreach loop to check
+            if the elemment is a folder
+          </li>
+        </ol>
+
+        <br />
+        <br />
+        <hr />
+        <!-------------------------------------------  -->
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPImp" id="PHPImp">
+        <header>
+          <h3>
+            PHP [73 PHP 5 In Arabic - File System - Scandir] Importance &
+            Benefits:
+          </h3>
+        </header>
+
+        <ul>
+          <li>
+            [File System Functions - { scandir()} ] => This method is helpful in
+            searching inside the directory for checking, displaying before
+            removing the folder / directory [becuase it can be removed only if
+            it is empty]
+          </li>
+          <li>
+            [File System Functions - { scandir()} ] => This method can be
+            enhanced if it combined with looping for searching inside with more
+            effecincy
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPSyntx" id="PHPSyntx">
+        <header>
+          <h3>
+            [ 73 PHP 5 In Arabic - File System - Scandir] Syntax & Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; In this after setting up the application => We will create a
+          simple PHP File && Running it by [Local Server]
+        </p>
+
+        <p>=&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} :</p>
+        <br />
+        <p>
+          Using [File System Function ] -> This lesson has several Practical
+          Examples but some file mangager system about {file}
+        </p>
+
+        <ol type="A">
+          <li>
+            [PHP - 5) These Lesson contains (6) Examples => File System - {
+            unlink() } && { rmdir() } : <br />
+            <ul>
+              <li>
+                First Example => File System - { scandir(Directory full path,
+                sort type , context } => [default method - Simple method ]
+              </li>
+
+              <li>
+                Second Example => File System - { scandir(Directory full path,
+                sort type , context } => [Advanced method : sort-none - Simple
+                method ]
+              </li>
+
+              <li>
+                Third Example => File System - { scandir(Directory full path,
+                sort type , context } => [Advanced method : sort-descending -
+                Simple method ]
+              </li>
+
+              <li>
+                Fourth Example => File System - { scandir(Directory full path,
+                sort type , context } => [Advanced method : sort-descending -
+                Combined method {scaning + deleting all files} ]
+              </li>
+            </ul>
+          </li>
+        </ol>
+
+        <!-- ================================================================= -->
+
+        <h2>B) Html page :</h2>
+        <br />
+        <span class="one"> &lt; !DOCTYPE html &gt; </span> <br />
+        <span class="two"> &lt; html &gt; </span> <br />
+        <span class="three"> &lt; /head &gt;</span> <br />
+        <span class="four">
+          &lt; title &gt; &lt;? php echo $title; ?&gt; &lt; /title &gt;
+        </span>
+        <br />
+        <span class="four">
+          &lt; link rel="stylesheet" href="73 PHP 5 In Arabic - File System -
+          Scandir" media="all" &gt;
+        </span>
+        <br />
+        <span class="three"> &lt; /head &gt; </span> <br />
+        <br />
+        <span class="three">&lt; body &gt; </span> <br />
+
+        <span class="three">&lt; /body &gt; </span> <br />
+        <span class="two">&lt;/html &gt; </span> <br />
+        ----------------------------------------------------------------------------
+        <br />
+        ----------------------------------------------------------------------------
+        <br />
+        <br /><br />
+        <hr />
+        <br /><br />
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPPract" id="PHPPract">
+        <header>
+          <h3>
+            PHP [ 73 PHP 5 In Arabic - File System - Scandir] General Practical
+            Applications :
+          </h3>
+        </header>
+
+        <p>
+          Using [File System Function ] -> This lesson is just an intro and has
+          not any Practical Examples
+        </p>
+
+        <p>
+          =&gt; Here (4) Major Application / Simple Training PHP [ 73 PHP 5 In
+          Arabic - File System - Scandir] as following =>
+        </p>
+
+        <ol type="A">
+          <li>
+            [PHP - 5) These Lesson contains (4) Example => File System - {File
+            get Contents, Include_Path (false), context (Null), offset(#) ,
+            max_length(#))} : <br />
+
+            <ul>
+              <li>
+                First Example => File System - { scandir(Directory full path,
+                sort type , context } => [default method - Simple method ] ,
+                including the following steps : <br />
+                <ol>
+                  <li>
+                    Declaring the array will hold all inner files inside the
+                    Directory/Folder
+                  </li>
+                  <li>Printing the array of inner files</li>
+                </ol>
+              </li>
+
+              <li>
+                Second Example => File System - { scandir(Directory full path,
+                sort type , context } => [Advanced method : sort-none - Simple
+                method ] , including the following steps :
+                <ol>
+                  <li>
+                    Declaring the array will hold all inner files inside the
+                    Directory/Folder [with customized sorting : none ]
+                  </li>
+                  <li>Printing the array of inner files</li>
+                </ol>
+              </li>
+
+              <li>
+                Third Example => File System - { scandir(Directory full path,
+                sort type , context } => [Advanced method : sort-descending -
+                Simple method ] , including the following steps :
+                <ol>
+                  <li>
+                    Declaring the array will hold all inner files inside the
+                    Directory/Folder [with customized sorting : none ]
+                  </li>
+                  <li>Printing the array of inner files</li>
+                </ol>
+              </li>
+
+              <li>
+                Fourth Example => File System - { scandir(Directory full path,
+                sort type , context } => [Advanced method : sort-descending -
+                Combined method {scaning + deleting all files} ] , including the
+                following steps :
+                <ol>
+                  <li>
+                    Declaring the array will hold all inner files inside the
+                    Directory/Folder [with customized sorting : none ]
+                  </li>
+                  <li>Printing the array of inner files</li>
+                  <li>
+                    Looping and Checking for the inner [files] inside the
+                    directoy/folder to delete it
+                  </li>
+                  <li>
+                    Looping and Checking for the inner [folders] inside the
+                    directoy/folder to delete it {Extra feature : need more
+                    information}
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+        </ol>
+
+        <!-- <section id=sec class=txtarea >                                  
+                 <a href="http://localhost/PHP%20Course/73%20PHP%205%20In%20Arabic%20-%20File%20System%20-%20Scandir/73%20PHP%205%20In%20Arabic%20-%20File%20System%20-%20Scandir.php">  
+                    {73 PHP 5 In Arabic - File System - Scandir} => Lesson 73 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+        <section id="sec" class="txtarea">
+          <a
+            class="btn"
+            href="http://localhost/PHP%20Course/73%20PHP%205%20In%20Arabic%20-%20File%20System%20-%20Scandir/73%20PHP%205%20In%20Arabic%20-%20File%20System%20-%20Scandir.php"
+          >
+            {Main Page} [Display] => {73 PHP 5 In Arabic - File System -
+            Scandir} => Lesson 73 PHP File Webpage by Localhost
+          </a>
+          <br />
+          <br />
+
+          <a class="btn" href="73 PHP 5 In Arabic - File System - Scandir.php">
+            {Main Page} [Source Code] => {73 PHP 5 In Arabic - File System -
+            Scandir} => Lesson 73 PHP File Webpage by Localhost
+          </a>
+        </section>
+        <br />
+
+        <!-- <script  src="14 PHP 5  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="VideoSection">
+        <h3>Lesson 73 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=TxIJ7f8v6bk&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=73&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\73 PHP 5 In Arabic - File System - Scandir.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shandow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to 73 PHP 5 In Arabic - File System - Scandir");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

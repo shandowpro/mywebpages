@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS OOP Lesson 11 [Object Constructor Function Intro] </title>
+    <link rel="stylesheet" href="JS OOP Lesson11 [Constructor Function Introduction].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JS OOP Lesson 11 [Object Constructor Function Intro]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS OOP main Topics">
+                JS OOP Lesson11 [Object Constructor Function Intro] Main Topics </a> </li>
+
+            <li> <a href=#JSOOPCon title="Go to JS OOP [Object Constructor Function Intro] Concept">
+                JS OOP Lesson11 [Object Constructor Function Intro] Concept </a> </li>
+
+            <li> <a href=#JSOOPImp title="Go to JS OOP [Object Constructor Function Intro] Importance & Benefits">
+                JS OOP Lesson11 [Object Constructor Function Intro] Importance & Benefits </a> </li>
+
+            <li> <a href=#JSOOPSyntx title="Go to JS OOP [Object Constructor Function Intro] Syntax">
+                JS OOP Lesson11 [Object Constructor Function Intro] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSOOPPracts title="Go to JS OOP [Object Constructor Function Intro] Practical Applications">
+                JS OOP Lesson11 [Object Constructor Function Intro] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS OOP Course <span> JS OOP Lesson 11 [Object Constructor Function Intro]  </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                JS OOP [Object Constructor Function Intro] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS OOP [Object Constructor Function Intro] Concept. </li>
+
+                    <li> JS OOP [Object Constructor Function Intro] Importance & Benefits. </li>
+
+                    <li> JS OOP [Object Constructor Function Intro] Syntax [Define + Access]. </li>
+
+                    <li> JS OOP [Object Constructor Function Intro] Practical Application. </li>
+                </ol>
+                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPCon" id="JSOOPCon">
+            <header>
+                <h3> JS OOP [Object Constructor Function Intro] Concept: </h3>
+            </header>
+            
+            <p> =&gt; JS OOP [Object Constructor Function]: This functionality has the same concept in all OOP programing languages that suppproting the OOP.
+            
+            <p> =&gt; JS OOP [Object Constructor Function]: This is a type of function that Create certain Pattern or {blue print} of Object [Including properties + Parameters], that so many other objects can be created from it.
+            
+            <p> =&gt; JS OOP [Object Constructor Function]: this function can control all Other object that has been Created from it including {Properties + Parameters}.
+            
+            <p> =&gt; JS OOP [Object Constructor Function Intro] : These Methods will allow to developer the following programing features: </p>
+
+                <ol>
+                    <li> Defining so many Objects with certain Properties by a guidance of the Constructor Function Parameters/Arguments.</li>
+                                        
+                    <li> full Controoing and Accessibility to all / Certain Child Objects's Properties that Constructed from the Constructor function. </li>
+                    
+                    <li> Easy Controling and Editing child object properties by only Editing the Constructor Function Parameters. </li>
+                    
+                    <li> Ability to assign some Constructor Function parameters with [Fixed Value - Variable Value - Object Assigned Value]. </li>
+                    
+                </ol>
+
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSOOPImp" id="JSOOPImp">
+            <header>
+                <h3> JS OOP [Object Constructor Function Intro] Importance & Benefits: </h3>
+            </header>
+
+            <p> [Object Constructor Function Intro Method] gives us the Following Features : <br>
+                <ul>
+                    <li> Great ability to create unlimitless count of Objects </li>
+                    <li> Full Control of Child Object's Property(s) values Easly by using constructor Function. </li>
+                    <li> Gives greate ability to the developers to Code more complicated srcipts. </li>                 
+                    <li> Saves greate time in Objects's Editing and Creating Proccesses. </li>
+                </ul>
+        </section>
+
+        <!--------------------------------------------------------------------s---------------------------------->
+        <section class="JSOOPSyntx" id="JSOOPSyntx">
+            <header>
+                <h3> JS OOP [Object Constructor Function Intro] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS OOP Defining Object by [Object Constructor Function Intro] Methods as following : </p>
+            <div id="Code" class="Code">
+
+                // A) [Defining the Constructor Function] Method Syntax :<br><br>                                
+                <span class=one></span> function FuncName (Parameter1, Parameter2, Parameter3, ... ) { <br>
+                    <span class=two></span> this.Parameter1 = Parameter1; <br>
+                    <span class=two></span> this.Parameter2 = Parameter2; <br>
+                    <span class=two></span> this.Parameter3 = Value; <br><br>
+                //=========================================================== <br>
+                
+                // B) Defining Multiple Object(s) Extrated from the Constructor Function :<br> <br>
+                
+                // B1) Defining First Object 1 from the Constructor Function :<br>
+                <span class=one></span> let obj1Name = new FuncName (Parameter1 Value, Parameter2 Value, will be Fixed Value from the Constructor Function );<br>
+                
+                // B2) Defining Second Object 2 from the Constructor Function :<br>
+                <span class=one></span> let obj2Name = new FuncName (Parameter1 Value, Parameter2 Value, will be Fixed Value from the Constructor Function );<br>
+                
+                // B3) Defining Third Object 3 from the Constructor Function :<br>
+                <span class=one></span> let obj3Name = new FuncName (Parameter1 Value, Parameter2 Value, will be Fixed Value from the Constructor Function );<br>
+                //=========================================================== <br> <br>
+                
+                // C) Accessing the the Extracted Created child Objects' Properties :<br> <br>
+                
+                // C1) Accesssing First Object 1' Properties :<br>
+                <span class=one></span> console.log(obj1Name.Parameter1);<br>
+                
+                // C2) Accessing Second Object 2 from the Constructor Function :<br>
+                <span class=one></span> console.log(obj2Name.Parameter2);<br>
+                
+                // C3) Accessing Third Object 3 from the Constructor Function :<br>
+                <span class=one></span> console.log(obj3Name.Parameter3);<br>
+                //=========================================================== <br> <br>
+
+                <br><br> =======================================================
+                <br><br> =======================================================
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPPract" id="JSOOPPract">
+            <header>
+                <h3> JS OOP [Object Constructor Function Intro] General Practical Applications : </h3>
+            </header>
+
+            
+            <p> =&gt; Here one Major Application which include inner (2) Modes as follwoing :  &gt;&gt; <br>
+
+                <ol>
+                    <li> Creating Constructor function with Fixed Parameters + Fixed Arguments .  </li>
+                    <li> Creating Constructor function with Fixed Parameters + Flexible Arguments assigned By user.  </li>                                        
+                <br>
+
+            <textarea id=txtarea class=txtarea> </textarea><br>
+
+            <button class=btn onclick="constFunc()"> Click to Start [Constructor function + Extracted Object(s)] applicaion  
+            </button>                                            
+                                                                                
+            <br>
+                
+            <textarea id=txtarea1 class=txtarea1> </textarea><br>
+
+            <button class=btn onclick="Display()"> Click to Display Js code
+            </button>                                            
+                                                                                            
+            <br>
+            <hr>
+                
+            <script src="JSOOPObjConstIntro.js">
+            </script>                
+                
+                <!-- <div class=JSOOPObjConstIntro>
+                    <code>
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+
+                        <span class=one></span> &lt;button class="btn" onclick=constFunc"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [OOP Object Click to Start [Constructor function + Extracted Object(s)] Application] <br>         
+                        <span class=one></span> &lt;/button&gt; <br><br>                            
+
+                        <span class=one></span> &lt;script src="JSOOPObjConstIntro.js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+
+                        /* global document, alert, prompt */ <br>
+                        /* JSOOP [Object Constructor Function + Extractecd Object Introduction] */ <br>
+                        =======================================================<br><br>
+                        // Major Function :<br><br>
+                        
+                        function constFunc() { <br> <br>
+    
+                            <span class=one></span> var mthd = prompt("Press (1) to Display the [Fixed Constractor' Parameters Function + Fixed Extracted<br>
+                                <span class=two></span> Objects's Properties Values] (Fixed Mode) Application\n <br>
+                                <span class=two></span> Press (2) to Display the [ Fixed Constactor's Parameters Function + <br>
+                                <span class=two></span> Controlled Extracted Objects's Properties Values by user] (Controlled Mode) Application\n <br>
+                                <span class=two></span> Press any other key to Exit..."); <br> <br>
+                            
+                            <span class=one></span> if (mthd == "1") { <br>
+                                <span class=two></span> alert("Welcome to [Constructor function] + [Extracted Objects]"); <br> <br>
+                                        
+                                <span class=two></span>function FuncConst(id, name, price) { <br>
+                                    <span class=three></span> this.id = id; <br>
+                                    <span class=three></span> this.name = name; <br>
+                                    <span class=three></span> this.price = price; <br>         
+                                <span class=two></span> } <br> <br>
+
+                                <span class=two></span> console.log("========================================================="); <br><br>
+                                
+                                <span class=two></span> var countP = 0; <br> <br>
+                        
+                                <span class=two></span> let obj1 = new FuncConst(123, "Shadi", 500); <br> <br>
+                                
+                                <span class=two></span> for (a1 in obj1) { <br>
+                                    <span class=three></span> console.log("your property Number (" + (countP+1) + ") as following :\n" + <br>
+                                        <span class=four></span>  a1 + ":" + obj1[a1] + "------------------------------\n0); <br> <br>           
+                                    
+                                    <span class=three></span> document.getElementById("txtarea").innerHTML = "Your property Number (" +<br>
+                                        <span class=four></span> (countP+1) + ") as following :\n" + <br>
+                                        <span class=four></span> a1 + ":" + obj1[a1] + "\n ---------------------- \n";  <br> <br> 
+                                    
+                                    <span class=three></span> countP++; <br> <br>
+                                <span class=two></span> } <br> <br>
+                                
+                                <span class=two></span> countP = 0; <br>
+                                
+                                <span class=two></span> console.log("========================================================="); <br> <br>
+                                
+                                <span class=two></span> let obj2 = new FuncConst(456, "Sayed", 600); <br> <br>
+                                
+                                <span class=two></span> for (a2 in obj2) { <br><br>
+                                    <span class=three></span> console.log("Your property Number (" + (countP+1) + ") as following :\n" + <br>
+                                        <span class=four></span> a2 + ":" + obj2[a2] + "\n---------------------------------\n"); <br> <br>            
+                                    
+                                    <span class=three></span> document.getElementById("txtarea").innerHTML = <br>
+                                        <span class=four></span> "Your property Number (" + (countP+1) + <br>
+                                        <span class=four></span> ") as following :\n" + a2 + ":" + obj2[a2] + "\n-----------------------\n";  <br><br>
+                                    
+                                    <span class=three></span> countP++; <br><br>
+                                <span class=two></span> } <br> <br>        
+                                
+                                <span class=two></span> countP = 0; <br> <br>       
+                                
+                                <span class=two></span> console.log("========================================================="); <br><br>
+                                
+                                <span class=two></span> let obj3 = new FuncConst(789, "Mohammed", 700); <br> <br>
+                                
+                                <span class=two></span> for (a3 in obj3) { <br> <br>
+                                    <span class=three></span> console.log("Your property Number (" + (countP+1) + ") as following :\n" +<br>
+                                        <span class=four></span> a3 + ":" + obj3[a3] + "\n ------------------------------ \n"); <br> <br>
+
+                                    <span class=three></span> document.getElementById("txtarea").innerHTML = <br>
+                                        <span class=four></span>"Your property Number (" + (countP+1) + <br>
+                                        <span class=four></span> ") as following :\n" + a3 + ":" + obj3[a3] + "\n ----------------------------- \n"; <br> <br>
+
+                                    <span class=three></span> countP++; <br> <br>
+                                
+                                <span class=two></span> } <br> <br>                                      
+                                
+                                <span class=two></span> countP = 0;<br> <br>        
+                                
+                            <span class=two></span> console.log("========================================================="); <br>
+                                
+                            <span class=one></span> // ================================================================================ <br>
+                            <span class=one></span> // ================================================================================ <br><br><br>
+                                
+                            <span class=one></span> } else if (mthd = "2"){  <br><br>
+                                <span class=two></span> alert("Welcome to Constructor Function by fixed parameters Names +<br>
+                                    <span class=three></span> Flexible user inserting values Parameters values "); <br> <br>
+                        
+                                <span class=two></span> var vArr = new Array(); <br> <br>
+                                
+                                <span class=two></span> // Defining the Constructor Function: <br>
+                                   
+                                <span class=two></span> function ConsFun(name, age, city) {  <br>                                   
+                                    <span class=three></span> this.name =name; <br>
+                                    <span class=three></span> this.age = age; <br>
+                                    <span class=three></span>this.city =city; <br>            
+                                <span class=two></span> } <br> <br>
+                                
+                                <span class=two></span> // Extarcting an Empty Test object from Constractor Fucntion <br>
+                                    <span class=three></span> to get Access to the Parameters Names: <br> <br>
+                                        
+                                <span class=two></span> let obj = new ConsFun(); <br> <br>
+                                
+                                <span class=two></span> var countP = 0; <br> <br>
+                        
+                                <span class=two></span> alert("your Constructor Function parameters Names as following : ");<br><br>               
+                        
+                                <span class=two></span> for (k0 in obj){  <br> <br>
+                                    
+                                    <span class=three></span> console.log("your Parameter Number (" + (countP+1) + ") =" +<br>
+                                        <span class=four></span> k0 + "\n--------------------------\n"); <br> <br>            
+                                    
+                                    <span class=three></span> document.getElementById("txtarea").innerHTML = <br>
+                                        <span class=four></span> "your Parameter Number (" + (countP+1) + <br>
+                                        <span class=four></span> ") =" + k0 + "\n-------------------------\n"; <br><br>
+
+                                    <span class=three></span> countP++; <br> <br>
+
+                                <span class=two></span> } <br> <br>
+
+                                <span class=two></span> countP =0; <br> <br>     
+
+                                <span class=two></span> console.log("====================================="); <br> <br>
+                                
+                                
+                                <span class=two></span> alert("Your count of extracted object = (3) "); <br>         
+                                <span class=two></span> console.log("====================================="); <br> <br>                
+                                
+                                <span class=two></span> // Reciving Parameters of Object (1) from the User : <br><br>
+                                <span class=two></span> alert("Enter First object's parameter's values"); <br>        
+                                
+                                <span class=two></span> var name1 = prompt("Enter first Parameter' value of first Object :"),<br>
+                                    <span class=three></span> age1 = prompt("Enter second Parameter' value of first Object :"),<br>
+                                    <span class=three></span> var city1 = prompt("Enter third Parameter' value of first Object :");<br> <br>
+                                
+                                <span class=two></span> let obj1 =  new ConsFun(name1, age1, city1); <br><br>
+                                                                
+                                <span class=two></span> // Reciving Parameters of Object (2) from the User :<br> <br>                                
+                                <span class=two></span> alert("Enter Second object's parameter's values"); <br>            
+                                
+                                <span class=two></span> var name2 = prompt("Enter first Parameter's value of second Object :"); <br>
+                                    <span class=three></span> age2 = prompt("Enter second Parameter' value of second Object :"); <br>
+                                    <span class=three></span> city2 = prompt("Enter third Parameter' value of second Object :"); <br><br>
+                                
+                                <span class=two></span> let obj2 =  new ConsFun(name2, age2, city2); <br> <br>
+                                
+                                
+                                <span class=two></span> // Reciving Parameters of Object (3) from the User : <br>
+                                <span class=two></span> alert("Enter Third object's parameter's values"); <br>            
+
+                                <span class=two></span> var name3 = prompt("Enter first Parameter' value of third Object :"),<br>
+                                    <span class=three></span> age3 = prompt("Enter second Parameter' value of third Object :"); <br>
+                                    <span class=three></span> city3 = prompt("Enter third Parameter' value of third Object :"); <br><br>
+                                
+                                <span class=two></span> let obj3 =  new ConsFun(name3, age3, city3); <br><br>
+                                                                
+                                <span class=two></span> // Printing all object's parameters Values : <br><br>
+                                
+                                <span class=two></span> for (a=0; a &lt; 3; a++) { <br><br>
+                                    
+                                    <span class=three></span> console.log("Your Overall Parameters values of Object Nubmer (" + <br>
+                                        <span class=four></span>  (a+1) + ") as following : "); <br> <br>
+
+                                    <span class=three></span>  document.getElementById("txtarea").innerHTML += <br>
+                                        <span class=four></span> "Your Overall Parameters values of Object Nubmer (" + (a+1) + ") <br>
+                                        <span class=four></span> as following : \n"; <br> <br>
+                                    
+                                    <span class=three></span> if (a == 0) { <br> <br>                 
+                                        
+                                        <span class=four></span> console.log(obj1); <br> <br>
+                                    
+                                        <span class=four></span> console.log("Your Detailed Parameters values of Object Nubmer (" + <br>
+                                            <span class=five></span> (a+1) + ") as following : "); <br>  <br>            
+                                        
+                                        <span class=four></span> document.getElementById("txtarea").innerHTML = obj1 + "\n";  <br> <br>
+                                        
+                                        <span class=four></span> document.getElementById("txtarea").innerHTML += <br>                                            
+                                            <span class=five></span> "Your Detailed Parameters values of Object Nubmer (" + (a+1) + ") <br>
+                                            <span class=five></span> as following :\n"; <br><br>
+                                        
+                                        <span class=four></span> for (k1 in obj1) { <br> <br>
+                                             
+                                            <span class=five></span> console.log("Key name number (" + (countP+1) + ") as following \n" + <br>
+                                                <span class=six></span> k1 + ":" + obj1[k1] +  "\n-------------------------\n"); <br> <br>
+                                            
+                                            <span class=five></span> document.getElementById("txtarea").innerHTML += "Key name number (" + (countP+1) +  <br> 
+                                                <span class=six></span> ") as following \n" + k1 + ":" + obj1[k1] + <br>
+                                                <span class=six></span> "\n ---------------------------- \n"; <br> <br>
+                                            
+                                            <span class=five></span> countP++; <br> <br>
+                                        <span class=four></span> } <br> <br>
+                                        
+                                        <span class=four></span> countP = 0; <br> <br>                                           
+                                        
+                                        <span class=four></span> alert("======================================================================="); <br> <br>                
+                                        
+                                    <span class=three></span> } else if (a == 1) {  <br> <br>               
+                                        
+                                        <span class=four></span> console.log(obj2);  <br>
+                                            
+                                        <span class=four></span> console.log("Your Detailed Parameters values of Object Nubmer (" +<br>
+                                            <span class=five></span> (a+1) + ") as following :\n "); <br> <br>            
+                                        
+                                        <span class=four></span> document.getElementById("txtarea").innerHTML += <br>
+                                            <span class=five></span> "Your Detailed Parameters values of Object Nubmer (" + <br>
+                                            <span class=five></span> (a+1) + ") as following :\n ---------------------------- \n"; <br> <br>
+                                    
+                                        <span class=four></span> for (k2 in obj2) { <br> <br>
+                                            
+                                            <span class=five></span> console.log("Key name number (" + (countP+1) + <br>
+                                                <span class=six></span> ") as following \n" + k2 + ":" + obj2[k2] + <br>
+                                                <span class=six></span> "\n------------------------------\n");<br> <br>
+
+                                            <span class=five></span> document.getElementById("txtarea").innerHTML += <br>
+                                                <span class=six></span> "Key name number (" + (countP+1) + <br>
+                                                <span class=six></span> ") as following \n" + k2 + ":" + obj2[k2]+ <br>
+                                                <span class=six></span> "\n ------------------------------------ \n"; <br><br>
+                                                
+                                            <span class=five></span> countP++; <br>
+                                        <span class=four></span> } <br>
+                                        
+                                        <span class=four></span> countP = 0; <br>
+
+                                        <span class=four></span> alert("======================================================================="); <br><br>                
+                                        
+                                    <span class=three></span> } else if (a == 2) { <br> <br>
+                                        
+                                        <span class=four></span> console.log(obj3); <br> <br>                
+                                            
+                                        <span class=four></span> console.log("Your Detailed Parameters values of Object Nubmer (" +<br>
+                                            <span class=five></span> (a+1) + ") as following : "); <br> <br>            
+
+                                        <span class=four></span> document.getElementById("txtarea").innerHTML += <br>
+                                            <span class=five></span> "Your Detailed Parameters values of Object Nubmer (" + <br>
+                                            <span class=five></span> (a+1) + ") as following : \n"; <br> <br>
+                                            
+                                        <span class=four></span> for (k3 in obj3) { <br><br>
+                                            
+                                            <span class=five></span> console.log("Key name number (" + (countP+1) + <br>
+                                                <span class=six></span> ") as following \n" + k3 + ":" + obj3[k3] + "\n---------------------\n"); <br> <br>
+                                                
+                                            <span class=five></span> document.getElementById("txtarea").innerHTML += <br>
+                                                <span class=six></span>  "Key name number (" + (countP+1) + ") as following \n" + <br>
+                                                <span class=six></span>  k3 + ":" + obj3[k3] + "\n ========================\n" ; <br> <br>
+
+                                            <span class=five></span> countP++; <br> <br>
+                                            
+                                        <span class=four></span> } <br><br>
+                                        
+                                        <span class=four></span> countP = 0; <br> <br>
+                                        
+                                        <span class=four></span> alert("======================================================================="); <br> <br>                
+                                        
+                                    <span class=three></span> } <br>
+                                <span class=two></span> } <br> <br>
+                                
+                            <span class=one></span> } else { <br>
+
+                                <span class=two></span> alert("Good Bye!"); <br>
+
+                            <span class=one></span> } <br>                                                            
+                        } <br> <br>        
+
+                    //====================================================================================================  <br>  
+                                     
+                    </code>
+                </div> -->
+        </section>
+
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------------------------------->
+        
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 11 Video File:</h3>
+
+            <iframe
+                width="100%"
+                height="100%"
+                allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"
+                frameborder="0"
+                preload="yes"
+                src="https://www.youtube.com/embed/watch?v=OrJizBe9lf0&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=11&controls=0&loop=1&autoplay=1&fs=1"
+            >
+            </iframe>
+
+            <!-- <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\11 JavaScript OOP Constructor Function Introduction.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video> -->
+        </section>
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS OOP Lesson 11 [Object Constructor Function Intro] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html> 

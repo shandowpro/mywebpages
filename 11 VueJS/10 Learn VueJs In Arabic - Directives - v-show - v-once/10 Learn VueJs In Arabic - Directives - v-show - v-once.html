@@ -1,0 +1,413 @@
+<!-- <script src="http://localhost:8098"></script>     -->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title> 10 Learn VueJs In Arabic - Directives - v-show - v-once </title>
+
+    <link rel="stylesheet" href="10 Learn VueJs In Arabic - Directives - v-show - v-once.css" media="all">
+
+    <style>
+        .span{color: red ; font-weight:bold};
+    </style>
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        10 Learn VueJs In Arabic - Directives - v-show - v-once
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 10 Learn VueJs In Arabic - Directives - v-show - v-once ">
+                10 Learn VueJs In Arabic - Directives - v-show - v-onces Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to  [10 Learn VueJs In Arabic - Directives - v-show - v-once ] Concept">
+                10 Learn VueJs In Arabic - Directives - v-show - v-onces Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to  [10 Learn VueJs In Arabic - Directives - v-show - v-once ] Importance & Benefits">
+                10 Learn VueJs In Arabic - Directives - v-show - v-onces Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to  [10 Learn VueJs In Arabic - Directives - v-show - v-once] Syntax">
+                10 Learn VueJs In Arabic - Directives - v-show - v-onces Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to  [10 Learn VueJs In Arabic - Directives - v-show - v-once] Practical Applications">
+                10 Learn VueJs In Arabic - Directives - v-show - v-onces Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <main class="Welcome"> Welcome to Vue.js Course <span> 10 Learn VueJs In Arabic - Directives - v-show - v-once </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                Vue.js [10 Learn VueJs In Arabic - Directives - v-show - v-once] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following : </p>
+                <ol type="A">
+                    <li> [v-once] -> To make the element static [make vue render for this element only for one time] </li>
+                    <li> [v-show="condition"] -> To make an element be showen [display: show] if the condition is True || Hide the Element if the condition is False  </li> 
+                </ol>                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> [ 10 Learn VueJs In Arabic - Directives - v-show - v-once] Concept: </h3>
+            </header>
+                        
+            <h2> =&gt; Using Vue Directives within Vue Instances [properties && Methods] Concept : <br>
+                <ul>
+                    <li> [v-once] =>  <br>
+                        <ul>
+                            <li> To make the element static [make vue render from DOM for this element only for one time] </li> 
+                            <li> Suits the Static Element in many application </li>
+                         </ul>
+                    </li> <br>
+                    <li> [v-show] => <br>
+                        <ul> 
+                            <li> To make the Element be displayed only if the condition has return True </li>    
+                            
+                            <li> Suits the Toggling Element such as [Element to be toggled between Show(display:show) and Hide(display:none) ] </li>
+                            
+                            <li> Differences between the {v-show} && {v-if} :  <br>
+                                <ol> 
+                                    <li> In Case of [True] Condition => Both kinds of Directives Will Display the value of the Vue Property  </li>
+                                    
+                                    <li> In Case of [False] Condition => <br>
+                                        <ul>                                             
+                                            <li> {v-show} => This Directive will Only Toggle the (Display) Property to (None) Value </li>
+                                            <li> {v-if}   => This Directive will Totally Remove the Element from the HTML script </li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ul>                    
+                    </li>                                        
+                </ul>
+            </h2>                                                                         
+            
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> Vue.js [10 Learn VueJs In Arabic - Directives - v-show - v-once] Importance & Benefits : </h3>
+            </header>
+            
+            <p> [Directives] => Provides an Easy Methods to apply certain Insturctions on HTML Elements as an Element's Attribute Auto Functionality Responding , and therefore more Dynamicallay <br>
+            <p>  [v-once]  => Critical in any Vue Application, when it is desired to Render the element value from the Vue for only one time <br>
+            <p>  [v-show]  => Critical in any Vue Application, to Toggle between the element Property [display: show - none]  <br>            
+                        
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!-- <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ Vue.js [10 Learn VueJs In Arabic - Directives - v-show - v-onces] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; Following is a simple syntax code written Emded in a HTML page => <br>
+                Printing string text value from the server in the user website page  </p>            
+            
+            <p> =&gt; [Inheritance] =>  <br> </p>
+                         
+             <p> Syntax: <br> </p>            
+                <div id="Code" class="Code">                
+                    <span class= one></span> &lt; ?php <br>                      
+                    
+                    
+                    <span class= one></span> &lt; Defining new Classes : <br>
+                        <span class= two></span> A) Defining a [Final Class] {ClassName} with [default Property value] & [ Final Method using (Parameter) Variable] : <br>
+                            
+                            <span class= three></span>  final class ClassName { <br>
+                            
+                                <span class= four ></span>  // Class Properties Definging (public Variable) [with Null Property Value] : <br>
+                                <span class= four ></span>  public propertyName1;  <br>
+                                
+                                <span class= four ></span>  // Class Method Defining to access to a certain Property [To change the value] with Using (Parameter + $this) ] :  <br>
+                                <span class= four ></span>  final public function MethodName1($Par1) { <br> 
+                                    <span class= five ></span> $this->propertyName1 = $Par1; <br>
+                                    <span class= five ></span> echo 'Your Property is ' . $Par1 ; <br>
+                                <span class= four ></span> } <br><br>                                                                                                
+
+                            <span class= three ></span> } <br><br> <br>
+                            
+                            
+                        <span class= two></span> B) Defining a new Non Final Class {ClassName2} [with Final Method] : <br>
+                            <span class= three></span>  class ClassName2 { <br>                                                                               
+                                
+                                <span class= four ></span>  // Class Properties Definging (public Variable) [with Null Property Value] : <br>
+                                <span class= four ></span>  public propertyName1;  <br>
+                                
+                                <span class= four ></span>  // Class Method Defining to access to a certain Property [To change the value] with Using (Parameter + $this) ] :  <br>
+                                <span class= four ></span>  final public function MethodName2($Par1) { <br> 
+                                    <span class= five ></span> $this->propertyName1 = $Par1; <br>
+                                    <span class= five ></span> echo 'Your Property is ' . $Par1 ; <br>
+                                <span class= four ></span> } <br><br>                                                                        
+                            <span class= three ></span> } <br><br>                     
+                        
+                        <span class= two></span> C) Inheriting a new Class {ClassName3} form the Non final Class {ClassName2} [with it's Final Method] : <br>
+                            <span class= three></span>  class ClassName3 { <br>                                                                                                 
+                            <span class= three ></span> } <br><br>                     
+
+                                            
+                    <span class= one></span> &lt; Creating new objects : <br> 
+                        <span class= three></span>  Defining/Creating first Object {objName} from the first Final class [ClassName] : <br>
+                            <span class= four></span> $objName= new ClassName(); <br> <br>
+                            
+                        <span class= three></span>  Defining/Creating Second Object {objName2} from the Second Not Final class [ClassName2] : <br>
+                            <span class= four></span> $objName2 = new ClassName2(); <br> <br>
+                        
+                        <span class= three></span>  Defining/Creating Third Object {objName3} from the Third Final class [ClassName3] : <br>
+                            <span class= four></span> $objName3 = new ClassName2(); <br> <br>
+
+                    <span class= one></span> &lt; Calling objects Methods : <br> 
+                        <span class= three></span>  Calling / Proccessing Method of First Object {objName} from the first Class -> {objName}'s Final Method [Welcome by using the property value] (with 1 parameter) : <br>
+                            <span class= four></span> $objName-> MethodName1('value'); <br> <br> <br>
+                        
+                        <span class= three></span>  Calling / Proccessing Method of Second Object {objName} from the Second Class -> {objName2}'s Final Method [Welcome by using the property value] (with 1 parameter) : <br>
+                            <span class= four></span> $objName2-> MethodName2('value'); <br> <br> <br>
+                        
+                        <span class= three></span>  Calling / Proccessing Inherited (from the second Class) Final Method of Third Object {objName3} from the Third Class (Inherited from the second Class) -> {objName3}'s Final Method [Welcome by using the property value] (with 1 parameter) : <br>
+                            <span class= four></span> $objName3-> MethodName2('value'); <br> <br> <br>
+                        
+                                                                                                                                                                                                                                                                                                                    
+                        <span class= three></span> Printing the Object created from the First Class {after Processing the Basic Final method} :  <br>
+                            <span class= four></span> echo '&lt; pre &gt;'; <br> <br> 
+                            <span class= four></span> print_r ($objName); <br> <br> 
+                            <span class= four></span> echo '&lt; /pre &gt;'; <br> <br>                             
+                        
+                        <span class= three></span> Printing the Object created from the Second Class {after Proccessing by Basic Final method} :  <br>
+                            <span class= four></span> echo '&lt; pre &gt;'; <br> <br> 
+                            <span class= four></span> print_r ($objName2); <br> <br> 
+                            <span class= four></span> echo '&lt; /pre &gt;'; <br> <br>                             
+
+                        <span class= three></span> Printing the Object created from the Third Class {after Proccessing by Inherited method} :  <br>
+                            <span class= four></span> echo '&lt; pre &gt;'; <br> <br> 
+                            <span class= four></span> print_r ($objName3); <br> <br> 
+                            <span class= four></span> echo '&lt; /pre &gt;'; <br> <br>                             
+                        
+                        //=========================================================== <br> <br>
+                                                        
+                <p> =&gt; PHP new Syntax of the [Inheritance] (2) Applications as following :  <br> </p>
+
+                    <ol type="A">                                                                                                                                
+                        <li> First Example  => Creating a [Final Class] with final keyword with normal [Non Final Method]   </li>                     
+                        <li> Second Example  => Creating a Final Class with final keyword with [Final] Method    </li>                     
+                    </ol> <hr>                                                        
+                    //=========================================================== <br> <br>                                                                                                            
+                    <br><br> 
+               </div> 
+            <hr>
+        </section> -->
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPPract" id="PHPPract"> 
+             <header>
+                <h3> Vue.js [Using Vue Directives {v-once} - {v-show} ] General Practical Application : </h3>
+            </header>
+            
+            <p> In this lesson will be (1) Application [ Using Directives [{v-once} - {v-show} ]= > as following :  </p>
+
+                 <ol type="A">
+                                                            
+                    <li> First Example => Creating a [Vue Application Container] with [{v-once} - {v-show} - {v-if}] , and including the following steps : <br>
+                        <ul>
+                            <li> Defining and Creating the [Vue Main Container] {app-one} , with including the following : <br> 
+                                <ul> 
+                                    <li> Using the {v-once} to static Display the Name Variable Property </li>                                     
+                                    
+                                    <li> Using the {v-show} to Conditional Displaying the Age Variable Property => To Toggling the Display [show - none] </li>
+
+                                    <li> Using the {v-if} to Conditional Displaying the Age Variable property => Show - Remove the Element  </li>
+                                </ul>
+                            </li>                            
+                        </ul>                                                                                    
+                    </li>                                                                                                      
+                                                                
+               </ol> <hr>                  
+                                                                         
+        </section>                     
+        
+        <!-- The following is the main Vue application Container , which will be accessed by the Vue Framework using the Container [ID]   -->
+        
+        <!-- First Vue Application [Testing All Datatypes with in Vue Model Instances]  -->
+            <div id="app-one">              
+                <h1> This is the First Vue Application : [ {{el}} ] </h1>
+                
+                <h2> Using [v-once] => to display VUE Variable only for only one time: </h2>
+                <p v-once> Welcome {{'Mr [' + name + ']'}} => Using {v-once} </p> <hr> <br>
+                <p> Testing a second display of the same variable displayed by v-once {{'Mr [' + name + ']'}} => Using {v-once} with out usgin the same Directive </p> <hr> <br>
+                
+                <h2> Using [v-show] => to display VUE Variable incase of implementing condition : </h2>
+                <p v-show = "age"> You are => {{'[' + age + ']'}} => Using {v-show}  </p>
+                
+                <h2> Using [v-if] => to display VUE Variable incase of implementing condition : </h2>
+                <p v-if = "age"> You are => {{'[' + age + ']'}} => Using {v-if}  </p>
+                
+                <h2> Using [v-show] => to display VUE Variable incase of implementing condition || remvoe and display certain value incase of not implementing condition : </h2>
+                <p v-if = "address"> Your address is  => {{'[' + address + ']'}} => Using {v-if}  </p>
+                <p v-else = "address"> Your address is  => {{'[ empty ]'}} => Using {v-else}  </p>
+            
+            </div>  <br> <hr>
+
+
+
+            <!-- The following is the main Vue Framework Importing Syntax [from Application Folder]  -->
+            <script src="js/vue.js"></script>
+            
+            <!-- The following is the main Vue application Model including the [the container elmennt Name + Vue Data]  -->
+            <script> 
+                var vm = new Vue({
+                    el: '#app-one',
+                    data: {                        
+                        el: 'app-one',
+                        name: 'SHADI', 
+                        age : 36, 
+                        address: ''
+                    }                    
+                });
+            </script>
+        <!------------------------------------------------------------------------------------------------------>                                 
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection">
+            <h3> Lesson 10 Video File:</h3>
+            <video controls width="300" height="300">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\10 Learn VueJs In Arabic - Directives - v-show - v-once.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video>
+        </section>
+        
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU:
+                 <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter>
+                 &nbsp;&nbsp;&nbsp; Uploading: 
+                 <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open style="display: flex; width:100%">
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://shadi-pro.epizy.com"> My Personal Reference </a></li>
+                <li> <a href="https://shadi-cv.epizy.com"> My Personal Resume </a></li>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 10 Learn VueJs In Arabic - Directives - v-show - v-once");
+    </script>
+
+    
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

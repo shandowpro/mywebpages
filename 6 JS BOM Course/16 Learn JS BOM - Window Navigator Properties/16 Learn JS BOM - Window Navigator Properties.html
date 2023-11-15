@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>16 Learn JS BOM - Window Navigator Properties</title>
+    <link
+      rel="stylesheet"
+      href="16 Learn JS BOM - Window Navigator Properties.css"
+      media="all"
+    />
+
+    <style>
+      /* body{height:4000px; width:1500px;} */
+
+      .custom {
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        margin: 10px auto;
+        border: 5px solid gray;
+        background-color: #ccc;
+        text-align: center;
+      }
+
+      .dis {
+        border: 3px solid red;
+        border-radius: 30px;
+        width: 100%;
+        /* height: 200px; */
+        text-align: center;
+        line-height: 2em;
+      }
+
+      .item {
+        color: red;
+        font-size: 30px;
+        font-family: monospace;
+        background-color: blue;
+      }
+
+      /* .Home0 {
+            position: fixed;7
+            border: 3px solid #080;
+            padding: 5px;
+            background: lightblue;
+            color: #100;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            top: 20px;
+            left: 20px
+        }
+
+        .Home0:hover {
+            background: #080;
+            border-color: lightgreen;
+            color: #FFF
+        }
+
+        .End0 {
+            position: fixed;
+            border: 3px solid #080;
+            padding: 5px;
+            background: lightblue;
+            color: #100;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            top: 70px;
+            left: 20px
+        }
+
+        .End0:hover {
+            background: #080;
+            border-color: lightgreen;
+            color: #FFF
+        }
+         */
+    </style>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      16 Learn JS BOM - Window Navigator Properties
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS HTML BOM main Topics">
+            16 Learn JS BOM - Window Navigator Properties Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMCon"
+            title="Go to 16 Learn JS BOM - Window Navigator Properties Concept"
+          >
+            16 Learn JS BOM - Window Navigator Properties Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMImp"
+            title="Go to 16 Learn JS BOM - Window Navigator Properties Importance & Benefits"
+          >
+            16 Learn JS BOM - Window Navigator Properties Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMImp"
+            title="Go to 16 Learn JS BOM - Window Navigator Properties Syntax "
+          >
+            16 Learn JS BOM - Window Navigator Properties main Information</a
+          >
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMPract"
+            title="Go to 16 Learn JS BOM - Window Navigator Properties Practical Applications"
+          >
+            16 Learn JS BOM - Window Navigator Properties Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <!-- Scrolling through by using [Directly href link]  -->
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+
+      <!-- Scrolling through by using [scrollBy() && scrollTo() function]  -->
+      <!-- <button id="home0" class="Home0"  title="Go to page header"> Home [by scroll Function] </button>
+        <button id="end0" class="End0"  title="Go to page footer"> End [by scroll Function] </button> -->
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS HTML BOM Course
+      <span> 16 Learn JS BOM - Window Navigator Properties </span>
+    </main>
+
+    <div class="Post" id="post">
+      <section id="MainC" class="MainC">
+        <header>
+          16 Learn JS BOM - Window Navigator Properties Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>navigator.appCodeName; => Get the Browser Name</li>
+            <li>navigator.appName; => Get the Browser producer Company Name</li>
+            <li>
+              navigator.appVersion; => Get the Browser Version Information
+            </li>
+            <li>
+              navigator.language; => Get the Browser Language used + Language
+              Zone
+            </li>
+            <li>
+              navigator.cookieEnabled; => Check if the Cookies is Enabaed in
+              this browser
+            </li>
+            <li>navigator.product; => Get the browser product name</li>
+            <li>
+              navigator.onLine; => Check if the Browser is in online mode or
+              offline
+            </li>
+            <li>
+              navigator.platform; => Get the applicable os with the Browser
+            </li>
+            <li>
+              navigator.geolocation; => Get the current location coordination of
+              the current pc server
+            </li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMCon" id="JSDOMCon">
+        <header>
+          <h3>15 Learn JS BOM - Navigator - properties, Concept:</h3>
+        </header>
+
+        <p>=&gt; [ Navigator - properties] : <br /></p>
+        <ol>
+          <li>
+            navigator.appCodeName; => Get the Browser Name => [Deprecated]
+          </li>
+          <li>
+            navigator.appName; => Get the Browser producer Company Name =>
+            [Deprecated]
+          </li>
+          <li>
+            navigator.appVersion; => Get the Browser Version Information =>
+            [Deprecated]
+          </li>
+          <li>
+            navigator.platform; => Get the applicable os with the Browser =>
+            [Deprecated]
+          </li>
+          <li>
+            navigator.product; => Get the browser product name => [Deprecated]
+          </li>
+          <li>
+            navigator.language; => Get the Browser Language used + Language Zone
+            => [Available]
+          </li>
+          <li>
+            navigator.cookieEnabled; => Check if the Cookies is Enabaed in this
+            browser => [Available]
+          </li>
+          <li>
+            navigator.onLine; => Check if the Browser is in online mode or
+            offline => [Available]
+          </li>
+          <li>
+            navigator.geolocation; => Get the current location coordination of
+            the current pc server => [Available]
+          </li>
+        </ol>
+        <br />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSDOMImp" id="JSDOMImp">
+        <header>
+          <h3>
+            16 Learn JS BOM - Window Navigator Properties importance & Benefits
+            :
+          </h3>
+        </header>
+
+        <p>
+          16 Learn JS BOM - Window Navigator Properties gives us the Following
+          Features : <br />
+        </p>
+        <ul>
+          <li>
+            {navigator properites information} => Gives main information bout
+            the Browser
+          </li>
+          <li>
+            Some Navigator properties can help giving main info , which can be
+            used in some JS Applications , such as [navigator.cookieEnabled]
+            property
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSDOMSyntx" id="JSDOMSyntx">
+        <header>
+          <h3>
+            16 Learn JS BOM - Window Navigator Properties Syntax & Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; {JS BOM - Window navigator properties} => by following
+          Conceptual Syntax as following :
+        </p>
+
+        <div id="Code" class="Code">
+          [A]// {JSBOM file} : <br />
+          <br />
+
+          [1] {BOM} ( Getting Main info about {navigator} property Examples:
+          <br />
+
+          <span class="one"></span> a) Get the Browser Name => <br />
+          <span class="two"></span> console.log(navigator.appCodeName);<br />
+
+          <span class="one"></span> b) Get the Browser producer Company Name =>
+          <br />
+          <span class="two"></span> console.log(navigator.appName); <br />
+
+          <span class="one"></span> c) Get the Browser Version Information =>
+          <br />
+          <span class="two"></span> console.log(navigator.appVersion); <br />
+
+          <span class="one"></span> d) Get the Browser Language used + Language
+          Zone => <br />
+          <span class="two"></span> console.log(navigator.language); => Get the
+          Browser Name <br />
+
+          <span class="one"></span> e) Check if the Cookies is Enabaled in this
+          browser => <br />
+          <span class="two"></span> console.log(navigator.cookieEnabled); => Get
+          the Browser Name <br />
+
+          <span class="one"></span> f) Get the browser product name => <br />
+          <span class="two"></span> console.log(navigator.product); => Get the
+          Browser Name <br />
+
+          <span class="one"></span> g) Check if the Browser is in online mode or
+          offline => <br />
+          <span class="two"></span> console.log(navigator.onLine); => Get the
+          Browser Name <br />
+
+          <span class="one"></span> h) Get the applicable os with the Browser =>
+          <br />
+          <span class="two"></span> console.log(navigator.platform); => Get the
+          Browser Name <br />
+
+          <span class="one"></span> i) Get the current location coordination of
+          the current pc server => <br />
+          <span class="two"></span> console.log(navigator.geolocation); => Get
+          the Browser Name <br />
+
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMPract" id="JSDOMPract">
+        <header>
+          <h3>
+            16 Learn JS BOM - Window Navigator Properties => General Practical
+            Applications :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Here 1 Major Application, with (8) properties following :
+          &gt;&gt; <br />
+        </p>
+        <ol>
+          <li>
+            The Main function => Get the (8) Main properties, with in (3) output
+            types as Following: <br />
+            <ul>
+              <li>console.log</li>
+              <li>alert</li>
+              <li>Inner Html of the [Elem] element</li>
+            </ul>
+          </li>
+        </ol>
+        <br />
+        <br />
+
+        <div id="elem" class="btn"></div>
+        <br />
+
+        <!-- JS Functions buttons  -->
+        <button id="btn1" class="btn">
+          Get main Information bout the navigator property {navigator.property}
+        </button>
+        <button id="btn0" class="btn">
+          Checking for the Cookies in your Cookies
+        </button>
+
+        <hr />
+        <br />
+        <br />
+        <!-- ========================================================= -->
+
+        <button class="btn" onclick="test()">
+          Click to Start JS HTML BOM [ window ] Application
+        </button>
+
+        <script src="WindowNavigatorProperties.js"></script>
+
+        <br />
+
+        <hr />
+        <button id="btn" class="btn" onclick="display()">
+          Display JS Code
+        </button>
+
+        <div class="JSOOPObjConstTraining">
+          <code>
+            // HTML Codes: <br />
+            <span class="one"></span> &lt;textarea id="txtarea"
+            class="txtarea"&gt;<br />
+            <span class="one"></span> &lt;/textarea&gt; <br /><br />
+
+            <span class="one"></span> &lt;button class="btn"
+            onclick=test"()"&gt;<br />
+            <span class="two"></span> Click to Start [Testing JSBOM []
+            Application <br />
+            <span class="one"></span> &lt;/button&gt; <br /><br />
+
+            <span class="one"></span> &lt;script src=".js"&gt;<br />
+            <span class="one"></span> &lt;/script&gt; <br /><br />
+
+            =======================================================<br /><br />
+
+            /* global document, alert, prompt */ <br />
+            /* JS HTML BOM [] */ <br />
+            template-string-converter.enable; <br /><br />
+
+            <textarea id="SourceCode" readonly></textarea>
+          </code>
+        </div>
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="VideoSection">
+        <h3>Lesson 16 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=u8J90PsJIhA&list=PLDoPjvoNmBAy9nFRJgVYgEID8xE2a6q6V&index=16&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JS BOM\16 Learn JS BOM - Window Navigator Properties.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+
+      <section class="Links">
+        <h3>Course Reaquirments :</h3>
+        <ul>
+          <li>JS</li>
+          <li>JSDOM</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <!-- <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section> -->
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to 16 Learn JS BOM - Window Navigator Properties");
+    </script>
+  </body>
+</html>

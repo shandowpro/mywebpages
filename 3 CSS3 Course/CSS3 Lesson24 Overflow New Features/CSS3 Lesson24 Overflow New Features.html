@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 24 [Overflow New Features] </title>
+    <link rel="stylesheet" href="CSS3 Lesson24 Overflow New Features.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 24 [Overflow New Features]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to Overflow New Features main Topics">
+                [ Overflow New Features ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to Overflow New Features [Overflow New Features ] Concept">
+                [ Overflow New Features ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to Overflow New Features [Overflow New Features ] Importance & Benefits">
+                [ Overflow New Features ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to Overflow New Features [Overflow New Features ] Syntax">
+                [ Overflow New Features ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to Overflow New Features [Overflow New Features ] Practical Applications">
+                [ Overflow New Features ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 24 [Overflow New Features ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                Overflow New Features Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [Overflow New Features] Concept. </li>                       
+                    
+                    <li> [Overflow New Features] Importance & Benefits. </li>
+
+                    <li> [Overflow New Features] Syntax [Example]. </li>
+                    
+                     <li> [Overflow New Features] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    
+                    <ul>
+                        <li> Basic concept about {overflow-X} , and it's values [visible, hidden, scroll] </li>
+                        <li> Basic concept about {overflow-Y} , and it's values [visible, hidden, scroll] </li>                                                                
+                    </ul>                   
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [Overflow New Features] Concept: </h3>
+            </header>
+                        
+            <ul>
+                <li> A) {Overflow New Features} main Concept :</li>
+                    <p> In CSS2 there was only the ability to control the Item overflow property as over all one property </p> 
+                    
+                    <p> In CSS2 default Properites as following : </p>  <br>                    
+                        <ul>
+                            <li> [Visible] => To make the overflow content visible as overflowed </li>
+                            <li> [Hidden] => To make the overflow content Hidden as Cutted </li>
+                            <li> [Scroll] => To make the overflow content visible with Scroll Bar </li>
+                        </ul>
+
+
+                    <p> But in CSS3 there are much specification by controling Horzontal & Vertical Overflow directions as following: </p>
+                    
+                    <ol>
+                        <li> {overflow-X}: </li>                        
+                            <p> Default value of {overflow-X} is : [visible]  </p>    
+                            <p> This new feature to control {overflow in Horizontal} with all values in old CSS2 [visible, hidden, scroll] as following :  </p>                                           
+                        <!-- ================================================================================== -->                        
+
+                        <li> {overflow-Y}: </li>                        
+                            <p> Default value of {overflow-Y} is : [visible]  </p>    
+                            <p> This new feature to control {overflow in Vertical} with all values in old CSS2 [visible, hidden, scroll] </p>
+                        <!-- =========================================================================== -->
+                    </ol>                                                                                                                            
+            </ul>            
+                        
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+        <section class="CSS3Imp" id="CSS3Imp">
+            <header>
+                <h3> [Overflow New Features ] Importance & Benefits: </h3>
+            </header>
+            
+            <p> =&gt; [Overflow New Features ] : This Advanced property enabling the following features & imporatance : <br>            
+                <ul>                                                                
+                    <li> Providing much more accurate tool to control element overflow property in certain direction </li>                    
+                </ul>                                                 
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ Overflow New Features] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [Overflow New Features] Syntax as following :<br><br>                                                    
+                <span class='one'></span> //a)  [HTML] file  : <br>                                          
+            
+                    <span class=two></span> &lt; div class='overflow-X'  &gt; <br>                                                
+                        
+                        <span class=three></span> This is Long Sentence to be as test overflow content [overflow-X] <br>
+                                                                                                                                        
+                    <span class=two></span> &lt; /div &gt;  <br> <br>
+                    
+                    <span class=two></span> &lt; div class='overflow-Y'  &gt; <br>                                                
+                        
+                        <span class=three></span> This is Long Sentence to be as test overflow content [overflow-Y] <br>
+                                                                                                                                        
+                    <span class=two></span> &lt; /div &gt;  <br>                                
+
+                    <br> <br>  <hr>                                       
+
+                // ------------------------------------------------------------------------------ <br><br>
+                <span class='one'></span> //b)  [CSS3] file  : <br>                                          
+
+                    <span class=two></span> // A) {overflow-X} Syntaxes:  <br> <br>
+                                                                        
+                    <span class=three></span> body {  <br>
+                        <span class=four></span> box-sizing: border-box ; <br>
+                    <span class=three></span>  }  <br>                                              
+
+                    <!-- a) Container:  overflow-X : visible [Default]-->
+                    <span class=three></span> div {  <br>
+                        <span class=four></span> width:500px; <br>                                                                                                                          
+                        <span class=four></span> height: 600px; <br>                                                                                                                          
+                        <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=four></span> overflow-X: visible; <br>
+                    <span class=three></span>  }  <br>                                                                                              
+                    <!-- ------------------------------------------------------------------------ -->                                                          
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                            
+
+                    <!-- b) Container:  overflow-X : hidden-->
+                    <span class=three></span> div {  <br>
+                        <span class=four></span> width:500px; <br>                                                                                                                          
+                        <span class=four></span> height: 600px; <br>                                                                                                                          
+                        <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=four></span> overflow-X: hidden; <br>
+                    <span class=three></span>  }  <br>                                                                                              
+                    <!-- ------------------------------------------------------------------------ -->                                                          
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                            
+
+                    <!-- c) Container:  overflow-X : scroll-->
+                    <span class=three></span> div {  <br>
+                        <span class=four></span> width:500px; <br>                                                                                                                          
+                        <span class=four></span> height: 600px; <br>                                                                                                                          
+                        <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                        <span class=four></span> overflow-X: scroll; <br>
+                    <span class=three></span>  }  <br>                                                                                              
+                    <!-- ------------------------------------------------------------------------ -->                                                          
+                    <!-- ------------------------------------------------------------------------ -->                                                          
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                            
+                    // ------------------------------------------------------------------------------ <br><br>                                                                                            
+
+                    <span class=two></span> // B) {overflow-Y} Syntaxes:  <br> <br>
+                                                                        
+                        <span class=three></span> body {  <br>
+                            <span class=four></span> box-sizing: border-box ; <br>
+                        <span class=three></span>  }  <br>                                              
+
+                        <!-- a) Container:  overflow-Y : visible [Default]-->
+                        <span class=three></span> div {  <br>
+                            <span class=four></span> width:500px; <br>                                                                                                                          
+                            <span class=four></span> height: 600px; <br>                                                                                                                          
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> overflow-Y: visible; <br>
+                        <span class=three></span>  }  <br>                                                                                              
+                        <!-- ------------------------------------------------------------------------ -->                                                          
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                            
+
+                        <!-- b) Container:  overflow-Y : hidden-->
+                        <span class=three></span> div {  <br>
+                            <span class=four></span> width:500px; <br>                                                                                                                          
+                            <span class=four></span> height: 600px; <br>                                                                                                                          
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> overflow-Y: hidden; <br>
+                        <span class=three></span>  }  <br>                                                                                              
+                        <!-- ------------------------------------------------------------------------ -->                                                          
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                            
+
+                        <!-- c) Container:  overflow-Y : scroll-->
+                    <span class=three></span> div {  <br>
+                            <span class=four></span> width:500px; <br>                                                                                                                          
+                            <span class=four></span> height: 600px; <br>                                                                                                                          
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> overflow-Y: scroll; <br>
+                        <span class=three></span>  }  <br>                                                                                              
+                        <!-- ------------------------------------------------------------------------ -->                                                          
+                        // ------------------------------------------------------------------------------ <br><br>
+                // ------------------------------------------------------------------------------ <br><br>                                                     
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="JSDOMPract" >
+
+            <header>
+                <h3> [Overflow New Features] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following are Applied examples of {Overflow} new features/properties with all it's all Values} : <br>
+                
+            <p> (3) Fieldsets Multiple contains as following:  </p>
+            
+            <ul>
+                <li> A) First Fieldset: {Overflow-X}: And it has (3) Sections as following :  </li>                                                        
+                    <ol>                        
+                        <li> First Section: {visible} [Default]  </li>                      
+                        <li> Second Section: {hidden} [Default]  </li>                      
+                        <li> Third Section: {scroll} [Default]  </li>                                                                                                                      
+                    </ol>               
+                <!-- ========================================================================= -->
+                                
+                <li> B) Second Fieldset: {Overflow-Y}: And it has (3) Sections as following :  </li>                                                        
+                    <ol>                        
+                        <li> First Section: {visible} [Default]  </li>                      
+                        <li> Second Section: {hidden} [Default]  </li>                      
+                        <li> Third Section: {scroll} [Default]  </li>                                                                                                                      
+                    </ol>               
+                <!-- ========================================================================= -->
+                                
+                
+                <!-- ========================================================================= -->                
+            </ul>                                                
+            <hr><br><br>
+            <!-- ========================================================================= -->                                        
+                
+                <!-- A)  {Overflow-X} Application1  -->
+                    <fieldset class='Overflow-X'>                                                  
+                        <legend> First => Overflow-X : visible - default </legend>
+                        <section class='XDefault'>
+                        
+                            <header> Default value of Overflow-X: [visible] </header>
+                                            
+                            <div class='Overflow-X-Default'>                     
+                                ThisElementOver-flowContentBy[Default]ThisElementOver-flowContentBy[Default]ThisElementOver-flowContentBy[Default]                                 
+                            </div>                        
+                        </section>
+                    <!-- ------------------------------------------------------------------------- -->                
+                        <section class='XVisible'>                   
+                            <header>  Overflow-X: [visible] </header>
+                                            
+                            <div class='Overflow-X-Visible'>                     
+                                ThisElementOver-flowContentBy[Visible]ThisElementOver-flowContentBy[Visible]ThisElementOver-flowContentBy[Visible]
+                            </div>                        
+                        </section>
+                    <!-- ------------------------------------------------------------------------- -->                
+                        <section class='XHidden'>                   
+                            <header>  Overflow-X: [Hidden] </header>
+                                            
+                            <div class='Overflow-X-Hidden'>                     
+                                ThisElementOver-flowContentBy[Hidden]ThisElementOver-flowContentBy[Hidden]ThiselementOver-flowcontentby[Hidden] 
+                            </div>                        
+                        </section>
+                    <!-- ------------------------------------------------------------------------- -->                
+                        <section class='XScroll'>                   
+                            <header>  Overflow-X: [Scroll] </header>
+                                            
+                            <div class='Overflow-X-Scroll'>                     
+                                ThisElementOver-flowcontentby[Scroll]ThiselementOver-flowcontentby[Scroll]ThiselementOver-flowcontentby[Scroll] 
+                            </div>                        
+                        </section>                    
+                        <!-- --------------------------------------------------------------------- -->                            
+                    </fieldset>
+            <!-- --------------------------------------------------------------------- -->                                            
+            <br><hr> <br>        
+            <!-- --------------------------------------------------------------------- -->                            
+            <!-- B)  {Overflow-Y} Application2  -->
+                <fieldset class='Overflow-Y'>                                                  
+                    <legend> First => Overflow-Y : visible - default </legend>
+                    <section class='YDefault'>
+                    
+                        <header> Default value of Overflow-Y: [visible] </header>
+                                        
+                        <div class='Overflow-Y-Default'>                     
+                            ThisElementOver-flowContentBy[Default]ThisElementOver-flowContentby[Default]Thiselement Over-flowcontentby[Default] 
+                        </div>                        
+                    </section>
+                <!-- ------------------------------------------------------------------------- -->                
+                    <section class='YVisible'>                   
+                        <header>  Overflow-Y: [visible] </header>
+                                        
+                        <div class='Overflow-Y-Visible'>                     
+                            ThisElementOver-flowContentBy[Visible]ThiselementOver-flowcontentby[Visible]ThiselementOver-flowcontentby[Visible] 
+                        </div>                        
+                    </section>
+                <!-- ------------------------------------------------------------------------- -->                
+                    <section class='YHidden'>                   
+                        <header>  Overflow-Y: [Hidden] </header>
+                                        
+                        <div class='Overflow-Y-Hidden'>                     
+                            ThisElementOver-flowContentBy[Hidden]ThisElementOver-flowContentBy[Hidden]ThiselementOver-flowcontentby[Hidden]
+                        </div>                        
+                    </section>
+                <!-- ------------------------------------------------------------------------- -->                
+                    <section class='YScroll'>                   
+                        <header>  Overflow-Y: [Scroll] </header>
+                                        
+                        <div class='Overflow-Y-Scroll'>                     
+                            ThiselementOver-flowcontentby[Scroll]ThiselementOver-flowcontentby[Scroll]ThiselementOver-flowcontentby[Scroll]
+                        </div>                        
+                    </section>
+                <!-- ------------------------------------------------------------------------- -->                
+                <!-- --------------------------------------------------------------------- -->                                
+                <!-- --------------------------------------------------------------------- -->                            
+                </fieldset>
+            <!-- --------------------------------------------------------------------- -->                                            
+            <br><hr> <br>        
+            
+            <!-- C)  {Overflow-Y & Overflow-X} Application3  -->
+                <fieldset class='Overflow-XY'>                                                  
+                    <legend> First => Overflow-XY : visible - default </legend>
+                    <section class='XYDefault'>                    
+                        <header> Default value of Overflow-XY: [visible] </header>
+                                        
+                        <div class='Overflow-XY-Default'>                     
+                            ThisElementOver-flowContentBy[Default]ThisElementOver-flowContentby[Default]Thiselement Over-flowcontentby[Default] 
+                        </div>                        
+                    </section>
+                <!-- ------------------------------------------------------------------------- -->                
+                    <section class='XYVisible'>                   
+                        <header>  Overflow-XY: [visible] </header>
+                                        
+                        <div class='Overflow-XY-Visible'>                     
+                            ThisElementOver-flowContentBy[Visible]ThiselementOver-flowcontentby[Visible]ThiselementOver-flowcontentby[Visible] 
+                        </div>                        
+                    </section>
+                <!-- ------------------------------------------------------------------------- -->                
+                    <section class='XYHidden'>                   
+                        <header>  Overflow-XY: [Hidden] </header>
+                                        
+                        <div class='Overflow-XY-Hidden'>                     
+                            ThisElementOver-flowContentBy[Hidden]ThisElementOver-flowContentBy[Hidden]ThiselementOver-flowcontentby[Hidden]
+                        </div>                        
+                    </section>
+                <!-- ------------------------------------------------------------------------- -->                
+                    <section class='XYScroll'>                   
+                        <header>  Overflow-XY: [Scroll] </header>
+                                        
+                        <div class='Overflow-XY-Scroll'>                     
+                            ThiselementOver-flowcontentby[Scroll]ThiselementOver-flowcontentby[Scroll]ThiselementOver-flowcontentby[Scroll]
+                        </div>                        
+                    </section>
+                <!-- ------------------------------------------------------------------------- -->                
+                <!-- --------------------------------------------------------------------- -->                                
+                <!-- --------------------------------------------------------------------- -->                            
+                </fieldset>
+            <!-- --------------------------------------------------------------------- -->                                            
+            <br><hr> <br>        
+        <!-- --------------------------------------------------------------------- -->                                                    
+        </section>            
+
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 24 Video File:</h3>
+            
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=1zGNFJBA_tU&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=24&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\24 Css3  - Overflow New Features.mp4" type="video/mp4">s
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 24 [Overflow New Features ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

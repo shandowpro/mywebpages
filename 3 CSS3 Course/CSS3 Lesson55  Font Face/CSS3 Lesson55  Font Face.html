@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson55  Font Face  </title>
+    <link rel="stylesheet" href="CSS3 Lesson55  Font Face.css" media="all">
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson55  Font Face
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+     <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to CSS3 Lesson55  Font Face main Topics">
+                [ CSS3 Lesson55  Font Face ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to CSS3 Lesson55  Font Face Concept">
+                [ CSS3 Lesson55  Font Face ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to CSS3 Lesson55  Font Face ] Importance & Benefits">
+                [ CSS3 Lesson55  Font Face ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to  CSS3 Lesson55  Font Face  ] Syntax">
+                [ CSS3 Lesson55  Font Face ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to CSS3 Lesson55  Font Face ] Practical Applications">
+                [ CSS3 Lesson55  Font Face ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <main class="Welcome"> CSS3 Course <span> CSS3 Lesson55  Font Face </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header> Font Face Main Topics : </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                
+                <p>  Font Face concept in CSS3. <br></p>                    
+                <p>  Font Face Syntax in CSS3 content  <br></p>                    
+                <p>  Font Face Methods to use in CSS3 :  <br>
+                    <ol>
+                        <li> Intrenal Calling => (url('file path in pc')) </li>
+                        <li> External importing => &lt; link href='location on web link' rel='stylesheet' &gt;  </li>
+                    </ol>                
+                </p>                                    
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class=CSS3Con id="CSS3Con">
+            
+            <header> Font Face Main Concept : </header>            
+                                    
+            <p> In the Original Font property, We used to write the property of Font Famliy with multiple types to avoid un Supported ones by some web Browsers </p>  <br>                
+            
+            <p> They created [Web Safe Font] as a Rerferences Web site to offer the compatablity of each web Browser & Operating System of each type of Font & Font Family, <br>
+                 such as {www.cssfontstack.com} </p>  <br>                
+  
+            <p> As an example of most common unsupported font type in Operating System => {Tahoma is not supported in Linux OS} </p>  <br>                
+            
+            <p> This is a new feature to Create / Import a new {font type} that is not existed in your pc by your own </p>  <br>                
+                                      
+            <p> This is new feature has (2) methods to apply : </p>  <br>                
+                <ol>
+                    <li> External Method :=> {Importing the link from the web of certain font family by creaing link tag with this code } </li>
+                    <li> Intenal Method :=> {Creating the new font face in the CSS3 file [@font-face] & adding the font path in my pc with this code} </li>                                  
+                </ol>
+                
+            <p> There are Multiple websites to pick up and test new font in web browser, and have the source code of it in order to   <br>
+                 1- Embedd it in source code as [External code source] <br>
+                 2- Download it to declare the new font-face in CSS3 as [Internal Code source] <br>
+            </p>
+            
+            <p> Font is more complicated and has more features to study and require more Advanced course to study  </p>
+            
+            <p> There are most common font Types {As Extensions} as following :  </p> <br> 
+                <ol>
+                    <li> TTF : True Type Font </li>
+                    <li> OTF : Open Type Font </li>
+                    <li> WOFF : Web Open Font </li>
+                    <li> WOFF2 : Web Open Font2 </li>
+                    <li> SVG : Scalable Type Font </li>
+                    <li> EDF : Embedded Type Font </li>
+                </ol>
+
+
+<!-- ------------------------------------------------------ -->
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+        <section class="CSS3Imp" id="CSS3Imp">
+            <header>
+                <h3> [Font Face] Importance & Benefits: </h3>
+            </header>
+            
+            <p> =&gt; [Font Face] : This Advanced CSS3 Feature , which is providing the ability to create your own Font in your Web page, whether it will be inported as External link OR will be downloaded and installed in your pc  <br>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [Font Face] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // (*) [Font Face] Syntax as following : <br><br>
+                <span class='one'></span> //First)  [HTML] file  : <br>
+                
+                    <span class=two></span> &lt; div class='Container' &gt; <br> 
+                        <span class=three></span> This is Div <br>                     
+                    <span class=two></span> &lt; div &gt; <br> 
+                
+                    <!-- ---------------------------------------------------------------------------- -->
+                    <!-- ---------------------------------------------------------------------------- -->
+                // ------------------------------------------------------------------------------ <br><br><br>                    
+            // ------------------------------------------------------------------------------ <br><br> <br> <br>  <hr>                                
+
+                <span class='one'></span> // Second)  [CSS3] file  : <br>                                          
+                                            
+                    <!-- CSS3 General Settings of parent container {.Container} :
+                        (A) General Main parent Container Settings :  -->
+                        <!-- ----------------------------------------------------------------------- -->
+                        <span class=two></span> .Container {  <br>
+                            <span class=three></span> position: relative; <br>                        
+                            <span class=three></span> height: 50px; <br>
+                            <span class=three></span> width: 200px ; <br>
+                            <span class=three></span> margin: 50px auto ; <br>                                                                                
+                        <span class=two></span> }  <br> <br>                                                
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- (B) Accessing certain Element(s) using Selectors -->
+                        
+                        <!-- /(B) / a) Only-Child Selector (:Only-Child) : 
+                            Accessing Certain Child that is existed alone in it's Parent container  using [:Only-Child] Selector -->                        
+
+                        <span class=two></span> .Only-Child :Only-Child {  <br>                                                        
+                            <span class=three></span> background-color: red; <br>                            
+                            <span class=three></span> color: Yellow <br>                              
+                        <span class=two></span> }  <br> <hr>                        
+                        <!-- ----------------------------------------------------------------------- -->
+                        
+                        <!-- /(B) / b) Only-Child Selector (:Only-Of-Type) : 
+                            Accessing Certain Type Child that is one of it's type existed in it's Parent container using [:Only-Of-Type] Selector -->                        
+
+                        <span class=two></span> .Only-Of-Type :Only-Of-Type {  <br>                                                        
+                            <span class=three></span> background-color: red; <br>                            
+                            <span class=three></span> color: Yellow <br>                              
+                        <span class=two></span> }  <br> <hr>                        
+                        <!-- ----------------------------------------------------------------------- -->
+                        
+                        <!-- /(B) / c) Selection Selector (::Selection) : 
+                            Accessing Certain Type Child that is one of it's type existed in it's Parent container using [::Selection] Selector -->                        
+
+                        <span class=two></span> .Selection ::Selection {  <br>                                                        
+                            <span class=three></span> background-color: #333; <br>                            
+                            <span class=three></span> color: #fff <br>                              
+                        <span class=two></span> }  <br> <hr>                        
+                        <!-- ----------------------------------------------------------------------- -->
+                                                                        
+                        <!-- ----------------------------------------------------------------------- -->                                                                                                                                                                    
+                        <!-- ------------------------------------------------------------- -->                        
+                        <!-- ------------------------------------------------------------- -->                            
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="CSS3Pract" >
+
+            <header>
+                <h3> [CSS3 Lesson55 [Font Face] General Practical Applications : </h3>
+            </header>
+         
+            <h4> 
+                =&gt; Following is Applied example (font-face) by (2) main containers [one for each type] following  : 
+            </h4>                            
+                
+            <ol>
+                <li> First Container => [Exteranl Importing ] => Importing Exteranl Font family which is not installed in PC with out Downlading & Installing {by Importing it form the web in &lt; Link &gt;  }</li>
+                <li> Second Container => [Interanl Creating ] => Creating my own (font-face): with the Source of Downloaded Font form the PC [url('')] in CSS file and formating the element by it }</li>
+            </ol>                                    
+
+            <!-- --------------------------------------------------------------- -->            
+            <br><br><br>
+            <!-- ========================================================================= -->                                                        
+                        
+            <header> There is only (2) main Parent Containers [for each font-Face apply Methods ] =>  </header>
+
+            <h2> First => Formula 1 : ( n+Number )   </h2>
+            
+            <fieldset class='Container'>                                                                  
+                                                    
+                    <header>  A)  {Font-Face} Method 1  => [External Importing] : </header> <br>
+                                                        
+                    <section class="Font-Face-Exteranl">                        
+                        
+                        <div> This is the Applied Element div1 by font: "Indie Flower"</div>                    
+                        
+                        <div> Method Syntax as following : <br>
+                            1) HTML File : <br>
+                            
+                            &lt; link href="http://fonts.googleapis.com/css?family=India+Flower" rel='stylesheet' &gt; <br>
+                            
+                            &lt; link href="css/style.css" rel='stylesheet' &gt; <br> <br>
+                            
+                            2) CSS3 File : <br>
+                            
+                            div: { <br>
+                                font-family: 'india flower';
+                            }
+                        </div>                    
+
+                    </section>
+                    <br> <br> <br> <hr>                                    
+                    <!-- ------------------------------------------------------------------------------------------------ -->
+                                        
+                    <header>  B)  {Font-Face} Method 2  => [Internal Declaring ] : </header> <br>
+                                                        
+                    <section class="Font-Face-Internal">                        
+                        
+                        <div> This is the Applied Element div1 by font: "MyFont" which it's sources in the Pc </div>                    
+                        
+                        <div> Method Syntax as following : <br>
+                            1) HTML File : <br>                                                        
+                            
+                            &lt; link href="css/style.css" rel='stylesheet' &gt; <br> <br>
+                            
+                            2) CSS3 File : <br>
+                            
+                            div: { <br>
+                                font-family: myFont;
+                            }
+
+                            @font-face {
+                                font-family: myFont; 
+                                font-size: normal;
+                                font-weight: 500;
+                                src: url('fonts/myFonts.ttf'),                                
+                                     url('fonts/myFonts.otf'),                                
+                                     url('fonts/myFonts.woff'),                                
+                                     url('fonts/myFonts.woff2'),                                
+                                     url('fonts/myFonts.svg'), 
+                                     url('fonts/myFonts.edf'); 
+                            }
+                        </div>                    
+                    </section>
+                    <br> <br> <br> <hr>                                    
+                    <!-- ------------------------------------------------------------------------------------------------ -->
+                    
+                                                                                                                                                                                
+                    <header>  C)  {Font-Face} Method 3  => [Internal Declaring - Real Example] : </header> <br>
+                                                        
+                    <section class="Font-Face-InternalR">                        
+                        
+                        <div> This is the Applied Element div1 by font: "Driod Arabic Kufi"</div>                    
+                        
+                        <div> Method Syntax as following : <br>
+                            1) HTML File : <br>                                                        
+                            
+                            &lt; link href="css/style.css" rel='stylesheet' &gt; <br> <br>
+                            
+                            2) CSS3 File : <br>
+                            
+                            div: { <br>
+                                font-family: 'Droid Arabic Kufi';
+                            }
+
+                            @font-face {
+                                font-family: Droid Arabic Kufi; 
+                                font-size: normal;
+                                font-weight: 700;
+                                src: url('//fonts/.gstatic.com/em/droidarabickufi/v6/DroidKufi-Bold.eot');                                
+                            }
+                        </div>                    
+                    </section>
+                    <br> <br> <br> <hr>                                    
+                    <!-- ----------------------------------------------------------- -->                                                                            
+                    <!-- ----------------------------------------------------------- -->
+                    <!-- ----------------------------------------------------------- -->
+                    <!-- ----------------------------------------------------------- -->
+            </fieldset>        
+            
+            <br> <br> <hr>
+            <!-- ----------------------------------------------------------- -->                                                            
+                        
+            <br> <br> <hr>                             
+        </section>                    
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 55 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=SxKXEtniivo&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=55&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\55 Css3 - Font Face.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson55  Font Face ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

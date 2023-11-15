@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 9 [Word Wrap, White Space] </title>
+    <link rel="stylesheet" href="CSS3 Lesson9 [Word Wrap, White Space].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 9 [Word Wrap, White Space]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to Word Wrap, White Space main Topics">
+                [ Word Wrap, White Space ] Main Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to Word Wrap, White Space [Word Wrap, White Space ] Concept">
+                [ Word Wrap, White Space ] Concept </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to Word Wrap, White Space [Word Wrap, White Space ] Importance & Benefits">
+                [ Word Wrap, White Space ] Importance & Benefits </a> </li>
+
+            <li> <a href=#JSDOMSyntx title="Go to Word Wrap, White Space [Word Wrap, White Space ] Syntax">
+                [ Word Wrap, White Space ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to Word Wrap, White Space [Word Wrap, White Space ] Practical Applications">
+                [ Word Wrap, White Space ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 9 [Word Wrap, White Space ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                Word Wrap, White Space Property Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [Word Wrap, White Space] Concept. </li>                       
+                    
+                    <li> [Word Wrap, White Space] Importance & Benefits. </li>
+
+                    <li> [Word Wrap, White Space] Syntax [Exmaple]. </li>
+                    
+                     <li> [Word Wrap, White Space] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    
+                    <ul>
+                         <li> Using the [word-wrap] Property to control breaking-Not Break the Sencetence/Word  </li>
+                         <li> Differnce between [word-wrap: break-word] & [white-space:normal] in breaking the Sencetence </li>                                                  
+                         
+                    </ul>                   
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> [Word Wrap, White Space] Concept: </h3>
+            </header>
+                        
+            <p> =&gt; [Text-Overflow] : This Advanced Tool to control Breaking the Text in it's parent Container. <br>
+                
+            <p> =&gt; Differnces between [word-wrap] & [white-space] : <br>                
+                <ul>                                                            
+                    <li> [white-space] => To control the Wrapping property of the Text with mainly following options :</li> <br>
+                        <ul>
+                            <li> {white-space: normal} => The Normal Value of this Property, which is meaning to Allow text Wrapping {will not break if the Text is one word} </li>
+                            <li> {white-space: nowrap} => To prevent text wrapping  </li>                            
+                        </ul>                    
+
+                    <li> [word-wrap] => More advanced tool To Control the Breaking Text over it's container by following properties: </li> <br>
+                         <ul>
+                             <li> {word-wrap: normal} : It is the Default Value of text breaking => which will normally [NOT] break the text </li>                                                
+                             <li> {word-wrap: break-word} : Will break the Text (even it was one Word) to be contained in it's parent Container.  </li>
+                        </ul>                                                 
+                </ul>
+                
+            </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+            <section class="JSDOMImp" id="JSDOMImp">
+                <header>
+                    <h3> [Word Wrap, White Space ] Importance & Benefits: </h3>
+                </header>
+
+                <p> =&gt; [Word Wrap] : This Advanced applying will give us advanced & unique & assurd Breaking Features for the Text ) with following features : <br>            
+                    <ul>                                        
+                        <li> Assured Text breaking even the Text is only one Word (text with out spacing)</li>                        
+                        <li> It is more better than [white-spacing] breaking Tool (due to it will not break if the text is one Word)  <li>                                                             
+                    </ul>                                
+            </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> [ Word Wrap, White Space ] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [Word Wrap, White Space] Syntax as following :<br><br>
+                    
+                    <span class= one></span> //1)  [ Not breaking text property using both of {Word Wrap} , {White Space}] Syntax:  <br>                                          
+                        
+                        <span class=two></span> //a)  [HTML] file  : <br>                                          
+                        
+                            <span class=three></span> &lt; div &gt; This is A normal Div with long sentence text with will be NOT breaken 
+                            using [word-wrap:normal + white-space:nowrap]                               
+                            <br>                                            
+
+                            <span class=three></span> &lt;/div&gt;   <br>                                                                              
+                        
+                    // ------------------------------------------------------------------------------ <br><br>
+                        <span class=two></span> // {Exmple 1}/a: [CSS3] file [Disable breaking Property by {word-wrap:normal}]  : <br>                                                                  
+                            <span class=three></span> div {  <br>                                                  
+                                <span class=four></span> margin: 40px; <br>                                                                          
+                                <span class=four></span> padding: 3px; <br>                                                                          
+                                <span class=four></span> width: 400px; <br>                                                                          
+                                <span class=four></span> border: 1px solid #CCC; <br>                                                                          
+                                <span class=four></span> backgournd-color: #FFF; <br>                                                                                                          
+                                <!-- <span class=four></span> overflow: hidden;  -->                                                         
+                                <span class=four></span> word-wrap: normal; <br>                                                                                                          
+                                <!-- <span class=four></span> text-overflow: ellipsis; <br>                                                                                                           -->
+                        <span class=three></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>
+                    <span class= one></span> // {Exmple 1}/b: [Enabling text breaking property when (hovering) by {word-wrap: break-word} property]  Syntax:  <br>                                                                      
+                        <span class=three></span> div: hover {  <br>                                                                                  
+                            <!-- <span class=four></span> overflow: visible <br> -->
+                            <span class=four></span> word-wrap: break-word; <br>
+                        <span class=three></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>                        
+                    // ------------------------------------------------------------------------------ <br><br>                        
+                    
+                    <span class=two></span> //b 2) {Exmple 2}/a: [CSS3] file [Disable breaking Property by {white-space: nowrap}]  : <br>                                                                  
+                        <span class=three></span> div {  <br>                                                  
+                            <span class=four></span> margin: 40px; <br>                                                                          
+                            <span class=four></span> padding: 3px; <br>                                                                          
+                            <span class=four></span> width: 400px; <br>                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                          
+                            <span class=four></span> backgournd-color: #FFF; <br>                                                                                                          
+                            <!-- <span class=four></span> overflow: hidden;  -->
+                            <br>                                                                                                          
+                            <span class=four></span> white-space: nowrap; <br>                                                                                                          
+                            <!-- <span class=four></span> text-overflow: ellipsis; <br>                                                                                                           -->
+                        <span class=three></span>  }  <br>                                                                  
+                    // ------------------------------------------------------------------------------ <br><br>
+                    <span class= one></span> // {Exmple 2}/b: [Enabling text breaking property when (hovering) by {white-space: normal} property]  Syntax:  <br>                                                                      
+                    <span class=three></span> div: hover {  <br>                                                                                  
+                        <!-- <span class=four></span> overflow: visible <br> -->
+                        <span class=four></span> white-space: normal; <br>
+                    <span class=three></span>  }  <br>                                                                  
+                //=========================================================== <br> <br>                                    
+                //=========================================================== <br> <br>                                                      
+                //=========================================================== <br> <br>                                                                                    
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="JSDOMPract">
+
+            <header>
+                <h3> [Word Wrap, White Space] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Following is the Applied example of previous syntax : &gt;&gt; <br>
+                <!-- <ul>
+                    <li>Section of (2) divs are diveded equally in their Parent (Section) </li> 
+                    
+                    <li> Each children Elemnets (div)s  has a (percentage || Value) width divided percentagly of the parent [section] Width => {With No Any Addtional Width}   </li> 
+                    
+                    <li> Each children Elemnets (div)s  has a (percentage || Value) width divided percentagly of the parent [section] Width  => {With mulitple Addtional Width [padding, border, unequalled Width]}    </li> 
+
+                </ul> -->
+                
+            <fieldset class='FirstExp'>  
+                <legend> First Example Section {Disabled [text warping by {white-space} property] }</legend>
+
+                <!-- <h4> First case {Basic [Normal Text] with No hovering, with Using No Transition Effect}</h4> -->
+                
+                <section class='break-White-Space'>
+                    <h4>This text is not wraped text by Default </h4>
+                    <p>ThisismyDisabledText(by{white-space:nowrap}),withabilityofEnablingtheBreakingpropertyby({white-space:normal})alongsentenceoflongarticle</p>
+                </section>
+                //================================================================================== <br><br>                
+            </fieldset>                                                    
+
+            <hr>
+
+            <fieldset class='SecondExp'>            
+                <legend> Second Example Section {Disabled [text warping by {white-space} property] }</legend>
+            
+                <section class='bWW'>
+                    <h4>This text is not wraped text by Default </h4>
+                    <p>ThisismyDisabledText(by{word-wrap:normal}),withabilityofEnablingtheBreakingpropertyby({word-wrap:break-word})alongsentenceoflongarticle</p>
+                </section>
+                //================================================================================== <br><br>
+            </fieldset>
+
+            <br>                         
+            <hr>
+                //================================================================================== <br><br>                
+                //================================================================================== <br><br>
+
+            <!-- <fieldset class='SecondExp'>  
+                <legend> Second Example Section {Hidden nowraped Text with [clip property] }</legend>                            
+                <section class='hiddenClip'>
+                    <h4>This is my Hidden Text (with clip Property [the Default value]) and this means that it will be cut of becouse it is a long sentence of long article </h4>
+                </section>
+                //================================================================================== <br><br>                
+                //================================================================================== <br><br>
+                                
+            </fieldset>
+             -->
+            //================================================================================== <br><br>
+            
+            <!-- <fieldset class='ThirdExp'>  
+                <legend> Third Example Section Multiple {Text Element[has text-shadow] with No Hovering (text-shadow) + with usign Transition}</legend>
+
+                <h4> First case {Basic [Normal Text] with No hovering, with Using No Transition Effect}</h4>
+                
+                <section class='Mult1'>
+                    <h4>This is my Text (no Shadow) </h4>
+                </section>
+                //================================================================================== <br><br>
+                <h4> Second case Multiple {Basic [Normal Text (has no text shadow)] with No hovering, with using Transition Effect}</h4>
+                
+                <section class='Mult2'>
+                    <h4>This is my Text (hovering Text Shadow) </h4>
+                </section>
+                //================================================================================== <br><br>
+                                
+            </fieldset> -->
+            
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+    
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 9 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=WdCKDzv5Au8&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=9&index=8&index=7&index=6&index=5&index=4&index=3&index=2&controls=0&loop=1&autoplay=1&fs=1" 				
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\9 Css3 - Word Wrap, White Space.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 9 [Word Wrap, White Space ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 19 HTML5 Form Input Fields part 3 [Time, Date, Datetime-local, Month, Week] </title>
+    <link rel="stylesheet" href="HTML5 Form Input [Time, Date, Month, Week].css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">  </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 19 HTML5 Form Input part 3 [Time, Date, Datetime-local, Month, Week]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="HTML5 Form Input new Attributes Main Concept" > HTML5 Form Input Fields               [Time, Date, Datetime-local, Month, Week] Main Concept </a> </li>
+            <li> <a href=#InputTimeNTag   title="Go to Input Tag new field / Time" > Form Input Element =>                   Time   </a> </li>     
+            <li> <a href=#InputDateNTag   title="Go to Input Tag new field / Date" > Form Input Element =>                   Date   </a> </li>     
+            <li> <a href=#InputDatetime-localNTag   title="Go to Input Tag new field / Datetime-local" > Form                 Input Element => Datetime-local   </a> </li>   
+            <li> <a href=#InputMonthNTag   title="Go to Input Tag new field / Month" > Form Input Element =>                 Month    </a> </li>   
+            <li> <a href=#InputWeekNTag   title="Go to Input Tag new field / Week" > Form Input Element =>                   Week    </a> </li>   
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> Lesson 19 {Form Input Fields part 3 [Time, Date, Datetime-local, Month, Week] } </span> </main>
+
+<!-------------------------------------------------------------------------------------------------------------->                        
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>
+                HTML5 Form Input Fields => [Time, Date, Datetime-local, Month, Week] Concept 
+            </header>
+            
+            <article>                
+                <p> &gt; The New HTML5 Form Elements in this lesson as following :</p>
+                
+                <ol>                    
+                    <li> Form => &nbsp;&nbsp; &lt; input &nbsp; type = "time" &gt;  </li>           
+                    <li> Form => &nbsp;&nbsp; &lt; input &nbsp; type = "date" &gt;  </li>           
+                    <li> Form => &nbsp;&nbsp; &lt; input &nbsp; type = "datetime-local" &gt;  </li>           
+                    <li> Form => &nbsp;&nbsp; &lt; input &nbsp; type = "month" &gt;  </li>           
+                    <li> Form => &nbsp;&nbsp; &lt; input &nbsp; type = "week" &gt;  </li>           
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>
+      
+        <section class="InputTimeNTag" id="InputTimeNTag">
+            <header>
+                Form Input New field [ &lt; input  type = "time" &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Form Input New field [Time] Concept: </h1>
+                    <p> =&gt; [Time Field] is one of the new fields in HTML5 and Not supported in by  both                 Internet Explorer & <span class="FixSpace">FireFox</span> browser until 2014. 
+                    <p> =&gt; [Time Field] in unsupported browsers need to programming it with Javascript codes             in Front End, and <span class="FixSpace">PHP</span> or similer in Back End. 
+                    <p> =&gt; [Time Field] has (1) main Attributes :
+                        <ul>
+                            <li> Name => which is the programable name for the input element within the form</li> 
+                        </ul>
+                    <p> =&gt; [Time Field] is mainly made to input a Time details (Hours + Mins + Am/Pm) with in           the Form to the <span class="FixSpace">server</span> by user, and it usually followed by [Submit] button. 
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Form Input [Time Field] Usages: </h1>                    
+                    <p> =&gt; It mainly designed to input Validated Time Format with out pre-programing efforts. </p>                         
+                    <p> =&gt; It can be programatically used in Events to as an actions or reactions to make               change by page or any of <span class="FixSpace">its</span> element/s using Javascript codes in front end. </p>             
+                </header>
+                
+                <header class="InputTimeExp">
+                    <h1>Example:</h1>
+                    <p> Entering specific Time in the Time input field type.</p>
+                    <section>
+                        <h3> Enter your Time: </h3>
+                        <form>
+                            Insert a specific time: 
+                            <input type="time" name="time" >                            
+                            <input type="submit" value="Send">
+                        </form>
+                    </section>
+                    
+                    <div class="InputTimeExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Enter your Time: &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form&gt; <br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; Insert a specific time: <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "time"&nbsp; name = "time"&nbsp; &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "send"  &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+        
+        <section class="InputDateNTag" id="InputDateNTag">
+            <header>
+                Form Input New field [ &lt; input  type = "date" &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Form Input New field [Date] Concept: </h1>
+                    <p> =&gt; [Date Field] is one of the new fields in HTML5 and Not supported in by each                   Safari, Internet Explorer, <span class="FixSpace">FireFox</span> browsers until 2014. 
+                    <p> =&gt; [Date Field] in unsupported browsers need to programming it with Javascript codes             in Front End, and <span class="FixSpace">PHP</span> or similer in Back End. 
+                    <p> =&gt; [Date Field] has (1) main Attributes :
+                        <ul>
+                            <li> Name => which is the programable name for the input element within the form</li> 
+                        </ul>
+                    <p> =&gt; [Date Field] is mainly made to input a specific date by advanced assistant help               tool.                     
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Form Input [Date Field] Usages: </h1>                    
+                    <p> =&gt; It can be be programatically used in Events to as an actions or reactions to change           the Value of certain <span class="FixSpace">input</span> or element/s of page using           Javascript codes. </p>       
+                    <p> =&gt; It provide an easy Date input tool with in the within a form in website. </p> 
+                </header>
+                
+                <header class="InputDateExp">
+                    <h1>Example:</h1>
+                    <p> Entering specific Date </p>
+                    <section>
+                        <h3> Inserting valid Date in Date input field: </h3>
+                        <form>
+                            Enter your Date :
+                            <input type="date" name="date" >       
+                            <input type="submit"  value="submit">
+                        </form>
+                    </section>
+                    
+                    <div class="InputDateExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Enter your value to search about it in search field: &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form&gt; <br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; Enter your Date : <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "date"&nbsp; name = "date" &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "submit"&nbsp; value = "send"  &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        <!-------------------------------------------------------------------------------------------------------------->
+        <section class="InputDatetime-localNTag" id="InputDatetime-localNTag">
+            <header>
+                Form Input New field [ &lt; input  type = "datetime-local" &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Form Input New field [Datetime-local] Concept: </h1>
+                    <p> =&gt; [Datetime-local Field] is one of the new fields in HTML5 and Not supported by                 Safari browser until <span class="FixSpace">2014.</span> 
+                    <p> =&gt; [Datetime-local Field] in unsupported browsers need to programming it with                   Javascript codes in Front <span class="FixSpace">End</span>, and PHP or similer in Back End. 
+                    <p> =&gt; [Datetime-local Field] has (1) main Attributes :
+                        <ul>
+                            <li> Name => which is the programable name for the input element within the form</li> 
+                        </ul>
+                    <p> =&gt; [Datetime-local Field] is mainly made to input a Full Date & Time Format within               the form to the server <span class="FixSpace">by</span> user, and it usually followed by [Submit] button. 
+                    <p> =&gt; [Datetime-local Field] is pre-programmed to accept only Full Date & Time format.
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Form Input [Datetime-local Field] Usages: </h1>                    
+                    <p> =&gt; It mainly designed to input Validated Time Format with out pre-programing efforts. 
+                    <p> =&gt; It can be programatically used in Events to as an actions or reactions to make               change by page or any of <span class="FixSpace">its</span> element/s using Javascript codes in front end. </p>             
+                </header>
+                
+                <header class="InputDatetime-localExp">
+                    <h1>Example:</h1>
+                    <p> Inserting a Full Date & Time Format in the Datetime-local input field type</p>
+                    <section>
+                        <h3> Enter a vaild Datetime Format : </h3>
+                        <form>
+                            Insert a valid date and time :
+                            <input type="datetime-local" name="datetime">     
+                            <input type="submit"  value="Send">
+                        </form>
+                    </section>
+                    
+                    <div class="InputDatetime-localExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Enter a vaild Datetime format : &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form&gt; <br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; Insert a valid date and time :<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "datetime-local"&nbsp; name = "datetime"&nbsp; &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; &nbsp; value = "send"  &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+        <!-------------------------------------------------------------------------------------------------------------->
+        <section class="InputMonthNTag" id="InputMonthNTag">
+            <header>
+                Form Input New field [ &lt; input  type = "month" &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Form Input New field [Month] Concept: </h1>
+                    <p> =&gt; [Month Field] is one of the new fields in HTML5 and Not supported by                         Safari browser until 2014. 
+                    <p> =&gt; [Month Field] in unsupported browsers need to programming it with                             Javascript codes in Front End, and <span class="FixSpace">PHP</span> or similer in Back End. 
+                    <p> =&gt; [Month Field] has (1) main Attributes :
+                        <ul>
+                            <li> Name => which is the programable name for the input element within the form</li> 
+                        </ul>
+                    <p> =&gt; [Month Field] is mainly made to input a Month value Format within                             the form to the server by user, and <span class="FixSpace">it</span> usually                 followed by [Submit] button. 
+                    <p> =&gt; [Month Field] is pre-programmed to accept only month format.
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Form Input [Month Field] Usages: </h1>                    
+                    <p> =&gt; It mainly designed to input Validated Month Format with out pre-programing efforts. 
+                    <p> =&gt; It can be programetically used in Events to as an actions or reactions to make               change by page or any of <span class="FixSpace">its</span> element/s using Javascript codes in front end. </p>             
+                </header>
+                
+                <header class="InputMonthExp">
+                    <h1>Example:</h1>
+                    <p> Inserting a valid Month Format in the Month input field type</p>
+                    <section>
+                        <h3> Enter a vaild Month Format : </h3>
+                        <form>
+                            Insert a valid Month value :
+                            <input type="month" name="month">     
+                            <input type="submit"  value="Send">
+                        </form>
+                    </section>
+                    
+                    <div class="InputMonthExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Enter a vaild Month format : &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form&gt; <br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; Insert a valid Month value :<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "month"&nbsp; name = "month"&nbsp; &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "send" &nbsp; &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+<!-------------------------------------------------------------------------------------------------------------->        
+        <section class="InputWeekNTag" id="InputWeekNTag">
+            <header>
+                Form Input New field [ &lt; input  type = "week" &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Form Input New field [Week] Concept: </h1>
+                    <p> =&gt; [Week Field] is one of the new fields type within Input Tag HTML5 and Not supported           by each <span class="FixSpace">Internet</span> Explorer and Safari browser until 2014. 
+                    <p> =&gt; [Week Field] in unsupported browsers need to programming it with Javascript codes             in Front End, and <span class="FixSpace">PHP</span> or similer in Back End. 
+                    <p> =&gt; [Week] has (1) main Attributes :
+                        <ul>
+                            <li> Name => which is the programable name for the input element within the form</li> 
+                        </ul>
+                    <p> =&gt; [Week Field] is mainly made to input a Week Format value within the form to the               server by user, and it <span class="FixSpace">usually</span> followed by [Submit] button. 
+                    <p> =&gt; [Week Field] is pre-programmed to accept only Week & Month & Years value format.
+                    <p> =&gt; [Week Field] is allowing to insert the number of week monthly and annualy.
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Form Input [Week Field] Usages: </h1>                    
+                    <p> =&gt; It mainly designed to input Validated Week Format with out pre-programing efforts. 
+                    <p> =&gt; It can be programatically used in Events to as an actions or reactions to make               change by page or any of <span class="FixSpace">its</span> element/s using Javascript codes in front end. </p>   
+                </header>
+                
+                <header class="InputWeekExp">
+                    <h1>Example:</h1>
+                    <p> Inserting a Week Format in the Week input field type</p>
+                    <section>
+                        <h3> Enter a vaild Week Format value : </h3>
+                        <form>
+                            Insert a valid Week Value :
+                            <input type="week" name="week">     
+                            <input type="submit"  value="Send">
+                        </form>
+                    </section>
+                    
+                    <div class="InputWeekExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Enter a vaild Datetime format : &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form&gt; <br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; Insert a valid Week Value :<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "week"&nbsp; name = "week"&nbsp; &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; value = "send" &nbsp; &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+        
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="12">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num1">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 19 Video File:</h3>
+                <video controls width="300" height="300" autoplay>
+                    <source src="C:/Users/hp/Videos/pLanguages/web/1 Web Designing Front End/A HTML/2 HTML 5/HTML 5/19 Form Input - Time, Date, Month, Week.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                        
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

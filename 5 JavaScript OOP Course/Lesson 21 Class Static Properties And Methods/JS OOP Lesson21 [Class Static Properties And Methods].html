@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS OOP Lesson 21 [Class Static Properites and Methods]</title>
+    <link
+      rel="stylesheet"
+      href="JS OOP Lesson21 [Class Static Properties And Methods].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JS OOP Lesson 21 [Class Static Properites and Methods]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS OOP main Topics">
+            JS OOP Lesson21 [Class Static Properites and Methods ] Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPCon"
+            title="Go to JS OOP [Class Static Properites and Methods ] Concept"
+          >
+            JS OOP Lesson21 [Class Static Properites and Methods ] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPImp"
+            title="Go to JS OOP [Class Static Properites and Methods ] Importance & Benefits"
+          >
+            JS OOP Lesson21 [Class Static Properites and Methods ] Importance &
+            Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPSyntx"
+            title="Go to JS OOP [Class Static Properites and Methods ] Syntax"
+          >
+            JS OOP Lesson21 [Class Static Properites and Methods ] Syntax &
+            Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPPract"
+            title="Go to JS OOP [Class Static Properites and Methods ] Practical Applications"
+          >
+            JS OOP Lesson21 [Class Static Properites and Methods ] Practical
+            Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS OOP Course
+      <span>
+        JS OOP Lesson 21 [Class Static Properites and Methods ] {Part2}
+      </span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          JS OOP [Class Static Properties and Methods ] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>JS OOP [Class Static Properites and Methods ] Concept.</li>
+
+            <li>
+              JS OOP [Class Static Properites and Methods ] Importance &
+              Benefits.
+            </li>
+
+            <li>
+              JS OOP [Class Static Properites and Methods ] Syntax [Define +
+              Access].
+            </li>
+
+            <li>
+              JS OOP [Class Static Properites and Methods ] Practical
+              Application.
+            </li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPCon" id="JSOOPCon">
+        <header>
+          <h3>JS OOP [Class Static Properites and Methods ] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JS OOP [Class Static Properites and Methods ]: [Static Property
+          & Method] is defined Properites and Methods that not related to any of
+          Extracted objects that will be Created from this Classs.
+        </p>
+
+        <p>
+          =&gt; JS OOP [Static Properites ]: They are Properties that are not
+          Related of any Extracted objects will be Extracted from the Class.
+        </p>
+        <p>
+          =&gt; JS OOP [Static Properites ]: It can be Accessed only by Class
+          itself , and Not by any of Extracted Object(s).
+        </p>
+
+        <p>
+          =&gt; JS OOP [Static Method ]: They are Methods that are not Related
+          of any Extracted objects will be Extracted from the Class.
+        </p>
+        <p>
+          =&gt; JS OOP [Static Method ]: It can be Accessed only by Class itself
+          , and Not by any of Extracted Object(s).
+        </p>
+
+        <p>
+          =&gt; JS OOP [Class Static Properites and Methods ]: This lessson will
+          provide advanced concepts & Examples of Static Propeties and Methods +
+          Extra Differences between [Constructor Function and Class].
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSOOPImp" id="JSOOPImp">
+        <header>
+          <h3>
+            JS OOP [Class Static Properites and Methods ] Importance & Benefits:
+          </h3>
+        </header>
+
+        <p>
+          [Class Static Properites and Methods ] gives us the Following Features
+          : <br />
+        </p>
+        <ul>
+          <li>
+            Great understanding of OOP of Class Static Properites and Methods
+            gives great abilities for more advanced programing features.
+          </li>
+
+          <li>
+            More advanced Accessing tools to different scopes of Class, and
+            gives Private Sopes of Accessibility for only Class without any of
+            Extracted Objects .
+          </li>
+
+          <li>
+            Accessibility Features to Access to [Static Variable] Dircecty
+            through [Static Method] & Indirectly through [Normal Method by using
+            Class name itself] .
+          </li>
+
+          <li>
+            The Ability for Extra Controling of Class through Static Properites
+            and Methods, with out Effecting on any of Extracted Object(s)
+          </li>
+        </ul>
+
+        <p>
+          [Class] is Conceptually differing from [Constructor Function] in
+          following Aspects : <br />
+        </p>
+
+        <ol>
+          <li>
+            In [Class] any Extracted object(s) must be Declared After
+            Decleration of [Class] it-self, which the Both is allowed in
+            [Constructor Function ]
+          </li>
+
+          <li>
+            In [Class] Properties and Parameters is being declaring by
+            {constructor} syntax, which is a part of [Class] main Syntax.
+          </li>
+
+          <li>
+            In [Class] Method(s) can be Extracted from {Constructor} and be
+            placed in separeted syntax, but inside the main [Class].
+          </li>
+
+          <li>
+            Error throw Message {of Not using [New] key wordf in Extacting new
+            Object} in [Class] will be showen by Default, but in Constructor
+            Function needs to Be written in the script
+          </li>
+        </ol>
+
+        <p>
+          =&gt;Following are Differences between [Static and Normal Methods &
+          Properties] :
+        </p>
+
+        <ol>
+          <li>[ Using {this.} ] => :</li>
+          <ul>
+            <li>
+              [Outside constructor ] => Defining Properties & Methods in Class
+              outside {constructor} syntax we Dont need to use {this.} for each
+              (Static & Normal) Methods & Properties.
+            </li>
+
+            <li>
+              [Inside constructor ] => Defining Properties & Methods in Class
+              inside {constructor} syntax
+            </li>
+            <ul>
+              <li>
+                [ Normal Methods & Properties] => We Must need to use {this.}
+              </li>
+              <li>
+                [ Static Methods & Properties] => We Must need to use {Class's
+                Name.} istead of this.
+              </li>
+            </ul>
+          </ul>
+
+          <li>[ using {=} keyword ] :</li>
+          <ul type="A">
+            <li>
+              [Static Methods & Properties] => We Must use [=] in the Syntax
+              always {although it is out side the (Constructor)}
+            </li>
+
+            <li>
+              [Normal Methods & Properties] => There are (2) cases {inside &
+              outside (constructor) keyword}:
+            </li>
+            <ul>
+              <li>
+                [Inside constructor keyword] => We Must use [=] & [this.]
+                keywords in the Syntax
+              </li>
+              <li>
+                [Outside constructor keyword] => We Must NOT use [=] in the
+                Syntax for [Normal Methods & Properties only]
+              </li>
+            </ul>
+          </ul>
+
+          <li>
+            Accessability to Static properites of Class inside methods (Normal &
+            Static) :
+          </li>
+          <ul>
+            <li>
+              [Inside Static] Method => We can use just [this.] Operator to
+              Access Directly the Static Variable , {because [this] inside the
+              Static access to [Class] itself}
+            </li>
+            <li>
+              [Inside Normal] Method => We Must use [Class Name] to Access to
+              Static Variable/Method, and [this.] Opertator can not be used
+              {because it access only of Parameters inside [constructor] Syntax}
+            </li>
+          </ul>
+        </ol>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPSyntx" id="JSOOPSyntx">
+        <header>
+          <h3>
+            JS OOP [Class Static Properites and Methods ] Syntax & Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; JS OOP Defining-Declaring [Class] Conceptual Syntax as following
+          :
+        </p>
+
+        <div id="Code" class="Code">
+          // A) JS OOP Defining-Declaring [Class] Conceptual Syntax as following
+          :<br /><br />
+          <span class="one"></span> class className { <br />
+
+          <span class="two"></span> constructor(Par1, Par2, Par3) { <br />
+          <span class="three"></span> this.par1 = par1;<br />
+          <span class="three"></span> this.par2 = par2;<br />
+          <span class="three"></span> this.par3 = par3;<br />
+
+          <span class="three"></span> // *) Defining Object's Normal Method
+          [inside Constructor] + <br />
+          <span class="four"></span>(Returning Static Variable in it - using
+          {class Name} keyword): <br />
+          <br />
+
+          <span class="three"></span> NMethodName1 = function() { <br />
+          <span class="four"></span>return 'The Value of Static variable =
+          ${ClassName.SvarName}'; <br />
+          <span class="three"></span>} <br /><br />
+          <span class="two"></span> }<br />
+          <br />
+
+          <span class="one"></span> // 1) Defining Static Variable: <br />
+          <span class="two"></span> static SvarName = value; <br /><br />
+
+          <span class="one"></span> // 2) Defining Static Method + (Returning
+          Static Variable in it - using {this.} key word) : <br />
+          <span class="two"></span> static SmethodName = function() { <br />
+          <span class="three"></span>return 'The Value of Static variable =
+          ${this.SvarName}'; <br />
+          <span class="two"></span>} <br /><br />
+
+          <span class="one"></span> // 3) Defining Object's Normal Method [Out
+          of Constructor] + <br />
+          <span class="two"></span>(Returning Static Variable in it - using
+          {class Name} keyword): <br />
+          <br />
+
+          <span class="two"></span> NMethodName2() { <br />
+          <span class="three"></span>return 'The Value of Static variable =
+          ${ClassName.SvarName}'; <br />
+          <span class="two"></span>} <br /><br />
+
+          <span class="two"></span> methName1() { <br />
+          <span class="three"></span> return 'The Value of Parameter 1 is
+          ${this.par1}'; <br />
+          <span class="two"></span>} <br />
+          <br />
+
+          <span class="two"></span> methName2() { <br />
+          <span class="three"></span> return 'The Value of Parameter 2 is
+          ${this.par2}'; <br />
+          <span class="two"></span>} <br />
+          <br />
+
+          <span class="two"></span> methName3() { <br />
+          <span class="three"></span> return 'The Value of Parameter 3 is
+          ${this.par3}'; <br />
+          <span class="two"></span>} <br />
+          <br />
+
+          <span class="one"></span> }<br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          // B) Extracting a new one Object from [Class] :<br /><br />
+
+          <span class="one"></span>// 1] Declaring new Object (obj1) from the
+          [Class]: <br />
+          <span class="two"></span> let obj1 = new User("par1 value", "par2
+          value", "par3 value"); <br /><br />
+
+          //----------------------------------------------------------------<br /><br />
+
+          // C) Accessing Static Variable [Value] :<br /><br />
+          <span class="one"></span>console.log(ClassName.SvarName);<br />
+          <br />
+
+          //================================================================<br /><br />
+
+          // D) Accessing Static Method [Value + Syntax] :<br /><br />
+          1) Accessing to Static Methods [Value] : <br />
+          <span class="one"></span>console.log(ClassName.SmethodName1());<br />
+          <br />
+          //------------------------------------------------------------<br /><br />
+
+          2) Accessing to Static Methods [Syntax] : <br />
+          <span class="one"></span>console.log(ClassName.SmethodName1);<br />
+          <br />
+
+          //=========================================================== <br />
+          <br />
+
+          // E) Accessing Normal Method [Value + Syntax] :<br /><br />
+          1) Accessing to Normal Methods [Value] : <br />
+          <span class="one"></span>console.log(user1.NmethodName2());<br />
+          <br />
+          //------------------------------------------------------------<br /><br />
+
+          2) Accessing to Normal Methods [Syntax]: <br />
+          <span class="one"></span>console.log(user1.NMethodName2);<br />
+          <br />
+          //=========================================================== <br />
+          <br />
+          <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPPract" id="JSOOPPract">
+        <header>
+          <h3>
+            JS OOP [Class Static Properites and Methods] General Practical
+            Applications :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Here one Major Application will include following Function/Tasks
+          : &gt;&gt; <br />
+        </p>
+
+        <ol>
+          <li>Choosing between (2) Paths [Class] & [Constructor Function]</li>
+
+          <li>
+            Declaring Default (2) Paths [Class] & [Constructor Function] with
+            Several Example Methods and Properites
+          </li>
+
+          <li>
+            Ability to Extract Multiple Object from each [Class] & [Constructor
+            Function ] according user's Desired Count.
+          </li>
+
+          <li>Inside each Path there are the Following Functions :</li>
+          <ol>
+            <li>
+              Displaying the main [Class] Or [Constructor Function ] Default
+              Syntax.
+            </li>
+
+            <li>
+              Choosing from available Methods to Execute to Display + Checking
+              for the Constructor Function Name (by (2) available Methods)
+            </li>
+
+            <li>
+              Displaying all Extracted Object(s) in Text Area field in the web
+              page .
+            </li>
+          </ol>
+        </ol>
+
+        <br />
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <button class="btn" onclick="test()">
+          Click to Start [Testing Class Static Properties & Methods ]
+          Application
+        </button>
+
+        <br />
+        <hr />
+        <br />
+
+        <textarea id="txtarea1" class="txtarea1"> </textarea><br />
+
+        <button class="btn" onclick="Display1()">
+          Click to Display JS Code of [Testing Class Static Properties & Methods
+          ] Application
+        </button>
+
+        <script src="JSOOPClassStatic.js"></script>
+
+        <br />
+
+        <hr />
+
+        <!-- <div class=JSOOPObjConstTraining >                                        
+                    
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                            <span class=two></span> Click to Start [Testing Class Static Properites and Methods ] Application <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                            
+                        
+                        <span class=one></span> &lt;button class="btn" onclick="testPro()"&gt;<br>                           
+                            <span class=two></span> Click to Start [Testing Class Static Properites and Methods]<br>
+                        <span class=one></span> &lt;/button&gt; <br><br>                            
+                        
+                        <span class=one></span> &lt;script src="JSOOPClassIntro.js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JSOOP [Class Static Properites and Methods] */ <br>                    
+                        template-string-converter.enable; <br><br>
+
+
+                        function test() { <br> <br>
+                                                        
+                            <span class=one></span> var a = prompt("Welcome to [Class Static Properities & Methods] Application \n<br>
+                                <span class=two></span> Press (1) to start the application \n Press any other key to Exit...");<br> <br>
+                                
+                            <span class=one></span>if (a != "1") {  <br>
+                                <span class=two></span>alert("Good Bye!"); <br>
+                            <span class=one></span>} else { <br> <br>
+
+                                <span class=two></span>do { <br>
+                                    <span class=three></span> alert("Welcome to [Class Static Properities & Methods] Application ..."); <br><br>            
+                                    
+                                    <span class=three></span>// Declaring Default [Class] : <br>                                                
+                                    <span class=three></span> class constClass { <br> <br>
+                                        
+                                        <span class=four></span> // Creating Static Property: <br>
+                                        <span class=four></span> static counter = 0; <br> <br>
+                                        
+                                        <span class=four></span>constructor(fName, lName, age, gender, city, email) {<br>
+                                            <span class=five></span>this.fName = fName; <br>
+                                            <span class=five></span>this.lName = lName; <br>
+                                            <span class=five></span>this.age = age; <br>
+                                            <span class=five></span>this.gender = gender; <br>
+                                            <span class=five></span>this.city = city; <br>
+                                            <span class=five></span>this.email = email; <br> <br>
+                                            
+                                            <span class=five></span>// Adding Static [counter] property with increament <br>
+                                                <span class=six></span>{to be Accessed by every new object will be Extracted}: <br>
+                                            <span class=five></span>constClass.counter++; <br>
+                                            
+                                        <span class=four></span>} <br> <br>
+                                        
+                                        <span class=four></span>// Creating Static Method: <br>
+                                        
+                                        <span class=four></span>static countObjsStatic = function(){ <br>
+                                            <span class=five></span>// {this} here will return on the [Class] itself Directly <br>
+                                                <span class=six></span>[due it written in the Static syntax]:<br>
+                                            <span class=five></span>return `Current count of Extracted Objects = ${this.counter}`; <br>
+                                        <span class=four></span>} <br><br>
+                                        
+                                        <span class=four></span>countObjsNormal = function(){  <br>
+                                            <span class=five></span>// To Access on a [Static Property] (counter) within a <br>
+                                                <span class=six></span>[Normal Method] in Class we Must use the [Class name itself]: <br>
+                                            <span class=five></span>return `Current count of Extracted Objects = ${constClass.counter}`; <br>
+                                        <span class=four></span>}  <br><br>
+                                                                                
+                                        <span class=four></span>welcome() { <br>
+                                            <span class=five></span>return `Welcome ${this.fName}`; <br>                                        
+                                        <span class=four></span>}<br> <br>
+                                        
+                                        <span class=four></span>showFullName() { <br>
+                                            <span class=five></span>return `Your Full Name is "${this.fName} ${this.lName}" `; <br>                    
+                                        <span class=four></span>} <br> <br>
+                                        
+                                        <span class=four></span>showAge() {  <br>
+                                            <span class=five></span>return `Your are ${this.age}`; <br>
+                                        <span class=four></span>} <br> <br>
+                                        
+                                        <span class=four></span>showGender() { <br>
+                                            <span class=five></span>return `Your are ${this.gender}`; <br>
+                                        <span class=four></span>} <br> <br>              
+
+                                        <span class=four></span>showCity() { <br>
+                                            <span class=five></span>return ` Your are from ${this.city}`; <br>                                        
+                                        <span class=four></span>} <br> <br>
+                                        
+                                        <span class=four></span>showEmail() { <br>
+                                            <span class=five></span>return `Your Email is ${this.email}`; <br>
+                                        <span class=four></span>} <br><br>
+                                        
+                                    <span class=three></span>} <br>
+                                    
+                                <span class=two></span>//==============================================<br>
+                                <span class=two></span>//==============================================<br> <br>
+                                                            
+                                    <span class=three></span>document.getElementById("txtarea").innerHTML = ""; <br>
+
+                                        <span class=four></span> do { <br>                 
+
+                                            <span class=five></span>alert("Please Choose your [Main Function] to Execute from Below... "); <br> <br>                                        
+                                    
+                                            <span class=five></span>z0 = prompt("Press (1) to Display the Default [Class] \n <br>
+                                                <span class=six></span>Press (2) to [Extract new object(s)] from Default [Class] \n <br>
+                                                <span class=six></span>press any other key to Exit ... "); <br><br>
+                                    
+                                            <span class=five></span>if (z0 =="1") { <br>                        
+                                                
+                                                <span class=six></span>alert("Welcome to [Display the {Default Class}]"); <br>
+                                                <span class=six></span>alert("Your [Class] as following: "); <br>
+                                                <span class=six></span>alert(constClass); <br> <br>
+                                                
+                                                <span class=six></span>console.log("Your [Class] as following: "); <br>
+                                                <span class=six></span>console.log(constClass); <br>
+                                                <span class=six></span>console.log("-----------------------------------------"); <br> <br>
+                                                
+                                                <span class=six></span>document.getElementById("txtarea").innerHTML = <br>
+                                                    <span class=seven></span>"Main [Class] as following ...\n " + constClass + "\n <br>
+                                                    <span class=seven></span> &lt;br&gt; \n"; <br> <br>
+                                                
+                                            <span class=five></span>} else if (z0 == "2") { <br>                        
+                                                
+                                                <span class=six></span>alert("Welcome to Extracting new object(s) from [Class] ..."); <br>
+                                                
+                                                <span class=six></span>var count = prompt("Enter the Count of desired Object(s) to Extract ... "), <br>
+                                                    <span class=seven></span>arr = new Array(); <br> <br>
+
+                                                <span class=six></span>arr.length = count;<br> <br>
+                                                    
+                                                <span class=seven></span>for (i=0 ; i &lt; count; i++) { <br>                                                                                
+                                                    <span class=eight></span>alert("Welcome to [Extracted object from Class] number " + <br>
+                                                        <span class=nine></span> (i+1) + "\nlets enter new Extracted Object's Parameters:"); <br> <br>
+                                                
+                                                    <span class=eight></span>var ufName = prompt("Enter First Name .."),<br>
+                                                        <span class=nine></span>ulName = prompt("Enter Last Name ..."), <br>
+                                                        <span class=nine></span>uAge = parseInt(prompt("Enter you age ..")), <br>
+                                                        <span class=nine></span>uGender = prompt("Enter your Gender ..."), <br>                                                       
+                                                        <span class=nine></span>uCity = prompt("Enter Your city ..."), <br>
+                                                        <span class=nine></span>uEmail= prompt("Enter your Email .. ");<br> <br>
+                                            
+                                                    <span class=eight></span>let user1 = new constClass(ufName, ulName, uAge, uGender, uCity, uEmail); <br>                            
+
+                                                    <span class=eight></span>arr[i] = user1 + "\n ---------------------\n"; <br>
+                                                <span class=seven></span>//---------------------------------------------<br> <br>
+                                                
+                                                    <span class=eight></span>do { <br><br>
+                                                        
+                                                        <span class=nine></span>var countfunc = prompt('Press (1) to display the Count of Extracted Object(s)<br>
+                                                            <span class=ten></span> using [Static Method of Class] \n <br>
+                                                            <span class=ten></span> or press (2) to display Count of Extracted Objhect(s)<br>                                                             
+                                                            <span class=ten></span> using [Normal Method of Class]\n <br>
+                                                            <span class=ten></span> Or press anuy other key to Abort this Function' ); <br> <br>
+                        
+                                                        <span class=nine></span>if (countfunc == "1") { <br>
+                                                                        
+                                                            <span class=ten></span>alert("The Following is Accessing the [Staitc Variable] <br>
+                                                                <span class=elv></span> {Count} by using Class Static Method [countObjsStatic].. "); <br> <br>
+                                                            
+                                                            <span class=ten></span>alert(constClass.countObjsStatic()); <br>
+                                                            <span class=ten></span>console.log(constClass.countObjsStatic()); <br>
+                                                            <span class=ten></span>document.getElementById("txtarea").innerHTML += <br>
+                                                                <span class=elv></span> constClass.countObjsStatic(); <br> <br>
+                                                        
+                                                        <span class=nine></span>} else if (countfunc == "2") { <br><br>
+                                                        
+                                                            <span class=ten></span>alert("The Following is Accessing the [Static Variable] <br>
+                                                                <span class=elv></span>{Count} by using Class Normal Method [countObjsNormal].. "); <br> <br>
+
+                                                            <span class=ten></span>alert(user1.countObjsNormal()); <br>
+                                                            <span class=ten></span>console.log(user1.countObjsNormal()); 
+                                                            <span class=ten></span>document.getElementById("txtarea").innerHTML = <br>
+                                                                <span class=elv></span> user1.countObjsNormal(); <br> <br>
+                                    
+                                                        <span class=nine></span>} else { <br>
+                                                            <span class=ten></span>alert("Nothing iserted!"); <br>
+                                                        <span class=nine></span>} <br>
+
+                                                        <span class=nine></span>var a = prompt("Press (1) to restart the <br>
+                                                            <span class=ten></span>[display the Count of Extracted Object(s)]"); <br>
+
+                                                    <span class=eight></span>} while(a=="1"); <br> <br>
+
+                                                    <span class=eight></span>do { <br>
+                                                    
+                                                        <span class=nine></span>var meth = prompt("Choose Method to Display on Extracted Object from [Class] constructor\n <br>
+                                                            <span class=ten></span> (1) Welcome Method \n<br>
+                                                            <span class=ten></span> (2) showFullName \n <br>
+                                                            <span class=ten></span> (3) showAge \n  <br>
+                                                            <span class=ten></span> (4) showEmail \n <br>
+                                                            <span class=ten></span> (5) showCity \n <br>
+                                                            <span class=ten></span> (6) showGender \n <br>
+                                                            <span class=ten></span> (7) Checking for constructor name of Extractd object Function\n<br>
+                                                            <span class=ten></span> (8) Checking for (new - not new) of Extractd Object Function..."); <br> <br>
+
+                                                        <span class=nine></span>if (meth == "1") { <br> <br>
+                                                            
+                                                            <span class=ten></span>alert("{Welcome Method} as following:"); <br>
+                                                            <span class=ten></span>alert(user1.welcome()); <br> <br>
+                                                        
+                                                            <span class=ten></span>console.log("{Welcome Method} as following: "); <br>
+                                                            <span class=ten></span>console.log(user1.welcome()); <br>
+                                                            <span class=ten></span>console.log("-----------------------------------------"); <br> <br>
+                                                        
+                                                            <span class=ten></span>alert("{Welcome Method Syntax} as following:"); <br>
+                                                            <span class=ten></span>alert(user1.welcome); <br> <br>
+                                                        
+                                                            <span class=ten></span>console.log("{Welcome Method Syntax} as following: "); <br>
+                                                            <span class=ten></span>console.log(user1.welcome); <br>
+                                                            <span class=ten></span>console.log("-----------------------------------------"); <br><br>                                
+                                                        
+                                                        <span class=nine></span>} else if (meth == "2") { <br> <br>
+                                                    
+                                                            <span class=ten></span>alert("{Show Full Name Method} as following:"); <br>
+                                                            <span class=ten></span>alert(user1.showFullName()); <br>
+                                                        
+                                                            <span class=ten></span>console.log("{Welcome Method} as following: "); <br>
+                                                            <span class=ten></span>console.log(user1.showFullName()); <br>
+                                                            <span class=ten></span>console.log("-----------------------------------------"); <br> <br>
+                                                        
+
+                                                            <span class=ten></span> alert("{Show Full Name Method Syntax} as following:"); <br>
+                                                            <span class=ten></span>alert(user1.showFullName); <br>
+                                                        
+                                                            <span class=ten></span>console.log("{Welcome Method Syntax} as following: ");<br>
+                                                            <span class=ten></span>console.log(user1.showFullName); <br>
+                                                            <span class=ten></span>console.log("-----------------------------------------"); <br> <br>
+                                                        
+                                                        
+                                                            <span class=nine></span>} else if (meth == "3") { <br><br>                                         
+                                                        
+                                                                <span class=ten></span>alert("{Show Age Method} as following:");<br>
+                                                                <span class=ten></span>alert(user1.showAge()); <br>
+                                                        
+                                                                <span class=ten></span>console.log("{Show Age Method} as following: "); <br>
+                                                                <span class=ten></span>console.log(user1.showAge()); <br>
+                                                                <span class=ten></span>console.log("-----------------------------------------"); <br>
+                                                        
+                                                                <span class=ten></span>alert("{Show Age Method Syntax} as following:"); <br>
+                                                                <span class=ten></span>alert(user1.showAge); <br>
+                                                        
+                                                                <span class=ten></span>console.log("{Show Age Method Syntax} as following: "); <br>
+                                                                <span class=ten></span>console.log(user1.showAge); <br>
+                                                                <span class=ten></span>console.log("-----------------------------------------"); <br> <br>
+                                                        
+                                                    <span class=nine></span>} else if (meth == "4") { <br> <br>
+                                                    
+                                                        <span class=ten></span>alert("{show Email Method} as following:"); <br>
+                                                        <span class=ten></span>alert(user1.showEmail()); <br> <br>
+                                                        
+                                                        <span class=ten></span>console.log("{show Email Method} as following: "); <br>
+                                                        <span class=ten></span>console.log(user1.showEmail()); <br>
+                                                        <span class=ten></span>console.log("-----------------------------------------"); <br> <br>
+                                                        
+                                                        <span class=ten></span>alert("{show Email Method Syntax} as following:"); <br>
+                                                        <span class=ten></span>alert(user1.showEmail); <br> <br>
+                                                        
+                                                        <span class=ten></span>console.log("{show Email Method Syntax} as following: "); <br>
+                                                        <span class=ten></span>console.log(user1.showEmail);<br>
+                                                        <span class=ten></span>console.log("-----------------------------------------"); <br><br>
+                                                                                                                        
+                                                        <span class=nine></span>} else if (meth == "5") { <br> <br>
+                                                                                                
+                                                            <span class=ten></span>alert("{show City Method} as following:"); <br>
+                                                            <span class=ten></span>alert(user1.showCity()); <br> <br>
+                                                        
+                                                            <span class=ten></span>console.log("{show City Method} as following: "); <br>
+                                                            <span class=ten></span>console.log(user1.showCity()); <br>
+                                                            <span class=ten></span>console.log("-----------------------------------------"); <br> <br>
+                                                        
+                                                            <span class=ten></span>alert("{show City Method Syntax} as following:"); <br>
+                                                            <span class=ten></span>alert(user1.showCity); <br> <br>
+                                                        
+                                                            <span class=ten></span>console.log("{showCity Method Syntax} as following: "); <br>
+                                                            <span class=ten></span>console.log(user1.showCity); <br>
+                                                            <span class=ten></span>console.log("-----------------------------------------");  <br> <br>
+                                                                                                            
+                                                        <span class=nine></span>} else if (meth == "6") { <br> <br>                                         
+                                                        
+                                                            <span class=ten></span>alert("{show Gender Method} as following:"); <br>
+                                                            <span class=ten></span>alert(user1.showGender()); <br> <br>
+                                                        
+                                                            <span class=ten></span>console.log("{show Gender Method} as following: "); <br>
+                                                            <span class=ten></span>console.log(user1.showGender()); <br>
+                                                            <span class=ten></span>console.log("-----------------------------------------"); <br> <br>
+                                                    
+                                                            <span class=ten></span>alert("{show Gender Method Syntax} as following:"); <br>
+                                                            <span class=ten></span>alert(user1.showGender); <br> <br>
+                                                        
+                                                            <span class=ten></span>console.log("{show Gender Method Syntax} as following: "); <br>
+                                                            <span class=ten></span>console.log(user1.showGender); <br>
+                                                            <span class=ten></span>console.log("-----------------------------------------"); <br> <br>
+
+                                                        <span class=nine></span>} else if (meth == "7") { <br> <br>
+                                                        
+                                                            <span class=ten></span>alert("Welcome {Check Constructor Class} function...  "); <br>
+                                                        
+                                                            <span class=ten></span>consMth = prompt("Choose your [Check Constructor Class] Method \n <br>
+                                                                <span class=elv></span> (1) for[instanceof] Check Method... \n <br>
+                                                                <span class=elv></span>(2) for [constName === ] Check Method..."); <br> <br>
+                                                        
+                                                            <span class=ten></span>if (consMth == "1") { <br> <br>
+                                                            
+                                                                <span class=elv></span>alert("[instanceof] Check Method restult as following "); <br>
+                                                                <span class=elv></span>alert(user1 instanceof constClass); <br> <br>
+                                                            
+                                                                <span class=elv></span>console.log("[instanceof] Check Method restult as following "); <br>
+                                                                <span class=elv></span>console.log(user1 instanceof constClass); <br> <br>
+                                                            
+                                                            <span class=ten></span>} else if (consMth == "2") { <br> <br>                                            
+                                                            
+                                                                <span class=elv></span>alert("[constName ===] Check Method restult as following ");<br>
+                                                                <span class=elv></span>alert(user1.constructor === constClass); <br> <br>
+                                                            
+                                                                <span class=elv></span>console.log("[constName ===] Check Method <br>
+                                                                    <span class=tlv></span> restult as following ");<br> <br>
+                                                                <span class=elv></span>console.log(user1.constructor === constClass);<br> <br>                                                                    
+                                                            <span class=ten></span>} <br> <br>
+                                                                                                                                                                                                
+                                                            <span class=nine></span>} else if (meth == "8") { <br> <br>                                        
+
+                                                                <span class=ten></span>alert("Welcome ({Check new - Not new} <br>
+                                                                    <span class=elv></span>Extracting Method) function...  "); <br> <br>                                              
+                                                        
+                                                                <span class=ten></span>var consMth = prompt("Press (1)for [EC6] checking Method...\n <br> 
+                                                                    <span class=elv></span>Press (2) for [instance of Constructor Name]..."); <br> <br>
+                                                        
+                                                                <span class=ten></span>if (consMth =="1") { <br> <br>
+
+                                                                    <span class=elv></span>alert("Welcome to [EC6] (new - not new ) <br>
+                                                                        <span class=tlv></span>Extracted Object checking Method.. "); <br> <br>
+                                                            
+                                                                    <span class=elv></span>if (!new.target) { <br>                                                
+                                                                        <span class=tlv></span>alert('The Extracted Object is [Not by (new keyword)]'); <br>
+                                                                        <span class=tlv></span>console.log("The Extracted Object is [Not by (new keyword)]"); <br>
+                                                                        <span class=tlv></span>throw new Error('The Extracted Object is [Not by (new keyword)]'); <br> <br>                         
+                                                                
+                                                                    <span class=elv></span>} else  { <br> <br>
+                                                                        <span class=tlv></span>alert('The Extracted Object is [by new keyword]'); <br>
+                                                                        <span class=tlv></span>console.log("The Extracted Object is [by new keyword]"); <br>
+                                                                        <span class=tlv></span>throw new Error('The Extracted Object is [by new keyword]');<br>
+                                                                    <span class=elv></span>} <br><br>                                                            
+                                                            
+                                                                <span class=ten></span>} else if (consMth == "2") { <br> <br>
+                                                                                                        
+                                                                    <span class=elv></span>alert("Welcome to [instance of ConstructorName] <br>
+                                                                        <span class=tlv></span>(new - not new ) Extracted Object checking Method.. "); <br> <br>
+                                                            
+                                                                    <span class=elv></span>if (!(user1 instanceof constClass)) { <br> <br>                                                
+                                                                        <span class=tlv></span>alert('The Extracted Object is [Not by (new keyword)]'); <br>
+                                                                        <span class=tlv></span>console.log("The Extracted Object is [Not by (new keyword)]");  <br>
+                                                                        <span class=tlv></span>throw new Error('The Extracted Object is [Not by (new keyword)]'); <br> <br>                       
+                                                                
+                                                                    <span class=elv></span>} else  { <br> <br>
+                                                                        <span class=tlv></span>alert('The Extracted Object is [by new keyword]'); <br>
+                                                                        <span class=tlv></span>console.log("The Extracted Object is [by new keyword]"); <br>
+                                                                        <span class=tlv></span>throw new Error('The Extracted Object is [by new keyword]'); <br> <br>
+                                                                    <span class=elv></span>} <br> <br>
+                                                            
+                                                                <span class=ten></span>} else { <br>
+                                                                    <span class=tlv></span>alert("There is no Checking Method Choosen!");<br>
+                                                                <span class=ten></span>} <br> <br>    
+                                                                                            
+                                                            <span class=nine></span>} else {<br>                                        
+                                                                <span class=ten></span>alert("There is no Function Choosen !"); <br>
+                                                            <span class=nine></span>} <br><br>
+
+                                                        <span class=eight></span>var zz = prompt("Enter (1) to restart the methods of Extracted Objects\n<br>
+                                                            <span class=nine></span>or Press any other key to Exit.. "); <br> <br>
+                                                    
+                                                    <span class=seven></span>} while (zz == "1"); <br>
+                                                <span class=six></span>} <br> <br>
+                                                
+                                                <span class=six></span>alert("Your Extracted Object(s) from [Class] as following ..."); <br>
+                                                <span class=six></span>alert(arr);  <br> <br>
+                                                
+                                                <span class=six></span>console.log("Your Extracted Object(s) form [Class] as following ..."); <br>
+                                                <span class=six></span>console.log(arr); <br> <br>
+
+                                                <span class=six></span>document.getElementById("txtarea").innerHTML +=  <br>
+                                                    <span class=seven></span>"Your Extracted Object(s) [from Class] as following ...\n "+ <br>
+                                                    <span class=seven></span> arr + "\n"; <br><br>
+                                                                                                                                                        
+                                            <span class= five></span>} else if (z0=="3"){ <br> <br>                         
+                                                <span class=six></span>do { <br> <br>
+                        
+                                                    <span class=seven></span>alert("Welcome to [Displaying Static Class Property <br>
+                                                        <span class=eight></span>and Method] Function...");<br> <br>
+
+                                                    <span class=seven></span>var a = prompt("Press (1) to Display [Static variable] \n <br> 
+                                                        <span class=eight></span>Press (2) to Display [Static Method]\n <br>
+                                                        <span class=eight></span> or press any other key to Exit... "); <br> <br>
+                                                
+                                                    <span class=seven></span>if (a== "1"){ <br><br>
+                                                        <span class=eight></span>alert("Welcome to [Static Variable] Display Function ..."); <br>
+                                                        <span class=eight></span>alert("Static Variable value as following ..."); <br>                            
+                                                    
+                                                        <span class=eight></span>alert(" Value of (Static Property) of [Class] {counter} as following ...");<br>
+                                                        <span class=eight></span>alert(constClass.counter);<br> <br>
+                                                    
+                                                        <span class=eight></span>console.log(" Value of (Static Property) of [Class] {counter} as following ..."); <br>
+                                                        <span class=eight></span>console.log(constClass.counter); <br>
+                                                    
+                                                        <span class=eight></span>document.getElementById("txtarea").innerHTML += <br>
+                                                            <span class=nine></span> "Value of Stat1ic (Variable) of [counter] as following ...\n "+ <br>
+                                                            <span class=nine></span> constClass.counter + "\n"; <br> <br>
+                                                    
+                                                    <span class=seven></span>} else if(a== "2") { <br> <br>                             
+                                                        <span class=eight></span>alert("Welcome to [Static Method] Display Function ..."); <br> <br>
+                                            
+                                                        <span class=eight></span>var b = prompt("Press (1) to Display Static Variable (using Static Method )\n <br>
+                                                            <span class=nine></span> Press (2) to Display Static Variable <br>
+                                                            <span class=nine></span>(using Normal Object Method )"); <br><br>
+                                                        
+                                                        <span class=eight></span>if (b=="1"){ <br>                                                        
+                                                            <span class=nine></span>alert("Static Variable using (Main Class Static Method) <br>
+                                                                <span class=ten></span> [Value] as following :"); <br> <br>                                
+                                                            
+                                                            <span class=nine></span>alert(constClass.countObjsStatic()); <br> <br>            
+                                                            
+                                                            <span class=nine></span>console.log("Static Variable using (Main Class Static Method) <br>
+                                                                <span class=ten></span> [Value] as following  :"); <br> <br>
+
+                                                            <span class=nine></span>console.log(constClass.countObjsStatic()); <br>
+
+                                                            <span class=nine></span>console.log("======================================================"); <br>
+                                        
+                                                            <span class=nine></span>document.getElementById("txtarea").innerHTML += <br>
+                                                                <span class=ten></span> "Static Variable using (Main Class Static Method) [Value] as following  ...\n " + <br>
+                                                                <span class=ten></span>constClass.countObjsStatic() + "\n";<br>
+                            
+                                                            <span class=nine></span>// --------------------------------------------------------------------------------------------<br>
+                            
+                                                            <span class=nine></span>alert("Static Variable using (Main Class Static Method)<br>
+                                                                <span class=ten></span> [Syntax] as following :"); <br><br>
+
+                                                            <span class=nine></span>alert(constClass.countObjsStatic); <br> <br>
+                                                            
+                                                            <span class=nine></span>console.log("Static Variable using (Main Class Static Method)<br>
+                                                                <span class=ten></span> [Syntax] as following  :"); <br> <br>
+
+                                                            <span class=nine></span>console.log(constClass.countObjsStatic); <br>
+                                                            <span class=nine></span>console.log("===================================================="); <br> <br>
+                                    
+                                                            <span class=nine></span>document.getElementById("txtarea").innerHTML += <br>
+                                                                <span class=ten></span> "Static Variable using (Main Class Static Method) [Syntax] as following  ...\n "+ <br>
+                                                                <span class=ten></span> constClass.countObjsStatic + "\n"; <br> <br>                                                                    
+                                                        
+                                                        <span class=eight></span>} else if(b== "2"){ <br><br>
+                                                        
+                                                            <span class=nine></span>alert("Static Variable using (Extracted Object's <br>
+                                                                <span class=ten></span>Normal Method) [Value] as following :"); <br> <br>                                
+                                                        
+                                                            <span class=nine></span>alert(user1.countObjsNormal()); <br>            
+                                                        
+                                                            <span class=nine></span>console.log("Static Variable using (Extracted object's <br>
+                                                                <span class=ten></span> Normal Method) [Value] as following  :"); <br> <br>
+
+                                                            <span class=nine></span>console.log(user1.countObjsNormal()); <br>
+                                                            <span class=nine></span>console.log("====================================================="); <br><br>
+                                    
+                                                            <span class=nine></span>document.getElementById("txtarea").innerHTML +=<br>
+                                                                <span class=ten></span> "Static Variable using (Extracted Normal Method) [Value] as following..\n "+ <br>
+                                                                <span class=ten></span> user1.countObjsNormal() + "\n"; <br><br>    
+                        
+                                                            <span class=nine></span>// -------------------------------------------------------------------------- <br>
+                        
+                                                            <span class=nine></span>alert("Static Variable using (Extracted Normal <br>
+                                                                <span class=ten></span> Method) [Syntax] as following :");<br><br>
+
+                                                            <span class=nine></span>alert(user1.countObjsNormal); <br><br>            
+
+                                                            <span class=nine></span>console.log("Static Variable using (Extracted Normal<br>
+                                                                <span class=ten></span>Method) [Syntax] as following  :"); <br><br>
+
+                                                            <span class=nine></span>console.log(user1.countObjsNormal); <br>
+                                                            <span class=nine></span>console.log("==================================================="); <br> <br>
+                                    
+                                                            <span class=nine></span>document.getElementById("txtarea").innerHTML += <br>
+                                                                <span class=ten></span> "Static Variable using (Extracted Normal Method) [Syntax] as following \n"+<br>
+                                                                <span class=ten></span> user1.countObjsNormal + "\n"; <br> <br>
+                                    
+                                                        <span class=eight></span>} else{ <br>
+                                                            <span class=nine></span>alert("No Method has been Choisen to display Static Method!");  <br> <br>
+                                                        <span class=eight></span>} <br> <br>
+                        
+                                                    <span class=seven></span>} else { <br>                            
+                                                        <span class=eight></span>alert("No Choise has Been Choisen!");<br>
+                                                    <span class=seven></span>} <br>
+                                                                                                                        
+                                                    <span class=six></span>var z000 = prompt("Enter (1) to restart the [Displaying Static <br>
+                                                        <span class=seven></span> Class Property and Method] Function ");<br> <br>
+                                                
+                                                <span class=five></span>} while (z000 == "1"); <br>
+                        
+                                            <span class=four></span>} else { <br>                         
+                                                <span class=five></span>alert("There is no Main function Choosen!"); <br><br>
+                                            <span class=four></span>} <br>
+
+                                            <span class=four></span>// ==================================================================<br>
+                                                                    
+                                        <span class=three></span>var z = prompt("Press (1) to restart the Whole Application \n <br>
+                                            <span class=four></span>Press any other key to Exit...."); <br>
+                                    <span class=two></span>}while (z =="1"); <br>
+
+                                <span class=one></span>} <br><br>                        
+                            } <br>
+                    </code>                    
+                </div> -->
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 21 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=C45CV387UdU&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=21&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\21 JavaScript OOP  Class Static Properties And Methods.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert(
+        "Welcome to JS OOP Lesson 21 [Class Static Properites and Methods ] "
+      );
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

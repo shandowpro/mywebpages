@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS OOP Lesson 5 [Get Set element Content]</title>
+    <link
+      rel="stylesheet"
+      href="JS DOM Lesson5 [Get Set Element Content].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JS OOP Lesson 5 [Get Set element Content]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS OOP main Topics">
+            JS OOP Lesson5 [Get Set element Content ] Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMCon"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Concept"
+          >
+            JS OOP Lesson5 [Get Set element Content ] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMImp"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Importance & Benefits"
+          >
+            JS OOP Lesson5 [Get Set element Content ] Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMSyntx"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Syntax"
+          >
+            JS OOP Lesson5 [Get Set element Content] Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMPract"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Practical Applications"
+          >
+            JS OOP Lesson5 [Get Set element Content ] Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS OOP Course
+      <span> JS OOP Lesson 5 [Get Set element Content] </span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          JS OOP [Class Static Properties and Methods ] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>JS OOP [Get Set element Content ] Concept.</li>
+
+            <li>JS OOP [Get Set element Content ] Importance & Benefits.</li>
+
+            <li>JS OOP [Get Set element Content ] Syntax .</li>
+
+            <li>JS OOP [Get Set element Content ] Practical Application.</li>
+          </ol>
+
+          <p>&gt; Main new Methods in this lesson are as following :</p>
+          <ul>
+            <li>[Get]=></li>
+            <ol>
+              <li>document.element.innerHTML;</li>
+              <li>document.element.textContent;</li>
+            </ol>
+
+            <li>[Set]=></li>
+            <ol>
+              <li>
+                document.element.innerHTML = 'Textual Value
+                &lt;HTMLelement&gt;';
+              </li>
+              <li>document.element.textContent = 'Textual Value only' ;</li>
+            </ol>
+          </ul>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMCon" id="JSDOMCon">
+        <header>
+          <h3>JS OOP [Get Set element Content] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [Get Set element Content]: They are OPPOSITE
+          functions in programing generally & specially in dealing with [DOM]
+          Elements.
+        </p>
+
+        <p>
+          =&gt; JS HTML DOM [Get Set element Content]: The Main Methods are
+          Usaually used in dealing with Get-Set fucnitons as following :
+        </p>
+        <ul>
+          <li>
+            {document.element.innerHTML;} =&gt; Usually used to [get-set] (HTML)
+            tags/Elements of to web Page [will be Strudied in this lesson]
+          </li>
+          <li>
+            {document.element.outerHTML;} =&gt; Usually used to [get-set] (HTML)
+            tags/Elements of to web Page [will be study in later lesson]
+          </li>
+
+          <li>
+            {document.element.textContent;} =&gt; Usually used to [get-set]
+            (Textual Content) in to web Page's Elements [will be study in later
+            lesson]
+          </li>
+
+          <li>
+            {document.element.innerText;} =&gt; {Deprecated Method} Usually used
+            to [get-set] (Texual Values) only in to web Page [will be Studied in
+            this lesson]
+          </li>
+          <li>
+            {document.element.outerText;} =&gt; {Deprecated Method} Usually used
+            to [get-set] (Texual Values) only in to web Page [will be Studied in
+            this lesson]
+          </li>
+        </ul>
+
+        <p>
+          =&gt; JS HTML DOM [Differences between {.innerHTML;} &
+          {.textContent;}]: The both are get-set Methods , but they have some
+          defferent peorpties as following:
+        </p>
+        <ol>
+          <li>
+            [Function] => {.textContent}: is dealing with Textual content only ,
+            {.innerHTML} is dealing with both textual Content & HTML Elements
+            Codes
+          </li>
+          <li>
+            [Security] => {.textContent}: is much safer than {.innerHTML} due to
+            innerHTML open space to hackers to re-Insert anew elements in page &
+            and manipulate it's current Contents
+          </li>
+          <li>
+            [Performance] => {.textContent}: is much effictive than {.innerHTML}
+            due to innerHTML has much more data to load, but {textContent} only
+            deal with String
+          </li>
+        </ol>
+
+        <p>
+          =&gt; To insert a conceptual HTML Codes inside the Page as Texual
+          content by {.tectContent} you have to use the HTML special Symbols
+          Codes such as :
+        </p>
+        <ol>
+          <li>& gt; : for greater than Symbol [ > ]</li>
+          <li>& lt; : for less than Symbol [ < ]</li>
+          <li>& amp; : for And Symbol [ & ]</li>
+        </ol>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSDOMImp" id="JSDOMImp">
+        <header>
+          <h3>JS OOP [Get Set element Content ] Importance & Benefits:</h3>
+        </header>
+
+        <p>
+          [DOM Get Set element Content ] gives us the Following Features :
+          <br />
+        </p>
+        <ul>
+          <li>
+            It is very Helpful when dealing with Comparison Conditional Data
+            proceessing
+          </li>
+
+          <li>
+            gives more features to pragrmaing functions speacially in DOM
+            programing Technique speacially [get-set functions]
+          </li>
+
+          <li>
+            Much more easier method than other methods in dealing with elements
+            node contents .
+          </li>
+
+          <li>
+            Much more accurate method than other methods in dealing with
+            elements node contents .
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMSyntx" id="JSDOMSyntx">
+        <header>
+          <h3>[ JS HTML DOM Get Set element Content ] Syntax & Methods:</h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [{Get-Set Functions} by {.innerHTML} &
+          {.textContent}] Methods Conceptual Syntax as following :
+        </p>
+
+        <div id="Code" class="Code">
+          [*]// Defining a variable with certain Element in web page: <br />
+          <span class="one"></span>var ElementVar =
+          document.getElementById('ElementID'); <br />
+
+          // [A] [Get Function]: <br />
+          <br />
+          // 1) JS HTML DOM [Get function of Defined element by {.innerHTML}
+          Method] Syntax as following :<br /><br />
+          <span class="one"></span> ElementVar.innerHTML; <br />
+          //=========================================================== <br />
+          <br />
+
+          // 2) JS HTML DOM [Get function of Defined element by {.textContent}
+          Method] Syntax as following :<br /><br />
+          <span class="one"></span> ElementVar.textContent; <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          // [B] [Set Function]: <br />
+          <br />
+
+          // 1) JS HTML DOM [Set function of Defined element by {.innerHTML}
+          Method] Syntax as following :<br /><br />
+          <span class="one"></span> ElementVar.innerHTML = 'Textual Value &
+          &lt;HTML elements Coding&gt;'; <br />
+          //=========================================================== <br />
+          <br />
+
+          // 2) JS HTML DOM [Set function of Defined element by {.textContent}
+          Method] Syntax as following :<br /><br />
+          <span class="one"></span> ElementVar.innerHTML ='Textual Value only';
+          <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMPract" id="JSDOMPract">
+        <header>
+          <h3>
+            JS OOP [Get Set element Content] General Practical Applications :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Here one Major Application will include following [2 Main Paths]
+          of the child element {choosed by user} and result inside parent
+          element {choosed by user}: &gt;&gt; <br />
+        </p>
+        <ol>
+          <li>
+            [Get] Function => Get content of element of page by (2) Methods :
+          </li>
+          <ul>
+            <li>
+              {.innerHTML;} => to get the HTML Coding script + Textual Content
+              of the Child Element inside the Parent element
+            </li>
+            <li>{.textContent;} => to get the Texual Content only</li>
+          </ul>
+
+          <li>
+            [Set] Function => Set content of element of page by (2) Methods :
+          </li>
+          <ul>
+            <li>
+              {.innerHTML;} to set/change the HTML Coding script + Textual
+              Content
+            </li>
+            <li>{.textContent;} to set/change Textual Content</li>
+          </ul>
+        </ol>
+        <br />
+
+        <p id="pId">
+          This is a default <span>Text1</span> , <br />
+          and this is <span>Text2</span> <br />
+        </p>
+
+        <section id="sec" class="secClass"></section>
+        <br />
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <script src="GetSetElemContent.js"></script>
+
+        <button class="btn" onclick="test()">
+          Click to Start [Get Set element Content] Application
+        </button>
+
+        <br />
+
+        <hr />
+        <button id="btn" class="btn" onclick="display()">
+          Display JS Code
+        </button>
+
+        <div class="JSOOPObjConstTraining">
+          <code>
+            // HTML Codes: <br />
+            <span class="one"></span> &lt;textarea id="txtarea"
+            class="txtarea"&gt;<br />
+            <span class="one"></span> &lt;/textarea&gt; <br /><br />
+
+            <span class="one"></span> &lt;button class="btn"
+            onclick=test"()"&gt;<br />
+            <span class="two"></span> Click to Start [Testing Get Set element
+            Content ] Application <br />
+            <span class="one"></span> &lt;/button&gt; <br /><br />
+
+            <span class="one"></span> &lt;script src=".js"&gt;<br />
+            <span class="one"></span> &lt;/script&gt; <br /><br />
+
+            =======================================================<br /><br />
+
+            /* global document, alert, prompt */ <br />
+            /* JSOOP [Get Set element Content] */ <br />
+            template-string-converter.enable; <br /><br />
+
+            <textarea id="SourceCode" readonly></textarea>
+          </code>
+        </div>
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 5 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=KOb0nsGND9o&list=PLDoPjvoNmBAxx97QDMOCpzxbu1ZHJ4i7i&index=5&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\HTML JS Dom\5 JS HTML Dom Elements  Get Set Element Content.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JS OOP Lesson 5 [Get Set element Content] ");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

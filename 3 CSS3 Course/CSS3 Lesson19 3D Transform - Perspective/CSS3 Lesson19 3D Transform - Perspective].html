@@ -1,0 +1,684 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 19 [3D Transform - Perspective/Perspective-Origin] </title>
+    <link rel="stylesheet" href="CSS3 Lesson19 3D Transform - Perspective].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 19 [3D Transform - Perspective/Perspective-Origin]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 3D Transform - Perspective/Perspective-Origin main Topics">
+                [ 3D Transform - Perspective/Perspective-Origin ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to 3D Transform - Perspective/Perspective-Origin [3D Transform - Perspective/Perspective-Origin ] Concept">
+                [ 3D Transform - Perspective/Perspective-Origin ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to 3D Transform - Perspective/Perspective-Origin [3D Transform - Perspective/Perspective-Origin ] Importance & Benefits">
+                [ 3D Transform - Perspective/Perspective-Origin ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to 3D Transform - Perspective/Perspective-Origin [3D Transform - Perspective/Perspective-Origin ] Syntax">
+                [ 3D Transform - Perspective/Perspective-Origin ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to 3D Transform - Perspective/Perspective-Origin [3D Transform - Perspective/Perspective-Origin ] Practical Applications">
+                [ 3D Transform - Perspective/Perspective-Origin ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 19 [3D Transform - Perspective/Perspective-Origin ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                3D Transform - Perspective/Perspective-Origin Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [3D Transform - Perspective/Perspective-Origin] Concept. </li>                       
+                    
+                    <li> [3D Transform - Perspective/Perspective-Origin] Importance & Benefits. </li>
+
+                    <li> [3D Transform - Perspective/Perspective-Origin] Syntax [Exmaple]. </li>
+                    
+                     <li> [3D Transform - Perspective/Perspective-Origin] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    
+                    <ul>
+                        <li> Basic concept about 3D Perspective/Perspective-Origin as an advanced property/function , as a critical property to manage & control the Parent frame 3D-Properties  </li> 
+                        <li> Main Values/Parameters of Perspective/Perspective-Origin Function </li> 
+                    </ul>                   
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [3D Transform - Perspective/Perspective-Origin] Concept: </h3>
+            </header>
+                        
+            <p> =&gt; [3D Transform - Perspective] : It is the Distance between the user view and the Element {Obligatory} <br>            
+                
+            <p> =&gt; [3D Transform - Perspective-Origin] : It is the angel of user view to the element inside the it's parent {Recommended}<br>            
+
+            <p> =&gt; [3D Transform - Perspective/Perspective-Origin] : This is one of CSS3 3D advancd Properties which is nessery to control all
+                 3d-Transform Properties of the Element by assinging the amount of inside element Scale to display inside or through 
+                {3D Environment Frame}. <br>            
+
+            <p> =&gt; [3D Transform - Perspective/Perspective-Origin] : The Default Value of Perspective/Perspective-Origin is => {none}  <br>
+                
+                
+            <p> =&gt; [3D Transform - Perspective/Perspective-Origin] => It is containing following types of aspects/values/Parameters : <br> 
+
+                <ol>                    
+                    <li>{Perspective} :</li>                    
+                        <ul>
+                            <li> [Value]  => by Pixels (px) </li>                            
+                        </ul>
+                    
+                    <li>{Perspective-origin} :</li>                    
+                        <ul>
+                            <li> [Value]  => by  (px) </li>
+                            <li> [Percentage]  => by (X %) (Y %) </li>
+                            <li> [Direction Name]  => by Direction name (left, right , top , botttom , center)  </li>                                                                                        
+                        </ul>
+                </ol>                
+
+            <p> =&gt; [3D Transform - Perspective/Perspective-Origin] => If the 3D-Transform has a value greater than persptive propety value => it will not be dispalyed <br> 
+                            
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+            <section class="CSS3Imp" id="CSS3Imp">
+                <header>
+                    <h3> [3D Transform - Perspective/Perspective-Origin ] Importance & Benefits: </h3>
+                </header>
+                
+                <p> =&gt; [3D Transform - Perspective/Perspective-Origin ] : This Advanced property enabling the following features & imporatance : <br>            
+                    <ul>                                                                
+                        <li> Essential for all 3D Property to work properly </li>
+                        <li> Great control of 3d Environment {Amount of 3D Scale & Angle of User Viwe}  </li>  
+                        <li> Ability of using multiple units to control Perspective-Origin</li>   
+                        <li> 3D Perspective/Perspective-Origin property will provide unique effects specilaly when merged with 
+                            other 3D Transform properties animations effects {which will be studied will later lessons}  </li>                        
+                    </ul>                                
+                 
+            </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ 3D Transform - Perspective/Perspective-Origin] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [3D Transform - Perspective/Perspective-Origin] Syntax as following :<br><br>                                                    
+                
+                    <span class=two></span> //a)  [HTML] file  : <br>                                          
+                
+                        <span class=three></span> &lt;div class='container1' &gt;   <br>
+                            <span class=four></span> &lt; img src='' alt='' &gt; <br>                          
+                        <span class=three></span> &lt; /div &gt;  <br>                        
+                        
+                        <span class=three></span> &lt;div class='container2' &gt;   <br>
+                            <span class=four></span> &lt; img src='' alt='' &gt; <br>                          
+                        <span class=three></span> &lt; /div &gt;  <br>                        
+                        
+                        <span class=three></span> &lt;div class='container3' &gt;   <br>
+                            <span class=four></span> &lt; img src='' alt='' &gt; <br>                          
+                        <span class=three></span> &lt; /div &gt;  <br>                        
+                        
+                        <br> <br>                                        
+
+                // ------------------------------------------------------------------------------ <br><br>
+                
+                // (1) [3D Transform - Perspective] + [Element with 3d-Transform:translateZ()] Syntax as following :<br><br>                                                    
+
+                <span class= one></span> // A) [3 different type of Containers with 3 values of Perspective] and [fixed image Element]  Syntaxes:  <br>
+                    
+                    <span class=two></span> // {Example1} : [Result : Image Element will be displayed with different scales {cont1: (1) smallest image, cont2: (2) larger image, cont3: (3) larger image, cont4: (4) will be Vanished }: <br>
+                        
+                        <span class=three></span> .container1 {  <br>                                                  
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> Perspective: 500px ; <br>                                                                                                                              
+                        <span class=three></span>  }  <br>                                              
+                        
+                        <span class=three></span> .container2 {  <br>                                                  
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> Perspective: 400px ; <br>                                                                                                                              
+                        <span class=three></span>  }  <br>                                              
+                        
+                        <span class=three></span> .container3 {  <br>                                                  
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> Perspective: 200px ; <br>                                                                                                                              
+                        <span class=three></span>  }  <br>                                              
+                
+                        <span class=three></span> .container4 {  <br>                                                  
+                            <span class=four></span> margin: 40px auto; <br>                                                                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> dispaly: block; <br>                                                                                                                              
+                            <span class=four></span> Perspective: 100px ; <br>                                                                                                                              
+                        <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img {  <br>                                                  
+                            <span class=four></span> margin: 40px; <br>                                                                          
+                            <span class=four></span> padding: 3px; <br>                                                                          
+                            <span class=four></span> width: 400px; <br>                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                                                      
+                            <span class=four></span> transition: all 1s ease-in-out; <br>
+                            <span class=three></span>  }  <br>                                              
+
+                        <span class=three></span> img:hover {  <br>                                                  
+                            <span class=four></span> Transform : translateZ(100px); <br>                        
+                        <span class=three></span>  }  <br>                                              
+                
+                // ------------------------------------------------------------------------------ <br><br>                                                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                                                                                
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                
+                    
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="JSDOMPract">
+
+            <header>
+                <h3> [3D Transform - Perspective/Perspective-Origin] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following is the Applied example of { Element: [3D-Transform: translateZ(100px)] } + { Contianers: [Perspective: 100px, 200px , 300px, 400xp, 500px ] } syntax : <br>
+                
+            <p> (3) Fieldsets contain (2) section (of different types of Persptive only & Perspective + Perspective-Origin) for each as following:  </p>                     
+            
+            <ul>
+                <ol>
+                                                
+                    <li> A) { Perspective Property only }:</li>                            
+                        <ol>                            
+                            <li> First Section : { Element: [3D-Transform: translateZ(100px)] } + { Contianers: [Perspective: 100px] }:</li>                                
+                            
+                            <li>  Second Section : { Element: [3D-Transform: translateZ(100px)] } + { Contianers: [Perspective: 200px] }:</li>                                                                
+                                                            
+                            <li>  Third Section : { Element: [3D-Transform: translateZ(100px)] } + { Contianers: [Perspective: 300px] }:</li>                                                                                                
+
+                        </ol>
+
+                        <!-- ---------------------------------------------------------------------------------- -->
+                    
+                    <li> B) { Perspective Property + Perspective-Origin}:</li>                            
+                        <ol>                            
+                            <ul>
+                                <li> First Fliedset : Rotate Effect (180 deg)</li>
+                                    <ol>                                    
+                                        <li> First Section : { Element: [3D-Transform: rotateY(180deg)] } + { Contianers: [Perspective: 100px] }:</li>                                
+                                            <ul>
+                                                <li> First Div => { Perspective-Origin: right }   </li>                                         
+                                                <li> Second Div => { Perspective-Origin: Left }   </li>                                                                         
+                                                <li> Third Div => { Perspective-Origin: top }   </li>                                         
+                                                <li> Fourth Div => { Perspective-Origin: bottom }   </li>                                                                         
+                                                <li> fifth Div => { Perspective-Origin: center }   </li>                                                                         
+                                            </ul>                            
+                                            
+                                        <li> Second Section : { Element: [3D-Transform: rotateY(180deg)] } + { Contianers: [Perspective: 200px] }:</li>                                
+                                            <ul>
+                                                <li> First Div => { Perspective-Origin: right }   </li>                                         
+                                                <li> Second Div => { Perspective-Origin: Left }   </li>                                                                         
+                                                <li> Third Div => { Perspective-Origin: top }   </li>                                         
+                                                <li> Fourth Div => { Perspective-Origin: bottom }   </li>                                                                         
+                                                <li> fifth Div => { Perspective-Origin: center }   </li>                                                                         
+                                            </ul>
+                                                                                                                                                                                                                            
+                                        <li>  Third Section : { Element: [3D-Transform: rotateY(180deg)] } + { Contianers: [Perspective: 300px] }:</li>                                                                                                                                        
+                                            <ul>
+                                                <li> First Div => { Perspective-Origin: right }   </li>                                         
+                                                <li> Second Div => { Perspective-Origin: Left }   </li>                                                                         
+                                                <li> Third Div => { Perspective-Origin: top }   </li>                                         
+                                                <li> Fourth Div => { Perspective-Origin: bottom }   </li>                                                                         
+                                                <li> fifth Div => { Perspective-Origin: center }   </li>                                                                         
+                                            </ul>                                            
+
+                                    </ol>
+
+                            <!-- -------------------------------------------------------------------------------------- -->
+                                <li> Second Fieldset : TranslateZ Effect (100px)</li>
+                                    <ol>
+                                    
+                                        <li> First Section : { Element: [3D-Transform: translateZ(100px)] } + { Contianers: [Perspective: 100px] }:</li>                                
+                                            <ul>
+                                                <li> First Div => { Perspective-Origin: right }   </li>                                         
+                                                <li> Second Div => { Perspective-Origin: Left }   </li>                                                                         
+                                                <li> Third Div => { Perspective-Origin: top }   </li>                                         
+                                                <li> Fourth Div => { Perspective-Origin: bottom }   </li>                                                                         
+                                                <li> fifth Div => { Perspective-Origin: center }   </li>                                                                         
+                                            </ul>                            
+                                            
+                                        <li>  Second Section : { Element: [3D-Transform: translateZ(100px)] } + { Contianers: [Perspective: 200px] }:</li>                                                                                                    
+                                            <ul>
+                                                <li> First Div => { Perspective-Origin: right }   </li>                                         
+                                                <li> Second Div => { Perspective-Origin: Left }   </li>                                                                         
+                                                <li> Third Div => { Perspective-Origin: top }   </li>                                         
+                                                <li> Fourth Div => { Perspective-Origin: bottom }   </li>                                                                         
+                                                <li> fifth Div => { Perspective-Origin: center }   </li>                                                                         
+                                            </ul>
+                                                                                                                                                                                                                        
+                                        <li>  Third Section : { Element: [3D-Transform: translateZ(100px)] } + { Contianers: [Perspective: 300px] }:</li>
+                                            <ul>
+                                                <li> First Div => { Perspective-Origin: right }   </li>                                         
+                                                <li> Second Div => { Perspective-Origin: Left }   </li>                                                                         
+                                                <li> Third Div => { Perspective-Origin: top }   </li>                                         
+                                                <li> Fourth Div => { Perspective-Origin: bottom }   </li>                                                                         
+                                                <li> fifth Div => { Perspective-Origin: center }   </li>                                                                         
+                                            </ul>                                                                                                                                                            
+                                    </ol>
+                            </ul>
+                
+                        </ol>
+                </ol>   
+            </ul>                                                
+
+            <!-- -------------------------------------------------------------------------------------- -->                                                            
+                <br>
+                <hr>
+        <!-- ========================================================================= -->
+        
+            <fieldset class='perOnly'>  
+                <legend> Perspective Property only: </legend>
+                                
+                <fieldset class="Rotate">
+                    <legend> Element: 3D-Transform: RotateX(180deg) + containers: Perspective(100px, 200px, 300px) } </legend>                    
+                    
+                    <div class='container1'>
+                        <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (100px)    </h3>
+                    </div> <br>                                                                            
+                    
+                    <div class='container2'>
+                        <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (200px)    </h3>
+                    </div> <br>                                                                                                
+
+                    <div class='container3'>
+                        <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (300px)    </h3>
+                    </div> <br>                                                                                                
+                    <br> <br>                                                                        
+                </fieldset>
+                <!-- --------------------------------------------- -->
+                
+                <fieldset class="Translate">
+                    <legend> Element: 3D-Transform: translateZ(100px) + containers: Perspective(100px, 200px, 300px) } </legend>                    
+                    
+                    <div class='container1'>
+                        <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (100px)    </h3>
+                    </div> <br>                                                                            
+                    
+                    <div class='container2'>
+                        <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (200px)    </h3>
+                    </div> <br>                                                                                                
+
+                    <div class='container3'>
+                        <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (300px)    </h3>
+                    </div> <br>                                                                                                
+                    <br> <br>                                                                        
+                </fieldset>                
+                <br><br><hr>
+            </fieldset>                                                                                        
+        <!-- ========================================================================================= -->
+
+            <fieldset class='per-org'>  
+                <legend> Perspective Property + Perspective-origin: </legend>
+                                
+                <fieldset class="Rotate">
+                    <legend> Element: 3D-Transform: RotateX(180deg) + containers: Perspective(100px, 200px, 300px) , Perspective-origin: al Directions } </legend>                    
+                    
+                    <fieldset class="right">
+                        <legend> 1) Container : perspective-origin :  Right Direction / [X: + 100%] </legend>                    
+                        
+                        <div class='container1'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (100px) + Perspective-origin: right / X: 100%  </h3>
+                        </div> <br>                                                                            
+                        
+                        <div class='container2'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (200px)  + Perspective-origin: right / X: 100% </h3>
+                        </div> <br>                                                                                                
+    
+                        <div class='container3'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (300px) + Perspective-origin: right / X: 100%  </h3>
+                        </div> <br>                                                                                                
+                    </fieldset>                    
+                    <!-------------------------------------------->
+
+                    <fieldset class="left">                    
+                        <legend> 2) Container : perspective-origin :  Left Direction / [X: - 100%] </legend>                    
+                        
+                        <div class='container1'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (100px) + Perspective-origin: right / X: -100%  </h3>
+                        </div> <br>                                                                            
+                        
+                        <div class='container2'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (200px)  + Perspective-origin: right  / X: -100%   </h3>
+                        </div> <br>                                                                                                
+    
+                        <div class='container3'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (300px)  + Perspective-origin: right / X: -100%  </h3>
+                        </div> <br>                                                                                                
+                    </fieldset>
+                    <!-- ---------------------------------------------- -->
+                    <fieldset class="top">                    
+                        <legend> 3) Container : perspective-origin :  Top Direction / [Y: + 100%] </legend>                    
+                        
+                        <div class='container1'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (100px) + Perspective-origin: right / Y: 100%   </h3>
+                        </div> <br>                                                                            
+                        
+                        <div class='container2'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (200px)  + Perspective-origin: right / Y: 100% </h3>
+                        </div> <br>                                                                                                
+    
+                        <div class='container3'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (300px)  +  + Perspective-origin: right / Y: 100%</h3>
+                        </div> <br>                                                                                                
+                    </fieldset>
+                    <!-- ------------------------------------------------ -->
+                    <fieldset class="bottom">                    
+                        <legend> 4) Container : perspective-origin :  Bottom Direction / [Y: - 100%] </legend>                    
+                        
+                        <div class='container1'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (100px) + Perspective-origin: right / Y: -100% </h3>
+                        </div> <br>                                                                            
+                        
+                        <div class='container2'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (200px)  + Perspective-origin: right / Y: -100% </h3>
+                        </div> <br>                                                                                                
+    
+                        <div class='container3'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (300px)  +  + Perspective-origin: right / Y: -100% </h3>
+                        </div> <br>                                                                                                
+                    </fieldset>
+                    <!-- ---------------------------------------------------- -->
+
+                    <fieldset class="center">                    
+                        <legend> 4) Container : perspective-origin :  Bottom Direction / [Y: - 100%] </legend>                    
+                        
+                        <div class='container1'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (100px) + Perspective-origin: center / 50% 50%  </h3>
+                        </div> <br>                                                                            
+                        
+                        <div class='container2'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (200px)  + Perspective-origin: center / 50% 50% </h3>
+                        </div> <br>                                                                                                
+    
+                        <div class='container3'>
+                            <h3> This sections will be X-Rotated: (180deg) + within Parent Frame by perspective : (300px)  +  + Perspective-origin: center / 50% 50%</h3>
+                        </div> <br>                                                                                                
+                    </fieldset>
+                    <br> <br> <hr>                                                                      
+                </fieldset>
+                <!-- --------------------------------------------- -->
+                <!-- --------------------------------------------- -->
+                
+                <fieldset class="Translate">
+                    <legend> Element: 3D-Transform: translateZ(100px) + containers: Perspective(100px, 200px, 300px) } </legend>                    
+                  
+                    <fieldset class="right">
+                        <div class='container1'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (100px) + Perspective-origin: right / X: 100%   </h3>
+                        </div> <br>                                                                            
+                        
+                        <div class='container2'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (200px) + Perspective-origin: right / X: 100% </h3>
+                        </div> <br>                                                                                                
+    
+                        <div class='container3'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (300px)  + Perspective-origin: right / X: 100% </h3>
+                        </div> <br>                                                                                                
+                        <br> <br>                                                                        
+                    </fieldset>                
+                    <!-- --------------------------------------------------------------- -->
+
+                    <fieldset class="left">
+                        <div class='container1'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (100px) + Perspective-origin: left / X: -100%   </h3>
+                        </div> <br>                                                                            
+                        
+                        <div class='container2'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (200px) + Perspective-origin: left / X: -100%    </h3>
+                        </div> <br>                                                                                                
+    
+                        <div class='container3'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (300px) + Perspective-origin: left / X: -100%    </h3>
+                        </div> <br>                                                                                                
+                        <br> <br>                                                                        
+                    </fieldset>                
+                    <!-- --------------------------------------------------------------- -->
+
+                    <fieldset class="top">
+                        <div class='container1'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (100px)  + Perspective-origin: top  /  Y : 100% </h3>
+                        </div> <br>                                                                            
+                        
+                        <div class='container2'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (200px)  + Perspective-origin: top / Y : 100%   </h3>
+                        </div> <br>                                                                                                
+    
+                        <div class='container3'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (300px)  + Perspective-origin: top  / Y : 100% </h3>
+                        </div> <br>                                                                                                
+                        <br> <br>                                                                        
+                    </fieldset>                
+                    <!-- --------------------------------------------------------------- -->
+
+                    <fieldset class="bottom">
+                        <div class='container1'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (100px)   + Perspective-origin: bottom / Y : -100% </h3>
+                        </div> <br>                                                                            
+                        
+                        <div class='container2'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (200px)  + Perspective-origin: bottom  / Y : -100%  </h3>
+                        </div> <br>                                                                                                
+    
+                        <div class='container3'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (300px)  + Perspective-origin: bottom /  Y : -100% </h3>
+                        </div> <br>                                                                                                
+                        <br> <br>                                                                        
+                    </fieldset>                
+                    <!-- --------------------------------------------------------------- -->
+
+                    <fieldset class="center">
+                        <div class='container1'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (100px)   + Perspective-origin: center / 50% 50% </h3>
+                        </div> <br>                                                                            
+                        
+                        <div class='container2'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (200px)  + Perspective-origin: center /  50% 50% </h3>
+                        </div> <br>                                                                                                
+    
+                        <div class='container3'>
+                            <h3> This sections will be TranslateZ(100px) + within Parent Frame by perspective : (300px)  + Perspective-origin: center / 50% 50% </h3>
+                        </div> <br>                                                                                                
+                        <br> <br>                                                                        
+                    </fieldset>                
+                </fieldset>
+
+                <br><br><hr>
+            </fieldset>                                                                                        
+            <hr>                
+            <hr>                        
+        </fieldset>                                                                    
+        <!-- ========================================================================= -->                                              
+        <!-- ========================================================================= -->                                                                                     
+            <hr>
+            <hr>                                           
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 19 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=LQ4wu6ID6BY&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=19&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\19 Css3 - 3D Transform - Perspective.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 19 [3D Transform - Perspective/Perspective-Origin ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

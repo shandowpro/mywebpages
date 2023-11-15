@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      JS OOP Lesson 12 [Constructor Function Advanced & new keyword {Part 2}]
+    </title>
+    <link
+      rel="stylesheet"
+      href="JS OOP Lesson12 [Constructor Function Advanced & new keyword].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JS OOP Lesson 12 [Constructor Function Advanced & new keyword {Part 2}]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS OOP main Topics">
+            JS OOP Lesson12 [Constructor Function Advanced & new keyword] Main
+            Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPCon"
+            title="Go to JS OOP [Constructor Function Advanced & new keyword] Concept"
+          >
+            JS OOP Lesson12 [Constructor Function Advanced & new keyword]
+            Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPImp"
+            title="Go to JS OOP [Constructor Function Advanced & new keyword] Importance & Benefits"
+          >
+            JS OOP Lesson12 [Constructor Function Advanced & new keyword]
+            Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPSyntx"
+            title="Go to JS OOP [Constructor Function Advanced & new keyword] Syntax"
+          >
+            JS OOP Lesson12 [Constructor Function Advanced & new keyword] Syntax
+            & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPPracts"
+            title="Go to JS OOP [Constructor Function Advanced & new keyword] Practical Applications"
+          >
+            JS OOP Lesson12 [Constructor Function Advanced & new keyword]
+            Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS OOP Course
+      <span>
+        JS OOP Lesson 12 [Constructor Function Advanced & new keyword] {Part 2}
+      </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          JS OOP [Constructor Function Advanced & new keyword] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>
+              JS OOP [Constructor Function Advanced & new keyword] Concept.
+            </li>
+
+            <li>
+              JS OOP [Constructor Function Advanced & new keyword] Importance &
+              Benefits.
+            </li>
+
+            <li>
+              JS OOP [Constructor Function Advanced & new keyword] Syntax
+              [Define + Access].
+            </li>
+
+            <li>
+              JS OOP [Constructor Function Advanced & new keyword] Practical
+              Application.
+            </li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPCon" id="JSOOPCon">
+        <header>
+          <h3>JS OOP [Constructor Function Advanced & new keyword] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JS OOP [Object Constructor Function Advanced]: This lessson will
+          provide to developer more enhanced tools and script to control the
+          constructor function [Pattern] and the extracted objects from.
+        </p>
+
+        <p>
+          =&gt; JS OOP [Object Constructor Function Advanced new keywords]:
+          These new keywords as following : <br />
+        </p>
+        <ol>
+          <li>
+            {console.log(this)}; = &gt; {AUTO printing the extracted Object once
+            it being created (extracted)} function [Written in constructor
+            Function]
+          </li>
+
+          <li>{(2) Mode of Extracting object from Constructor} :</li>
+          <ul>
+            <li>
+              {let objName = new ConstrictorName();} = &gt; {Define a new Object
+              as an Extracted Object from the assigned Constructor function}
+            </li>
+            <li>
+              {let objName = ConstrictorName();} = &gt; {Define a new Object as
+              a Global Object with all Properites in the assigned Constructor
+              function}
+            </li>
+          </ul>
+
+          <li>
+            {(2) Methods to Check of Constructor Name of Certain Object} [each
+            Method can be used as a conditional If , or to Print it directly]
+          </li>
+          <ul>
+            <li>
+              {console.log(Extracted ObjectName instanceof Constrauctor Name);}
+              = &gt; {True = &gt; if the mentioned Object is Extracted from the
+              Mentioned Constructor Name, False if Not} .
+            </li>
+            <li>
+              {console.log(Extracted ObjectName.constructor === Constrauctor
+              Name);} = &gt; {True = if the mentioned Object is Extracted from
+              the Mentioned Constructor Name, False = if Not} .
+            </li>
+          </ul>
+        </ol>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSOOPImp" id="JSOOPImp">
+        <header>
+          <h3>
+            JS OOP [Constructor Function Advanced & new keyword] Importance &
+            Benefits:
+          </h3>
+        </header>
+
+        <p>
+          [Constructor Function Advanced & new keyword Method] gives us the
+          Following Features : <br />
+        </p>
+        <ul>
+          <li>
+            More advanced tools to Control in each Contsructor Function ansd
+            Extracted Object
+          </li>
+          <li>
+            Good Understading of Constructor function and it's Tools open the
+            way to deal with each OOP Technology more proficiently
+          </li>
+        </ul>
+      </section>
+
+      <!--------------------------------------------------------------------s---------------------------------->
+      <section class="JSOOPSyntx" id="JSOOPSyntx">
+        <header>
+          <h3>
+            JS OOP [Constructor Function Advanced & new keyword] Syntax &
+            Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; JS OOP Defining Object by [Constructor Function Advanced & new
+          keyword] Methods as following :
+        </p>
+        <div id="Code" class="Code">
+          // A) [Adding (Auto Printing Extracted Objects once it being created)
+          Feature in the Constructor Pattern Function] Method Syntax :<br /><br />
+          <span class="one"></span> function FuncName (Parameter1, Parameter2,
+          Parameter3, ... ) { <br />
+          <span class="two"></span> console.log(this);<br />
+          <span class="two"></span> this.Parameter1 = Parameter1;<br />
+          <span class="one"></span> } <br /><br />
+          //=========================================================== <br />
+
+          // B) (2) Mode of Extracting object from Constructor : <br />
+          <br />
+
+          // B1) [First Mode] Defining Object as an Extracted Object from the
+          Constructor Function :<br />
+          <span class="one"></span> let obj1Name = new FuncName (Value of
+          Parameter1, Value of Parameter2, Value of Parameter3);<br /><br />
+
+          // B2) [Second Mode] Defining Object as a Global Object with all
+          Properties in the Constructor Pattern Function :<br />
+          <span class="one"></span> let obj1Name = new FuncName (Value of
+          Parameter1, Value of Parameter2, Value of Parameter3);<br />
+          <br />
+
+          //=========================================================== <br />
+          <br />
+
+          // C) (2) Methods to Check of Constructor Name of Certain Object}
+          [each Method can be used as a conditional If , or to Print it
+          directly]:<br />
+          <br />
+
+          // C1) First Method to Check of the constructor of a certain extracted
+          object:<br />
+          <span class="one"></span> console.log(Extracted ObjectName instanceof
+          Constrauctor Name);<br />
+          <br />
+
+          // C2) Second Method to Check of the constructor of a certain
+          extracted object:<br />
+          <span class="one"></span> console.log(Extracted ObjectName.constructor
+          === Constrauctor Name);<br />
+          <br />
+
+          //=========================================================== <br />
+          <br />
+
+          <br /><br />
+          ======================================================= <br /><br />
+          ======================================================= <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPPract" id="JSOOPPract">
+        <header>
+          <h3>
+            JS OOP [Constructor Function Advanced & new keyword] General
+            Practical Applications :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Here one Major Application which include inner (2) Modes as
+          follwoing : &gt;&gt; <br />
+        </p>
+
+        <ol>
+          <li>
+            Creating Constructor function with Fixed Parameters + Fixed
+            Arguments + (2) Checking Methods .
+          </li>
+
+          <li>
+            Creating Constructor function with Fixed Parameters + Flexible
+            Arguments assigned By user + (2) Checking Methods .
+          </li>
+        </ol>
+
+        <p>
+          =&gt; (2) Checking Method [Extracted Object Constructor Function] as
+          follwoing : &gt;&gt; <br />
+        </p>
+
+        <ol>
+          <li>
+            [instanceof Method] {extracted Object instanceof Constructor
+            function}.
+          </li>
+          <li>
+            [.constructor Method] {extracted Object.Constructor === Constructor
+            function Name}.
+          </li>
+        </ol>
+
+        <br />
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <button class="btn" onclick="ConstFuncAdv()">
+          Click to Start [Constructor function + Extracted Object(s)]
+          Application {2 Modes(Fixed,Flexible)} + {2 Checking
+          Modes(.constructor=== ,instanceof)}
+        </button>
+
+        <br />
+
+        <textarea id="txtarea1" class="txtarea1"> </textarea><br />
+
+        <button class="btn" onclick="Display1()">
+          Click to Display JS Code [app1]
+        </button>
+
+        <br />
+
+        <hr />
+
+        <!-- ======================================================================================================= -->
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <button class="btn" onclick="ConstFuncAdv()">
+          Click to Start {Testing}
+        </button>
+
+        <br />
+
+        <textarea id="txtarea2" class="txtarea2"> </textarea><br />
+
+        <button class="btn" onclick="Display2()">
+          Click to Display JS Code [app2]
+        </button>
+
+        <br />
+
+        <hr />
+
+        <!-- ======================================================================================================= -->
+        <script src="JSOOPObjConstIntroAdvnc.js"></script>
+        <hr />
+
+        <!-- <div class=JSOOPObjConstIntro>
+                <code>
+                    // HTML Codes: <br>
+                    <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                    <span class=one></span> &lt;/textarea&gt; <br><br>
+
+                    <span class=one></span> &lt;button class="btn" onclick=constFunc"()"&gt;<br>                           
+                    <span class=two></span> Click to Start Click to Start [Constructor function + Extracted Object(s)] Applicaion {2 Modes(Fixed,Flexible)} Application <br>         
+                    <span class=one></span> &lt;/button&gt; <br><br>                            
+
+                    <span class=one></span> &lt;script src="JSOOPObjConstIntroAdvnc.js"&gt;<br>                            
+                    <span class=one></span> &lt;/script&gt; <br><br>
+                    
+                    =======================================================<br><br>
+
+                    /* global document, alert, prompt */ <br>                    
+                    /* JSOOP [Object Constructor Function + Extractecd Object Introduction Advanced <br>
+                    <span class=one></span> (fixed Parameters + Flexible Parameters) + (Checking of Constractor Local, Global)] */ <br>
+                    template-string-converter.enable; <br>
+                    =======================================================<br><br>
+
+                    function ConstFuncAdv() { <br> <br>
+
+                        <span class=one></span> alert("Welcome to Constructor Function Advanced & Extracted Object(s) + <br>
+                        <span class=one></span> new Key word [[One Constructor Function + One Extracted Object ]]"); <br>
+                        
+                        <span class=one></span> var mthd = prompt("Press (1) to start the Application\n or any other key to exit... "); <br> <br>
+                        
+                        
+                        <span class=one></span> if (mthd == "1") { <br><br>
+
+                            <span class=two></span> var fun = prompt("Press (1) to create a fixed Parameters Constructor Function\n <br>
+                                <span class=three></span>Press (2) to create a flexible Parameters constructor function\n <br>
+                                <span class=three></span>  Press any other key to Exit... "); <br> <br>
+                                                    
+                            <span class=two></span> if (fun == "1") {<br> <br>
+                                
+                                <span class=three></span> alert("Welcome to [Fixed Parameters] Constructor Function"); <br> <br>
+                                
+                                <span class=three></span> function Phone(serial) {  <br><br>
+                                    
+                                    <span class=four></span> // Assnging fixed value of paramenter of (serial): <br>                
+                                    <span class=four></span> this.serial = 'This is a fixed Parameter Value ' + 123; <br><br>
+                                    
+                                    <span class=four></span> // typing the Constructor name : <br>
+                                    <span class=four></span> console.log(this.name); <br> <br>
+
+                                    <span class=four></span> //document.getElementById("txtarea").innerHTML = <br>
+                                    <span class=four></span>  `Your Constructor Function name is \n ${this.name}`; <br> <br>
+                                    
+
+                                    <span class=four></span> // This code to auto Printing the object which will be Created (in console): <br>
+                                    <span class=four></span> console.log(this);  <br><br>
+                                    
+                                    <span class=four></span> // This code didn't work ... <br>
+                                    <span class=four></span> //document.getElementById("txtarea").innerHTML = this; <br> <br>
+                                                                            
+                                <span class=three></span> } <br> <br>
+
+                                <span class=three></span> // Defining Name of the extracted object as global:<br>
+                                <span class=three></span> var constObjName  = Phone.name; <br> <br>
+                                            
+                                <span class=three></span> // Following Code printed as undifined ... <br>
+                                <span class=three></span> //console.log(`Your constructor Function name is [ ${Phone.name} ] \n-------------------------\n`); <br> <br>
+                                
+                                <span class=three></span> document.getElementById("txtarea").innerHTML += <br>
+                                    <span class=four></span> `Your constructor Function name is [ ${Phone.name} ] \n ---------------------------\n `;  <br><br>
+
+                                
+                                <span class=three></span> console.log(`Lets create the Extracted Object...`); <br> <br>
+
+
+                                <span class=three></span> var objType = prompt("Choose your object Extracting defining Type of following:\n<br>
+                                    <span class=four></span> Press (1) for [Phone object extracting Defining] Type \n<br>
+                                    <span class=four></span>  Press (2) for [Global Object extracting Defing] Type "); <br>            
+                                
+                                <span class=three></span> if (objType == "1") {  <br><br>
+                                    
+                                    <span class=four></span> alert("You choosed [ [Phone Local Constructor Function] object extracting Defining] Type..."); <br><br>
+
+                                    <span class=four></span> let phone1 = new Phone("###"); <br><br>
+
+
+                                    <span class=four></span> // Choosing Checking Method of object's Constructor Function : <br>            
+                                    <span class=four></span> var check = prompt("Press (1) to [instanceof Method] Checking Method of object constucted Function\n <br>
+                                        <span class=five></span>  or Press (2) to [Typing of Object's constructor name Method] Checking Method of<br>
+                                        <span class=five></span>  object constructed Function any other key to abort this process..."); <br> <br>
+                                    
+                                    <span class=four></span> if (check == "1") {  <br> <br>
+                                        
+                                        <span class=five></span> alert("Welcome to [instanceof Method] Checking Method ... "); <br> <br>
+                                        
+                                        <span class=five></span> console.log(phone1 instanceof Phone); <br> <br>
+                                
+                                        <span class=five></span> var c = (phone1 instanceof Phone); <br> <br>
+                                                            
+                                        <span class=five></span> document.getElementById("txtarea").innerHTML += <br>
+                                            <span class=six></span> `\n [ instanceof ] Checking Method Result is \n [ ${c} ]`; <br> <br>
+                                        
+                                                                                    
+                                    <span class=four></span> } else if (check == "2") { <br> <br>
+                                        
+                                        <span class=five></span> alert("Welcome to [Typing of Object's constructor name Method] Checking Method ... "); <br> <br>                    
+                                        
+                                        <span class=five></span> console.log(phone1.constructor === Phone); <br> <br>
+                                        
+                                        <span class=five></span> var c = (phone1.constructor === Phone); <br> <br>
+                                        
+                                        <span class=five></span> document.getElementById("txtarea").innerHTML += <br>
+                                            <span class=six></span> `\n [ Typing of Object's constructor name ] Checking Method Result is \n [ ${c} ]` ; <br>
+                                        
+                                        
+                                    <span class=four></span> } else { <br>
+                                        <span class=five></span> alert("Good Bye!"); <br>
+                                    <span class=four></span> } <br> <br>
+                                    
+                                    
+                                <span class=three></span>} else if (objType == "2") { <br> <br>
+                                    
+                                    <span class=four></span> alert("You choosed [ [Global Constructor Function ] object extracting Defining]..."); <br><br>
+                                    
+                                    <span class=four></span> let phone1 = Phone("###"); <br> <br>
+                                    
+                                    <span class=four></span> // Checking of object's Constructor Fucntion : <br>            
+                                    <span class=four></span> var check = prompt("Press (1) to [instanceof Method] Checking Method of object constucted Function\n <br>
+                                        <span class=five></span> or Press (2) to [Typing of Object's constructor name Method] Checking Method of <br>
+                                        <span class=five></span> object constructed Function any other key to abort this process..."); <br> <br>
+                                    
+                                    <span class=four></span> if (check == "1") { <br>
+                                        <span class=five></span> alert("Welcome to [instanceof Method] Checking Method ... "); <br>
+                                        
+                                        <span class=five></span> console.log(phone1 instanceof Phone); <br>
+                                        
+                                        <span class=five></span> var c = (phone1 instanceof Phone); <br>
+                                        
+                                        <span class=five></span> document.getElementById("txtarea").innerHTML += <br>
+                                            <span class=six></span> `\n [ instanceof ] Checking Method Result is \n [ ${c} ]`; <br> <br>
+                                        
+                                    <span class=four></span> } else if (check == "2") { <br><br>
+                                        
+                                        <span class=five></span> alert("Welcome to [ Typing of Object's constructor name ] Checking Method ... "); <br><br>
+                                        
+                                        <span class=five></span> console.log(phone1.constructor === Phone); <br> <br>
+                                        
+                                        <span class=five></span> var c = (phone1.constructor === Phone); <br> <br>
+                                        
+                                        <span class=five></span> document.getElementById("txtarea").innerHTML += <br>
+                                            <span class=six></span> `\n [ Typing of Object's constructor name Method] Checking Method Result is \n [ ${c} ]` ; <br> <br>
+
+                                    <span class=four></span> } else { <br>      
+                                        <span class=five></span> alert("Good Bye!"); <br>
+                                    <span class=four></span> } <br>
+
+                                <span class=three></span> } else { <br>
+                                    <span class=four></span> alert("Error entry!"); <br>
+                                <span class=three></span> } <br><br>
+                                
+                            <span class=two></span> // -----------------------------------------------------------------------------------<br> <br>        
+                            
+                            <span class=two></span> } else if (fun == "2") {  <br> <br>
+                                
+                                <span class=three></span>alert("Welcome to [Flexible Parameters] Constructor Function Mode "); <br>
+                                
+                                <span class=three></span> function Phone(serial) { <br>
+                                    
+                                    <span class=four></span> // Assnging flexible value of parameter of (serial) upon user inserting : <br>                 
+                                    <span class=four></span> this.serial = `# ${serial}`; <br>
+
+                                    <span class=four></span> // typing the Constructor name : <br>
+                                    <span class=four></span> console.log(this.name); <br> <br>
+                                    
+                                    <span class=four></span> //document.getElementById("txtarea").innerHTML = <br>
+                                    <span class=four></span>  `Your Constructor Function name is \n ${this.name}`; <br>
+                                    
+
+                                    <span class=four></span> // This code to auto Printing the object which will be Created (in console): <br>
+                                    <span class=four></span> console.log(this); <br> <br>
+                                    
+                                    <span class=four></span> //document.getElementById("txtarea").innerHTML = `Your Extracted Object is \n ${this}`; <br>
+
+                                <span class=three></span> } <br><br>
+
+                                
+                                <span class=three></span> //console.log(`Your constructor Function name is ${Phone.name}`);<br>
+                                <span class=three></span>  => [already assigned in Constructor funciton] ... <br> <br>
+                                    
+                                <span class=three></span> document.getElementById("txtarea").innerHTML += <br>
+                                    <span class=four></span> `Your constructor Function name is ${Phone.name}`; <br><br>
+
+                                <span class=three></span> console.log(`Lets create the Extracted Object...`); <br> <br>
+
+
+                                <span class=three></span> var objType = prompt("Choose your object Extracting defining Type of followoing : \n<br>
+                                    <span class=four></span> Press (1) for [Phone object extracting Defining] \n <br>
+                                    <span class=four></span> Press (2) for [Global Object extracting Defing] "); <br> <br>
+
+                                <span class=three></span> if (objType == "1") { <br> <br>
+                    
+                                    
+                                    <span class=four></span> alert("You choosed [ [Phone Local Constructor Function] object extracting Defining]..."); <br><br>
+
+                                    <span class=four></span> var vUser  = prompt("Enter your Parameter's value [Property Value] "); <br><br>
+                                    <span class=four></span> let phone1 = new Phone(vUser); <br><br>
+                                    
+                                    <span class=four></span> // Choosing Checking of object's Constructor Function : <br>            
+                                    <span class=four></span> var check = prompt("Press (1) to [instanceof Method] Checking of object constucted Function\n <br>
+                                        <span class=five></span> or Press (2) to [Typing of Object's constructor name Method] Checking Method of <br>
+                                        <span class=five></span> object constructed Function any other key to abort this process..."); <br> <br>
+                                    
+                                    <span class=four></span> if (check == "1") { <br> <br>
+                                        
+                                        <span class=five></span> alert("Welcome to [instanceof Method] Checking Method ... "); <br> <br>
+                                        
+                                        <span class=five></span> console.log(phone1 instanceof Phone); <br> <br>
+                                        
+                                        <span class=five></span> var c = (phone1 instanceof Phone); <br><br>
+                                                            
+                                        <span class=five></span> document.getElementById("txtarea").innerHTML += <br>
+                                        <span class=six></span> `\n [instanceof Method] Checking Method Result is \n [ ${c} ]`; <br> <br>
+                                        
+                                        
+                                    <span class=four></span> } else if (check == "2") { <br><br>
+                                        
+                                        <span class=five></span> alert("Welcome to [Typing of Object's constructor name Method] Checking Method ... "); <br><br>
+                                        
+                                        <span class=five></span> console.log(phone1.constructor === Phone); <br><br>
+                                        
+                                        <span class=five></span> var c = (phone1.constructor === Phone);  <br><br>
+                                                            
+                                        <span class=five></span> document.getElementById("txtarea").innerHTML += <br><br>
+                                            
+                                            <span class=six></span>`\n [ Typing of Object's constructor name ] Checking Method Result is \n [ ${c} ]`;<br>
+                                        
+                                    <span class=four></span>} else { <br>
+                                        <span class=five></span> alert("Good Bye!"); <br>
+                                    <span class=four></span> } <br><br>
+                                    
+                                    
+                                <span class=three></span> } else if (objType == "2") { <br> <br>
+                                    
+                                    <span class=four></span> alert("You choosed [ [Global Constructor Function ] object extracting Defining]..."); <br><br>
+                                    
+                                    <span class=four></span> var vUser  = prompt("Enter your value"); <br><br>
+                                    
+                                    <span class=four></span> let phone1 = Phone(vUser); <br> <br>
+                                    
+                                    <span class=four></span> // Checking of object's Constructor Fucntion : <br>             
+                                    <span class=four></span> var check = prompt("Press (1) to [instanceof Method] Checking Method of object constucted Function\n <br>
+                                        <span class=five></span>  or Press (2) to [Typing of Object's constructor name Method] Checking Method of <br>
+                                        <span class=five></span>  object constructed Function any other key to abort this process..."); <br><br>
+                                    
+                                    <span class=four></span> if (check == "1") {<br><br>
+
+                                        <span class=five></span> alert("Welcome to [instanceof Method] Checking Method ... ");<br><br>
+                                        
+                                        <span class=five></span> console.log(phone1 instanceof Phone); <br><br>
+                                        
+                                        <span class=five></span> var c = (phone1 instanceof Phone); <br> <br>
+                                        
+                                        <span class=five></span> document.getElementById("txtarea").innerHTML += <br>
+                                            <span class=six></span> `\n [ instanceof Method ] Checking Method Result is \n [ ${c} ]`;<br><br>
+
+                                    <span class=four></span> } else if (check == "2") {  <br><br>
+                                        
+                                        <span class=five></span> alert("Welcome to [Typing of Object's constructor name Method] Checking Method ... ");<br> <br>
+                                        
+                                        <span class=five></span> console.log(phone1.constructor === Phone); <br> <br>
+                                        
+                                        <span class=five></span> var c = (phone1.constructor === Phone); <br> <br>
+                                                            
+                                        <span class=five></span> document.getElementById("txtarea").innerHTML += <br>
+                                        <span class=six></span> `\n [ Typing of Object's constructor name Method ] Checking Method Result is \n [ ${c} ]`; <br> <br>
+
+                                    <span class=four></span> } else { <br>
+                                        <span class=five></span> alert("Good Bye!"); <br>
+                                    <span class=four></span> } <br>
+                                    
+                                <span class=three></span> } else { <br>
+                                    <span class=four></span> alert("Error entry!"); <br>
+                                <span class=three></span> } <br>                                    
+                            
+                            <span class=two></span> } <br> <br>
+                                                        
+                        <span class=one></span> } else {  <br>
+                            <span class=two></span> alert ("Good bye !");  <br>
+                        <span class=one></span> } <br>
+                    } <br><br>
+
+                //====================================================================================================  <br>  
+                                    
+                </code>
+            </div> -->
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 12 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=CTnQDrNs9Rk&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=12&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\12 JavaScript OOP  Constructor Function Advanced And New Keyword.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert(
+        "Welcome to JS OOP Lesson 12 [Constructor Function Advanced & new keyword {Part 2}] "
+      );
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

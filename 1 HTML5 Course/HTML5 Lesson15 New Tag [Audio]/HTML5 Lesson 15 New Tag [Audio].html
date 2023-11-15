@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 15 HTML5 New Tag [Audio] </title>
+    <link rel="stylesheet" href="HTML5 New Tag [Audio].css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">        
+    </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 15 HTML5 New Tag [Audio]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="HTML5 New Tag Audio Main Concept" > HTML5 New Tag [Audio] Main Concept </a> </li>
+            <li> <a href=#AudioNTag   title="Go to Audio Tag" > Audio Tag  </a> </li>         
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> Lesson 15 {Audio} </span> </main>
+
+<!-------------------------------------------------------------------------------------------------------------->                        
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>
+                HTML5 New Tag [Audio] Concept. 
+            </header>
+            
+            <article>                
+                <p> &gt; The New HTML5 Tag in this lesson as following :</p>
+                
+                <ol>                    
+                    <li> &lt; audio &gt; &nbsp; &nbsp; &lt; /audio &gt; </li>                           
+                    <li> &lt; source &gt; &nbsp; </li>                               
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>
+      
+        <section class="AudioNTag" id="AudioNTag">
+            <header>
+                Audio Tag [ &lt; audio &gt; &lt; /audio &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> [Audio Tag] Concept: </h1>
+                    <p> =&gt; [Audio Tag] is tag specified to deal with audio files on web Pages with advanced       controls and tools in comparison with Html4 which werer dealing with audio files using       flash with difficult controls and hard formating mechanism. 
+                    <p> =&gt; [Audio Tag] has several properties inside: 
+                        <ol type="1">
+                            <li> [Src = ""]: Here where we write the Audio File Path, and this property can be        written in the main &lt; Audio &gt; Tag or it's partical tag &lt; Source &gt; </li>
+                            <li> [Controls]: Which is allowing tools bar to the Audio file coded.</li>
+                            <li> [Autoplay]: It provides the (Auto play) feature to the allocated audio file          once the website is loaded.</li>
+                            <li> [Loop]: It provides the Looping feature to the allocated audio file once it          finished Automaticlay.</li>
+                            <li> [Mute]: It provides the ability to mute the audio file inspite of being played,       and this can be a programable feature in Javascipt.</li>
+                            <li> [Preload = ""]: It provides the ability to control the download method of the        audio file, and it offer (3) options :
+                                <ol type="A">
+                                    <li> [Preload = "Auto"] : It is meaning to auto load the allocated audio file      once the website is loaded.</li>
+                                    <li> [Preload = "metadata"] : It is meaning to load the information of the        allocated audio file once the website is loaded.</li>
+                                    <li> [Preload = "none"] : It is meaning Not to load the allocated audio file      while website is loaded unless the user click on play button form the        control audio file.</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    <p> =&gt; [Source Tag] (&lt; source &gt;) is the only Partial Tag of [Audio Tag], and it has     2 properties:
+                        <ol>
+                            <li> [src=""]: Which can be written as mentioned in Audio Tag it self also, but it is      better to write it in Source Tag , to have a chance to add many format type of        audio file to gurantee that the browser will support one of file formats. </li>
+                            <li> [type = ""]: It specify the [ MIME ] type of the allocated Audio file, and here      some of mime type to common audio file extensions:
+                                <ol>
+                                    <li> (mp3) extension =&gt; (audio/mpeg) </li>
+                                    <li> (wav) extension =&gt; (audio/wav) </li>
+                                    <li> (ogg) extension =&gt; (audio/ogg) </li>
+                                </ol>                            
+                            </li>
+                            <li> [Media]: It is one of <mark> Unsupported property </mark> of [Source Tag] until      (2014) to any Browser. </li>
+                        </ol>
+                </header>
+                
+                <header>
+                    <h1> Main & Features of [Audio] Tag Usages: </h1>                    
+                    <p> =&gt; It has solved many problems of older way in HTML4 with in controling audio             file, by the [Audio] tag & it's attributes and properties</p>     
+                    <p> =&gt; It is very handy by using Javascript codes to manage it. </p>                    
+                    <p> =&gt; It is also can be formated by CSS codes. </p>                    
+                </header>
+                
+                <header class="AudioExp">
+                    <h1>Example:</h1>
+                    <p> Following there are the an album of a soundtrack:</p>
+                    <section>                        
+                        <div class="AudioSection">
+                            <h3>(A) Autoplay Audio File:</h3>
+                            <audio controls autoplay>
+                                <source src="Audio/Elnhaya.Tetr-MaTb3aa.Com.mp3" type="audio/mpeg" >
+                                Your browser Does Not Support the audio file format...              
+                            </audio>                        
+                        </div>
+                        
+                        <div class="AudioSection">
+                            <h3>(B) Looping Audio File:</h3>
+                            <audio controls loop >
+                                <source src="Audio/Next Imphenzia Release_ Aura Of The Alien [Piano].mp3" type="audio/mpeg" >   
+                                Your browser Does Not Support the audio file format...              
+                            </audio>
+                        </div>
+                        
+                        <div class="AudioSection" perload="none">
+                            <h3>(C) Muted Audio File:</h3>
+                            <audio controls muted > 
+                                <source src="Audio/Solar System Scope - Song.mp3" type="audio/mpeg" >             
+                                Your browser Does Not Support the audio file format...              
+                            </audio>
+                        </div>
+                        
+                        <div class="AudioSection" perload="auto">
+                            <h3>(D) Preload = "auto" Audio File:</h3>
+                            <audio controls >
+                                <source src="Audio/Solar System Scope🔭 app new Version.mp3" type="" >                           
+                                Your browser Does Not Support the audio file format...              
+                            </audio>
+                        </div>
+                        
+                        <div class="AudioSection" perload="metadata">
+                            <h3>(E) Preload = "metadata" Audio File:</h3>
+                            <audio controls >
+                                <source src="Audio/Solar System Scope🔭 app new Version.mp3" type="audio/mpeg" >   
+                                Your browser Does Not Support the audio file format...              
+                            </audio>                        
+                        </div>
+                        
+                        <div class="AudioSection" perload="none">
+                            <h3>(F) None Sourced Audio File:</h3>
+                            <audio controls >
+                                <source src="" type="" >                            
+                                Your browser Does Not Support the audio file format...              
+                            </audio>
+                        </div>
+                    </section>
+                    
+                    <div class="AudioExp1">                                            
+                        <code> 
+                            &lt;aside&gt; <br>                            
+                            &nbsp;&nbsp;&lt;section&gt; <br>                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt; Audio File (Epic Music)[Autoplay + Loop + preload="auto"]: &lt;/h3&gt;<br>                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;audio &nbsp; controls &nbsp;autoplay &nbsp;loop &nbsp;perload="auto" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;source &nbsp;src = "Audio/7 Pirates Ark Of War.mp3" &nbps;type = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"audio/mpeg" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your browser Does Not Support the audio file format...<br>              
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;/audio&gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt; Audio File (Epic Music)[ Muted + preload="metadata"]: &lt;/h3&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;audio &nbsp; controls &nbsp;muted &nbsp;perload="metadata" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;source &nbsp;src = "Audio/7 Pirates Ark Of War.mp3" &nbps;type = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"audio/mpeg" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your browser Does Not Support the audio file format...<br>              
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;/audio&gt; <br>
+                            
+                            &nbsp;&nbsp;&lt;/section&gt;<br>
+                            &lt;/aside&gt; <br>                            
+                        </code>                    
+                    </div>       
+                
+                
+            </article>                
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+        
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days '; resultM.value=' OR '+(parseInt(age.value)*parseInt(months.value)) + ' Months'">
+               Enter your Age by years:
+               <input type="text" name="age"><br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="12">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num1">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="audio/mpeg">                 
+                    Your browser Does Not Support the audio file format...              
+                </audio>                        
+       </section>
+        
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

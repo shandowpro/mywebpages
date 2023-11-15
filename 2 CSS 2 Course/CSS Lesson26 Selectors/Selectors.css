@@ -1,0 +1,80 @@
+.title {font:italic bold 40px arial; text-align:center; background:purple;
+       border:5px solid #333; color:#FFF; letter-spacing:2px; word-spacing:5px}
+.footer {text-align:center; text-decoration:underline}
+.index, .index legend {background:lightgreen; border:5px groove blue}
+
+.Types a {text-decoration: none}
+
+fieldset {margin-bottom:25px; border:5px solid aqua; background:lightblue}
+
+legend {border:5px solid aqua; padding:10px; background:rgb(200,150,100);
+       font:italic bold 25px arial; text-decoration:none}
+       
+p {font-size:20px }
+
+.title1 { margin:30px auto 20px; text-decoration:none; font-size:30px}
+.title0 { margin:30px auto 20px; text-decoration:none; font-size:25px}
+
+.All h2 + div, .All h3 + div {border:2px groove green; font-size:20px; text-align:center; width:500px; margin:auto }
+.DC h2 + div, .DC h3 + div {border:2px groove green; font-size:20px; text-align:center; width:600px; margin:auto }
+.FNS h2 + div, .FNS h3 + div {border:2px groove green; font-size:20px; text-align:center; width:600px; margin:auto }
+
+/*==========================[Selector: * (ALL) ]==============================================================================*/
+
+.All .Exp1Parent {border:3px solid blue; margin:10px; padding:20px; text-align:center; height:auto }
+.All .Exp1Parent * {Border:2px solid red; margin:20px; padding:10px }
+
+/*==========================[Selector: > (Direct Child) ]==========================================================================*/
+
+.DC .Exp1Parent {border:3px solid blue; margin:10px; padding:20px; text-align:center; height:auto; font-size:20px}
+.DC .Exp1Parent * {margin-top:20px}
+.DC .Exp1Parent > p {background:#080; border:3px solid green; width:400px; margin:auto}
+
+/*===========================[Selector: + (First Next Sibling)]=========================================================================*/
+
+.FNS .Exp1Parent {border:3px solid blue; margin:10px; padding:20px; text-align:center; height:auto; font-size:20px}
+.FNS .Exp1Parent * {margin-top:20px}
+.FNS .Exp1Parent div + p {background:#080; margin:auto; width:500px}
+
+
+/*===========================[Selector: ~ (All Next Siblings)]=========================================================================*/
+
+.FNS .Exp1Parent {border:3px solid blue; margin:10px; padding:20px; text-align:center; height:auto; font-size:20px}
+.FNS .Exp1Parent * {margin-top:20px}
+.FNS .Exp1Parent div + p {background:#080; margin:auto; width:500px}
+
+    
+/*===========================[Selector: ~ (All Next Siblings)]=========================================================================*/
+
+.ANS .Exp1Parent {border:3px solid blue; margin:10px; padding:20px; text-align:center; height:auto; font-size:20px}
+.ANS .Exp1Parent * {margin-top:20px}
+.ANS .Exp1Parent div ~ p {background:#080; margin:auto; width:600px; margin:auto; margin-bottom:10px}
+
+/*====================================================================================================*/
+    .home
+        {
+            background:green; border:3px solid #0ff; padding:5px;
+            position:fixed; font-size:20px; color:#FFF; top:50px; right:10px; 
+            text-decoration: none        
+        }
+    
+    .home:hover
+        {
+            background:lightgreen; border:5px solid #0ff; padding:5px;
+            position:fixed; font-size:25px; color:#000;
+            text-decoration: underline
+        }
+    
+    .end
+        {
+            background:green; border:3px solid #0ff; padding:5px;
+            position:fixed; font-size:20px; color:#FFF; top:120px; right:10px; 
+            text-decoration: none        
+        }
+        
+    .end:hover
+        {
+            background:lightgreen; border:5px solid #0ff; padding:5px;
+            position:fixed; font-size:25px; color:#000;
+            text-decoration: underline
+        }      

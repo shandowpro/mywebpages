@@ -1,0 +1,741 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson41 Animation - [Iteration-Count || Direction]  </title>
+    <link rel="stylesheet" href="CSS3 Lesson41 Animation - Iteration Count, Direction.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson41 [CSS3 Animation - [Iteration Count || Direction]]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+     <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to CSS3 Animation - [Iteration Count || Direction] main Topics">
+                [ CSS3 Animation - [Iteration Count || Direction] ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to CSS3  Animation - [Iteration Count || Direction] [CSS3  Animation - [Iteration Count || Direction] ] Concept">
+                [ CSS3 Animation - [Iteration Count || Direction] ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to CSS3  Animation - [Iteration Count || Direction] [CSS3 Animation - [Iteration Count || Direction] ] Importance & Benefits">
+                [ CSS3 Animation - [Iteration Count || Direction] ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to CSS3  Animation - [Iteration Count || Direction] [CSS3  Animation - [Iteration Count || Direction] ] Syntax">
+                [ CSS3 Animation - [Iteration Count || Direction] ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to CSS3  Animation - [Iteration Count || Direction] [CSS3 Animation - [Iteration Count || Direction] ] Practical Applications">
+                [ CSS3 Animation - [Iteration Count || Direction] ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson41 [CSS3 Animation - [Iteration Count || Direction] ] {part3} </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                CSS3 Lesson 41 Animation - [Iteration Count || Direction] Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+
+                <ol type="A">
+                    <li> Animation-iteration-count  => {concept & Conceptual Examples}   </li>                                                                                        
+                    <li> Animation-direction  => {concept & Conceptual Examples}   </li>                                                                                        
+                </ol>                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class=CSS3Con id="CSS3Con">
+            <header>
+                <h3> [CSS3 Animation - [Iteration Count || Direction] ] Concept: </h3>
+            </header>
+                                              
+            <p> {Animation- [Iteration-Count || Direction]} => Is Needing for using [prefixes] before the animation property and it's branshed properties <br>
+                                                
+            <p> {Animation - [Iteration Count || Direction]}: These are the first and second child perperites of Animation syntax , with following details : <br>
+                <ol>
+                    <li> { -webkit-animation-iteration-count || animation-iteration-count} =>  <br>
+                        <p> Which is the Animation repeating count  </p>
+                        <p> Default value of Animation-iteration-count : 1  </p>
+                        <p> Animation-iteration-count => can be set by : {# number} || {infinite}: (Which ins meaning to repeate the Animation forever )  </p>
+                    </li>
+
+                    <li> { -webkit-animation-direction || animation-direction} => <br>
+                        <p> Which is the Animation Direction Mode to be displayed with </p>
+                        <p> [Default value] : normal   </p>
+                        <p> Can be assigned by following values : <br>
+                            <ol>
+                                <li> [normal] => To Start the animation funcion from the first step to the last step </li>
+                                <li> [reverse] => To Start the animation funcion from the last step to the first step </li>
+                                <li> [alternate] => To Start the animation funcion from the [last step -> the first step] , and reverse the animation back step again </li>
+                                <li> [alternate-reverse] => To start the animation funcion from the [Last step -> First step] , and reverse the animation back step again </li>
+                            </ol>
+                    </li>                    
+                </ol>
+                                                                        
+                <!-- ------------------------------------------------------ -->
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+        <section class="CSS3Imp" id="CSS3Imp">
+            <header>
+                <h3> [CSS3 / Animation - [Iteration-Count || Direction] ] Importance & Benefits: </h3>
+            </header>
+            
+            <p> =&gt; [CSS3 / Animation - [Iteration-Count || Direction] ] : This Advanced sub properties enabling the following features & imporatance : <br>            
+                <ul>                                                                
+                    <li> [animation-iteration-count] : Give a ability to assign a certain count of repeating the Declared Animation, with ability to set it (forever by infinite) to a specific Element [can be set diffrerntly for each element] </li>
+                    <li> [animation-direction] : Give a ability to assign a certain direction mode to Declared Animation for to a specific Element [can be set diffrerntly for each element] </li>                    
+                </ul>                                                 
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ CSS3 Animation - [Intro || Keyframes]] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // (*) [CSS3 Animation - [Iteration-Count || Direction]] Syntax as following :<br><br>
+                <span class='one'></span> //a)  [HTML] file  : <br>                                          
+                    <!-- *) Animation - Keyframes Common Examples  -->                                        
+                        
+                    <!-- First Parent Container  -->
+                        <span class=two></span> &lt; fieldset class='OneElement' &gt; <br>
+
+                            <!--  First Div => { (1) Animation: Coloring  } -->
+                            <span class=three></span> &lt; div class='First'  &gt; <br>
+                            <span class=three></span> &lt; /div &gt;  <br> <br>
+                            <br>
+                            <!-- ---------------------------------------------- -->
+                            
+                            <!--  Second Div => { (2) Animation: Coloring + Moving  } -->
+                            <span class=three></span> &lt; div class='Second'  &gt; <br> 
+                            <span class=three></span> &lt; /div &gt;  <br> <br>
+                            <br>
+                            <!-- ---------------------------------------------- -->
+                        <span class=two></span> &lt; /fieldset &gt; <br> 
+                            <br> <hr>
+                        <!-- ---------------------------------------------- -->
+                        <!-- ---------------------------------------------- -->
+                        
+                    <!-- Second Parent Container  -->
+                        <span class=two></span> &lt; fieldset class='TwoElement' &gt; <br>
+                        
+                            <!--  First Sub-Container => { (1) Animation: Coloring  } -->
+                            <span class=three></span> &lt; div class='OneAnimation'  &gt; <br>                                
+                                <span class=four></span> &lt; div class='First'  &gt; <br>                                
+                                <span class=four></span> &lt; /div &gt;  <br> <br>
+                                
+                                <span class=four></span> &lt; div class='Second'  &gt; <br>                                
+                                <span class=four></span> &lt; /div &gt;  <br> <br>
+                            <span class=three></span> &lt; /div &gt;  <br> <br>
+                            <br> <hr>
+                            <!-- ---------------------------------------------- -->                            
+                            
+                            <!--  Second Sub-Container => { (2) Animation: Coloring + Moving  }   } -->
+                            <span class=three></span> &lt; div class='TwoAnimation'  &gt; <br>                                
+                                <span class=four></span> &lt; div class='First'  &gt; <br>                                
+                                <span class=four></span> &lt; /div &gt;  <br> <br>
+                                
+                                <span class=four></span> &lt; div class='Second'  &gt; <br>                                
+                                <span class=four></span> &lt; /div &gt;  <br> <br>                                
+                            <span class=three></span> &lt; /div &gt;  <br> <br>
+                            <br> <hr>
+                            <!-- ---------------------------------------------- -->                                                        
+                        <span class=two></span> &lt; /fieldset &gt; <br>                                            
+                            <br> <hr>
+                            <!-- ---------------------------------------------- -->
+                    <br> <br>  <hr>
+                    // ------------------------------------------------------------------------------ <br><br>
+                    // ------------------------------------------------------------------------------ <br><br>                    
+                    // ------------------------------------------------------------------------------ <br><br>
+                        <br> <br>  <hr>                                                           
+                    <span class='one'></span> //b)  [CSS3] file  : <br>                                          
+                        
+                    <!-- CSS3 Settings {OneElement || TwoElements }:
+                        (a) General parent Container Settings :  -->                        
+                        <span class=two></span> .OneElement, .TwoElement {  <br>
+                            <span class=three></span> position: relative; <br>                        
+                            <span class=three></span> margin: 50px auto ; <br>                        
+                            <span class=three></span> width: 100%; <br>
+                            <span class=three></span> height: fit-content; <br>
+                            <span class=three></span> border: 3px solid #EEE; <br>                            
+                            <span class=three></span> border-radius: 10px ; <br>                            
+                        <span class=two></span> }  <br> <br>                                                
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- ----------------------------------------------------------------------- -->
+                        
+                        <!-- (b) Public Sub-container (.TwoElement) Settings :  -->                        
+                        <span class=two></span> .TwoElement {  <br>
+                            <span class=three></span> position: relative; <br>                        
+                            <span class=three></span> margin: 50px auto ; <br>                        
+                            <span class=three></span> width: 90%; <br>
+                            <span class=three></span> height: fit-content; <br>
+                            <span class=three></span> border: 3px solid #EEE; <br>                            
+                            <span class=three></span> border-radius: 10px ; <br>                            
+                        <span class=two></span> }  <br> <br> <hr>                                                
+                        
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- (c) Public Children Settings :  -->
+                        <span class=two></span> .OneElement > div, .OneElement > div > div  {  <br>                            
+                            <span class=three></snpan> position: absolute ; <br>                                                        
+                            <span class=three></span> width: 200px; <br>
+                            <span class=three></span> height: 200px; <br>
+                            <span class=three></span> background-color: #EFEFEF; <br>                            
+                            <span class=three></span> border: 1px solid black; <br>                                                                                  
+                            <span class=three></span> color: #FFF ; <br>
+                        <span class=two></span> }  <br> <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                        
+                        <span class=two></span> .OneElement > h2, .TwoElement > div > h2 {  <br>
+                            <span class=three></span> font-size :20px; <br>
+                            <span class=three></span> margin: 50px auto; <br>
+                            <span class=three></span> color:  #333; <br>
+                            <span class=three></span> background-color: #CCC; <br>
+                            <span class=three></span> border: 2px solid #333; <br>
+                            <span class=three></span> border-radius: 20px; <br>
+                            <span class=three></span> width: 80%; <br>
+                            <span class=three></span> height: fit-content; <br>                                                        
+                            <span class=three></span> text-align: center ; <br>                                                                                    
+                            <span class=three></span> list-style: .7 ; <br>                                                                                                                                                                                                                      
+                        <span class=two></span> }  <br> <hr>
+                        // ------------------------------------------------------------------------------ <br><br>                                                            
+                        
+                        <!-- (C) Customized Children Settings :
+                          a) OneElement Parent => First Parent Container / First Div => 
+                          { (1) Animation-name: Coloring || animation-duration: 3s || animation-iteration-count:2 || animation-direction:normal (default) } -->
+                        <span class=two></span> .OneElement > .First  {  <br>
+                            <span class=three></span> -webkit-animation-name: coloring ; <br>                            
+                            <span class=three></span> animation-name: coloring ; <br>
+                            <span class=three></span> -webkit-animation-duration: 3s ; <br>                            
+                            <span class=three></span> animation-duration: 3s ; <br>
+                            <span class=three></span> -webkit-animation-iteration-count: 2 ; <br>                            
+                            <span class=three></span> animation-iteration-count: 2 ; <br>
+                            <span class=three></span> -webkit-animation-direction: normal ; <br>                            
+                            <span class=three></span> animation-direction: normal ; <br>                                                                                
+                        <span class=two></span> }  <br> 
+                        <br> 
+                        <!-- ------------------------------------------------------------- -->                        
+                                                
+                          <!-- / a) OneElement Parent => Second Parent Container / Second Div => 
+                            { (2) Animation-name: ColoringMoving || animation-duration: 3s || animation-iteration-count:2 || animation-direction:normal (default) } -->
+                        <span class=two></span> .OneElement > .Second  {  <br>
+                            <span class=three></span> -webkit-animation-name: coloringMoving ; <br>                            
+                            <span class=three></span> animation-name: coloringMoving ; <br>
+                            <span class=three></span> -webkit-animation-duration: 3s ; <br>                            
+                            <span class=three></span> animation-duration: 3s ; <br>
+                            <span class=three></span> -webkit-animation-iteration-count: 2 ; <br>                            
+                            <span class=three></span> animation-iteration-count: 2 ; <br>
+                            <span class=three></span> -webkit-animation-direction: normal ; <br>                            
+                            <span class=three></span> animation-direction: normal ; <br> 
+                        <span class=two></span> }  <br> 
+                        <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                        
+                        <!-- ------------------------------------------------------------- -->                                                                                                  
+                          
+                          
+                          <!-- b) TwoElement Parent => First-Sub-Container /First Div & Second Div Children =>
+                             { (1)/(2) Animation-name: Coloring || animation-duration: 3s || animation-iteration-count:infinite || animation-direction:normal (default) } -->
+                        <span class=two></span> .OneElement > .OneAnimation > .First  {  <br>                            
+                            <span class=three></span> top: 0 ; <br>
+                            <span class=three></span> left: 100px; <br>                            
+                            <span class=three></span> -webkit-animation-name: coloring ; <br>                            
+                            <span class=three></span> animation-name: coloring ; <br>
+                            <span class=three></span> -webkit-animation-duration: 3s ; <br>                            
+                            <span class=three></span> animation-duration: 3s ; <br>
+                            <span class=three></span> -webkit-animation-iteration-count: infinite ; <br>                            
+                            <span class=three></span> animation-iteration-count: infinite ; <br>
+                            <span class=three></span> -webkit-animation-direction: normal ; <br>                            
+                            <span class=three></span> animation-direction: normal ; <br>                             
+                        <span class=two></span> }  <br> 
+                        <br> 
+                        
+                        <span class=two></span> .OneElement > .OneAnimation > .Second  {  <br>                            
+                            <span class=three></span> top: 0 ; <br>
+                            <span class=three></span> left: 200px; <br>                            
+                            <span class=three></span> -webkit-animation-name: coloring ; <br>                            
+                            <span class=three></span> animation-name: coloring ; <br>
+                            <span class=three></span> -webkit-animation-duration: 4s ; <br>                            
+                            <span class=three></span> animation-duration: 4s ; <br>
+                            <span class=three></span> -webkit-animation-iteration-count: infinite ; <br>                            
+                            <span class=three></span> animation-iteration-count: infinite ; <br>
+                            <span class=three></span> -webkit-animation-direction: normal ; <br>                            
+                            <span class=three></span> animation-direction: normal ; <br> 
+                        <span class=two></span> }  <br> 
+                        <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                        
+                                                
+                          <!-- / b) TwoElement Parent => Second-Sub-Container /First Div  Child =>
+                              { (1) Animation-name: ColoringMoving || animation-duration: 3s || animation-iteration-count:infinite || animation-direction:normal (default) } -->
+                        <span class=two></span> .TwoElement > .TwoAnimation > .First  {  <br>
+                            <span class=three></span> -webkit-animation-name: coloringMoving ; <br>                            
+                            <span class=three></span> animation-name: coloring ; <br>
+                            <span class=three></span> -webkit-animation-duration: 3s ; <br>                            
+                            <span class=three></span> animation-duration: 3s ; <br>
+                            <span class=three></span> -webkit-animation-iteration-count: infinite ; <br>                            
+                            <span class=three></span> animation-iteration-count: infinite ; <br>
+                            <span class=three></span> -webkit-animation-direction: reverse; <br>                            
+                            <span class=three></span> animation-direction: reverse; <br>
+                        <span class=two></span> }  <br> 
+                        <br> 
+                        
+                        <!-- / b) TwoElement Parent => Second-Sub-Container / Second Div  Child =>
+                          { (2) Animation-name: ColoringMoving || animation-duration: 4s || animation-iteration-count:infinite || animation-direction:normal (default) } -->
+                        <span class=two></span> .TwoElement > .TwoAnimation > .Second  {  <br>
+                            <span class=three></span> -webkit-animation-name: coloringMoving ; <br>                            
+                            <span class=three></span> animation-name: coloring ; <br>
+                            <span class=three></span> -webkit-animation-duration: 3s ; <br>                            
+                            <span class=three></span> animation-duration: 3s ; <br>
+                            <span class=three></span> -webkit-animation-iteration-count: infinite ; <br>                            
+                            <span class=three></span> animation-iteration-count: infinite ; <br>
+                            <span class=three></span> -webkit-animation-direction: reverse ; <br>                            
+                            <span class=three></span> animation-direction: reverse ; <br>
+                        <span class=two></span> }  <br> 
+                        <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                                                                    
+                        <!-- ------------------------------------------------------------- -->                        
+                          
+                        <!-- / C) FourElement Parent => Third-Sub-Container /First Div & Second Div & Third Div & Fourth Div Children => 
+                            { (1) Animation-name: coloringMovingCircRot || animation-duration: 1s || animation-iteration-count:infinite || animation-direction:normal (default) } -->
+                        <span class=two></span> .FourElement > .FourAnimation > .First  {  <br>
+                            <span class=three></span> -webkit-animation-name: coloringMovingCircRot ; <br>                            
+                            <span class=three></span> animation-name: coloringMovingCircRot ; <br>
+                            <span class=three></span> -webkit-animation-duration: 1s ; <br>                            
+                            <span class=three></span> animation-duration: 1s ; <br>
+                            <span class=three></span> -webkit-animation-iteration-count: infinite ; <br>                            
+                            <span class=three></span> animation-iteration-count: infinite ; <br>
+                            <span class=three></span> -webkit-animation-direction: alternate ; <br>                            
+                            <span class=three></span> animation-direction: alternate; <br>                                                                                    
+                        <span class=two></span> }  <br> 
+                        <br>
+
+                        <!-- { (2) Animation-name: coloringMovingCircRot || animation-duration: 2s || animation-iteration-count:infinite || animation-direction:normal (default) } -->
+                        <span class=two></span> .FourElement > .FourAnimation > .Second  {  <br>
+                            <span class=three></span> -webkit-animation-name: coloringMovingCircRot ; <br>                            
+                            <span class=three></span> animation-name: coloringMovingCircRot ; <br>
+                            <span class=three></span> -webkit-animation-duration: 2s ; <br>                            
+                            <span class=three></span> animation-duration: 2s ; <br>
+                            <span class=three></span> -webkit-animation-iteration-count: infinite ; <br>
+                            <span class=three></span> animation-iteration-count: infinite ; <br>
+                            <span class=three></span> -webkit-animation-direction: alternate-reverse ; <br>
+                            <span class=three></span> animation-direction: alternate; <br>
+                        <span class=two></span> }  <br>
+                        
+                        <!-- { (3) Animation-name: coloringMovingCircRot || animation-duration: 3s || animation-iteration-count:infinite || animation-direction: alternate (default) } -->
+                        <span class=two></span> .FourElement > .FourAnimation > .Third {  <br>
+                            <span class=three></span> -webkit-animation-name: coloringMovingCircRot ; <br>                            
+                            <span class=three></span> animation-name: coloringMovingCircRot ; <br>
+                            <span class=three></span> -webkit-animation-duration: 3s ; <br>                            
+                            <span class=three></span> animation-duration: 3s ; <br>
+                            <span class=three></span> -webkit-animation-iteration-count: infinite ; <br>
+                            <span class=three></span> animation-iteration-count: infinite ; <br>
+                            <span class=three></span> -webkit-animation-direction: alternate-reverse ; <br>
+                            <span class=three></span> animation-direction: alternate-reverse; <br>                         
+                        <span class=two></span> }  <br> 
+                        <br> 
+                    
+                        <!-- { (4) Animation-name: coloringMovingCircRot || animation-duration: 4s || animation-iteration-count:infinite || animation-direction: alternate-reverse (default) } -->
+                        <span class=two></span> .FourElement > .FourAnimation > .Fourth {  <br>
+                            <span class=three></span> -webkit-animation-name: coloringMovingCircRot ; <br>                            
+                            <span class=three></span> animation-name: coloringMovingCircRot ; <br>
+                            <span class=three></span> -webkit-animation-duration: 4s ; <br>                            
+                            <span class=three></span> animation-duration: 4s ; <br>
+                            <span class=three></span> -webkit-animation-iteration-count: infinite ; <br>
+                            <span class=three></span> animation-iteration-count: infinite ; <br>
+                            <span class=three></span> -webkit-animation-direction: alternate-reverse ; <br>
+                            <span class=three></span> animation-direction: alternate-reverse; <br>                                                                                                             
+                        <span class=two></span> }  <br> 
+                        <br> 
+                        <!-- ------------------------------------------------------------- -->                                                                    
+                        <!-- ------------------------------------------------------------- -->                        
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="CSS3Pract" >
+
+            <header>
+                <h3> [CSS3 - Animation - [Iteration Count || Direction]] General Practical Applications : </h3>
+            </header>
+         
+            <h4> 
+                =&gt; Following are Applied examples of {Animation - [Iteration Count || Direction]} new feature/ property with (all) of Transitoin Function Values} : 
+            </h4>
+                
+            <p> (3) Main Fieldsets has (Multiple) divs (children) as following:  </p>                        
+            
+            <ol>                    
+                <li>  First Sub-Container => with following settings: </li>  <br>
+                    <ul>                        
+                        <li> Has (2) Seperated Elements: <br>
+                            <ol>
+                                <li> First: One Animation (coloring), Second: Two Animiations (Moving) </li>
+                                <li> Second: Two Animation (coloring + Moving) (cloringMoving) </li>                                
+                            </ol>    
+                        </li>                        
+                    </ul> 
+                <hr>                                
+                
+                <li>  Second Sub-Container => with following settings: </li>  <br>
+                    <ul>                        
+                        <li> Has (2) groups of Elements as following :</li> <br>
+                            <ol>
+                                <li> First group: Has (2) Children of Elements, with the One Animation (Coloring) for both </li>
+                                <li> Second group: Has (2) Children of Elements, with the Two different Animations for both (Coloring + Moving - ColoringMoving- ) </li>
+                            </ol>                            
+                    </ul> 
+                
+                <li>  Third Sub-Container => with following settings: </li>  <br>
+                    <ul>                        
+                        <li> Has (2) groups of Elements as following :</li> <br>
+                            <ol>
+                                <li> First group: Has (2) Children of Elements, with the One Animation (Coloring) for both </li>
+                                <li> Second group: Has (2) Children of Elements, with the Two different Animations for both (Coloring + Moving - ColoringMoving- ) </li>
+                            </ol>                            
+                    </ul> 
+                <hr>                                
+            
+            </ol>                                                
+            <br><br><br>
+            <!-- ========================================================================= -->                                                        
+                        
+            <header>Threre are (3) main Parent Container => Has Animating Children (with different Types of Animating) </header>
+            
+            <!-- First Fieldset / OneElement -->
+            <fieldset class='OneElement'>                                                  
+
+                <legend>  Following There are (2) children of animating Elements  :  </legend>                                                                                                                            
+                    <header>  First Element => { One Animation (Coloring) }  </header>
+                    <div class='First'>                                                                     
+                        First Element
+                    </div> <br>
+                    <!-- ------------------------------------------------------------------------- -->                
+                    
+                    <header>  Second Element => { Two Animations (Coloring + Moving -coloringMoving- ) }  </header>
+                    <div class='Second'>                                                                     
+                        Second Element
+                    </div> <br>
+                    <!-- ------------------------------------------------------------------------- -->                                                                            
+                    <hr> <br> <br>                                                                    
+            </fieldset>            
+                
+                <!-- ------------------------------------------------------------------------- -->                                                                            
+                <!-- ------------------------------------------------------------------------- -->                                                                            
+            
+            <!-- Second Fieldset / TwoElement -->
+            <fieldset class='TwoElement'> 
+
+                <legend>  Following There are (2) children of animating Elements  :  </legend>                                                                                                                            
+                
+                <header> /Second Fieldset [TwoElement] / First Sub-Container [OneAnimation] => { One Animation (Coloring) -different duration Timing- }  </header>
+                    
+                    <!-- Coloring Animation -->
+                    <div class='OneAnimation'>
+                        <div class='First'>                                                                     
+                            First Element {One Animation}
+                        </div> <br>                    
+                        
+                        <div class='Second'>                                                                     
+                            Second Element {One Animation}
+                        </div> <br>
+                    </div>
+                    <br> <br>
+                    <!-- ================================================================= -->
+                    
+                <header>  /Second Fieldset [TwoElements] / Second Sub-Container [TwoAnimation] => { Two Animations (ColoringMoving ) }  </header>
+            
+                    <!-- Coloring + Moving Animation -->
+                    <div class='TwoAnimation'>
+                        <div class='First'>                                                                     
+                            First Element {Two Animations}
+                        </div> <br>                    
+                        
+                        <div class='Second'>                                                                     
+                            Second Element {Two Animations}
+                        </div> <br>
+            
+                        <div class='Third'>                                                                     
+                            Third Element {Two Animations}
+                        </div> <br>
+                        
+                        <div class='Fourth'>                                                                     
+                            Foruth Element {Two Animations}
+                        </div> <br>
+                    </div>
+                
+                    <!-- ------------------------------------------------------------------------- -->                                                                            
+                <hr> <br> <br>                                                        
+            </fieldset>            
+            
+            <!-- --------------------------------------------------------------------- -->                                                                                        
+            <br><hr> <br>        
+            <!-- --------------------------------------------------------------------- -->                            
+            
+            <!-- Third Fieldset -->
+            <fieldset class='MultiElem-MultiAnim'>                                                  
+
+                <legend>  Following There are (4) children of animating Elements  :  </legend>                                                                                                                            
+                
+                <header> /Third Fieldset [MultiElem-MultiAnim] / First Sub-Container [Mulitiple Animations] =>  (Coloring , Moving , Circling , Rotating ) }  </header>
+                    
+                    <!-- Mulitiple Animations (Coloring , Moving , Circling , Rotating ) -->
+                    
+                    <div class='Multi1'>
+                        <div class='First'>                                                                     
+                            First Element 
+                        </div> <br>                    
+                        
+                        <div class='Second'>                                                                     
+                            Second Element
+                        </div> <br>
+                        
+                        <div class='Third'>                                                                     
+                            Third Element 
+                        </div> <br>                    
+                        
+                        <div class='Fourth'>                                                                     
+                            Fourth Element
+                        </div> <br>
+                    </div>
+                    <br> <br>
+                    <!-- ================================================================= -->
+                    
+                <header> /Third Fieldset [MultiElem-MultiAnim] / Second Sub-Container [Mulitiple Animations] =>  (Pupimg-Ball) }  </header>
+                    
+                    <!-- Mulitiple Animations (Pumping-Ball ) -->                    
+                    <div class='Multi2'>
+                        
+                        <div class='First'>                                                                     
+                            Pumping Ball
+                        </div> <br>                    
+                        
+                        <div class='Second'>                                                                     
+                            Pumping Ball
+                        </div> <br>                    
+                        
+                        <div class='Third'>                                                                     
+                            Pumping Ball
+                        </div> <br>                    
+                        
+                        <div class='Fourth'>                                                                     
+                            Pumping Ball
+                        </div> <br>                    
+                                                
+                    </div>
+                    <br> <br>
+                    <!-- ================================================================= -->
+
+                    <header> /Third Fieldset [MultiElem-MultiAnim] / Third Sub-Container [Mulitiple Animations] =>  (Coloring , Moving , Circling , Rotating ) }  </header>
+                    
+                    <!-- Mulitiple Animations (Coloring , Moving , Circling , Rotating  ) -->                    
+                    <div class='Multi3'>
+                        <div class='First'>                                                                     
+                            First Element 
+                        </div> <br>                    
+                        
+                        <div class='Second'>                                                                     
+                            Second Element
+                        </div> <br>
+                        
+                        <div class='Third'>                                                                     
+                            Third Element 
+                        </div> <br>                    
+                        
+                        <div class='Fourth'>                                                                     
+                            Fourth Element
+                        </div> <br>
+                    </div>
+                    <br> <br>
+                    <!-- ================================================================= -->
+                    
+                    <header> /Third Fieldset [MultiElem-MultiAnim] / Fourth Sub-Container [Mulitiple Animations] =>  (Pumping-Ball0) }  </header>
+                    
+                    <!-- Mulitiple Animations (Pumping-Ball0 ) -->                    
+                    <div class='Multi4'>
+                        <div class='First'>                                                                     
+                            First Ball [normal]
+                        </div> <br>                    
+                        
+                        <div class='Second'>                                                                     
+                            Second Ball [alternate]
+                        </div> <br>
+                        
+                        <div class='Third'>                                                                     
+                            Third Ball [reverse ]
+                        </div> <br>                    
+                        
+                        <div class='Fourth'>                                                                     
+                            Fourth Ball [alternate-reverse]
+                        </div> <br>
+                    </div>
+                    <br> <br>
+                    <!-- ================================================================= -->                                                    
+                    <!-- ------------------------------------------------------------------------- -->                                                                            
+                <hr> <br> <br>                                                        
+            </fieldset>            
+            
+            <!-- --------------------------------------------------------------------- -->                                                                                        
+            <br><hr> <br>        
+            <!-- --------------------------------------------------------------------- -->                            
+        <!-- --------------------------------------------------------------------- -->                                                    
+        </section>                    
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 41 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=tyK6Jyvm6xw&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=41&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\41 Css3 - Animation - Iteration Count, Direction.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 41 [CSS3 Animation - [Iteration Count || Direction] ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

@@ -1,0 +1,380 @@
+    
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS OOP Lesson 2 [Find Elements By ID Class Tag] </title>
+    <link rel="stylesheet" href="JS DOM Lesson2 [Find Elements By  ID Class Tag].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JS OOP Lesson 2 [Find Elements By ID Class Name ,Tag Name, Querry Selector]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS OOP main Topics">
+                JS OOP Lesson2 [Find Elements By ID Class Name ,Tag Name, Querry Selector ] Main Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to JS OOP [Find Elements By  ID Class Tag ] Concept">
+                JS OOP Lesson2 [Find Elements By ID Class Name ,Tag Name, Querry Selector ] Concept </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to JS OOP [Find Elements By  ID Class Tag ] Importance & Benefits">
+                JS OOP Lesson2 [Find Elements By  ID Class Name ,Tag Name, Querry Selector ] Importance & Benefits </a> </li>
+
+            <li> <a href=#JSDOMSyntx title="Go to JS OOP [Find Elements By  ID Class Tag ] Syntax">
+                JS OOP Lesson2 [Find Elements By  ID Class Name ,Tag Name, Querry Selector] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to JS OOP [Find Elements By  ID Class Tag ] Practical Applications">
+                JS OOP Lesson2 [Find Elements By  ID Class Name ,Tag Name, Querry Selector ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS OOP Course <span> JS OOP Lesson 2 [Find Elements By  ID Class Tag ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                JS OOP [Class Static Properties and Methods ] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS OOP [Find Elements By  ID Class Name ,Tag Name, Querry Selector ] Concept. </li>                    
+                    
+                    <li> JS OOP [Find Elements By  ID Class Name ,Tag Name, Querry Selector ] Importance & Benefits. </li>
+
+                    <li> JS OOP [Find Elements By  ID Class Name ,Tag Name, Querry Selector ] Syntax [Definition + Access]. </li>
+                    
+                    <li> JS OOP [Find Elements By  ID Class Name ,Tag Name, Querry Selector ] Practical Application. </li>
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    <ul>
+                        <li> Accessing Element by it's {ID Attribute} { var ElementVarName = document.getElementById('ElementID'); }</li>
+                        <li> Accessing Element by it's {Tag Name Attribute} { var ElementVarName = document.getElementsByTagName('ElementName');}</li>
+                        <li> Accessing Element by it's {Class Name Attribute} { var ElementVarName = document.getElementsByClassName('ElementClass'); }</li>
+                        <li> Accessing Element by it's {Tag Selector} { var ElementVarName = document.querrySelectorAll('AnyOfElememntAttribute'); }</li>                                                
+                    </ul>
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> JS OOP [Find Elements By ID Class Name ,Tag Name, Querry Selector] Concept: </h3>
+            </header>
+                        
+            <p> =&gt; JS HTML DOM [Course Requirements]: you are gonna needs following Techniques before taking DOM: 
+                <ul>
+                    <li> HTML =&gt; To know the Web page structure</li>
+                    <li> Css =&gt; To know the Web page Elelments formating, Visualizing </li>
+                    <li> JS =&gt; Which is the Manipulating language which will control with HTML,XML by, using all it programing features  </li>
+                </ul>
+            
+            
+            <p> =&gt; JS HTML DOM [Definition]: It refers to {Document Object Model}, and each defnition as following: 
+                <ul>
+                    <li>{Document} =&gt; Which is the Webpage Document.  </li> 
+                    
+                    <li>{Object} =&gt; Which is each element in the Webpage Document, which can include [Tags, Attributes, Text Nodes-Element Contents].  </li> 
+                    
+                    <li>{Model} =&gt; Which is being delt with HTML,XML elements by using JS programing Language with all it's features.  </li> 
+                    
+                </ul> 
+            
+            <p> =&gt; JS HTML DOM [Concept]: It a Programing Interface for HTML + XML , which Javascript can deal with it by. 
+                
+            <p> =&gt; JS HTML DOM [Framework]: DOM is dealing with Web page as OOP Tree view, as an Element unit, and an Object group.
+                
+            <p> =&gt; JS HTML DOM [Controling]: DOM is dealing with Web page as OOP Tree view, as an Element unit, and an Object group.
+                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> JS OOP [Find Elements By  ID Class Name ,Tag Name, Querry Selector ] Importance & Benefits: </h3>
+            </header>
+
+            <p> [DOM] gives us the Following Features : <br>
+                <ul>                                                 
+                    <li> Using [JS] has Full Access to Web page by Controling with [Adding , Editing, Deleting] of Web page doucment (Elements,Attributes,TextNodes) </li>        
+                    
+                    <li> Using [JS] has Full Access to all Web page elements [Events] by {Adding, Editing , Deleting} </li>        
+                    
+                    <li> Using [JS] has full Direct Access to elements's CSS properties, within the Same Webpage source. </li>        
+                                    
+                </ul>
+                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> [ JS HTML DOM Find Element by ID Class Name ,Tag Name, Querry Selector ] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS HTML DOM Defining-Declaring [Class] Conceptual Syntax as following : </p>
+            
+            <div id="Code" class="Code">
+                // A) JS HTML DOM Defining new Element of web page as a Variable by [DOM] Syntax as following :<br><br>
+                    <span class= one></span>var ElementVarName = document.createElement('ElementHTMLName'); <br>                      
+                                
+                //=========================================================== <br> <br>                    
+
+                // B) JS HTML DOM Defining new Element's content of web page as a Variable by [DOM] Syntax as following :<br><br>                    
+                    <span class= one></span>var ContentVarName = document.createTextNode('Content text of the Element'); <br>                      
+                //=========================================================== <br> <br>                    
+                
+                // C) JS HTML DOM Adding a Text Node to a Element of web page as a Variable by [DOM] Syntax as following :<br><br>                    
+                    <span class= one></span> document.ElementVarName.appendChild('ContentVarName');<br>                      
+                //=========================================================== <br> <br>                                                                                                    
+                
+                // D) JS HTML DOM Adding the Element (after adding its contents in it) into web page by [DOM] Syntax as following :<br><br>                    
+                    <span class= one></span> document.body.appendChild(ElementVarName);<br>                      
+                //=========================================================== <br> <br>                                                                                                    
+                //=========================================================== <br> <br>                                                                                    
+                        
+            <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMPract" id="JSDOMPract">
+            <header>
+                <h3> JS OOP [Find Elements By  ID Class Name ,Tag Name, Querry Selector] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here one Major Application will include following Function/Tasks :  &gt;&gt; <br>
+                <ol>                    
+                    <li> Creating certain Number of (3) types of Elements inside a web page: </li>
+                    <ul>
+                        <li>Header &lt;h1&gt;-&lt;h8&gt; : with ability to choose the Size of Header + Text Node (Contents)</li>
+                        <li>Paragraph &lt;p&gt; : with ability to insert The Text Node (Contents) of the {paragraph} Element.</li>
+                        <li>Links(ankor(s)) &lt;a&gt; : with ability to insert The Text Node (Contents) of the link/Ankor Element.</li>
+                    </ul>                                        
+                </ol>                
+            <br>
+
+            <section id=sec class=secClass>  
+            </section> <br>
+
+            <section id=secId class=secClass>  
+                <header class=headerClass id=headerId > First Header </header>
+                <header class=headerClass id=headerId > Second Header </header>
+                <header class=headerClass id=headerId > Third Header </header>
+                
+                <h1 class=h1Class id=h1Id> First text Area </h1>                                                
+                <h1 class=h1Class id=h1Id> Second text Area </h1>                                                
+                <h1 class=h1Class id=h1Id> Third text Area </h1>                                                
+                
+                <p class=pClass id=pId> First Paragraph </p>
+                <p class=pClass id=pId> Second Paragraph </p>
+                <p class=pClass id=pId> Third Paragraph </p>
+                                
+                <div class=divClass id=divId> First Div </div>
+                <div class=divClass id=divId> Second Div </div>
+                <div class=divClass id=divId> Third Div </div>
+                
+                <textarea class=txtClass id=txtId> First text Area </textarea>                                                
+                <textarea class=txtClass id=txtId> Second text Area </textarea>                                                
+                <textarea class=txtClass id=txtId> Third text Area </textarea>                                                                
+            </section> <br>
+
+
+            <textarea id=txtarea class=txtarea> </textarea><br>                                  
+
+
+            
+            <script  src="FindElemByID.js">
+            </script>
+
+            <button class=btn onclick="test()"> Click to Start [Testing  DOM-Adding new Element(s)] Application    
+            </button> 
+                                    
+            <br>    
+                                          
+        <hr>
+                <button id=btn class="btn" onclick="display()">Display JS Code</button>
+                
+                <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Testing Find Elements By  ID Class Tag Properties & Methods ] Application  <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                                                        
+                        
+                        <span class=one></span> &lt;script src="JSOOPClassIntro.js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JSOOP [Find Elements By  ID Class Tag] */ <br>                    
+                        template-string-converter.enable; <br><br>
+                                                
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div>
+                
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 2 Video File:</h3>
+
+            <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=zJ4Gd2Rel3g&list=PLDoPjvoNmBAxx97QDMOCpzxbu1ZHJ4i7i&index=2&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+            
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\HTML JS Dom\2 JS HTML Dom Find Elements By  ID Class Tag.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS OOP Lesson 2 [Find Elements By  ID Class Tag ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

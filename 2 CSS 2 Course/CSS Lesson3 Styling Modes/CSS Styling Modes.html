@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" >
+    <title> Css Course Lesson 3 [Element Styling (ID , Class)] </title>
+    <link rel="stylesheet" href="Style.css" type="text/css" >
+    <link rel="stylesheet" href="Style2.css" >
+
+    <script></script>
+    <style>
+        .brief{border:2px solid lightblue; font-size:25px; padding:10px; background:#AAA; color:#FFF}
+        .tagname{background:#F00; color:#FFF}
+        
+        .code, .onecode{background:#FFF; font-size:30px; border:1px solid #333}        
+        .onecode{margin:0px 0}
+        .tag{color:black; font-weight:bold}        
+                
+        .property{color:green}
+        .property0{color:blue}
+        .value{color:brown}
+        
+        .Priority{display:inline-block; text-align:center; padding:5px}
+    </style>
+</head>
+
+<body>
+    <h1> CSS Course Lesson 3 [CSS Styling Modes]</h1>
+    <p class="brief"> This lesson about Main Styling modes in CSS language </p>
+    
+    
+    <fieldset>
+        <legend> Introduction to CSS &nbsp; Styling &nbsp; Modes </legend>
+        <p> There are 3 main CSS Styling modes: </p> 
+        <ol> 
+            <li> External Style Mode </li>
+            <li> Internal Style Mode </li>
+            <li> Inline Style Mode </li>            
+        </ol>        
+    </fieldset>
+    
+    <fieldset>        
+        <legend> (1)External Style Mode </legend>
+        <p class="PExt"> This Mode is about use an external CSS file and import it in Current Web-Page.</p>
+        <p class="PExt"> To implement this importing, we type file path & Kind of relation with page in <span class="tagname">&lt; link/ &gt;</span> Tag like following:</p>
+        
+        <blockquote>
+            <span class="code">  <span class="tag">&lt;link &nbsp;</span>
+            <span class="property"> rel= </span>
+            <span class="value"> "stylesheet" </span> &nbsp;
+            <span class="property"> href= </span>
+            <span class="value"> "Filename.css" </span> &nbsp;
+            <span class="tag"> /&gt; </span> </span>
+        </blockquote>
+        
+        <p class="PExt"> You can also import more than 1 CSS file in the same page design as following:</p>
+        
+        <blockquote>
+            <span class="code">  <span class="tag">&lt;link &nbsp;</span>
+            <span class="property"> rel= </span>
+            <span class="value"> "stylesheet" </span> &nbsp;
+            <span class="property"> href= </span>
+            <span class="value"> "style1.css" </span> &nbsp;
+            <span class="tag"> /&gt; </span> </span>
+        </blockquote>
+        
+        <blockquote>
+            <span class="code">  <span class="tag">&lt;link &nbsp;</span>
+            <span class="property"> rel= </span>
+            <span class="value"> "stylesheet" </span> &nbsp;
+            <span class="property"> href= </span>
+            <span class="value"> "style2.css" </span> &nbsp;
+            <span class="tag"> /&gt; </span> </span>
+        </blockquote>
+
+        <p class="PExt"> CSS File is created by the same Editor but with different extension (.css)</p>
+        <p class="PExt"> CSS File containing the Style declerations of tags properties and its vlaues. And its being written directly with out [ <span class="tagname">&lt;style&gt; &lt;/style&gt;</span> ] tag, as following:</p>
+        
+        <blockquote>
+            <span class="code">
+            <span class="tag">Selector{</span>    
+            <span class="property"> Property Name:</span>
+            <span class="value"> Value of Property</span>
+            <span class="tag">}</span>
+            </span>
+        </blockquote>
+        
+        <p class="PExt">For Example:</p>
+        
+        <blockquote>
+            <span class="onecode">
+            <span class="tag">div{</span>    
+            <span class="property"> text-align:</span>
+            <span class="value"> center<span class="tag">; &nbsp;</span> </span>
+            <span class="property"> padding:</span>
+            <span class="value"> 10px<span class="tag">; &nbsp;</span> </span>
+            <span class="property"> margin:</span>
+            <span class="value"> 0px 0 </span>
+            <span class="tag">}</span>                        
+            </span>
+        </blockquote>
+        
+        <blockquote>
+            <span class="onecode">
+            <span class="tag">p{</span>    
+            <span class="property"> text-align:</span>
+            <span class="value"> left<span class="tag">; &nbsp;</span> </span>
+            <span class="property"> color:</span>
+            <span class="value"> blue<span class="tag">; &nbsp;</span> </span>
+            <span class="property"> font-weight:</span>
+            <span class="value"> bold </span>
+            <span class="tag">}</span>
+            </span>
+        </blockquote>        
+        <p class="PExt"> If there are more than one external CSS files im the same page design, the priority in intercepted styling tags for the <mark>Latest CSS File</mark> </p>    
+    </fieldset>
+<!----------------------------------------------------------------------------------------------------------------------->
+    <fieldset>        
+        <legend> (2)Internal Style Mode </legend>
+        <p class="PExt"> This Mode is about type Styling codes directly within <span class="tagname">&lt;style&gt; &lt;/style&gt;</span> in Current Web-Page.</p>
+        <p class="PExt"> The <mark><b>priority</b></mark> in implementation is for [<mark><b>Internal Style Mode</b></mark>] over [External Style Mode] </p>
+        <blockquote class="QExt">                            
+            <span class="onecode">
+            <span class="tag">&lt;style&gt;</span>  <br>            
+            <span class="tag"> Selector{</span>
+            <span class="property">Property:</span>
+            <span class="value">value</span>            
+            <span class="tag">}</span> <br>
+            <span class="tag">&lt;/style&gt;</span>
+            </span>
+        </blockquote>
+        
+        <p class="PExt"> For Example: </p>
+        
+        <blockquote class="QExt">                            
+            <span class="onecode">
+            <span class="tag">&lt;style&gt;</span>  <br>            
+            
+            <span class="tag">p{</span>    
+            <span class="property"> text-align:</span>
+            <span class="value"> left<span class="tag">; &nbsp;</span> </span>
+            <span class="property"> color:</span>
+            <span class="value"> blue<span class="tag">; &nbsp;</span> </span>
+            <span class="property"> font-weight:</span>
+            <span class="value"> bold</span>
+            <span class="tag">}</span> <br>
+            
+            <span class="tag">div{</span>    
+            <span class="property"> text-align:</span>
+            <span class="value"> center<span class="tag">; &nbsp;</span> </span>
+            <span class="property"> padding:</span>
+            <span class="value"> 10px<span class="tag">; &nbsp;</span> </span>
+            <span class="property"> margin:</span>
+            <span class="value"> 0px 0 </span>
+            <span class="tag">}</span> <br>
+            
+            <span class="tag">&lt;/style&gt;</span>
+            </span>
+        </blockquote>
+    </fieldset>
+<!------------------------------------------------------------------------------------------------->
+
+    <fieldset>        
+        <legend> (3)Inline Style Mode </legend>
+        <p class="PInl"> This Mode is about type Styling codes as one of Tag/Element(Selector) Property in HTML Current Web-Page Designing.</p>
+        <p class="PInl"> The <mark><b>priority</b></mark> in implementation is for [<mark><b>Inline Style Mode </b></mark>] over [Internal Style Mode] </p>
+        <blockquote class="QInl">                            
+            <span class="onecode">
+            <span class="tag">&lt;SelectorName(Element)</span>                        
+            <span class="property">Style=</span>
+            <span class="value">"<span class="property0">Property:&nbsp;</span>value"</span>                        
+            <span class="tag">&gt;</span>
+            The Element Contents
+            <span class="tag">&lt;/SelectorName(Element)&gt;</span>
+            </span>
+        </blockquote>
+        
+        <p class="PInl"> For Example: </p>
+        
+        <blockquote class="QInl">                            
+            <span class="onecode">
+            <span class="tag">&lt;p</span>                        
+            <span class="property">Style=</span>
+            <span class="value">"<span class="property0">font-weight:&nbsp;</span>bold"</span>                        
+            <span class="tag">&gt;</span>
+            This is Test Paragraph.
+            <span class="tag">&lt;/p&gt;</span>
+            </span>
+        </blockquote>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Style Mode General Implementation Priority </legend>
+        <p class="priority"> The Priority of Style Mode Implementation in CSS even it was by [Class] or [Id] tool as following:</p>
+        <ol  type="1">
+            <li class="Priority"> (1) Inline Style Mode </li>
+            <li class="Priority"> (2) Internal Style Mode </li>
+            <li class="Priority"> (3) External Style Mode </li>
+        </ol>
+    </fieldset>
+    
+    <div class="footer"> &copy; 2020, All Copyrights are reserved for Shindow &reg Team </div>
+</body>
+</html>

@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 10 [2D Transform - Scale()] </title>
+    <link rel="stylesheet" href="CSS3 Lesson11 [2D Transform - Scale].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 10 [2D Transform - Scale()]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 2D Transform - Scale() main Topics">
+                [ 2D Transform - Scale() ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to 2D Transform - Scale() [2D Transform - Scale() ] Concept">
+                [ 2D Transform - Scale() ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to 2D Transform - Scale() [2D Transform - Scale() ] Importance & Benefits">
+                [ 2D Transform - Scale() ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to 2D Transform - Scale() [2D Transform - Scale() ] Syntax">
+                [ 2D Transform - Scale() ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to 2D Transform - Scale() [2D Transform - Scale() ] Practical Applications">
+                [ 2D Transform - Scale() ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 10 [2D Transform - Scale() ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                2D Transform - Scale() Property Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [2D Transform - Scale()] Concept. </li>                       
+                    
+                    <li> [2D Transform - Scale()] Importance & Benefits. </li>
+
+                    <li> [2D Transform - Scale()] Syntax [Exmaple]. </li>
+                    
+                     <li> [2D Transform - Scale()] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    
+                    <ul>
+                         <li> Using the [Transform-Scale()(Duplicating value X, Duplicating value Y)] Property to control Changing Scale Function property to Scale the Element to cetain amount</li>
+                         <li> Differnce between [X Value (Width)] & [Y Value (Height)] in controling Scale of Element </li>                                                                           
+                    </ul>                   
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [2D Transform - Scale()] Concept: </h3>
+            </header>
+                        
+            <p> =&gt; [2D Transform - Scale()] : This is one of CSS3 Properties to control the Element Scale Amount (by each width And Height, or one of them only) . <br>
+            
+            <p> =&gt; [2D Transform - Scale()] : The Default value of this property  (and all Transform) is (none) . <br>
+                
+            <p> =&gt; [2D Transform - Scale()] : This is one of CSS3 {2D Transform} Properties Functions, which has the same in 3D Transform  . <br>
+                
+                
+            <p> =&gt; There are (2) Methods to write this property as following : <br>                
+                <ul>                                                            
+                    <li> [transform: scale(width value,height Value) ] => This Can Hold two values of each dimenstions  both , or one Value for Each Dimensions at once </li> <br>                        
+                    <li> [transform: scaleX(Width Value)] ,<br> [transform: scaleY(Height Value)] <br>  =>  This method to control one Dimension only  </li> <br>                        
+                </ul>                
+                                
+            <p> =&gt; This property 's Value is about amount of Duplicating of Original's Element Dimensions as following examples : <br>                
+                <ul>
+                    
+                    <li> [none]  => Reset this Element's Property to none {Default Value} </li>
+                    <li> [1]     => keep the same dimensions as it , with out changes</li>
+                    <li> [.5]    => Change the Current Dimensions by half </li>
+                    <li> [2]     => Change the Current Dimensions by Double </li>
+                    <li> [3]     => Change the Current Dimensions by Trible </li>
+                </ul>
+                
+            </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+            <section class="CSS3Imp" id="CSS3Imp">
+                <header>
+                    <h3> [2D Transform - Scale() ] Importance & Benefits: </h3>
+                </header>
+
+                <p> =&gt; [2D Transform - Scale() ] : This Advanced property enabling the following features : <br>            
+                    <ul>                                        
+                        <li> The ability to Scale the Element by cetain Value or Amount , for Certain dimension or Both</li>                        
+                        <li> This Property is will be great in Designing nice Templates specilaly when using with (Transition Property- will be taken in future) <li>                                                             
+                    </ul>                                
+ 
+                <p> =&gt; [2D Transform - Scale() ] : Next lessons we will study integrated properties with this property => to make graet templates , such as : <br>            
+
+                <ul>
+                    <li> All Tranform properties </li>
+                    <li> Transition Properties </li>
+                </ul>
+
+            </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ 2D Transform - Scale ] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [2D Transform - Scale()] Syntax as following :<br><br>                                                    
+                
+                    <span class=two></span> //a)  [HTML] file  : <br>                                          
+                
+                        <span class=three></span> &lt; div &gt; This is a Scale Text by 2D Transform-Scale Property 
+                       <br>                                            
+                        <span class=three></span> &lt;/div&gt;   <br> <br>                                                                              
+                
+                // ------------------------------------------------------------------------------ <br><br>
+                <span class= one></span> // A)  [2D Transform - Scale()] General {Fixed Mode} Syntax:  <br>                                          
+                    <span class=two></span> // {Exmple 1} [First Method - two Values for each Dimension ] General CSS3 Syntax  : <br>
+                        <span class=three></span> div {  <br>                                                  
+                            <span class=four></span> margin: 40px; <br>                                                                          
+                            <span class=four></span> padding: 3px; <br>                                                                          
+                            <span class=four></span> width: 400px; <br>                                                                          
+                            <span class=four></span> border: 1px solid #CCC; <br>                                                                          
+                            <span class=four></span> backgournd-color: #FFF; <br>                                                                                                          
+                            <span class=four></span> Transform: Scale(width value, height value); <br>
+                        <span class=three></span>  }  <br>                                              
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                // ------------------------------------------------------------------------------ <br><br>                                                            
+                <span class=two></span> // {Exmple 2} [First Method - one Values for both Dimensinos ] General CSS3 Syntax  : <br>
+                    <span class=three></span> div {  <br>                                                  
+                        <span class=four></span> margin: 40px; <br>                                                                          
+                        <span class=four></span> padding: 3px; <br>                                                                          
+                        <span class=four></span> width: 400px; <br>                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>                                                                          
+                        <span class=four></span> backgournd-color: #FFF; <br>                                                                                                          
+                        <span class=four></span> Transform: Scale(value); <br>
+                    <span class=three></span>  }  <br>                                              
+                // ------------------------------------------------------------------------------ <br><br>
+                <hr>
+
+                <span class=two></span> // {Exmple 3} [Second Method] General CSS3 Syntax  : <br>                                         
+                    <span class=three></span> div {  <br>                                                  
+                        <span class=four></span> margin: 40px; <br>                                                                          
+                        <span class=four></span> padding: 3px; <br>                                                                          
+                        <span class=four></span> width: 400px; <br>                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>                                                                          
+                        <span class=four></span> backgournd-color: #FFF; <br>                                                                                                          
+                        <span class=four></span> transform: scaleX(value); <br>                                                                                                                                  
+                        <span class=four></span> transform: scaleY(value); <br>                                                                                                                                                          
+                    <span class=three></span>  }  <br> <br>                                              
+                // ------------------------------------------------------------------------------ <br><br>                        
+                    
+            <span class= one></span> // B)  [2D Transform - Scale()] General {Dynamic Mode} Syntax:  <br>                                              
+                <span class=two></span> // {Exmple 1} [First Method - two Values for each Dimension ] General CSS3 Syntax  : <br>
+                    <span class=three></span> div {  <br>                                                  
+                        <span class=four></span> margin: 40px; <br>                                                                          
+                        <span class=four></span> padding: 3px; <br>                                                                          
+                        <span class=four></span> width: 400px; <br>                                                                          
+                        <span class=four></span> border: 1px solid #CCC; <br>                                                                          
+                        <span class=four></span> backgournd-color: #FFF; <br>                                                                                                          
+                        <span class=three></span>  }  <br>                                                                      
+                    
+
+                    <span class=three></span> div :hover {  <br>                                                  
+                        <span class=four></span> Transform: Scale(width value, height value); <br>
+                    <span class=three></span>  }  <br>                                              
+
+            // ------------------------------------------------------------------------------ <br><br>                                                            
+        // ------------------------------------------------------------------------------ <br><br>                                                            
+            <span class=two></span> // {Exmple 2} [First Method - one Values for both Dimensinos ] General CSS3 Syntax  : <br>
+                <span class=three></span> div {  <br>                                                  
+                    <span class=four></span> margin: 40px; <br>                                                                          
+                    <span class=four></span> padding: 3px; <br>                                                                          
+                    <span class=four></span> width: 400px; <br>                                                                          
+                    <span class=four></span> border: 1px solid #CCC; <br>                                                                          
+                    <span class=four></span> backgournd-color: #FFF; <br>                                                                                                          
+                <span class=three></span>  }  <br>                                              
+                    
+                
+                <span class=three></span> div :hover {  <br>                                                  
+                    <span class=four></span> Transform: Scale(value); <br>
+                <span class=three></span>  }  <br>                                              
+                
+            // ------------------------------------------------------------------------------ <br><br>
+            
+        <hr>
+
+            <span class=two></span> // {Exmple 3} [Second Method] General CSS3 Syntax  : <br>                                         
+                <span class=three></span> div {  <br>                                                  
+                    <span class=four></span> margin: 40px; <br>                                                                          
+                    <span class=four></span> padding: 3px; <br>                                                                          
+                    <span class=four></span> width: 400px; <br>                                                                          
+                    <span class=four></span> border: 1px solid #CCC; <br>                                                                          
+                    <span class=four></span> backgournd-color: #FFF; <br>                                                                                                          
+                <span class=three></span>  }  <br> <br>                                              
+                    
+                <span class=three></span> div :hover {  <br>                                                  
+                    <span class=four></span> transform: scaleX(value); <br>                                                                                                                                  
+                    <span class=four></span> transform: scaleY(value); <br>                                                                                                                                                          
+                <span class=three></span>  }  <br>                                              
+                                            
+                //=========================================================== <br> <br>                                    
+                //=========================================================== <br> <br>                                                      
+                //=========================================================== <br> <br>                                                                                    
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="JSDOMPract">
+
+            <header>
+                <h3> [2D Transform - Scale] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following is the Applied example of [2D-Transform: Scale(Value)] syntax : &gt;&gt; <br>
+                <ul>
+                    <li> (2) Fieldsets contain (3) section (each section is Scaled by Certain defferent (2) Methods) for each as following:  </li> 
+                    
+                    <ol>
+                        <li> First Fieldset [Fixed Mode] :</li>
+                            <ul>
+                                <li> First Section => Scaled by {First Method (2 values for Each dimension)}   </li>                                         
+                                <li> Second Section => Scaled by {First Method (1 value for both dimensions)}   </li>                                                                         
+                                
+                                <li> Third Section => Scaled by {Second Method (2 values for Each dimension)}   </li>                                                                         <li> Fourth Section => Scaled by {First Method (1 value for both dimensions)}   </li>                                                                                                                                         
+                            </ul>
+                        
+                        <li> Second Fieldset [Dynamic Mode] :</li>
+                            <ul>
+                                <li> First Section => Scaled by {First Method (2 values for Each dimension)}   </li>                                         
+                                <li> Second Section => Scaled by {First Method (1 value for both dimensions)}   </li>                                                                         
+                                
+                                <li> Third Section => Scaled by {Second Method (2 values for Each dimension)}   </li>                                                                         <li> Fourth Section => Scaled by {First Method (1 value for both dimensions)}   </li>                                                                         
+                            </ul>
+                    </ol>                    
+                </ul>                
+                <br>
+                <hr>
+
+            <fieldset class='FixedMode'>  
+                <legend> Scale() => First Mode {Fixed Mode} </legend>
+            
+                
+                <section class='sec1'>
+                    <h4>This Section will be Scaled by First Method (1.5 values for Each dimension)</h4>                 
+                </section>
+                <hr>
+                
+                <section class='sec2'>
+                    <h4>This Section will be Scaled by First Method (1.5 value for both dimensions)</h4>                 
+                </section>
+                <hr>
+
+                <section class='sec3'>
+                    <h4>This Section will be Scaled by Second Method (1.5 values for Each dimension) </h4>                 
+                </section>
+                <hr>                
+                
+            </fieldset>                                                                
+            <hr>
+            <hr>
+            
+            <fieldset class='DynamicMode'>  
+                <legend> Scale() => Second Mode {Dynamic Mode}</legend>
+            
+                
+                <section class='sec1'>
+                    <h4>This Section will be Scaled by First Method (1.5 values for Each dimension)</h4>                 
+                </section>
+                <hr>
+                
+                <section class='sec2'>
+                    <h4>This Section will be Scaled by First Method (1.5 value for both dimensions)</h4>                 
+                </section>
+                <hr>
+
+                <section class='sec3'>
+                    <h4>This Section will be Scaled by Second Method (1.5 values for Each dimension) </h4>                 
+                </section>
+                <hr>                
+                <hr>
+                
+            </fieldset>                                                                
+            <hr>
+            <hr>            
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+            //================================================================================== <br><br>
+    
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 11 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=Uh5AOTM6CQs&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=11&index=10&index=9&index=8&index=7&index=6&index=5&index=4&index=3&index=2&controls=0&loop=1&autoplay=1&fs=1" 				
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\11 Css3 - 2D Transform - Scale.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 10 [2D Transform - Scale() ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

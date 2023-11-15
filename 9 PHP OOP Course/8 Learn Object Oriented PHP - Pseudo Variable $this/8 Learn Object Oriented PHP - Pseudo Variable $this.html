@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>8 Learn Object Oriented PHP - Pseudo Variable $ this</title>
+    <link
+      rel="stylesheet"
+      href="8 Learn Object Oriented PHP - Pseudo Variable $this.css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      8 Learn Object Oriented PHP - Pseudo Variable $this
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to PHP OOP main Topics">
+            8 Learn Object Oriented PHP - Pseudo Variable $this Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPCon"
+            title="Go to  [PHP OOP 8 Learn Object Oriented PHP - Pseudo Variable $this] Concept"
+          >
+            8 Learn Object Oriented PHP - Pseudo Variable $this Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPImp"
+            title="Go to  [PHP OOP 8 Learn Object Oriented PHP - Pseudo Variable $this] Importance & Benefits"
+          >
+            8 Learn Object Oriented PHP - Pseudo Variable $this Importance &
+            Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPSyntx"
+            title="Go to  [PHP OOP 8 Learn Object Oriented PHP - Pseudo Variable $this] Syntax"
+          >
+            8 Learn Object Oriented PHP - Pseudo Variable $this Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPPract"
+            title="Go to  [PHP OOP 8 Learn Object Oriented PHP - Pseudo Variable $this] Practical Applications"
+          >
+            8 Learn Object Oriented PHP - Pseudo Variable $this Practical
+            Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <main class="Welcome">
+      Welcome to PHP Course
+      <span> 8 Learn Object Oriented PHP - Pseudo Variable $this</span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          PHP [PHP OOP 8 Learn Object Oriented PHP - Pseudo Variable $this] Main
+          Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>PHP OOP 5 [Pseudo Variable $this] Defining inside the Class</li>
+            <li>
+              PHP OOP 5 [Pseudo Variable $this] Usages insdie the Class Methods
+              .
+            </li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPCon" id="PHPCon">
+        <header>
+          <h3>[PHP OOP Class Methods ] Concept:</h3>
+        </header>
+
+        <h2>
+          =&gt; PHP OOP [Pseudo Variable $this] : <br />
+          <ul>
+            <li>
+              Main Concepts =&gt; <br />
+              <p>
+                [$this] : Is one of Pseudo Variable which is (Fake) variable ,
+                that can be used Class , to Prefer to the [Object]
+              </p>
+              <p>
+                {$this} : Is being used usually in Class Methods , to refers to
+                the Object and then to call onmme of the object properties, that
+                had been defined inside the Class
+              </p>
+              <p>
+                {$this} : Is Requiring a defined Property inside the Class to
+                use it in accessing the properites
+              </p>
+              <p>
+                {$this} : It is like a Joker Variable to refer to defined Class
+                Object a defined Property inside the Class to use it in
+                accessing the properites
+              </p>
+              <p>
+                {$this} : Is commenly used in any P.language supporting the OOP
+                (like JSOOP) and FrameWorks and Libararies (J-Qeury || DOM ||
+                BOM)
+              </p>
+              <p>
+                {$this} : Is being used as a gate to access to any Object's
+                property
+              </p>
+              <p>
+                The Alternative way of using [$this] variable inside the Class
+                Method is => To use function Parameters
+              </p>
+            </li>
+          </ul>
+        </h2>
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="PHPImp" id="PHPImp">
+        <header>
+          <h3>
+            PHP [PHP OOP 8 Learn Object Oriented PHP - Pseudo Variable $this]
+            Importance & Benefits :
+          </h3>
+        </header>
+
+        <p>
+          [$this] => Is one of the most critical tool/Concept within the OOP
+          with any P.Langauge <br />
+        </p>
+        <p>
+          [$this] => It has been wide usage in several p.languages and framworks
+          <br />
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPSyntx" id="PHPSyntx">
+        <header>
+          <h3>[ PHP OOP 7 Class Methods ] Syntax & Methods:</h3>
+        </header>
+
+        <p>
+          =&gt; Following is a simple syntax code written Emded in a HTML page
+          => <br />
+          Printing string text value from the server in the user website page
+        </p>
+
+        <p>=&gt; [Class Methods] main Syntax as following : <br /></p>
+
+        <p>Syntax: <br /></p>
+        <div id="Code" class="Code">
+          <span class="one"></span> &lt; ?php <br />
+
+          <span class="two"></span> A) Defining new Class {ClassName} with
+          [default properties values] & [Method using ($this) Pseudo Varable] :
+          <br />
+
+          <span class="three"></span> class ClassName{ <br />
+
+          <span class="four"></span> // Class Properties Definging [with Null
+          Properties Values] : <br />
+          <span class="four"></span> var propertyName1 = "value" ; <br />
+          <span class="four"></span> public propertyName2 = 'value' ; <br />
+          <span class="four"></span> private propertyName3 = 'value'; <br />
+          <span class="four"></span> protected propertyName4 = 'value'; <br />
+
+          <span class="four"></span> // Class Method Definging (with Using
+          $this) to access to a certain Property : <br />
+          <span class="four"></span> public function MethodName1() { <br />
+          <span class="five"></span> echo 'The First Property is ' .
+          $this->propertyName1 ; <br />
+          <span class="five"></span> echo 'The Second Property is ' .
+          $this->propertyName2 ; <br />
+          <span class="five"></span> echo 'The Third Property is ' .
+          $this->propertyName3 ; <br />
+          <span class="four"></span> } <br /><br />
+          <span class="three"></span> } <br /><br />
+
+          <span class="three"></span> Defining new Object {objName} with All
+          Defined Properties & Methods : <br />
+          <span class="four"></span> $objName= new ClassName(); <br />
+
+          <!-- <span class= two></span>  Changing / Assinging Object {objName} with Customized parameter value : <br>
+                            <span class= three></span> $objName-> propertyName1 = "value"; <br>                                
+                            <span class= three></span> $objName-> propertyName2 = "value"; <br>                                
+                            <span class= three></span> $objName-> propertyName3 = "value"; <br> <br>
+                         -->
+          <span class="three"></span> Calling / Proccessing Object {objName}'s
+          Metods : <br />
+          <span class="four"></span> $objName-> MethodName1(); <br />
+          <br />
+
+          <span class="three"></span> Printing the Var_dump of new created
+          Object : <br />
+          <span class="four"></span> echo &lt; pre &gt; ; <br />
+          <span class="four"></span> echo var_dump($objName); <br />
+          <span class="four"></span> echo &lt; pre &gt; ; <br />
+          //=========================================================== <br />
+          <br />
+
+          <span class="two"></span> B) Defining new Class {ClassName} with
+          [default properties values] & [Method using (Function Parameter)
+          Variable] : <br />
+
+          <span class="three"></span> class ClassName{ <br />
+
+          <span class="four"></span> // Class Properties Definging [with Null
+          Properties Values] : <br />
+          <span class="four"></span> var propertyName1 = "value" ; <br />
+          <span class="four"></span> public propertyName2 = 'value' ; <br />
+          <span class="four"></span> private propertyName3 = 'value'; <br />
+          <span class="four"></span> protected propertyName4 = 'value'; <br />
+
+          <span class="four"></span> // Class Method Definging (with Using
+          $this) to access to a certain Property : <br />
+          <span class="four"></span> public function MethodName2($Par) { <br />
+          <span class="five"></span> echo 'Your inserted Value is: ' . $Par ;
+          <br />
+          <span class="four"></span> } <br /><br />
+          <span class="three"></span> } <br /><br />
+
+          <span class="three"></span> Defining new Object {objName} with All
+          Defined Properties & Methods : <br />
+          <span class="four"></span> $objName= new ClassName(); <br />
+
+          <!-- <span class= two></span>  Changing / Assinging Object {objName} with Customized parameter value : <br>
+                        <span class= three></span> $objName-> propertyName1 = "value"; <br>                                
+                        <span class= three></span> $objName-> propertyName2 = "value"; <br>                                
+                        <span class= three></span> $objName-> propertyName3 = "value"; <br> <br>
+                     -->
+          <span class="three"></span> Calling / Proccessing Object {objName}'s
+          Metods : <br />
+          <span class="four"></span> $objName-> MethodName2('Value of Par');
+          <br />
+          <br />
+
+          <span class="three"></span> Printing the Var_dump of new created
+          Object : <br />
+          <span class="four"></span> echo &lt; pre &gt; ; <br />
+          <span class="four"></span> echo var_dump($objName); <br />
+          <span class="four"></span> echo &lt; pre &gt; ; <br />
+          //=========================================================== <br />
+          <br />
+
+          <p>
+            =&gt; PHP new Syntax of the [Pseudo Variable $this] (2) Applications
+            as following : <br />
+          </p>
+
+          <ol type="A">
+            <li>
+              First Example {Setting a Method by using parameter} => within
+              Class {Apple Devices} => [Creating new Class {Apple Device with
+              non default values of Properties ()} + (1)Object[iphone]
+              {iphone6plus with Customized Values} + Printing Object var Dump]
+            </li>
+            <li>
+              Second Example {Setting a Method by using $ this Pseudo Variable}
+              => within Class {Apple Devices} => [Creating new Class {Apple
+              Device with non default values of Properties ()} +
+              (1)Object[iphone] {iphone6plus with Customized Values} + Printing
+              Object var Dump]
+            </li>
+          </ol>
+          <hr />
+          //=========================================================== <br />
+          <br />
+          <br /><br />
+        </div>
+
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPPract" id="PHPPract">
+        <header>
+          <h3>PHP [Pseudo Variable $this] General Practical Applications :</h3>
+        </header>
+
+        <p>
+          In this lesson will be (2) Application [Practical Examples of creating
+          new class{with Public Properties} and objects {with Null + customized
+          Properites Values}] = > as following :
+        </p>
+
+        <ol type="A">
+          <li>
+            First Example {Setting a Method by using parameter} => within Class
+            {Apple Devices} => [Creating new Class {Apple Device with non
+            default values of Properties ()} + (1)Object[iphone] {iphone6plus
+            with Customized Values} + Printing Object var Dump] , and including
+            the following steps : <br />
+            <ul>
+              <li>
+                Defining and Creating new Class [AppleDevice] {with properties
+                default} : <br />
+                <ol>
+                  <li>Defining the Class Properties Values</li>
+                  <li>
+                    Defining the Class Methods {Using the Function parameter}
+                    <br />
+                    <ol>
+                      <li>
+                        First Method (using $ this) => within Method of :
+                        Displaying all Iphone Properties
+                      </li>
+                      <li>
+                        Second Method (using Parameter) => within the Method of
+                        : Check[refuse the name less than 3 charcters] & Set the
+                        owner iphone name
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    Defining the Class Methods {Using the Function parameter}
+                  </li>
+                  <li>
+                    Defining and Creating new (1) Object : [iphone6plus] => from
+                    the class {AppleDevice}
+                  </li>
+                  <li>
+                    Processing the Method [DisplayProps : of displaying all
+                    properties]
+                  </li>
+                  <li>
+                    Processing the Method [SetName : of Checking & Displaying
+                    Owner Customized Name ]
+                  </li>
+                  <li>
+                    Printing the var Dump Object[iphone6plus] created from the
+                    class [AppleDevice]
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            Second Example {Setting a Method by using $ this Pseudo Variable} =>
+            within Class {Apple Devices} => [Creating new Class {Apple Device
+            with non default values of Properties ()} + (1)Object[iphone]
+            {iphone6plus with Customized Values} + Printing Object var Dump] ,
+            and including the following steps : <br />
+            <ul>
+              <li>
+                Defining and Creating new Class [AppleDevice1] {with properties
+                default} : <br />
+                <ol>
+                  <li>
+                    Defining the Class Properties Values {with NULL Values}
+                  </li>
+                  <li>
+                    Defining the Class Methods {Using the Function parameter} :
+                    <br />
+                    <ol>
+                      <li>
+                        First Method (using $ this) => within method of :
+                        Displaying all Iphone Properties
+                      </li>
+                      <li>
+                        Second Method (using Parameter) => within method of :
+                        Check[refuse the name less than 3 charcters] & Set the
+                        owner iphone name
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                Defining and Creating new (1) Object : [iphone7plus] => from the
+                class {AppleDevice1}
+              </li>
+
+              <li>
+                Setting the property [ownerName] : with customized before using
+                the Checking method [SetName] by $ this pseudo variable
+              </li>
+
+              <li>
+                Setting the Object properties : with customized before using the
+                Checking & Displaying method [DisplayProps] by $ this pseudo
+                variable
+              </li>
+
+              <li>
+                Processing the Method [DisplayProps] : of Checking & Displaying
+                all Object Properties {after setting Properties customized
+                Values}
+              </li>
+
+              <li>
+                Processing the Method [SetName : of Checking & Displaying Owner
+                Customized Name] {with no parameter}
+              </li>
+
+              <li>
+                Printing the var Dump Object[iphone6plus] created from the class
+                [AppleDevice1]
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr />
+
+        <section id="sec" class="txtarea">
+          <a
+            class="btn"
+            href="http://localhost/PHPOOP%20Course/8%20Learn%20Object%20Oriented%20PHP%20-%20Pseudo%20Variable%20$this/8%20Learn%20Object%20Oriented%20PHP%20-%20Pseudo%20Variable%20$this.php"
+          >
+            {Main Page} [Display] => {8 Learn Object Oriented PHP - Pseudo
+            Variable $this} => Lesson 8 PHP File Webpage by Localhost
+          </a>
+          <br />
+          <br />
+
+          <a
+            class="btn"
+            href="8 Learn Object Oriented PHP - Pseudo Variable $this.php"
+          >
+            {Main Page} [Source Code] => {8 Learn Object Oriented PHP - Pseudo
+            Variable $this} => Lesson 8 PHP File Webpage by Localhost
+          </a>
+        </section>
+        <br />
+
+        <!-- <section id=sec class=txtarea >                                  
+                 <a class=btn href="http://localhost/PHP%20Course/95%20PHP%205%20In%20Arabic%20-%20Filter%20-%20Whats%20Filter%20&%20Why%20To%20Use%20it/check.php">  
+                    {Check Page} [Display] => {8 Learn Object Oriented PHP - Pseudo Variable $this} => {check.php} Webpage by Localhost 
+                </a> <br> <br>             
+                
+                <a class=btn href="check.php">  
+                    {Check Page} [Source Code] => {8 Learn Object Oriented PHP - Pseudo Variable $this} => {check.php} Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+        <!-- <script  src="14 PHP OOP  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="VideoSection">
+        <h3>Lesson 8 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=JcnA2FTvYBs&list=PLDoPjvoNmBAxXTPncg0W4lhVS32LO_xtQ&index=8&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\OOP PHP\8 Learn Object Oriented PHP  - Pseudo Variable $this.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to 8 Learn Object Oriented PHP - Pseudo Variable $this");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

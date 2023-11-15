@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS OOP Lesson 11 [Element Children ChildNodes]</title>
+    <link
+      rel="stylesheet"
+      href="JS DOM Lesson11 [Element Children  ChildNodes].css"
+      media="all"
+    />
+    <style>
+      .hidden {
+        visibility: hidden;
+      }
+    </style>
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JS DOM Lesson 11 [Element Children ChildNodes]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS OOP main Topics">
+            JS DOM Lesson11 [Element Children ChildNodes] Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMCon"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Concept"
+          >
+            JS DOM Lesson11 [Element Children ChildNodes] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMImp"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Importance & Benefits"
+          >
+            JS DOM Lesson11 [Element Children ChildNodes] Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMSyntx"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Syntax"
+          >
+            JS DOM Lesson11 [Element Children ChildNodes] Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMPract"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Practical Applications"
+          >
+            JS DOM Lesson11 [Element Children ChildNodes] Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS DOM Course
+      <span> JS DOM [Element Children ChildNodes] </span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          JS DOM [ElementClassList Add Remove Toggle] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>JS DOM [Element Children ChildNodes ] Concept.</li>
+
+            <li>
+              JS DOM [Element Children ChildNodes ] Importance & Benefits.
+            </li>
+
+            <li>JS DOM [Element Children ChildNodes ] Syntax .</li>
+
+            <li>
+              JS DOM [Element Children ChildNodes ] Practical Application.
+            </li>
+          </ol>
+
+          <p>&gt; Main new Methods in this lesson are as following :</p>
+          <ul>
+            <li>{elementName.children;}</li>
+            <li>{elementName.children.length;}</li>
+            <li>{elementName.childElementCount;}</li>
+            <br />
+            <br />
+
+            <li>{elementName.children[x];}</li>
+            <li>{elementName.children[x].textContent;}</li>
+            <li>{elementName.children[x].innerHTML;}</li>
+            <li>{elementName.children[x].className;}</li>
+            <li>{elementName.children[x].id;}</li>
+            <br /><br />
+
+            <li>{elementName.childNodes;}</li>
+            <li>{elementName.childNodes[x];}</li>
+            <li>{elementName.childNodes.length;}</li>
+          </ul>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMCon" id="JSDOMCon">
+        <header>
+          <h3>JS DOM [Element Children ChildNodes] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [Element Children ChildNodes]: Every parent Element
+          has Childeren elements can be controled by several Methods.
+        </p>
+
+        <p>
+          =&gt; JS HTML DOM [Element Children ChildNodes]: Differeneces between
+          {childeren} & {ChildNodes} as following: <br />
+        </p>
+        <ul>
+          <li>
+            {children} => The content only the child Elmemnts inside the parent
+            Element
+          </li>
+
+          <li>
+            {childNodes} => The content ALL parent elements & any other thing
+            and that contain following :
+          </li>
+          <ol>
+            <li>[child Elements] => which are child tags</li>
+            <li>[child text] => That include each text & empty spaces</li>
+            <li>[child empyt Spaces] => That will count as text also</li>
+            <li>[comments] => which is the HTML Comments</li>
+          </ol>
+        </ul>
+
+        <p>
+          =&gt; JS HTML DOM [Element Children ChildNodes]: Js dealing with the
+          parent Elements s and its childeren as an Object, and each child
+          element will be as one of it;s property<br />
+        </p>
+
+        <p>
+          =&gt; also each child element will be dealt as object, and each
+          property is one of it's property
+        </p>
+
+        <p>
+          =&gt; JS HTML DOM [Element Children ChildNodes]: Syntax as following:.
+        </p>
+        <ul>
+          <li>[{elementName.children;}] =></li>
+          <ol>
+            <li>=&gt; This Method to get all elements child as an object</li>
+          </ol>
+
+          <li>{elementName.children.length;}</li>
+          <ol>
+            <li>
+              This Mehtod to get all child Elmemnts (elments only) count of
+              ceratain parent Elemnet
+            </li>
+          </ol>
+
+          <li>{elementName.childElementCount;}</li>
+          <ol>
+            <li>
+              This Method also to get all child Elmemnts (elments only) count of
+              ceratain parent Elemnet as it is (elementName.children.length)
+            </li>
+          </ol>
+
+          <li>{elementName.children[x];}</li>
+          <ol>
+            <li>
+              This Method to get certain child element of parent elemnt by it's
+              index
+            </li>
+          </ol>
+
+          <li>{elementName.children[x].textContent;}</li>
+          <ol>
+            <li>
+              This Method to get certain child element's (textContent) property
+            </li>
+          </ol>
+
+          <li>{elementName.children[x].innerHTML;}</li>
+          <ol>
+            <li>
+              This Method to get certain child element's (innerHTML) property
+            </li>
+          </ol>
+
+          <li>{elementName.children[x].className;}</li>
+          <ol>
+            <li>
+              This Method to get certain child element's (className) property
+            </li>
+          </ol>
+
+          <li>{elementName.children[x].id;}</li>
+          <ol>
+            <li>This Method to get certain child element's (id) property</li>
+          </ol>
+
+          <li>{elementName.childNodes;}</li>
+          <ol>
+            <li>
+              This Method to get parent Element's all Nodes with types [elements
+              + text + empty spaces + comments] as an Object
+            </li>
+          </ol>
+
+          <li>{elementName.childNodes.length;}</li>
+          <ol>
+            <li>
+              This Method to get parent Element's all Nodes with types's count
+              number
+            </li>
+          </ol>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSDOMImp" id="JSDOMImp">
+        <header>
+          <h3>JS DOM [Element Children ChildNodes] Importance & Benefits :</h3>
+        </header>
+
+        <p>
+          JS DOM [ElementsClassList Add Remove Toggle] gives us the Following
+          Features : <br />
+        </p>
+        <ul>
+          <li>
+            It is very Helpful when dealing with element's child elements by
+            several Functions of (get -set) full Control
+          </li>
+
+          <li>
+            gives more advanced features to pragrmaing functions speacially in
+            Events & Conditional Functions
+          </li>
+
+          <li>
+            Much more easier method than other methods in dealing with
+            elements's (Child elements + Child Nodes ) more than previous
+            Methods .
+          </li>
+
+          <li>
+            Ability to full Control (Add, replace, edit, remove) Certain child
+            (element , node) of specific parnet Element
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMSyntx" id="JSDOMSyntx">
+        <header>
+          <h3>JS DOM [Element Children ChildNodes] Syntax & Methods:</h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [Children & childNodes} by {several methods} as
+          following Conceptual Syntax as following :
+        </p>
+
+        <div id="Code" class="Code">
+          [*] HTML file (parent element , children elements): <br />
+
+          <span class="one"></span> &lt;div id='main' class= "main"&gt; <br />
+          <span class="two"></span> This is a Text Node <br />
+          <span class="two"></span> &lt;h2&gt; This is heading Element
+          &lt;/h2&gt; <br />
+          <span class="two"></span> &lt;p&gt; This is Paragragh Element
+          &lt;/p&gt; <br />
+          <span class="two"></span> This is a Text Node <br />
+          <span class="two"></span> &lt;! -- This is a Commment Node --&gt;
+          <br />
+          <span class="one"></span> &lt;/div&gt; <br />
+
+          //=========================================================== <br />
+          <br />
+
+          [*]// Defining a variable with Parent Element {by Different methods}:
+          <br />
+
+          <span class="one"></span>var PElementVar =
+          document.querrySelector('div'); <br />
+          <span class="one"></span>var PElementVar =
+          document.getElementsByTagName('div'); <br />
+          <span class="one"></span>var PElementVar =
+          document.getElementById('main'); <br />
+          <span class="one"></span>var PElementVar =
+          document.getElementsClassName('main'); <br />
+
+          //=========================================================== <br />
+          <br />
+
+          [*]// Dealing with Parent Element's childrens {by several methods }:
+          <br />
+
+          // [A] Get Parent element's Childeren elements's Count by {2 Methods}:
+          <br />
+          <br />
+          // 1) using {elem.children.length}: <br />
+          <span class="one"></span> PElementVar.children.length; <br />
+          <br />
+
+          // 2) using {elem.childElementCount}; <br />
+          <span class="one"></span> PElementVar.childElementConunt; <br />
+          //=========================================================== <br />
+          <br />
+
+          // [B] Dealing with certian Child Element : <br />
+          <br />
+          // 1) Get Specific child element by Index: <br />
+          <span class="one"></span> PElementVar.children[x]; <br />
+
+          // 2) Get Specific child element's Property: <br />
+          <span class="one"></span> PElementVar.children[x].textContent; <br />
+          <span class="one"></span> PElementVar.children[x].innerHTML; <br />
+          <span class="one"></span> PElementVar.children[x].className; <br />
+          <span class="one"></span> PElementVar.children[x].id; <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          [*]// Dealing with Parent Element's child Nodes: <br />
+
+          // [A] Get Parent element's child Nodes's Count-length : <br />
+          <br />
+          // *) using {elem.childNodes.length}: <br />
+          <span class="one"></span> PElementVar.childNodes.length; <br />
+          <br />
+
+          //=========================================================== <br />
+          <br />
+
+          // [B] Dealing with certian Child Node : <br />
+          <br />
+          // *) Get Specific child Node element by Index: <br />
+          <span class="one"></span> PElementVar.childNodes[x]; <br />
+
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMPract" id="JSDOMPract">
+        <header>
+          <h3>
+            JS DOM [Element Children ChildNodes] General Practical Applications
+            :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Here one Major Application will include following main [ 2
+          Paths] of the : &gt;&gt; <br />
+        </p>
+
+        <ul>
+          <li>
+            {Path 1} => Dealing with Child Element: including Following (2)
+            Metods:
+          </li>
+          <ol>
+            <li>{Get Children Elements - count } , by (2) Methods :</li>
+            <ul>
+              <li>{element.children.length};</li>
+              <li>{element.childElementCount};</li>
+            </ul>
+
+            <li>
+              {Get Access to Children Elements } , including (2) functions :
+            </li>
+            <ul>
+              <li>
+                {Get Access to Multiple elements}; => by {Looping
+                element.children[x]}
+              </li>
+              <li>
+                {Get Access to certain element}; => by {element.children[x]}
+              </li>
+            </ul>
+          </ol>
+
+          <li>
+            {Path 2} => Dealing with Child Nodes Element: including Following
+            (2) methods:
+          </li>
+          <ol>
+            <li>{Get Children Elements - count } :</li>
+            <ul>
+              <li>{element.childNodes.length};</li>
+            </ul>
+
+            <li>
+              {Get Access to child Nodes Elements } , including (2) functions :
+            </li>
+            <ul>
+              <li>
+                {Get Access to Multiple elements}; => by {element.childNodes[x]}
+              </li>
+              <li>
+                {Get Access to certain child Node}}; => by {Looping
+                element.childNodes[x]}
+              </li>
+            </ul>
+          </ol>
+        </ul>
+
+        <br />
+
+        <section id="sec" class="secClass">
+          <h2>Heading</h2>
+
+          <div>This is Main div</div>
+
+          <p id="pId" class="class1 hidden">This is the text of Paragaraph</p>
+
+          <!-- This is a child Node comment of HTML-->
+
+          <button id="btn0" class="btn" onclick="test1()">
+            Show/hide Paragraph
+          </button>
+        </section>
+        <br />
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <script src="ElemChildrenChildNodes.js"></script>
+
+        <button class="btn" onclick="test()">
+          Click to Start [Elements Children - child Nodes] Application
+        </button>
+
+        <br />
+
+        <hr />
+        <button id="btn" class="btn" onclick="display()">
+          Display JS Code
+        </button>
+
+        <div class="JSOOPObjConstTraining">
+          <code>
+            // HTML Codes: <br />
+            <span class="one"></span> &lt;textarea id="txtarea"
+            class="txtarea"&gt;<br />
+            <span class="one"></span> &lt;/textarea&gt; <br /><br />
+
+            <span class="one"></span> &lt;button class="btn"
+            onclick=test"()"&gt;<br />
+            <span class="two"></span> Click to Start [Testing JS DOM [Elements
+            Children - child Nodes ] Application <br />
+            <span class="one"></span> &lt;/button&gt; <br /><br />
+
+            <span class="one"></span> &lt;script src=".js"&gt;<br />
+            <span class="one"></span> &lt;/script&gt; <br /><br />
+
+            =======================================================<br /><br />
+
+            /* global document, alert, prompt */ <br />
+            /* JS DOM [Element Children ChildNodes ] */ <br />
+            template-string-converter.enable; <br /><br />
+
+            <textarea id="SourceCode" readonly></textarea>
+          </code>
+        </div>
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 11 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=-tk-0fFTDpA&list=PLDoPjvoNmBAxx97QDMOCpzxbu1ZHJ4i7i&index=11&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\HTML JS Dom\11 JS HTML Dom Elements  Children  ChildNodes.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JS DOM Lesson11 [Element Children  ChildNodes]  ");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS OOP Lesson 8 [Defining Object With Object.assign()] </title>
+    <link rel="stylesheet" href="JS OOP Lesson8 [Defining Object With Object.assign].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JS OOP Lesson 8 [Defining Object With Object.assign()]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS OOP main Topics">
+                JS OOP Lesson8 [Defining Object With Object.assign()] Main Topics </a> </li>
+
+            <li> <a href=#JSOOPCon title="Go to JS OOP [Defining Object With Object.assign()] Concept">
+                JS OOP Lesson8 [Defining Object With Object.assign()] Concept </a> </li>
+
+            <li> <a href=#JSOOPImp title="Go to JS OOP [Defining Object With Object.assign()] Importance & Benefits">
+                JS OOP Lesson8 [Defining Object With Object.assign()] Importance & Benefits </a> </li>
+
+            <li> <a href=#JSOOPSyntx title="Go to JS OOP [Defining Object With Object.assign()] Syntax">
+                JS OOP Lesson8 [Defining Object With Object.assign()] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSOOPPracts title="Go to JS OOP [Defining Object With Object.assign()] Practical Applications">
+                JS OOP Lesson8 [Defining Object With Object.assign()] Practical Applications </a> </li>
+            
+            <li> <a href=#JSOOPPract1 title="Go to JS OOP [Defining Object With Object.assign()] First Application">
+                JS OOP Lesson8 [Defining Object With Object.assign()] First Application </a> </li>
+            
+            <li> <a href=#JSOOPPract2 title="Go to JS OOP [Defining Object With Object.assign()] Second Application">
+                JS OOP Lesson8 [Defining Object With Object.assign()] Second Application </a> </li>
+
+            <li> <a href=#JSOOPPract3 title="Go to JS OOP [Defining Object With Object.assign()] Third Application">
+                JS OOP Lesson8 [Defining Object With Object.assign()] Third Application </a> </li>
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS OOP Course <span> JS OOP Lesson 8 [Defining Object With Object.assign()]  </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                JS OOP [Defining Object With Object.assign()] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS OOP [Defining Object With Object.assign()] Concept. </li>
+
+                    <li> JS OOP [Defining Object With Object.assign()] Importance & Benefits. </li>
+
+                    <li> JS OOP [Defining Object With Object.assign()] Syntax [Define + Access]. </li>
+
+                    <li> JS OOP [Defining Object With Object.assign()] Practical Applications {3 Apps}. </li>
+
+                </ol>
+            </article>
+        </Section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPCon" id="JSOOPCon">
+            <header>
+                <h3> JS OOP [Defining Object With Object.assign()] Concept: </h3>
+            </header>
+
+            <p> =&gt; JS OOP [Defining Object With Object.assign()]: is one of Commonly and usuallly used Method to define the Object in Javascript OOP.
+
+                <p> =&gt; JS OOP [Defining Object With Object.assign()] : It is a multiple Object function to create, assign new - Predefined Object(s) properties and methods. </p>
+
+                <p> =&gt; JS OOP [Defining Object With Object.assign()] : This Function / Method has a very critical importance Due to following Features : </p>
+
+                <ol>
+                    <li> The ability to Create a new Onfly Object {(Empty) + (Target Object)}, AND the ability to Inherite it's Property(s) and Method(s) from a other Parent Object's, OR even the ability to Assign specific partial Properties Value(s) and Method(s) from one/Multiple Object(s) to this New Object in one Script Method line </li>
+                                        
+                    <li> The ablility to Assign {All} Properties and Functions from specific Pre-Defined Objects to other Pre-Defined Object in one Script Method line </li>
+                    
+                    <li> The ablility to Assign {Specific} Properties and Functions from specific Pre-Defined Objects to other Pre-Defined Object in one Script Method line </li>
+
+                    <li> The ablility to {Onfly} Assign New Specific Properties and Functions to {Pre-Defined Object / New-onfly Object} (Target Object) in one Script Method line </li>
+                
+                    <li> Ablility to combine between Object Defining Method (onfly empty) & Assigning process in the same line of code </li>
+                </ol>
+
+        </section>
+
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSOOPImp" id="JSOOPImp">
+            <header>
+                <h3> JS OOP [Defining Object With Object.assign()] Importance & Benefits: </h3>
+            </header>
+
+            <p> [Defining Object With Object.assign() Method] gives us the Following Features : <br>
+                <ul>
+                    <li> Another unique Method to Define Object, wether an Empty one or with it's properites & Methods-Functions</li>
+                    <li> Multiple Functional Objects Tasks in one script code </li>
+                    <li> More Complicated and enhanced Object(s) Functions, which is critical in OOP and it's Technologies (DOM, BOM, Bootstrap, Php, ...). </li>                 
+                </ul>
+
+            <p> All the previous Featueres of Assinging Mehthod gives great programing ability to design more complicated Scripts and Functional operations </p>
+
+        </section>
+
+        <!--------------------------------------------------------------------s---------------------------------->
+        <section class="JSOOPSyntx" id="JSOOPSyntx">
+            <header>
+                <h3> JS OOP [Defining Object With Object.assign()] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS OOP Defining Object by [Object.assign()] Method as following : </p>
+            <div id="Code" class="Code">
+
+                // A) [ Defining Object by assing Method ] Syntax :<br><br>
+                // (Definig a {New Empty Object} by Const,let,var key words) [Onfly Mode] : <br><br>
+                <span class=one></span> const objName = Object.assign({}); <br>
+                <span class=one></span> let objName = Object.assign({}); <br>
+                <span class=one></span> var objName = Object.assign({}); <br>
+                //================================================================================= <br>
+                //================================================================================= <br><br>                
+                
+                // B) [ Assinging {All/Specific} of {New onfly Props and Methods/Pre-Defined Object's Properties <br> 
+                <span class=one></span> and Methods} to {New Empty / Pre-Defined} Object by {Assign Method} ] Syntax :<br><br>
+                
+                <span class=one></span>// B1) [Assinging {New onfly Properties and Methods} to {New Empty Target Object [onfly Object]}]: <br><br>                            
+                <span class=two></span> const objName = Object.assign({}, {PropName1 : "Value1"}, {PropName2 : "Value2"}); <br>
+                <span class=two></span> let objName = Object.assign({}, {PropName1 : "Value1"}, {PropName2 : "Value2"}); <br>
+                <span class=two></span> var objName = Object.assign({}, {PropName1 : "Value1"}, {PropName2 : "Value2"}); <br>
+                //================================================================================= <br><br>                
+                
+                <span class=one></span> // B2) [ Assinging {Pre-Defined Object's Properties and Methods} to {New Empty Target Object <br>
+                <span class=two></span>[onfly Object]} ] : <br><br>                            
+
+                <span class=two></span> const objName = Object.assign( {}, ObjName1.PropName1, ObjName1["PropName2"],<br>
+                <span class=three></span>ObjName2.PropName1, ObjName2["PropName2"] ); <br><br>
+                
+                <span class=two></span> let objName = Object.assign( {}, ObjName1.PropName1, ObjName1["PropName2"], <br>
+                <span class=three></span>ObjName2.PropName1, ObjName2["PropName2"] ); <br><br>
+
+                <span class=two></span> var objName = Object.assign( {}, ObjName1.PropName1, ObjName1["PropName2"], <br>
+                <span class=three></span>ObjName2.PropName1, ObjName2["PropName2"] ); <br><br>
+                //================================================================================= <br><br>                
+                
+                <span class=one></span> // B3) [ Assinging {ِAll Pre-Defined Object's Properties and Methods} to {New Empty Target Object <br>
+                <span class=two></span>[onfly Object]} ] : <br> <br>                            
+                <span class=two></span> const objName = Object.assign( {}, ObjName2, ObjName2] ); <br>
+                <span class=two></span> let objName = Object.assign( {}, ObjName2, ObjName2] ); <br>
+                <span class=two></span> var objName = Object.assign( {}, ObjName2, ObjName2] ); <br>
+                //================================================================================= <br>                
+                //================================================================================= <br><br>                
+                
+                <span class=one></span> // B4) [ Assinging {New onfly Properties and Methods} to {Pre-Defined Target Object } ] : <br><br>                            
+                <span class=two></span> Object.assign(TargetObjName, {PropName1 : "Value1"}, {PropName2 : "Value2"}); <br>                
+                //================================================================================= <br><br>                
+                
+                <span class=one></span> // B5) [ Assinging {Pre-Defined Object's Properties and Methods} to {Pre-Defined Target Object} ] : <br> <br>                           
+                <span class=two></span> Object.assign( TargetObjName, ObjName1.PropName1, ObjName1["PropName2"], <br>
+                <span class=three></span> ObjName1.Method1(), ObjName2.PropName1, ObjName2["PropName2"],<br>
+                <span class=three></span> ObjName2.Method2()); <br>                
+                //================================================================================= <br><br>                
+                
+                <span class=one></span> // B6) [ Assinging {All Pre-Defined Object's Properties and Methods} to {Pre-Defined Object <br>
+                    <span class=two></span>[Target Object]}] : <br><br>
+                <span class=two></span> Object.assign( TargetObjName, ObjName2, ObjName2] ); <br>                
+                //================================================================================= <br>                
+                //================================================================================= <br><br>                
+
+                // C) [ Assinging {All/Specific} of {New onfly Props and Methods/Pre-Defined Object's Properties and <br>
+                <span class=one></span> Methods} to {New Empty / Pre-Defined} Object by {Assign Method} ] Mult Syntax : <br><br>
+                                                                                                                                
+                <span class=one></span> // C1) Multiple Assinging to {New Onfly Target Object} :<br><br>
+                <span class= two> </span> const ObjName =  Object.assign( {}, Objsrc1, Objsrc2.Prop1, Objsrc3["Prop2"],<br>
+                <span class= three></span> {PropName3:"Value3"}, Objsrc4.Method() ); <br><br>                
+                
+                <span class= two> </span> let ObjName =  Object.assign( {}, Objsrc1, Objsrc2.Prop1, Objsrc3["Prop2"],<br>
+                <span class= three></span> {PropName3:"Value3"}, Objsrc4.Method() ); <br> <br>                
+                
+                <span class= two> </span> var ObjName =  Object.assign( {}, Objsrc1, Objsrc2.Prop1, Objsrc3["Prop2"],<br>
+                <span class= three></span> {PropName3:"Value3"}, Objsrc4.Method() ); <br> <br>                
+                //======================================================================= <br><br>                        
+                
+                <span class=one></span> // C2) Multiple Assinging to {PreDefined Target Object} :<br><br>
+                <span class= two> </span> Object.assign( ObjName, Objsrc1, Objsrc2.Prop1, Objsrc3["Prop2"], <br>
+                <span class= three> </span> {PropName3:"Value3"}, Objsrc4.Method() ); <br>
+                                               
+                //======================================================================= <br><br>                                      
+                //======================================================================= <br><br>      
+                
+                // D) Accessing to all of the target Object element : <br>
+                    
+                <span class=one></span> // D1) Accessing All Object's properties and Methods: <br>
+                    <span class= two></span> console.log(ObjName); <br>
+                    //======================================================================= <br><br>      
+                    
+                <span class=one></span> // D2) Accessing All Object's properties : <br>
+                    <span class= two></span> console.log(ObjName.Prop1); <br>
+                    <span class= two></span> console.log(ObjName.Prop2); <br>
+                    <span class= two></span> console.log(ObjName.Prop3); <br>
+                    <span class= two></span> console.log(ObjName.Prop4); <br>
+                    <span class= two></span> console.log(ObjName.Prop5); <br>
+                    <span class= two></span> console.log(ObjName.Prop6); <br>
+                    <span class= two></span> console.log(ObjName["Prop7"]); <br>
+                    //======================================================================= <br><br>      
+                    
+                <span class=one></span></spapn>// D3) Accessing All Object's Methods: <br>
+                    <span class= two></span> console.log(ObjName.Method1); <br>
+                    <span class= two></span> console.log(ObjName.Method2); <br>
+                    
+                <br> =======================================================
+                <br><br> =======================================================
+                <br><br> =======================================================
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPPract" id="JSOOPPract">
+            <header>
+                <h3> JS OOP [Defining Object With Object.assign()] General Practical Applications : </h3>
+            </header>
+
+
+            <p> =&gt; Here one Major Application which include inner (3) Practical Application on Object Defining and all it's properties Methods by [Assign] Method + other previous mehthods &gt;&gt; <br>
+
+                <ol>
+                    <li> [First Application]: {[New target Object by Assign Method ] + [1 Source Object by Assign Method + other Methods & Functions ]} : </li>
+                    <p> =&gt; [Defining Empty Object(s) & Assigning it's Properties and Methods [Onfly Mode + Default Mode] using {Object.assign Method}] Application, which will include following : <br>
+
+                        <ul>
+                            <li> All the Source Object Names And Properties will be enterd by user </li>
+                            <li> Methods Declaration by assign Method and other Methods  </li>
+                            <li> Accessing & Printing Target Objects Names & Properties </li>                   
+                        </ul>
+                        <p> =&gt; This Pracitcal Application will recieve the user Data with in an Object properties, and will dispaly it with in Object Method<br>
+
+
+                    <li> [Second Application]: {[Welcome to [Assigning (Sources Object(s)) to a (Target Pre-Defined Object) using {Object.assign Method}] Application]} : </li>
+                        <p> =&gt; This .<br>
+
+                            <p> =&gt; The Second Object Practical Application , which will include following operations: <br>
+
+                                <ul>
+                                    <li> Summition Operation </li>
+                                    <li> Substraction Operation </li>
+                                    <li> Multiply Operation </li>
+                                    <li> Divsion Operation </li>
+                                </ul>
+                    <li> [Third Application]: {[Welcome to [Assigning (Sources Object(s)) to a (Target Pre-Defined Object) using {Object.assign Method}] Application]} : </li>
+                        <p> =&gt; This .<br>
+
+                            <p> =&gt; The Second Object Practical Application , which will include following operations: <br>
+
+                                <ul>
+                                    <li> Summition Operation </li>
+                                    <li> Substraction Operation </li>
+                                    <li> Multiply Operation </li>
+                                    <li> Divsion Operation </li>
+                                </ul>
+                </ol>
+
+                <br>
+
+                <textarea id=txtarea class=txtarea> </textarea><br>
+
+                <button class=btn onclick="apps()"> Click to Start [All Applications]   
+                </button>
+
+                 <hr>
+                 <br>
+
+                <textarea id=txtarea0 class=txtarea0> </textarea> <br>
+
+                <button class=btn onclick="Display()"> Click to Display JS Code [all Apps]
+                </button>
+
+                                
+                <br>
+                
+                <script src="JSOOPDefObjAssign.js">
+                </script>
+                <hr>
+                
+                <!-- <div class=JSOOPObjDefAssign>
+                    <code>
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+
+                        <span class=one></span> &lt;button class="btn" onclick="objCreator()"&gt;<br>                           
+                        <span class=two></span> Click to Start [OOP Object Defining {Part1 - Literals} Application] <br>         
+                        <span class=one></span> &lt;/button&gt; <br><br>                            
+
+                        <span class=one></span> &lt;script src="JSOOPDefObj.js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+
+                        /* global, cosole, document, alertk, prompt */ <br>
+                        /* JSOOP [ Defining Object with Object literals {Part 2} ] */ <br>
+                        =======================================================<br><br>
+
+                    </code>
+                </div> -->
+        </section>
+
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <section class="JSOOPPract1" id="JSOOPPract1">
+            <header>
+                <h3> JS OOP [First Application ] </h3>
+            </header>
+
+            <p> =&gt; [Age Calculation]: In this Application, the user will Enter his age by years and the programe will Calculate his age by each Months, Weeks and Days .
+                
+            </p>
+            <br>
+
+            <textarea id=txtarea class=txtarea> </textarea><br>
+
+            <button class=btn onclick="app1()"> Click to Start [First Applications]   
+            </button>
+            
+            <br>
+
+            <textarea id=txtarea1 class=txtarea1> </textarea> <br>
+
+            <button class=btn onclick="Display1()"> Click to Display JS Code [App1]
+            </button>
+
+
+
+            <script src="JSOOPDefObjAssign.js">
+            </script>
+            <hr>
+
+            <div class=JSOOPObjDefAssign>
+                <code>
+                    // HTML Codes: <br>
+                    &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                    &lt;/textarea&gt; <br><br>
+                    
+                        &lt;button class="btn" onclick="ConstCalc"&gt;<br>                            
+                        &nbsp;&nbsp;Click to Start [Constellation Calculation] Application 2<br>                               
+                        &lt;/button&gt; <br><br>                            
+
+                        &lt;script src="JSOOPLitDef2MultApp.js"&gt;<br>                            
+                        &lt;/script&gt; <br><br>
+
+                        =======================================================<br><br>
+
+                        // JS Codes [JSOOPLitDef2MultApp.js] : <br><br>
+                        /* global alert, document, prompt, console */<br>
+                        /* jslint plusplus: true evil: true */ <br>
+                        /* [Constellation Calculation] Application 2 */ <br>
+                        // ========================================// <br>                             
+                                                
+                        
+                        //////////////////////////////////////////////////////////<br><br><br>
+                                               
+                    </code>
+                </div>
+                
+            </section>
+                    
+        <!-------------------------------------------------------------------------------------->        
+        <section class="JSOOPPract2" id="JSOOPPract2">
+            <header>
+                <h3> JS OOP [Second Application]  </h3>           
+            </header>
+            
+            <p> =&gt;  
+                
+           </p>                                             
+           <br>
+                    
+                <textarea id=txtarea class=txtarea > </textarea><br>    
+            
+            
+                <button class=btn onclick="app2()"> Click to Start [Second application]   
+                </button>
+        
+                <br>
+
+                <textarea id=txtarea2 class=txtarea2> </textarea> <br>
+
+                <button class=btn onclick="Display2()"> Click to Display JS Code [App2]
+                </button>
+            
+                <br>
+
+                <script src="JSOOPDefObjAssign.js"> </script>                                        
+            <hr>
+            
+                <!-- <div class= >
+                    <code>
+                        // HTML Codes: <br>
+                        &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        &lt;/textarea&gt; <br><br>
+
+                        &lt;button class="btn" onclick="GradCalc"&gt;<br>                            
+                        &nbsp;&nbsp;Click to Start [Grade Calculation] Application 3<br>                               
+                        &lt;/button&gt; <br><br>                            
+
+                        &lt;script src="JSOOPLitDef2MultApp.js"&gt;<br>                            
+                        &lt;/script&gt; <br><br>
+
+                        =======================================================<br><br>
+
+                        // JS Codes [JSOOPLitDef2MultApp.js] : <br><br>
+                        /* global alert, document, prompt, console */<br>
+                        /* jslint plusplus: true evil: true */ <br>
+                        /* [Grade Calculation] Application 3 */ <br>
+                        // ========================================// <br>                             
+
+                        
+                        //////////////////////////////////////////////////////////<br><br><br>
+                                               
+                    </code>                                        
+                </div>                                                                                                        -->
+            
+        </section>        
+
+        <!---------------------------------------------------------------------------------------->
+        <section class="JSOOPPract3" id="JSOOPPract3">
+            <header>
+                <h3> JS OOP [Third Application]  </h3>           
+            </header>
+            
+            <p> =&gt;  
+                
+           </p>                                             
+           <br>
+                    
+                <textarea id=txtarea3 class=txtarea3 > </textarea><br>    
+            
+            
+                <button class=btn onclick="app3()"> Click to Start [Third Application]   
+                </button>
+            
+                <br>
+
+                <hr>
+
+                <textarea id=txtarea3 class=txtarea3> </textarea> <br>
+
+                <button class=btn onclick="Display3()"> Click to Display JS Code [App3]
+                </button>
+            
+                <br>
+
+
+                <script src="JSOOPDefObjAssign.js"> </script>                                        
+            <hr>
+            
+                <!-- <div class= >
+                    <code>
+                        // HTML Codes: <br>
+                        &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        &lt;/textarea&gt; <br><br>
+
+                        &lt;button class="btn" onclick="GradCalc"&gt;<br>                            
+                        &nbsp;&nbsp;Click to Start [Grade Calculation] Application 3<br>                               
+                        &lt;/button&gt; <br><br>                            
+
+                        &lt;script src="JSOOPLitDef2MultApp.js"&gt;<br>                            
+                        &lt;/script&gt; <br><br>
+
+                        =======================================================<br><br>
+
+                        // JS Codes [JSOOPLitDef2MultApp.js] : <br><br>
+                        /* global alert, document, prompt, console */<br>
+                        /* jslint plusplus: true evil: true */ <br>
+                        /* [Grade Calculation] Application 3 */ <br>
+                        // ========================================// <br>                             
+
+                        
+                        //////////////////////////////////////////////////////////<br><br><br>
+                                               
+                    </code>                                        
+                </div>                                                                                                        -->
+            
+        </section>        
+
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\alnoaman\Desktop\New folder\My Web Pages\Dndnha.Com.Elnhaya.Tetr.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 8 Video File:</h3>
+
+            <iframe
+                width="100%"
+                height="100%"
+                allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"
+                frameborder="0"
+                preload="yes"
+                src="https://www.youtube.com/embed/watch?v=Sfag8fVDMNY&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=8&controls=0&loop=1&autoplay=1&fs=1"
+            >
+            </iframe>
+            
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\8 JavaScript OOP  Defining Object With Object.assign.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS OOP Lesson 8 [Defining Object With Object.assign()] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>

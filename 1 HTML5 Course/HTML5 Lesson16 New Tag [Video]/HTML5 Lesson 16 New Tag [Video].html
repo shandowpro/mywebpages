@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 16 HTML5 New Tag [Video] </title>
+    <link rel="stylesheet" href="HTML5 New Tag [Video].css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">        
+    </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 16 HTML5 New Tag [Video]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="HTML5 New Tag Video Main Concept" > HTML5 New Tag [Video] Main Concept </a> </li>
+            <li> <a href=#VideoNTag   title="Go to Video Tag" > Video Tag  </a> </li>         
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> Lesson 16 {Video} </span> </main>
+
+<!-------------------------------------------------------------------------------------------------------------->                        
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>
+                HTML5 New Tag [Video] Concept. 
+            </header>
+            
+            <article>                
+                <p> &gt; The New HTML5 Tag in this lesson as following :</p>
+                
+                <ol>                    
+                    <li> &lt; Video &gt; &nbsp; &nbsp; &lt; /Video &gt; </li>                           
+                    <li> &lt; source &gt; &nbsp; </li>                               
+                    <li> &lt; track &gt; &nbsp; </li>                               
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>
+      
+        <section class="VideoNTag" id="VideoNTag">
+            <header>
+                Video Tag [ &lt; Video &gt; &lt; /Video &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> [Video Tag] Concept: </h1>
+                    <p> =&gt; [Video Tag] is tag specified to deal with Video files on web Pages with advanced       controls and tools in comparison with Html4 which were dealing with Video files less         controls and features. 
+                    <p> =&gt; [Video Tag] has several properties inside: 
+                        <ol type="1">
+                            <li> [Controls]: Which is allowing tools bar to the Video file coded.</li>
+                            
+                            <li> [Width = "#"]: This new feature is allowing to specify the [Width] of video          frame, which was impossible in Html4.</li>
+                            
+                            <li> [Height = "#"]: This new feature is allowing to specify the [Height] of video        frame, which was impossible in Html4.</li>
+                            
+                            <li> [Poster = ""]: Here where we can write the Image's Path to put it as a cover of      Allocated video, And this Poster is temperorly coverd the video window unsless        the user play the video.</li>
+                            
+                            <li> [Src = ""]: Here where we write the Video File Path, and this property can be        written in the main &lt; Video &gt; Tag or it's partical tag &lt; Source &gt; </li>
+                            
+                            <li> [Autoplay]: It provides the (Auto play) feature to the allocated Video file          once the website is loaded.</li>
+                            <li> [Loop]: It provides the Looping feature to the allocated Video file once it          finished Automaticlay.</li>
+                            <li> [Mute]: It provides the ability to mute the Video file inspite of being played,       and this can be a programable feature in Javascipt.</li>
+                            <li> [Preload = ""]: It provides the ability to control the download method of the        Video file, and it offer (3) options :
+                                <ol type="A">
+                                    <li> [Preload = "Auto"] : It is meaning to auto load the allocated Video file      once the website is loaded.</li>
+                                    <li> [Preload = "metadata"] : It is meaning to load the information of the        allocated Video file once the website is loaded.</li>
+                                    <li> [Preload = "none"] : It is meaning Not to load the allocated Video file      while website is loaded unless the user click on play button form the        control Video file.</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    <p> =&gt; [Source Tag] (&lt; source &gt;) is the first Partial Tag of [Video Tag], and it has     2 available properties:
+                        <ol>
+                            <li> [src=""]: Which can be written as mentioned in Video Tag it self also, but it is      better to write it in Source Tag , to have a chance to add many format type of        Video file to gurantee that the browser will support one of file formats. </li>
+                            <li> [type = ""]: It specify the [ MIME ] type of the allocated Video file, and here      some of mime type to common Video file extensions:
+                                <ol>
+                                    <li> (mp4) extension =&gt; (Video/mp4) </li>
+                                    <li> (ogg) extension =&gt; (Video/ogg) </li>
+                                    <li> (webm) extension =&gt; (Video/webm) </li>
+                                </ol>                            
+                            </li>
+                            <li> [Media]: It is one of <mark> Unsupported property </mark> of [Source Tag] until      (2014) to any Browser. </li>
+                        </ol>
+                        
+                    <p> =&gt; [Track Tag] (&lt; track &gt;) is the second Partial Tag of [Video Tag], which is        meant by translation issues, and it might be more than one track tag for one video file      and with different properties for each .And it has [4] available properties:
+                        <ol>
+                            <li> [src = ""]: Here to write the [Translation file] [Web VTT] type with (.vtt)          Extension. </li>
+                            <li> [kind = ""]: It specify the kind of translation allocated file within src            pervious property, and it might be one of following [5] Kinds of track                Translation Files:
+                                <ol>
+                                    <li> "Subtitle" =&gt; Which meant to specify the detected translation file as texual translator file kind. </li>
+                                    
+                                    <li> "Captions" =&gt; Which meant to specify the detected translation file as Audio Effections translator file kind. </li>
+                                    
+                                    <li> "Description" =&gt; Which meant to specify the detected translation file as texual description file kind for video contents. </li>
+                                    
+                                    <li> "Chapters" =&gt; Which meant to specify the detected translation file as dividing video to chapter file kind, and allowing to navigate through. </li>
+                                    
+                                    <li> "Metadata" =&gt; Which meant to specify the detected translation file as video track meta data description file kind. </li>                           
+                                </ol>                            
+                            <li> [Srclang = ""]: Here to write the [Iso Code] of language used in translation          file, and each language has it's own Iso code, for example: </li>
+                                <ul>
+                                    <li> Arabic =&gt; [ar]</li>
+                                    <li> English =&gt; [en]</li>
+                                </ul>
+                            <li> [label = ""]: Here to write the Label or title of the this track. </li>
+                        </ol>
+                </header>
+                
+                <header>
+                    <h1> Main & Features of [Video] Tag Usages: </h1>                    
+                    <p> =&gt; It has solved many problems of older way in HTML4 with in controling Video             file, by the [Video] tag & it's attributes and properties</p>     
+                    <p> =&gt; It is very handy by using Javascript codes to manage it. </p>                    
+                    <p> =&gt; It is also can be formated by CSS codes. </p>                    
+                </header>
+                
+                <header class="VideoExp">
+                    <h1>Example:</h1>
+                    <p> Following there are the an album of videos:</p>
+                    
+                    <br class="FixFloat">
+
+                    <section>                        
+                        <div class="VideoSection">
+                            <h5>(A) Autoplay :</h5>
+                            <Video controls width="300" height="320" poster="Images/Jungle1.jpg" preload="autoplay" >
+                                <source src="Videos/تعلم لغة الالة_ التعرف على الاحرف المكتوبة باليد - 7.mp4" type="video/mp4" >
+                                <track src="" kind="captions" srclang="en" label="English">
+                                <track src="" kind="subtitles" srclang="en" label="English Subtitles">
+                                <track src="" kind="chapters" srclang="en" label="English Chapter">
+                                <track src="" kind="descriptions" srclang="en" label="English Description">
+                                <track src="" kind="metadata" srclang="en" label="English meatdata">
+                                Your browser Does Not Support the Video file format...              
+                            </Video>                        
+                        </div>
+                        
+                        <div class="VideoSection">
+                            <h5>(B) Looping :</h5>
+                            <Video controls width="300" height="320" poster="Images/Jungle1.jpg" preload="none" loop>
+                                <source src="Videos/5- الواجب الاول_ ماهي افضل خوارزمية لمعرفة المصابين بالسكري.mp4"    type="video/mp4" >
+                                <track src="" kind="captions" srclang="en" label="English">
+                                <track src="" kind="subtitles" srclang="en" label="English Subtitles">
+                                <track src="" kind="chapters" srclang="en" label="English Chapter">
+                                <track src="" kind="descriptions" srclang="en" label="English Description">
+                                <track src="" kind="metadata" srclang="en" label="English meatdata">
+                                Your browser Does Not Support the Video file format...              
+                            </Video>                        
+                        </div>
+                        
+                        <div class="VideoSection">
+                            <h5>(C) Muted :</h5>
+                            <Video controls width="300" height="320" poster="Images/Jungle1.jpg" preload="none" muted >
+                                <source src="Videos/مشروع الاول لتعلم الالة_ -1 تشخيص مرض سرطان الثدي.mp4" type="video/mp4" >
+                                <track src="" kind="captions" srclang="en" label="English">
+                                <track src="" kind="subtitles" srclang="en" label="English Subtitles">
+                                <track src="" kind="chapters" srclang="en" label="English Chapter">
+                                <track src="" kind="descriptions" srclang="en" label="English Description">
+                                <track src="" kind="metadata" srclang="en" label="English meatdata">
+                                Your browser Does Not Support the Video file format...              
+                            </Video>                        
+                        </div>
+                        
+                        <div class="VideoSection">
+                            <h5>(D) Preload = "none":</h5>
+                            <Video controls width="300" height="320" poster="Images/Jungle1.jpg" preload="none" >
+                                <source src="Videos/Videos/1 Introduction.mp4" type="video/mp4" >
+                                <track src="" kind="captions" srclang="en" label="English">
+                                <track src="" kind="subtitles" srclang="en" label="English Subtitles">
+                                <track src="" kind="chapters" srclang="en" label="English Chapter">
+                                <track src="" kind="descriptions" srclang="en" label="English Description">
+                                <track src="" kind="metadata" srclang="en" label="English meatdata">
+                                Your browser Does Not Support the Video file format...              
+                            </Video>                        
+                        </div>
+                        
+                        <div class="VideoSection">
+                            <h5>(E) None Sourced: :</h5>
+                            <Video controls width="300" height="320" poster="Images/Jungle1.jpg" preload="none"     autoplay>
+                                <source src="" type="" >
+                                <track src="" kind="captions" srclang="en" label="English">
+                                <track src="" kind="subtitles" srclang="en" label="English Subtitles">
+                                <track src="" kind="chapters" srclang="en" label="English Chapter">
+                                <track src="" kind="descriptions" srclang="en" label="English Description">
+                                <track src="" kind="metadata" srclang="en" label="English meatdata">
+                                Your browser Does Not Support the Video file format...              
+                            </Video>                                       
+                        </div>
+                        
+                        <div class="VideoSection">
+                            <h5>(F) Preload="metadata"</h5>
+                            <Video controls width="300" height="320" poster="Images/Jungle1.jpg" preload="none"     autoplay>
+                                <source src="Videos/5- الواجب الاول_ ماهي افضل خوارزمية لمعرفة المصابين بالسكري.mp4"    type="video/mp4" >
+                                <track src="" kind="captions" srclang="en" label="English">
+                                <track src="" kind="subtitles" srclang="en" label="English Subtitles">
+                                <track src="" kind="chapters" srclang="en" label="English Chapter">
+                                <track src="" kind="descriptions" srclang="en" label="English Description">
+                                <track src="" kind="metadata" srclang="en" label="English meatdata">
+                                Your browser Does Not Support the Video file format...              
+                            </Video>                        
+                        </div>
+                    </section>
+                    
+                    <br class="FixFloat">
+                    
+                    <div class="VideoExp1">                                            
+                        <code> 
+                            &lt;aside&gt; <br>                            
+                            &nbsp;&nbsp;&lt;section&gt; <br><br>                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;h5&gt; Video File [Autoplay + Loop + preload="auto" + track tag + source &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tag] : &lt;/h5&gt;<br><br>                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;Video &nbsp; controls &nbsp;width="#" &nbsp;height="#" &nbsp;autoplay &nbsp;loop &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;perload="auto" &gt;<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;source &nbsp;src = "1 Introduction.mp4" &nbsp;type ="video/mp4" &gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;track &nbsp;src = "file.vtt" &nbsp;kind ="metadata" srclang="en" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label="English-MetaData" &gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;track &nbsp;src = "file.vtt" &nbsp;kind ="subtitles" &nbsp; srclang="en" &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label="English-Subtitles" &gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;track &nbsp;src = "file.vtt" &nbsp;kind ="captions" srclang="en" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label="English-Captions" &gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;track &nbsp;src = "file.vtt" &nbsp;kind ="descriptions" srclang="en" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label="English-Description" &gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;track &nbsp;src = "file.vtt" &nbsp;kind ="chapters" srclang="en" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label="English-Chapter" &gt; <br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your browser Does Not Support the Video file format...<br>              
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;/Video&gt; <br><br>
+                            
+                            &nbsp;&nbsp;&lt;/section&gt;<br>
+                            &lt;/aside&gt; <br>                            
+                        </code>                    
+                    </div>       
+
+            </article>                
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+        
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days '; resultM.value=' OR '+(parseInt(age.value)*parseInt(months.value)) + ' Months'">
+               Enter your Age by years:
+               <input type="text" name="age"><br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="12">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num1">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Epic Autoplay Video File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Video file format...              
+                </audio>                        
+       </section>
+        
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

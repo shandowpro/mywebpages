@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> JavaScript Lesson 7 [Javascript Variables] </title>
+    <link rel="stylesheet" href="JavaScript [Javascript Variables].css" media="all" >
+    
+    <script src="Test.js"> </script>    
+
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        JavaScript Lesson 7 [Javascript Variables]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="JavaScript [Javascript Variables] Main Concept" >
+                    [Javascript Variables] Main Concept" </a> </li>            
+            
+            <li> <a href=#JSVarIntro Console  title="Go to Introduction to Javascript Variables Intorduction Usages" >
+                    Javascript [Variables Introduction & Usages] </a> </li>
+                
+            <li> <a href=#JSVarSyntax   title="Go to JS Variables Syntax" >
+                    Javascript [Variables Syntax] </a> </li>
+            
+            <li> <a href=#JSVarExps Console  title="Go to JS Variables Examples" >
+                    Javascript [Variables Examples] </a> </li>            
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to JavaScript Course <span> JavaScript Lesson 7 [Javascript Variables] </span> 
+    </main>
+<!-------------------------------------------------------------------------------------------------------------->                        
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>                 
+                JavaScript [Variables]
+            </header>
+            
+            <article>                                                
+                <p> &gt; The New Topics in this lesson as following :</p>
+                <ol type="A">                    
+                    <li> Variables Introduction & Usages. </li>
+                    <li> Variables Syntax Rules. </li>
+                    <li> Variables Practical Exps. </li>                    
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>       
+        <section class="JSVarIntro" id="JSVarIntro">
+            <header>                
+                JavaScript Variables Introduction & Usages & Importance
+            </header>
+            
+            <article>
+                <h2> [JS Variables] as any other programing Language has the [Variables] Coding type. </h2>
+                
+                <p> =&gt; [JS Variables is a Data container of Specific Type of Data which is Able to store and Recalled .                                                        
+                
+                <p> =&gt; [JS Variables] playing very important rule to deal with Algorthms & math operations.                                                      
+                <p> =&gt; [Variables] as a concept is the changing value with sequence Ability, which is basic and critical mathematical function.
+                    
+            </article>       
+        </section>
+
+    <!------------------------------------------------------------------------------------------------------>         
+        <section class="JSVarSyntax" id="JSVarSyntax">
+            <header>                
+                JavaScript [Variables Syntax & Rules]
+            </header>
+            
+            <article>
+                <h2> [JS Variables] as it in any other programing language has certain rules of code Syntax which is defferent in details but with the same main Concept</h2>
+
+                <p> =&gt; [JS Variables] Syntax as following :                                                   
+                    <ul>
+                        <li> [JS Variables Name] Must start Var Reserved word or the Editor will generate an Error .</li>
+                            <div>  
+                                price = 100; &nbsp; =>> Wrong Code X
+                            </div>
+                        
+                        <li> [JS Variables Name] Can Not Start with number Ever.</li>
+                            <div>  
+                                var 1price = 100; &nbsp; =>> Wrong Code X
+                            </div>
+                        
+                        <li> [JS Variables Name] Can Not be as any of [JS] Reserved Word.</li>
+                            <div>  
+                                var var = 100; &nbsp; =>> Wrong Code X<br>
+                                var function = 100; &nbsp; =>> Wrong Code X<br>
+                                var return = 100; &nbsp; =>> Wrong Code X
+                            </div>
+                        
+                        <li> [JS Variables] Must have a Space between each of Variable Name and Assigining Mark
+                             (=) & space between Assigning Mark (=) and Variable Value.</li>
+                            <div>  
+                                var price=100; &nbsp; =>> Wrong Code X
+                            </div> 
+                        
+                        
+                        <li> [JS Variables] Can be started with Small Letter or Capital Letter.</li>
+                            <div>  
+                                var price = 100; &nbsp; =>> Right Code <br>
+                                var Price = 100; &nbsp; =>> Right Code 
+                            </div> 
+                        
+                        <li> [JS Variables] it recommended to write the variable in [Cammel Case] .</li>
+                            <div>  
+                                var myPrice = 100; &nbsp; =>> Right Code <br>
+                                var mySmallDisc = 100; &nbsp; =>> Right Code 
+                            </div> 
+                            
+                        <li> [JS Variables] Can Started with ($) Dollar Sign or (_) Underscore Sign.</li>
+                            <div>  
+                                var $myPrice = 100; &nbsp; =>> Right Code <br>
+                                var _SmallDisc = 100; &nbsp; =>> Right Code 
+                            </div>                                                                       
+                        
+                        <li> [JS Variables] Must have a value after Assigning Mark or the Editor Will Generate an error in Work Frame work.</li>
+                            <div>  
+                                var $myPrice; &nbsp; =>> Wrong Code X<br>
+                                var _SmallDisc; &nbsp; =>> Wrong Code X
+                            </div>                                                                               
+                    </ul>                                                
+            </article>       
+        </section>              
+    
+<!------------------------------------------------------------------------------------------------------------>           
+        <section class="JSVarExps" id="JSVarExps">
+            <header>                
+                JavaScript [Variables Practical Examples]
+            </header>
+            
+            <article>
+
+                <h2> In this Chapter we will have (2) practicatl Examples about using Variables with some Functions </h2>
+                                                                                        
+                <header class="JSVarExp">
+                    <h1> [Example:(1)] Dispalying a Value from Calculated Variable in JS File:</h1>               
+                    
+                    <div id="testing">
+                    </div>
+                    
+                    <div class="JSVarExp1">                                            
+                        <code> 
+                            HTML Code:<br>
+                            &lt; div id="testing" &gt; <br>
+                            &nbsp; &nbsp; &lt; script src="Variables.js" &gt; &lt; /script &gt;<br>  
+                            &lt; /div &gt;<br><br>  
+                            =============================================================<br>                            
+                            JS Code:<br>
+                            // Declaration Vars:<br>
+                            var mainPrice = 100; <br><br>
+                            
+                            // Simple Funcitons: <br>
+                            document.getElementById("testing").innerHTML = mainPrice; <br>
+                        </code>                    
+                    </div>                                        
+               <!-------------------------------------------------------------------------------------------->                    
+                    <h1> [Example:(2)] Dispalying a Value from Calculated Multiple Variables in JS File:</h1>               
+                    
+                    <div id="testing1">
+                    </div>
+                    
+                    <div class="JSVarExp1">                                            
+                        <code> 
+                            HTML Code:<br>
+                            &lt; div id="testing1" &gt; <br>
+                            &nbsp; &nbsp; &lt; script src="Variables.js" &gt; &lt; /script &gt;<br>  
+                            &lt; /div &gt;<br><br>  
+                            =============================================================<br>                            
+                            JS Code:<br>
+                            // Declaration Vars:<br>
+                            var myOldPrice = 1500, <br>
+                            &nbsp; &nbsp; myNewPrice = 900, <br>
+                            &nbsp; &nbsp; myDiscount = myOldPrice - myNewPrice; <br><br>
+                            
+                            // Simple Funcitons: <br>
+                            document.getElementById("testing1").innerHTML = myDiscount; <br>
+                        </code>                    
+                    </div>                                        
+                    
+                    <!-------------------------------------------------------------------------------------------->                    
+                    <h1> [Example:(3)] Dispalying a Value from Calculated Multiple Variables (more complex) in JS File:</h1>               
+                    
+                    <div id="product1">                        
+                    </div>
+                    
+                    <div id="product2">                                            
+                    </div>
+                    
+                    <div id="product3">                                        
+                    </div>
+                    
+                    
+                    <div class="JSVarExp1">                                            
+                        <code> 
+                            HTML Code:<br>
+                            &lt; div id="testing2" &gt; <br>
+                            &nbsp; &nbsp; &lt; script src="Variables.js" &gt; &lt; /script &gt;<br>  
+                            &lt; /div &gt;<br><br>  
+                            =============================================================<br>                            
+                            JS Code:<br>
+                            // Declaration Vars:<br>
+                            var myOldPrice = 1500, <br>
+                            &nbsp; &nbsp; myNewPrice = 900, <br>
+                            &nbsp; &nbsp; myDiscount = myOldPrice - myNewPrice; <br><br>
+                            
+                            // Simple Funcitons: <br>
+                            document.getElementById("testing1").innerHTML = myDiscount; <br>
+                        </code>                    
+                    </div>                                        
+                    
+                    <script src="Test.js"> </script>    
+                    <!--<script src="Variables.js"></script> -->
+                    
+                </header>             
+            </article>       
+        </section>              
+<!-------------------------------------------------------------------------------------------------------------->
+        
+<!--------------------------------------------------------------------------------------------------------------> 
+    </div>    
+    
+<!-------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="200"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="22">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num2">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section clas4s="VideoSection">        
+                <h3> Lesson 7 Video File:</h3>
+                <iframe			
+				width="100%"
+				height="100%"											
+				allowfullscreen
+				allowfullscreen="allowfullscreen"
+				mozallowfullscreen="mozallowfullscreen"
+				msallowfullscreen="msallowfullscreen"
+				oallowfullscreen="oallowfullscreen"
+				webkitallowfullscreen="webkitallowfullscreen"
+				frameborder="0"				
+				preload="yes"
+				src="https://www.youtube.com/embed/watch?v=vPwQKAZryP8&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=7&controls=0&loop=1&autoplay=1&fs=1" 				
+				>
+			</iframe>
+                
+                <!-- <video controls width="300" height="300" autoplay>
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/7  Variables.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                           -->
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>
+    
+    
+    <script>
+        alert("Welcome to JavaScript : Lesson 7 Variables ");
+        document.write("<p> This paragraph from Iternal Script code");
+    </script>
+    
+</body>
+</html

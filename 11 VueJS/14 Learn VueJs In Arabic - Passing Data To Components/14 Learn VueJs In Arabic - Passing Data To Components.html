@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 14 Learn VueJs In Arabic - Passing Data To Components </title>
+    <link rel="stylesheet" href="14 Learn VueJs In Arabic - Passing Data To Components.css" media="all">
+
+    <style>
+        .span{color: red ; font-weight:bold};
+    </style>
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        14 Learn VueJs In Arabic - Passing Data To Components
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 14 Learn VueJs In Arabic - Passing Data To Components ">
+                14 Learn VueJs In Arabic - Passing Data To Components Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to  [14 Learn VueJs In Arabic - Passing Data To Components ] Concept">
+                14 Learn VueJs In Arabic - Passing Data To Components Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to  [14 Learn VueJs In Arabic - Passing Data To Components ] Importance & Benefits">
+                14 Learn VueJs In Arabic - Passing Data To Components Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to  [14 Learn VueJs In Arabic - Passing Data To Components] Syntax">
+                14 Learn VueJs In Arabic - Passing Data To Components Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to  [14 Learn VueJs In Arabic - Passing Data To Components] Practical Applications">
+                14 Learn VueJs In Arabic - Passing Data To Components Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <main class="Welcome"> Welcome to Vue.js Course <span> 14 Learn VueJs In Arabic - Passing Data To Components </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                Vue.js [14 Learn VueJs In Arabic - Passing Data To Components] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following : </p>
+                <ol type="A">
+                    <li> [Passing Data To Components] -> From the Main Vue model To -> Vue component(s) </li>
+                    <li> props: [] -> new Instance for the Vue Component , to include the passed Data from the main Vue Model  </li>
+                </ol>                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> [ 14 Learn VueJs In Arabic - Passing Data To Component] Concept: </h3>
+            </header>
+                        
+            <h2> =&gt; [Passing Data To Components] Concept : <br>                    
+                <ul>
+                    <li> This is providing the best pracise for passsing through datasources of the Main Vue Model => to the  Vue Component data source   </li>
+                    <li> Passing Data through the Main Vue Model Data source => to the Vue Component Datasources Requires following : <br>
+                        <ul>
+                            <li> Defining the Instances in the main Vue model Data Source => data: {}  </li>
+                            <li> Adding the Defined instances as an Array Elements => with in Vue Component Data Declearation => props : ['prop1' , prop2']  </li>
+                            <li> Using the Passed props or instances with in The Vue [Compoent Template]   </li>
+                            <li> Binding the Instances in to the new Component HTML Element with in the Vue contianer , whether the property is a {single} or Element of an {array} or an Element of {Object} or an Array of Objects =>  <br>
+                                <ul>
+                                    <li> Bining a Single property => &lt; componentName  :prop1="prop1" &gt; </li>
+                                    <li> Bining a Single property of an Array  => &lt; componentName  :prop1="arraName[#index]" &gt; </li>
+                                    <li> Bining a Single property of an Pbjeyt  => &lt; componentName  :prop1="objName.propName" &gt; </li>
+                                    <li> Bining a Single property of an Pbjeyt  => &lt; componentName  :prop1="objName.propName" &gt; </li>                                                                            
+                                </ul> 
+                            </li>                    
+                        </ul>                    
+                    </li>
+                </ul>
+            </h2>                                                                         
+            
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> Vue.js [13 Learn VueJs In Arabic - Create Basic Reusable Components] Importance & Benefits : </h3>
+            </header>
+                        
+            <p> [Passing Data To Components] => Provides a practical and easy method for passing through data from main Vue Model => Vue Component Datasource => Vue Component Template  <br>            
+                        
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx"> -->
+            <header>
+                <h3> [ Vue.js [14 Learn VueJs In Arabic - Passing Data To Components] Syntax & Methods: </h3>
+            </header>                 
+            
+            <p> =&gt; [Passing Data To Components] =>  <br> </p>
+                         
+             <p> Syntax: <br> </p>            
+                <div id="Code" class="Code">                
+                    A)  Vue HTML Container  <br>
+                    <span class= one></span> &lt; div id="app-one" &gt;  <br> 
+                        <span class= two></span> &lt; h1 &gt; Welcome { { name } } to the Vue Application &lt; h1 &gt;  <br> 
+                        <span class= two></span> &lt; componet-Name &gt; &lt; /componet-Name &gt; <br>                                                     
+                    <span class= one></span> &lt; /div &gt;  <br> 
+                    //=========================================================== <br> <br>
+                    
+                    B)  VueJS Libraries Importing  <br>
+                    <span class= one></span> &lt; script src="js/ vue.js " &gt;  &lt; /script &gt;  <br>                     
+                    //=========================================================== <br> <br>
+                    
+                    C)  VueJS Main Model  <br>
+                    <span class= one></span> &lt; script &gt;  <br>                     
+                                                
+                        <span class= two></span> // [Vue Component Main Model] Defining : <br> 
+                        
+                        <span class= two></span> Vue.component('componentName' , { <br> 
+                            <span class= three></span> // A) [Vue component Data] Defining : <br> 
+                            <span class= three></span> data: function() { <br> 
+                                <span class= four></span> return { <br> 
+                                    <span class= five></span> name : 'shadi', <br> 
+                                    <span class= five></span> count : 0 <br> 
+                                <span class=four></span> } <br> 
+                            <span class=three></span> }, <br>  <br>
+                            
+                            <span class= three></span> // B) [Vue Component Template] Elements Defining : <br> 
+                            <span class= three></span> template: '&lt; p @click="count++" &gt; Hello { { name } } Your count is : { { count } } &lt; /p &gt;'  <br> 
+                        <span class=two></span> }) <br> 
+                        //=========================================================== <br> <br>
+
+                        <span class= two></span> // [Vue Model Instances] Defining : <br> 
+
+                        <span class= two></span> var vm = new Vue({  <br>
+                            <span class= three></span> el: 'app-one' , <br> 
+                            <span class= three></span> data: { <br> 
+                                <span class= four></span> prop1: 'value' { <br> 
+                                <span class= four></span> methodName: function() {}, <br>
+                                <span class=four></span> } <br> 
+                            <span class=three></span> }, <br>
+                        <span class=two></span> }) <br>  <br>
+                    
+                        //=========================================================== <br> <br>                                                                                                            
+                    <span class= one></span> &lt; /script &gt;  <br>
+                    <br><br> 
+               </div> 
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPPract" id="PHPPract"> 
+             <header>
+                <h3> Vue.js [Passing Data To Components] General Practical Application : </h3>
+            </header>
+            
+            <p> In this lesson will be (1) Application { Passing Data To Components} ]= > as following :  </p>
+
+                <ol type="A">
+                
+                    <li> First Example => Creating a [Vue Application Container] with [{Vue Resuable component} + {Vue Model Instances}] , and including the following steps : <br>
+                        <ul>
+                            <li> Defining and Creating the [Vue Main Container {app-one}] with HTML Element has passed Data from Vue Model to the Component => Including the following (2) Main Parts : <br> 
+                                <ul> 
+                                    <li> {Vue Reusable Component} => Using the [component-one] , including the following main (3) Parts : <br>
+                                        <ol type="A"> 
+                                            <li> {HTML Element} => Including the following Vue component : <br>
+                                                <ul> 
+                                                    <li> &lt; CompName v-for="VarName in ObjectArrayName" :bindingPassedProp="Prop1"  &gt; </li>                                            
+                                                </ul>                                                                    
+                                            </li>
+                                            <li>  Component Data : <br>
+                                                <ol>                                                     
+                                                    <li> property1 => count : 0 </li>
+                                                    <li> props => [] </li>
+                                                </ol>
+                                            </li> <br>
+                                            <li> Component Template : <br>
+                                                <ol> 
+                                                    <li> Element=> &lt; p &gt; => Including a Vue Passed data from the main Vue Model  </li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                
+                                    <li> {Vue Model Instances} => Including the following Instances : <br>
+                                        <ul> 
+                                            <li> el = '#app-one' </li>
+                                            <li> data = { Inlcluding (1): Property => Message = 'Welcome to the Vue Application' } </li>
+                                        </ul>                                                                    
+                                    </li>                                    
+                                </ul>
+                            </li>                            
+                        </ul>                                                                                    
+                    </li>      
+                </ol> <hr>                  
+                                                                         
+        </section>                     
+        
+        <!-- The following is the main Vue application Container , which will be accessed by the Vue Framework using the Container [ID]   -->
+        
+        <!-- First Vue Application [Using Both {Creating new Component} + {Vue Model Instances}]  -->
+            <div id="app-main"  > 
+                
+                <!-- First:  Multiple Timetable of certain Number [upon user selection ] -->
+                <h1> Welcome to the {{el0}} </h1> <br>                
+                
+                <label> Insert Main Number: </label>
+                <input @change="empty()" type="number" v-model="num"> <br>
+                
+                <label> Insert Start Number: </label>
+                <input type="number" v-model="start"> <br>
+                
+                <label> Insert End Number: </label>
+                <input type="number" v-model="end"> <br>
+                
+                <span v-model="num"> Time Table of {{num}} from {{start}} To {{end}} is : {{res}} </span> <br>
+                <button @click="emptyNum(), calc()"> Display Result </button> <br><br><hr>
+                <!-- -------------------------------------------------------------- -->
+
+                
+                <component-one :el1="el1" v-for="post in posts" :title="post.title" :author="post.author"></component-one>     <hr><br>
+                
+                <component-two :el2="el2" :name="name" :age="age" :nat="nat" > </component-two>     <hr><br>
+                
+                <component-three :el3="el3"> </component-three>     
+                <!-- -------------------------------------------------------------- -->
+
+                <!-- Looping inside Array [index + Value] -->
+                <ul>
+                    <li v-for="(score , index) in scores"> {{index}} => {{score}} </li>
+                </ul>                
+                <hr><br>
+                
+                <!-- <component-three :el3="el3" v-for="(score , index) in scores" :score="score, index" > </component-three>      -->
+            </div> 
+
+        
+            <!-- The following is the main Vue Framework Importing Syntax [from Application Folder]  -->
+            <script src="js/vue.js"></script>
+            
+            <!-- The following is the main Vue application Model Container Including => [{Vue Resuable component} + {Vue Model Instances}]  -->
+            <script> 
+                
+                //  A) Vue new Component [component-one] Defining : 
+                Vue.component('component-one', {
+                    //  A1) Vue component Data Defining : 
+                    data: function() {
+                        return {                            
+                            count: 0
+                        }
+                    },                                        
+                    props: ['title' , 'author' , 'el1'],
+                    template: '<p> This is Vue Component {{el1}} : <br> This Article Title is {{title}} and authored by {{author}} </p> <br> <hr>'
+                })
+                
+                //  B) Vue new Component [component-two] Defining : 
+                Vue.component('component-two' , {
+                    //  B1) Vue component Data Defining : 
+                    data: function() {
+                        return {                            
+                            count: 0
+                        }
+                    },
+                    props: ['name' , 'age' , 'nat' , 'el2'],
+                    template: '<span> This is Vue Component {{el2}} : <br> &nbsp; This Span Element of user : {{name}} and Age : {{age}} and Nationalilty is : {{nat}} </span>'
+                 })
+
+                //  C) Vue new component [component-three] : 
+                Vue.component( 'component-three' , {
+                    data: function() {
+                        return {
+                            count: 0
+                        }
+                    },
+                    template : '<div> This is a Div Element from the Vue component {{el3}} with the Array elements number using (v-for) looping inside the ul and li  </div>'
+                })
+                
+                
+                //  Main Model [app-main] Definition : 
+                var vm = new Vue({
+                    el: '#app-main',                                        
+                    data: {                                                                        
+                        el1: 'app-one',
+                        el0: 'Multiply Table',
+                        el2: 'app-two',
+
+                        posts: [
+                            {id:'1' , title:'This is Title 1', author:'Shadi' },
+                            {id:'2' , title:'This is Title 2', author:'Sayed' },
+                            {id:'3' , title:'This is Title 3', author:'Ahmed' }
+                        ],
+
+                        scores: ['95' , '82' , '56'],
+                                            
+                        name: 'Shadi',
+                        age: 33,
+                        nat: 'Egypt',
+                        
+                        num:'',
+                        start: '',                        
+                        end: '',
+                        x:'',
+                        res: '',
+                    },
+
+                    methods: {                        
+                        calc: function() {                                                        
+                            this.x = this.start;
+                            for ( this.x; this.x <= this.end; this.x++) {
+                                this.res += this.x * this.num  + '\n' ;                                
+                            }                                                        
+                            return res;                                                                                  
+                        }, 
+                        // Emptying each start & End Nubmers :
+                        empty: function() {
+                            this.start = '';
+                            this.end = '';                            
+                        },
+                        // Emptying each Resuilt Nubmer :
+                        emptyNum: function() { 
+                            this.res = '';
+                        }
+                    }                 
+                });
+                
+            </script>
+        <!-- =========================================================================================================== -->
+
+            <!-- <div id="app-mult"> 
+                
+
+             <ul> 
+                     <li v-for="num in nums"> </li> 
+                    <li :start> Time Table of {{start}} is : <br> {{calc()}} </li>
+                </ul> 
+            </div> -->
+
+
+        <!------------------------------------------------------------------------------------------------------>                                 
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection">
+            <h3> Lesson 14 Video File:</h3>
+            <video controls width="300" height="300">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\14 Learn VueJs In Arabic - Passing Data To Components.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video>
+        </section>
+        
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU:
+                 <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter>
+                 &nbsp;&nbsp;&nbsp; Uploading: 
+                 <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open style="display: flex; width:100%">
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://shadi-pro.epizy.com"> My Personal Reference </a></li>
+                <li> <a href="https://shadi-cv.epizy.com"> My Personal Resume </a></li>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 14 Learn VueJs In Arabic - Passing Data To Components");
+    </script>
+
+    
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

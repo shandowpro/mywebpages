@@ -1,0 +1,959 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson54 Selectors - [Nth-Child || Nth-Of-Type] Part 2  </title>
+    <link rel="stylesheet" href="CSS3 Lesson54 Selectors - Nth-Child, Nth-Of-Type Part 2.css" media="all">
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson54 Selectors - [Nth-Child || Nth-Of-Type] {Part 2}
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+     <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to CSS3 Lesson54 Selectors - Nth-Child, Nth-Of-Type Part 2 main Topics">
+                [ CSS3 Lesson54 Selectors - Nth-Child, Nth-Of-Type {Part 2} ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to CSS3 Lesson54 Selectors - Nth-Child, Nth-Of-Type Part 2 Concept">
+                [ CSS3 Lesson54 Selectors - Nth-Child, Nth-Of-Type Part 2 ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to CSS3 Lesson54 Selectors - Nth-Child, Nth-Of-Type Part 2 ] Importance & Benefits">
+                [ CSS3 Lesson54 Selectors - Nth-Child, Nth-Of-Type Part 2 ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to  CSS3 Lesson54 Selectors - Nth-Child, Nth-Of-Type Part 2  ] Syntax">
+                [ CSS3 Lesson54 Selectors - Nth-Child, Nth-Of-Type Part 2 ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to CSS3 Lesson54 Selectors - Nth-Child, Nth-Of-Type Part 2 ] Practical Applications">
+                [ CSS3 Lesson54 Selectors - Nth-Child, Nth-Of-Type Part 2 ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> CSS3 Lesson54 Selectors - [Nth-Child || Nth-Of-Type] {Part 2} </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header> Selectors - [Nth-Child || Nth-Of-Type] {Part 2} Main Topics : </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                
+                <p>  Selectors with different types following:  <br></p>                    
+                    <ol>
+                        <li> [Nth-Child()] Selector  => [:Nth-Child(Furmula)]  <br>
+                        <li> [Nth-Of-Type()] Selector  => [:Nth-Of-Type(Furmula)]  <br>
+                        <li> [Nth-Last-Child()] Selector  => [:Nth-Last-Child(Furmula)]  <br>
+                        <li> [Nth-Last-Of-Type()] Selector  => [:Nth-Of-Type(Furmula)]  <br>
+                        <li> [(Formula)] => diffrent types : <br>
+                            <ol>
+                                <li> (n+Number) => {Select from a certain element number -> The end of Children || Types } </li>
+                                <li> (-n+Number) => {Select from  Start of Parent container's Children || Types -> certain element number } </li>
+                                <li> [nth-child(Number X n + Number){}] => Select customized Adding Sequance accroding to customized Function/Formula from Start Parent Container to a certain Child number </li>
+                                <li> (n+Number):(-n+Number) => {Select from Certain element number (n) -> Certain element number (n) } </li>
+                            </ol>                             
+                    </ol>                                                                                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class=CSS3Con id="CSS3Con">
+            
+            <header> Selectors - Nth-Child(F) || Nth-Of-Type(F) ] {Part 2} Main Topics : </header>            
+                                    
+            <p> { These Selector => These type of selectors [nth] are commonly to use in accessing to Elements & addional features </p>  <br>                
+
+            
+            <p> {Selector[Nth(formula)] - group ] => Has some additional Features in comparison to the types of Selectors, such as  : <br>                
+                <ul>                    
+                    <li> Can be used to access According to Child Index Or Types Index , by adding {Customized Function} || {Adding Sequace} || {Certain Range}, as following :  
+
+                        <ul>
+                            <li> [nth-child(F)] : <br>
+                                <ol>
+                                    <li> [nth-child(n+Number){}] => Select Range from certain Child number until to end of container Children  </li>
+                                    <li> [nth-child(-n+Number){}] => Select Range from Start Parent Container to a certain Child number </li>
+                                    <li> [nth-child(Number X n + Number){}] => Select customized Adding Sequance accroding to customized Function/Formula from Start Parent Container to a certain Child number </li>
+                                    <li> [nth-Of-type(n+Number):nth-child(-n+Number){}] => Select Range from certain type index to a certain type index </li>
+                                </ol>
+                            </li>
+                            
+                            <li> [nth-Of-type(F) ] : <br>
+                                <ol>
+                                    <li> [nth-Of-type(n+Number){}] => Select Range from certain type index until to end of container end of this Type </li>
+                                    <li> [nth-Of-type(-n+Number){}] => Select Range from Start Parent Container of certain type to a certain type index </li>
+                                    <li> [nth-Of-type(Number X n + Number){}] => Select customized Adding Sequance accroding to customized Function/Formula from Start Parent Container to a certain Child number </li>
+                                    <li> [nth-Of-type(n+Number):nth-child(-n+Number){}] => Select Range from certain type index to a certain type index </li>
+                                </ol>
+                            </li>
+                            
+                            <li> [nth-last-child(F)] : <br>
+                                <ol>
+                                    <li> [nth-last-child(n+Number){}] => Select Range from certain Child number until to end of container Children {starting counting reversely}  </li>
+                                    <li> [nth-last-child(-n+Number){}] => Select Range from Start Parent Container to a certain Child number {starting counting reversely}  </li>
+                                    <li> [nth-last-child(Number X n + Number){}] => Select customized Adding Sequance accroding to customized Function/Formula from Start Parent Container to a certain Child number </li>
+                                    <li> [nth-last-child(n+Number):nth-child(-n+Number){}] => Select Range from Certain Child number to a  Certain Child number {starting counting reversely} </li>
+                                </ol>
+                            </li>
+                            
+                            <li> [nth-last-Of-type(F) ] : <br>
+                                <ol>
+                                    <li> [nth-last-Of-type(n+Number){}] => Select Range from certain type index until to end of container end of this Type {starting counting reversely}  </li>
+                                    <li> [nth-last-Of-type(-n+Number){}] => Select Range from Start Parent Container of certain type to a certain type index {starting counting reversely}  </li>
+                                    <li> [nth-last-Of-type(Number X n + Number){}] => Select customized Adding Sequance accroding to customized Function/Formula from Start Parent Container to a certain Child number </li>
+                                    <li> [nth-last-Of-type(n+Number):nth-child(-n+Number){}] => Select Range from certain type index to a certain type index {starting counting reversely}  </li>
+                                </ol>
+                            </li>                            
+                        </ul>                        
+                    </li>                                                                                                                            
+                </ul>
+            </p>                                                                                                                                         
+        <!-- ------------------------------------------------------ -->
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+        <section class="CSS3Imp" id="CSS3Imp">
+            <header>
+                <h3> [Nth-Child(F) || Nth-Of-Type(F) ] {Part 2} Importance & Benefits: </h3>
+            </header>
+            
+            <p> =&gt; [ Nth-Child || Nth-Of-Type ] : This Advanced Selectors providing the following features & imporatance : <br>            
+                <ul>                                                                                                        
+                    <li> Using advanced functions / Formulas to access to certain or multiple elements  </li>                    
+                    <li> Can use Customized functions or built-in functions  </li>                    
+                    <li> advnanced Formulas can be used with reversely selectors (Last)  </li>                    
+                </ul>                                                 
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ Selectors - Nth-Child(F) || Nth-Of-Type(F) || Nth-Last-Child(F) || Nth-Last-Of-Type(F) ] {Part2} Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // (*) [Nth-Child(F) || Nth-Of-Type(F)] Syntax as following : <br><br>
+                <span class='one'></span> //First)  [HTML] file  : <br>
+                
+                    <span class=two></span> &lt; fieldset class='Container' &gt; <br> 
+
+                <!-- A) {Formula : n + Number  } [n: index || number: customized]-->
+                    <!-- *) 1) [:Nth-Child(n+Number)] Selector  -->
+                    <span class=two></span> A) Select Range from certain Child number until to end of container Children <br> <br>
+
+                        <span class=three></span> &lt; section class='Nth-Child-CertainToEnd' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+                
+                <!-- /A) {Formula : n + Number  } -->
+                    <!-- *) 2) [:Nth-Of-Type(n+Number)] Selector  -->                    
+
+                        <span class=three></span> &lt; section class='Nth-Of-Type-CertainToEnd' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                        <!-- ---------------------------------------------------------------------------- -->
+                        
+                <!-- /A) {Formula : n + Number  } -->
+                    <!-- *) 3) [:Nth-Last-Child(n+Number)] Selector  -->
+                        <span class=three></span> &lt; section class='Nth-Last-Child-CertainToEnd' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+                <!-- /A) {Formula : n + Number  } -->
+                    <!-- *) 4) [:Nth-Last-Of-Type(n+Number)] Selector  -->
+                        <span class=three></span> &lt; section class='Nth-Last-Of-Type-CertainToEnd' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+                    <!-- ---------------------------------------------------------------------------- -->
+                // ------------------------------------------------------------------------------ <br><br><br>                    
+                
+                <!-- B) {Formula : - n + Number  } -->
+                    <!-- *) 1) [:Nth-Child(-n+Number)] Selector  -->
+                    <span class=two></span> B) Select Range from Start Parent Container to a certain Child number <br> <br>
+
+                        <span class=three></span> &lt; section class='Nth-Child-StartToN' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+                
+                <!-- /B) {Formula : - n + Number  } -->
+                    <!-- *) 2) [:Nth-Of-Type(-n+Number)] Selector  -->
+                        <span class=three></span> &lt; section class='Nth-Of-Type-StartToN' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+                        
+                <!-- /B) {Formula : - n + Number  } -->
+                    <!-- *) 3) [:Nth-Last-Child(-n+Number)] Selector  -->
+                        <span class=three></span> &lt; section class='Nth-Last-Child-StartToN' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+            
+                <!-- /B) {Formula : - n + Number  } -->
+                    <!-- *) 4) [:Nth-Last-Of-Type(-n+Number)] Selector  -->
+                        <span class=three></span> &lt; section class='Nth-Last-Of-Type-StartToN' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+                    <!-- ---------------------------------------------------------------------------- -->
+                // ------------------------------------------------------------------------------ <br><br><br>                    
+
+                <!-- C) {Formula : Number X n + Number  } -->
+                    <!-- *) 1) [:Nth-Child( Number X n + Number)] Selector  -->
+                <span class=two></span> C) Select customized Adding Sequance accroding to customized Function/Formula from Start Parent Container to a certain Child number <br> <br>
+
+                    <span class=three></span> &lt; section class='Nth-Child-AddingSeq' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+                
+                <!-- C) {Formula : Number X n + Number  } -->
+                    <!-- *) 2) [:Nth-Of-Type(Number X n + Number) ] Selector  -->
+                        <span class=three></span> &lt; section class='Nth-Of-Type-AddingSeq' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+                        
+                <!-- C) {Formula : Number X n + Number } -->
+                    <!-- *) 3) [:Nth-Last-Child(Number X n + Number) ] Selector  -->
+                        <span class=three></span> &lt; section class='Nth-Last-Child-AddingSeq' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+            
+                <!-- C) {Formula : Number X n + Number  } -->
+                    <!-- *) 4) [:Nth-Last-Of-Type(Number X n + Number)] Selector  -->
+                        <span class=three></span> &lt; section class='Nth-Last-Of-Type-AddingSeq' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+                    <!-- ---------------------------------------------------------------------------- -->
+                // ------------------------------------------------------------------------------ <br><br><br>                    
+
+                <!-- D) {Customized Range : (n + Number) : (-n + Number)  } -->
+                    <!-- *) 1) [:Nth-Child( Number X n + Number)] Selector  -->
+                    <span class=two></span> Select Range from certain type index to a certain type index:  <br> <br>
+                        
+                        <span class=three></span> &lt; section class='Nth-Child-CustRange' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+                
+                <!-- /D) {Customized Range : (n + Number) : (-n + Number)  } -->
+                    <!-- *) 2) [ :Nth-Of-Type((n + Number) : Nth-Of-Type(-n + Number) ] Selector  -->
+                        <span class=three></span> &lt; section class='Nth-Of-Type-CustRange' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+                        
+                <!-- /D) {Customized Range : (n + Number) : (-n + Number)  } -->
+                    <!-- *) 3) [ :Nth-Last-Child((n + Number) : Nth-Last-Child(-n + Number) ] Selector  -->
+                        <span class=three></span> &lt; section class='Nth-Last-Child-CustRange' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+            
+                <!-- /D) {Customized Range :   (n + Number) : (-n + Number)  } -->
+                    <!-- *) 4) [ :Nth-Last-Of-Type((n + Number) : Nth-Last-Of-Type(-n + Number) ] Selector  -->
+                        <span class=three></span> &lt; section class='Nth-Last-Of-Type-CustRange' &gt; <br> <br>
+                            <span class=four></span>  &lt; div &gt; Div1  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div2  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div3  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div4  &lt; /div &gt; <br> 
+                            <span class=four></span>  &lt; div &gt; Div5  &lt; /div &gt; <br> 
+                        <span class=three></span> &lt; /section &gt;  <br> <br> <br>
+                    <!-- ---------------------------------------------------------------------------- -->
+                    <!-- ---------------------------------------------------------------------------- -->
+                // ------------------------------------------------------------------------------ <br><br><br>                    
+            // ------------------------------------------------------------------------------ <br><br> <br> <br>  <hr>
+                    
+            <!-- Im Here >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+                <span class='one'></span> // Second)  [CSS3] file  : <br>                                          
+                                            
+                    <!-- CSS3 General Settings of parent container {.} :
+                        (A) General Main parent Container Settings :  -->
+                        <!-- ----------------------------------------------------------------------- -->
+                        <span class=two></span> .ContainerForm {  <br>
+                            <span class=three></span> position: relative; <br>                        
+                            <span class=three></span> height: 50px; <br>
+                            <span class=three></span> width: 200px ; <br>
+                            <span class=three></span> margin: 50px auto ; <br>                                                                                
+                        <span class=two></span> }  <br> <br>                                                
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- (B) Accessing certain Element(s) using Selectors -->
+                        
+                        <!-- /(B) / a) Only-Child Selector (:Only-Child) : 
+                            Accessing Certain Child that is existed alone in it's Parent container  using [:Only-Child] Selector -->                        
+
+                        <span class=two></span> .Only-Child :Only-Child {  <br>                                                        
+                            <span class=three></span> background-color: red; <br>                            
+                            <span class=three></span> color: Yellow <br>                              
+                        <span class=two></span> }  <br> <hr>                        
+                        <!-- ----------------------------------------------------------------------- -->
+                        
+                        <!-- /(B) / b) Only-Child Selector (:Only-Of-Type) : 
+                            Accessing Certain Type Child that is one of it's type existed in it's Parent container using [:Only-Of-Type] Selector -->                        
+
+                        <span class=two></span> .Only-Of-Type :Only-Of-Type {  <br>                                                        
+                            <span class=three></span> background-color: red; <br>                            
+                            <span class=three></span> color: Yellow <br>                              
+                        <span class=two></span> }  <br> <hr>                        
+                        <!-- ----------------------------------------------------------------------- -->
+                        
+                        <!-- /(B) / c) Selection Selector (::Selection) : 
+                            Accessing Certain Type Child that is one of it's type existed in it's Parent container using [::Selection] Selector -->                        
+
+                        <span class=two></span> .Selection ::Selection {  <br>                                                        
+                            <span class=three></span> background-color: #333; <br>                            
+                            <span class=three></span> color: #fff <br>                              
+                        <span class=two></span> }  <br> <hr>                        
+                        <!-- ----------------------------------------------------------------------- -->
+                                                                        
+                        <!-- ----------------------------------------------------------------------- -->                                                                                                                                                                    
+                        <!-- ------------------------------------------------------------- -->                        
+                        <!-- ------------------------------------------------------------- -->                            
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="CSS3Pract" >
+
+            <header>
+                <h3> [CSS3 Lesson54 Selectors -  [ Nth-Child() || Nth-Of-Type() ] General Practical Applications : </h3>
+            </header>
+         
+            <h4> 
+                =&gt; Following is Applied example (Selectors) by following types [ Only-Child || Only-Of-Type || ::Selection] : 
+            </h4>                            
+                <ol>                    
+                    <li>  First Container => [ Nth-Child() ] => Has (1) Examples </li>  <br>
+                        <ul>
+                            <li> Accessing a certain child that is alone in it's in parent container & applying the following properties  => <br>
+                                <ol>
+                                    <li> backgournd Coloring :> {red} </li>                    
+                                    <li> color:> {Yellow}  </li>                                                     
+                                </ol>                            
+                            </li>
+                        </ul>                                                                                             
+                                                                                             
+                    <li>  Second Container : [:Nth-Of-Type()] => Has (1) Examples </li>  <br>
+                        <ul>
+                            <li> select a Certain Type Child that is one of it's type existed in it's Parent container & Applying the following properties  => <br>
+                                <ol>
+                                    <li> backgournd Coloring :> {red} </li>                    
+                                    <li> color:> {Yellow}  </li>                                                     
+                                </ol>                            
+                            </li>
+                        </ul>                                                                                             
+                                                                                                                                                                                                                                                                  
+                </ol>                                   
+                <!-- --------------------------------------------------------------- -->            
+            <br><br><br>
+            <!-- ========================================================================= -->                                                        
+                        
+            <header> There is only (4) main Parent Containers [4 Types of Formulas ] => with (4) different inner-section for each  </header>
+
+            <h2> First => Formula 1 : ( n+Number )   </h2>
+            
+            <fieldset class='CertainToEnd'>                                                                  
+                
+                <!-- A) {Formula : n + Number  } [n: index || number: customized]-->
+                    <!-- *) 1) [:Nth-Child(n+Number)] Selector  -->
+                    
+                    <header>  A) Formula 1 => { n+Number } :   </header> <br>
+                    
+                    <header>  A1) Accessing a certain child in it's in parent container using Number [:Nth-Child(n+Number)] : Select from Element (5) to the end :  </header>
+                    
+                    <section class="Nth-Child-CertainToEnd">                        
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                        
+                    </section>
+                    <br> <br> <br> <hr>                    
+                    <!-- ----------------------------------------------------------- -->                    
+                    
+                <!-- /A) {Formula : n + Number  } -->
+                    <!-- *) 2) [:Nth-Of-Type(n+Number)] Selector  -->
+                    
+                    <header>  A2) Accessing a certain child in it's in parent container using Number [:Nth-Of-Type(n+Number)] : Select from Element Type (5) to the end :  </header>
+                    
+                    <section class="Nth-Of-Type-CertainToEnd">                        
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                        
+                    </section>
+                    <br> <br> <br> <hr>                    
+
+                    <!-- ----------------------------------------------------------- -->
+                
+                <!-- /A) {Formula : n + Number  } -->
+                    <!-- *) 3) [:Nth-Last-Child(n+Number)] Selector  -->
+                    <header>  A3) Accessing a certain child in it's in parent container using Number [:Nth-Last-Child(n+Number)] : Select from Element number (5) to the end (Starting Counting reversely) :  </header>
+                    
+                    <section class="Nth-Last-Child-CertainToEnd">
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                                                                        
+                    </section>
+                    <br> <br> <br> <hr>                   
+                                    
+                    <!-- ----------------------------------------------------------- -->
+
+                <!-- /A) {Formula : n + Number  } -->
+                    <!-- *) 4) [:Nth-Last-Of-Type(n+Number)] Selector  -->
+                    <header>  A4) Accessing a certain child in it's in parent container using Number [:Nth-Last-Of-Type(n+Number)] : Select from Element Type (5) to the Start of it's kind (Starting Counting reversely) :  </header>
+                            
+                    <section class="Nth-Last-Of-Type-CertainToEnd">
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                                                                        
+                    </section>
+                    <br> <br> <br> <hr>                   
+                    <!-- ----------------------------------------------------------- -->                                                                            
+                    <!-- ----------------------------------------------------------- -->
+                    <!-- ----------------------------------------------------------- -->
+                    <!-- ----------------------------------------------------------- -->
+            </fieldset>        
+            
+            <br> <br> <hr>
+            <!-- ----------------------------------------------------------- -->                                    
+            
+            <h2> Second => Formula 2 : ( -n + Number )  </h2>
+            
+            <fieldset class='StartToN'>                                                                  
+                
+                <!-- B) {Formula : -n + Number  } [n: index || number: customized]-->
+                    <!-- *) 1) [:Nth-Child(n+Number)] Selector  -->
+                    
+                    <header>  B) Formula 2 => { -n + Number } :   </header> <br>
+                    
+                    <header>  A1) Accessing a certain child in it's in parent container using Number [:Nth-Child(n+Number)] : Select from Element (5) to the end :  </header>
+                    
+                    <section class="Nth-Child-StartToN">                        
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                        
+                    </section>
+                    <br> <br> <br> <hr>                    
+                    <!-- ----------------------------------------------------------- -->                    
+                    
+                <!-- /B) {Formula : n + Number  } -->
+                    <!-- *) 2) [:Nth-Of-Type(-n+Number)] Selector  -->
+                    
+                    <header>  A2) Accessing a certain child in it's in parent container using Number [:Nth-Of-Type(n+Number)] : Select from Element Type (5) to the end :  </header>
+                    
+                    <section class="Nth-Of-Type-StartToN">                        
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                        
+                    </section>
+                    <br> <br> <br> <hr>                    
+
+                    <!-- ----------------------------------------------------------- -->
+                
+                <!-- /B) {Formula : - n + Number } -->
+                    <!-- *) 3) [:Nth-Last-Child(-n+Number)] Selector  -->
+                    <header>  A3) Accessing a certain child in it's in parent container using Number [:Nth-Last-Child(n+Number)] : Select from Element number (5) to the end (Starting Counting reversely) :  </header>
+                    
+                    <section class="Nth-Last-Child-StartToN">
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                                                                        
+                    </section>
+                    <br> <br> <br> <hr>                   
+                                    
+                    <!-- ----------------------------------------------------------- -->
+
+                <!-- /B) {Formula : - n + Number  } -->
+                    <!-- *) 4) [:Nth-Last-Of-Type(-n+Number)] Selector  -->
+                    <header>  A4) Accessing a certain child in it's in parent container using Number [:Nth-Last-Of-Type(n+Number)] : Select from Element Type (5) to the Start of it's kind (Starting Counting reversely) :  </header>
+                            
+                    <section class="Nth-Last-Of-Type-StartToN">                                                                        
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                                                                        
+                    </section>
+                    <br> <br> <br> <hr>                   
+                    <!-- ----------------------------------------------------------- -->                                                                            
+                    <!-- ----------------------------------------------------------- -->
+                    <!-- ----------------------------------------------------------- -->
+                    <!-- ----------------------------------------------------------- -->
+                    <!-- ----------------------------------------------------------- -->                                    
+            </fieldset>        
+            
+            <br> <br> <hr>                 
+            <!-- ----------------------------------------------------------- -->                                        
+            
+            <h2> Third => Formula 3 : ( Number X n + Number )  </h2>
+            
+            <fieldset class='AddingSeq'> 
+                
+                <!-- A) {Formula : Number X n + Number  } [n: index || number: customized]-->
+                    <!-- *) 1) [:Nth-Child(Number X n + Number)] Selector  -->
+                    
+                    <header>  C) Formula 3 => { Number X n + Number } :   </header> <br>
+                    
+                    <header>  C1) Accessing a certain child in it's in parent container using <br>
+                              Adding Sequance [:Nth-Child(Number X n + Number)] =><br>
+                              Select Multiple Element(s) by adding Sequance 
+                    </header>
+                    
+                    <section class="Nth-Child-AddingSeq">                        
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                        
+                    </section>
+                    <br> <br> <br> <hr>                    
+                    <!-- ----------------------------------------------------------- -->                    
+                    
+                <!-- /A) {Formula : Number X n + Number } -->
+                    <!-- *) 2) [:Nth-Of-Type(Number X n + Number)] Selector  -->
+                    
+                    <header>  C2) Accessing a certain child Type in it's in parent container using :<br>
+                              [:Nth-Of-Type(2 n + Number)] => Select Multiple Elements Type Customized Sequance  </header>
+                    
+                    <section class="Nth-Of-Type-AddingSeq">                        
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                        
+                    </section>
+                    <br> <br> <br> <hr>                    
+
+                    <!-- ----------------------------------------------------------- -->
+                
+                <!-- /A) {Formula : n + Number  } -->
+                    <!-- *) 3) [:Nth-Last-Child(n+Number)] Selector  -->
+                    <header>  C3) Accessing a certain child in it's in parent container using :<br>
+                             [:Nth-Last-Child(2 n + Number)] => Select Multiple Elements Children Customized Sequance (Starting Counting reversely)   </header>
+                    
+                    <section class="Nth-Last-Child-AddingSeq">
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                                                                        
+                    </section>
+                    <br> <br> <br> <hr>                   
+                                    
+                    <!-- ----------------------------------------------------------- -->
+
+                <!-- /A) {Formula : n + Number  } -->
+                    <!-- *) 4) [:Nth-Last-Of-Type(n+Number)] Selector  -->
+                    <header>  C4) Accessing a certain child Type in it's in parent container using :<br>
+                              [:Nth-Last-Of-Type(2 n + Number)] => Select Multiple Elements Children of Type Customized Sequance (Starting Counting reversely) :  </header>
+                            
+                    <section class="Nth-Last-Of-Type-AddingSeq">                                                                        
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                                                                        
+                    </section>
+                    <br> <br> <br> <hr>                   
+                    <!-- ----------------------------------------------------------- -->                                                                            
+                    <!-- ----------------------------------------------------------- -->
+                    <!-- ----------------------------------------------------------- -->
+                    <!-- ----------------------------------------------------------- -->
+            </fieldset>        
+
+            <br> <br> <hr>
+            <!-- ----------------------------------------------------------- -->                                    
+            
+            <h2> Fourth => Formula 4 : ( (n + Number):(-n + Number) )  </h2>
+            
+            <fieldset class='CustRange'>
+                
+                <!-- D) {Formula : (n + Number):(-n + Number)  } [n: index || number: customized]-->
+                    <!-- *) 1) [:Nth-Child(n+Number) (n + Number):Nth-child(-n + Number)] Selector  -->
+                    
+                    <header>  D) Formula 4 => { (n + Number):(-n + Number) } :   </header> <br>
+                    
+                    <header>  D1) Accessing a certain child in it's in parent container using customized Range : <br>
+                              [:Nth-Child(n+Number):Nth-Child(-n+Number)] <br>                             
+                              Select from Element Type (5) to (9)       
+                    </header>
+                    
+                    <section class="Nth-Child-CustRange">                        
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                        
+                    </section>
+                    <br> <br> <br> <hr>                    
+                    <!-- ----------------------------------------------------------- -->                    
+                    
+                <!-- /D) {Formula :   :(n + Number):(-n + Number)  } -->
+                    <!-- *) 2) [:Nth-Of-Type(n + Number):(-n + Number)] Selector  -->
+                    
+                    <header>  D2) Accessing a certain child of it's Type in it's in parent container using customized Range : <br>
+                              [:Nth-Child(n+Number):Nth-Child(-n+Number)] <br>                             
+                              Select from Element Type (5) to (9)
+                    </header>
+                    
+                    <section class="Nth-Of-Type-CustRange">                        
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                        
+                    </section>
+                    <br> <br> <br> <hr>                    
+
+                    <!-- ----------------------------------------------------------- -->
+                
+                <!-- /D) {Formula :   (n + Number):(-n + Number)  } -->
+                    <!-- *) 3) [:Nth-Last-Child(n + Number):(-n + Number)] Selector  -->
+                    <header>  D3) Accessing a certain child in it's in parent container using customized Range : <br>
+                              [:Nth-Last-Of-Type(n+Number):Nth-Last-Of-Type(-n+Number)] <br>                             
+                              Select from Element number (5) to (9) (Starting Counting reversely) : 
+                    </header>
+                    
+                    <section class="Nth-Last-Child-CustRange">
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                                                                        
+                    </section>
+                    <br> <br> <br> <hr>                   
+                                    
+                    <!-- ----------------------------------------------------------- -->
+
+                <!-- /D) {Formula : (n + Number):(-n + Number)  } -->
+                    <!-- *) 4) [:Nth-Last-Of-Type(n + Number):(-n + Number)] Selector  -->
+                    <header>  D4) Accessing a certain child in it's in parent container using customized Range : <br>
+                              [:Nth-Last-Of-Type(n+Number):Nth-Last-Of-Type(-n+Number)] =><br>
+                              Select from Element Type (5) to the (9) of it's kind (Starting Counting reversely) :  
+                    </header>
+                            
+                    <section class="Nth-Last-Of-Type-CustRange">                                                                        
+                        <div> div 1 </div>  <p> P 1 </p>
+                        <div> div 2 </div>  <p> P 2 </p>
+                        <div> div 3 </div>  <p> P 3 </p>
+                        <div> div 4 </div>  <p> P 4 </p>
+                        <div> div 5 </div>  <p> P 5 </p>
+                        <div> div 6 </div>  <p> P 6 </p>
+                        <div> div 7 </div>  <p> P 7 </p>
+                        <div> div 8 </div>  <p> P 8 </p>
+                        <div> div 9 </div>  <p> P 9 </p>
+                        <div> div 10 </div> <p> P 10 </p>                                                                        
+                    </section>
+                    <br> <br> <br> <hr>                   
+                    <!-- ----------------------------------------------------------- -->                                                                            
+                    <!-- ----------------------------------------------------------- -->
+                    <!-- ----------------------------------------------------------- -->                    
+            </fieldset>                    
+            <br> <br> <hr>                             
+        </section>                    
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 54 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=K87Y0lqX220&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=54&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\54 Css3 - Selectors - Nth-Child, Nth-Of-Type Part 2.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson54 Selectors - [Nth-Child || Nth-Of-Type] {Part 2} ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

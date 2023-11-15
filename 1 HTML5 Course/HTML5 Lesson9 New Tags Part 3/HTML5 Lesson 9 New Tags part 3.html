@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 9 [HTML5 New Tags] Part 3 </title>
+    <link rel="stylesheet" href="HTML5 New Tags Part 3.css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">        
+    </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 9 [HTML5 New Tags] Part 3 [Progress, Meter]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="[HTML5 New Tags Part 3] Main Concept" > [HTML5 New Tags] Part3 Concept </a> </li>
+            <li> <a href=#ProgressNTag   title="Go to Progress Tag"           > Progress Tag  </a> </li>
+            <li> <a href=#Meter  title="Go to Meter Tag"                      > Meter Tag </a> </li>            
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <Section class="Welcome"> Welcome to HTML 5 Course <span> Lesson 9 </span> </Section>
+
+<!-------------------------------------------------------------------------------------------------------------->                        
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>
+                [HTML5 New Tags] Concept 
+            </header>
+            
+            <article>
+                <p> &gt; This lesson we will display new 2 HTML5 Tags of advanced pre-formated Tags. <span class="FixSpace"></span></p> 
+                <p> &gt; The New HTML5 Tags in this lesson as following :</p>
+                
+                <ol>
+                    <li> &lt; progress &gt; &nbsp; &nbsp; &lt; /progress &gt; </li>
+                    <li> &lt; meter &gt; &nbsp; &nbsp; &nbsp; &nbsp; &lt; /meter &gt; </li>                
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>
+        
+        
+        <section class="ProgressNTag" id="ProgressNTag">
+            <header>
+                Progress Tag [ &lt; progress &gt; &lt; /progress &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> [Progress Tag] Concept: </h1>
+                    <p> =&gt; [Progress Tag] commonly wide used in sites as an Indicator of several varity process and operation. </p>
+                    <p> =&gt; [Progress Tag] has 2 common Attributes:
+                        <ol>
+                            <li> Value =&gt; showing the current value of progress </li>
+                            <li> Max =&gt; showing the maximum value of progress bar </li>
+                        </ol>
+                    </p>
+                    
+                </header>
+                
+                <header>
+                    <h1> Main & Common Usages: </h1>
+                    <p> =&gt; It is a usful tool in showing currently static or dynamic progress as form of Bar of any process. </p>
+                    <p> =&gt; Commonly used in showing progress bar of Upload / Download status . </p>                                    
+                </header>
+                
+                <header class="ProgressExp">
+                    <h1>Example Script:</h1>
+                   
+                    <div class="Code">
+                        <p class="SectionTag"> &lt; section &gt; </p>
+                            <p class="Content"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Loading Progress: </p>
+                            <p class="ProgressTag"> &lt; progress 
+                                <span class="Attribute"> value=  </span>
+                                <span class="Content"> "7" </span>
+                                <span class="Attribute"> max= </span>
+                                <span class="Content1">"10"</span>
+                                <span class="ProgressTagC">&gt;</span>                                                                                                
+                                <span class="ProgressClosing"> &lt; /progress &gt; </p>
+                            </p>                                                                                                                                            
+                        <p class="SectionClosing"> &lt; /section &gt; </p>
+                    </div>                
+                </header>                        
+            </article>                
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="Meter" id="Meter">
+            <header>
+                Meter Tag [ &lt; meter &gt; &lt; /meter &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Main Concept: </h1>
+                    <p> =&gt; This is an advanced guage Tool with more complex Attributes and properties to provide further control <span class="FixSpace">to simple / integrated Process or status progress.</span> </p>
+                    
+                    <p> =&gt; [Meter Tag] has 6 common Attributes :
+                        <ol>
+                            <li> Value =&gt; showing the current value of progress </li>
+                            <li> Min =&gt; showing the minmum value of meter bar (default:"0"). </li>
+                            <li> Max =&gt; showing the maximum value of meter bar (default:"1"). </li>
+                            <li> Low =&gt; showing the minimum Accepted value to the meter bar . </li>
+                            <li> High =&gt; showing the maximum Accepted value to the meter bar . </li>
+                            <li> Optimum =&gt; showing the Optimum value the meter bar. </li>
+                        </ol>
+                    </p>
+                    <p> =&gt; [Meter] Bar has 4 Color Cases:
+                        <ol>
+                            
+                            <li> [Green] : if (Value = Optimum) or (Value &lt; High & &gt; Low) or (Value = High) </li>
+                                <ul>
+                                    <li> <meter class="MGreen1" low=".4" high=".8" optimum=".6" value=".6"> </meter> &nbsp; [Value &nbsp; = &nbsp; Optimum]  </li>
+                                    
+                                    <li> <meter class="MGreen2" low=".4" high=".8" optimum=".6" value=".5"> </meter> &nbsp; [Value &nbsp; &lt; &nbsp; High &nbsp; & &nbsp; &gt; &nbsp; Low]  </li>
+                                    
+                                    <li> <meter class="MGreen3" low=".4" high=".8" optimum=".6" value=".8"> </meter> &nbsp; [Value &nbsp; = &nbsp; High]  </li>
+                                </ul>
+                                
+                            <li> [Yellow] : if (Value &lt; Low) or (Value &gt; High) </li>
+                                <ul>
+                                    <li> <meter class="MYellow1" low=".4" high=".8" value=".3"> </meter> &nbsp; [Value &nbsp; &lt; &nbsp; Low]  </li>
+                                    
+                                    <li> <meter class="MYellow2" low=".4" high=".8" value=".9"> </meter> &nbsp; [Value &nbsp; &gt; &nbsp; High]  </li>
+                                </ul>
+                                
+                            
+                            <li> [Red] : if (Value &lt; Optimum & Value &lt; low) or (Value &gt; Optimum & Value &gt; Max) </li>
+                                <ul>
+                                    <li> <meter class="MRed1" value=".2" low=".4" high=".8" optimum=".85" > </meter> &nbsp; [Value &lt; Low &lt; High &lt; Optimum]  </li>
+                                    
+                                    <li> <meter class="MRed2" optimum=".3" low=".4" high=".8" value=".9"> </meter> &nbsp; [Value &gt; High &gt; Low &gt; Optimum]  </li>
+                                </ul>
+                            
+                            
+                            <li> [White (Empty)] : if (Value = 0) or (Value &lt; Min) </li>
+                                <ul>
+                                    <li> <meter class="MEmpty1" value="0"> </meter> &nbsp; [Value = 0] </li>
+                                    
+                                    <li> <meter class="MEmpty2" min=".2" value=".1"> </meter> &nbsp; [Value &lt; Min] </li>
+                                </ul>
+                                                           
+                        </ol>
+                    </p>                                        
+                </header>                            
+                
+                <header>
+                    <h1> Main & Common Usages: </h1>
+                    <p> =&gt; [Meter] Tag can be used as an advanced meter bar for Website Server Performance. </p>
+                    <p> =&gt; [Meter] Tag can be used as an advanced meter bar for Application CPU Usage Performance. </p>
+                    <p> =&gt; [Meter] Tag can be used as an advanced meter bar for Total Distribution of Common usage of Website Categories. </p>
+                    <p> =&gt; [Meter] Tag can be used as an advanced meter bar for Total Distribution of Overall Statics of a company Products/Services Sells . </p>
+                </header>
+                
+                <header class="MeterExp">
+                    <h1>Example Script:</h1>
+                    <div class="Code">
+                        <p class="AsideTag"> &lt; aside &gt; </p>
+                            
+                                <p class="SectionTag"> &lt; section  <span class="Attribute"> &nbsp; class=</span> <span class="Content">"Meters"</span> &gt;  </p>
+                                
+                                <p class="HeadTag">  &lt; h3 &gt;
+                                    <span class="Content"> Performance </span>
+                                    <span class="HeadClosing"> &lt; /h3 &gt; </span>
+                                </p>
+                                
+                                <p class="DivTag"> &lt; div &gt; </p>
+                                
+                                    <p class="Content0"> CPU: &nbsp; </p>
+                                    <span class="MeterTag"> &lt; meter </span>
+                                    
+                                    
+                                    <p class="Attribute"> min = 
+                                        <span class="Content"> "0" </span>
+                                    </p>
+                                        
+                                    <p class="Attribute"> max = 
+                                        <span class="Content"> "1" </span>
+                                    </p>
+                                        
+                                    <p class="Attribute"> value = 
+                                        <span class="Content"> ".6" </span>
+                                    </p>
+                                    
+                                    <p class="Attribute"> low = 
+                                        <span class="Content"> ".4" </span>
+                                    </p>
+                                    
+                                    <p class="Attribute"> high = 
+                                        <span class="Content"> ".8" </span>
+                                    </p>
+                                    
+                                    <p class="Attribute"> optimum = 
+                                        <span class="Content"> ".7" </span>
+                                        <span class="MeterTagC"> &gt; </span>
+                                        <span class="MeterClosing"> &lt; /meter &gt; </span>
+                                    </p>
+                                
+                                <p class="DivClosing"> &lt; /div &gt; </p>
+                                
+                            <p class="SectionClosing"> &lt; /section &gt; </p>
+                            
+                        <p class="AsideClosing"> &lt; /aside &gt; </p>
+                    </div>
+                </header>            
+            </article>                
+        </section>    
+    </div>    
+
+    <!------------------------------------------------------------------------------------------------------------------>
+
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU:
+                <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp; &nbsp; &nbsp;   
+                Uploading:
+                <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Lesson 27 [Javascript Array [Set - Get] Length]</title>
+    <link
+      rel="stylesheet"
+      href="JavaScript [Javascript Array (set - get) Length].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JavaScript Lesson 27 [JavaScript Array [Set - Get] Length]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to Javascript main Topics">
+            [Javascript Array [Set - Get] Length ] Main Topics
+          </a>
+        </li>
+        <li>
+          <a
+            href="#JsArrLngCon"
+            title="Go to [Javascript Array [Set - Get] Length ] Concept"
+          >
+            [Javascript Array [Set - Get] Length] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsArrLngImp"
+            title="Go to [Javascript Array [Set - Get] Length] Importance & Benefits"
+          >
+            [Javascript Array [Set - Get] Length] Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsArrLngGet"
+            title="Go to [Javascript Array [Set - Get] Length] Syntax Methods"
+          >
+            [Javascript Array (Get) Length] Syntax Methods & Ways
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JsArrLngSet"
+            title="Go to [Javascript Array [Set - Get] Length] Syntax Methods"
+          >
+            [Javascript Array (Set) Length] Syntax Methods & Ways
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JavaScript Course
+      <span> JavaScript Lesson 27 [Javascript Array [Set - Get] Length] </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>[Javascript Array] Main Topics :</header>
+
+        <article>
+          <p>&gt; New Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>[Javascript Array [Set - Get] Length] Concept.</li>
+
+            <li>
+              [Javascript Array [Set - Get] Length] Importance & Benefits .
+            </li>
+
+            <li>[Javascript Array [Get] Length] Syntax .</li>
+            <li>[Javascript Array [Set] Length] Syntax .</li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrLngCon" id="JsArrLngCon">
+        <header>
+          <h3>[Javascript Array [Set - Get] Length] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; [Array Length] : Is a common function which determines the
+          number of Element's Content or Units, whether it was a Variable of any
+          type such as (String, Number, ... ) or if it was an Array of any type,
+          or any other HTML Element Tag.
+        </p>
+        <p>
+          =&gt; [Array Length] : Usaually been Used in any Designing or
+          Web-Application or any other Type of applications.
+        </p>
+
+        <p>
+          =&gt; [Array [Set - Get] Length] : In Array Is Different from it's
+          Index as following : <br />
+        </p>
+        <ul>
+          <li>[Array Length] : Is the total Count of Array Elements.</li>
+
+          <li>
+            [Array Index] : Is the number of certain Element in the Array (Based
+            on the ZeroStart or non-zero Start) according to the Programing
+            langugae is being used.
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrLngImp" id="JsArrLngImp">
+        <header>
+          <h3>[Javascript Array [Set - Get] Length] Importance & Benefits:</h3>
+        </header>
+
+        <p>
+          =&gt; [Array [Set - Get] Length] : Is Essential to any progrmer or
+          developer to provide more Control of the Array by setting Limit to the
+          Array Elements Numbers or Count which called Array (Set Length).
+        </p>
+
+        <p>
+          =&gt; [Array [Set - Get] Length] : Is Essential to geting the Array's
+          Elements Current Count or Number which has been Enterd by User or by A
+          Developer.
+        </p>
+
+        <p>
+          =&gt; [Array [Set - Get] Length] : It can be set by the user him Self
+          (According to Programer Design) .
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrLngGet" id="JsArrLngGet">
+        <header>
+          <h3>[Javascript Array [Get] Length] Syntax:</h3>
+        </header>
+
+        <p>
+          =&gt;[Length Get]: Can be got to any Variable as we mentioned before,
+          and not only Arrays
+        </p>
+
+        <p>=&gt;[Element's Length Get] Syntax as following:</p>
+        <div id="Code" class="Code">
+          var elementName = "Any Contents";<br />
+          console.log(elementName.length);<br />
+          document.getElementById("HTMLTagName").html = elementName.length;<br />
+        </div>
+
+        <ol>
+          <li>
+            <h3>
+              =&gt;[Array's Length Get]: Is one of the Array's Lenght
+              properties, which allow to get the array elements at any time
+            </h3>
+          </li>
+
+          <p>=&gt;[Array's Length Get] Syntax as following:</p>
+
+          <p>=&gt;[Array's Length Get] Syntax as following:</p>
+          <div id="Code" class="Code">
+            var arrayName = ["Element1", "Element2", "Element3"];<br />
+            console.log(arrayName.length);<br />
+            document.getElementById("HTMLTagName").html = arrayName.length;<br />
+          </div>
+
+          <p>Array [Get] Length Practical Example will be as following:</p>
+
+          <p>
+            Following Example there is a given Random Array and the button
+            Function will display it's Length
+          </p>
+
+          <div id="DisplayArrLng" class="JsArrLngGetExp"></div>
+
+          <button onclick="process()">Cilck to get Array Length</button>
+          <script src="ArrayLengthGet.js"></script>
+
+          <div class="JsArrLngGetExp">
+            <code>
+              //HTML Codes :<br />
+              &lt;div id="DisplayArrLng" class="JsArrLngGetExp"&gt;<br />
+              &lt;/div&gt;<br />
+
+              &lt;button onclick="process()"&gt; Cilck to get Array Length
+              &lt;/button&gt;<br />
+              &lt;script src="ArrayLengthGet.js"&gt;&lt;/script&gt; <br /><br />
+
+              // Js Codes (ArrayLengthGet.js):<br />
+              /* Global alert, prompt, document */ <br />
+              // Random Array Get Length Application :<br /><br />
+
+              function process() {<br />
+              &nbsp; &nbsp; "use strict"; <br />
+              &nbsp; &nbsp; var arr = ["Shadi", "Sayed", "Mohammed"],<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; arrCount = arr.length;<br /><br />
+              &nbsp; &nbsp; alert(arrCount);<br />
+              &nbsp; &nbsp; document.getElementById("DisplayArrLng").innerHTML
+              =<br />
+              &nbsp; &nbsp;&nbsp; &nbsp; "Array Length = " + arrCount;<br />
+              }
+            </code>
+          </div>
+
+          <li>
+            <h3>
+              =&gt;[Single Textual (string) Variable's Length Get]: Is one of
+              the Variable's Length properties, which allow to get the Text
+              number of letters inserted into th string Variable
+            </h3>
+          </li>
+
+          <p>=&gt;[(String) Variable's Length Get] Syntax as following:</p>
+          <div id="Code" class="Code">
+            var stringVar = "String Variable contents";<br />
+            console.log(stringVar.length);<br />
+            document.getElementById("HTMLTagName").html = stringVar.length;<br />
+          </div>
+
+          <p>
+            String Variable [Get] Length Practical Example will be as following:
+          </p>
+
+          <p>
+            Following Example there is a String Variabel the user will insert
+            and the button Function will display it's Length
+          </p>
+
+          <div id="DisplayVarLng" class="JsArrLngGetExp"></div>
+
+          <button onclick="process1()">
+            Cilck to get String Variable Length
+          </button>
+          <script src="ArrayLengthGet.js"></script>
+
+          <div class="JsArrLngGetExp">
+            <code>
+              //HTML Codes :<br /><br />
+              &lt;div id="DisplayVarLng" class="JsArrLngGetExp"&gt;
+              &lt;/div&gt;<br />
+
+              &lt;button onclick="process1()"&gt; Cilck to get String Variable
+              Length &lt;/button&gt;<br />
+              &lt;script src="ArrayLengthGet.js"&gt;&lt;/script&gt; <br /><br />
+
+              // Js Codes (ArrayLengthGet.js):<br />
+              /* Global alert, prompt, document */ <br />
+              // Random Array Get Length Application :<br /><br />
+
+              function process() {<br />
+              &nbsp; &nbsp; "use strict"; <br />
+              &nbsp; &nbsp; var myVar = prompt("Enter you String Variable
+              :"),<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; myVarCount = myVar.length;<br /><br />
+              &nbsp; &nbsp; alert("String Variable Length = " + myVarCount);<br />
+              &nbsp; &nbsp; document.getElementById("DisplayVarLng").innerHTML
+              =<br />
+              &nbsp; &nbsp;&nbsp; &nbsp; "String Variable Length = " +
+              myVarCount;<br />
+              }
+            </code>
+          </div>
+        </ol>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JsArrLngSet" id="JsArrLngSet">
+        <header>
+          <h3>[Javascript Array [Set] Length] Practical Application:</h3>
+        </header>
+
+        <p>
+          =&gt;[Length Set]: Is to set a certain Counter to the an Element, even
+          it was by given by the developer or to provide it's seting step to the
+          user, and also it is one of any Variable type , and not only Array
+          Type
+        </p>
+
+        <p>=&gt;[Element's Length Set] Syntax as following:</p>
+        <div id="Code" class="Code">
+          var elementName = "Element's Contents";<br />
+          &nbsp; &nbsp; elemenetName.length = prompt("Enter your Elements Length
+          -Including Spaces-");<br />
+          &nbsp; &nbsp; elementName = prompt("Enter you Element Contents up on
+          the Counter<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; you Set...");<br />
+          console.log("Your Element Length" + elementName.length);<br />
+          console.log("Your Element's Contents are : " + elementName);<br />
+          document.getElementById("HTMLTagName").html = <br />
+          &nbsp; &nbsp; "Your Element Length is :" + elementName.length +<br />
+          &nbsp; &nbsp; "Your Element Contents are :" + elementName;<br />
+        </div>
+
+        <ol>
+          <li>
+            <h3>
+              =&gt;[Array's Length Set]: Is one of the Array's Length
+              properties, which allow to set the array elements before or after
+              Assinging opertation
+            </h3>
+          </li>
+
+          <p>=&gt;[Array's Length Set] Syntax as following:</p>
+          <div id="Code" class="Code">
+            var arrayName = ["Element1", "Element2", "Element3", "Element4",
+            "Element5"];<br />
+            var oldCounter = arr.length;<br />
+
+            alert("your Array Elements are = " + arr + "\n" + "your Array old
+            Counter = " + oldCounter);<br />
+
+            arr.length = prompt("Enter new Count of the Array (-Must be less or
+            equal<br />
+            &nbsp; &nbsp; the old Counter-Must be Less than the old Array
+            Counter-)");<br />
+
+            var newCounter = arr.length;<br />
+
+            alert("your Array new Counter = " + newCounter + "\n" + "Your
+            Current Array Elements are : " + arr ); <br />
+
+            console.log(arrayName.length);<br />
+            document.getElementById("HTMLTagName").html = arrayName.length;<br />
+          </div>
+
+          <p>Array [Set] Length Practical Example will be as following:</p>
+
+          <p>
+            Following Example the user will set the Array Counter and the button
+            Function will display begain the Appliction
+          </p>
+
+          <div id="DisplayArrLng1" class="JsArrLngGetExp"></div>
+
+          <button onclick="process2()">Cilck to Set Array Length</button>
+          <script src="ArrayLengthSet.js"></script>
+
+          <div class="JsArrLngGetExp">
+            <code>
+              //HTML Codes :<br />
+              &lt;div id="DisplayArrLng1" class="JsArrLngGetExp"&gt;<br />
+              &lt;/div&gt;<br />
+
+              &lt;button onclick="process2()"&gt; Cilck to Set Array Length
+              &lt;/button&gt;<br />
+              &lt;script src="ArrayLengthSet.js"&gt;&lt;/script&gt; <br /><br />
+
+              // Js Codes (ArrayLengthSet.js):<br />
+              /* Global alert, prompt, document */ <br />
+              // Random Array Set Length Application :<br /><br />
+
+              function process2() {<br />
+              &nbsp; &nbsp; "use strict";<br />
+              &nbsp; &nbsp; var arr = ["Shadi", "Sayed", "Mohammed", "Ahmed",
+              "Badawi"];<br />
+              &nbsp; &nbsp; var oldCounter = arr.length; <br />
+
+              &nbsp; &nbsp; alert("your Array Elements are = " + arr + "\n" +
+              "your Array<br />
+              &nbsp; &nbsp; &nbsp;&nbsp;old Counter = " + oldCounter);<br />
+
+              &nbsp; &nbsp; arr.length = prompt("Enter new Count of the Array
+              (Must be less <br />
+              &nbsp; &nbsp;&nbsp; &nbsp;or equal the old Counter-Must be Less
+              than the old Array Counter-)");<br />
+
+              &nbsp; &nbsp; var newCounter = arr.length; <br />
+
+              &nbsp; &nbsp; alert("your Array new Counter = " + newCounter +
+              "\n" + "Your<br />
+              Current Array Elements are :" + arr ); <br />
+              &nbsp; &nbsp; document.getElementById("DisplayArrLng1").innerHTML
+              = <br />
+              &nbsp; &nbsp; &nbsp; &nbsp; "Array old Length = " + oldCounter +
+              "&lt;br&gt;" +<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; "Array new Length =" + newCounter +
+              "&lt;br&gt;" +<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; "The Current Elements of Array are :"
+              + arr;<br />
+              }
+            </code>
+          </div>
+
+          <li>
+            <h3>
+              =&gt;[Single Textual (string) Variable's Length Set]: Is one of
+              the Variable's Length properties, which allow to get the Text
+              number of letters inserted into th string Variable
+            </h3>
+          </li>
+
+          <p>=&gt;[(String) Variable's Length Set] Syntax as following:</p>
+          <div id="Code" class="Code">
+            var elementName = "",<br />
+            &nbsp; &nbsp; elemenetName.length = prompt("Enter your Variable
+            Lenght -Including Spaces-");<br />
+            &nbsp; &nbsp; elementName = prompt("Enter you Element Contents up on
+            the Counter you Set...");<br />
+            console.log(elementName.length);<br />
+            console.log(elementName);<br />
+            document.getElementById("HTMLTagName").html = elementName.length;<br />
+          </div>
+
+          <p>
+            String Variable [Set] Length Practical Example will be as following:
+          </p>
+
+          <p>
+            Following Example there is a String Variabel the user will insert
+            and the button Function will display it's Length
+          </p>
+
+          <div id="DisplayVarLng1" class="JsArrLngGetExp"></div>
+
+          <button onclick="process3()">
+            Cilck to Set String Variable Length
+          </button>
+          <script src="ArrayLengthSet.js"></script>
+
+          <div class="JsArrLngGetExp">
+            <code>
+              //HTML Codes :<br />
+              &lt;div id="DisplayVarLng1" class="JsArrLngGetExp"&gt;
+              &lt;/div&gt;<br />
+
+              &lt;button onclick="process3()"&gt; Cilck to Set String Variable
+              Length &lt;/button&gt;<br />
+              &lt;script src="ArrayLengthSet.js"&gt;&lt;/script&gt; <br /><br />
+
+              // Js Codes (ArrayLengthGet.js):<br />
+              /* Global alert, prompt, document */ <br />
+              // Random Array Set Length Application :<br /><br />
+
+              function process3() {<br />
+              &nbsp; &nbsp; "use strict";<br />
+              &nbsp; &nbsp; var StrVar = prompt("Enter your String
+              Variable");<br />
+              &nbsp; &nbsp; var StrVarCounter0 = StrVar.length;<br />
+
+              &nbsp; &nbsp; alert("Your Text Letter Count= " +
+              StrVarCounter0);<br />
+              &nbsp; &nbsp; document.getElementById("DisplayVarLng1").innerHTML
+              =<br />
+              &nbsp; &nbsp; &nbsp;&nbsp; "Text origianl Number of Letters = " +
+              StrVarCounter0 +<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; "&lt;br&gt;" + "The Original Text is
+              :" + StrVar;<br />
+              }
+            </code>
+          </div>
+        </ol>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="270"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="365" />
+          <input type="hidden" name="months" value="27" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to get basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num2" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg" />
+          Your browser Does Not Support the Audio file format...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 27 Video File:</h3>
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=LXvj90hyWow&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=27&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+        <!-- <video controls width="300" height="300">
+          <source
+            src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/27 Array [ Get - Set ] Length.mp4"
+            type="video/mp4"
+          />
+          Your browser Does Not Support the Video file format...
+        </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JavaScript");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

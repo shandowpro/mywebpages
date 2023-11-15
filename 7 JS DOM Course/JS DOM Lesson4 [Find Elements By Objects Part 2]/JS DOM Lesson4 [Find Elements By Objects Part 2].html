@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS OOP Lesson 4 [Find Elements By Object part 2]</title>
+    <link
+      rel="stylesheet"
+      href="JS DOM Lesson4 [Find Elements By Objects Part 2].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JS OOP Lesson 4 [Find Elements By Object part2]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS OOP main Topics">
+            JS OOP Lesson4 [Find Elements By Object part2 ] Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMCon"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Concept"
+          >
+            JS OOP Lesson4 [Find Elements By Object part2 ] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMImp"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Importance & Benefits"
+          >
+            JS OOP Lesson4 [Find Elements By Object part2 ] Importance &
+            Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMSyntx"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Syntax"
+          >
+            JS OOP Lesson4 [Find Elements By Object part2] Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSDOMPract"
+            title="Go to JS OOP [Find Elements By  ID Class Tag ] Practical Applications"
+          >
+            JS OOP Lesson4 [Find Elements By Object part2 ] Practical
+            Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS OOP Course
+      <span> JS OOP Lesson 4 [Find Elements By Object part 2] </span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          JS OOP [Class Static Properties and Methods ] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>JS OOP [Find Elements By Object part2 ] Concept.</li>
+
+            <li>
+              JS OOP [Find Elements By Object part2 ] Importance & Benefits.
+            </li>
+
+            <li>
+              JS OOP [Find Elements By Object part2 ] Syntax [Definition +
+              Access].
+            </li>
+
+            <li>
+              JS OOP [Find Elements By Object part2 ] Practical Application.
+            </li>
+          </ol>
+
+          <p>&gt; Main new Methods in this lesson are as following :</p>
+          <ul>
+            <li>
+              Accessing body Element = document.body; - .innerText; -
+              .innerHTML; }
+            </li>
+            <li>
+              counting number of certain text (string) inside a element content
+              = document.ObjectName.innerText.indexOf('text'); }
+            </li>
+            <li>
+              Accessing links & anchors Element : <br />
+              <ol>
+                <li>document.anchors;</li>
+                <li>document.links;</li>
+              </ol>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMCon" id="JSDOMCon">
+        <header>
+          <h3>JS OOP [Find Elements By Object part2] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [Find Elements By Object part2]: They are another
+          group of Methods to Accessing/Editing elements in web page {as an
+          object(s)} as following:
+        </p>
+        <ul>
+          <li>
+            {document.body;} =&gt; which is the an Object name of {body} parent
+            Element , and it contains all other child elements in web page , and
+            include following Mehtods :
+          </li>
+          <ol>
+            <li>
+              document.body.innerHTML; => This is the Mehtod of body's interanl
+              HTML Coding Text
+            </li>
+            <li>
+              document.body.innerText; => This is the Mehtod of body's interanl
+              Text String only {text Node} of Elements inside the Body Parent
+              Element, and it can be accept all JS string Methods such as :
+            </li>
+          </ol>
+
+          <li>
+            {document.body.innerText.indexOf('searching text');} [any
+            element.innerText can accept JS String methods]
+          </li>
+
+          <li>
+            document.body.anchor; => This Method has been deprecated & it is to
+            find all defined links &lt;a&gt; in page with {name="validName"}
+          </li>
+
+          <li>
+            document.body.links; => this Method to find all hyper reference
+            links &lt;a&gt; in page with {href="#validlink"}
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSDOMImp" id="JSDOMImp">
+        <header>
+          <h3>
+            JS OOP [Find Elements By Object part2 ] Importance & Benefits:
+          </h3>
+        </header>
+
+        <p>
+          [DOM Find Elements By Object part2 ] gives us the Following Features :
+          <br />
+        </p>
+        <ul>
+          <li>
+            It is more advanced method to access to specific parent & child
+            Elements & it's ceratin attributes {properties}
+          </li>
+
+          <li>
+            gives more features to pragrmaing functions speacially in DOM
+            programing Technique
+          </li>
+
+          <li>Much more easier method than other methods .</li>
+
+          <li>Much more accurate method than other methods .</li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMSyntx" id="JSDOMSyntx">
+        <header>
+          <h3>
+            [ JS HTML DOM Find Element by Object part2 ] Syntax & Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; JS HTML DOM [finding & Accessing Elements by Object Method]
+          Conceptual Syntax as following :
+        </p>
+
+        <div id="Code" class="Code">
+          // A) JS HTML DOM Defining variable with certian Element of web page
+          by [DOM] Syntax as following :<br /><br />
+          <span class="one"></span>var ElementVar =
+          document.getElementById('ElementID'); <br />
+
+          //=========================================================== <br />
+          <br />
+
+          // B) JS HTML DOM [setting Defined element Value by {Document body
+          element HTML Text Coding }] Syntax as following :<br /><br />
+          <span class="one"></span>ElementVar.innerText =
+          document.body.innerHTML; <br />
+          //=========================================================== <br />
+          <br />
+
+          // C) JS HTML DOM [setting Defined element Value by {Document body
+          element only Text }] Syntax as following :<br /><br />
+          <span class="one"></span>ElementVar.innerText =
+          document.body.innerText; <br />
+
+          //=========================================================== <br />
+          <br />
+
+          // D) JS HTML DOM [Searching for certain Text with {Document All body
+          Child elements's Text content}] Syntax as following :<br /><br />
+          <span class="one"></span>if
+          (document.body.innerText.indexOf('Searching Text') &gt; -1) { <br />
+          <span class="two"></span> console.log('your Text is Existed!'); <br />
+          <span class="one"></span> } else { <br />
+          <span class="two"></span> console.log('your Text is Not Existed!');
+          <br />
+          <span class="one"></span>} <br />
+          //=========================================================== <br />
+          <br />
+
+          // E) JS HTML DOM [Getting count of defined links in whole web page]
+          {anchor has valid name attribute (name="value")}] Syntax as following
+          [has Deprecated!] :<br /><br />
+          <span class="one"></span>ElementVar.innerText =
+          document.anchors.length; <br />
+          //=========================================================== <br />
+          <br />
+
+          // F) JS HTML DOM [Getting count of defined links in whole web page]
+          {anchor has valid hyperReference attribute (href="#value")}] Syntax as
+          following :<br /><br />
+          <span class="one"></span>ElementVar.innerText = document.links.length;
+          <br />
+
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSDOMPract" id="JSDOMPract">
+        <header>
+          <h3>
+            JS OOP [Find Elements By Object part2] General Practical
+            Applications :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Here one Major Application will include following Function/Tasks
+          [4 Main Functions] : &gt;&gt; <br />
+        </p>
+        <ol>
+          <li>
+            Print All body element's Text Node inside certain element innerText
+          </li>
+
+          <li>
+            Get (print) All body element's HTML coding Text inside certain
+            element innerText
+          </li>
+
+          <li>
+            Get All [Valid Links] properties in web Page , and include following
+            sub-functions
+          </li>
+          <ul>
+            <li>Getting all Defined links {count} in whole page</li>
+            <li>
+              Getting one certain links's one Property [href, title, id, class,
+              target]
+            </li>
+            <li>Getting All Defined links's properties</li>
+          </ul>
+
+          <li>
+            Search for certain Text in web Page's Elements , and it contains (2)
+            searching ranges-spots:
+          </li>
+          <ul>
+            <li>With in whole web page</li>
+            <li>With in certain child Element</li>
+          </ul>
+        </ol>
+        <br />
+
+        <section id="sec" class="secClass">
+          <a
+            name="link1"
+            class="linkclass1"
+            id="linkId1"
+            title="FirstLink"
+            target="_blank"
+            >First link</a
+          >
+          <br />
+          <a
+            name="link2"
+            class="linkclass2"
+            id="linkId2"
+            title="SecondLink"
+            target="_parent"
+            >Second link</a
+          >
+          <br />
+          <a
+            href="#Main"
+            class="linkclass3"
+            id="linkId3"
+            title="ThirdLink"
+            target="_self_top"
+            >Third link</a
+          >
+          <br />
+          <a
+            href="#footer"
+            class="linkclass4"
+            id="linkId4"
+            title="ForthLink"
+            target="frame"
+            >Forth link</a
+          >
+          <br />
+          <a
+            href="#"
+            class="linkclass5"
+            id="linkId5"
+            title="FifthLink"
+            target="name"
+            >Forth link</a
+          >
+          <br />
+        </section>
+        <br />
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <script src="FindElemByObject2.js"></script>
+
+        <button class="btn" onclick="test()">
+          Click to Start [Testing finding elements by Object part2] Application
+        </button>
+
+        <br />
+
+        <hr />
+        <button id="btn" class="btn" onclick="display()">
+          Display JS Code
+        </button>
+
+        <div class="JSOOPObjConstTraining">
+          <code>
+            // HTML Codes: <br />
+            <span class="one"></span> &lt;textarea id="txtarea"
+            class="txtarea"&gt;<br />
+            <span class="one"></span> &lt;/textarea&gt; <br /><br />
+
+            <span class="one"></span> &lt;button class="btn"
+            onclick=test"()"&gt;<br />
+            <span class="two"></span> Click to Start [Testing Find Elements By
+            Object part2 ] Application <br />
+            <span class="one"></span> &lt;/button&gt; <br /><br />
+
+            <span class="one"></span> &lt;script
+            src="FindElemByObject2.js"&gt;<br />
+            <span class="one"></span> &lt;/script&gt; <br /><br />
+
+            =======================================================<br /><br />
+
+            /* global document, alert, prompt */ <br />
+            /* JSOOP [Find Elements By Object part2] */ <br />
+            template-string-converter.enable; <br /><br />
+
+            <textarea id="SourceCode" readonly></textarea>
+          </code>
+        </div>
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 4 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=xqmKhl7OlnA&list=PLDoPjvoNmBAxx97QDMOCpzxbu1ZHJ4i7i&index=4&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\HTML JS Dom\4 JS HTML Dom Find Elements By Objects Part 2.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JS OOP Lesson 4 [Find Elements By object Part2] ");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 53 PHP 5 In Arabic - String Functions - Trim </title>
+    <link rel="stylesheet" href="53 PHP 5 In Arabic - String Functions - Trim.css" media="all">
+    
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        53 PHP 5 In Arabic - String Functions - Trim
+    </header>
+<!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to PHP main Topics">
+                53 PHP 5 In Arabic - String Functions - Trim Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to PHP [String Functions - StrToLower, StrToUpper] Concept">
+                53 PHP 5 In Arabic - String Functions - Trim Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to PHP [String Functions - StrToLower, StrToUpper] Importance & Benefits">
+                53 PHP 5 In Arabic - String Functions - Trim Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to PHP [String Functions - StrToLower, StrToUpper] Syntax">
+                53 PHP 5 In Arabic - String Functions - Trim Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to PHP [String Functions - StrToLower, StrToUpper] Practical Applications">
+                53 PHP 5 In Arabic - String Functions - Trim Practical Applications </a> </li>
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+        
+    <main class="Welcome"> Welcome to PHP Course <span> 53 PHP 5 In Arabic - String Functions - Trim </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                PHP5 [ String Functions - [ trim() , rtrim(), ltrim() ] Main Topics :
+            </header>
+            
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                
+                    <p>  String Functions - Methods as following : </p>
+                        <ol> 
+                            <li> $var = trim(String variable); => [Default Trim]  </li>
+                            <li> $var = trim(String variable, "customized charlist"); => [Advanced Trim]  </li>
+                            
+                            <li> $var = rtrim(String variable); => Default right Trim  </li>
+                            <li> $var = rtrim(String variable, "customized right charlist"); => [Advanced Right Trim] </li>
+                            
+                            <li> $var = ltrim(String variable); => Default left Trim  </li>
+                            <li> $var = ltrim(String variable, "customized left charlist"); => [Advanced Left Trim] </li>
+                            
+                        </ol>
+                    <hr>                                                                                                    
+            </article>
+        </Section>        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> PHP [53 PHP 5 In Arabic - String Functions - Trim ] </h3>
+            </header>`
+                        
+            <h2> [PHP - String Functions - [ trim() , rtrim(), ltrim() ] ] => Concept: </h2>
+                                                        
+                <p> [PHP - String functions [Trim] method syntax & concept as following : <br>
+                    <ol> 
+                        <li> [trim(String Variable, Customized Charlist)]; => Remove the addtional charachters from the Both sides from String , and syntax includes the following elements :<br>
+                             <ol> 
+                                <li> [String Variable] => The String variable/ Text to process the method in it's content  => {Obligated} </li> 
+                                <li> [charlist] => The default character & symbols , which will be removed from the string by default => {Optionanl}, and include the following: <br>
+                                    <ul>
+                                        <li> [/0] => The Null value in the String </li>
+                                        <li> [/t] => The Horizontal Tab value in the String </li>
+                                        <li> [/n] => The new line in the String </li>
+                                        <li> [/r] => The cariage return in the String </li>
+                                        <li> [/x0B] => The vertical Tab value in the String </li>
+                                    </ul>                                                                
+                                </li> 
+                                <li> [trim($String Variable)] => The String variable/ Text ONLY is to process the default Trim Method [Trim the default Charlist] </li> 
+                             </ol>
+                        </li> <br>
+
+                        <li> [rtrim(String Variable, Customized Charlist)]; => Remove the addtional charachters from the Right side (before) only from String , and syntax includes the following elements :<br>
+                             <ol> 
+                                 <li> [String Variable] => The String variable/ Text to process the method in it's content  => {Obligated} </li> 
+                                 <li> [charlist] => The default character & symbols , which will be removed from the Right side (before) the string by default => {Optionanl}, and include the following: <br>
+                                    <ul>
+                                        <li> [/0] => The Null value in the String </li>
+                                        <li> [/t] => The Horizontal Tab value in the String </li>
+                                        <li> [/n] => The new line in the String </li>
+                                        <li> [/r] => The cariage return in the String </li>
+                                        <li> [/x0B] => The vertical Tab value in the String </li>
+                                    </ul>                                                                
+                                </li> 
+                                <li> [rtrim($String Variable)] => The String variable/ Text ONLY is to process the default Right Trim Method [Right Trim with the default Charlist] </li> 
+                            </ol>                                                                                                    
+                        </li>
+                        
+                        <li> [ltrim(String Variable, Customized Charlist)]; => Remove the addtional charachters from the Left side (after) only from String , and syntax includes the following elements :<br>
+                             <ol> 
+                                 <li> [String Variable] => The String variable/ Text to process the method in it's content  => {Obligated} </li> 
+                                 <li> [charlist] => The default character & symbols , which will be removed from the Left side (after) the string by default => {Optionanl}, and include the following: <br>
+                                    <ul>
+                                        <li> [/0] => The Null value in the String </li>
+                                        <li> [/t] => The Horizontal Tab value in the String </li>
+                                        <li> [/n] => The new line in the String </li>
+                                        <li> [/r] => The cariage return in the String </li>
+                                        <li> [/x0B] => The vertical Tab value in the String </li>
+                                    </ul>                                                                
+                                </li> 
+                                <li> [ltrim($String Variable)] => The String variable/ Text ONLY is to process the default Left Trim Method [Left Trim with the default Charlist] </li> 
+                            </ol>                                                                                                    
+                        </li>                                                                        
+                    </ol>
+                </p>
+            
+                <br> <br> <hr>
+                <!-------------------------------------------  -->                                                                                                                                                                                                                              
+            </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> PHP [53 PHP 5 In Arabic - String Functions - Trim()] Importance & Benefits: </h3>
+            </header>
+            
+            <ul> 
+                <li> [String Functions - trim() || rtrim() || ltrim() ] methods => This method is very critical in securing data that input by user with in form to the database , to prevent hackers form destroying the database, by adding previous backslashes before the special symbols, whcih can  acess to the database coding </li>
+                
+                <li> [String Functions - trim() || rtrim() || ltrim() ] method => Can provide readable and clean input/output text to the user of the recieved data from the [Form || database] , by trimming the string from all the special charachters </li>
+                
+                <li> [String Functions - trim() || rtrim() || ltrim() ] method => This method is very critical to use by the developer, by providing the protection against Hackers attacking to the database due to the ability to destroy the scripting, in case of not using this method </li>
+                                
+            </ul>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ 53 PHP 5 In Arabic - String Functions - Trim] Syntax & Methods: </h3>
+            </header>        
+
+            <p> =&gt; In this after setting up the application => We will create a simple PHP File && Running it by [Local Server] </p>
+            
+            <p> =&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} : <br>
+                <p> Using [String Functions - StrToLower, StrToUpper ] => has following ( 2 ) main Examples : </p> 
+                                
+                    <ol type="A">        
+                        <li> First Example => String Functions -  {trim(string variable/text value, charlist)} Method : contains (4) Exps: <br>
+                            <ol>   
+                                <li> {Default Trim()} Method  </li>
+                                <li> {Advanced Trim()} [Trim from Front] Method </li>
+                                <li> {Advanced Trim()} [Trim from Back] Method </li>
+                                <li> {Advanced Trim()} [Trim from Both Sides] Method </li>
+                            </ol>
+                        </li>                        
+                        
+                        <li> Second Example => String Functions -  {rtrim(string variable/text value, charlist)} || {ltrim(string variable/text value, charlist)} Method : contains (4) Exps: <br>
+                            <ol>   
+                                <li> {Default rTrim()} Method </li>
+                                <li> {Default lTrim()} Method </li>
+                                <li> {Advanced rTrim()} Method </li>
+                                <li> {Advanced lTrim()} Advanced Method </li>
+                            </ol>
+                        </li>                                                                        
+                                                                            
+                    </ol>
+                </P>                                                            
+                <!-- ================================================================= -->
+                                               
+                <h2>  B)  Html page :  </h2> <br>                    
+                        <span class='one'> &lt; !DOCTYPE html &gt; </span> <br>
+                            <span class='two'> &lt; html &gt; </span> <br>
+                                <span class='three'> &lt; /head &gt;</span> <br>
+                                    <span class='four'> &lt; title &gt; &lt;? php echo $title; ?&gt;  &lt; /title &gt;  </span> <br>
+                                    <span class='four'> &lt; link rel="stylesheet" href="53 PHP 5 In Arabic - String Functions - Trim" media="all" &gt;  </span> <br>
+                                <span class='three'> &lt; /head &gt; </span>  <br> <br>                                
+                                <span class='three'>&lt; body &gt; </span> <br>                            
+                                
+                                <span class='three'>&lt; /body &gt; </span> <br>
+                                <span class='two'>&lt;/html &gt; </span> <br>
+                                ---------------------------------------------------------------------------- <br>
+                                ---------------------------------------------------------------------------- <br>                      
+                   <br><br> <hr>                                                                                                                                  
+            <br><br>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+         <section class="PHPPract" id="PHPPract"> 
+            <header>
+                <h3> PHP [53 PHP 5 In Arabic - String Functions - Trim] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here (2) Major Applications PHP [ String Functions - StrToLower, StrToUpper ] as following =>  <br><br>
+
+                <ol type="A">        
+                    <li> First Example => String Functions -  {trim(string variable/text value, charlist)} Method : contains (4) Exps: <br>
+                        <ol>   
+                            <li> {Default Trim()} Method , include the following steps : <br>                                
+                                <ol>
+                                    <li> Printing the string variable [Before] {Default Trim} </li>
+                                    <li> Processing [Default Trim] </li>
+                                    <li> printing the string variable || Datatype || String Letter count [After] {Default Trim} </li>                                                                                                        
+                                </ol>
+                            </li>
+
+
+
+                            <li> {Advanced Trim()} [Trim from Front] , Method include the following steps :  <br>                                
+                                <ol>
+                                    <li> printing the string variable [Before] {Advanced Trim - Letter form front} </li>
+
+                                    <li> Processing [Default Trim] - advanced </li>
+
+                                    <li> Printing the string variable || Datatype || String Letter count [After] {Advanced Trim - Letter form front} </li>
+                                </ol>                            
+                            </li>
+                                                        
+                            
+                            <li> {Advanced Trim()} [Trim from Back] Method , Method include the following steps : <br> 
+                                <ol>
+                                    <li> Printing the string variable [Before] {Advanced Trim - Letter form Back} </li>
+
+                                    <li> Processing [Default Trim] - advanced   </li>
+
+                                    <li> Printing the string variable || Datatype || String Letter count [After] {Advanced Trim - Letter form Back}  </li>
+                                </ol>                            
+                            </li>
+                            
+
+                            <li> {Advanced Trim()} [Trim from Both Sides] Method , include the following steps : <br>                                  
+                                <ol>
+                                    <li> Printing the string variable [Before] {Advanced Trim - Letter form Both Sides} </li>
+
+                                    <li> Processing [Default Trim]- advanced  </li>
+
+                                    <li> printing the string variable || Datatype || String Letter count [After] {Advanced Trim - Letter form Both Sides} </li>
+                                </ol>                                                                                
+                            </li>
+                        </ol>
+                    </li>                        
+                    <!-- -================================================================================== -->
+
+
+                    <li> Second Example => String Functions -  {rtrim(string variable/text value, charlist)} || {ltrim(string variable/text value, charlist)} Method : contains (4) Exps: <br>
+                        <ol>   
+                            <li> {Default rTrim()} Method, and include the following steps : <br> 
+                                <ol>
+                                    <li> Printing the string variable [Before] {Default Right Trim}  </li>
+
+                                    <li> Processing [Default Right Trim] Processing [Default Right Trim] </li>
+
+                                    <li> Printing the string variable || Datatype || String Letter count [After] {Default Right Trim}  </li>
+                                </ol>                                                                                                            
+                            </li>                            
+                            
+                            <li> {Default lTrim()} Method , and include the following steps : <br> 
+                                <ol>
+                                    <li> printing the string variable [Before] {Default Left Trim}  </li>
+                                    <li> Processing [Default Left Trim] </li>
+                                    <li> Printing the string variable || Datatype || String Letter count [After] {Default Left Trim} </li>                                    
+                                </ol>                            
+                            </li>
+                            
+                            
+                            
+                            <li> {Advanced rTrim()} Method , and include the following steps :  <br>                                                                
+                                <ol>
+                                    <li> printing the string variable [Before] {Advanced Right Trim}  </li>
+                                    <li> Processing [Adavnced Right Trim]  </li>
+                                    <li> Printing the string variable || Datatype || String Letter count [After] {Advanced Right Trim} </li>         
+                                </ol>                            
+                            </li>
+                            
+                            <li> {Advanced lTrim()} Advanced Method , and include the following steps : <br>
+                                <ol>  
+                                    <li> Printing the string variable [Before] {Advanced Left Trim}  </li>
+                                    <li> Processing [Advanced Left Trim]  </li>
+                                    <li> Printing the string variable || Datatype || String Letter count [After] {Advanced Left Trim}  </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>                                                                        
+                                                                        
+                </ol>
+                      
+
+             <!-- <section id=sec class=txtarea >                                  
+                 <a href="http://localhost/PHP%20Course/53%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20Trim/53%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20Trim.php">  
+                    {53 PHP 5 In Arabic - String Functions - Trim } => Lesson 53 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+            <section id=sec class=txtarea >                                  
+                <a class=btn href="http://localhost/PHP%20Course/53%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20Trim/53%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20Trim.php">  
+                   {Main Page} [Display] => {53 PHP 5 In Arabic - String Functions - Trim } => Lesson 53 PHP File Webpage by Localhost
+               </a> <br> <br>             
+               
+               <a class=btn href="53 PHP 5 In Arabic - String Functions - Trim.php">  
+                   {Main Page} [Source Code] => {53 PHP 5 In Arabic - String Functions - Trim } => Lesson 53 PHP File Webpage by Localhost
+               </a>             
+           </section> <br> 
+            
+             <!-- <script  src="14 PHP 5  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+                
+        </section>                           
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="VideoSection">
+            <h3> Lesson 53 Video File:</h3>
+            
+            <iframe
+            width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=9ZqhqeLNGf8&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=53&controls=0&loop=1&autoplay=1&fs=1"    
+        >   
+        </iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\53 PHP 5 In Arabic - String Functions - Trim.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shandow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 53 PHP 5 In Arabic - String Functions - Trim ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

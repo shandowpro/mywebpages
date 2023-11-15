@@ -1,0 +1,362 @@
+    
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 8 PHP Examples In Arabic - Require vs Include </title>
+    <link rel="stylesheet" href="8 PHP Examples In Arabic - Require vs Include.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        8 PHP Examples In Arabic - Require vs Include
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to PHP main Topics">
+                8 PHP Examples In Arabic - Require vs Include Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to PHP [8 PHP Examples In Arabic - Require vs Include] Concept">
+                8 PHP Examples In Arabic - Require vs Include Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to PHP [8 PHP Examples In Arabic - Require vs Include] Importance & Benefits">
+                8 PHP Examples In Arabic - Require vs Include Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to PHP [8 PHP Examples In Arabic - Require vs Include] Syntax">
+                8 PHP Examples In Arabic - Require vs Include Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to PHP [8 PHP Examples In Arabic - Require vs Include] Practical Applications">
+                8 PHP Examples In Arabic - Require vs Include Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+        
+    <main class="Welcome"> Welcome to PHP Tutorials  <span> 8 PHP Examples In Arabic - Require vs Include </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                PHP [8 PHP Examples In Arabic - Require vs Include] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; New Methods in this lesson are as following :</p>
+                <ol type="A">
+                    <li> include() => To include a certain file and all it's defined variables   </li>
+                    <li> include_once() => To include a certain file and all it's defined variables : {just for one time}  </li>
+                    <li> require() => To require a certain file and all it's defined variables   </li>
+                    <li> require_once() => To require a certain file and all it's defined variables : {just for one time}   </li>                    
+                </ol>                                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> PHP [8 PHP Examples In Arabic - Require vs Include] Concept: </h3>
+            </header>
+                        
+            <h2> =&gt; PHP Tutorials {Require vs Include && Require_once vs Include_once} Concept : </h2>
+                <ol>                                     
+                    <li> Requiring & Including Files is very important to save time of developer by directly importing files and get access to all it's defined variables <li> 
+                    <li> [Requiring] & [Including] => The same identical Functionality by including , Main differences between [Require] & [include] :  <br>
+                        <ul>
+                            <li> Requiring & including unexisted file : <br>
+                                <ol>
+                                    <li> [Require] => will Through an {Error-Fatal Error} if the file is NOT existed in the defined given path </li>
+                                    <li> [Include] => will Through an {Warning} if the file is NOT existed in the defined given path </li>
+                                </ol>                                                            
+                            </li>
+                            <li> Loading the page after : <br>
+                                <ol>
+                                    <li> [Require] => will {Halt} the page , and will NOT continue the Page {if the file is not existed} => And produce an Error : (if there are no escaping Error written before the include) </li>
+                                    <li> [Include] => will {Continue} the page {if the file is not existed}                              => And produce an Warning: (if there are no escaping Error written before the include) </li>
+                                </ol>                                                            
+                            </li>
+                        </ul>                                                                                                                             
+                    </li> 
+                    <li>  Recommondation to use each type of include and require && include_once and require_once : <br>
+                        <ol>
+                           <li> [Include] & [Include_once] : <br>
+                                <p> Used when the desired file to include in the page -> Is not critical to properly operate the page such as (simple message|| Artical || ..)  </p>
+                            </li>
+                           <li> [Require] & [Require_once] : <br>
+                                <p> Used when the desired file to requried in the page -> Is a critical to properly operate the page such as (Laibrary|| Format Scripting || Functionality  ..)  </p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li> It is Recommneded to use the Scaping Error Before Including || Requiring Files to avoid displayiong Error or Warnings to the user </li>
+                    <li> It is Recommneded to use the [once] instead of the regular include or require => in case of the inlcuding || requiring the file just for one time </li>
+                    <li> In case of using the both method of one family [include && include_once] || [require && require_once] => to take in consideration the position of each method, as following  : <br>
+                        <ol> 
+                            <li> Usage of the [main] method at first before the [once] will prevent the process the second of [once] method </li>
+                            <li> Usage of the [once] method at first before the [main] will allow the process of the second of [main] method </li>
+                        </ol>
+                    </li>
+                    <li> Including and  Requiring for format files [as text Contents] will only add it as syntax codes only [not as scripting], but when using the file name in an embeded code {link} => this will add it's Effects as Code Script  </li>
+                    <li> To prevent the probable Error or Warning => We can use one of the following Metjhods : <br>
+                        <ul>
+                            <li> Canceling the Error in syntax by using the Scaping Error Method </li>
+                            <li> Controling the Error in following Syntax by using the Conditional If [in case of the file is not existed] </li>
+                        </ul>                                            
+                    </li>
+                </ol>                                                                                                                                                                   
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> PHP [8 PHP Examples In Arabic - Require vs Include] Importance & Benefits: </h3>
+            </header>
+
+            <p> [Require vs Include] gives us the Following unique Features : </p> <br>
+                <ul>
+                    <li> Ablity to import and get access to a certain file(s) and all it's inner defined varaibles inside the current page, and this is saving a lot of time , and more dymacillay  </li>
+                </ul>                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ Require vs Include ] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; PHP new Syntax will start from the Next Lessons </p>
+             
+            <p> =&gt; Following is a simple syntax code written Emded in a HTML page => <br>
+                Printing string text value from the server in the user website page  </p>
+
+            <p> In this lesson will be (4) Application [Include & Require & Include_once & Require_once]  => as following :  </p> 
+
+                <ol type="A">                                                                
+                                                            
+                    <li> First Example : [{Including Method} => [include ""] function  </li>
+                    <li> Second Example : [{Requiring Method} => [require ""] function  </li>
+                    <li> Third Example : [{Including once Method} => [include_once ""] function  </li>
+                    <li> Fourth Example : [{Requiring once Method} => [require_once ""] function </li>                                                                                                                                                                                                                                                        
+                </ol> 
+                <hr>                
+
+            
+            <div id="Code" class="Code">                
+                    <span class= one></span> &lt; ?php <br>                      
+                        <span class= two></span> echo "This Textual Result of written by PHP code in the  Server Side " ;<br>                      
+                    <span class= one></span> &gt; <br>                      
+
+                //=========================================================== <br> <br>                                                    
+                //=========================================================== <br> <br>                                                                                    
+                        
+            <br><br>
+            </div>
+
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPPract" id="PHPPract"> 
+            <header>
+                <h3> PHP [ Include & Require & Include_once & Require_once ] General Practical Applications : </h3>
+            </header>
+            
+            <p> In this lesson will be (4) Application [Include & Require & Include_once & Require_once] = > as following :  </p>                                     
+                
+                <ol type="A">                                                                
+                                                            
+                    <li> First Example : [{Including Method} => [include ""] function for (1) Files , and including the following steps : <br>
+                        <ul> 
+                            <li> Including => a php file [test.php] by using [Include ''] </li>                            
+                            <li> Printing a variable [That defined in the included File {test.php}] </li>                                                        
+                        </ul>                                                                                    
+                    </li> <br> <br>
+
+                    <li> Second Example : [{Requiring Method} => [require ""] function for (1) Files , and including the following steps : <br>
+                        <ul> 
+                            <li> Requiring => a Format file [format.css] by using [require ''] </li>                            
+                        </ul>                                                                                    
+                    </li>                                                                                                                                                                                                                                                            
+
+                    <li> Third Example : [{Including once Method} => [include_once ""] function for (2) Files , and including the following steps : <br>
+                        <ul> 
+                            <li> Including once => PHP file [test.php] by using [include_once ''] => {Pre-Included File (by main include Method) in the same page} </li>
+                            <li> Printing a variable [That defined in the included File {test.php}] </li>
+                            <li> Including once => PHP file [test2.php] by using [include_once ''] => {New Included File in the page} </li>
+                            <li> Printing a variable [That defined in the included File {test2.php}]  </li>
+                        </ul>                                                                                    
+                    </li>                                                                                                                                                                                                                                                            
+
+                    <li> Fourth Example : [{Requiring once Method} => [require_once ""] function for (2) Files , and including the following steps : <br>
+                        <ul> 
+                            <li> Requiring  once =>  Format file [format.css] by using [require_once ''] => {Pre-Required File (by main require Method) in the same page} </li>                            
+                            <li> Requiring  once =>  Format file [format2.css] by using [require_once ''] => {New Included File in the page} </li>                            
+                        </ul>                                                                                    
+                    </li>                                                                                                                                                                                                                                                            
+                </ol>
+                 <hr>                
+                                                                
+             <section id=sec class=txtarea >                                  
+                 <a class=btn href="http://localhost/PHP%20Tutorials%20Course/8%20PHP%20Examples%20In%20Arabic%20-%20Require%20vs%20Include/8%20PHP%20Examples%20In%20Arabic%20-%20Require%20vs%20Include.php">  
+                    {Main Page} [Display] => {8 PHP Examples In Arabic - Require vs Include} => Lesson 8 PHP File Webpage by Localhost 
+                </a> <br> <br>             
+                
+                <a class=btn href="8 PHP Examples In Arabic - Require vs Include.php">  
+                    {Main Page} [Source Code] => {8 PHP Examples In Arabic - Require vs Include} => Lesson 8 PHP File Webpage by Localhost
+                </a>             
+            </section> <br> 
+             
+            <!-- <section id=sec class=txtarea >                                  
+                 <a class=btn href="http://localhost/PHP%20Course/95%20PHP%205%20In%20Arabic%20-%20Filter%20-%20Whats%20Filter%20&%20Why%20To%20Use%20it/check.php">  
+                    {Check Page} [Display] => {8 PHP Examples In Arabic - Require vs Include} => {check.php} Webpage by Localhost 
+                </a> <br> <br>             
+                
+                <a class=btn href="check.php">  
+                    {Check Page} [Source Code] => {8 PHP Examples In Arabic - Require vs Include} => {check.php} Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+                                                                                                           
+             <!-- <script  src="14 PHP 5  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+            
+        </section>                           
+        <!------------------------------------------------------------------------------------------------------>         
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+                                
+            <section class="VideoSection">
+                <h3> Lesson 8 Video File:</h3>
+                <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\PHP Examples and Tutorials\8 PHP Examples In Arabic - Require vs Include.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video>
+            </section>
+            
+            <section class="AudioSection">
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls lPHP Tutorials>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                        Your browser Does Not Support the Audio file ...              
+                </audio>
+            </section>
+
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 8 PHP Examples In Arabic - Require vs Include ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

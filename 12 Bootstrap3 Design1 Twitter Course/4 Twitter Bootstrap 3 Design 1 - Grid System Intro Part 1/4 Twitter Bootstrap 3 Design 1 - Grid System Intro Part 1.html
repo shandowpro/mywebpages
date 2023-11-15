@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    
+    <!-- IE compatiblity Meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    
+    <!-- First Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" >    
+
+    <title> 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1 </title>
+    
+    <link rel="stylesheet" href="4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1.css" media="all">        
+    
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="css/style.css" media="all">
+        
+    <style>        
+       .custom {
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            margin: 10px auto;
+            border: 5px solid gray;    
+            background-color: #ccc;
+            text-align: center;
+        } 
+         
+        .dis {
+            border: 3px solid red;
+            border-radius: 30px;
+            width: 100%;
+            /* height: 200px; */
+            text-align: center;
+            line-height: 2em;
+        }
+
+        .item{
+            color: red;
+            font-size: 30px;
+            font-family: monospace;
+            background-color: blue;
+        }
+        
+        .sh {            
+            background-color: red;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        
+    </style>
+
+
+    <!--[if It IE 9]>
+        <script src="js/html5shiv.min.js"> </script>
+        <script src="js/respond.min.js"> </script>
+    <[endif]!-->
+
+
+</head>
+
+<body>
+    
+    
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    <header class="Main" id="Main" >
+        4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to Bootstrap3 Design1 main Topics">
+                Bootstrap3 Design1 - 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1  Main Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to Bootstrap3 Design1 - 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1 Concept">
+                Bootstrap3 Design1 - 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1  Concept </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to Bootstrap3 Design1 - 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1 Importance & Benefits">
+                Bootstrap3 Design1 - 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1  Importance & Benefits </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to Bootstrap3 Design1 - 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1 main Information">
+                Bootstrap3 Design1 - 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1 main Information</a> </li>
+
+            <li> <a href=#JSDOMSyntx title="Go to Bootstrap3 Design1 - 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1 Syntax">
+                Bootstrap3 Design1 - 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1 Syntax & Examples </a> </li>
+
+            <!-- <li> <a href=#JSDOMPract title="Go to Bootstrap3 Design1 - 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1 Practical Applications">
+                Bootstrap3 Design1 - 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1  Practical Applications </a> </li> -->
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to Bootstrap3 Design1 Course <span> 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1  </span>
+    </main>
+
+    
+    <div class="Post" id=post>
+        <Section  id="MainC" class="MainC">
+
+            <header>
+                Bootstrap3 Design1 [4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">                    
+                    <li> {Grid System} => Intro and some Basic examples </li>
+                </ol>                
+                                                    
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> Bootstrap3 Design1 [4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1]  Concept: </h3>
+            </header>
+                                                        
+            <p> =&gt; [ 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1 ] : <br>
+                <ol>
+                    <li> Main Concept of the {Grid system}   => <br>
+                        <p> A Bootstrap System to distribute the page into a certain Grids of Rows and columns </p>
+                        <p> Grid system seprate the page mainly into Rows, each Row seperated at Max into [12] </p>
+                    </li>
+
+                    <li> Sizes of the Screen in Bootstrap Grid System => <br>
+                        <ol>
+                            <li> Large Screen => {lg}</li>
+                            <li> Meduim Screen => {md}</li>
+                            <li> Small Screen => {sm}</li>
+                            <li> Very Small Screen => {xs}</li>                            
+                        </ol>                                    
+                    </li>
+
+                    <li> Main Elements Classification in the Bootstrap : <br>
+                        <ol type="A"> 
+                            <li> Main Containers : <br>
+                                <p> The main container of the Web page, and has mainly (2) types, as following : </p>
+                                <ul> 
+                                    <li> A) Basic fixed Container : <br>
+                                        <p> Width = 1170 px  </p> 
+                                        <p> Center page </p> 
+                                        <p> Value Margins </p> 
+                                    </li>
+                                    <li> B) Fluid Container : <br>
+                                        <p> Width = Full Screen  </p> 
+                                        <p> Auto Margins </p> 
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li> Row : <br>
+                                <p> The sub parent Container within the main Container, and has a column Boxes </p>
+                                
+                                <p> Row is the Horizontal box , which including children Columns boxes, with following Sizes :  </p>
+                                
+                                <p> Each Column can has various Size and specified Screen scale with following Syntax : <br>  
+                                    <ul> 
+                                        <li> Column Sizes => This number represent the Column width as percentage of max column Width (12) </li>
+                                        <li> Screen Scale Size => The Screen Scale to apply this Width within it </li>
+                                    </ul>
+                                    
+                                    <p> col-[Screen Size(lg,md,sm,xs)]-[Column width(1->12)], with following examples: <br>                                        
+                                        <ul> 
+                                            <li> Large Screen has (4) Columns in a Row => {col-lg-3} X for each Element </li>
+                                            <li> Medium Screen has (2) Columns in a Row => {col-md-6} X for each Element </li>
+                                            <li> Small Screen has (1) Column in a Row => {col-sm-12} X for each Element </li>    
+                                        </ul>                                    
+                                    </p>                                                                        
+                                </p>
+                                
+                                <p> One Column can has multiple size and Screen Scale, with following examples : <br> 
+                                    <ul> 
+                                        <li> Large Screen has (4) Columns + Medium Screen has (2) Columns in a Row + Small Screen has (1) Column + Very Small Screen [Mobile] has (2) Column => <br>
+                                            {col-lg-3 col-md-6 col-sm-12 col-xs-6} X for each Element
+                                        </li>                                        
+                                    </ul>                                
+                                </p>
+                                                                                            
+                            </li>
+                        </ol>                        
+                    </li>
+                                                                                                       
+                </ol>  <br>                            
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> Bootstrap3 Design1 [4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1] Importance & Benefits : </h3>
+            </header>
+
+            <p> Bootstrap3 Design1 [4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1] gives us the Following Features : <br>
+                <ul>                                                 
+                    <li> Great and super easy Distributing Page Elements with Bootstrap Grid System , with out using any CSS Codes </li>
+                    <li> Great Abilities to add multiple Scales Grid System Settings for the same container => Activate Responsive Desinging for all Scales  </li>
+                </ul>                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> Bootstrap3 Design1 [4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; Bootstrap3 Design1 [Download , setup , 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1} by following Conceptual Syntax as following : </p>
+            
+            <div id="Code" class="Code">
+                
+                [1*] {Bootstrap3} (Optimal Script) : <br>
+                                                        
+                //=========================================================== <br> <br>                    
+                                
+                [A]// {HTML file} included with {Bootstrap} and {J-qurey} <br>                                                                                                                   
+                                    
+                    &lt; html &gt; <br> <br>
+                        <span class= one></span> &lt; head &gt; <br> <br>
+                            <span class= two></span>  &lt; meta http-equiv="X-UA-Compatible" content="IE=edge" &gt; <br>
+                            <span class= two></span>  &lt; meta name="viewport" content="width=device-width, initial-scale=1" &gt; <br> <br>
+                            
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/bootstrap.min.css" &gt; <br> 
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/myStyle.css" &gt; <br> <br>
+                            
+                            <span class= two></span>  &lt; !--[if It IE 9] &gt; <br>
+                            <span class= two></span>  &lt; script src="js/html5shiv.min.js" &gt;  &lt;/script &gt; <br>
+                            <span class= two></span>  &lt; script src="js/respond.min.js" &gt;  &lt;/script &gt; <br>
+                            <span class= two></span>  &lt; [endif]!--&gt; <br> <br>
+
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/bootstrap.min.css" &gt; <br> <br>
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/myStyle.css" &gt; <br> <br>
+                        <span class= one></span> &lt; /head &gt; <br> <br>
+                        
+                        <span class= one></span> &lt; body &gt; <br> <br>
+                        
+                            <span class= one></span> // Designing page with row of following content Distrubtion: <br>
+                            
+                            <span class= two></span> Large Screen has => (4) Columns in a Row <br>
+                            <span class= two></span> Medium Screen has => (2) Columns in a Row  <br>
+                            <span class= two></span> Small Screen has => (1) Column in a Row <br>
+                            <span class= two></span> Very Small Screen [Mobile] has => (2) Column in a Row <br> <br>
+
+                            <span class= two></span>  &lt; div class="container" &gt;  <br>
+                                <span class= three></span>  &lt; div class="row" &gt; <br> <br>
+                                    
+                                    <span class= four></span>  &lt; div class="col-lg-3 col-md-6 col-sm-12 col-xs-6" &gt;  <br>
+                                        <span class= five></span>  &lt; div class="sh" &gt; Testing Div &lt; /div &gt; <br>
+                                    <span class= four></span>  &lt; /div &gt;  <br> <br>
+
+                                    <span class= four></span>  &lt; div class="col-lg-3 col-md-6 col-sm-12 col-xs-6" &gt;  <br>
+                                        <span class= five></span>  &lt; div class="sh" &gt; Testing Div &lt; /div &gt; <br>
+                                    <span class= four></span>  &lt; /div &gt;  <br> <br>
+                                    
+                                    <span class= four></span>  &lt; div class="col-lg-3 col-md-6 col-sm-12 col-xs-6" &gt;  <br>
+                                        <span class= five></span>  &lt; div class="sh" &gt; Testing Div &lt; /div &gt; <br>
+                                    <span class= four></span>  &lt; /div &gt;  <br> <br>
+                                    
+                                    <span class= four></span>  &lt; div class="col-lg-3 col-md-6 col-sm-12 col-xs-6" &gt;  <br>
+                                        <span class= five></span>  &lt; div class="sh" &gt; Testing Div &lt; /div &gt; <br>
+                                    <span class= four></span>  &lt; /div &gt;  <br> <br>
+
+                                    <span class= four></span>  &lt; div class="col-lg-3 col-md-6 col-sm-12 col-xs-6" &gt;  <br>
+                                        <span class= five></span>  &lt; div class="sh" &gt; Testing Div &lt; /div &gt; <br>
+                                    <span class= four></span>  &lt; /div &gt;  <br> <br>
+
+                                    <span class= four></span>  &lt; div class="col-lg-3 col-md-6 col-sm-12 col-xs-6" &gt;  <br>
+                                        <span class= five></span>  &lt; div class="sh" &gt; Testing Div &lt; /div &gt; <br>
+                                    <span class= four></span>  &lt; /div &gt;  <br> <br>
+                                
+                                <span class= three></span>  &lt; /div &gt; <br>
+                            <span class= two></span>   &lt; /div &gt; <br>
+                            
+                            
+                            <span class= two></span>  &lt; script src="js/jquery-1.12.4.js" &gt; <br> <br>
+                            <span class= two></span>  &lt; script src="js/bootstrap.min.js" &gt; <br> <br>
+                        <span class= one></span> &lt; /body &gt; <br> <br>
+
+                    &lt; /html &gt; <br> <br>                                    
+                //=========================================================== <br> <br>                                                                    
+                //=========================================================== <br> <br>                                                                
+            
+            <br><br>
+            </div>
+            
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMPract" id="JSDOMPract">
+            <header>
+                <h3> Bootstrap3 Design1 [4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1] => General Practical Applications : </h3>
+            </header>
+            
+            <p> = &gt;  Designing page with row of following content Distrubtion : <br>
+                <span class= one></span> Large Screen has => (4) Columns in a Row <br>
+                <span class= one></span> Medium Screen has => (2) Columns in a Row  <br>
+                <span class= one></span> Small Screen has => (1) Column in a Row <br>
+                <span class= one></span> Very Small Screen [Mobile] has => (2) Column in a Row <br> <br>
+                
+            <div class="container"> 
+
+                <div class="row"> 
+                    
+                    <div class="col-lg-3  col-md-6 col-sm-12 col-xs-6"> 
+                        <div class="sh"> Product 1 </div>
+                    </div>
+                    
+                    <div class="col-lg-3  col-md-6 col-sm-12 col-xs-6"> 
+                        <div class="sh"> Product 2 </div>
+                    </div>
+                    
+                    <div class="col-lg-3  col-md-6 col-sm-12 col-xs-6"> 
+                        <div class="sh"> Product 3 </div>
+                    </div>
+                    
+                    <div class="col-lg-3  col-md-6 col-sm-12 col-xs-6"> 
+                        <div class="sh"> Product 4 </div>
+                    </div>
+                    
+                    <div class="col-lg-3  col-md-6 col-sm-12 col-xs-6"> 
+                        <div class="sh"> Product 5 </div>
+                    </div>
+                    
+                    <div class="col-lg-3  col-md-6 col-sm-12 col-xs-6"> 
+                        <div class="sh"> Product 6 </div>
+                    </div>
+                    
+                    <div class="col-lg-3  col-md-6 col-sm-12 col-xs-6"> 
+                        <div class="sh"> Product 7 </div>
+                    </div>
+                    
+                    <div class="col-lg-3  col-md-6 col-sm-12 col-xs-6"> 
+                        <div class="sh"> Product 8 </div>
+                    </div>
+                
+                </div>
+
+            </div>
+
+
+            <!-- <div class="btn" id="elem"> Element </div> <br>              -->
+                                    
+            
+            <!-- <div id="note" class="dis"></div> <br> -->
+                                
+            <hr> <br> <br>
+            <!-- ========================================================= -->
+
+            
+
+            <!-- <button class=btn onclick="test()"> Click to Start Bootstrap3 Design1 [ 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1 ]  Application    
+            </button>  -->
+            
+            
+            <!-- <script  src="IntroWhatisBootstrap3.js">
+            </script> -->
+                                    
+            <br>    
+                                          
+        <hr>
+                <!-- <button id=btn class="btn" onclick="display()">Display JS Code</button> -->
+                
+                <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class= one></span> &lt; head &gt; <br> <br>
+                            <span class= two></span>  &lt; meta http-equiv="X-UA-Compatible" content="IE=edge" &gt; <br>
+                            <span class= two></span>  &lt; meta name="viewport" content="width=device-width, initial-scale=1" &gt; <br> <br>
+                            
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/bootstrap.min.css" &gt; <br> 
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/myStyle.css" &gt; <br> <br>
+                            
+                            <span class= two></span>  &lt; !--[if It IE 9] &gt; <br>
+                            <span class= two></span>  &lt; script src="js/html5shiv.min.js" &gt;  &lt;/script &gt; <br>
+                            <span class= two></span>  &lt; script src="js/respond.min.js" &gt;  &lt;/script &gt; <br>
+                            <span class= two></span>  &lt; [endif]!--&gt; <br> <br>
+
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/bootstrap.min.css" &gt; <br>
+                            <span class= two></span>  &lt; link rel='stylesheet' href="css/myStyle.css" &gt; <br> <br>
+                        <span class= one></span> &lt; /head &gt; <br> <br> <br>
+                        
+                        <span class= one></span> &lt; body &gt; <br> <br>
+                            <span class= two></span>  &lt; div class="container" &gt;  <br>
+                                <span class= three></span>  &lt; div class="row" &gt; <br> <br>
+                                    
+                                    <span class= four></span>  &lt; div class="col-lg-3 col-md-6 col-sm-12 col-xs-6" &gt;  <br>
+                                        <span class= five></span>  &lt; div class="sh" &gt; Testing Div &lt; /div &gt; <br>
+                                    <span class= four></span>  &lt; /div &gt;  <br> <br>
+                                
+                                <span class= three></span>  &lt; /div &gt;  <br> <br>
+                            <span class= two></span>  &lt; /div &gt;  <br> <br>
+
+                                
+
+
+                            <span class= two></span>  &lt; script src="js/jquery-1.12.4.js" &gt; <br> <br>
+                            <span class= two></span>  &lt; script src="js/bootstrap.min.js" &gt; <br> <br>
+                        <span class= one></span> &lt; /body &gt; <br> <br>                                                
+                        =======================================================<br><br>
+                                                                                                              
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div>
+                
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection">
+            <h3> Lesson 4 Video File: </h3>
+
+
+            <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=Pdb6IJt8fLc&list=PLDoPjvoNmBAw24EjNUp_88S1VeaNK8Cts&index=4&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\Bootstrap\Boot Strap 3\Design 1\4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="Links">
+            <h3>Course Reaquirments : </h3>
+            <ul>
+                <li> HTML </li>                
+                <li> CSS3 </li>
+                <li> JS </li>
+            </ul>
+        </section>
+        
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <!-- <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section> -->
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="http://shadi-pro.epizy.com">My Refs</a></li>
+                <li> <a href="http://shadi-cv.epizy.com">My CV</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 4 Twitter Bootstrap 3 Design 1 - Grid System Intro Part 1");
+    </script>
+    
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>       

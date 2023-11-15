@@ -1,0 +1,399 @@
+<!-- <script src="http://localhost:8098"></script>     -->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 8 Learn VueJs In Arabic - Directives - v-for </title>
+    <link rel="stylesheet" href="8 Learn VueJs In Arabic - Directives - v-for.css" media="all">
+
+    <style>
+        .span{color: red ; font-weight:bold};
+    </style>
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        8 Learn VueJs In Arabic - Directives - v-for
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 8 Learn VueJs In Arabic - Directives - v - for ">
+                8 Learn VueJs In Arabic - Directives - v-fors Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to  [8 Learn VueJs In Arabic - Directives - v - for ] Concept">
+                8 Learn VueJs In Arabic - Directives - v-fors Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to  [8 Learn VueJs In Arabic - Directives - v - for ] Importance & Benefits">
+                8 Learn VueJs In Arabic - Directives - v-fors Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to  [8 Learn VueJs In Arabic - Directives - v - for] Syntax">
+                8 Learn VueJs In Arabic - Directives - v-fors Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to  [8 Learn VueJs In Arabic - Directives - v - for] Practical Applications">
+                8 Learn VueJs In Arabic - Directives - v-fors Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <main class="Welcome"> Welcome to Vue.js Course <span> 8 Learn VueJs In Arabic - Directives - v-for </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                Vue.js [8 Learn VueJs In Arabic - Directives - v - for] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following : </p>
+                <ol type="A">
+                    <li> [v - for] -> To loop inside the Array and Object and even inside an Array of objects </li>
+                    <li> [v - for] -> To can Reach each Array/Object Index, value and keyname  </li>
+                </ol>                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> [ 8 Learn VueJs In Arabic - Directives - v-for] Concept: </h3>
+            </header>
+                        
+            <h2> =&gt; Using Vue Directives within Vue Instances [properties && Methods] Concept : <br>
+                <ul>
+                    <li> [v - for] => Used to loop inside the Array and object and Array of Objects  </li>                    
+                    <li> [v - for] => Used inside the &lt;li &gt; element's Attribute , and Not the ul of ol  </li>                    
+                    <li> [v - for] => Also used as an element Attribute  </li>                    
+                    <li> [v - for] => Can reach any element's value and index inside the array </li>                    
+                    <li> [v - for] => Incase of looping inside the array of Objects => This directive can be used to reach any of Object's Properties's value by using the property KeyName </li>                    
+                </ul>
+            </h2>                                                                         
+            
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> Vue.js [8 Learn VueJs In Arabic - Directives - v-for] Importance & Benefits : </h3>
+            </header>
+            
+            <p> [Directives] => Provides an Easy Methods to apply certain Insturctions on HTML Elements as an Element's Attribute Auto Functionality Responding , and therefore more Dynamicallay <br>
+            <p>  [v-for]  => Critical in any Vue Application, to loop and display and process elements values <br>
+                        
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ Vue.js [8 Learn VueJs In Arabic - Directives - v-for] Syntax & Methods: </h3>
+            </header>
+                        
+            <p> =&gt; [Directives - v-for] => Following is a simple syntax code written of the Vue HTML Application & The Vue Script Model => </p>            
+                                     
+             <!-- <p> Syntax: <br> </p>            
+                <div id="Code" class="Code">                
+                    <span class= one></span> HTML Model :  <br>
+                                        
+                        <span class= two></span> A) Defining a [Final Class] {ClassName} with [default Property value] & [ Final Method using (Parameter) Variable] : <br>
+                            
+                            <span class= three></span>  final class ClassName { <br>
+                            
+                                <span class= four ></span>  // Class Properties Definging (public Variable) [with Null Property Value] : <br>
+                                <span class= four ></span>  public propertyName1;  <br>
+                                
+                                <span class= four ></span>  // Class Method Defining to access to a certain Property [To change the value] with Using (Parameter + $this) ] :  <br>
+                                <span class= four ></span>  final public function MethodName1($Par1) { <br> 
+                                    <span class= five ></span> $this->propertyName1 = $Par1; <br>
+                                    <span class= five ></span> echo 'Your Property is ' . $Par1 ; <br>
+                                <span class= four ></span> } <br><br>                                                                                                
+
+                            <span class= three ></span> } <br><br> <br>
+                            
+                                                    
+                        
+                        //=========================================================== <br> <br>
+                                                        
+                <p> =&gt; Vue new Syntax of the [Directives - v-for] (1) Application as following :  <br> </p>
+
+                    <ol type="A">                                                                                                                                
+                        <li> First Example  => Looping inside a Normal Array & An Array of objects of the Vue Model , and print thier values within a list element    </li>
+                    </ol> <hr>                                                        
+                    //=========================================================== <br> <br>                                                                                                            
+                    <br><br> 
+               </div>  -->
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPPract" id="PHPPract"> 
+             <header>
+                <h3> Vue.js [Using Vue Directive {v - for}] General Practical Applications : </h3>
+            </header>
+            
+            <p> In this lesson will be (1) Application { Using Directive [v - for]= } > as following :  </p>
+
+                 <ol type="A">
+                                                            
+                    <li> First Example => Creating a [Vue Application Container] with [Simple and Advanced Loopig inside a simple array and Array of Objects ] , and including the following steps : <br>
+                        <ul>
+                            <li> Defining and Creating the [Vue Main Container] {app-one} , with including the following : <br> 
+                                <ul> 
+                                    <li> List includes inside it's elements a Array's Element values </li> 
+                                    <li> List includes inside it's elements a Array's Object Element values [keynames & values] </li>                                     
+                                </ul>
+                            </li>                            
+                            <li> Vue Model Containing :  <br>
+                                <ul>   
+                                    <li> Data elements : <br>
+                                        <ol>
+                                            <li> {el} property = It's Value is the Model Title string Value  </li>
+                                            <li> {langs} normal array = It's Value is the v-text sytnax text </li>
+                                            <li> {completedTests} object array = It's Value is the v-html syntax code </li>                                            
+                                        </ol>                                    
+                                    </li>       
+                                </ul>    
+                            </li>                                                     
+                        </ul>                                                                                    
+                    </li>                                                                                                      
+                                                                
+               </ol> <hr>                  
+                                                                         
+        </section>                     
+        
+        <!-- The following is the main Vue application Container , which will be accessed by the Vue Framework using the Container [ID]   -->
+        
+        <!-- First Vue Application [Looping inside normal array and object array with in Vue Model Instances]  -->
+            <div id="app-one">              
+                <h1> This is the First Vue Application : [ {{el}} ] </h1>
+                <p> Welcome {{'Mr [' + name + ']'}}  </p> <hr> <br>
+                
+                <h2> Looping inside First simple array [with single value - with FIRST collection of variables to loop inside the array ] : </h2>
+                <ul>
+                    <li v-for="(skill , index) in langs" > {{ index }} => {{ skill }} </li> <hr> <br>
+                </ul>
+                
+                <h2> Looping inside Second simple array [with single value - with SECOND collection of variables to loop inside the array ] : </h2>
+                <ul>
+                    <li v-for="(index , br) in browsers" > {{ index }} => {{ br }}  </li>
+                </ul>
+
+                <h2> Looping inside First Object array [with single value for each property] : </h2>
+                <ul>
+                    <li v-for="(test , index) in completedTests" > {{ index }} => {{ test.testName }} || {{ test.testResult }}  </li> <hr> <br>
+                </ul>
+                
+                <h2> Looping inside First Object array [with array values for each property] : </h2>
+                <ul>
+                    <li v-for="(lvl , index) in plvls"> {{'Frontend level number' + (index + 1) }} : {{ lvl.frontend }} <br> {{'Backend level number' + (index + 1) }} : {{ lvl.backend}} <br> <br> </li>
+                </ul>
+                                
+            </div>  <br> <hr>
+
+
+            <!-- The following is the main Vue Framework Importing Syntax [from Application Folder]  -->
+            <script src="js/vue.js"></script>
+            
+            <!-- The following is the main Vue application Model including the [the container elmennt Name + Vue Data]  -->
+            <script> 
+                var vm = new Vue({
+                    el: '#app-one',
+                    data: {                        
+                        el: 'app-one',
+                        name: 'SHADI', 
+                        
+                        // Normal Arrays :
+                        langs: ['Html', 'Css' ,'JS' , 'Vue.js'],  
+                        
+                        browsers: ['vscode', 'brackets' , 'lime' , 'lime' , 'netbeans'],
+
+                        // Array of Objects number 1 => {each object as elements with single value} :
+                        completedTests: [                        
+                            // first array element object [of single value for each object property]:
+                            {
+                                testName:"test one",
+                                testResult:"90%",
+                            },
+                            
+                            // second array element object [of single value for each object property] : 
+                            {
+                                testName:"test two",
+                                testResult:"80%",
+                            },
+                            
+                            // third array element object [of single value for each object property] :
+                            {
+                                testName:"test three",
+                                testResult:"60%",
+                            }
+                        ],
+
+                        // prgramming levels [Array of Objects number 2] => {each object as elements with array values } : 
+                        plvls: [ 
+                            // first array element object [of array value for each object property] :
+                            {
+                                frontend: ['html' , 'css' , 'js' ],
+                                backend: ['php' , 'mysql' ],
+                            },
+
+                            // second array element object [of array value for each object property] : 
+                            {
+                                frontend: ['dom' , 'bom' , 'jsoop' ],
+                                backend: ['phpoop' , 'mysql' , 'XAMMP' ],
+                            },
+                            
+                            // third array element object [of array value for each object property] :                            
+                            {
+                                frontend: ['react' , 'angular' , 'vue' ],
+                                backend: ['cmd' , 'api' ],
+                            },                            
+                        ],
+                    }                    
+                });
+            </script>
+
+            <section id=sec class=txtarea >                                  
+                 <!-- <a class=btn href="http://localhost/PHPOOP%20Course/15%20Learn%20Object%20Oriented%20PHP%20-%20Inheritance%20Final%20Keyword/15%20Learn%20Object%20Oriented%20PHP%20-%20Inheritance%20Final%20Keyword.php">  
+                    {Main Page} [Display] => {6 Learn VueJs In Arabic - Methods Exampless} => Lesson 15 PHP File Webpage by Localhost 
+                </a> <br> <br>              -->
+                
+                <a class=btn href="8 Learn VueJs In Arabic - Directives - v-for.html">  
+                    {Main Page} [Source Code] => {8 Learn VueJs In Arabic - Methods Examples} => Lesson 8 Methods Examples
+                </a> 
+            </section> <br>  
+        <!------------------------------------------------------------------------------------------------------>                                 
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection">
+            <h3> Lesson 8 Video File:</h3>
+            <video controls width="300" height="300">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\8 Learn VueJs In Arabic - Directives - v-for.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video>
+        </section>
+        
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU:
+                 <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter>
+                 &nbsp;&nbsp;&nbsp; Uploading: 
+                 <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open style="display: flex; width:100%">
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://shadi-pro.epizy.com"> My Personal Reference </a></li>
+                <li> <a href="https://shadi-cv.epizy.com"> My Personal Resume </a></li>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 8 Learn VueJs In Arabic - Directives - v-for");
+    </script>
+
+    
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Lesson 21 [Javascript Scope part 2]</title>
+    <link
+      rel="stylesheet"
+      href="JavaScript [Javascript Scope part 2].css"
+      media="all"
+    />
+
+    <script src="Scope part 2Gen.js"></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JavaScript Lesson 21 [Javascript Scope part 2]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to Javascript main Topics">
+            JavaScript [Javascript Scope] Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSScopeCon"
+            title="Go to  [Javascript Scope part 2] Concept"
+          >
+            [Javascript Scope part2] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSScopeExp11"
+            title="Go to [Javascript Scope part 2] Example 1"
+          >
+            [Javascript Scope] Example 1
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSScopeExp2"
+            title="Go to [Javascript Scope part 2] Example 2"
+          >
+            [Javascript Scope] Example 2
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSScopeExp3"
+            title="Go to [Javascript Scope part 2] Example 3"
+          >
+            [Javascript Scope] Example 3
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSScopeExp4"
+            title="Go to [Javascript Scope part 2] Example 4"
+          >
+            [Javascript Scope] Example 4
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSScopeExp5"
+            title="Go to [Javascript Scope part 2] Example 5"
+          >
+            [Javascript Scope] Example 5
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSScopeExp6"
+            title="Go to [Javascript Scope part 2] Example 6"
+          >
+            [Javascript Scope] Example 6
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JavaScript Course
+      <span>
+        JavaScript Lesson 21 [Javascript Scope part 2] Advanced Examples</span
+      >
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>[Javascript Scope part 2] : Advanced Examples</header>
+
+        <article>
+          <p>
+            &gt; The New Subjects in this lesson are [Advanced Examples] as
+            following :
+          </p>
+          <ol type="A">
+            <li>[Javascript Scope] Concept .</li>
+
+            <li>
+              [Javascript Scope] Example 1: (Invoking & Using Global Variable
+              inside Local Scope) .
+            </li>
+
+            <li>
+              [Javascript Scope] Example 2: (Reusing Global Variable's Name
+              inside Local Scope as new Local Variable) .
+            </li>
+
+            <li>
+              [Javascript Scope] Example 3: (Invoking & Re-Allocating Global
+              Variable inside Local Scope) .
+            </li>
+            <li>
+              [Javascript Scope] Example 4: (Function (Local Scope) Inside
+              anothter Child Function Child (Local Scope) + Invoking &
+              Re-Allocating Global Variable inside Local Scope) .
+            </li>
+
+            <li>
+              [Javascript Scope] Example 5: (Function (Local Scope) Inside
+              anothter Child Function Child (Local Scope) + Reusing Global
+              Variable's Name inside Local Scope as new Local Variable) .
+            </li>
+            <li>
+              [Javascript Scope] Example 6: (3 Functions (3 Local Scopes) Inside
+              anothter each other) .
+            </li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSScopeCon" id="JSScopeCon">
+        <header>
+          <h3>Main Concept of [Javascript Scope ] :</h3>
+        </header>
+        <p>
+          =&gt; [Javascript Scope Part 2] are Containing Advanced Scoping
+          Practical Examples Which are Divided By Subjects or Topics (6 Topics),
+          and Each topic is Displaying one Or more Features of Scoping in any
+          Programing language generally & in JS Specially
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSScopeExp11" id="JSScopeExp11">
+        <header>
+          <h3>[Javascript Scope] Example 1:</h3>
+        </header>
+
+        <p>=&gt; (Invoking & Using Global Variable inside Local Scope) :</p>
+
+        <div id="Display" class="JSScopeExp"></div>
+        <button class="btn" onclick="process1()">
+          Start Example (1) Application
+        </button>
+        <script src="ScopeExp1.js"></script>
+
+        <div class="JSScopeExp1">
+          <button class="btn" onclick="display()">
+            Click to Show [ Invoking & Using Global Variable inside Local Scope
+            ] Application JS Code
+          </button>
+
+          <code>
+            // Example 1 : (Invoking & Using Global Variable inside Local
+            Scope):<br />
+            function process1() {<br /><br />
+            &nbsp;&nbsp; alert("Welcome to Multiply Application (Example1)
+            ...");<br /><br />
+
+            &nbsp;&nbsp; var x = prompt("Enter your First Global Number:"), //
+            Global Variable<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; z = prompt("Enter your Second Global
+            Number:"); // Global Variable<br /><br />
+
+            &nbsp;&nbsp; function testFunc() <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; "use strict"; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; var calc = x * z; <br />
+            <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp; alert(calc + ": This is Multiply Result
+            From a Local Scope");<br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("Display").innerHTML = calc +<br />
+            <br />
+            &nbsp;&nbsp; &nbsp; &nbsp;" : This is Addition Result From a Local
+            Scope"; <br />
+            &nbsp;&nbsp; } <br />
+            &nbsp;&nbsp; return testFunc(); <br />
+            } <br />
+          </code>
+
+          <textarea id="SourceCode" readonly></textarea>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSScopeExp2" id="JSScopeExp2">
+        <header>
+          <h3>[Javascript Scope] Example 2:</h3>
+        </header>
+
+        <p>
+          =&gt; (Reusing Global Variable's Name inside Local Scope as new Local
+          Variable) :
+        </p>
+
+        <div id="Display1" class="JSScopeExp"></div>
+        <button class="btn" onclick="process2()">
+          Start Example (2) Application
+        </button>
+        <script src="ScopeExp1.js"></script>
+
+        <div class="JSScopeExp1">
+          <button class="btn" onclick="display()">
+            Click to Show [ Reusing Global Variable's Name inside Local Scope as
+            new Local Variable ] Application JS Code
+          </button>
+
+          <code>
+            // Example 2: (Reusing Global Variable's Name inside Local Scope as
+            new Local Variable) :<br />
+            function process2() { <br />
+            <br />
+            &nbsp;&nbsp; "use strict"; <br />
+            &nbsp;&nbsp; alert("Welcome to Multiply & Division Application
+            (Example2) ..."); <br />
+            <br />
+
+            &nbsp;&nbsp; var x = 5, // Global Variable <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; z = 6; // Global Variable <br />
+            <br />
+
+            &nbsp;&nbsp; function testFunc1() { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; var x = prompt("Enter your Main Global
+            Number1 :"), // using the same<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; name of Global Variable as a local
+            Variable <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; z = prompt("Enter your Main Global
+            Number2 :"); // using the same <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; name of Global Variable as
+            a local Variable <br />
+            <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("Display1").innerHTML = x + " : This is
+            First<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; Number (Local Variable) from Local Scope
+            " + "&lt;br&gt;" + z + ": This is<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; Second Number (Local Variable) form
+            Local Scope"; <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; alert(x + " : This is First Number (Local
+            Variable) from Local Scope \n<br />
+            &nbsp; &nbsp; &nbsp; &nbsp;" + z + ": This is Second Number (Local
+            Variable) from Local Scope"); <br />
+            &nbsp;&nbsp; } <br />
+            &nbsp;&nbsp; return testFunc1(); <br />
+            } <br />
+          </code>
+
+          <textarea id="SourceCode1" readonly></textarea>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSScopeExp3" id="JSScopeExp3">
+        <header>
+          <h3>[Javascript Scope] Example 3:</h3>
+        </header>
+
+        <p>
+          =&gt; (Invoking & Re-Allocating Global Variable inside Local Scope) :
+        </p>
+
+        <div id="Display2" class="JSScopeExp"></div>
+        <button class="btn" onclick="process3()">
+          Start the Example (3) Application
+        </button>
+        <script src="ScopeExp1.js"></script>
+
+        <div class="JSScopeExp1">
+          <button class="btn" onclick="display()">
+            Click to Show [ Invoking & Re-Allocating Global Variable inside
+            Local Scope] Application JS Code
+          </button>
+
+          <code>
+            // Example 3: (Invoking & Re-Allocating Global Variable inside Local
+            Scope) : <br /><br />
+            function process3() { <br />
+            &nbsp;&nbsp; "use strict"; <br />
+            &nbsp;&nbsp; alert("Welcome to Modifiying Input Application
+            (Example3) ..."); <br />
+
+            &nbsp;&nbsp; var name = prompt("Enter a Name ..."), // Global
+            Variable <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; num = prompt("Enter a Number ..."); //
+            Global Variable <br /><br />
+
+            &nbsp;&nbsp; function testFunc2() { <br />
+            &nbsp; &nbsp;&nbsp; &nbsp; name = "Shadi", // Invoking the Global
+            Variable and Re-Alocating it<br />
+            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; with different Value <br />
+            &nbsp;&nbsp; &nbsp; &nbsp; num = 100 ; // Invoking the Global
+            Variable and Re-Alocating it <br />
+            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; with different Value <br />
+            <br />
+
+            &nbsp;&nbsp;&nbsp; &nbsp; alert("Your Name has been modified to: " +
+            name + " \n Your Number has<br />
+            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; been Modified to:" + num);
+            <br />
+            <br />
+
+            &nbsp;&nbsp;&nbsp; &nbsp;
+            document.getElementById("Display2").innerHTML = "Your Name has
+            been<br />
+            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; modified to: " + name +
+            "&lt;br&gt;" + "Your Number has been Modified<br />
+            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; to:" + num ; <br />
+            &nbsp;&nbsp; }<br />
+            &nbsp;&nbsp; return testFunc2(); <br />
+            } <br />
+          </code>
+
+          <textarea id="SourceCode2" readonly></textarea>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSScopeExp4" id="JSScopeExp4">
+        <header>
+          <h3>[Javascript Scope] Example 4:</h3>
+        </header>
+
+        <p>
+          =&gt; (Function (Local Scope) Inside anothter Child Function Child
+          (Local Scope) + Invoking & Re-Allocating Global Variable inside Local
+          Scope) :
+        </p>
+
+        <div id="Display3" class="JSScopeExp"></div>
+        <button class="btn" onclick="process4()">
+          Start the Example (4) Application
+        </button>
+        <script src="ScopeExp1.js"></script>
+
+        <div class="JSScopeExp1">
+          <button class="btn" onclick="display()">
+            Click to Show [ Invoking & Re-Allocating Global Variable inside
+            Local Scope] Application JS Code
+          </button>
+
+          <code>
+            // Example 4: (Function (Local Scope) Inside anothter Child Function
+            Child (Local Scope) + Invoking & Re-Allocating Global Variable
+            inside Local Scope) :<br /><br />
+            function process4() { <br />
+            &nbsp;&nbsp; "use strict"; <br />
+            &nbsp;&nbsp; alert("Welcome to (2) Nested Scopes Application
+            (Example4) ..."); <br />
+            <br />
+
+            &nbsp;&nbsp; var fname = prompt("Enter your First Name ..."); //
+            Global Variable <br /><br />
+            &nbsp;&nbsp; function testFunc3() { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; var sname = prompt("Enter your Second Name
+            ...") ;<br />
+            <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp; alert("Your Full Name is :" + fname + " " +
+            sname); <br />
+            <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("Display3").innerHTML = "Your Full Name is
+            :" +<br />
+            &nbsp;&nbsp; &nbsp; &nbsp; fname + " " + sname; <br />
+            &nbsp;&nbsp; } <br />
+            &nbsp;&nbsp; return testFunc3(); <br />
+            } <br />
+          </code>
+
+          <textarea id="SourceCode3" readonly></textarea>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSScopeExp5" id="JSScopeExp5">
+        <header>
+          <h3>[Javascript Scope] Example 5:</h3>
+        </header>
+
+        <p>
+          =&gt; (Function (Local Scope) Inside anothter Child Function Child
+          (Local Scope) + Reusing Global Variable's Name inside Local Scope as
+          new Local Variable) :
+        </p>
+
+        <div id="Display4" class="JSScopeExp"></div>
+        <button class="btn" onclick="process5()">
+          Start the Example (5) Application
+        </button>
+        <script src="ScopeExp1.js"></script>
+
+        <div class="JSScopeExp1">
+          <button class="btn" onclick="display()">
+            Click to Show [ Function (Local Scope) Inside anothter Child
+            Function Child (Local Scope) ] Application JS Code
+          </button>
+
+          <code>
+            // Example 5: (Function (Local Scope) Inside anothter Child Function
+            Child (Local Scope) + Reusing Global Variable's Name inside Local
+            Scope as new Local Variable) : <br />
+            <br />
+
+            function process5() { <br />
+            &nbsp;&nbsp; "use strict"; <br />
+            &nbsp;&nbsp; alert("Welcome to (2) Nested Scopes Application
+            (Example5) ..."); <br />
+            <br />
+
+            &nbsp;&nbsp; var fname = prompt("Enter your First Name ..."), //
+            Global Variable <br />
+            &nbsp;&nbsp; &nbsp; &nbsp; age = 30; // Global Variable <br />
+            <br />
+
+            &nbsp;&nbsp; function testFunc4() { <br />
+
+            &nbsp;&nbsp; &nbsp; &nbsp; var sname = prompt("Enter your Second
+            Name ...") , <br />
+            &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; age = prompt("Enter your
+            Age"); // Using Global Variable's<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; name
+            & Re-Allocating it with different value... <br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Full Name is :" +
+            fname + " " + sname +<br />
+            &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "\n Your Age is :" + age);
+            <br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("Display3").innerHTML = "Your Full Name is
+            :" <br />
+            &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; + fname + " " + sname + "
+            Your Age is :" + age; <br />
+            &nbsp;&nbsp; } <br />
+            &nbsp;&nbsp; return testFunc4(); <br />
+            } <br />
+          </code>
+
+          <textarea id="SourceCode4" readonly></textarea>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSScopeExp6" id="JSScopeExp6">
+        <header>
+          <h3>[Javascript Scope] Example 6:</h3>
+        </header>
+
+        <p>
+          =&gt; ((3 Functions (3 Local Scopes) Inside anothter each other)) :
+        </p>
+
+        <div id="Display5" class="JSScopeExp"></div>
+        <button class="btn" onclick="process6()">
+          Start the Example (6) Application
+        </button>
+        <script src="ScopeExp1.js"></script>
+
+        <div class="JSScopeExp1">
+          <button class="btn" onclick="display()">
+            Click to Show [ 3 Functions (3 Local Scopes) Inside anothter each
+            other ] Application JS Code
+          </button>
+
+          <code>
+            // Example 6: ((3 Functions (3 Local Scopes) Inside anothter each
+            other)) : <br /><br />
+            function process6() { <br />
+            &nbsp; &nbsp; "use strict"; <br />
+            &nbsp; &nbsp; alert("Welcome to (3) Nested Scopes Application
+            (Example6) ..."); <br /><br />
+
+            &nbsp; &nbsp; var fname = prompt("Enter your First Name ..."), //
+            Global Variable <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; age = 30; // Global Variable
+            <br /><br />
+
+            &nbsp; &nbsp; function parentFunc() { <br />
+
+            &nbsp; &nbsp; &nbsp; &nbsp; var sname = prompt("Enter your Second
+            Name ...") , // Local Variable <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; of Local Scope level 1
+            <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; age = prompt("Enter your Age"); // Using
+            Global Variable's name As a<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Local Variable (Parent
+            Scope) & Re-Allocating it with<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; different value...<br /><br />
+
+            &nbsp; &nbsp; &nbsp; &nbsp; function childFunc() { <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var lname = prompt("Enter
+            your Last Name ..."); // Local Variable <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; of Local
+            Scope level 2 <br /><br />
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            document.getElementById("Display5").innerHTML =<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "Your Full
+            Name is :" + fname + " " + sname + " " + lname +<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "&lt;br&gt;"
+            + " Your Age is :" + age; // Invoking different Local<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            Variabel form different Local Scope Levels [In one Element]
+            <br /><br />
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert("Your Full Name is
+            :" + fname + " " + sname + ""<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +
+            lname + "\n Your Age is :" + age); <br />
+
+            &nbsp; &nbsp; &nbsp; &nbsp; } <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; return childFunc(); //Allocating the
+            Parant Function Return as Child<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Function
+            Invoking<br />
+            &nbsp;&nbsp; } <br />
+            &nbsp;&nbsp; return parentFunc(); //Allocating the Process Function
+            Return as Parent <br />
+            &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; Function
+            Invoking <br />
+            } <br />
+          </code>
+
+          <textarea id="SourceCode5" readonly></textarea>
+        </div>
+      </section>
+      <!----------------------------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Intro</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="210"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="365" />
+          <input type="hidden" name="months" value="22" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to get basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num2" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg" />
+          Your browser Does Not Support the Audio file format...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 21 Video File:</h3>
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=VPQJNF_JXds&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=21"
+        >
+        </iframe>
+        <!-- <video controls width="300" height="300" >
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/21 Scope Part 2.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                           -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JavaScript : Lesson 21 [Javascript Scope part 2]");
+    </script>
+
+    <!--
+    <script src="Logical Operator.js"></script>
+    -->
+  </body>
+</html>

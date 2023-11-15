@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 27 HTML5 New Tags [Canvas - Create Simple Canvas] {Part 3} </title>
+    <link rel="stylesheet" href="HTML5  [Canvas Create Simple Canvas].css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">  </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 27 HTML5 New Tags [Canvas Create Simple line]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="HTML5 [Canvas Create Simple Line] Main Concept" > HTML5 [Canvas Create Simple Line] Main Concept" </a> </li>            
+            <li> <a href=#CanvasNTag  title="Go to Canvas Create Simple Line" >
+                    Canvas Create Simple Line  </a> </li>     
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> HTML5 Lesson 27 HTML5 New Tags [Canvas Create Simple Linse] {Part 3}</span> 
+    </main>
+<!-------------------------------------------------------------------------------------------------------------->                        
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>                 
+                HTML5 Lesson 27 [Canvas Create Simple Canvas]
+            </header>
+            
+            <article>                                                
+                <p> &gt; The New HTML5 New Tags in this lesson as following :</p>
+                <ol>                    
+                    <li> &lt;canvas&gt; &nbsp; &lt;/canvas&gt;  </li>                               
+                    <li> Fill Style  </li>                               
+                    <li> Stroke Style  </li>                               
+                    <li> Fill & Stroke Rectangle  </li>                               
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>       
+        <section class="CanvasSimple" id="CanvasSimple">
+            <header>                
+                &lt; canvas &gt; &nbsp; &lt; /canvas &gt;
+            </header>
+            
+            <article>
+                <header>
+                    <h1> HTML5 New Tag [Canvas Create Simple Canvas] Concept: </h1>
+                    
+                    <p> =&gt; [Canvas] is not an easy Technology, but not a hard one neither.
+                    
+                    <p> =&gt; [Canvas] is needing an extensive practising and trainings .
+                    
+                    <p> =&gt; [Canvas] is integrated with JS codes via Script Tag.
+                    
+                    <p> =&gt; [Canvas] can be created Severally in the same Web-page .                    
+                    
+                    <p> =&gt; [Canvas] which created in Web-page can ber downloaded from the page as an image directly .                                                                    
+                </header>
+                                        
+                
+                <header>
+                    <h1>[Canvas] Syntax:</h1>
+                        <p> Following there the Js Codes related with Canvas Tag Properties :</p>
+                        <div>
+                            <p> A) [Identiying Canvas] in JS as a Variable:</p>
+                            &nbsp;&nbsp; var CanvasName = document.getElementById("Canvas ID");
+                            ===========================================================
+                            ===========================================================                            
+                            <br><br>
+                            
+                            <p> B) [Identiying Canvas Context] in JS as a Variable:</p>
+                            &nbsp;&nbsp; var ContextName = CanvasName.getContex('2d');
+                            ===========================================================
+                            ===========================================================                            
+                            <br><br>
+                            
+                            <p> C) [Drawing Rectangle by (Fill Style) with (Certain Color)] in JS as a Variable:</p>
+                            1) Assigning color of the Fill Recatngle Shape with (Fill Style)  : <br>
+                            &nbsp;&nbsp; ContexName.fillStyle = "#800"; <br><br>
+                            
+                            2) Drawing the Recatngle Shape with (Fill Style) : <br>
+                            &nbsp;&nbsp; ContexName.fillRect(x, y, width, height); <br>
+
+                            ===========================================================
+                            ===========================================================                            
+                            <br><br>                            
+                            
+                            <p> D) [Drawing Rectangle by (Stroke Style) ] in JS as a Variable:</p>
+                            
+                            1) Assigning color of the Border Recatngle Shape with (Stroke Style)  : <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; ContexName.strokeStyle = "#800"; <br><br>
+                            
+                            2) Drawing the Recatngle Shape with (Stroke Style) : <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; ContexName.strokeRect(x, y, width, height); <br>                            
+                            
+                            ===========================================================
+                            ===========================================================                            
+                            ===========================================================                            
+                            <br><br>
+                            
+                            <p> E) [Drawing Rectangle by Negative Method using (Clear) ] in JS :</p>
+                            
+                             1) [Identiying Canvas] in JS as a Variable: <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; var CanvasName = document.getElementById("Canvas Id");<br><br>
+                            
+                             2) [Identiying Canvas Context] in JS as a Variable: <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; var ContextName = CanvasName.getContex('2d');<br><br>
+                            
+                             3) Assigning color of the Fill Recatngle Shape with (fill Style)  : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; ContexName.fillStyle = "#800"; <br><br>
+                            
+                             4) Drawing the Recatngle Shape with (fill Style) with full Canvas Size : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; ContexName.fillRect(0, 0, Canvas width, Canvas height); <br><br>
+                                                                                    
+                             5) Drawing the Recatngle Shape with Negative (Clear) with partial Canvas Size : <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; ContexName.clearRect(x, y, width, height); <br><br>                                             
+                            ===========================================================
+                            ===========================================================                            
+                            ===========================================================                            
+                            <br><br>                                                                                        
+                        </div>                                            
+                </header>    
+                
+                <header>
+                    <h3> HTML5 [ Canvas Create Simple Canvas] Practical Applications :  </h3>                     
+                </header>                                                
+                    
+                    <br>
+                    
+                <textarea id=txtarea class=txtarea > </textarea><br>    
+
+                <canvas id="c" class="c"> </canvas>                        
+                
+                <button class=btn onclick="Canv()"> Click to Start [Canvas - Simple Canvas] Main Number part2 
+                                                     Application
+                </button> <br>
+                
+                <button class=btn onclick=Clear()> Click to Clear the Shapes in the Canvas</button>
+                
+
+                <script src="CanvasSimpleL.js"> </script>                                        
+            <hr>
+
+                <div class=CanvSimp >
+                    <code>
+                        // HTML Codes: <br>
+                        &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        &lt;/textarea&gt; <br><br>
+
+                        &lt;button class="btn" onclick="(Canv)"&gt;<br>                            
+                        &nbsp;&nbsp; Click to Start [Canvas - Simple Canvas] Main Number part2 
+                                                     Application <br>                               
+                        &lt;/button&gt; <br><br>                            
+
+                        &lt;script src="CanvSimpleL.js"&gt;<br>                            
+                        &lt;/script&gt; <br><br>
+
+                        =======================================================<br><br>
+
+                        // JS Codes [CanvSimp.js] : <br><br>
+                        /* global alert, document, prompt, console */<br>
+                        /* jslint plusplus: true evil: true */ <br>
+                        /* [Canvas Create Simple Line] Applicationc {Part 3} */ <br><br>
+                        function Canv () { <br>
+    
+                        
+                
+                    </code>                 
+                    
+                </div>
+                    
+            </article>                
+        </section>
+
+    <!------------------------------------------------------------------------------------------------------>                                
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Create Simple Canvas </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="12">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num1">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 26 Video File:</h3>
+                <video controls width="300" height="300" autoplay>
+                    <source src="C:/Users/hp/Videos/pLanguages/web/1 Web Designing Front End/A HTML/2 HTML 5/HTML 5/28 Canvas - Create Simple Canvas.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video> 
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

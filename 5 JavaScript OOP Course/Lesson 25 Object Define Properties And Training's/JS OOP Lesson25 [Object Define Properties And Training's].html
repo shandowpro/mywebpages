@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS OOP Lesson 25 [Object Define Properties And Training's] </title>
+    <link rel="stylesheet" href="JS OOP Lesson25 [Object Define Properties And Training's].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JS OOP Lesson 25 [Object Define Properties And Training's {Additonal Methods}]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS OOP main Topics">
+                [Object Define Properties And Training's ] Main Topics </a> </li>
+
+            <li> <a href=#JSOOPCon title="Go to JS OOP [Object Define Properties And Training's ] Concept">
+                [Object Define Properties And Training's ] Concept </a> </li>
+
+            <li> <a href=#JSOOPImp title="Go to JS OOP [Object Define Properties And Training's ] Importance & Benefits">
+                [Object Define Properties And Training's ] Importance & Benefits </a> </li>
+
+            <li> <a href=#JSOOPSyntx title="Go to JS OOP [Object Define Properties And Training's ] Syntax">
+                [Object Define Properties And Training's ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSOOPPract title="Go to JS OOP [Object Define Properties And Training's ] Practical Applications">
+                [Object Define Properties And Training's ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS OOP Course <span> JS OOP Lesson 25 [Object Define Properties And Training's Additional Methods ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                JS OOP [Addtional Object's Properties Methods ] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS OOP [Object Define Properties And Training's ] Concept. </li>                    
+                    
+                    <li> JS OOP [Object Define Properties And Training's ] Importance & Benefits. </li>
+
+                    <li> JS OOP [Object Define Properties And Training's ] Syntax [Definition + Access]. </li>
+                    
+                    <li> JS OOP [Object Define Properties And Training's ] Practical Application. </li>
+                </ol>                
+                
+                <p> &gt; New Methods in this lesson are as following :</p>
+                    <ul>
+                        <li> General Method of Defining {new Group of Object's Properties} with full Properties Meta Data >><br>
+                             Object.defineProperties(objName,{ <br>
+                            <span class=one></span> propName1 { <br>
+                                <span class=two></span> writable: false-true, <br>
+                                <span class=two></span> enumberable: false-true, <br>
+                                <span class=two></span> configuralbe: false-true, <br>
+                                <span class=two></span> value:"", <br>
+                                <span class=one></span>}, <br> <br>
+                            
+                            <span class=one></span> propName2 { <br>
+                                <span class=two></span> writable: false-true, <br>
+                                <span class=two></span> enumberable: false-true, <br>
+                                <span class=two></span> configuralbe: false-true, <br>
+                                <span class=two></span> value:"", <br>
+                                <span class=one></span>}, <br> <br>
+                                                        
+                            <span class=one></span> propName3 { <br>
+                                <span class=two></span> writable: false-true, <br>
+                                <span class=two></span> enumberable: false-true, <br>
+                                <span class=two></span> configuralbe: false-true, <br>
+                                <span class=two></span> value:"", <br>
+                                <span class=one></span>}, <br>
+                            
+                            }); <br></br>
+                        </li>
+                        
+                        
+                        <li> General Method of Calling (get) Object's {Single} Property Attributes (Descriptor) >>> <br>
+                            Object.getOwnPropertyDescriptor(ObjName.PropName); <br>
+                            Object.getOwnPropertyDescriptor(ObjName[PropName]); <br>                            
+                        </li>                        
+                        
+                        <li> Method of Calling (get) All Object's [enumerable] Properties's Names >>> <br>
+                            Object.keys(objName);  </li>
+                    </ul>
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPCon" id="JSOOPCon">
+            <header>
+                <h3> JS OOP [Object Define Properties And Training's ] Concept: </h3>
+            </header>
+                        
+            <p> =&gt; JS OOP [Object Define Properties And Training's ]: Addtional Methods of Object's Properites can gives several and usefull features to Ojbect's propeortis control.
+            
+            <p> =&gt; JS OOP [Object Define Properties And Training's ]: New Addtional Methods of Object's Properites Concept as following : <br>
+                <ol>
+                    <li> Defining {new Group of Object's Properties} Method =&gt; This Method gives Developer great Ability to defien a whole new group of new Properties , with full Attibutes Assigning for each property  </li>
+                    
+                    <li> Calling/(get) Object's {Single} Property Attributes (Descriptor) Method  =&gt; This Method gives Developer specfic Ability to access to a sibngle certain Object's property's Attributes/Desciptor  </li>
+                    
+                    <li> Calling (get) All Object's [enumerable] Properties's Names/keys =&gt; This Method gives Developer accurate Ability to access to all Object 's enumberable Properties only   </li>
+
+                </ol>
+                                
+            <p> =&gt; JS OOP [Object Define Properties And Training's ]: This lesson gives more Advanced knowledge about Object Defining Method and it's relation to Object's properties's Attributes types.
+                                                                                                             
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSOOPImp" id="JSOOPImp">
+            <header>
+                <h3> JS OOP [Object Define Properties And Training's ] Importance & Benefits: </h3>
+            </header>
+
+            <p> [Object Define Properties And Training's ]  : <br>
+                <ul>                                                 
+                    <li> Advanced & useful Methods to Get accurate information about Object's Properties [Attributes Types - Names - Values]</li>                            
+                    
+                    <li> Advanced knowledge about how to control Porperties attributes by the Method of property defining </li>                            
+                                    
+                </ul>
+                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPSyntx" id="JSOOPSyntx">
+            <header>
+                <h3> JS OOP [Object Define Properties And Training's ] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS OOP Defining-Declaring [Class] Conceptual Syntax as following : </p>
+            
+            <div id="Code" class="Code">
+                // A) JS OOP General Methods of {Defining New Object's [single Property]} Syntax as following :<br><br>
+                    <span class = one></span> // 1) Original Definging Constructor (Object + Property Method) : <br> <br>                    
+                    
+                    <span class = one></span>// One line Form: <br>
+                        <span class = two></span> const myObj = {propName1:value1};  <br> <br>
+                    
+                    <span class =one></span>// Multiple lines Form : <br>
+                        <span class =two></span> const myObj = { <br>
+                            <span class =three></span> propName1:value1 <br>
+                        <span class =two></span>}; <br> <br>
+
+                    /// =================================================================================== <br><br>
+                    
+                    <span class = one></span> // 2) Direct Shortcut Definging New Property Method: <br> <br>                    
+                        <span class = two></span> myObj.newPropName = value; <br> <br>
+                    
+                    /// =================================================================================== <br><br>
+                    
+                    <span class = one></span> // 3) Full Attributes Object's Property Define Method: <br> <br>                    
+                    <span class = one></span> // One Line Form:
+                        <sp1an class = two></span> Object.defineProperty(ObjName, "propName", {writable: true-false, enumerable: true-false, configuable: true-false, value:"value"}); <br> <br>                    
+                                                        
+                    
+                    <span class = one></span> // Multiple Lines Form:
+                        <span class = two></span> Object.defineProperty(ObjName, "propName", { <br>
+                            <span class = three></span> writable: true-false, <br>
+                            <span class = three></span> enumerable: true-false, <br>
+                            <span class = three></span> configuable: true-false, <br>
+                            <span class = three></span> value:"value"}); <br>                    
+
+                /// =================================================================================== <br><br>
+                /// =================================================================================== <br><br>
+                
+                // B) JS OOP General Methods of {Defining New Object's [Multiple Properties]} Syntax as following :<br><br>
+                
+                    <span class = one></span> // 1) Original Definging Constructor (Object + Properties Method) : <br> <br>                    
+                    
+                    <span class = one></span>// One line Form: <br>
+                        <span class = two></span> const myObj = {propName1:value1, propName2:value2, propName3:value3};  <br> <br>
+                    
+                    <span class =one></span>// Multiple lines Form : <br>
+                        <span class =two></span> const myObj = { <br>
+                            <span class =three></span> propName1:value1, <br>
+                            <span class =three></span> propName2:value2, <br>
+                            <span class =three></span> propName3:value3, <br>
+                        <span class =two></span>}; <br> <br>
+
+                    /// =================================================================================== <br><br>
+                    
+                    <span class = one></span> // 2) Direct Shortcut Definging New Property Method: <br> <br>                    
+                        <span class = two></span> myObj.newPropName1 = value1; <br> <br>
+                        <span class = two></span> myObj.newPropName2 = value2; <br> <br>
+                        <span class = two></span> myObj.newPropName3 = value3; <br> <br>
+                    
+                    /// =================================================================================== <br><br>
+                    
+                    <span class = one></span> // 3) Full Attributes Object's Property Define Method: <br> <br>                                        
+                        <sp1an class = two></span> Object.defineProperty(ObjName, "propName", {writable: true-false, enumerable: true-false, configuable: true-false, value:"value"}); <br> <br>                    
+                                                        
+                    
+                    <span class = one></span> // Multiple Lines Form [this Method is a must]: <br>
+                        <span class = two></span> Object.defineProperties(ObjName, { <br>
+                            <span class =three></span> newProppName1 { <br>                                
+                                <span class =four></span> writable: true-false, <br>
+                                <span class =four></span> enumerable: true-false, <br>
+                                <span class =four></span> configuable: true-false, <br>
+                                <span class =four></span> value:"value", <br>
+                            <span class =three></span>}, <br>
+                                                    
+                            <span class =three></span> newProppName2 { <br>                                 
+                                <span class =four></span> writable: true-false, <br>
+                                <span class =four></span> enumerable: true-false, <br>
+                                <span class =four></span> configuable: true-false, <br>
+                                <span class =four></span> value:"value", <br>
+                            <span class =three></span>}, <br>
+                            
+                            <span class =three></span> newProppName3 { <br>                                 
+                                <span class =four></span> writable: true-false, <br>
+                                <span class =four></span> enumerable: true-false, <br>
+                                <span class =four></span> configuable: true-false, <br>
+                                <span class =four></span> value:"value", <br>
+                            <span class =three></span>}, <br>
+                                                                                                                            
+                        <span class =two></span>}); <br>                    
+                            
+                        /// ===================================================================== <br><br>
+                        /// ===================================================================== <br><br>
+                                        
+                    //C) JSOOP Calling (get) {single Property} Descriptor Method : <br>
+                        <span class =one></span> Object.getOwnPropertyDescriptor(myObj.propName); <br>
+                        <span class =one></span> Object.getOwnPropertyDescriptor(myObj[propName]); <br>
+                        
+                        /// ===================================================================== <br><br>
+                        /// ===================================================================== <br><br>
+                        
+                        
+                    //D) Calling (get) All Object's [enumerable:true] Properties's Names (keys) Method : <br>
+                        <span class =one></span> Object.keys(myObj); <br>                        
+                        //=========================================================== <br> <br>                                                                        
+                        
+            <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSOOPPract" id="JSOOPPract">
+            <header>
+                <h3> JS OOP [Object Define Properties And Training's] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here one Major Application will include following Function/Tasks :  &gt;&gt; <br>
+                <ol>                    
+                    <li> Initiating (Default Object) containing {(3) Default Properties} by Following Methods: </li>
+                        <ul>
+                            <li> Constructual Method =&gt; Defining the Object by the Construcutual Mehtod + Defining properties </li>
+                            <li> (Shortcut/Direct) Method =&gt; Defining an empty Object  + Defining properties by Direct Method </li>
+                            <li> Full Attibutes Method =&gt; Defining an empty Object Mehtod + Defining properties by Adding Group of Properties Method </li>
+                        </ul>                                         
+                                                                            
+                    <li> Adding new property(s) to the Default Object of (defined by first method) by (2) Methods as following: </li>                     
+                        <ul>
+                            <li>{Adding Single new Property} =&gt; Including the following Functions: </li>
+                                <ol>                                    
+                                    <li> Checkinig for The Repeated Names of new inserted property + ability to re-insert new name of the same property in case of repeating name</li>
+                                    <li> Assigning all kind of attributes {writable, enumerable , configurable, value} of each new property </li>
+                                    <li> The Ability to repeat the single Adding new property by count of user desire </li>                                    
+                                </ol>
+                            
+                            <li>{Adding group of new Properties} =&gt; Including the following Functions: </li>
+                                <ul>                                    
+                                    <li> Checkinig for The Repeated Names of new inserted property + ability to re-insert new name of the same property in case of repeating name</li>
+                                    <li> Assigning all kind of attributes {writable, enumerable , configurable, value} of each new property </li>
+                                    <li> The Ability to repeat the single Adding new property by count of user desire </li>                                    
+                                    <li> (2) method of Adding new properties are available : </li>                                    
+                                        <ol>
+                                            <li> Adding new Properties using {Singular Adding Method} looped {by count of desired new properties} </li>
+                                            <li> Adding new Properties using {adding group of properties Method}   </li>                                            
+                                        </ol>
+                                </ul>
+                            <li> {Displaying of (2) kind of information of all object (including the Original properites + new Added Properties)} as following:</li>
+                                <ol>
+                                    <li>[Displaying Discriptors] =&gt; of All object's properties's (Discriptors + Names, values ), with (2) accessing methods to each property :</li>
+                                        <ol type=A>
+                                            <li>Accessing By property Name </li>
+                                            <li>Accessing By property Value </li>
+                                        </ol>
+                                    
+                                    <li>[Displaying keys] =&gt; Of All object's Names + properties {with Attribute: enumerable:true} , with (2) accessing methods to each property :</li>                                    
+                                </ol>
+                        </ul>                                        
+                </ol>                
+
+            <br>
+
+            <textarea id=txtarea class=txtarea> </textarea><br>                                    
+            
+            <script  src="JSOOPAddObjPropMthds.js">
+            </script>
+
+            <button class=btn onclick="test()"> Click to Start [Testing Object Define Properties And Training's {Addtional Methods}] Application    
+            </button> 
+                                    
+            <br>    
+                                          
+        <hr>
+                <button id=btn class="btn" onclick="display()">Display JS Code</button>
+                
+                <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Testing Object Define Properties And Training's Properties & Methods ] Application  <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                                                        
+                        
+                        <span class=one></span> &lt;script src="JSOOPClassIntro.js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JSOOP [Object Define Properties And Training's] */ <br>                    
+                        template-string-converter.enable; <br><br>
+                                                
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div>
+                
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 25 Video File:</h3>
+            
+            <iframe
+                width="100%"
+                height="100%"
+                allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"
+                frameborder="0"
+                preload="yes"
+                src="https://www.youtube.com/embed/watch?v=tGa2U4DWY-c&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=25&controls=0&loop=1&autoplay=1&fs=1"
+            >
+            </iframe>
+                
+            <!-- <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\25 JavaScript OOP  Object Define Properties And Training's.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS OOP Lesson 25 [Object Define Properties And Training's ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

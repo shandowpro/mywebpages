@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> JavaScript Lesson 62 [ Date - Function part 3 (now-parse-Conv)] </title>
+    <link rel="stylesheet" href="JavaScript [ Date - Function part 3 ].css" media="all" >
+    
+    <script>    
+                     
+    </script>     
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        JavaScript Lesson 62 [ Date - Function part 3 (now-parse-Conv) ] 
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="Go to Javascript main Topics" >
+                    [ JavaScript [ Date - Function part 3 (now-parse-Conv) ] ] Main Topics </a> </li>                                                  
+            
+            <li> <a href=#JSDateFunction3Con title="Go to [JavaScript [ Date - Function part 3 (now-parse-Conv) ]] Concept" >
+                    [ JavaScript [ Date - Function part 3 (now-parse-Conv) ] ] Concept </a> </li>             
+
+            <li> <a href=#JSDateFunction3Imp title="Go to [JavaScript [ Date - Function part 3 (now-parse-Conv) ]] 
+                    Importance & Benefits" >
+                    [ JavaScript [ Date] - Function part 3 (now-parse-Conv) ] Importance & Benefits </a> </li>    
+            
+            <li> <a href=#JSDateFunction3Syntx title="Go to [JavaScript [ Date - Function part 3 (now-parse-Conv) ] ] 
+                    main Syntax">
+                    [ JavaScript [ Date - Function part 3 (now-parse-Conv) ] ] Main Syntax & Methods </a> </li>            
+            
+            <li> <a href=#JSDateFunction3Pract title="Go to [JavaScript [ Date - Function part 3 (now-parse-Conv) ] ] 
+                    Practical Application">
+                    [ JavaScript [ Date - Function part 3 (now-parse-Conv) ] ] Practical Application </a> </li>             
+                           
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>        
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to JavaScript Course <span> JavaScript Lesson 62 [JavaScript [ Date - Function                        part 3 (now-parse-Conv)] { Date - Part 5} </span> 
+    </main> 
+<!-------------------------------------------------------------------------------------------------------------->                      
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+                
+            <header>                 
+                [JavaScript [ Date - Function part 3 (now-parse-Conv) ] Main Topics :
+            </header>
+            
+            <article>                                                
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">                                                            
+                    <li> Javascript [ Date - now-parse-Conv ] Concept </li>               
+                                                            
+                    <li> JavaScript [ Date - now-parse-Conv ] Importance & Benefits. </li>
+                    
+                    <li> JavaScript [ Date - now-parse-Conv ] Date Methods and Syntax </li>
+                        <ol>
+                            <li> Now Functions :</li>
+                            <ul>                                
+                                <li> [Date.now();]: Will Get the total Time by Milliseconds from (1970 - now by        Default date Value)</li>                                
+                                
+                                <li> [Date.parse("Given Date String Value");]: Will Get the total Time by              Milliseconds from (1970 - now by given date Value)</li>                                                                                               
+                            </ul>
+                            
+                            <li> Date-Time Converting Functions :</li>
+                            <ul>
+                                <li> [ DateVariable.toISOString(); ] : To Convert from (Default String Date            given/Default =&gt; ISO Format) </li> 
+                                                                
+                                <li> [ DateVariable.toDateString(); ] : To Convert from (Default String Date            given/Default =&gt; Date only Format) </li>
+                                
+                                <li> [ DateVariable.toTimeString(); ] : To Convert from (Default String Date            given/Default =&gt; Time only Format) </li> 
+                                    
+                            </ul>                                                                                
+                        </ol>                                                            
+                    <li> JavaScript [ Date ] Practical Application (now-parse-Conv Functions) </li>                                                                             
+                </ol>    
+            </article>            
+        </Section>
+            
+        <!------------------------------------------------------------------------------------------------------>      
+        <!------------------------------------------------------------------------------------------------------>                              
+        <section class="JSDateFunction3Con" id="JSDateFunction3Con">
+            <header>
+                <h3>  JavaScript [ Date - Function part 3 (now-parse-Conv) ]] Concept:  </h3>                                                       
+            </header>
+            
+            <p> =&gt; JavaScript [ Date - Function part 3 (now-parse-Conv) ] : This Lesson Will Present a Public           Concept of Date Specific Function of getting Total (MilliSeconds) of Default-Certain                   Date-Time from (1970 - Now/Certain date-time) & Date-Time Fomrats convetring Mehods.                                                                                         
+            <p> =&gt; JavaScript [ Date - Function part 3 (now-parse-Conv) ] : There are (2) Date-Time 
+                      [Now Functions] which are : </p> 
+            
+                    <ol>
+                        <li> [Date.now();] =&gt; Will Get the total Time by Milliseconds from (1970 - now by           Default date Value)</li>                                
+                            
+                            <p> This Now Function will Get Total Current Milliseconds from (1970) until Default       Date-Time. </p>
+                        
+                                
+                        <li> [Date.parse("Given Date String Value");]: Will Get the total Time by                      Milliseconds from (1970 - now by given date Value)</li>                     
+                            
+                            <p> This Now Function will Get Total Current Milliseconds from (1970) until Cutomizerd given date-time. </p>                                                
+                    </ol>
+                                        
+            <p> =&gt; JavaScript [ Date - Function part 3 (now-parse-Conv) ] : There are (3) Date-Time 
+                      [Foramt Converting ] which are : </p> 
+            
+                    <ol>
+                        <li> [DateVarible.toISOString();] =&gt; Will Convert the Default String Format of              (given/default) date-time to ISO Format</li>                                
+                        
+                        <li> [DateVarible.toDateString();] =&gt; Will Convert the Default String Format of            (given/default) date-time to Only Date Format</li>                                
+                        
+                        <li> [DateVarible.toTimeString();] =&gt; Will Convert the Default String Format of            (given/default) date-time to Only Time Format</li>                                
+                            
+                    </ol>
+                                                                         
+        </section>
+                           
+        <!------------------------------------------------------------------------------------------------------>               
+        <section class="JSDateFunction3Imp" id="JSDateFunction3Imp">
+            <header>
+                <h3> JavaScript [ Date - Function part 3 (now-parse-Conv) ] Importance & Benefits:  </h3>           
+            </header>
+
+            <p> =&gt; JavaScript [ Date - Function part 3 (now-parse-Conv)] : Due to the importance of Date in             any P.Language, JS it gives us the Following Features Rules in dealing with Date and Time             with (now-parse-Conv) :  <br>                                                     
+                <ul>
+                    <li> The ability to extract more specified Value of Date and Time of given or Customized          Date-Time in JS Multiple Function to Current or UTC Date-Time variable</li>             
+                    
+                    <li> The abililty to Make some Processes and complicated Calculations on Date Partial              Contents or Elements with built-in Functions (Calculating ranges of Time And Date) by        using integrated Functions and Methods of Now Functions of other date-time partial            elements. </li>
+                    
+                    <li> The abililty to mix and merge between Date & Time Methods and Functions to make more           accurate Date and time Calculations and Controls . </li>                                                                              
+                    <li> The abililty to mix between (now-parse-Conv) & (get-set) Functions to make more              interative Codes and scripts and Applications. </li>                                                                              
+               </ul>
+            
+        </section>
+                        
+        <!--------------------------------------------------------------------s---------------------------------->                                               
+        <section class="JSDateFunction3Syntx" id="JSDateFunction3Syntx">
+            <header>
+                <h3> [ JavaScript [ Date - Function part 3 (now-parse-Conv) ]] Mains Syntax & Methods:  </h3>                     
+            </header>                                                
+                
+            <p> =&gt; JS Random Functions can be as following : </p>                                                     
+                                
+                <div id="Code" class="Code">                                
+
+                    // A) [ Getting Now Functions ] Syntax :<br><br>                             
+                    
+                    &nbsp;&nbsp; // 1) [From 1970- NOW by Default Date-Time by total MilliSeconds] Function Syntax :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp;  Date.now(); <br>   
+                    =======================================================<br><br>                                                                                                                 
+                    &nbsp;&nbsp; // 2) [From 1970- NOW by Customized Date-Time by total MilliSeconds] Function Syntax :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp;  Date.parse("Given String Date-Time"); <br>   
+                    =======================================================<br><br>                               =======================================================<br><br>                        
+                    =======================================================<br><br>                                        
+                    
+                    // B) [ Date-Time Formats Converting Functions ] Syntax :<br><br>                             
+                                    
+                    &nbsp;&nbsp; // 1) [Convert from Default Format to ISO Format] Function Syntax :<br><br>     
+                    &nbsp;&nbsp;&nbsp;&nbsp;  DateVariable.toISOString(); <br>   
+                    =======================================================<br><br>                                                                                                                 
+                    &nbsp;&nbsp; // 2) [Convert from Default Format to Only Date Format] Function Syntax :<br><br>     
+                    &nbsp;&nbsp;&nbsp;&nbsp;  DateVariable.toDateString(); <br>   
+                    =======================================================<br><br>                                                            
+                    &nbsp;&nbsp; // 3) [ Convert from Default Format to Only Time Format ] Function syntax :<br><br>                             
+                    &nbsp;&nbsp;&nbsp;&nbsp;  DateVariable.toTimeString(); <br>   
+                                        
+                    =======================================================<br><br>                                     
+                    =======================================================<br><br>                                     
+                    =======================================================<br><br>                                                                                
+                </div>                                            
+            <hr>
+        </section>         
+            
+        <!------------------------------------------------------------------------------------------------------>                                               
+        <section class="JSDateFunction3Pract" id="JSDateFunction3Pract">
+            <header>
+                <h3> JavaScript [ Date - Function part 3 (now-parse-Conv) ] Practical Applications :  </h3>                     
+            </header> 
+            
+            <p> =&gt; Here (1) Practical Application, which will include All the Functions Part3 (now-parse-conv)           (2) Now Functions (now - parse), and (3) Converting Date-Time formats Methods 
+                      (iso-toStringDate-toStringTime) with [Get & Set]. 
+                
+           </p>                                             
+                <br>
+                    
+                <textarea id=txtarea class=txtarea > </textarea><br>    
+
+                <button class=btn onclick="test1()"> Click to Start [Date & Time ] Main Function part3 
+                                                    [now-parse-Convs] Application
+                </button>
+                    <br>
+
+                <script src="JSDateTimeFunction3.js"> </script>                                        
+            <hr>
+
+                <div class=JSDateFunction3 >
+                    <code>
+                        // HTML Codes: <br>
+                        &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        &lt;/textarea&gt; <br><br>
+
+                        &lt;button class="btn" onclick="(test)"&gt;<br>                            
+                        &nbsp;&nbsp;Click to Start [Date & Time ] Main Function part3 (now-parse-Conv)                       Application<br>                               
+                        &lt;/button&gt; <br><br>                            
+
+                        &lt;script src="JSDateFunction3.js"&gt;<br>                            
+                        &lt;/script&gt; <br><br>
+
+                        =======================================================<br><br>
+
+                        // JS Codes [JSDateFunction3.js] : <br><br>
+                        /* global alert, document, prompt, console */<br>
+                        /* jslint plusplus: true evil: true */ <br>
+                        /* [Date & Time part3 - Function part 3 (now-parse-Conv)] Application */ <br>
+                        // ========================================// <br>                             
+
+                        function test1() { <br>                            
+    
+                        &nbsp;&nbsp; var meth = prompt ("Choose your method \n 1) Press 1 for Now Functions\n<br>
+                        &nbsp;&nbsp; 2) Press 2 for date-time Format Converting \n or press any other key to exit..");<br><br>
+
+                        &nbsp;&nbsp; if (meth == "1") { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to method 1 [Now Functions ] ");<br> <br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; var func = prompt("Press 1 for Now Function\n Press 2 for Parse Function"),<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mints = 1000 * 60, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hours = mints * 60, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; days = hours * 24, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; months = days * 30, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; years = months * 12; <br><br>                       
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; if (func == "1"){ <br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to Now Function (Date.now();) ...");<br><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var udate = new Date(), <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unow = Date.now(), <br>            
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; umints = unow/mints, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uhours = unow/hours, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; udays = unow/days, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; umonths = unow/months, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uyears = unow/years; <br><br>
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Total Current Date is = " + udate + <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Total Years from 1970 till now = " + uyears + <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Total Months from 1970 till now = " + umonths + <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Total Days from 1970 till now = " + udays +<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Total Hours from 1970 till now = " + uhours + <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Total Minuts from 1970 till now = " + umints, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Total Seconds from 1970 till now = " + unow/1000; <br> <br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; } else if (func == "2") { <br> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to Now Function (Date.parse(\"Customized Date\");) ..."); <br> <br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var udate1 = prompt("Enter your customized date ..."), <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uparse = Date.parse(udate1), <br>                 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; umints1 = uparse/mints,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uhours1 = uparse/hours,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; udays1 = uparse/days, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; umonths1 = uparse/months, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uyears1 = uparse/years; <br><br>                                                  
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("txtarea").innerHTML = <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Total Years from 1970 till your Customized Date = " + uyears1 + <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "\nTotal Months from 1970 till your Customized Date  = " + umonths1 + <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "\nTotal Days from 1970 till your Customized Date  = " + udays1 + <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "\nTotal Hours from 1970 till your Customized Date  = " + uhours1 + <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "\nTotal Minuts from 1970 till your Customized Date  = " + umints1 + <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "\nTotal Seconds from 1970 till your Customized Date  = " + uparse/1000; <br><br>            
+
+                        &nbsp;&nbsp;&nbsp;&nbsp; } else { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Error Entry !"); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; } <br><br>
+
+                        &nbsp;&nbsp; } else if (meth == "2") {  <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to [date-time Format Converting] Methods ...");<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; var Conv = prompt("Choose Your Converting format\n Press (1) to Convert to [ISO]\n<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (2) to Covnert to [Short Date only]\n <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Press (3) to Convert to [Short Time only]\n <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Or Press any Other key to exit "), <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CustDate = prompt("Enter your Date to Convert..."); <br><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; if (Conv == "1") { <br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Weclome to Converting Method [ISO] ");<br>   
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var isoDate = CustDate.toISOString(); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Date by [ISO] fromat is " + isoDate);<br> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; } else if (Conv == "2") {  <br><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Weclome to Converting Method [Short String Only Date] "); <br>    
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var onlyDate = CustDate.toDateString();<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Date by [Only Date] format is " + onlyDate); <br> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; } else if (Conv == "3") { <br><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Weclome to Converting Method [Short String Only Time] "); <br> <br>   
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var onlyTime = CustDate.toTimeString(); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Your Date by [Only Time] fromat is " + onlyTime); <br> <br>                
+                        &nbsp;&nbsp;&nbsp;&nbsp; } else { <br>                    
+                        &nbsp;&nbsp;&nbsp;&nbsp;alert("Error Entry!");                   
+                        &nbsp;&nbsp;&nbsp;&nbsp; } <br><br>
+                        &nbsp;&nbsp; } else { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; alert("Error Entry!");<br>
+                        &nbsp;&nbsp; } <br>                                          
+                        } <br>
+                                //////////////////////////////////////////////////////////<br><br><br>
+                                               
+                    </code>                                        
+                </div>                                                                       
+        <!-------------------------------------------------------------------------------------------------------------------->                 
+             
+        </section>                                                                
+<!-------------------------------------------------------------------------------------->                
+<!---------------------------------------------------------------------------------------->                                     
+    </div>
+        <!------------------------------------------------------------------------------------------------------>       
+    <!------------------------------------------------------------------------------------------------------>                                                                              
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="340"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3> 
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="385">
+               <input type="hidden" name="months" value="34">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num1">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file Function part 3 (now-parse-Conv)...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+            <h3> Lesson 62 Video File:</h3>
+
+            <iframe
+                width="100%"
+                height="100%"
+                allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"
+                frameborder="0"
+                preload="yes"
+                src="https://www.youtube.com/embed/watch?v=oyaaLXEojxg&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=62&controls=0&loop=1&autoplay=1&fs=1"
+            >   
+            </iframe>
+
+
+            <!-- <video controls width="300" height="300" >
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics\62 Date - Date Functions part 3 (now-parse-Conv).mp4" type="video/mp4">
+                Your browser Does Not Support the Video file Function part 3 (now-parse-Conv)...              
+            </video>                           -->
+       </section>
+        
+    
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>
+    
+    
+    <script>
+        alert("Welcome to JavaScript");        
+    </script>
+    
+    
+    <script src="onmouseover.js"></script>
+            
+</body>
+</html>

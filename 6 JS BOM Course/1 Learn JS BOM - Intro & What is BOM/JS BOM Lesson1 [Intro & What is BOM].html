@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> JS BOM Lesson1 [Intro & What is BOM] </title>
+    <link rel="stylesheet" href="JS BOM Lesson1 [Intro & What is BOM].css" media="all">
+    
+    <style>        
+       .custom {
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            margin: 10px auto;
+            border: 5px solid gray;    
+            background-color: #ccc;
+            text-align: center;
+        } 
+         
+        .dis {
+            border: 3px solid red;
+            border-radius: 30px;
+            width: 100%;
+            /* height: 200px; */
+            text-align: center;
+            line-height: 2em;
+        }
+
+        .item{
+            color: red;
+            font-size: 30px;
+            font-family: monospace;
+            background-color: blue;
+        }
+        
+    </style>
+    
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main" >
+        JS BOM Lesson1 [Intro & What is BOM]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS HTML BOM main Topics">
+                JS BOM - Intro & What is BOM  Main Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to JS BOM - Intro & What is BOM Concept">
+                JS BOM - Intro & What is BOM  Concept </a> </li>
+
+            <!-- <li> <a href=#JSDOMImp title="Go to JS BOM - Intro & What is BOM Importance & Benefits">
+                JS BOM - Intro & What is BOM  Importance & Benefits </a> </li> -->
+            <li> <a href=#JSDOMImp title="Go to JS BOM - Intro & What is BOM main Information">
+                JS BOM - Intro & What is BOM main Information</a> </li>
+
+            <li> <a href=#JSDOMSyntx title="Go to JS BOM - Intro & What is BOM Syntax">
+                JS BOM - Intro & What is BOM Syntax & Examples </a> </li>
+
+            <!-- <li> <a href=#JSDOMPract title="Go to JS BOM - Intro & What is BOM Practical Applications">
+                JS BOM - Intro & What is BOM  Practical Applications </a> </li> -->
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS HTML BOM Course <span> JS BOM Lesson1 [Intro & What is BOM]  </span>
+    </main>
+
+    
+    <div class="Post" id=post>
+        <Section  id="MainC" class="MainC">
+
+            <header>
+                JS HTML BOM [Intro & What is BOM] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> JS HTML BOM [Intro & What is BOM] Concept. </li>
+                    
+                    <li> JS HTML BOM [Intro & What is BOM]  Information. </li>
+                    
+                    <li> JS HTML BOM [Intro & What is BOM]  Main Functions. </li>
+
+                    <li> JS HTML BOM [Intro & What is BOM] Syntax Examples. </li>
+                    
+                    <!-- <li> JS HTML BOM [Intro & What is BOM] Practical Application. </li> -->
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                
+                <ul>                                                                                                        
+                    <li> [Intro & What is BOM] : </li>
+                        <ol type =A>                                                    
+                            <li> This lesson will include =>  ( main theoritic infromation) + (some Syntax Examples) of most common Event in JSBOM , as following : <br>
+                                <ol> 
+                                    <li> { window.innerHeight } => Get the Inner Browser height </li>
+                                    <li> { window.outerHeight } => Get the Outer Browser height  </li>                                    
+                                </ol>                            
+                             </li>
+                        </ol>
+                </ul>
+                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> JS HTML BOM [Intro & What is BOM]  Concept: </h3>
+            </header>
+                                                        
+            <p> =&gt; [ Intro & What is BOM ] : <br>
+                <ol>
+                    <li> Main concept of {BOM} => <br>                        
+                        <p> Refers to => {Browser Object Model} </p>
+                        <p> {BOM} => A collection of Objects than Related and controling the Browser </p>
+                        <p> It is related to controlling to the Browser Features and properties </p>
+                        <p> It is NOT related to Document functions and properties </p>
+                    </li>
+                    
+                    <li> Examples of Functions of {BOM} => <br>                        
+                        <p> Changing the URL of the Broweser </p>
+                        <p> Background Requets </p>
+                        <p> Window Open || Window Close || Window move </p>                        
+                        <p> Changing the information of the Status Bar </p>                                            
+                        <p> Some Functionalities and Methods as : <br>
+                            <ol>
+                                <li> alert() || cofirm() || prompt() </li>
+
+                            </ol>                        
+                        </p>                                            
+                    </li>
+                    
+                    <li> Examples of main Objects in  {BOM} : <br> 
+                        <ol>
+                            <li> {window} => Main Default object in any browser </li>
+                            <li> {screen} => To control the browser screen </li>
+                            <li> {navigation} => To control the browser Navigation </li>
+                            <li> {location} => To control the browser Location </li>
+                            <li> {history} => To control the browser History </li>
+                            <li> {timing} => To control the browser Timing </li>
+                            <li> {cookies} => To control the browser Cookies </li>
+                        </ol>                    
+                    </li>    
+                     
+                    <li> Extras Information about the {BOM} :<br> 
+                        <ul>
+                            <li> Not have it's own Standards , but each broweser Add it's own BOM Standards, but there are common standards and objects such as the main BOM Objects upper mentioned  </li>                        
+                            <li> All JS Objects are Included by the {BOM : window} </li>                        
+                        </ul>
+                    </li>                                        
+                </ol>  <br>
+                            
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> JS HTML BOM [Intro & What is BOM] Importance & Benefits : </h3>
+            </header>
+
+            <p> JS HTML BOM [Intro & What is BOM] gives us the Following Features : <br>
+                <ul>                                                 
+                    <li> {BOM} => A great Tool to control the Browser it self  </li>                                                                    
+                </ul>                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> JS HTML BOM [Intro & What is BOM] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; JS HTML BOM [Intro & What is BOM} by following Conceptual Syntax as following : </p>
+            
+            <div id="Code" class="Code">
+                
+                [1*] {BOM} (Methods) Examples: <br>
+                                                        
+                //=========================================================== <br> <br>                    
+                                
+                [A]// {JSBOM file}  Some examples about the BOM Functions and Methods : <br>                                                                                                                   
+                
+                    [1] Displaying an output message in the Browser => {alert() || window.alert()}: <br>
+                        <span class= one></span>  window.alert('Message text'); <br> <br>
+                        <span class= one></span>  alert('Message text');  <br> <br>
+                    
+                    [2] Displaying an input field in the Browser to recieve value form the user { pormpt() || window.pormpt() }: <br>
+                        <span class= one></span>  window.prompt('Enter a value');  <br> <br>                    
+                        <span class= one></span>  prompt('Enter a value');  <br> <br>                    
+                    
+                    [3] Displaying an Yes/No Buttons Message in the Browser to recieve Boolean value [Yes || No] form the user { confirm() }: <br>
+                        <span class= one></span>  window.confirm('Confirm Message');  <br> <br>                    
+                        <span class= one></span>  confirm('Confirm Message');  <br> <br>                    
+                    
+                    [4] Displaying an information about the Browser  { window.innerHeight() || window.outerHeight()}: <br>
+                        <span class= one></span>  window.alert('Window Inner height is:' + window.innerHeight);  <br> <br>                    
+                        <span class= one></span>  alert('Window Outer height is:' + window.outerHeight);  <br> <br>                    
+                    
+                    [5] Displaying an information about the Browser  { window.innerWidth() || window.outerWidth()}: <br>
+                        <span class= one></span>  window.alert('Window Inner Width is:' + window.innerWidth);  <br> <br>                    
+                        <span class= one></span>  alert('Window Outer Width is:' + window.outerWidth);  <br> <br>                    
+                                                                                
+                //=========================================================== <br> <br>                                                                    
+                //=========================================================== <br> <br>                                                                
+            
+            <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMPract" id="JSDOMPract">
+            <header>
+                <h3> JS HTML BOM [Intro & What is BOM] => General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt ; Here 1 Major Application will include creating [2 Sectors] of simple information displaying => as following :  &gt;&gt; <br>
+                <ol> 
+                    <li> The First Section => General BOM Functions and Methods, as Following: <br>
+                        <p> alert(); || window.alert();  </p>
+                        <p> prompt(); || window.prompt();  </p>
+                        <p> confirm(); || window.confirm();  </p>
+                    </li>
+
+                    <li> The Second Section => General BOM Displaying information about the Browser, as Following: <br>
+                        <p> window.innerHeight || window.outerHeight </p>
+                        <p> window.innerWidth || window.outerWidth </p>
+                    </li>
+                    
+                </ol>                
+            <br> <br>
+            
+            
+            <!-- <form id="formT" class="custom">                                                 
+                <label> Enter your Username : </label>
+                <input id="username" type="text"> <br><br>
+                
+                <label> Enter your Password : </label>
+                <input id="password"  type="text"> <br><br>
+                
+                <label> Notes : </label>
+                <input id="note"  type="text"> <br><br>
+
+                <input id="btnSubmit" type="submit" value="Submit"> <br>                
+            </form> <br>  -->
+
+            <div class="btn" id="elem"> Element </div> <br>             
+                                    
+            
+            <div id="note" class="dis"></div> <br>
+                                
+            <hr> <br> <br>
+            <!-- ========================================================= -->
+
+            
+
+            <button class=btn onclick="test()"> Click to Start JS HTML BOM [ Intro & What is BOM ]  Application    
+            </button> 
+            
+            
+            <script  src="IntroWhatisBOM.js">
+            </script>
+                                    
+            <br>    
+                                          
+        <hr>
+                <button id=btn class="btn" onclick="display()">Display JS Code</button>
+                
+                <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Testing JS HTML BOM [Parent Element]  Application  <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                                                        
+                        
+                        <span class=one></span> &lt;script src=".js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JS HTML BOM [Parent Element]  */ <br>                    
+                        template-string-converter.enable; <br><br>
+                                                
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div>
+                
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection">
+            <h3> Lesson 1 Video File: </h3>
+            
+            <iframe			
+				width="100%"
+				height="100%"											
+				allowfullscreen
+				allowfullscreen="allowfullscreen"
+				mozallowfullscreen="mozallowfullscreen"
+				msallowfullscreen="msallowfullscreen"
+				oallowfullscreen="oallowfullscreen"
+				webkitallowfullscreen="webkitallowfullscreen"
+				frameborder="0"				
+				preload="yes"
+				src="https://www.youtube.com/embed/watch?v=cMW4963o6Qo&list=PLDoPjvoNmBAy9nFRJgVYgEID8xE2a6q6V&controls=0&loop=1&autoplay=1&fs=1" 				
+				>   
+			</iframe>
+            
+            
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JS BOM\1 Learn JS BOM - Intro & What is BOM.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="Links">
+            <h3>Course Reaquirments : </h3>
+            <ul>
+                <li> JS </li>
+                <li> JSDOM </li>                
+            </ul>
+        </section>
+        
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <!-- <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section> -->
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to JS BOM Lesson1 [Intro & What is BOM]");
+    </script>
+    
+
+</body>
+
+</html>       

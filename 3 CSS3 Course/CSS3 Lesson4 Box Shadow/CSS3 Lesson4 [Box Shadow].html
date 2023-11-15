@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 4 [Box Shadow] </title>
+    <link rel="stylesheet" href="CSS3 Lesson4 [Box Shadow].css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 4 [Box Shadow]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to Box Shadow main Topics">
+                Box Shadow Lesson4 [ Box Shadow ] Main Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to Box Shadow [Box Shadow ] Concept">
+                Box Shadow Lesson4 [ Box Shadow ] Concept </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to Box Shadow [Box Shadow ] Importance & Benefits">
+                Box Shadow Lesson4 [ Box Shadow ] Importance & Benefits </a> </li>
+
+            <li> <a href=#JSDOMSyntx title="Go to Box Shadow [Box Shadow ] Syntax">
+                Box Shadow Lesson4 [ Box Shadow ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to Box Shadow [Box Shadow ] Practical Applications">
+                Box Shadow Lesson4 [ Box Shadow ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to Box Shadow Course <span> Box Shadow Lesson 4 [Box Shadow ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                Box Shadow Property Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [Box Shadow] Concept. </li>                    
+                    
+                    <li> [Box Shadow] Importance & Benefits. </li>
+
+                    <li> [Box Shadow] Syntax [Exmaple]. </li>
+                    
+                     <li> [Box Shadow] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>
+                    <ul>
+                        <li> Main General Syntax of {box-shadow} with Vendor Prefix & without vendor Prefix </li>
+                        <li> Main General Syntax of {box-shadow} Requirements & and Additional Values </li>
+                        <li> Partial Syntax of {box-shadow} (of each specific Partial Value) </li>
+                        <li> Multiple Shadows with the same Element </li>                                                
+                    </ul> 
+
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> [Box Shadow] Concept: </h3>
+            </header>
+                        
+            <p> =&gt; [Box Shadow] : It is a property of desiging a Shadow Arrount the Element according to multiple properties.
+                
+        
+            
+            
+            <p> =&gt; Main Properties of Box shadow as following: <br>
+            
+                <ul>                                        
+                    <li> Horizonatl Value [Positive, Negative] => which determine whether : Bottom Box-shadow{positive} / the upper Box-Shadow {Negative}</li>
+                    
+                    <li> Vertical Value [Positive, Negative] => which determine whether : Right Box-shadow{positive} / the Left Box-Shadow {Negative}</li>
+                    
+                    <li> Blur Value [Positive only] => which determine the value of blur (the Fog Effection) for the box Shadow </li>
+                    
+                    <li> Spread Value [Positive only] => which determine the value of spread (the Shadow Extension Effection) for the box Shadow </li>
+                    
+                    <li> color Value [ rgb - argb - hexa - Name ] => which determine the color of the box Shadow </li>
+                    
+                    <li> inset-outset Value [inside/outside] shadow => which determine the direction of the box Shadow {inset: inside the Element} / {without writing(Default): outside the Element }</li>
+
+                </ul>
+            
+            <p> =&gt; { Multiple Box Shadows}: It is the property of setting more than one box-shadow for the same Element <br>
+                
+            <p> =&gt; {One General Box-shadow full Syntax}: This is the Full Syntax of the Box-Shadow (According the priority of reading) :<br>
+                [box-shadow: Horizontal Value | Vertical Value | Blur Value | Spread Value | Color | inset-outset] <br>
+                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> Box Shadow [Box Shadow ] Importance & Benefits: </h3>
+            </header>
+
+            <p> [Box Shadow] gives us the Following Features : <br>
+                <ul>                                                 
+                    <li> It provides designing beautiful Shadows of a cetain Elements with out using a spicific Applications</li>        
+                    
+                    <li>  It provide high control of Element's Box Shadow by multiple tools & properties.  </li>        
+                    
+                    <li> This Property is now Supportes by all types of kinds of Browsers [new versions] . </li>        
+                                    
+                </ul>
+                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> [ Box Shadow ] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // *) [Box-shadow]  Syntax as following :<br><br>
+                    
+                    <span class= one></span> //1)  [Box-shadow] General Full properties Syntax <br>                                          
+                        
+                        <span class=two></span> //a)  [Box-shadow] General Full properties Syntax [Positive Values] <br>                                          
+                        
+                            <span class=three></span> .ElementClassName {  <br>                                                  
+                                <span class=four></span> box-shadow :10px 10px 8px 5px #DDD; <br>                                                                          
+                            <span class=three></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span> //b)  [Box-shadow] General Full properties Syntax [Negative Values] <br>                                          
+                        
+                            <span class=three></span> .ElementClassName {  <br>                                                  
+                                <span class=four></span> box-shadow :-10px -10px 8px 5px #DDD; <br>                                                                          
+                            <span class=three></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>
+
+                        <span class=two></span> //c)  [Box-shadow] General Full properties Syntax [inset] <br>                                          
+                                                
+                            <span class=three></span> .ElementClassName {  <br>                                                  
+                                <span class=four></span> box-shadow :-10px -10px 8px 5px #DDD inset; <br>                                                                          
+                            <span class=three></span>  }  <br> <br>                                              
+                            
+                            <span class=three></span> .ElementClassName {  <br>                                                  
+                                <span class=four></span> box-shadow :-10px -10px 8px 5px #DDD inset; <br>                                                                          
+                            <span class=three></span>  }  <br>                                              
+                    // ------------------------------------------------------------------------------ <br><br>
+
+                    <span class= one></span> //2)  [Box-shadow] Shorten properties Syntax (most Public) <br>                                          
+                    
+                        <span class=three></span> .ElementClassName {  <br>                                                  
+                            <span class=four></span> box-shadow :-10px -10px 8px #DDD; <br>                                                                          
+                            <span class=four></span> Value1 : The Horizontal Value<br>                                                                          
+                            <span class=four></span> Value2 : The Vertical Value<br>                                                                          
+                            <span class=four></span> Value3 : The blur Value<br>                                                                          
+                            <span class=four></span> Value4 : Color<br>                                                                          
+                        <span class=three></span>  }  <br> <br>                                              
+                        
+                        <span class=three></span> .ElementClassName {  <br>                                                                              
+                            <span class=four></span> box-shadow :-10px -10px 8px #DDD inset; <br>                                                                          
+                            <span class=four></span> Value1 : The Horizontal Value<br>                                                                          
+                            <span class=four></span> Value2 : The Vertical Value<br>                                                                          
+                            <span class=four></span> Value3 : The blur Value<br>                                                                          
+                            <span class=four></span> Value4 : Color<br>                                                                          
+                            <span class=four></span> Value5 : box-shadow Direction <br>                                                                          
+                        <span class=three></span>  }  <br> <br>                                              
+                                                
+                    //=========================================================== <br> <br>                                        
+                                                            
+                    <span class= one></span> //3) [Box-shadow] Multiple box-shadows or the same Element : <br>                                          
+                        <span class=two></span> //a) [Box-shadow] Multiple box-shadows (with the shorten Form): <br>                                          
+                    
+                            <span class=three></span> .ElementClassName {  <br>                                                  
+                                <span class=four></span> box-shadow :-5px -5px 6px #00f; {first box-shadow} <br>                                                                                                      
+                                <span class=four></span> box-shadow : 5px 5px 6px #f00; {Second box-shadow} <br>                                                                                                      
+                                <span class=four></span> box-shadow : 10px 10px 8px #080; {Third box-shadow} <br>                                                                                                      
+                            <span class=three></span>  }  <br> <br>                                              
+                            
+                        <span class=two></span> //b) [Box-shadow] Multiple box-shadows (with the Full General Form): <br>                                          
+                            <span class=three></span> .ElementClassName {  <br>                                                  
+                                <span class=four></span> box-shadow :-5px -5px 6px 5px #00f; {first box-shadow} <br>                                                                                                      
+                                <span class=four></span> box-shadow : 5px 5px 6px 5px #f00; {Second box-shadow} <br>                                                                                                      
+                                <span class=four></span> box-shadow : 10px 10px 8px 5px #080; {Third box-shadow} <br>                                                                                                      
+                            <span class=three></span>  }  <br> <br>                                              
+                                                    
+                //=========================================================== <br> <br>                                    
+                //=========================================================== <br> <br>                                                      
+                //=========================================================== <br> <br>                                                                                    
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMPract" id="JSDOMPract">
+
+            <header>
+                <h3> [Box Shadow] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Following are some examples of Border-radius with all types (Full Properties [for one side], Full Properties [for all sides], Every optional property alone, Only Requirments properties, Multiple box Shadows )  :  &gt;&gt; <br>
+                <ol>                    
+                    <li> box-shadow: with Full Properties [for one side (Right + Bottom)]  :  </li>
+                        <div  class='fullOneRBSide'>
+                            <!-- This is my Example div {with 1 values of Border-radius} -->
+                        </div>
+                    
+                    <li> box-shadow: with Full Properties [for one side (Left + Top)]  :  </li>
+                        <div  class='fullOneLTSide'>
+                            <!-- This is my Example div {with 1 values of Border-radius} -->
+                        </div>
+
+                    <li> box-shadow: with Full Properties [for all sides] :  </li>
+                        <div  class='fullAllSides'>
+                            <!-- This is my Example div {with 2 values of Border-radius} -->
+                        </div>
+
+                    <li> box-shadow: with (Full Required Properties + {blur} only) :  </li>
+                        <div  class='ReqBlur'>
+                            <!-- This is my Example div {with 3 values of Border-radius} -->
+                        </div>
+
+                    <li> box-shadow: with (Full Required Properties + {blur} + {color} ) :  </li>
+                        <div  class='ReqBlurColor'>
+                            <!-- This is my Example div {with 4 values of Border-radius} -->
+                        </div>
+                    
+                        
+                    <li> box-shadow: with (Full Required Properties + {blur} + {color} + {spread} ) :  </li>
+                        <div  class='ReqBlurColorSpread'>
+                            <!-- This is my Example div {Circle Shape} -->
+                        </div>
+                    
+                    <li> box-shadow: with (Shorten-Common Properties ) :  </li>
+                        <div  class='Shorten'>
+                            <!-- This is my Example div {Circle Shape} -->
+                        </div>
+                                            
+                    
+                    <li> box-shadow: Multiple (2) Box-Shadows with (Shorten-Common Properties ) :  </li>
+                        <div  class='Mult2Shorten'>
+                            <!-- This is my Example div {Right Half Circle Shape} -->
+                        </div>
+                    
+                    <li> box-shadow: Multiple (2) with (Full Properties ) :  </li>
+                        <div  class='Mult2Full'>
+                            <!-- This is my Example div {Right Half Circle Shape} -->
+                        </div>
+                                                            
+                    <li> box-shadow: Multiple (3) with (Full Properties ) :  </li>
+                        <div  class='Mult3Full'>
+                            <!-- This is my Example div {Right Half Circle Shape} -->
+                        </div>
+                                                            
+                    <li> box-shadow: One Side with (Full Properties ) [inside Direction] :  </li>
+                        <div  class='OneFullInside'>
+                            <!-- This is my Example div {Right Half Circle Shape} -->
+                        </div>
+                                                            
+                </ol>                
+            <br>
+
+            <!-- <section id=sec class=txtarea>                
+            </section> <br> -->
+
+
+            <!-- <textarea id=txtarea class=txtarea> </textarea><br>                                   -->
+
+
+            
+            <!-- <script  src="IntroDOM.js">
+            </script> -->
+
+            <!-- <button class=btn onclick="test()"> Click to Start [Testing  DOM-Adding new Element(s)] Application    
+            </button>  -->
+                                    
+            <br>    
+                                          
+        <hr>
+                <!-- <button id=btn class="btn" onclick="display()">Display JS Code</button> -->
+                
+                <!-- <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Testing Box Shadow Properties & Methods ] Application  <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                                                        
+                        
+                        <span class=one></span> &lt;script src="JSOOPClassIntro.js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JSOOP [Box Shadow] */ <br>                    
+                        template-string-converter.enable; <br><br>
+                                                
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div> -->
+                
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 4 Video File:</h3>
+            
+            <iframe			
+				width="100%"
+				height="100%"											
+				allowfullscreen
+				allowfullscreen="allowfullscreen"
+				mozallowfullscreen="mozallowfullscreen"
+				msallowfullscreen="msallowfullscreen"
+				oallowfullscreen="oallowfullscreen"
+				webkitallowfullscreen="webkitallowfullscreen"
+				frameborder="0"				
+				preload="yes"
+				src="https://www.youtube.com/embed/watch?v=7rowy4G8gVY&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=4&index=3&index=2&controls=0&loop=1&autoplay=1&fs=1" 				
+				>
+			</iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\4 Css3 - Box Shadow.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 4 [Box Shadow ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

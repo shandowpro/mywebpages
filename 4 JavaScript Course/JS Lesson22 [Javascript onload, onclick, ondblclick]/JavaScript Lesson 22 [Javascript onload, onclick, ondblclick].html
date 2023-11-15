@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Lesson 22 [Javascript Events part 1]</title>
+    <link
+      rel="stylesheet"
+      href="JavaScript [Javascript onload, onclick, ondblclick].css"
+      media="all"
+    />
+
+    <script>
+      window.onload = function () {
+        alert("Welcome To Javascript Lesson 22 [Event Part 1]");
+        document.getElementById("DisplayOnload").innerHTML =
+          "Welcome To Javascript Lesson 22 [Event Part 1]";
+      };
+
+      function welcome() {
+        alert("Welcome To Javascript Lesson 22 [Event Part 1]");
+        document.getElementById("DisplayOnload").innerHTML =
+          "Welcome To Javascript Lesson 22 [Event Part 1]";
+      }
+
+      function changeMeClick() {
+        document.getElementById("Displayonclick").innerHTML =
+          "You Click on the Button";
+      }
+
+      function changeMeDblClick() {
+        document.getElementById("Displayondblclick").innerHTML =
+          "You Doubled Click on the Button";
+      }
+
+      function ChgCD1() {
+        document.getElementById("Displayonclick2").innerHTML =
+          "You Clicked on the Button";
+      }
+
+      function ChgCD2() {
+        document.getElementById("Displayonclick2").innerHTML =
+          "You Double Clicked on the Button";
+      }
+    </script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JavaScript Lesson 22 [Javascript onload, onclick, ondblclick] (Events part
+      1)
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to Javascript main Topics">
+            JavaScript [Javascript onload, onclick, ondblclick ] Events
+          </a>
+        </li>
+
+        <li>
+          <a href="#JSEventsCon" title="Go to  [Javascript Events] Concept">
+            [Javascript Events] Concept
+          </a>
+        </li>
+
+        <li>
+          <a href="#JSonload" title="Go to [Javascript onload] Event">
+            [Javascript onload] Event
+          </a>
+        </li>
+
+        <li>
+          <a href="#JSonclick" title="Go to [Javascript onclick] Event">
+            [Javascript onclick] Event
+          </a>
+        </li>
+
+        <li>
+          <a href="#JSondblclick" title="Go to [Javascript ondblclick] Event">
+            [Javascript ondblclick] Event</a
+          >
+        </li>
+
+        <li>
+          <a
+            href="#JS2Events"
+            title="Go to [Javascript onclick & ondblclick] Event"
+          >
+            [Javascript onclick & ondblclick] Events on one Element</a
+          >
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JavaScript Course
+      <span> JavaScript Lesson 22 [Javascript Events part 1] </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          [Javascript onload, onclick, ondblclick] Events Concept :
+        </header>
+
+        <article>
+          <p>&gt; New Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>[Javascript Events] Concept.</li>
+
+            <li>[Javascript onload] Event.</li>
+
+            <li>[Javascript onclick] Event .</li>
+
+            <li>[Javascript ondblclick] Event.</li>
+            <li>[Javascript onclick & ondblclick] Events on one Element.</li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSEventsCon" id="JSEventsCon">
+        <header>
+          <h3>Main Concept of [Javascript Events ] :</h3>
+        </header>
+        <p>
+          =&gt; [Javascript Events] are common in any programing language with
+          some differents, and they are very critical in any programing tasks.
+        </p>
+
+        <p>
+          =&gt; [Javascript Events] are to run some code(s) if certain action
+          had been implemeted in web page by the user or even loading webpage.
+        </p>
+
+        <p>
+          =&gt; [Javascript Events] are conditional Code(s) of implemented a
+          certain action, and each event has it's specific action.
+        </p>
+
+        <p>
+          =&gt; [Javascript Events] understanding will be very useful when
+          dealing with JS Laibraries & J-Querry.
+        </p>
+
+        <p>
+          =&gt; [Javascript Events] have some types are Common in use & other
+          are Rarely to use.
+        </p>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSonload" id="JSonload">
+        <header>
+          <h3>[Javascript onload] Event:</h3>
+        </header>
+
+        <p>=&gt; Onload Event Example:</p>
+
+        <div id="DisplayOnload" class="JSonloadExp"></div>
+
+        <button class="btn" onclick="welcome()">Click to Start</button>
+
+        <div class="JSEventsExp1">
+          <code>
+            HTML Codes :<br />
+            &lt;div&gt; id="DisplayOnload" class="JSonloadExp"&gt; <br />
+            &lt;/div&gt; <br />
+            &lt;button&gt; class="btn" onclick="welcome()"&gt; click to start
+            <br />
+            &lt;/button&gt; <br /><br />
+            ==========================================================================<br />
+            Javascript Codes [Internal]:<br />
+            &lt;script&gt;<br />
+            &nbsp;&nbsp; window.onload = function () { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome To Javascript Lesson 22
+            [Event Part 1]"); <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("DisplayOnload").innerHTML = "Welcome To
+            Javascript<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; Lesson 22 [Event Part1]";<br />
+            &nbsp;&nbsp; } <br /><br />
+            &nbsp;&nbsp; function welcome() { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome To Javascript Lesson 22
+            [Event Part 1]"); <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("DisplayOnload").innerHTML =<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; "Welcome To Javascript Lesson 22 [Event
+            Part 1]";<br />
+            &nbsp;&nbsp; }<br />
+
+            &lt;/script&gt;<br /><br />
+          </code>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSonclick" id="JSonclick">
+        <header>
+          <h3>[Javascript onclick] Event:</h3>
+        </header>
+
+        <p>
+          =&gt; (Reusing Global Variable's Name inside Local Scope as new Local
+          Variable) :
+        </p>
+
+        <div id="Displayonclick" class="JSonclickExp"></div>
+        <button class="btn" onclick="changeMeClick()">Click to Start</button>
+
+        <div class="JSEventsExp1">
+          <code>
+            HTML Codes :<br />
+            &lt;div&gt; id="Displayonclick" class="JSonclickExp"&gt; <br />
+            &lt;/div&gt; <br />
+            &lt;button&gt; class="btn" onclick="changeMeClick()"&gt; click to
+            start <br />
+            &lt;/button&gt; <br /><br />
+            ==========================================================================<br />
+            Javascript Codes [Internal]:<br />
+            &lt;script&gt;<br />
+            &nbsp;&nbsp; function changeMeClick() { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("Displayonclick").innerHTML = <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; "You Click on the Button";<br />
+            &nbsp;&nbsp; }<br />
+
+            &lt;/script&gt;<br /><br />
+          </code>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSondblclick" id="JSondblclick">
+        <header>
+          <h3>[Javascript ondblclick] Event:</h3>
+        </header>
+
+        <p>
+          =&gt; (Invoking & Re-Allocating Global Variable inside Local Scope) :
+        </p>
+
+        <div id="Displayondblclick" class="JSondblclickExp"></div>
+        <button class="btn" ondblclick="changeMeDblClick()">
+          Double Click to Start
+        </button>
+
+        <div class="JSEventsExp1">
+          <code>
+            HTML Codes :<br />
+            &lt;div&gt; id="Displayondblclick" class="JSondblclickExp"&gt;
+            <br />
+            &lt;/div&gt; <br />
+            &lt;button&gt; class="btn" ondblclick="changeMeDblClick()"> Double
+            Click to Start <br />
+            &lt;/button&gt; <br /><br />
+            ==========================================================================<br />
+            Javascript Codes [Internal]:<br />
+            &lt;script&gt;<br />
+            &nbsp;&nbsp; function changeMeDblClick() { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("Displayonclick").innerHTML = <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; "You Doubled Click on the Button";<br />
+            &nbsp;&nbsp; }<br />
+
+            &lt;/script&gt;<br /><br />
+          </code>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JS2Events" id="JS2Events">
+        <header>
+          <h3>[Javascript 2 Events] on one Element:</h3>
+        </header>
+
+        <p>=&gt; (Onclick & Dblclick on one Button) :</p>
+
+        <div id="Displayonclick2" class="JS2EventsExp"></div>
+
+        <button class="btn" onclick="ChgCD1()" ondblclick="ChgCD2()">
+          Click / Double Click to start
+        </button>
+
+        <div class="JSEventsExp1">
+          <code>
+            HTML Codes :<br />
+            &lt;div&gt; id="Displayonclick2" class="JS2EventsExp"&gt; <br />
+            &lt;/div&gt; <br />
+            &lt;button&gt; class="btn" onclick="ChgCD1()" ondblclick="ChgCD2()">
+            Click / Double Click to start<br />
+            &lt;/button&gt; <br /><br />
+            ==========================================================================<br />
+            Javascript Codes [Internal]:<br />
+            &lt;script&gt;<br />
+            &nbsp;&nbsp; function ChgCD1() { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("Displayonclick").innerHTML = <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; "You Clicked on the Button";<br />
+            &nbsp;&nbsp; }<br />
+            &nbsp;&nbsp; function ChgCD2() { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            document.getElementById("Displayonclick").innerHTML = <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; "You Double Clicked on the Button";<br />
+            &nbsp;&nbsp; }<br />
+
+            &lt;/script&gt;<br /><br />
+          </code>
+        </div>
+      </section>
+      <!----------------------------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Intro</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="220"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="365" />
+          <input type="hidden" name="months" value="22" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to get basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num2" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg" />
+          Your browser Does Not Support the Audio file format...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 22 Video File:</h3>
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=VPQJNF_JXds&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=22"
+        >
+        </iframe>
+        <!-- <video controls width="300" height="300" >
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/22 onload, onclick, ondblclick.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                           -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JavaScript");
+    </script>
+
+    <!--
+    <script src="Logical Operator.js"></script>
+    -->
+  </body>
+</html>

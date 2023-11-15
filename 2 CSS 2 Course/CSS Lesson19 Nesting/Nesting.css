@@ -1,0 +1,275 @@
+body{padding: 10px}
+
+.title
+    {
+        border:5px solid #ddd; background:#efefef; text-align:center;
+        padding:5px; margin:auto auto 20px; width:900px; word-spacing:5px
+    }
+    
+.Listtitle
+    {
+        font-size:25px; font-weight:bold;
+        word-spacing:5px;
+    }
+    
+.subtitle1
+    {
+        border:5px solid #aaf; background:#efefef; text-align:center;
+        padding:5px; margin:auto auto 20px; word-spacing:5px; font-size:28px;
+        width:900px;
+    }
+    
+/*======================================================================================*/
+
+.first, .second
+    {
+       border:5px solid #00f;
+       padding: 8px; background:aqua;
+       margin-bottom:20px;       
+    }
+
+/*======================================================================================*/
+fieldset
+    {
+        text-align:left; margin-bottom:20px;
+    }
+    
+legend
+    {
+        font: italic bold 25px "time new roman";        
+        padding:8px;
+        word-spacing:5px; letter-spacing:2px;
+    }
+
+
+.index, .index legend
+    {
+        border:3px solid #253; font-size:20px; padding:8px;
+        background:lightgreen;
+    }
+
+.index legend
+    {
+        font-size:25px; background:#080; color:#fff; 
+    }
+/*------------------------------------------------------------------------------------------*/    
+.NestingSS, .NestingDS
+    {
+        background:lightblue;
+        border:3px groove #bbd;
+    }
+
+.N_GSD, .N_GDD
+    {
+        background:lightblue;
+        border:3px groove #bbd;
+    }
+
+
+
+.NestingSS legend, .NestingDS legend
+    {
+       border:5px solid #00f;
+       padding:8px; background:#fff;
+       color:#f0f; 
+    }
+    
+.N_GSD legend, .N_GDD legend
+    {
+       border:5px solid #00f;
+       padding:8px; background:#fff;
+       color:#f0f; 
+    }
+/*=========(A)Nesting multiple Elements of (Same Type) within the (Same Parent)================================================================================*/
+    
+.divA1, .divA2, .divA3 {
+         border:1px solid black; font-size:30px; text-align:center; padding:10px 10px 20px;           
+         margin-bottom:20px; margin-top:10px; font-weight:bold;
+       }
+       
+.divA1 h3, .divA2 h3, .divA3 h3
+    {
+        margin:auto; width:300px; padding:10px; margin-bottom:20px; margin-top:10px
+    }
+
+.divA1 h3
+    {
+        border:1px solid red;        
+        font:normal 100 25px arial;
+        text-decoration:underline;        
+    }
+        
+.divA2 h3
+    {
+        border:2px groove red;
+        font:italic bold 25px arial;
+        text-decoration:line-through;
+    }
+    
+.divA3 h3
+    {
+        border:2px dashed red;
+        font:italic 900 25px arial;
+        text-decoration:overline;
+    }
+
+/*================================================================================================================*/
+/*=========(B)Nesting multiple Elements of (Different Type) within the (Same Parent)================================================================================*/
+
+.divB1, .divB2, .divB3 {
+         border:1px solid black; font-size:30px; text-align:center; padding:10px 10px 20px;           
+         margin-bottom:20px; margin-top:10px; font-weight:bold;
+       }
+       
+
+.NestingDS h3, .NestingDS p
+    {
+        margin:auto; width:400px; padding:10px; margin-bottom:20px; margin-top:10px      
+    }
+
+
+.divB1 h3, .divB1 p
+    {        
+        border:1px solid red;        
+        font:normal 100 25px arial;
+        text-decoration:underline;       
+    }
+
+
+.divB2 h3, .divB2 p
+    {        
+        border:2px groove red;
+        font:italic bold 25px arial;
+        text-decoration:line-through;        
+    }
+
+        
+.divB3 h3, .divB3 p
+    {        
+        border:2px dashed red;
+        font:italic 900 25px arial;
+        text-decoration:overline;
+    }
+    
+    
+/*=============================================================================================*/
+
+/*=========(C)Nesting multiple Elements of (Same Type) within the (Different Parent)================================================================================*/
+
+.divC1, .divC2, .divC3 {
+         border:1px solid black; font-size:30px; text-align:center; padding:10px 10px 20px;           
+         margin-bottom:20px; margin-top:10px; font-weight:bold;
+       }
+       
+.N_GSD h3, .N_GSD p
+    {
+        margin:auto; width:400px; padding:10px; margin-bottom:20px; margin-top:10px
+    }
+
+.divC1 h3, .divC2 h3, .divC3 h3
+    {
+        border:1px solid red;        
+        font:normal 100 25px arial;
+        text-decoration:underline;   
+    }
+
+.divC1 p, .divC2 p, .divC3 p
+    {
+        border:2px groove red;
+        font:italic bold 25px arial;
+        text-decoration:line-through;     
+    }
+            
+    
+/*=============================================================================================*/    
+
+/*=========(D)Nesting multiple Elements of (Different Type) within the (Same Parent)=======*/
+
+.divD1, .divD2
+        {
+         border:1px solid black; font-size:30px; text-align:center; padding:10px 10px 20px;           
+         margin-bottom:20px; margin-top:10px; font-weight:bold;
+        }
+
+.N_GDD h3, .N_GDD p
+    {
+        margin:auto; width:400px; padding:10px; margin-bottom:20px; margin-top:10px
+    }
+       
+       
+.divD1 h3, .divD2 p
+    {
+        border:1px solid red;        
+        font:normal 100 25px arial;
+        text-decoration:underline;       
+    }
+
+.divD1 p, .divD2 h3
+    {
+        border:2px groove red;
+        font:italic bold 25px arial;
+        text-decoration:line-through;     
+    }
+        
+/*=============================================================================================*/    
+
+.home
+    {
+        padding:5px;        
+        position: fixed; top:50px; right:10px;
+        text-decoration:none;
+        background: #0cf; border:3px solid blue; 
+        font: normal bold 20px arial; color:black;
+    }    
+
+.home:hover
+    {
+        background: #0cf; border:5px solid blue; 
+        font: normal bold 25px arial;        
+        text-decoration:underline;        
+    }
+
+
+.end
+    {
+        padding:5px;        
+        position: fixed; top:100px; right:17px;
+        text-decoration:none;
+        background: #0cf; border:3px solid blue; 
+        font: normal bold 20px arial; color:black;
+    }    
+
+.end:hover
+    {
+        background: #0cf; border:5px solid blue; 
+        font: normal bold 25px arial;        
+        text-decoration:underline;        
+    }
+
+
+
+span
+    {
+        font: italic bold 25px "time new roman";
+        text-decoration:underline; color:#f00;
+    }
+
+
+
+.display {
+
+    border-radius: 100px;
+    border: 3px solid gray;
+    color: #000;
+    text-align: center;
+    margin: 100px;
+}
+/* ================================================================================== */
+footer {
+    border: gold;
+    border-radius : 100px;
+    background-color:rgba(0, 0, 0, .4);    
+    text-align: center;
+    font: none normal 10px/1
+}
+

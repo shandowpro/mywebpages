@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Lesson 24 [Javascript Events part 3]</title>
+    <link
+      rel="stylesheet"
+      href="JavaScript [onmouseover, onmouseout , onchange].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JavaScript Lesson 24 [onmouseover, onmouseout , onchange] (Events part 3)
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to Javascript main Topics">
+            [Javascript onmouseover, onmouseout , onchange] Events
+          </a>
+        </li>
+        <li>
+          <a href="#JSonmouseover" title="Go to [Javascript onmouseover] Event">
+            [Javascript onmouseover] Event
+          </a>
+        </li>
+
+        <li>
+          <a href="#JSonmouseout" title="Go to [Javascript onmouseout] Event">
+            [Javascript onmouseout] Event
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#Jsonmouseover&out"
+            title="Go to [Javascript onmouseover & onmouseout ] Event"
+          >
+            [Javascript onmouseover and onmouseout] Events practical App
+          </a>
+        </li>
+
+        <li>
+          <a href="#Jsonchange" title="Go to [Javascript onchange] Event">
+            [Javascript onchange] Event & [Multiple Currencies Converter]
+          </a>
+        </li>
+        <li>
+          <a
+            href="#JsMultCurrConv"
+            title="Go to [Javascript Multiple Currencies Converter] Event"
+          >
+            [Javascript Multiple Currencies Converter] Event</a
+          >
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JavaScript Course
+      <span> JavaScript Lesson 24 [Javascript Events part 3] </span>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------->
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          [ Javascript onmouseover, onmouseout , onchange] Events Concept :
+        </header>
+
+        <article>
+          <p>&gt; New Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>[Javascript onmouseover] Event.</li>
+
+            <li>[Javascript onmouseout] Event .</li>
+
+            <li>[Javascript onchange] Event.</li>
+
+            <li>[Javascript Multiple Currencies Converter] Event.</li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSonmouseover" id="JSonmouseover">
+        <header>
+          <h3>[Javascript onmouseover] Event:</h3>
+        </header>
+
+        <p>
+          =&gt; [onmouseover] Concept: is an event which is occuring when you
+          hover on an Item by the Mouse
+        </p>
+
+        <p>=&gt; [onmouseover] Event Example:</p>
+
+        <div id="div1" class="JSEventsExp"></div>
+        <br />
+
+        <div class="JSEventsExp1">
+          <code>
+            HTML Codes :<br />
+            &lt;div&gt; id="div1" class="JSEventsExp"&gt; <br />
+            &lt;/div&gt; <br /><br />
+            ==========================================================================<br />
+            Javascript Codes [External File (onmouseover.js)]:<br />
+            // Onmouseover Event : <br /><br />
+            var myDiv1 = document.getElementById("div1");<br /><br />
+
+            myDiv1.onmouseover = function () { <br />
+            &nbsp;&nbsp; "use strict"; <br />
+            &nbsp;&nbsp; myDiv1.innerHTML = "You just hovered on div .."; <br />
+            }<br />
+          </code>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSonmouseout" id="JSonmouseout">
+        <header>
+          <h3>[Javascript onmouseout] Event:</h3>
+        </header>
+
+        <p>
+          =&gt; [onmouseout] Concept: is an event to respond While pressing the
+          key isidean Element
+        </p>
+
+        <p>
+          =&gt; [onmouseout] Property: is Not Suitable for accurate and Idial
+          Calculation, due to responding to the key written in the field while ,
+          and responding to it after is being written
+        </p>
+
+        <p>=&gt; [onmouseout] Event Example :</p>
+
+        <div id="div2" class="JSEventsExp"></div>
+        <br />
+
+        <div class="JSEventsExp1">
+          <code>
+            HTML Codes :<br />
+            &lt;div&gt; id="div2" class="JSEventxp"&gt; <br />
+            &lt;/div&gt; <br />
+            ==========================================================================<br />
+            Javascript Codes [External File (onmouseover.js)]:<br />
+            // Onmouseout Event : <br /><br />
+
+            var myDiv2 = document.getElementById("div2"); <br /><br />
+
+            myDiv2.onmouseout = function () { <br />
+            &nbsp;&nbsp; "use strict"; <br />
+            &nbsp;&nbsp; myDiv2.innerHTML = "You just out on div .."; <br />
+            }<br /><br />
+          </code>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="Jsonmouseover&out" id="Jsonmouseover&out">
+        <header>
+          <h3>[Javascript onmouseover and onmouseout] Events practical App:</h3>
+        </header>
+
+        <p>=&gt; [onmouseover and onmouseout] Event Example:</p>
+
+        <div id="div3" class="JSEventsExp"></div>
+        <br />
+
+        <div class="JSEventsExp1">
+          <code>
+            HTML Codes :<br />
+            &lt;div&gt; id="Displayondblclick" class="JSondblclickExp"&gt;
+            <br />
+            &lt;/div&gt; <br />
+            ==========================================================================<br />
+            Javascript Codes [External File (onmouseover.js)]:<br /><br />
+            // onmouseover & onmouseout Events : <br /><br />
+
+            var myDiv3 = document.getElementById("div3"); <br />
+            <br />
+
+            myDiv3.onmouseover = function () { <br />
+            &nbsp;&nbsp; "use strict"; &nbsp;&nbsp; myDiv3.innerHTML = "You just
+            overed on div .."; <br />
+            } <br />
+            <br />
+
+            myDiv3.onmouseout = function () { <br />
+            &nbsp;&nbsp; "use strict"; <br />
+            &nbsp;&nbsp; myDiv3.innerHTML = "You just gone out of div ..";
+            <br />
+            } <br />
+          </code>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="Jsonchange" id="Jsonchange">
+        <header>
+          <h3>[Javascript onchange] Event:</h3>
+        </header>
+
+        <p>
+          =&gt; [onchange] Concept: is an event occur when a change is occur on
+          spcific element on page
+        </p>
+
+        <p>
+          =&gt; [onchange] Property: It is a common Event which is being used
+          much in Web applications as pragrammers
+        </p>
+
+        <p>
+          =&gt; [onchange] Property: is Not Suitable for all elements of HtmL
+          Tags but only following:
+        </p>
+        <ol>
+          <li>Input Fields</li>
+          <li>Select Item</li>
+          <li>Text Area</li>
+        </ol>
+
+        <section class="JsMultCurrConv" id="JsMultCurrConv">
+          <h3>=&gt; Multiple Currency Conveter Example:</h3>
+
+          <label> Enter you Amount by your Choiced Currency</label>
+
+          <input id="input3" />
+          <select id="currency">
+            <option value="16.5">Dollar</option>
+            <option value="20">Euro</option>
+            <option value="7">Yin</option>
+            <option value="25">Esterlin</option>
+            <option value="13">Saudi Riyal</option>
+            <option value="60">Kuwaiti Dinar</option>
+          </select>
+          <br />
+          <br />
+          <br />
+
+          <div id="divC" class="JSEventsExp"></div>
+          <br />
+
+          <script src="MultCurrConverter.js"></script>
+
+          <div class="JSEventsExp1">
+            <code>
+              HTML Codes :<br />
+              &lt;label&gt; Enter you Amount by your Choiced Currency
+              &lt;/label&gt;<br />
+              &lt;input id="input3"&gt; <br />
+              &lt;select id="currency"&gt; <br />
+              &nbsp;&nbsp; &gt;option&lt; value="16.5"> Dollar &gt;option&lt;<br />
+              &nbsp;&nbsp; &lt;option value="20"&gt; Euro &lt;/option&gt;<br />
+              &nbsp;&nbsp; &lt;option value="7"&gt; Yin &lt;/option&gt;<br />
+              &nbsp;&nbsp; &lt;option value="25"&gt; Esterlin &lt;/option&gt;<br />
+              &nbsp;&nbsp; &lt;option value="13"&gt; Saudi Riyal
+              &lt;/option&gt;<br />
+              &nbsp;&nbsp; &lt;option value="60"&gt; Kuwaiti Dinar
+              &lt;/option&gt;<br />
+              &lt;/select&gt; <br />
+              <br />
+
+              &lt;div&gt; id="divC" class="JSEventsExp"&gt; <br />
+              &lt;/div&gt; <br />
+
+              ==========================================================================<br />
+              Javascript Codes [External File (onmouseover.js)]:<br />
+              // Multiple Currencies Conveter Application : <br /><br />
+
+              var myDiv = document.getElementById("divC"),<br />
+              &nbsp;&nbsp;myInput = document.getElementById("input3"),<br />
+              &nbsp;&nbsp;myCurrency = document.getElementById("currency");<br />
+
+              myDiv.onmouseover = function () {<br />
+              &nbsp;&nbsp;myDiv.innerHTML = "Choose Your Currency , then Enter
+              your Amount";<br />
+              }<br /><br />
+
+              myDiv.onmouseout = function () {<br />
+              &nbsp;&nbsp;myDiv.innerHTML = "";<br />
+              }<br /><br />
+
+              myCurrency.onchange = function () {<br />
+              &nbsp;&nbsp;myDiv.innerHTML = myInput.value * myCurrency.value + "
+              Egyptian Pound"; <br />
+              }
+            </code>
+          </div>
+        </section>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Intro</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="240"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="365" />
+          <input type="hidden" name="months" value="24" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to get basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num2.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num2.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num2.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num2.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num2" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg" />
+          Your browser Does Not Support the Audio file format...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 24 Video File:</h3>
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=M6Tc6TnKEFQ&list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh&index=24&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+        <!-- <video controls width="300" height="300">
+          <source
+            src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\C JavaScript\JS Basics/24 onmouseover, onmouseout, onchange.mp4"
+            type="video/mp4"
+          />
+          Your browser Does Not Support the Video file format...
+        </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to JavaScript");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

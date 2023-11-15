@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>63 PHP 5 In Arabic - File System - Intro</title>
+    <link
+      rel="stylesheet"
+      href="63 PHP 5 In Arabic - File System - Intro.css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      63 PHP 5 In Arabic - File System - Intro
+    </header>
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to PHP main Topics">
+            63 PHP 5 In Arabic - File System - Intro Main Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPCon"
+            title="Go to PHP [Control Structure - Switch] Concept"
+          >
+            63 PHP 5 In Arabic - File System - Intro Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPImp"
+            title="Go to PHP [Control Structure - Switch] Importance & Benefits"
+          >
+            63 PHP 5 In Arabic - File System - Intro Importance & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPSyntx"
+            title="Go to PHP [Control Structure - Switch] Syntax"
+          >
+            63 PHP 5 In Arabic - File System - Intro Syntax & Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#PHPPract"
+            title="Go to PHP [Control Structure - Switch] Practical Applications"
+          >
+            63 PHP 5 In Arabic - File System - Intro Practical Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    <main class="Welcome">
+      Welcome to PHP Course
+      <span> 63 PHP 5 In Arabic - File System - Intro </span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          PHP5 [ File System Function - [ 63 PHP 5 In Arabic - File System -
+          Intro ] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+
+          <ol>
+            <li>File System Function / Various Functions</li>
+          </ol>
+
+          <hr />
+        </article>
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="PHPCon" id="PHPCon">
+        <header>
+          <h3>PHP [63 PHP 5 In Arabic - File System - Intro ]</h3>
+        </header>
+
+        <h2>
+          [PHP - File System Function - [ 63 PHP 5 In Arabic - File System -
+          Intro ] ] => Concept:
+        </h2>
+
+        <ol>
+          <li>
+            [PHP - File System Function/methods syntax & concept as following :
+            <br />
+            <ul>
+              <li>
+                To have control on the file system on all operating system such
+                as <br />
+                <ul>
+                  <li>Create File/Directory</li>
+                  <li>Copy File/Directory</li>
+                  <li>Move File/Directory</li>
+                  <li>Paste File/Directory</li>
+                  <li>Delete File/Directory</li>
+                  <li>Rename File/Directory</li>
+                  <li>Checking of existing File/Directory</li>
+                </ul>
+              </li>
+
+              <li>
+                File System functions are very common & provides greate
+                abilities on dealing with files/folders-directories
+              </li>
+
+              <li>
+                PHP File System functions can provides the following abilities
+                <br />
+                <ul>
+                  <li>Ability to add contents to an existing File/Directory</li>
+                  <li>
+                    Ability to Edit contents of an existing File/Directory
+                  </li>
+                  <li>
+                    Ability to Read/Get content of existing File/Directory
+                  </li>
+                  <li>
+                    Ability to Get status/properties of existing File/Directory
+                  </li>
+                  <li>Ability to check on the existance of File/Directory</li>
+                  <li>
+                    Ability to change File/Directory Mode-Permision[Readonly,
+                    write , execute] || Owner[apatchi , user , wwww]
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                These functions are similer to the one in the command line /
+                linux / mac / Terminal operations-commands
+              </li>
+
+              <li>
+                Common Examples of php file system : <br />
+                <ol>
+                  <li>
+                    [chgrp] => Change the group of the file - directory {any
+                    file has a group in the OS}
+                  </li>
+                  <li>
+                    [chmod] => Change the mode/permision of the file - directory
+                    {Readonly || Write || Execute}
+                  </li>
+                  <li>
+                    [chown] => Change the owner of the file - directory {Apatchi
+                    , user , www}
+                  </li>
+                  <li>[delete] => Delete the file - directory</li>
+                  <li>[copy] => Copy the file - directory</li>
+                  <li>[rename] => Rename the file - directory</li>
+                  <li>[dirname] => Getting the directory name</li>
+                  <li>
+                    [disk_free_space] => Getting the Free space of the current
+                    partition
+                  </li>
+                  <li>
+                    [disk_total_space] => Getting the Total space of the current
+                    partition
+                  </li>
+                  <li>[fopen] => Open a file</li>
+                  <li>[fclose] => Close a file</li>
+                  <li>[file_exists] => Check if the file is existed</li>
+                  <li>
+                    [file_get_contents] => Read/get the file contents regardless
+                    of it's type [even it was a web site files] in string <br />
+                    can be filtered with the php functions
+                  </li>
+                  <li>
+                    [file_put_contents] => Write/set contents/orders/scripts in
+                    to a file regardless of it's type [even it was a web site
+                    files] <br />
+                    can be used to sent orders to the php server
+                  </li>
+                  <li>[fwrite || fputs] => To add/write contents on a file</li>
+                  <li>[fread] => To get/read contents from a file</li>
+                  <li>
+                    [is_dir] => Check the path is a directory or not => usually
+                    used before dealing a folder/directory
+                  </li>
+                  <li>
+                    [is_file] => Check if the current is a file or
+                    folder/directory
+                  </li>
+                  <li>[is_readable] => Check if the file is readable or not</li>
+                  <li>[mkdir] => Create a new folder/directory</li>
+                  <li>
+                    [rmdir] => To Remove the folder/directory [if it was empty]
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+          <br />
+        </ol>
+
+        <br />
+        <br />
+        <hr />
+        <!-------------------------------------------  -->
+      </section>
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPImp" id="PHPImp">
+        <header>
+          <h3>
+            PHP [63 PHP 5 In Arabic - File System - Intro ] Importance &
+            Benefits:
+          </h3>
+        </header>
+
+        <ul>
+          <li>
+            [File System Functions] method => These Methods are very useful &
+            common in dealing with all properties of file or directory in all
+            operating system
+          </li>
+          <li>
+            [File System Functions] method => This lesson is just an intro on
+            File system and some usual command/functions to deal with
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPSyntx" id="PHPSyntx">
+        <header>
+          <h3>
+            [ 63 PHP 5 In Arabic - File System - Intro ] Syntax & Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; In this after setting up the application => We will create a
+          simple PHP File && Running it by [Local Server]
+        </p>
+
+        <p>=&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} :</p>
+        <br />
+        <p>
+          Using [File System Function ] -> This lesson is just an intro and has
+          not any Practical Examples
+        </p>
+
+        <!-- <ol type="A">
+                    <li> [PHP - 5) First Example => Controling Funtions  -  [switch(){}] => {one case for one condition} : <br> 
+                        <ul>
+                            <li> This method Including the following elements : <br>
+                                <ul>
+                                    <li> [ Browser Name Variable ] => To be switching upon it </li>
+                                </ul>                                                        
+                            </li>                                                                                                                                        
+                        </ul>                                                                                                                            
+                    </li>
+ 
+                    <li> [PHP - 5) Second Example => Controling Funtions  -  [switch(){}] => {Multiple cases for the same condition}  : <br> 
+                        <ul>
+                            <li> This method Including the following elements : <br>
+                                <ul>
+                                    <li> [ Browser Name Variable ] => To be switching upon it </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>                                                                     
+                </ol>            -->
+        <!-- ================================================================= -->
+
+        <h2>B) Html page :</h2>
+        <br />
+        <span class="one"> &lt; !DOCTYPE html &gt; </span> <br />
+        <span class="two"> &lt; html &gt; </span> <br />
+        <span class="three"> &lt; /head &gt;</span> <br />
+        <span class="four">
+          &lt; title &gt; &lt;? php echo $title; ?&gt; &lt; /title &gt;
+        </span>
+        <br />
+        <span class="four">
+          &lt; link rel="stylesheet" href="63 PHP 5 In Arabic - File System -
+          Intro" media="all" &gt;
+        </span>
+        <br />
+        <span class="three"> &lt; /head &gt; </span> <br />
+        <br />
+        <span class="three">&lt; body &gt; </span> <br />
+
+        <span class="three">&lt; /body &gt; </span> <br />
+        <span class="two">&lt;/html &gt; </span> <br />
+        ----------------------------------------------------------------------------
+        <br />
+        ----------------------------------------------------------------------------
+        <br />
+        <br /><br />
+        <hr />
+        <br /><br />
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="PHPPract" id="PHPPract">
+        <header>
+          <h3>
+            PHP [ 63 PHP 5 In Arabic - File System - Intro ] General Practical
+            Applications :
+          </h3>
+        </header>
+
+        <p>
+          Using [File System Function ] -> This lesson is just an intro and has
+          NO any Practical Examples
+        </p>
+
+        <!-- <p> =&gt; Here (2) Major Applications PHP [ 63 PHP 5 In Arabic - File System - Intro ] as following =>  <br><br> -->
+
+        <!-- <ol type="A">
+                    <li> [PHP - 5) First Example => Controling Funtions  -  [switch(){}] => {one case for one condition} : <br> 
+                        <ul>
+                            <li> This method Including the following elements : <br>
+                                <ul>
+                                    <li> [ Browser Name Variable ] => To be switching upon it </li>
+                                </ul>                                                        
+                            </li>
+                            <li> This Example Include following steps: <br>
+                                <ul>
+                                    <li> Printing special Result according The Detected Browser variable value </li>
+                                </ul>                                                        
+                            </li>
+                        </ul>                                                                                                                            
+                    </li>
+ 
+                    <li> [PHP - 5) Second Example => Controling Funtions  -  [switch(){}] => {Multiple cases for the same condition}  : <br> 
+                        <ul>
+                            <li> This method Including the following elements : <br>
+                                <ul>
+                                    <li> [ Browser Name Variable ] => To be switching upon it </li>
+                                </ul>
+                            </li>
+                            <li> This Example Include following steps: <br>
+                                <ul>
+                                    <li> Printing special Result according The Detected Browser variable value </li>
+                                </ul>                                                        
+                            </li>
+                        </ul>
+                    </li>                                                                     
+                </ol>              -->
+
+        <!-- <section id=sec class=txtarea >                                  
+                 <a href="http://localhost/PHP%20Course/62%20PHP%205%20In%20Arabic%20-%20Control%20Structure%20-%20Switch/62%20PHP%205%20In%20Arabic%20-%20Control%20Structure%20-%20Switch.php">  
+                    {63 PHP 5 In Arabic - File System - Intro } => Lesson 63 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+        <!-- <script  src="14 PHP 5  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="VideoSection">
+        <h3>Lesson 63 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=VPR5UQuWSzA&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=63&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\63 PHP 5 In Arabic - File System - Intro.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shandow &trade;
+    </footer>
+
+    <script>
+      alert("Welcome to 63 PHP 5 In Arabic - File System - Intro ");
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

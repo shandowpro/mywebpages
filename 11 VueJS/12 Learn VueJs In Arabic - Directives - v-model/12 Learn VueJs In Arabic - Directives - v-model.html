@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 12 Learn VueJs In Arabic - Directives - v-model </title>
+    <link rel="stylesheet" href="12 Learn VueJs In Arabic - Directives - v-model.css" media="all">
+
+    <style>
+        .span{color: red ; font-weight:bold};
+    </style>
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        12 Learn VueJs In Arabic - Directives - v-model
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 12 Learn VueJs In Arabic - Directives - v-model ">
+                12 Learn VueJs In Arabic - Directives - v-model Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to  [12 Learn VueJs In Arabic - Directives - v-model ] Concept">
+                12 Learn VueJs In Arabic - Directives - v-model Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to  [12 Learn VueJs In Arabic - Directives - v-model ] Importance & Benefits">
+                12 Learn VueJs In Arabic - Directives - v-model Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to  [12 Learn VueJs In Arabic - Directives - v-model] Syntax">
+                12 Learn VueJs In Arabic - Directives - v-model Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to  [12 Learn VueJs In Arabic - Directives - v-model] Practical Applications">
+                12 Learn VueJs In Arabic - Directives - v-model Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <main class="Welcome"> Welcome to Vue.js Course <span> 12 Learn VueJs In Arabic - Directives - v-model </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                Vue.js [12 Learn VueJs In Arabic - Directives - v-model] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following : </p>
+                <ol type="A">
+                    <li> [v-model="Vue instance"] -> To Bind (Two ways Binding Method) to a HTML Element's Attribute value from the Vue Model , and vise versa </li>
+                </ol>                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> [ 12 Learn VueJs In Arabic - Directives - v-model] Concept: </h3>
+            </header>
+                        
+            <h2> =&gt; [v-model] Concept : <br>
+                <ul>
+                    <li> [v-model= "Vue Property"] =>  <br>
+                        <ul>
+                            <li> To Bind (Two Bind Method) to a HTML Element's Attribute value from the Vue Model </li> 
+                            <li> Similer to the {v-bind} , but with using (Two Ways Method Binding) </li> 
+                            <li> It is one of the most important and usual Directives used in Vue Application </li>
+                            <li> {v-model} => Deals with (3) main HTML elements : <br>
+                                <ol> 
+                                    <li> {&lt; input &gt;} => Will deal with (Value) , whether the input type is [Text (Value), Checkbox (Checked Value), Radio Buton (Checked Value) ] </li>
+                                    <li> {&lt; select &gt;} => Will deal with (Selected) value of Select Datasource  </li>
+                                    <li> {&lt; textarea &gt;} => Will deal with (Value) of Textarea  </li>
+                                </ol>    
+                            </li>
+                            <li> {v-model} => Deals with (3) Modifires : <br>
+                                <ol> 
+                                    <li> {.lazy} </li>                                    
+                                    <li> {.number} </li>                                    
+                                    <li> {.trim} </li>                                    
+                                </ol>    
+                            </li>
+                        </ul>
+                    </li> <br>
+                    
+                    <li> Differences between [One Way Binding Method {v-bind}] && [Two Way Binding Method {v-model}] => <br>
+                        <ol>                                                                                     
+                            <li> {v-bind} [One Way Binding Method]  <br>
+                                <p> Binding the Vue Property only FROM the Vue Model TO the HTML Element, and Vue Model Will Not respond to the Changing in Binded Value </p>
+                            </li> 
+                            <li> {v-model}  [Two Way Binding Method] <br>
+                                <p> Binding the Vue Property in Both FROM the Vue Model TO the HTML Element and Vise Versa, with integrated repondness to the Changing in Binded Value </p>
+                            </li>                             
+                        </ol>                    
+                    </li>                                        
+                </ul>
+            </h2>                                                                         
+            
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> Vue.js [12 Learn VueJs In Arabic - Directives - v-model] Importance & Benefits : </h3>
+            </header>
+            
+            <p> [Directives] => Provides an Easy Methods to apply certain Insturctions on HTML Elements as an Element's Attribute Auto Functionality Responding , and therefore more Dynamicallay <br>
+            
+            <p> [v-model]     => Critical in any Vue Application, when it is required to Two Ways bindind Method a Vue property value inside an HTML's Attribute and Vise Versa  <br>
+                        
+            <p> [v-model]     => provides auto responding to the changes in the binded Vue Instances, so it is affecting Vue model itself  <br>
+                        
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!-- <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ Vue.js [12 Learn VueJs In Arabic - Directives - v-models] Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; Following is a simple syntax code written Emded in a HTML page => <br>
+                Printing string text value from the server in the user website page  </p>            
+            
+            <p> =&gt; [Inheritance] =>  <br> </p>
+                         
+             <p> Syntax: <br> </p>            
+                <div id="Code" class="Code">                
+                    <span class= one></span> &lt; ?php <br>                      
+                    
+                    
+                    <span class= one></span> &lt; Defining new Classes : <br>
+                        <span class= two></span> A) Defining a [Final Class] {ClassName} with [default Property value] & [ Final Method using (Parameter) Variable] : <br>
+                            
+                            <span class= three></span>  final class ClassName { <br>
+                            
+                                <span class= four ></span>  // Class Properties Definging (public Variable) [with Null Property Value] : <br>
+                                <span class= four ></span>  public propertyName1;  <br>
+                                
+                                <span class= four ></span>  // Class Method Defining to access to a certain Property [To change the value] with Using (Parameter + $this) ] :  <br>
+                                <span class= four ></span>  final public function MethodName1($Par1) { <br> 
+                                    <span class= five ></span> $this->propertyName1 = $Par1; <br>
+                                    <span class= five ></span> echo 'Your Property is ' . $Par1 ; <br>
+                                <span class= four ></span> } <br><br>                                                                                                
+
+                            <span class= three ></span> } <br><br> <br>
+                            
+                            
+                        <span class= two></span> B) Defining a new Non Final Class {ClassName2} [with Final Method] : <br>
+                            <span class= three></span>  class ClassName2 { <br>                                                                               
+                                
+                                <span class= four ></span>  // Class Properties Definging (public Variable) [with Null Property Value] : <br>
+                                <span class= four ></span>  public propertyName1;  <br>
+                                
+                                <span class= four ></span>  // Class Method Defining to access to a certain Property [To change the value] with Using (Parameter + $this) ] :  <br>
+                                <span class= four ></span>  final public function MethodName2($Par1) { <br> 
+                                    <span class= five ></span> $this->propertyName1 = $Par1; <br>
+                                    <span class= five ></span> echo 'Your Property is ' . $Par1 ; <br>
+                                <span class= four ></span> } <br><br>                                                                        
+                            <span class= three ></span> } <br><br>                     
+                        
+                        <span class= two></span> C) Inheriting a new Class {ClassName3} form the Non final Class {ClassName2} [with it's Final Method] : <br>
+                            <span class= three></span>  class ClassName3 { <br>                                                                                                 
+                            <span class= three ></span> } <br><br>                     
+
+                                            
+                    <span class= one></span> &lt; Creating new objects : <br> 
+                        <span class= three></span>  Defining/Creating first Object {objName} from the first Final class [ClassName] : <br>
+                            <span class= four></span> $objName= new ClassName(); <br> <br>
+                            
+                        <span class= three></span>  Defining/Creating Second Object {objName2} from the Second Not Final class [ClassName2] : <br>
+                            <span class= four></span> $objName2 = new ClassName2(); <br> <br>
+                        
+                        <span class= three></span>  Defining/Creating Third Object {objName3} from the Third Final class [ClassName3] : <br>
+                            <span class= four></span> $objName3 = new ClassName2(); <br> <br>
+
+                    <span class= one></span> &lt; Calling objects Methods : <br> 
+                        <span class= three></span>  Calling / Proccessing Method of First Object {objName} from the first Class -> {objName}'s Final Method [Welcome by using the property value] (with 1 parameter) : <br>
+                            <span class= four></span> $objName-> MethodName1('value'); <br> <br> <br>
+                        
+                        <span class= three></span>  Calling / Proccessing Method of Second Object {objName} from the Second Class -> {objName2}'s Final Method [Welcome by using the property value] (with 1 parameter) : <br>
+                            <span class= four></span> $objName2-> MethodName2('value'); <br> <br> <br>
+                        
+                        <span class= three></span>  Calling / Proccessing Inherited (from the second Class) Final Method of Third Object {objName3} from the Third Class (Inherited from the second Class) -> {objName3}'s Final Method [Welcome by using the property value] (with 1 parameter) : <br>
+                            <span class= four></span> $objName3-> MethodName2('value'); <br> <br> <br>
+                        
+                                                                                                                                                                                                                                                                                                                    
+                        <span class= three></span> Printing the Object created from the First Class {after Processing the Basic Final method} :  <br>
+                            <span class= four></span> echo '&lt; pre &gt;'; <br> <br> 
+                            <span class= four></span> print_r ($objName); <br> <br> 
+                            <span class= four></span> echo '&lt; /pre &gt;'; <br> <br>                             
+                        
+                        <span class= three></span> Printing the Object created from the Second Class {after Proccessing by Basic Final method} :  <br>
+                            <span class= four></span> echo '&lt; pre &gt;'; <br> <br> 
+                            <span class= four></span> print_r ($objName2); <br> <br> 
+                            <span class= four></span> echo '&lt; /pre &gt;'; <br> <br>                             
+
+                        <span class= three></span> Printing the Object created from the Third Class {after Proccessing by Inherited method} :  <br>
+                            <span class= four></span> echo '&lt; pre &gt;'; <br> <br> 
+                            <span class= four></span> print_r ($objName3); <br> <br> 
+                            <span class= four></span> echo '&lt; /pre &gt;'; <br> <br>                             
+                        
+                        //=========================================================== <br> <br>
+                                                        
+                <p> =&gt; PHP new Syntax of the [Inheritance] (2) Applications as following :  <br> </p>
+
+                    <ol type="A">                                                                                                                                
+                        <li> First Example  => Creating a [Final Class] with final keyword with normal [Non Final Method]   </li>                     
+                        <li> Second Example  => Creating a Final Class with final keyword with [Final] Method    </li>                     
+                    </ol> <hr>                                                        
+                    //=========================================================== <br> <br>                                                                                                            
+                    <br><br> 
+               </div> 
+            <hr>
+        </section> -->
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPPract" id="PHPPract"> 
+             <header>
+                <h3> Vue.js [Using Vue Directives {v-model}] General Practical Application : </h3>
+            </header>
+            
+            <p> In this lesson will be (1) Application [ Using Directives [{v-model} ]= > as following :  </p>
+
+                <ol type="A">
+                
+                    <li> First Example => Creating a [Vue Application Container] with [{v-model}] , and including the following steps : <br>
+                        <ul>
+                            <li> Defining and Creating the [Vue Main Container] {app-one} , with including the following (6) : <br> 
+                                <ul> 
+                                    <li> [input(text)] => Using the [v-model] to Bind (Two Ways Methods) between the Vue property inside a Html element's Attribute Value [input(text)]  </li>
+                                    
+                                    <li> [input(checkbox) - Single Element] => Using the [v-model] to Bind (Two Ways Methods) between the Vue property inside a Html element's Attribute Checked Value [input(checkbox) - Single Element]  </li>
+                                    
+                                    <li> [input(checkbox) - Multiple Elements] => Using the [v-model] to Bind (Two Ways Methods) between the Vue property inside a Html element's Attribute Checked Value [input(checkbox) - Multiple Elements]  </li>
+                                    
+                                    <li> [input(radiobutton) - Multiple Elements]  => Using the [v-model] to Bind (Two Ways Methods) between the Vue property inside a Html element's Attribute Checked Value [input(radiobutton) - Multiple Elements]  </li>
+                                    
+                                    <li> [textarea] => Using the [v-model] to Bind (Two Ways Methods) between the Vue property inside a Html element's Attribute Value [textarea]  </li>
+                                    
+                                    <li> [Select Box] => Using the [v-model] to Bind (Two Ways Methods) between the Vue property inside a Html element's Attribute Selected Value [Select Box]  </li>
+                                </ul>
+                            </li>                            
+                        </ul>                                                                                    
+                    </li>      
+                </ol> <hr>                  
+                                                                         
+        </section>                     
+        
+        <!-- The following is the main Vue application Container , which will be accessed by the Vue Framework using the Container [ID]   -->
+        
+        <!-- First Vue Application [Using Direcitve {v-model}]  -->
+            <div id="app-one">              
+                <h1> This is the First Vue Application : [ {{el}} ] </h1> <br> <br>
+                
+                <h2> This is the First Example : Using {v-model} with [input(text)] </h2> <br>
+                
+                <input type="text" placeholder="Binded Value by V-model" v-model="inputValue" > <hr> <br>
+                
+                <p> {V-model} Binding Input Field Value is:  {{ inputValue }}  </p> <br> <hr> <br>
+                <!-- -------------------------------------------------  -->
+                
+                <h2> This is the Second Example : Using {v-model} with [input(Checkbox) - Single] </h2> <br>
+                
+                <input type="checkbox" value="Choice 1" v-model="cbValue" > 
+                <label> Choice 1 </lable> <br>
+
+                <p> {V-model} Binding Checkbox Checked Value is:  {{ cbValue }}  </p> <br> <hr> <br>
+                <!-- -------------------------------------------------  -->
+            
+                <h2> This is the Third Example : Using {v-model} with [input(Checkbox) - Multiple] </h2> <br>                
+                
+                <input type="checkbox" value="Checkbox 1" id="Checkbox1" v-model="cbValues" > 
+                <label> Checkbox 1 </lable>
+                
+                <input type="checkbox" value="Checkbox 2" id="Checkbox2" v-model="cbValues" > 
+                <label> Checkbox 2 </lable>        
+                    
+                <input type="checkbox" value="Checkbox 3" id="Checkbox3" v-model="cbValues" > 
+                <label> Checkbox 3 </lable><br>
+
+                <p> {V-model} Binding Multiple Checkbox ALL Checked Values are :  {{ cbValues }}  </p> <br> <hr> <br>
+                <!-- -------------------------------------------------  -->
+                
+                <h2> This is the Fourth Example : Using {v-model} with [input(RadioButton) - Multiple] </h2> <br>                
+                
+                <input type="radio" value="Radio 1" id="Radio1" v-model="radValue" > 
+                <label> Radio Button 1 </lable>
+                
+                <input type="radio" value="Radio 2" id="Radio2" v-model="radValue" > 
+                <label> Radio Button 2 </lable>
+                    
+                <input type="radio" value="Radio 3" id="Radio3" v-model="radValue" > 
+                <label> Radio Button 3 </lable>   <br>
+                
+                <p> {V-model} Binding Radio Button Checked Value is:  {{ radValue }}  </p> <br> <hr> <br>
+                <!-- -------------------------------------------- -->
+
+                <h2> This is the Fifth Example : Using {v-model} with [textarea] </h2> <br>                
+ 
+                <textarea v-model="txtareaValue" >  </textarea>   <br>
+
+                <p> {V-model} Binding Text Area Value is:  {{ txtareaValue }}  </p> <br> <hr> <br>
+                <!-- ----------------------------------------------- -->
+                
+                <h2> This is the Sixth Example : Using {v-model} with [Select Box] </h2> <br>                
+            
+                <select v-model="selected"> 
+                    <option disabled> Select one of the Following Choices </option>
+                    <option> A </option>
+                    <option> B </option>
+                    <option> C </option>
+                </select>  <br>
+                
+                <p> {V-model} Binding Select Box Selected option's Value is:  {{ selected }}  </p> <br> <hr> <br>
+                <!-- ------------------------------------------------------- -->
+                
+                <h2> This is the seventh Example [advanced arithmetic operation] by using (v-model with Radio Input ) :  </h2>
+
+                <label> Insert the first number : </label> <input  type="number" v-model="num1" placeholder="Insert first number"  >  <br>
+                <label> Insert the second number : </label> <input type="number" v-model="num2" placeholder="Insert second number"  >  <br>
+
+                <label> Choose your arithmetic operation : </label>
+                
+                <label> Addition </lable>
+                <input type="radio" value="Addition" id="add" v-model="operation" > <br>
+                
+                <label> Submition </lable>
+                <input type="radio" value="Submition" id="sub" v-model="operation" >  <br>
+                    
+                <label> Multiple </lable> 
+                <input type="radio" value="Multiply" id="mult" v-model="operation" > <br> 
+                
+                <label> Division </lable> 
+                <input type="radio" value="Division" id="div" v-model="operation" > <br>
+                
+                <p> Your numbers are : {{num1}}  {{num2}}  </p>                
+                <p v-if="operation == 'Addition' " > The result of {{operation}} =  {{num1 + num2}} </p>                
+                <p v-else-if="operation == 'Submition' " > The result of {{operation}} =  {{num1 - num2}} </p>                
+                <p v-else-if="operation == 'Multiply' " > The result of {{operation}} =  {{num1 * num2}}  </p>                
+                <p v-else-if="operation == 'Division' " > The result of {{operation}} =  {{num1 / num2}}  </p>                
+                <p v-else="operation == '' " > You have not choiced any option   </p>                
+                <!-- ---------------------------------------------------------------- -->
+
+                <h2> This is the eighth Example [advanced arithmetic operation] by using (v-model with Checkbox Input ) :  </h2>
+
+                <label> Insert the first number : </label> <input  type="number" v-model="num1" placeholder="Insert first number"  >  <br>
+                <label> Insert the second number : </label> <input type="number" v-model="num2" placeholder="Insert second number"  >  <br>
+
+                <label> Addition operation : </label>
+                <input type="checkbox"  id="add" value="Addition" v-model="operations"> <br>
+                
+                <label> Submition operation : </label> 
+                <input type="checkbox" id="sub" value="Submition" v-model="operations"> <br>
+                
+                <label> Multiply operation : </label>
+                <input type="checkbox" id="mult" value="Multiply" v-model="operations"> <br>
+                
+                <label> Division operation : </label>
+                <input type="checkbox" id="div" value="Division" v-model="operations"> <br>
+
+                <!-- <p>  {{'[' + (operations ? 'Is Subscribed' : 'Not Subscribed') + ']'}} </p> -->
+
+                    
+                <!-- <textarea @click="operations ? 'Calculation has been selected succesfully' : 'none' "> </textarea> -->
+ 
+                <p v-if="operations == 'Addition'" > {{ (num1 + num2) }} </p>
+                <p v-else-if="operations == 'Submition'" > {{ num1 - num2 }} </p>
+                <p v-else-if="operations == 'Multiply'" > {{ num1 * num2 }} </p>
+                <p v-else-if="operations == 'Division' " > {{ num1 / num2 }} </p>
+                <p v-else="operations" > You have not choosed any operation OR Choosed more than one operation  </p>
+
+                
+                <!-- <p>  {{  (operations ? 'Your operation has been run successfully' : 'Your operation has been canceled')  }} </p> -->
+                <!-- <button @click="disOp()"> calculate </button> -->
+            </div> 
+
+            
+            <!-- The following is the main Vue Framework Importing Syntax [from Application Folder]  -->
+            <script src="js/vue.js"></script>
+            
+            <!-- The following is the main Vue application Model including the [the container element Name + Vue Data]  -->
+            <script> 
+                var vm = new Vue({
+                    el: '#app-one',
+                    data: {                        
+                        // Basic instances :
+                        el: 'app-one',
+                        name: 'SHADI',
+
+                        // First section : 
+                        // <input> value for [text type] :
+                        inputValue: "",
+
+                        // A] <input> [checkbox type] value for (single and multiple) :
+                        // 1) Single input empty value :
+                        cbValue: "",
+                        
+                        // 2) Multiple input empty values [as an array due the {checkbox} ability for  multiple values at once choice] :
+                        cbValues: [],                        
+                        
+                        // B] <input> value for [radio button type] (single and multiple) :  
+                        // 1) Single input empty value :
+                        radValue: "",
+                        
+                        // 2) Multiple input empty values [as an accumlated string due the {radio button} not able for multiple values at once choice] :
+                        radValues: "",
+                        
+                        // <textarea> value  :
+                        txtareaValue: "",
+
+                        // <select> value for [selected option] {one string value for the once choice} :
+                        selected : "",
+
+
+                        // Second Section :
+                        // A] Insert (2) numbers + select operation [ + || - ||  * || / ] by using (input radiobox type)  : 
+                        num1 : 0 ,
+                        num2 : 0 ,
+                        operation : "",
+                        
+                        // A] Insert (2) numbers + select operation [ + || - ||  * || / ] by using (input checkbox type)  : 
+                        operations : [],
+                        disp: '',
+                    }, 
+                    methods: {
+                        dispOp : function() { 
+                            if (this.operations) {
+                                this.disp = 'Your operation has been run successfully ' ;
+                            } else {
+                                this.disp = 'Your operation has been not Initaited ! ' ;
+                            }
+                        }
+                    }   
+
+                });
+            </script>
+        <!------------------------------------------------------------------------------------------------------>                                 
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection">
+            <h3> Lesson 12 Video File:</h3>
+            <video controls width="300" height="300">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\12 Learn VueJs In Arabic - Directives - v-model.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video>
+        </section>
+        
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU:
+                 <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter>
+                 &nbsp;&nbsp;&nbsp; Uploading: 
+                 <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open style="display: flex; width:100%">
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://shadi-pro.epizy.com"> My Personal Reference </a></li>
+                <li> <a href="https://shadi-cv.epizy.com"> My Personal Resume </a></li>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 12 Learn VueJs In Arabic - Directives - v-model");
+    </script>
+
+    
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

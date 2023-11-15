@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 17 HTML5 Form Input Fields part 1 [Color, Range, Number] </title>
+    <link rel="stylesheet" href="HTML5 Form Input [Color,Range,Number].css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">  </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 17 HTML5 Form Input [Color, Range, Number]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="HTML5 Form Input new Attributes Main Concept" > HTML5 Form Input Fields               [Color, Range, Number] Main Concept </a> </li>
+            <li> <a href=#InputColorNTag   title="Go to Input Tag new field / Color" > Form Input Element => Color   </a> </li>     
+            <li> <a href=#InputRangeNTag   title="Go to Input Tag new field / Range" > Form Input Element => Range   </a> </li>     
+            <li> <a href=#InputNumberNTag   title="Go to Input Tag new field / Number" > Form Input Element => Number   </a> </li>   
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> Lesson 17 {Form Input Fields part 1 [Color, Range, Number] } </span> </main>
+
+<!-------------------------------------------------------------------------------------------------------------->                        
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>
+                HTML5 Form Input Fields => [Color, Range, Number] Concept 
+            </header>
+            
+            <article>                
+                <p> &gt; The New HTML5 Form Elements in this lesson as following :</p>
+                
+                <ol>                    
+                    <li> Form => &nbsp;&nbsp; &lt; input &nbsp; type = "color" &gt;  </li>           
+                    <li> Form => &nbsp;&nbsp; &lt; input &nbsp; type = "range" &gt;  </li>           
+                    <li> Form => &nbsp;&nbsp; &lt; input &nbsp; type = "number" &gt;  </li>           
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>
+      
+        <section class="InputColorNTag" id="InputColorNTag">
+            <header>
+                Form Input New field [ &lt; input  type = "color" &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Form Input New field [Color] Concept: </h1>
+                    <p> =&gt; [Color Field] is one of the new fields in HTML5 and Not supported in each Internet     Explorer and Safari untill 2014. 
+                    <p> =&gt; [Color Field] has (2) main Attributes :
+                        <ul>
+                            <li> Name => which is the programable name for the input element of the form</li>
+                            <li> Value => which is the Defualt Color been existed in the Color tool on page one        page is loaded, And it must be written with long Hexa Color Code (6 Digits)</li>
+                        </ul>
+                    <p> =&gt; [Color Field] is mainly made to send a Color value with in the form to the server             by user, and it usually followed by [Submit] button. 
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Form Input [Color Field] Usages: </h1>                    
+                    <p> =&gt; It can be be programatically used in Events to as an actions or reactions to change           the color of page or element/s using Javascript codes. </p>                         
+                </header>
+                
+                <header class="InputColorExp">
+                    <h1>Example:</h1>
+                    <p> Selecting specific color by user from the Color tool input field</p>
+                    <section>
+                        <h3> Select your favourite Color: </h3>
+                        <form>
+                            <input type="color" name="theme" value = "#FF0000">                            
+                            <input type="submit" value="Send">
+                        </form>
+                    </section>
+                    
+                    <div class="InputColorExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Select your favourite Color: &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form&gt; <br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "color"&nbsp; name = "theme"&nbsp; value = "#FF0000"  &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; name = "submit-color"&nbsp; value = "send"  &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+        
+        <section class="InputRangeNTag" id="InputRangeNTag">
+            <header>
+                Form Input New field [ &lt; input  type = "range" &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Form Input New field [Range] Concept: </h1>
+                    <p> =&gt; [Range Field] is one of the new fields in HTML5 and that allowing input a specific           Value from Value Range Bar. 
+                    <p> =&gt; [Range Field] has (5) main Attributes :
+                        <ul>
+                            <li> Name => which is the programable name for the input element of the form</li>
+                            <li> Value => which is the Defualt Numeric Value Auto selected Range tool on page                   once the page is loaded.</li>
+                            <li> Min => which is the Minimum accepted value of the range tool bar, that the tool             will not accept any less numeric value.</li>
+                            <li> Max => which is the Maximum accepted value of the range tool bar, that the tool             will not accept any greater numeric value. </li>
+                            <li> Step => which is specify the amount of step when changing the value of Range                  tool.</li>
+                        </ul>
+                    <p> =&gt; [Range Field] is mainly made to send a Numeric value with in the form to the server             by user, and it usually followed by [Submit] button. 
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Form Input [Range Field] Usages: </h1>                    
+                    <p> =&gt; It can be be programatically used in Events to as an actions or reactions to change           the Value of certain input or element/s of page using Javascript codes. </p>       
+                </header>
+                
+                <header class="InputRangeExp">
+                    <h1>Example:</h1>
+                    <p> Selecting specific Value from by user from the Range tool Bar input field </p>
+                    <section>
+                        <h3> Select your a number from range [0-10] (step = 1): </h3>
+                        <form>
+                            <input type="range" name="Choose-Value" min="0" max="10" step="1" value = "1">       
+                            <input type="submit" value="Send">
+                        </form>
+                    </section>
+                    
+                    <div class="InputRangeExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Select your a number from range [0-10]: &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form&gt; <br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "range"&nbsp; name = "Choose-Value" &nbsp; min = "0" &nbsp; max ="10" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; step = "1"&nbsp; value = "1"  &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; name = "submit-Value"&nbsp; value = "send"  &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+<!-------------------------------------------------------------------------------------------------------------->
+        <section class="InputNumberNTag" id="InputNumberNTag">
+            <header>
+                Form Input New field [ &lt; input  type = "number" &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> Form Input New field [Number] Concept: </h1>
+                    <p> =&gt; [Number Field] is one of the new fields in HTML5 which allowing to input a             numeric value from up/down selector tool . 
+                    <p> =&gt; [Number Field] has (5) main Attributes :
+                        <ul>
+                            <li> Name => which is the programable name for the input element of the form</li>
+                            <li> Value => which is the Defualt Numeric Value Auto selected of Number Selector                   tool on page once the page is loaded.</li>
+                            <li> Min => which is the Minimum accepted value of the Number Selector tool, that the             tool will not accept any less numeric value.</li>
+                            <li> Max => which is the Maximum accepted value of the Number Selector tool, that the             tool will not accept any greater numeric value. </li>
+                            <li> Step => which is specify the amount of step when changing the value of Number                Selector tool.</li>
+                        </ul>
+                    <p> =&gt; [Number Field] is mainly made to send a Color value with in the form to the server           by user, and it usually followed by [Submit] button. 
+                </header>
+                
+                <header>
+                    <h1> Main & Features of Form Input [Number Field] Usages: </h1>                    
+                    <p> =&gt; It can be be programatically used in Events to as an actions or reactions to change           the color of page or element/s using Javascript codes. </p>                         
+                    <p> =&gt; It mainly an east way to input a numeric value and send it with in form to server. </p>                         
+                </header>
+                
+                <header class="InputNumerExp">
+                    <h1>Example:</h1>
+                    <p> Selecting specific color by user from the Color tool input field</p>
+                    <section>
+                        <h3> Select your a number from range [0-10] (step = &nbsp;. 1): </h3>
+                        <form>
+                            <input type="number" name="Choose-Value" min="0" max="10" step=".1" value = "1">     
+                            <input type="submit" value="Send">
+                        </form>
+                    </section>
+                    
+                    <div class="InputNumberExp1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            
+                            &nbsp;&nbsp; &lt;h3&gt; Select your a number from range [0-10]: &lt;/h3&gt;<br>
+                            &nbsp;&nbsp; &lt;form&gt; <br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "number"&nbsp; name = "Choose-Value"&nbsp; min = "0" &nbsp; max ="10" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; step = ".1"&nbsp; value = "1"  &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp; type = "sumbit"&nbsp; name = "submit-Value"&nbsp; value = "send"  &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>                            
+                            &lt;/section&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>                                                        
+                
+            </article>                
+        </section>
+        
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age"> <br>
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="12">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+        <section class="Calculator">
+            <h3> Enter two numbers to get basic operation: </h3>
+           <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+               
+               <input type="text" name="num1">
+               <input type="text" name="num2">
+               
+               <output name="Rsum"> Summition Result: </output><br>
+               <output name="Rsub"> Substraction Result: </output><br>
+               <output name="Rmult"> Multiply Result: </output><br>
+               <output name="Rdiv"> Division Result: </output>
+           </Form> 
+       </section>
+        
+        <section class="AudioSection">        
+                <h3> Epic Autoplay Audio File:</h3>
+                <audio controls loop>
+                    <source src="Audio/7 Pirates Ark Of War.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file format...              
+                </audio>                        
+       </section>
+        
+        <section class="VideoSection">        
+                <h3> Lesson 17 Video File:</h3>
+                <video controls width="300" height="320" autoplay>
+                    <source src="C:/Users/hp/Videos/pLanguages/web/1 Web Designing Front End/A HTML/2 HTML 5/HTML 5/17  Form Input - Color, Range, Number.mp4" type="video/mp4">                 
+                    Your browser Does Not Support the Video file format...              
+                </video>                        
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

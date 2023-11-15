@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 13 Learn VueJs In Arabic - Create Basic Components </title>
+    <link rel="stylesheet" href="13 Learn VueJs In Arabic - Create Basic Components.css" media="all">
+
+    <style>
+        .span{color: red ; font-weight:bold};
+    </style>
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        13 Learn VueJs In Arabic - Create Basic Components
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 13 Learn VueJs In Arabic - Create Basic Components ">
+                13 Learn VueJs In Arabic - Create Basic Components Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to  [13 Learn VueJs In Arabic - Create Basic Components ] Concept">
+                13 Learn VueJs In Arabic - Create Basic Components Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to  [13 Learn VueJs In Arabic - Create Basic Components ] Importance & Benefits">
+                13 Learn VueJs In Arabic - Create Basic Components Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to  [13 Learn VueJs In Arabic - Create Basic Components] Syntax">
+                13 Learn VueJs In Arabic - Create Basic Components Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to  [13 Learn VueJs In Arabic - Create Basic Components] Practical Applications">
+                13 Learn VueJs In Arabic - Create Basic Components Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <main class="Welcome"> Welcome to Vue.js Course <span> 13 Learn VueJs In Arabic - Create Basic Components </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                Vue.js [13 Learn VueJs In Arabic - Create Basic Components] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following : </p>
+                <ol type="A">
+                    <li> [Resuable Components] -> A unified Model to be reused multiple Times with Web Desing / Web Application </li>
+                </ol>                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> [ 13 Learn VueJs In Arabic - Create Basic Components] Concept: </h3>
+            </header>
+                        
+            <h2> =&gt; [Reusable Components] Concept : <br>
+                <ul>
+                    <li> [Reusable Components] => <br>
+                        <ul>
+                            <li> One of the Vue Model Parts, but has it's own Sub model in the Vue Script  </li>                             
+                            <li> One of the most powerful concepts an tool in any Framework and various Libraries </li> 
+                            <li> Used for the repeated Websites Tempaltes Applications components  </li>                             
+                            <li> {Reusable component} => Syntax is similer to the {on()} function in {JQUERY} => [  Vue.component('component-name', {data: function(){return {propName1 :"propvalue1", propName2 :"propvalue2", } }, template: 'element syntax html & vue'   } )  ]  </li>                             
+                            <li> {Reusable Components} => Has it own Sub Model for each Component with in the main same Vue Model , and the (2) Parts : <br>
+                                <ol> 
+                                    <li> {Data} => with following aspects : <br>
+                                        <ol> 
+                                            <li> Contains the new component Data that will be pass through into template Elements like [Properties && Methods]  </li>
+                                            <li> It is about a function of returning object elements of passed data </li>
+                                            <li> Contains the new component Data that will be pass through into template Elements like [Properties && Methods]  </li>
+
+                                        </ol> 
+                                     </li>
+                                    <li> {Template} => Contains the Template HTML Elements and Components like : (&lt;p&gt;)  (&lt;div&gt;)  (&lt;h1&gt;)  </li>
+                                </ol>    
+                            </li>
+                            <li> {Reusable Components} Best Practies => : <br>
+                                <ol> 
+                                    <li> {Repeated Elements} -> VueJS {Reusable Models}  </li>
+                                    <li> {Unique Elements} -> VueJs Arrangements </li> 
+                                </ol>    
+                            </li>
+                        </ul>
+                    </li> <br>
+
+                    <li> The Differences between properties passed through the vue inxtances and properites passed through the vue compnonents as following : 
+                        <ul>
+                            <li> [Vue Instances properties] => <br>
+                                <p> will be public passed through any element in the {vue application} , not just in the {vue new component}  </p>
+                                <p> Declaration method -> can be declared in the [Vue instances model] properties [with in (Data:) section ] </p>
+                                <p> calling method -> can be Called by inside vue { { } } , in any place of the Vue application [[but Can Not be Called in new declared Vue component]]  </p>
+                            </li> <br>
+                            
+                            <li> [Vue new component properties] => <br>
+                                <p> will be private passed through only just in the {vue new component} </p>
+                                <p> Decleration method -> can be declared in the [Vue new component model] passed properties [with in (Data:) section ] </p>
+                                <p> calling method -> Called by inside vue { { } } , but only to be called and used in the new Vue component </p>
+                            </li>
+                        </ul>
+                        <p> Niether {Defined Properties of Vue Instances} can be used in the {Vue new component} <br> 
+                             NOR New {Defined Properties of Vue new component} can be used in the {Vue Application outside the defined Vue component} 
+                        </p> 
+                    </li>
+
+   
+                    <li> The full Ideal aned correct priorities in the Vue model until now: <br>
+                        <ol>
+                            <li> Vue Application </li>
+                            <li> Vue importing library script -> [calling Vue file]  </li>
+                            <li> Vue Model => including the following (in order) : (3 parts)  <br>
+                                <ol> 
+                                    <li> Decleration of the [new component] -> including following : (2 parts) <br> 
+                                        <ul> 
+                                            <li> [Vue new component data] => the data(properties) will be passed through the new component </li>
+                                            <li> [Vue new component Template] => the Syntax of the new component  </li>
+                                        </ul>     
+                                    </li>
+
+                                    <li> Decleration of the [Vue Intances] ->  will be passed through the Vue Application ->  including : (2 Parts)   <br>
+                                        <ul> 
+                                            <li> [Vue application Properties] </li> 
+                                            <li> [Vue application Methods/functions] </li> 
+                                        </ul>
+                                    </li>                                    
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </h2>                                                                         
+            
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> Vue.js [13 Learn VueJs In Arabic - Create Basic Reusable Components] Importance & Benefits : </h3>
+            </header>
+                        
+            <p> [Reusable Components] => Critical and Basic to create a full VueJS Complete Templates and arrangement their funtionalities   <br>
+            <p> [Reusable Components] => Has greate features to create full responsive Templates and some of backend Features  <br>
+            <p> [Reusable Components] => Can Be used for several times with the a unique settings for each component <br>
+                        
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ Vue.js [13 Learn VueJs In Arabic - Create Basic Components] Syntax & Methods: </h3>
+            </header>                 
+            
+            <p> =&gt; [Create Basic Re-Useable Components] =>  <br> </p>
+                         
+             <p> Syntax: <br> </p>            
+                <div id="Code" class="Code">                
+                    A] Vue HTML Container  <br>
+                    <span class= one></span> &lt; div id="app-one" &gt;  <br> 
+                        <span class= two></span> &lt; h1 &gt; Welcome { { name } } to the Vue Application &lt; h1 &gt;  <br> 
+                        <span class= two></span> &lt; componet-Name &gt; &lt; /componet-Name &gt; <br>                                                     
+                    <span class= one></span> &lt; /div &gt;  <br> 
+                    //=========================================================== <br> <br>
+                    
+                    B]  VueJS Libraries Importing  <br>
+                    <span class= one></span> &lt; script src="js/ vue.js " &gt;  &lt; /script &gt;  <br>                     
+                    //=========================================================== <br> <br>
+                    
+                    C]  VueJS Main Model  <br>
+                    <span class= one></span> &lt; script &gt;  <br>                     
+                                                
+                        <span class= two></span> // 1) [Vue new Component Main Model] Defining : <br> 
+                        
+                        <span class= two></span> Vue.component('componentName' , { <br> 
+                            <span class= three></span> // A] [Vue component Data] Defining : <br> 
+                            <span class= three></span> data: function() { <br> 
+                                <span class= four></span> return { <br> 
+                                    <span class= five></span> name : 'shadi', <br> 
+                                    <span class= five></span> count : 0 <br> 
+                                <span class=four></span> } <br> 
+                            <span class=three></span> }, <br>  <br>
+                            
+                            <span class= three></span> // B] [Vue Component Template] Elements Defining : <br> 
+                            <span class= three></span> template: '&lt; p @click="count++" &gt; Hello { { name } }<br>
+                                <span class= four></span> Your count is : { { count } } &lt; /p &gt;'  <br> 
+                        <span class=two></span> }) <br> 
+                        //=========================================================== <br> <br>
+
+                        <span class= two></span> // 2) [Vue Model Instances] Defining : <br> 
+
+                        <span class= two></span> var vm = new Vue({  <br>
+                            <span class= three></span> el: 'app-one' , <br>
+                             
+                            <span class= three></span> data: { <br> 
+                                <span class= four></span> prop1: 'value' , <br> 
+                                <span class= four></span> prop2: [], <br>
+                            <span class=three></span> } <br> 
+                        
+                            <span class= three></span> methods: { <br> 
+                                <span class= four></span> method1: function() { codes} <br> 
+                                <span class= four></span> method2: function() { codes} <br> 
+                            <span class=three></span> } <br> 
+                        <span class=two></span> }); <br>                        
+                    
+                    <span class= one></span> &lt; /script &gt;  <br>
+                        //=========================================================== <br> <br>                                                                                                            
+                    <br><br> 
+               </div> 
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPPract" id="PHPPract"> 
+             <header>
+                <h3> Vue.js [Create Reusalbe Components] General Practical Application : </h3>
+            </header>
+            
+            <p> In this lesson will be (1) Application { Create Reusable Components} ]= > as following :  </p>
+
+                <ol type="A">
+                
+                    <li> First Example => Creating a [Vue Application Container] with [{Vue Resuable component} + {Vue Model Instances}] , and including the following steps : <br>
+                        <ul>
+                            <li> Defining and Creating the [Vue Main Container {app-one}] => Including the following (2) Main Parts : <br> 
+                                <ul> 
+                                    <li> {Vue Reusable Component} => Using the [component-one] , including the following main (2) Parts : <br>
+                                        <ol type="A"> 
+                                            <li>  Component Data : <br>
+                                                <ol> 
+                                                    <li> property1 => Name : 'Shadi' </li>
+                                                    <li> property2 => count : 0 </li>
+                                                </ol>
+                                            </li> <br>
+                                            <li> Component Template : <br>
+                                                <ol> 
+                                                    <li> Element=> &lt; p &gt; => Including a Vue Function by using (@click="") </li>                                                  
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                
+                                    <li> {Vue Model Instances} => Including the following Instances : <br>
+                                        <ul> 
+                                            <li> el = '#app-one' </li>
+                                            <li> data = { Inlcluding (1): Property => Message = 'Welcome to the Vue Application' } </li>
+                                        </ul>                                                                    
+                                    </li>
+                                </ul>
+                            </li>                            
+                        </ul>                                                                                    
+                    </li>      
+                </ol> <hr>                  
+                                                                         
+        </section>                     
+        
+        <!-- The following is the main Vue application Container , which will be accessed by the Vue Framework using the Container [ID]   -->
+        
+        <!-- First Vue Application [Using Both {Creating new Component} + {Vue Model Instances}]  -->
+            <!-- 1) {Vue application} -->
+            <div id="app-one" style="border:solid red 2px ">               
+                <h1> This is the First Vue Application : [ {{el}} ] </h1> <br> <br>
+                <p> Hello {{name}} </p>
+                <p> {{insPro}} </p>
+                <p> {{message}} </p>
+                <!-- <input v-model="age" type="text" placeholder="insert your age"/>  -->
+                <!-- <component-one> </component-one> -->
+                <component-two> </component-two>
+            </div> 
+
+
+            <!-- 2) {Vue library} Importing main Vue Framework Syntax [from Application Folder]  -->
+            <script src="js/vue.js"></script>
+            
+            <!-- 3) {Vue Model} Declaring and configuring main Vue application Model Container Including => 
+                a) Decleration of Vue Resuable component} -> [ new component name , new component data details , new component templates ] 
+                b) Decleration of {Vue Model Instances} ->  [ Instances name , instances properties , instances methods ]  -->
+            <script> 
+                //  A) Vue new Component Defining : 
+                //  First Vue component => 1) Setting Data to be passed through into this component [as a returning object's elements] :
+                // 2) Setting template to be used inside the component [as a string value] -> {could hold full HTML and vue syntax} : 
+
+                // Vue.component('component-one', {
+                //     data: function() {
+                //         return {
+                //             name: 'Shadi (From component Datasource) ',
+                //             count: 0,
+                //             message : 'Welcome to the Vue Reusable Component Application',
+                //         }
+                //     },
+                    
+                //     template: '<p @click="count++" style="color:red; border: 3px solid blue"> Hello {{name}} , {{message}} => Your Count is : {{count}}  </p>',                
+                // });
+
+
+                // Second Vue component => 1) Setting Data to be passed through this component [as a returning object's elements] : 
+                // Setting template to be used inside the component [as a string value] -> {could hold full HTML and vue syntax}
+                
+                Vue.component('component-two', {
+                    data: function() {
+                        return {
+                            name : 'shadi',
+                            country: 'Egypt',
+                            age:'35',
+                            testAge: '', 
+                            style1: 'border:solid 3px brown',
+                        }
+                    },
+
+                    template: '<div type="text" style="border:solid 3px brown" placeholder="insert your age" >  Hello {{name}} <br> {{age > 30 ? "Your age is accepted " : "Your age is NOT accepted !" }} <br> you Are from {{country}} </div>',
+                    
+                });
+                // template: '<div style="border:solid 3px brown" >  Hello {{}} <br> {{  }} <br> you Are from {{}} </div>',
+                
+               //  B) Vue Model Instances [properties + methods] Defining : 
+                var vm = new Vue({
+                    el: '#app-one',
+                    data: {                        
+                        el: 'app-one',
+                        name: 'Pro (From Main Model Instance Datasource) ',
+                        insPro: 'this text comming from vue instance model ',
+                        age : '22', 
+                    }, 
+                    methods: {
+                    }
+                });
+            </script>
+        <!------------------------------------------------------------------------------------------------------>                                 
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection">
+            <h3> Lesson 13 Video File:</h3>
+            <video controls width="300" height="300">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\13 Learn VueJs In Arabic - Create Basic Components.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video>
+        </section>
+        
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li
+                > Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU:
+                 <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter>
+                 &nbsp;&nbsp;&nbsp; Uploading: 
+                 <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open style="display: flex; width:100%">
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://shadi-pro.epizy.com"> My Personal Reference </a></li>
+                <li> <a href="https://shadi-cv.epizy.com"> My Personal Resume </a></li>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 13 Learn VueJs In Arabic - Create Basic Components");
+    </script>
+
+    
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

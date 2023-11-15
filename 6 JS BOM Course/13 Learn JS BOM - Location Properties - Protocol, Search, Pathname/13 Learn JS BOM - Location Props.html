@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 13 Learn JS BOM - Location Properties - Protocol, Search, Pathname </title>
+    <link rel="stylesheet" href="13 Learn JS BOM - Location Props.css" media="all">
+    
+    <style>        
+       /* body{height:4000px; width:1500px;} */
+       
+       .custom {
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            margin: 10px auto;
+            border: 5px solid gray;    
+            background-color: #ccc;
+            text-align: center;
+        } 
+         
+        .dis {
+            border: 3px solid red;
+            border-radius: 30px;
+            width: 100%;
+            /* height: 200px; */
+            text-align: center;
+            line-height: 2em;
+        }
+
+        .item{
+            color: red;
+            font-size: 30px;
+            font-family: monospace;
+            background-color: blue;
+        }
+
+
+        /* .Home0 {
+            position: fixed;
+            border: 3px solid #080;
+            padding: 5px;
+            background: lightblue;
+            color: #100;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            top: 20px;
+            left: 20px
+        }
+
+        .Home0:hover {
+            background: #080;
+            border-color: lightgreen;
+            color: #FFF
+        }
+
+        .End0 {
+            position: fixed;
+            border: 3px solid #080;
+            padding: 5px;
+            background: lightblue;
+            color: #100;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            top: 70px;
+            left: 20px
+        }
+
+        .End0:hover {
+            background: #080;
+            border-color: lightgreen;
+            color: #FFF
+        }
+         */
+    </style>
+    
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main" >
+        13 Learn JS BOM - Location Properties - Protocol, Search, Pathname
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to JS HTML BOM main Topics">
+                13 Learn JS BOM - Location Properties - Protocol, Search, Pathname  Main Topics </a> </li>
+
+            <li> <a href=#JSDOMCon title="Go to 13 Learn JS BOM - Location Properties - Protocol, Search, Pathname Concept">
+                13 Learn JS BOM - Location Properties - Protocol, Search, Pathname Concept </a> </li>
+
+            <li> <a href=#JSDOMImp title="Go to 13 Learn JS BOM - Location Properties - Protocol, Search, Pathname Importance & Benefits">
+                13 Learn JS BOM - Location Properties - Protocol, Search, Pathname Importance & Benefits </a> </li> 
+
+            <li> <a href=#JSDOMImp title="Go to 13 Learn JS BOM - Location Properties - Protocol, Search, Pathname Syntax ">
+                13 Learn JS BOM - Location Properties - Protocol, Search, Pathname main Information</a> </li>            
+
+            <li> <a href=#JSDOMPract title="Go to 13 Learn JS BOM - Location Properties - Protocol, Search, Pathname Practical Applications">
+                13 Learn JS BOM - Location Properties - Protocol, Search, Pathname Practical Applications </a> </li>
+
+        </ol>
+
+        <!-- Scrolling through by using [Directly href link]  -->
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+        
+        <!-- Scrolling through by using [scrollBy() && scrollTo() function]  -->
+        <!-- <button id="home0" class="Home0"  title="Go to page header"> Home [by scroll Function] </button>
+        <button id="end0" class="End0"  title="Go to page footer"> End [by scroll Function] </button> -->
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> Welcome to JS HTML BOM Course <span> 13 Learn JS BOM - Location Properties - Protocol, Search, Pathname </span>
+    </main>
+
+    
+    <div class="Post" id=post>
+        <Section  id="MainC" class="MainC">
+
+            <header>
+                13 Learn JS BOM - Location Properties - Protocol, Search, Pathname Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> location.protocol; => To Get/Set the Potocol Type the current Webpage </li>    
+                    <li> location.pathname; => To Set/Get the website Domain name [website name after the host name and  before the Search] page/window </li>    
+                    <li> location.search;   => To Get the Query String used for search with the of the page/window </li>    
+                </ol>                                                
+                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMCon" id="JSDOMCon">
+            <header>
+                <h3> 13 Learn JS BOM - Location Properties - Protocol, Search, Pathname  Concept: </h3>
+            </header>
+                                                        
+            <p> =&gt; [ Location - protocol  ||  Location - search  || location - pathname ] : <br>
+                <ol>
+                    <li> Main concept of {location.protocol} || {location.search} || {location.pathname} => <br>
+                        <ol>
+                            <li> {location.protocol} property => <br> 
+                                <p> One of the Location Object </p> 
+                                <p> One of the href content, and it is the resposible for transfering the current WebPage file to the browser  </p>                                 
+                                <p> protocol => has several Types , as following : <br>
+                                    <ul> 
+                                        <li> http / https = > Hyper Text Transfer Protocol / Secured
+                                        <li> File = > Protocol for transfering the webpage file to the current Browser
+                                        <li> Mailto = > Protocol reponsilble for transfering the mail to the mail Application
+                                        <li> FTP = > File Transfer protocol                                             
+                                    </ul>
+                                </p> 
+                            </li>                              
+
+                            <li> {location.search} property => <br> 
+                                <p> One of the Basic properties of the Location Object </p> 
+                                <p> One of the href content and it is The [Querry String] of the Searching functionality by php to the Database  </p>
+                                <p> Note => Will appear after the php, and starting with ? sign </p>
+                                <p> Note => Will appear only in case of using the Admin panel for searching for items in the Database</p>
+                            </li>                                                                                                                                                                
+                            
+                            <li> {location.pathname} property => <br> 
+                                <p> One of the Basic properties of the Location Object </p> 
+                                <p> One of the href content , and it is The domain name of the current website </p>                                
+                                <p> It is comming after Protocol part and host name part , and before the search part  </p>                                
+                            </li>                                                                                                                                                                
+                        </ol>                                                                                                         
+                                                
+                </ol>  <br>
+                            
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMImp" id="JSDOMImp">
+            <header>
+                <h3> 13 Learn JS BOM - Location Properties - Protocol, Search, Pathname importance & Benefits : </h3>
+            </header>
+
+            <p> 13 Learn JS BOM - Location Properties - Protocol, Search, Pathname gives us the Following Features : <br>
+                <ul>                                                 
+                    <li> {location.protocol} => A JS useful Advanced Tool to Control [Set/Get] the Protocol of Webpage as A Value of a Property, and can be used for changing the current webpage protocol type </li>
+                    <li> {location.search} => A JS useful Advanced Tool to Control [Set/Get] the cerrent Querry String of searching item in the current webpage admin searching panel, and can be used in advaned application   </li>
+                    <li> {location.pathname} => A JS useful Advanced Tool to Control [Set/Get] the damain of Webpage as A Value of a Property, and can be used JS Application </li>                    
+                </ul>                                                                
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="JSDOMSyntx" id="JSDOMSyntx">
+            <header>
+                <h3> 13 Learn JS BOM - Location Properties - Protocol, Search, Pathname Syntax & Methods: </h3>
+            </header>
+
+            <p> =&gt; {JS BOM - Window Location Property - Protocol, Search, Pathname => by following Conceptual Syntax as following : </p>
+            
+            <div id="Code" class="Code">
+                
+                [A]// {JSBOM file} : <br> <br>
+
+                [1] {BOM} ( {location.Protocol, Search, Pathname} ) Examples: <br> 
+                                            
+                    <span class= one></span> a) Getting the type of [location.protocol] of the current page: <br> <br>
+                                                                                                
+                        <span class=two></span> console.log(location.protocol); <br>                                                    
+                                            
+                        <span class=two></span> alert(location.protocol); <br>
+                //=========================================================== <br> <br>                    
+
+                    <span class= one></span> b) Setting the value of [location.protocol] of the current page: <br> <br>
+                                                                                                
+                        <span class=two></span> location.protocol = 'https';  <br> 
+                        <span class=two></span> location.protocol = 'http';  <br> 
+                        <span class=two></span> location.protocol = 'ftp';  <br> 
+                        <span class=two></span> location.protocol = 'mailto';  <br>                     
+                        <span class=two></span> location.protocol = 'file';  <br>                     
+                //=========================================================== <br> <br>
+
+
+                [2] {BOM} ( {location.search} ) Examples: <br> 
+
+                    <span class= one></span>a) Getting the Querry String value of [location.search] of the current page: <br> <br>
+                                                                                                
+                        <span class=two></span> console.log(location.search); <br> 
+                        
+                        <span class=two></span> alert(location.search); <br> 
+                //=========================================================== <br> <br>                    
+
+                    <span class= one></span> b) Setting the Querry String value of [location.search] of the current page: <br> <br>
+                                                                                                
+                        <span class=two></span> location.search = "?Edit&itemid=23"; <br>
+                //=========================================================== <br> <br>
+                [3] {BOM} ( {location.pathname} ) Examples: <br> 
+
+                    <span class= one></span>a) Getting the pathname value of [location.search] of the current page: <br> <br>
+                                                                                                
+                        <span class=two></span> console.log(location.pathname); <br> 
+                        
+                        <span class=two></span> alert(location.pathname); <br> 
+                //=========================================================== <br> <br>                    
+
+                    <span class= one></span> b) Setting the pathname value of [location.pathname] of the current page: <br> <br>
+                                                                                                
+                        <span class=two></span> location.pathname = "google.com"; <br>
+                //=========================================================== <br> <br>
+                //=========================================================== <br> <br>
+            
+            <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="JSDOMPract" id="JSDOMPract">
+            <header>
+                <h3> 13 Learn JS BOM - Location Properties - Protocol, Search, Pathname => General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here 1 Major Application, with (2) pathes, with (2) Functions in each ,  as following :  &gt;&gt; <br>
+                <ol> 
+                    <li> The First Path =>  Getting/Setting the type of [location.protocol] of the current page, as Following: <br> 
+                        <ul>
+                            <li> Get Function: <br>
+                                <p> Getting the protocol type by console </p> 
+                                <p> Getting the protocol type Value by alert </p> 
+                                <p> Adding protocol type into the display element </p>
+                            </li>
+                            
+                            <li> Set Function: <br>
+                                <p> Setting the protocol type by prompt [with different types] </p> 
+                                <p> Display the new protocol type by [console, alert, display element] </p> 
+                            </li>
+                        </ul>
+                    </li>                                        
+                    
+                    <li> The Second Path =>  Getting/Setting the value of [location.search] of the current page, as Following: <br> 
+                        <ul>
+                            <li> Get Function: <br>
+                                <p> Getting the Search Querry String Value by console </p> 
+                                <p> Getting the Search Querry String Value by alert </p> 
+                                <p> Adding the Search Querry String value into the display element </p>
+                            </li>
+                            
+                            <li> Set Function: <br>
+                                <p> Setting the Search Querry String Value by prompt </p> 
+                                <p> Display the Search Querry String Value by [console, alert, display element] </p> 
+                                <p> Adding new value of the Search Qerry String into the display element </p>
+                            </li>
+                        </ul>
+                    </li>                                        
+                    
+                    <li> The Third Path =>  Gettings/Setting the value of [location.pathname] of the current page, as Following: <br> 
+                        <ul>
+                            <li> Get Function: <br>
+                                <p> Getting the pathname Value by console </p> 
+                                <p> Getting the pathname Value by alert </p> 
+                                <p> Adding the pathname value into the display element </p>
+                            </li>
+                            
+                            <li> Set Function: <br>
+                                <p> Setting the pathname Value by prompt </p> 
+                                <p> Display the pathname Value by [console, alert, display element] </p> 
+                                <p> Adding new value of the pathname into the display element </p>
+                            </li>
+                        </ul>
+                    </li>                                        
+                    
+                    
+                </ol>                                                    
+            <br> <br>                                    
+            
+            <div id="elem" class="btn"></div> <br>
+                                    
+            <button  id="btn1" class=btn> Get/Set location Protocol Current page {location.protocol}  </button> 
+            <button  id="btn2" class=btn> Set/Set the location Search Querry String of Current page {location.search} </button>
+            <button  id="btn3" class=btn> Set/Set the location Pathname of Current page {location.pathname} </button>
+                                
+            <hr> <br> <br>
+            <!-- ========================================================= -->
+
+            
+            <button class=btn onclick="test()"> Click to Start JS HTML BOM [ window ]  Application    
+            </button> 
+            
+            
+            <script  src="LocationPropertiesProtocolSearchPathname.js">
+            </script>
+                                    
+            <br>    
+                                          
+        <hr>
+                <button id=btn class="btn" onclick="display()">Display JS Code</button>
+                
+                <div class=JSOOPObjConstTraining >                                        
+                    <code>
+                        
+                        // HTML Codes: <br>
+                        <span class=one></span> &lt;textarea id="txtarea" class="txtarea"&gt;<br>                            
+                        <span class=one></span> &lt;/textarea&gt; <br><br>
+                        
+                        <span class=one></span> &lt;button class="btn" onclick=test"()"&gt;<br>                           
+                        <span class=two></span> Click to Start [Testing JS HTML BOM [Parent Element]  Application  <br>                                
+                        <span class=one></span> &lt;/button&gt; <br><br>                                                        
+                        
+                        <span class=one></span> &lt;script src=".js"&gt;<br>                            
+                        <span class=one></span> &lt;/script&gt; <br><br>
+                        
+                        =======================================================<br><br>
+                        
+                        /* global document, alert, prompt */ <br>                    
+                        /* JS HTML BOM [Parent Element]  */ <br>                    
+                        template-string-converter.enable; <br><br>
+                                                
+                        <textarea id="SourceCode" readonly></textarea>
+                    </code>                    
+                </div>
+                
+        </section>            
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection">
+            <h3> Lesson 13 Video File: </h3>
+            
+            <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+            src="https://www.youtube.com/embed/watch?v=Go9kKO2_ohQ&list=PLDoPjvoNmBAy9nFRJgVYgEID8xE2a6q6V&index=13&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+            
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JS BOM\13 Learn JS BOM - Location Properties - Protocol, Search, Pathname.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="Links">
+            <h3>Course Reaquirments : </h3>
+            <ul>
+                <li> JS </li>
+                <li> JSDOM </li>                
+            </ul>
+        </section>
+        
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <!-- <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section> -->
+
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 13 Learn JS BOM - Location Properties - Protocol, Search, Pathname");
+    </script>
+    
+
+</body>
+
+</html>       

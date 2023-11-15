@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS OOP Lesson 23 [JavaScript Accessors Getters & Setters]</title>
+    <link
+      rel="stylesheet"
+      href="JS OOP Lesson23 [JavaScript Accessors Getters & Setters].css"
+      media="all"
+    />
+
+    <script></script>
+  </head>
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <header class="Main" id="Main">
+      JS OOP Lesson 23 [JavaScript Accessors Getters & Setters]
+    </header>
+
+    <!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+      <ol type="A">
+        <li>
+          <a href="#MainC" title="Go to JS OOP main Topics">
+            JS OOP Lesson23 [JavaScript Accessors Getters & Setters ] Main
+            Topics
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPCon"
+            title="Go to JS OOP [JavaScript Accessors Getters & Setters ] Concept"
+          >
+            JS OOP Lesson23 [JavaScript Accessors Getters & Setters ] Concept
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPImp"
+            title="Go to JS OOP [JavaScript Accessors Getters & Setters ] Importance & Benefits"
+          >
+            JS OOP Lesson23 [JavaScript Accessors Getters & Setters ] Importance
+            & Benefits
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPSyntx"
+            title="Go to JS OOP [JavaScript Accessors Getters & Setters ] Syntax"
+          >
+            JS OOP Lesson23 [JavaScript Accessors Getters & Setters ] Syntax &
+            Steps
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#JSOOPPract"
+            title="Go to JS OOP [JavaScript Accessors Getters & Setters ] Practical Applications"
+          >
+            JS OOP Lesson23 [JavaScript Accessors Getters & Setters ] Practical
+            Applications
+          </a>
+        </li>
+      </ol>
+
+      <a class="Home" href="#Main" title="Go to page header"> Home </a>
+      <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome">
+      Welcome to JS OOP Course
+      <span> JS OOP Lesson 23 [JavaScript Accessors Getters & Setters ] </span>
+    </main>
+
+    <div class="Post">
+      <section id="MainC" class="MainC">
+        <header>
+          JS OOP [Class Static Properties and Methods ] Main Topics :
+        </header>
+
+        <article>
+          <p>&gt; Main Subjects in this lesson are as following :</p>
+          <ol type="A">
+            <li>JS OOP [JavaScript Accessors Getters & Setters ] Concept.</li>
+
+            <li>
+              JS OOP [JavaScript Accessors Getters & Setters ] Importance &
+              Benefits.
+            </li>
+
+            <li>
+              JS OOP [JavaScript Accessors Getters & Setters ] Syntax
+              [Definition + Access].
+            </li>
+
+            <li>
+              JS OOP [JavaScript Accessors Getters & Setters ] Practical
+              Application.
+            </li>
+          </ol>
+        </article>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPCon" id="JSOOPCon">
+        <header>
+          <h3>JS OOP [JavaScript Accessors Getters & Setters ] Concept:</h3>
+        </header>
+
+        <p>
+          =&gt; JS OOP [JavaScript Accessors Getters & Setters ]: It is one of
+          Powerful points of programing in any P.Language.
+        </p>
+
+        <p>
+          =&gt; JS OOP [JavaScript Accessors Getters & Setters ]: It will
+          provide the advanced Control for Accessibility to [Private Methods &
+          Properties] of the Class or Constructor function .
+        </p>
+
+        <p>
+          =&gt; JS OOP [JavaScript Accessors Getters & Setters ]: JavaScript is
+          not Supproting all Features of Getteres And Setters Accesors, but it
+          all Supproted in All other P.Languages.
+        </p>
+
+        <p>
+          =&gt; JS OOP [JavaScript Accessors Getters & Setters ]: It will give
+          the Feature of simple syntax comparison with the defualt Method.
+        </p>
+
+        <p>
+          =&gt; [get] Accessor =&gt; Advanced way to Get certain value from
+          Certain Method with certain Processing, in secured Procedures .
+        </p>
+        <p>
+          =&gt; [get] Accessor =&gt; It can be added before the simple method
+          (of Geting certain Value Method) of the Class or Consturctor function.
+        </p>
+        <p>
+          =&gt; [get] Function =&gt; Getting Function can be Accessed by two
+          ways:
+        </p>
+        <ol>
+          <li>
+            [Defualt way] =&gt; By the Default Method Of Class or Constructor
+            Function {which has (result) keyword}
+          </li>
+          <li>
+            [GET Accessor] =&gt; By using {get} before the Normal Method (of
+            Geting function)
+          </li>
+        </ol>
+
+        <p>
+          =&gt; [set] Accessor =&gt; Advanced way to Set certain value/change in
+          Certian Variable or Parameter, within Certain Method by certian
+          Processing, in secured Procedures .
+        </p>
+        <p>
+          =&gt; [set] Accessor =&gt; It can be added before the simple method
+          (of Setting certain Value/Change Method) of the Class or Consturctor
+          function.
+        </p>
+        <p>
+          =&gt; [set] Function =&gt; Getting Function can be Accessed by two
+          ways:
+        </p>
+        <ol>
+          <li>
+            [Defualt way] =&gt; By the Default Method Of Class or Constructor
+            Function {which has (result) keyword}
+          </li>
+          <li>
+            [SET Accessor] =&gt; By using {set} before the Normal Method (of
+            Setting function)
+          </li>
+        </ol>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------------------------------------>
+
+      <section class="JSOOPImp" id="JSOOPImp">
+        <header>
+          <h3>
+            JS OOP [JavaScript Accessors Getters & Setters ] Importance &
+            Benefits:
+          </h3>
+        </header>
+
+        <p>
+          [JavaScript Accessors Getters & Setters ] gives us the Following
+          Features : <br />
+        </p>
+        <ul>
+          <li>
+            It will give the Feature of simpler syntax comparison with the
+            default Method
+          </li>
+
+          <li>
+            It gives secured Access to the Private Method in Class or
+            Constructor Function in all other P.languages.
+          </li>
+
+          <li>
+            {get} Accessor It more advanced and Easy way to [get] specfic Value
+            or Procedures [specially in complicated Methods] in advaced
+            application or web Pages , through seured Mechanism
+          </li>
+
+          <li>
+            {set} Accessor It more advanced and Easy way to [set] specfic Value
+            or Procedures [specially in complicated Methods] in advaced
+            application or web Pages , through seured Mechanism
+          </li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPSyntx" id="JSOOPSyntx">
+        <header>
+          <h3>
+            JS OOP [JavaScript Accessors Getters & Setters ] Syntax & Methods:
+          </h3>
+        </header>
+
+        <p>
+          =&gt; JS OOP Defining-Declaring [Class] Conceptual Syntax as following
+          :
+        </p>
+
+        <div id="Code" class="Code">
+          // A) JS OOP Defining-Declaring [Class] Conceptual Syntax as following
+          :<br /><br />
+          <span class="one"></span> class ClassName { <br />
+
+          <span class="two"></span> constructor(Par1, Par2) { <br />
+          <span class="three"></span> this.par1 = par1;<br />
+          <span class="three"></span> this.par2 = par2;<br />
+          <span class="two"></span> }<br />
+          <br />
+
+          <span class="two"></span> // A 1) Creating/Defining [Getting Methods
+          (Par1 + Par2)]:<br />
+          <span class="three"></span> a) Normal get Method:<br />
+          <span class="three"></span> showAll() { <br />
+          <span class="four"></span> return 'The first Value of Parameter1 is
+          ${Par1}\n The Second Value of Parameter2 is ${Par2}; <br />
+          <span class="three"></span>} <br />
+          <br />
+
+          <span class="three"></span> b) {get} Accessor Method:<br />
+          <span class="three"></span> get showAll() { <br />
+          <span class="four"></span> return 'The first Value of Parameter1 is
+          ${Par1}\n The Second Value of Parameter2 is ${Par2}; <br />
+          <span class="three"></span>} <br />
+          <br />
+          <br />
+
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          <span class="two"></span> // A 2) Creating/Defining [Setting Methods
+          (Par1 + Par2)]:<br />
+          <span class="three"></span> a) Normal set Method:<br />
+          <span class="three"></span> changeAll(newPar1, newPar2) { <br />
+          <span class="four"></span> this.par1 = newPar1; <br />
+          <span class="four"></span> this.par2 = newPar2; <br />
+          <span class="three"></span>} <br />
+          <br />
+
+          <span class="three"></span> b) {set} Accessor Method:<br />
+          <span class="three"></span> set changeAll(newPar1, newPar2) { <br />
+          <span class="four"></span> this.par1 = newPar1; <br />
+          <span class="four"></span> this.par2 = newPar2; <br />
+          <span class="three"></span>} <br />
+          <br />
+          <br />
+
+          <span class="one"></span> }<br />
+          <br />
+          <br />
+
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          // B) Extracting an Object from Class:<br />
+          <span class="one"></span> let nObj = new ClassName(par1, par2);
+          //=========================================================== <br />
+          <br />
+
+          // C) Executing [Getting Methods (Par1 + Par2)]:<br />
+          <span class="one"></span> a) Normal get Method:<br />
+          <span class="two"></span> nObj.showAll(); <br /><br />
+
+          <span class="one"></span> b) {get} Accessor Method:<br />
+          <span class="two"></span> nObj.showAll; <br /><br />
+
+          //=========================================================== <br />
+          <br />
+
+          // D) Executing [Setting Methods (Par1 + Par2) {for both Normal +
+          {set} Accessor}]:<br />
+          <span class="one"></span> {set} Method + Normal Method:<br />
+          <span class="two"></span> nObj.changeAll("newPar1", "newPar2");
+          <br /><br />
+
+          //=========================================================== <br />
+          <br />
+          //=========================================================== <br />
+          <br />
+
+          <br /><br />
+        </div>
+        <hr />
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------>
+      <section class="JSOOPPract" id="JSOOPPract">
+        <header>
+          <h3>
+            JS OOP [JavaScript Accessors Getters & Setters] General Practical
+            Applications :
+          </h3>
+        </header>
+
+        <p>
+          =&gt; Here one Major Application will include following Function/Tasks
+          : &gt;&gt; <br />
+        </p>
+        <ol>
+          <li>
+            Initiating (Default Class) containing the Followoing Elements:
+          </li>
+          <ul>
+            <li>
+              Static Method & Parameter {count Variable + show Count Method}
+            </li>
+
+            <li>Normal [Set & Get] Methods , with followoing Features:</li>
+            <ol>
+              <li>
+                {Normal Set Metod} =&gt; Parameter: (Defining of New Value [New
+                Password]), Functoinality: (Reset Password by user - with Age
+                Restriction)
+              </li>
+              <li>
+                {Normal Get Metod} =&gt; Functoinality: (Show Password to user -
+                with Age Restriction)
+              </li>
+            </ol>
+
+            <li>Accessors [Set & Get] Methods , with followoing Features:</li>
+            <ol>
+              <li>
+                {Accessor Set Metod} =&gt; Parameter: (Defining of New Value
+                [New Password]), Functoinality: (Reset Password by user - with
+                Age Restriction)
+              </li>
+              <li>
+                {Accessor Get Metod} =&gt; Functoinality: (Show Password to user
+                - with Age Restriction)
+              </li>
+            </ol>
+          </ul>
+
+          <li>
+            Extracting new Object(s) from each(Default Class) by count upon User
+            request.
+          </li>
+
+          <li>
+            Ability to Extract Multiple Object from each [Default Class]
+            according user's Desired Count with Following Functions for each
+            Exracted Object:
+          </li>
+
+          <ol>
+            <li>
+              Displaying the main [Default Class] Syntax {in Console + Alert
+              Message + Displaying textarea box}.
+            </li>
+
+            <li>
+              Choosing from available Methods to Execute to Display + Checking
+              for the Constructor Function Name (by (10) available Methods)
+            </li>
+
+            <li>
+              Displaying all Extracted Object(s) in Text Area field in the web
+              page + other Displaying result from Selected Functions.
+            </li>
+          </ol>
+        </ol>
+
+        <br />
+
+        <textarea id="txtarea" class="txtarea"> </textarea><br />
+
+        <script src="JSOOPAccSetGet.js"></script>
+
+        <button class="btn" onclick="test()">
+          Click to Start [Testing JavaScript Accessors Getters & Setters
+          Properties & Methods ] Application
+        </button>
+
+        <br />
+
+        <hr />
+        <button id="btn" class="btn" onclick="display()">
+          Display JS Code
+        </button>
+
+        <div class="JSOOPObjConstTraining">
+          <code>
+            // HTML Codes: <br />
+            <span class="one"></span> &lt;textarea id="txtarea"
+            class="txtarea"&gt;<br />
+            <span class="one"></span> &lt;/textarea&gt; <br /><br />
+
+            <span class="one"></span> &lt;button class="btn"
+            onclick=test"()"&gt;<br />
+            <span class="two"></span> Click to Start [Testing JavaScript
+            Accessors Getters & Setters Properties & Methods ] Application
+            <br />
+            <span class="one"></span> &lt;/button&gt; <br /><br />
+
+            <span class="one"></span> &lt;script src="JSOOPClassIntro.js"&gt;<br />
+            <span class="one"></span> &lt;/script&gt; <br /><br />
+
+            =======================================================<br /><br />
+
+            /* global document, alert, prompt */ <br />
+            /* JSOOP [JavaScript Accessors Getters & Setters] */ <br />
+            template-string-converter.enable; <br /><br />
+
+            <textarea id="SourceCode" readonly></textarea>
+          </code>
+        </div>
+      </section>
+      <!-------------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+      <section class="Links">
+        <h3>Categories</h3>
+        <ul>
+          <li>Check</li>
+          <li>Semantics</li>
+          <li>Api</li>
+          <li>New Attributes</li>
+          <li>Multimedia Elements</li>
+        </ul>
+      </section>
+
+      <section class="Meters">
+        <h3>Performance</h3>
+        <div>
+          CPU:
+          <meter
+            value=".6"
+            min="0"
+            max="2"
+            low=".4"
+            high=".8"
+            optimum=".7"
+          ></meter>
+          &nbsp;&nbsp;&nbsp; Uploading:
+          <progress value="80" max="340"></progress>
+        </div>
+      </section>
+
+      <section class="Poll">
+        <h3>What is the your best Browser?</h3>
+        <input list="Browsers" />
+        <datalist id="Browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Opera"></option>
+          <option value="Internet Explorer"></option>
+          <option value="Baidu"></option>
+        </datalist>
+
+        <input type="submit" value="Choose" />
+      </section>
+
+      <section class="Age-Calculate">
+        <h3>Calculate your age by days & months:</h3>
+        <form
+          oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'"
+        >
+          <input type="text" name="age" /> <br />
+          <input type="hidden" name="days" value="385" />
+          <input type="hidden" name="months" value="34" />
+          <output name="resultD"> </output>
+          <output name="resultM"> </output>
+        </form>
+      </section>
+
+      <section class="Calculator">
+        <h3>Enter two numbers to now-parse-Conv basic operation:</h3>
+        <form
+          oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))"
+        >
+          <input type="text" name="num1" />
+          <input type="text" name="num2" />
+
+          <output name="Rsum"> Summition Result: </output><br />
+          <output name="Rsub"> Substraction Result: </output><br />
+          <output name="Rmult"> Multiply Result: </output><br />
+          <output name="Rdiv"> Division Result: </output>
+        </form>
+      </section>
+
+      <section class="AudioSection">
+        <h3>Epic Autoplay Audio File:</h3>
+        <audio controls loop>
+          <source
+            src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3"
+            type="Audio/mpeg"
+          />
+          Your browser Does Not Support the Audio file ...
+        </audio>
+      </section>
+
+      <section class="VideoSection">
+        <h3>Lesson 23 Video File:</h3>
+
+        <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=Ud0al7dNyG4&list=PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF&index=23&controls=0&loop=1&autoplay=1&fs=1"
+        >
+        </iframe>
+
+        <!-- <video controls width="300" height="300">
+                    <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\JavaScript OOP\23 JavaScript OOP  JavaScript Accessors Getters & Setters.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+                </video> -->
+      </section>
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+      <details>
+        <summary>Hypernate Links:</summary>
+        <ul>
+          <li><a href="https://google.com">Google</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+      </details>
+    </dialog>
+
+    <footer id="footer" class="footer">
+      All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+    <script>
+      alert(
+        "Welcome to JS OOP Lesson 23 [JavaScript Accessors Getters & Setters ] "
+      );
+    </script>
+
+    <script src="onmouseover.js"></script>
+  </body>
+</html>

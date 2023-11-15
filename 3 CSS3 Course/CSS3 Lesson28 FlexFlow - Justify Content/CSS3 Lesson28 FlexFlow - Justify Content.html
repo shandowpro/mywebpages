@@ -1,0 +1,768 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson 28 [CSS3 Lesson28 FlexFlow - Justify Content] </title>
+    <link rel="stylesheet" href="CSS3 Lesson28 FlexFlow - Justify Content.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 28 [CSS3 FlexFlow - Justify Content]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to CSS3 FlexFlow - Justify Content main Topics">
+                [ CSS3 FlexFlow - Justify Content ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to CSS3  FlexFlow - Justify Content [CSS3  FlexFlow - Justify Content ] Concept">
+                [ CSS3 FlexFlow - Justify Content ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to CSS3  FlexFlow - Justify Content [CSS3 FlexFlow - Justify Content ] Importance & Benefits">
+                [ CSS3 FlexFlow - Justify Content ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to CSS3  FlexFlow - Justify Content [CSS3  FlexFlow - Justify Content ] Syntax">
+                [ CSS3 FlexFlow - Justify Content ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to CSS3  FlexFlow - Justify Content [CSS3 FlexFlow - Justify Content ] Practical Applications">
+                [ CSS3 FlexFlow - Justify Content ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 28 [CSS3 FlexFlow - Justify Content ] </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                CSS3 Lesson28 FlexFlow - Justify Content Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                <ol type="A">
+                    <li> [CSS3 Lesson28 FlexFlow - Justify Content] Concept. </li>                       
+                    
+                    <li> [CSS3 Lesson28 FlexFlow - Justify Content] Importance & Benefits. </li>
+
+                    <li> [CSS3 Lesson28 FlexFlow - Justify Content] Syntax [Example]. </li>
+                    
+                     <li> [CSS3 Lesson28 FlexFlow - Justify Content] Practical Application. </li> 
+                </ol>                
+                
+                <p> &gt; Main new Methods in this lesson are as following :</p>                    
+                    <ul>
+                        <li> Basic concept about {flex-flow: flex-direction , flex-wrap} </li> 
+                        <li> Basic concept about {Justify-content: flex-start || flex-end || center || space-between || space-around} </li>
+                    </ul>                   
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class=CSS3Con" id="CSS3Con">
+            <header>
+                <h3> [CSS3 Lesson28 Flex-Flow - Justify-Content] Concept: </h3>
+            </header>
+                      
+                <p> These properties are allocated to the parent Container Element.
+                                                                    
+                <p> These properties are (Parent container => part:2) required {display: flex} first to be activated to the parent Element .
+
+                <ol>                
+                    <li> {CSS3 Flex-Flow } :</li>                
+                        <p> It is the property is the shorthand of both (Flex-direction - Flex-wrap) in one property </p>                                                 
+                        
+                        <p> This property can accept all following Values  :</p> 
+                            <ul>
+                                <li> [flex-flow: ( row || coloumn || row-reverse || coloumn-reverse ) , ( nowrap || wrap || warp-reverse ) ] </li>
+                            </ul>
+                                                
+                    <li> {CSS3 Justify-Content} :</li>                
+                        <p> It is the property to control Justifying property of Flex Parent Element's children inside it  </p> 
+                        
+                        <p> This property is allocated for the Parent Element CSS properties , but cont4oling with the parent container' Children </p> 
+                        
+                        <p> This property has the following Values :</p> 
+                            <ul>
+                                <li> [Justify-Content: flex-start] => This is the default value of this property, and it will the parent container start flexing it's Children from the first one </li>
+                                <li> [Justify-Content: flex-end] => This will make the parent container start flexing it's Children from the first one</li>
+                                <li> [Justify-Content: center] => This will make the parent container positioning it's children in center of it's Flex-box </li>
+                                <li> [Justify-Content: space-between] => This will make the parent container assigning between equalled spaces between children   </li>                                
+                                <li> [Justify-Content: space-around] => This will make  the parent container assigning around equalled spaces around children [before, between , after]   </li>
+                            </ul>
+                </ol>            
+                        
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+        <section class="CSS3Imp" id="CSS3Imp">
+            <header>
+                <h3> [CSS3 Lesson28 FlexFlow - Justify Content ] Importance & Benefits: </h3>
+            </header>
+            
+            <p> =&gt; [CSS3 Lesson28 FlexFlow - Justify Content ] : This Advanced property enabling the following features & imporatance : <br>            
+                <ul>                                                                
+                    <li> Providing better, easier, practical, shortcut and profficent Renposive Desiging , Much more easier way than old methods </li>
+                    <li> {Flex-Flow} => Providing shortHand method for both (Flex-Direction || Flex-Wrap) properties in one properties with all of it's values  </li>
+                    <li> {Justify-content} => Providing very easy method & tools for controling children inside the parent contaier in comparison with the old methods  </li>
+                </ul>                                                 
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ CSS3 FlexFlow - Justify Content] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // (*) [CSS3 FlexFlow - Justify Content] Syntax as following :<br><br>                                                    
+                <span class='one'></span> //a)  [HTML] file  : <br>                                          
+                    <!-- A) Flex-direction -->
+                    <span class=two></span> &lt; div class='Flex-Flow'  &gt; <br>                                                
+                    
+                        <span class=three></span> &lt; section class='Flex-Flow-Default'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 1  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                                                            
+                        <span class=three></span> &lt; section class='Flex-Flow-Column-Wrap'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                            
+                                                            
+                        <span class=three></span> &lt; section class='Flex-Flow-Column-Reverse-Wrap'  &gt; <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                                                            
+                        <span class=three></span> &lt; section class='Flex-Flow-Row-Reverse-Wrap'  &gt; <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                
+                        
+                        <span class=three></span> &lt; section class='Flex-Flow-Row-Wrap-Reverse'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                
+                        
+                        <span class=three></span> &lt; section class='Flex-Flow-Column-Wrap-Reverse'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                
+                    <br> <br>  <hr>                                       
+                    // ------------------------------------------------------------------------------ <br><br>                    
+                    // ------------------------------------------------------------------------------ <br><br>                    
+                    // ------------------------------------------------------------------------------ <br><br>                    
+                                                            
+                    <!-- B) Flex-Wrap -->
+                    <span class=two></span> &lt; div class='Justify-Content'  &gt; <br>                                                
+                    
+                        <span class=three></span> &lt; section class='Justify-Content-Flex-Start'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                                                            
+                        <span class=three></span> &lt; section class='Justify-Content-Flex-End'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                            
+                                                            
+                        <span class=three></span> &lt; section class='Justify-Content-Center'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                    
+                                                                                    
+                        <span class=three></span> &lt; section class='Justify-Content-Space-Between'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>                        
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                
+                        
+                        <span class=three></span> &lt; section class='Justify-Content-Space-Around'  &gt; <br>                                                
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 1   &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;  Div 2  &lt; /div &gt;  <br>
+                            
+                            <span class=four></span>  &lt; div &gt;   Div 3  &lt; /div &gt; <br>
+                                                                                                                                                                                            
+                        <span class=two></span> &lt; /section &gt;  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                                                                                                                                                                        
+                        // ------------------------------------------------------------------------------ <br><br>                                                                                
+                        <br> <br>  <hr>                                                           
+                    <span class='one'></span> //b)  [CSS3] file  : <br>                                          
+                        <!-- Setting main Containers  -->
+                        <span class=two></span> .Flex-Flow section, .Justify-Content section {  <br>                            
+                            <span class=three></span> display: flex; <br>
+                            <span class=three></span> margin: 50px auto ; <br>
+                            <span class=three></span> width: 100%; <br>
+                            <span class=three></span> border: 3px solid #EEE; <br>                            
+                            <span class=three></span> border-radius: 20px ; <br>                            
+                        <span class=two></span> }  <br> <br>
+                        
+                        <!-- Setting public Children Elements  -->
+                        <span class=two></span> .Flex-Flow section div, .Justify-Content section div {  <br>                            
+                            <span class=three></span> display: flex; <br>
+                            <span class=three></span> margin: 50px auto ; <br>
+                            <span class=three></span> width: 300px; <br>
+                            <span class=three></span> height: 100px; <br>
+                            <span class=three></span> border: 1px solid #ccc; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+
+                        <!-- Setting First Child of each Container in both 2 Sectors  -->                        
+                        <span class=two></span> .Flex-Flow section:first-of-type, .Justify-content section:first-of-type {  <br>                                 
+                            <span class=three></span> background-color: #080; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+
+                        <!-- Setting Second Child of each Container in both 2 Sectors -->                        
+                        <span class=two></span> .Flex-Flow section:nth-of-type(2), .Justify-content section:nth-of-type(2) {  <br>                                 
+                            <span class=three></span> background-color: #f00; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        
+                        <!-- Setting Last Child of each Container in both 2 Sectors-->                        
+                        <span class=two></span> .Flex-Flow section:last-of-type, .Justify-content section:last-of-type {  <br>                                 
+                            <span class=three></span> background-color: #00f; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>
+
+                        <!-- Setting Sector's customized Children for each / First Sector -->                        
+                        <span class=two></span>   .Flex-Flow-Default {  <br>                                 
+                            <span class=three></span> flex-flow: row nowrap; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>   .Flex-Flow-Row-Wrap {  <br>                                 
+                            <span class=three></span> flex-flow: row wrap; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>   .Flex-Flow-Column-Wrap {  <br>                                 
+                            <span class=three></span> flex-flow: column wrap; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>   .Flex-Flow-Column-Reverse-Wrap {  <br>                                 
+                            <span class=three></span> flex-flow: column-reverse wrap; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>   .Flex-Flow-Row-Reverse-Wrap {  <br>                                 
+                            <span class=three></span> flex-flow: row-reverse wrap; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+
+                        <span class=two></span>   .Flex-Flow-Row-Wrap-Reverse {  <br>                                 
+                            <span class=three></span> flex-flow: row-reverse wrap-reverse; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>   .Flex-Flow-Column-Wrap-Reverse {  <br> 
+                            <span class=three></span> flex-flow: column wrap-reverse; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                                                
+                        <!-- Setting Sector's customized Children for each / Second Sector -->                        
+                        <span class=two></span>  .Justify-Content-Flex-Start {  <br>                                 
+                            <span class=three></span> justify-content: flex-start ; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>  .Justify-Content-Flex-End {  <br>                                 
+                            <span class=three></span> justify-content: flex-end ; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                        
+                        
+                        <span class=two></span>  .Justify-Content-Center {  <br>                                 
+                            <span class=three></span> justify-content: center ; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>                        
+                        
+                        <span class=two></span>  .Justify-Content-Space-Between {  <br>                                 
+                            <span class=three></span> justify-content: space-between ; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        
+                        <span class=two></span>  .Justify-Content-Space-Around {  <br>                                 
+                            <span class=three></span> justify-content: space-around ; <br>                                                        
+                        <span class=two></span> }  <br> <br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>                                                                    
+                    // ------------------------------------------------------------------------------ <br><br>
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="CSS3Pract" >
+
+            <header>
+                <h3> [CSS3 FlexFlow - Justify Content] General Practical Applications : </h3>
+            </header>
+         
+            <p> =&gt; Following are Applied examples of {Flex-Flow - Justify-Content} new feature/ property with all it's all Values} : <br>
+                
+            <p> (2) Fieldsets Multiple as following:  </p>                        
+                <ul>
+                    <li> A) First Fieldset: {Flex Flow} property, and contain the following Sections (7) [each parent section contain (3) divs]  </li>
+                        <ol>
+                            <li> First Section => flex-flow: row nowrap </li>
+                            <li> Second Section => flex-flow: column wrap </li>
+                            <li> Third Section => flex-flow: row wrap </li>
+                            <li> Fourth Section => flex-flow: column-reverse wrap </li>
+                            <li> Fifth Section => flex-flow: row-reverse wrap </li>                            
+                            <li> Sixth Section => flex-flow: column wrap-reverse </li>
+                            <li> Seventh Section => flex-flow: row wrap-reverse </li>                                                                                    
+                        </ol>
+                        
+                    <li> B) Second Fieldset: {justify-content} property, and contain the following Sections (5) [each parent section contain (3) divs]  </li>
+                        <ol>
+                            <li> First Section => justify-content: flex-start </li>
+                            <li> Seocnd Section => justify-content: flex-end </li>
+                            <li> Third Section => justify-content: center </li>
+                            <li> Fourth Section => justify-content: space-between </li>
+                            <li> Fifth Section => justify-content: space-around </li>
+                        </ol>                                    
+                <!-- ========================================================================= -->                                                
+                <!-- ========================================================================= -->                
+                </ul>                                                
+            <hr><br><br>
+            <!-- ========================================================================= -->                                                        
+                <!-- A)  {Flex-Flow} Application1  -->
+                    <fieldset class='Flex-Flow'>                                                  
+                        <legend> First Sector => Flex Flow </legend>
+                        
+                        <header>  1) Flex-Flow : row nowrap [Default] </header>
+                        
+                        <section class='Flex-Flow-Row-Nowrap'>                                                                    
+                            <div class='div1'>                     
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                
+                                            
+                        <header>  2) Flex-Flow : column wrap </header>
+                        
+                        <section class='Flex-Flow-Column-Wrap'>                            
+                            <div class='div1'>                     
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>
+                        <!-- ------------------------------------------------------------------------- -->                
+                        <!-- ------------------------------------------------------------------------- -->                
+                      
+                        <header>  3) Flex-Flow : row wrap </header>
+                        
+                        <section class='Flex-Flow-Row-Wrap'>                                                                    
+                            <div class='div1'>                     
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                
+                                            
+                        <header>  4) Flex-Flow : column-reverse wrap </header>
+                        
+                        <section class='Flex-Flow-Column-Reverse-Wrap'>                            
+                            <div class='div1'>                     
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>
+                        <!-- ------------------------------------------------------------------------- -->                                                                                      
+                        
+                        <header>  5) Flex-Flow : row-reverse wrap </header>
+                        
+                        <section class='Flex-Flow-Row-Reverse-Wrap'>                            
+                            <div class='div1'>                     
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>
+                        <!-- ------------------------------------------------------------------------- -->                                      
+                                                
+                        <header>  6) Flex-Flow : row wrap-reverse  </header>
+                        
+                        <section class='Flex-Flow-Row-Wrap-Reverse'>                            
+                            <div class='div1'>                     
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>
+                        <!-- ------------------------------------------------------------------------- -->                                      
+                        
+                        <header>  7) Flex-Flow : column wrap-reverse  </header>
+                        
+                        <section class='Flex-Flow-Column-Wrap-Reverse'>                            
+                            <div class='div1'>                     
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>
+                        <!-- ------------------------------------------------------------------------- -->                                                                                                                                      
+                        <!-- --------------------------------------------------------------------- -->                            
+                    </fieldset>
+                    <!-- --------------------------------------------------------------------- -->                                            
+                    <br><hr> <br>        
+
+                <!-- B)  { Justify Content } Application2  -->
+                    <fieldset class='Justify-Content'>                                                  
+                        <legend>  Second => justify-content </legend>
+                        
+                        <header>  Justify-Content : flex-start </header>
+                        
+                        <section class='Justify-Content-Flex-Start'>                                                                    
+                            <div class='div1'>                    
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                
+                                            
+                        <header>  Justify-Content : flex-end </header>
+                        
+                        <section class='Justify-Content-Flex-End'>                                                                    
+                            <div class='div1'>                    
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                
+                        
+                        <header>  Justify-Content : center </header>
+                        
+                        <section class='Justify-Content-Center'>                                                                    
+                            <div class='div1'>                    
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                
+                                            
+                        <header>  Justify-Content : space-between </header>
+                        
+                        <section class='Justify-Content-Space-Between'>                                                                    
+                            <div class='div1'>                    
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                
+                                            
+                        <header>  Justify-Content : space-around </header>
+                        
+                        <section class='Justify-Content-Space-Around'>
+                            <div class='div1'>                    
+                                This div 1
+                            </div>                        
+                            
+                            <div class='div2'>                     
+                                This div 2
+                            </div>                        
+                            
+                            <div class='div3'>                     
+                                This div 3
+                            </div>                        
+                        </section>                      
+                        <!-- ------------------------------------------------------------------------- -->                                                                                                                                  
+                        <!-- --------------------------------------------------------------------- -->                            
+                    </fieldset>
+            <!-- --------------------------------------------------------------------- -->                                            
+            <br><hr> <br>                        
+            <br><hr> <br>        
+            <!-- --------------------------------------------------------------------- -->                            
+        <!-- --------------------------------------------------------------------- -->                                                    
+        </section>                    
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 28 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=654n82xVDDY&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=28&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            
+            
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\27 Css3 - FlexFlow - Justify Content.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 28 [CSS3 FlexFlow - Justify Content ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

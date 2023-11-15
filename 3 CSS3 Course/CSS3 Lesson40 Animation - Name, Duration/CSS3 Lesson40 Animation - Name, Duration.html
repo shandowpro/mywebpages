@@ -1,0 +1,631 @@
+
+<!DOCTYPE html>
+ 
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> CSS3 Lesson40 Animation - [Name || Duration]  </title>
+    <link rel="stylesheet" href="CSS3 Lesson40 Animation - Name, Duration.css" media="all">
+
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        CSS3 Lesson 40 [CSS3 Animation - [Name || Duration]]
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+     <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to CSS3 Animation - [Name || Duration] main Topics">
+                [ CSS3 Animation - [Name || Duration] ] Main Topics </a> </li>
+
+            <li> <a href=#CSS3Con title="Go to CSS3  Animation - [Name || Duration] [CSS3  Animation - [Name || Duration] ] Concept">
+                [ CSS3 Animation - [Name || Duration] ] Concept </a> </li>
+
+            <li> <a href=#CSS3Imp title="Go to CSS3  Animation - [Name || Duration] [CSS3 Animation - [Name || Duration] ] Importance & Benefits">
+                [ CSS3 Animation - [Name || Duration] ] Importance & Benefits </a> </li>
+
+            <li> <a href=#CSS3Syntx title="Go to CSS3  Animation - [Name || Duration] [CSS3  Animation - [Name || Duration] ] Syntax">
+                [ CSS3 Animation - [Name || Duration] ] Syntax & Steps </a> </li>
+
+            <li> <a href=#JSDOMPract title="Go to CSS3  Animation - [Name || Duration] [CSS3 Animation - [Name || Duration] ] Practical Applications">
+                [ CSS3 Animation - [Name || Duration] ] Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+    
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
+    <main class="Welcome"> CSS3 Course <span> Lesson 40 [CSS3 Animation - [Name || Duration] ] {part3} </span>
+    </main>
+
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                CSS3 Lesson 40 Animation - [Name || Duration] Property Main Topics :
+        </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+
+                <ol type="A">
+                    <li> Animation Keyframes (More knowledge ) => [new konwledge each new lesson] :     
+                        <ul>
+                            <li> Coloring Animation </li>
+                            <li> Moving Animation </li>                            
+                        </ul>                        
+                    </li>
+                    <li> Animation-Name  => {concept & Conceptual Examples}   </li>                                                                                        
+                    <li> Animation-Duration  => {concept & Conceptual Examples}   </li>                                                                                        
+                </ol>                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class=CSS3Con id="CSS3Con">
+            <header>
+                <h3> [CSS3 Animation - [Name || Duration] ] Concept: </h3>
+            </header>
+                                              
+            <p> {Animation [Name || Duration]} => Is Needing for using [prefixes] before the animation property and it's branshed properties <br>
+            
+            <p> {Animation - [keyframes]}: It's syntax containing following components :   <br>
+                <ol>                    
+                    <li> [@ keyframes]: which is the main keyword of declaring new animation function => {Required} <li>
+                    <li> [Animation Name]: which is the Name of declaring new animation function, and will be declared later with in desired element => {Required} <li>
+                    <li> [Animation Selectors]: which are the Animation function Steps / Milestones, and will they can be assigned by using one of (2) options => {Required} <li>
+                        <ol>
+                            <li> Using From-> To keyframes : [From (0%)] [to (100%)]: </li>
+                            <li> Using Percentages keyframes : [(0%) (10%) (20%) (30%)-> (100%)]: </li>                            
+                        </ol>                        
+                    <li> [Animation Selector's CSS Attributes]: which are the CSS3 propeties will be assigned to a certain Percentage/Step <li>                        
+                    
+                    <li> You can use more than one percentage (with unified properites) in one line, such as : <br>
+                        <p> [0%, 100% { CSS3 Attributes} ]  <br>                               
+                    </li>
+                </ol>                                                                                                   
+
+            <p> {Animation - [Name || Duration]}: These are the first and second child perperites of Animation syntax , with following details : <br>
+                <ol>
+                    <li> { -webkit-animation-name || animation-name} =>  <br>
+                        <p> Which is the Declared Animation Name  </p>
+                        <p> Default value of Animation Name : none (due to it will be assigned by developer later)  </p>
+                        <p> Animation Name is up to developer to assigned (but it is recommended to be suit to the declared animiation function)  </p>
+                    </li>
+                    <li> { -webkit-animation-duration || animation-duration} => <br>
+                        <p> Which is the Animation period time to be proccesed in </p>
+                        <p> [Default value] : 0s  </p>
+                        <p> Can be assigned by (s: Second ) || (ms: Milli Second)  </p>                        
+                    </li>                    
+                </ol>
+                                                                        
+                <!-- ------------------------------------------------------ -->
+        </section>
+            
+            <!------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------>
+            
+        <section class="CSS3Imp" id="CSS3Imp">
+            <header>
+                <h3> [CSS3 / Animation - [Name || Duration] ] Importance & Benefits: </h3>
+            </header>
+            
+            <p> =&gt; [CSS3 / Animation - [Name || Duration] ] : This Advanced sub properties enabling the following features & imporatance : <br>            
+                <ul>                                                                
+                    <li> [animation-name] : Give a ability to assign a certain one/more Declared Animation Name to a specific Element </li>
+                    <li> [animation-duration] : Give a ability to assign a certain one/more Declared Animation period of time for each animation name to a specific Element </li>                    
+                </ul>                                                 
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Syntx" id="CSS3Syntx">
+            <header>
+                <h3> [ CSS3 Animation - [Intro || Keyframes]] Syntax & Methods: </h3>
+            </header>
+                        
+            <div id="Code" class="Code">
+                // (*) [CSS3 Animation - [Name || Duration]] Syntax as following :<br><br>
+                <span class='one'></span> //a)  [HTML] file  : <br>                                          
+                    <!-- *) Animation - Keyframes Common Examples  -->                                        
+                        
+                    <!-- First Parent Container  -->
+                        <span class=two></span> &lt; fieldset class='OneElement' &gt; <br>
+
+                            <!--  First Div => { (1) Animation: Coloring  } -->
+                            <span class=three></span> &lt; div class='First'  &gt; <br>
+                            <span class=three></span> &lt; /div &gt;  <br> <br>
+                            <br>
+                            <!-- ---------------------------------------------- -->
+                            
+                            <!--  Second Div => { (2) Animation: Coloring + Moving  } -->
+                            <span class=three></span> &lt; div class='Second'  &gt; <br> 
+                            <span class=three></span> &lt; /div &gt;  <br> <br>
+                            <br>
+                            <!-- ---------------------------------------------- -->
+                        <span class=two></span> &lt; /fieldset &gt; <br> 
+                            <br> <hr>
+                        <!-- ---------------------------------------------- -->
+                        <!-- ---------------------------------------------- -->
+                        
+                    <!-- Second Parent Container  -->
+                        <span class=two></span> &lt; fieldset class='TwoElement' &gt; <br>
+                        
+                            <!--  First Sub-Container => { (1) Animation: Coloring  } -->
+                            <span class=three></span> &lt; div class='OneAnimation'  &gt; <br>                                
+                                <span class=four></span> &lt; div class='First'  &gt; <br>                                
+                                <span class=four></span> &lt; /div &gt;  <br> <br>
+                                
+                                <span class=four></span> &lt; div class='Second'  &gt; <br>                                
+                                <span class=four></span> &lt; /div &gt;  <br> <br>
+                            <span class=three></span> &lt; /div &gt;  <br> <br>
+                            <br> <hr>
+                            <!-- ---------------------------------------------- -->                            
+                            
+                            <!--  Second Sub-Container => { (2) Animation: Coloring + Moving  }   } -->
+                            <span class=three></span> &lt; div class='TwoAnimation'  &gt; <br>                                
+                                <span class=four></span> &lt; div class='First'  &gt; <br>                                
+                                <span class=four></span> &lt; /div &gt;  <br> <br>
+                                
+                                <span class=four></span> &lt; div class='Second'  &gt; <br>                                
+                                <span class=four></span> &lt; /div &gt;  <br> <br>                                
+                            <span class=three></span> &lt; /div &gt;  <br> <br>
+                            <br> <hr>
+                            <!-- ---------------------------------------------- -->                                                        
+                        <span class=two></span> &lt; /fieldset &gt; <br>                                            
+                            <br> <hr>
+                            <!-- ---------------------------------------------- -->
+                    <br> <br>  <hr>
+                    // ------------------------------------------------------------------------------ <br><br>
+                    // ------------------------------------------------------------------------------ <br><br>                    
+                    // ------------------------------------------------------------------------------ <br><br>
+                        <br> <br>  <hr>                                                           
+                    <span class='one'></span> //b)  [CSS3] file  : <br>                                          
+                        
+                    <!-- CSS3 Settings {OneElement || TwoElements }:
+                        (a) General parent Container Settings :  -->                        
+                        <span class=two></span> .OneElement, .TwoElement {  <br>
+                            <span class=three></span> position: relative; <br>                        
+                            <span class=three></span> margin: 50px auto ; <br>                        
+                            <span class=three></span> width: 100%; <br>
+                            <span class=three></span> height: fit-content; <br>
+                            <span class=three></span> border: 3px solid #EEE; <br>                            
+                            <span class=three></span> border-radius: 10px ; <br>                            
+                        <span class=two></span> }  <br> <br>                                                
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- ----------------------------------------------------------------------- -->
+                        
+                        <!-- (b) Public Sub-container (.TwoElement) Settings :  -->                        
+                        <span class=two></span> .TwoElement {  <br>
+                            <span class=three></span> position: relative; <br>                        
+                            <span class=three></span> margin: 50px auto ; <br>                        
+                            <span class=three></span> width: 90%; <br>
+                            <span class=three></span> height: fit-content; <br>
+                            <span class=three></span> border: 3px solid #EEE; <br>                            
+                            <span class=three></span> border-radius: 10px ; <br>                            
+                        <span class=two></span> }  <br> <br> <hr>                                                
+                        
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- ----------------------------------------------------------------------- -->
+                        <!-- (c) Public Children Settings :  -->
+                        <span class=two></span> .OneElement > div, .OneElement > div > div  {  <br>                            
+                            <span class=three></snpan> position: absolute ; <br>                                                        
+                            <span class=three></span> width: 200px; <br>
+                            <span class=three></span> height: 200px; <br>
+                            <span class=three></span> background-color: #EFEFEF; <br>                            
+                            <span class=three></span> border: 1px solid black; <br>                                                                                  
+                            <span class=three></span> color: #FFF ; <br>
+                        <span class=two></span> }  <br> <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                        
+                        <span class=two></span> .OneElement > h2, .TwoElement > div > h2 {  <br>
+                            <span class=three></span> font-size :20px; <br>
+                            <span class=three></span> margin: 50px auto; <br>
+                            <span class=three></span> color:  #333; <br>
+                            <span class=three></span> background-color: #CCC; <br>
+                            <span class=three></span> border: 2px solid #333; <br>
+                            <span class=three></span> border-radius: 20px; <br>
+                            <span class=three></span> width: 80%; <br>
+                            <span class=three></span> height: fit-content; <br>                                                        
+                            <span class=three></span> text-align: center ; <br>                                                                                    
+                            <span class=three></span> list-style: .7 ; <br>                                                                                                                                                                                                                      
+                        <span class=two></span> }  <br> <hr>
+                        // ------------------------------------------------------------------------------ <br><br>                                                            
+                        
+                        <!-- (C) Customized Children Settings :
+                          a) OneElement Parent => First Parent Container / First Div => { (1) Animation: Coloring  } -->
+                        <span class=two></span> .OneElement > .First  {  <br>
+                            <span class=three></span> animation: coloring 3s 2 linear ; <br>
+                            <span class=three></span> -webkit-animation: coloring 3s 2 linear ; <br>                            
+                        <span class=two></span> }  <br> 
+                        <br> 
+                        <!-- ------------------------------------------------------------- -->                        
+                                                
+                          <!-- / a) OneElement Parent => Second Parent Container / Second Div => { (2) Animation: Coloring + Moving  } -->
+                        <span class=two></span> .OneElement > .Second  {  <br>
+                            <span class=three></span> animation: coloringMoving 3s 2 linear ; <br>
+                            <span class=three></span> -webkit-animation: coloringMoving 3s 2 linear ; <br>                            
+                        <span class=two></span> }  <br> 
+                        <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                        
+                        <!-- ------------------------------------------------------------- -->                                                                                                  
+                          
+                          
+                          <!-- b) TwoElement Parent => First-Sub-Container /First Div & Second Div Children => { (1) Animation: Coloring  } -->
+                        <span class=two></span> .OneElement > .OneAnimation > .First  {  <br>                            
+                            <span class=three></span> top: 0 ; <br>
+                            <span class=three></span> left: 100px; <br>
+                            <span class=three></span> -webkit-animation-name: coloring ; <br>                            
+                            <span class=three></span> animation-name: coloring ; <br>
+                            <span class=three></span> -webkit-animation-duration: 3s ; <br>                            
+                            <span class=three></span> animation-duration: 3s ; <br>
+                        <span class=two></span> }  <br> 
+                        <br> 
+                        
+                        <span class=two></span> .OneElement > .OneAnimation > .Second  {  <br>                            
+                            <span class=three></span> top: 0 ; <br>
+                            <span class=three></span> left: 200px; <br>
+                            <span class=three></span> -webkit-animation-name: coloring ; <br>                            
+                            <span class=three></span> animation-name: coloring ; <br>
+                            <span class=three></span> -webkit-animation-duration: 4s ; <br>                            
+                            <span class=three></span> animation-duration: 4s ; <br>                                                    
+                        <span class=two></span> }  <br> 
+                        <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                        
+                                                
+                          <!-- / b) TwoElement Parent => Second-Sub-Container /First Div & Second Div Children => { (2) Animation: Coloring + Moving  } -->
+                        <span class=two></span> .TwoElement > .TwoAnimation > .First  {  <br>
+                            <span class=three></span> -webkit-animation-name: coloringMoving ; <br>                            
+                            <span class=three></span> animation-name: coloringMoving ; <br>
+                            <span class=three></span> -webkit-animation-duration: 3s ; <br>                            
+                            <span class=three></span> animation-duration: 3s ; <br>                                                        
+                        <span class=two></span> }  <br> 
+                        <br> 
+                        
+                        <span class=two></span> .TwoElement > .TwoAnimation > .Second  {  <br>
+                            <span class=three></span> -webkit-animation-name: coloringMoving ; <br>                            
+                            <span class=three></span> animation-name: coloringMoving ; <br>
+                            <span class=three></span> -webkit-animation-duration: 4s ; <br>                            
+                            <span class=three></span> animation-duration: 4s ; <br>                                            
+                        <span class=two></span> }  <br> 
+                        <br> <hr>
+                        <!-- ------------------------------------------------------------- -->                                                                    
+                        <!-- ------------------------------------------------------------- -->                        
+                          
+                        <!-- / C) FourElement Parent => Third-Sub-Container /First Div & Second Div & Third Div Children => { (4) Animation: Coloring + Moving + Circling + Rotaing  } -->
+                        <span class=two></span> .FourElement > .FourAnimation > .First  {  <br>
+                            <span class=three></span> -webkit-animation-name: coloringMovingCircRot ; <br>                            
+                            <span class=three></span> animation-name: coloringMovingCircRot ; <br>
+                            <span class=three></span> -webkit-animation-duration: 3s ; <br>                            
+                            <span class=three></span> animation-duration: 3s ; <br>                                                        
+                        <span class=two></span> }  <br> 
+                        <br>
+                        
+                        <span class=two></span> .FourElement > .FourAnimation > .Second  {  <br>
+                            <span class=three></span> -webkit-animation-name: coloringMovingCircRot ; <br>                            
+                            <span class=three></span> animation-name: coloringMovingCircRot ; <br>
+                            <span class=three></span> -webkit-animation-duration: 4s ; <br>                            
+                            <span class=three></span> animation-duration: 4s ; <br>                                            
+                        <span class=two></span> }  <br>
+                        
+                        <span class=two></span> .FourElement > .FourAnimation > .Third {  <br>
+                            <span class=three></span> -webkit-animation-name: coloringMovingCircRot ; <br>                            
+                            <span class=three></span> animation-name: coloringMovingCircRot ; <br>
+                            <span class=three></span> -webkit-animation-duration: 4s ; <br>                            
+                            <span class=three></span> animation-duration: 4s ; <br>                                            
+                        <span class=two></span> }  <br> 
+                        <br> 
+                        
+                        <span class=two></span> .FourElement > .FourAnimation > .Fourth {  <br>
+                            <span class=three></span> -webkit-animation-name: coloringMovingCircRot ; <br>                            
+                            <span class=three></span> animation-name: coloringMovingCircRot ; <br>
+                            <span class=three></span> -webkit-animation-duration: 4s ; <br>                            
+                            <span class=three></span> animation-duration: 4s ; <br>                                            
+                        <span class=two></span> }  <br> 
+                        <br> 
+                        <!-- ------------------------------------------------------------- -->                                                                    
+                        <!-- ------------------------------------------------------------- -->                        
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                        // ------------------------------------------------------------------------------ <br><br>
+                <br><br>
+            </div>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="CSS3Pract" id="CSS3Pract" >
+
+            <header>
+                <h3> [CSS3 - Animation - [Name || Duration]] General Practical Applications : </h3>
+            </header>
+         
+            <h4> 
+                =&gt; Following are Applied examples of {Animation - [Name || Duration]} new feature/ property with (all) of Transitoin Function Values} : 
+            </h4>
+                
+            <p> (1) Main Fieldsets has (3) divs (children-Examples) as following:  </p>                        
+            
+            <ol>                    
+                <li>  First Sub-Container => with following settings: </li>  <br>
+                    <ul>                        
+                        <li> Has (2) Seperated Elements, First: One Animation (coloring), Second: Two Animiations (Moving) </li>                        
+                    </ul> 
+                <hr>                                
+                
+                <li>  Second Sub-Container => with following settings: </li>  <br>
+                    <ul>                        
+                        <li> Has (2) groups of Elements as following :</li> <br>
+                            <ol>
+                                <li> First group: Has (2) Children of Elements, with the One Animation (Coloring) for both </li>
+                                <li> Second group: Has (2) Children of Elements, with the Two different Animations for both (Coloring + Moving - ColoringMoving- ) </li>
+                            </ol>
+                            
+                    </ul> 
+                <hr>                                
+            
+            </ol>                                                
+            <br><br><br>
+            <!-- ========================================================================= -->                                                        
+                        
+            <header>Threre are (3) main Parent Container => Has Animating Children (with different Types of Animating) </header>
+            
+            <!-- First Fieldset -->
+            <fieldset class='OneElement'>                                                  
+
+                <legend>  Following There are (2) children of animating Elements  :  </legend>                                                                                                                            
+                    <header>  First Element => { One Anmimation (Coloring) }  </header>
+                    <div class='First'>                                                                     
+                        First Element
+                    </div> <br>
+                    <!-- ------------------------------------------------------------------------- -->                
+                    
+                    <header>  Second Element => { Two Anmimations (Coloring-Moving -coloringMoving- ) }  </header>
+                    <div class='Second'>                                                                     
+                        Second Element
+                    </div> <br>
+                    <!-- ------------------------------------------------------------------------- -->                                                                            
+                    <hr> <br> <br>                                                                    
+            </fieldset>            
+                
+                <!-- ------------------------------------------------------------------------- -->                                                                            
+                <!-- ------------------------------------------------------------------------- -->                                                                            
+            <!-- Second Fieldset -->
+            <fieldset class='TwoElement'>                                                  
+
+                <legend>  Following There are (2) children of animating Elements  :  </legend>                                                                                                                            
+                
+                <header> Second Fieldset [TwoElement] / First Sub-Container [OneAnimation] => { One Animation (Coloring) }  </header>
+                    
+                    <!-- Coloring Animation -->
+                    <div class='OneAnimation'>
+                        <div class='First'>                                                                     
+                            First Element {One Animation}
+                        </div> <br>                    
+                        
+                        <div class='Second'>                                                                     
+                            Second Element {One Animation}
+                        </div> <br>
+                    </div>
+                    <br> <br>
+                    <!-- ================================================================= -->
+                    
+                <header>  Second Fieldset [TwoElements] / Second Sub-Container [TwoAnimation] => { Two Animations (ColoringMoving -coloringMoving- ) }  </header>
+            
+                    <div class='TwoAnimation'>
+                        <div class='First'>                                                                     
+                            First Element {Two Animations}
+                        </div> <br>                    
+                        
+                        <div class='Second'>                                                                     
+                            Second Element {Two Animations}
+                        </div> <br>
+            
+                        <div class='Third'>                                                                     
+                            Third Element {Two Animations}
+                        </div> <br>
+                        
+                        <div class='Fourth'>                                                                     
+                            Foruth Element {Two Animations}
+                        </div> <br>
+                    </div>
+                
+                    <!-- ------------------------------------------------------------------------- -->                                                                            
+                <hr> <br> <br>                                                        
+            </fieldset>            
+            
+            <!-- --------------------------------------------------------------------- -->                                                                                        
+            <br><hr> <br>        
+            <!-- --------------------------------------------------------------------- -->                            
+            
+            <!-- Third Fieldset -->
+            <fieldset class='MultiElem-MultiAnim'>                                                  
+
+                <legend>  Following There are (4) children of animating Elements  :  </legend>                                                                                                                            
+                
+                <header> Third Fieldset [MultiElem-MultiAnim] / First Sub-Container [Mulitiple Animations] =>  (Coloring , Moving , Circling , Rotating ) }  </header>
+                    
+                    <!-- Mulitiple Animations (Coloring , Moving , Circling , Rotating ) -->
+                    
+                    <div class='Multi1'>
+                        <div class='First'>                                                                     
+                            First Element 
+                        </div> <br>                    
+                        
+                        <div class='Second'>                                                                     
+                            Second Element
+                        </div> <br>
+                        
+                        <div class='Third'>                                                                     
+                            Third Element 
+                        </div> <br>                    
+                        
+                        <div class='Fourth'>                                                                     
+                            Fourth Element
+                        </div> <br>
+                    </div>
+                    <br> <br>
+                    <!-- ================================================================= -->
+                    
+                <header> Third Fieldset [MultiElem-MultiAnim] / Second Sub-Container [Mulitiple Animations] =>  (Pupimg Ball) }  </header>
+                    
+                    <!-- Mulitiple Animations (Pumping Ball ) -->
+                    
+                    <div class='Multi2'>
+                        
+                        <div class='First'>                                                                     
+                            Pumping Ball
+                        </div> <br>                    
+                                                
+                    </div>
+                    <br> <br>
+                    <!-- ================================================================= -->
+                                                    
+                    <!-- ------------------------------------------------------------------------- -->                                                                            
+                <hr> <br> <br>                                                        
+            </fieldset>            
+            
+            <!-- --------------------------------------------------------------------- -->                                                                                        
+            <br><hr> <br>        
+            <!-- --------------------------------------------------------------------- -->                            
+        <!-- --------------------------------------------------------------------- -->                                                    
+        </section>                    
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 40 Video File:</h3>
+            <iframe			
+            width="100%"
+            height="100%"											
+            allowfullscreen
+            allowfullscreen="allowfullscreen"
+            mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"
+            frameborder="0"				
+            preload="yes"
+            src="https://www.youtube.com/embed/watch?v=9qLwUFw5OXY&list=PLDoPjvoNmBAyEyQaHOHO1HJtmSgGt07VC&index=40&controls=0&loop=1&autoplay=1&fs=1" 
+            >
+        </iframe>
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\1 Web Designing Front End\B CSS\CSS3\40 Css3 - Animation - [Name || Duration].mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video>  -->
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog style="width:fit-content; padding:10px" class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul style="width:fit-content; padding:10px">
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+                <li> <a href="C:\Users\hp\Desktop\My web pages Refs\index.html"> My Web Refereneces</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to CSS3 Lesson 40 [CSS3 Animation - [Name || Duration] ] ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

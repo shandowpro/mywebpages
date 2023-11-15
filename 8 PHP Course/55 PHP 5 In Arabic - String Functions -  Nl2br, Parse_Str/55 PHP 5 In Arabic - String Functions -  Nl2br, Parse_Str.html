@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str </title>
+    <link rel="stylesheet" href="55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str.css" media="all">
+    
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        55 PHP 5 In Arabic - String Functions - { Nl2br} || {Parse_Str}
+    </header>
+<!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to PHP main Topics">
+                55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to PHP [String Functions - StrToLower, StrToUpper] Concept">
+                55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to PHP [String Functions - StrToLower, StrToUpper] Importance & Benefits">
+                55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to PHP [String Functions - StrToLower, StrToUpper] Syntax">
+                55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str Syntax & Steps </a> </li>
+7
+            <li> <a href=#PHPPract title="Go to PHP [String Functions - StrToLower, StrToUpper] Practical Applications">
+                55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str Practical Applications </a> </li>
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+        
+    <main class="Welcome"> Welcome to PHP Course <span> 55 PHP 5 In Arabic - String Functions -  parse_str() || nl2br() </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                PHP5 [ String Functions - [ parse_str(string , array) || nl2br(string, xhtml) ] Main Topics :
+            </header>
+            
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+                
+                <ol>
+                    <li>  String Functions / parse_str(string , array) - Methods as following : 
+                        <ol> 
+                            <li> parse_str($string); => [Default converting the link to seperated variable]  </li>
+                            <li> parse_str($string, array); => [advanced converting the link to array]  </li>                            
+                        </ol>
+                    </li>
+                    <li>  String Functions / nl2br(string , xhtml) - Methods as following : 
+                        <ol> 
+                            <li> nl2br(string) => [Default converting the new lines with the string to default xhtml : &lt; br /&gt;]  </li>
+                            <li> nl2br(string, true || false) => [Default converting the new lines with the string to [xhtml:&lt; br &gt; || html:&lt; br /&gt;]  </li>
+                        </ol>
+                    </li>
+                </ol>
+                <hr>                                                                                                    
+            </article>
+        </Section>        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> PHP [55 PHP 5 In Arabic - String Functions -  parse_str(string , array) || nl2br(string, xhtml) ] </h3>
+            </header>
+                        
+            <h2> [PHP - String Functions - [ parse_str(string , array) || nl2br(string, xhtml) ] ] => Concept: </h2>
+                                                        
+                <p> [PHP - String functions [ parse_str(string , array) ] method syntax & concept as following : <br>
+                    <ol> 
+                        <li> [String] -> The String's link which will be processed by {Analyzing & converting to seperated variables || array} => {Obligated}  </li>
+                        <li> [Array] -> The Array which will be filled by {Analyzing & converting String's link}  => {Optional}  </li>
+                    </ol>
+                </p>
+            
+                <br> <br> <hr>
+                <!-------------------------------------------  -->                                                                                                                                                                                                                              
+            </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> PHP [55 PHP 5 In Arabic - String Functions -  parse_str(string , array) || nl2br(string, xhtml)] Importance & Benefits: </h3>
+            </header>
+            
+            <ul> 
+                <li> [String Functions - parse_str(string , array)] method => This method helpful in Analyzing and seperating the String link to seperated || array(keys -> variable name && values -> variable values) </li>
+                <li> [String Functions -  nl2br(string, xhtml) ] method => Converting the inner new lines with string text to &lt; br &gt; HTML tag || &lt; br /&gt; xhtml tag => very helpful in recieving text from the user to database  </li> 
+            </ul>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ 55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str] Syntax & Methods: </h3>
+            </header>        
+
+            <p> =&gt; In this after setting up the application => We will create a simple PHP File && Running it by [Local Server] </p>
+            
+            <p> =&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} : <br>
+                <p> Using [String Functions - Nl2br(), Parse_Str() ] => has following ( 2 ) main Examples : </p> 
+                                
+                    <ol type="A">        
+                        <li> First Example => String Functions -  {parse_str(string variable/text value , array)} Method : contains (1) Exps : <br>
+                            <ol>   
+                                <li> {Advanced parse_str($string, $array)} Method </li>                                
+                            </ol>
+                        </li>                        
+                        
+                        <li> Second Example => String Functions -  {nl2br(string variable/text value , Xhtml[ture,false)} Method : contains (3) Exps : <br>
+                            <ol>   
+                                <li> {Default {nl2br(string)} Method  </li>
+                                <li> {Advanced => [Xhtml:True]: {nl2br(string, true)} Method </li>
+                                <li> {Advanced => [Xhtml:False]: {nl2br(string, false)} Method </li>                                
+                            </ol>
+                        </li>                                                                        
+                                                                            
+                    </ol>
+                </P>                                                            
+                <!-- ================================================================= -->
+                                               
+                <h2>  B)  Html page :  </h2> <br>                    
+                        <span class='one'> &lt; !DOCTYPE html &gt; </span> <br>
+                            <span class='two'> &lt; html &gt; </span> <br>
+                                <span class='three'> &lt; /head &gt;</span> <br>
+                                    <span class='four'> &lt; title &gt; &lt;? php echo $title; ?&gt;  &lt; /title &gt;  </span> <br>
+                                    <span class='four'> &lt; link rel="stylesheet" href="55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str" media="all" &gt;  </span> <br>
+                                <span class='three'> &lt; /head &gt; </span>  <br> <br>                                
+                                <span class='three'>&lt; body &gt; </span> <br>                            
+                                
+                                <span class='three'>&lt; /body &gt; </span> <br>
+                                <span class='two'>&lt;/html &gt; </span> <br>
+                                ---------------------------------------------------------------------------- <br>
+                                ---------------------------------------------------------------------------- <br>                      
+                   <br><br> <hr>                                                                                                                                  
+            <br><br>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+         <section class="PHPPract" id="PHPPract"> 
+            <header>
+                <h3> PHP [55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here (2) Major Applications PHP [ String Functions - Nl2br(), Parse_Str() ] as following =>  <br><br>
+
+                <ol type="A">        
+                    <li> First Example => String Functions -  {parse_str(string variable/text value , array)} Method : contains (1) Exps : <br>
+                        <ol>   
+                            <li> {Advanced parse_str($string, $array)} Method , and include the following steps : <br>
+                                <ol>
+                                    <li> printing the main string link variables before [ analyzing & Seperating ] </li>
+                                    <li>  Processing [Analyzing & Seperating] </li>
+                                    <li>  printing the main string link Array after [analyzing & Seperating ] </li>
+                                </ol>
+                            </li>                                
+                        </ol>
+                    </li>                        
+                    
+                    <li> Second Example => String Functions -  {nl2br(string variable/text value , Xhtml[ture,false)} Method : contains (3) Exps : <br>
+                        <ol>   
+                            <li> {Default {nl2br(string)} Method , and include the following steps : <br>
+                                <ol>
+                                    <li> Printing the string variable before [Default converting the new lines to br tags] </li>
+                                    <li> Processing [Default converting the new lines to br tags] </li>
+                                    <li> Printing [ string variable before [Default converting the new lines to br tags] ] </li>
+                                </ol>                                
+                            </li>
+
+                            <li> {Advanced => [Xhtml:True]: {nl2br(string, true)} Method , and include the following steps : <br>
+                                <ol> 
+                                    <li> Printing the string variable before [Advanced converting the new lines to Xhtml br tags] </li>
+                                    <li> Processing [Advanced converting the new lines to Xhtml br tags] </li>
+                                    <li> Printing [ string variable before [Advanced converting the new lines to Xhtml br tags] ] </li>
+                                </ol>                            
+                            </li>
+                            
+                            <li> {Advanced => [Xhtml:False]: {nl2br(string, false)} Method , and including the following steps : <br>                               
+                                <ol> 
+                                    <li> printing the string variable before [Advanced converting the new lines to Html br tags]  </li>
+                                    <li> Processing [Advanced converting the new lines to Html br tags] </li>
+                                    <li> Printing [ string variable before [Advanced converting the new lines to Xhtml br tags] ] </li>
+                                </ol>                                                        
+                            </li>                                
+                        </ol>
+                    </li>                                                                        
+                                                                        
+                </ol>
+
+            <!-- <section id=sec class=txtarea >                                  
+                 <a href="http://localhost/PHP%20Course/55%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20%20Nl2br,%20Parse_Str/55%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20%20Nl2br,%20Parse_Str.php">  
+                    {55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str } => Lesson 55 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+
+            <section id=sec class=txtarea >                                  
+                <a class=btn href="http://localhost/PHP%20Course/55%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20%20Nl2br,%20Parse_Str/55%20PHP%205%20In%20Arabic%20-%20String%20Functions%20-%20%20Nl2br,%20Parse_Str.php">  
+                   {Main Page} [Display] => {55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str } => Lesson 55 PHP File Webpage by Localhost
+               </a> <br> <br>             
+               
+               <a class=btn href="55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str.php">  
+                   {Main Page} [Source Code] => {55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str } => Lesson 55 PHP File Webpage by Localhost
+               </a>             
+           </section> <br> 
+            
+             <!-- <script  src="14 PHP 5  - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+                
+        </section>                           
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="VideoSection">
+            <h3> Lesson 55 Video File:</h3>
+
+            <iframe
+            width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=i3xJX7v3sQ4&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=55&controls=0&loop=1&autoplay=1&fs=1"    
+        >   
+        </iframe>
+
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shandow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 55 PHP 5 In Arabic - String Functions -  Nl2br, Parse_Str ");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

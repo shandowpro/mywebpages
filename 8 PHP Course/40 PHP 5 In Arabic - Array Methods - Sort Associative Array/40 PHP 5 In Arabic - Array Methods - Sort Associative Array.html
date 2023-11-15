@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 40 PHP 5 In Arabic - Array Methods - Sort Associative Array </title>
+    <link rel="stylesheet" href="40 PHP 5 In Arabic - Array Methods - Sort Associative Array.css" media="all">
+    
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        40 PHP 5 In Arabic - Array Methods - Sort Associative Array
+    </header>
+<!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to PHP main Topics">
+                40 PHP 5 In Arabic - Array Methods - Sort Associative Array Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to PHP [40 PHP 5 In Arabic - Array Methods - Sort Associative Array] Concept">
+                40 PHP 5 In Arabic - Array Methods - Sort Associative Array Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to PHP [40 PHP 5 In Arabic - Array Methods - Sort Associative Array] Importance & Benefits">
+                40 PHP 5 In Arabic - Array Methods - Sort Associative Array Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to PHP [40 PHP 5 In Arabic - Array Methods - Sort Associative Array] Syntax">
+                40 PHP 5 In Arabic - Array Methods - Sort Associative Array Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to PHP [40 PHP 5 In Arabic - Array Methods - Sort Associative Array] Practical Applications">
+                40 PHP 5 In Arabic - Array Methods - Sort Associative Array Practical Applications </a> </li>
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+        
+    <main class="Welcome"> Welcome to PHP Course <span> 40 PHP 5 In Arabic - Array Methods - Sort Associative Array </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                PHP [40 PHP 5 In Arabic - Array Methods - Sort Associative Array] Main Topics :
+            </header>
+            
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following :</p>
+
+                <ol type="A">                                                            
+                    <li> Sorting Methods of Associative array's Elements as following : <br>
+                        <ol> 
+                            <li> Sorting Associative Array's [Values] : <br>
+                                <ol>
+                                    <li>  {asort();} => Default method : <br>  
+                                        <ul>
+                                            <li> asort(Associative array Name); </li>
+                                            <li> asort(Associative array Name,SORT_REGULAR); </li>
+                                            <li> asort(Associative array Name, SORT_STRING); </li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li>  {arsort();} => Default method : <br>  
+                                        <ul>
+                                            <li> arsort(Associative array Name); </li>
+                                            <li> arsort(Associative array Name, SORT_REGULAR); </li>
+                                            <li> arsort(Associative array Name, SORT_STRING); </li>
+                                        </ul>
+                                    </li>                                                                                        
+                                </ol>
+                            </li>
+                            
+                            <li> Sorting Associative Array's [Keys] : <br>
+                                <ol>
+                                    <li>  {ksort();} => Default method : <br>  
+                                        <ul>
+                                            <li> ksort(Associative array Name); </li>
+                                            <li> ksort(Associative array Name, SORT_REGULAR); </li>
+                                            <li> ksort(Associative array Name, SORT_STRING); </li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li>  {krsort();} => Default method : <br>  
+                                        <ul>
+                                            <li> krsort(Associative array Name); </li>
+                                            <li> krsort(Associative array Name, SORT_REGULAR); </li>
+                                            <li> krsort(Associative array Name, SORT_STRING); </li>
+                                        </ul>
+                                    </li>                                                                                        
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>                    
+                </ol>                                                
+            </article>
+        </Section>        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> PHP [40 PHP 5 In Arabic - Array Methods - Sort Associative Array] </h3>
+            </header>
+                        
+            <h2> [PHP Array Methods - Sorting ] => Array Associative Methods - Sorting Concept: </h2>
+                    <P> {Sorting elements in the array} is One of the most important Controling methods of the Array [Indexed || Associative || Multidimensional] in PHP </P>
+                    <P> {Sorting Methods} is deffer from an array type to another in PHP, In this lesson will be take the Sorting Array Elements in the [Associative Array] </P>
+                    
+                    <P> Sorting elements methods to the array as following : <br>
+                        <ol type="A">        
+                            
+                            <li> {asort();} Method => [sorting values] : <br>
+                                <ol>
+                                    <li> {asort();} Method: <br>
+                                        <ul>
+                                            <li> asort(array Name)                => The Default sorting Method in the array's Elements's Values {alphabatically}  </li>
+                                            <li> asort(array Name, Sorting Type)  => The advanced sorting Method in the array's Elements's Values according to {certain creteria} as following :  <br>
+                                                <ol>
+                                                    <li> asort(array Name, Sorting_REGULAR)  => The advanced sorting Method in the array's Elements's Values according to {Alphabatical creteria} Starting from String datatype elements , then other datatypes </li>
+                                                    <li> asort(array Name, Sorting_STRING)  => The advanced sorting Method in the array's Elements's Values according to {Alphabatical creteria} with dealing with all elements as String datatype </li>
+                                                </ol>
+                                            </li>                            
+                                        </ul>
+                                    </li>
+                                    
+                                    <li> {arsort();} Method: <br>
+                                        <ul>
+                                            <li> arsort(array Name)                => The Default Reverserly sorting Method in the array's Elements's Values {alphabatically}  </li>
+                                            <li> arsort(array Name, Sorting Type)  => The advanced Reverserly sorting Method in the array's Elements's Values according to {certain creteria} as following :  <br>
+                                                <ol>
+                                                    <li> arsort(array Name, Sorting_REGULAR)  => The advanced Reverserly sorting Method in the array's Elements's Values according to {Alphabatical creteria} Starting from String datatype elements , then other datatypes </li>
+                                                    <li> arsort(array Name, Sorting_STRING)  => The advanced Reverserly sorting Method in the array's Elements's Values according to {Alphabatical creteria} with dealing with all elements as String datatype </li>
+                                                </ol>
+                                            </li>                            
+                                        </ul>
+                                    </li>                                
+                                </ol>                                
+                            </li> <br> <hr> <br>
+
+                            <li> {ksort();} Method => [sorting keys] : <br>
+                                <ol>
+                                    <li> {ksort();} Method: <br>
+                                        <ul>
+                                            <li> ksort(array Name)                => The Default sorting Method in the array's Elements's Keys {alphabatically}  </li>
+                                            <li> ksort(array Name, Sorting Type)  => The advanced sorting Method in the array's Elements's Keys according to {certain creteria} as following :  <br>
+                                                <ol>
+                                                    <li> ksort(array Name, Sorting_REGULAR)  => The advanced sorting Method in the array's Elements's Keys according to {Alphabatical creteria} Starting from String datatype elements , then other datatypes </li>
+                                                    <li> ksort(array Name, Sorting_STRING)  => The advanced sorting Method in the array's Elements's Keys according to {Alphabatical creteria} with dealing with all elements as String datatype </li>
+                                                </ol>
+                                            </li>                            
+                                        </ul>
+                                    </li>
+                                    
+                                    <li> {krsort();} Method: <br>
+                                        <ul>
+                                            <li> krsort(array Name)                => The Default Reverserly sorting Method in the array's Elements's Keys {alphabatically}  </li>
+                                            <li> krsort(array Name, Sorting Type)  => The advanced Reverserly sorting Method in the array's Elements's Keys according to {certain creteria} as following :  <br>
+                                                <ol>
+                                                    <li> krsort(array Name, Sorting_REGULAR)  => The advanced Reverserly sorting Method in the array's Elements's Keys according to {Alphabatical creteria} Starting from String datatype elements , then other datatypes </li>
+                                                    <li> krsort(array Name, Sorting_STRING)  => The advanced Reverserly sorting Method in the array's Elements's Keys according to {Alphabatical creteria} with dealing with all elements as String datatype </li>
+                                                </ol>
+                                            </li>                            
+                                        </ul>
+                                    </li>                                
+                                </ol>                                
+                            </li>
+
+                        </ol>
+                    </P>                                                            
+                <br> <br> <hr>
+                <!-------------------------------------------  -->                                                                                                                                                                                                                              
+            </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> PHP [40 PHP 5 In Arabic - Array Methods - Sort Associative Array] Importance & Benefits: </h3>
+            </header>
+            
+                <ul> 
+                    <li> Accurate Sorting Elements according to Multiple creterias [Alphabatical || |Datatype] to any type of Array </li>
+                    <li> Reverse Sorting abitily to Elements according to Multiple creterias [Alphabatical || |Datatype] to any type of Array </li>
+                    <li> Sorting Array Elements gives great progrmaing  features, specially when dealing Database </li>
+                </ul>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx">
+            <header>
+                <h3> [ 40 PHP 5 In Arabic - Array Methods - Sort Associative Array] Syntax & Methods: </h3>
+            </header>        
+
+            <p> =&gt; In this after setting up the application => We will create a simple PHP File && Running it by [Local Server] </p>
+            
+            <p> =&gt; Lesson PHP file project Path => {HTDOX/PHP_Course/.php} : <br>
+                <p> Using [Array  Methods - Sorting] => has following ( 2 ) main Examples : </p> 
+                                
+                    <ol type="A">        
+                        <li> First Example => {sort();} Method: <br>
+                            <ul>
+                                <li> sort(array Name)                => The Default sorting Method in the array's Elements {alphabatically}  </li>
+                                <li> sort(array Name, Sorting Type)  => The advanced sorting Method in the array's Elements according to {certain creteria} as following :  <br>
+                                    <ol>
+                                        <li> sort(array Name, Sorting_REGULAR)  => The advanced sorting Method in the array's Elements according to {Alphabatical creteria} Starting from String datatype elements , then other datatypes </li>
+                                        <li> sort(array Name, Sorting_STRING)  => The advanced sorting Method in the array's Elements according to {Alphabatical creteria} with dealing with all elements as String datatype </li>
+                                    </ol>
+                                </li>                            
+                            </ul>
+                        </li>
+                        <li> Second Example => {rsort();} Method: <br>
+                            <ul>
+                                <li> rsort(array Name)                => The Default Reverserly sorting Method in the array's Elements {alphabatically}  </li>
+                                <li> rsort(array Name, Sorting Type)  => The advanced Reverserly sorting Method in the array's Elements according to {certain creteria} as following :  <br>
+                                    <ol>
+                                        <li> rsort(array Name, Sorting_REGULAR)  => The advanced Reverserly sorting Method in the array's Elements according to {Alphabatical creteria} Starting from String datatype elements , then other datatypes </li>
+                                        <li> rsort(array Name, Sorting_STRING)  => The advanced Reverserly sorting Method in the array's Elements according to {Alphabatical creteria} with dealing with all elements as String datatype </li>
+                                    </ol>
+                                </li>                            
+                            </ul>
+                        </li>
+                    </ol>
+                </P>                                                            
+                <!-- ================================================================= -->
+                                               
+                <h2>  B)  Html page :  </h2> <br>                    
+                        <span class='one'> &lt; !DOCTYPE html &gt; </span> <br>
+                            <span class='two'> &lt; html &gt; </span> <br>
+                                <span class='three'> &lt; /head &gt;</span> <br>
+                                    <span class='four'> &lt; title &gt; &lt;? php echo $title; ?&gt;  &lt; /title &gt;  </span> <br>
+                                    <span class='four'> &lt; link rel="stylesheet" href="40 PHP 5 In Arabic - Array Methods - Sort Associative Array" media="all" &gt;  </span> <br>
+                                <span class='three'> &lt; /head &gt; </span>  <br> <br>                                
+                                <span class='three'>&lt; body &gt; </span> <br>                            
+                                
+                                <span class='three'>&lt; /body &gt; </span> <br>
+                                <span class='two'>&lt;/html &gt; </span> <br>
+                                ---------------------------------------------------------------------------- <br>
+                                ---------------------------------------------------------------------------- <br>                      
+                   <br><br> <hr>                                                                                                                                  
+            <br><br>
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+         <section class="PHPPract" id="PHPPract"> 
+            <header>
+                <h3> PHP [40 PHP 5 In Arabic - Array Methods - Sort Associative Array] General Practical Applications : </h3>
+            </header>
+            
+            <p> =&gt; Here (2) Major Applications PHP [ Sorting Elements from Array ] as following =>  <br><br>
+
+                <ul>                    
+                    <li> First Example  => {sort();} in => {Associative Array} : <br> 
+                        <ul>
+                            <li> (a) => Sorting Elements in the [Associative array] default alphabatically by using => {sort();} :  <br>
+                                <ul>  
+                                    <li> (1) Printing the [Associative array] before Sorting Items </li> 
+                                    <li> (2) Printing the [Associative array] after Sorting Items </li>                                     
+                                </ul>
+                            </li>
+                            <li> (b) => Advanced sorting Items from the [Associative array] advanced alphabatically by using => {sort(arrayName, Sort Type);} : <br>
+                                <ul>  
+                                    <li> (1) Printing the [Associative array] before Sorting Items </li> 
+                                    <li> (2) Printing the [Associative array] after Sorting Items [sort(arrayName, Sorting_REGULAR) || sort(arrayName, Sorting_REGULAR)] </li>                                     
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>    
+                    <br><br> <hr>       
+                    
+                    <li> Second Example  => {rsort();} in => {Associative Array} : <br> 
+                        <ul>
+                            <li> (a) => Reverese Sorting Elements in the [Associative array] default alphabatically by using => {rsort();} : <br>
+                                <ul>  
+                                    <li> (1) Printing the [Associative array] before Reverese Sorting Items </li> 
+                                    <li> (2) Printing the [Associative array] after Reverese Sorting Items </li>
+                                </ul>
+                            </li>
+                            <li> (b) => Advanced Reverese sorting Items from the [Associative array] advanced alphabatically by using => {sort(arrayName, Sort Type);} : <br>
+                                <ul>  
+                                    <li> (1) Printing the [Associative array] before Reverese Sorting Items </li> 
+                                    <li> (2) Printing the [Associative array] after advanced Reverese Sorting Items [rsort(arrayName, Sorting_REGULAR) || rsort(arrayName, Sorting_REGULAR)] </li> 
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>                               
+                </ul>
+
+             <!-- <section id=sec class=txtarea >                                  
+                 <a href="http://localhost/PHP%20Course/40%20PHP%205%20In%20Arabic%20-%20Array%20Methods%20-%20Sort%20Associative%20Array/40%20PHP%205%20In%20Arabic%20-%20Array%20Methods%20-%20Sort%20Associative%20Array.php">  
+                    {40 PHP 5 In Arabic - Array Methods - Sort Associative Array} => Lesson 40 PHP File Webpage by Localhost
+                </a>             
+            </section> <br>  -->
+
+
+            <section id=sec class=txtarea >                                  
+                <a class=btn href="http://localhost/PHP%20Course/40%20PHP%205%20In%20Arabic%20-%20Array%20Methods%20-%20Sort%20Associative%20Array/40%20PHP%205%20In%20Arabic%20-%20Array%20Methods%20-%20Sort%20Associative%20Array.php">  
+                   {Main Page} [Display] => {40 PHP 5 In Arabic - Array Methods - Sort Associative Array} => Lesson 40 PHP File Webpage by Localhost
+               </a> <br> <br>             
+               
+               <a class=btn href="40 PHP 5 In Arabic - Array Methods - Sort Associative Array.php">  
+                   {Main Page} [Source Code] => {40 PHP 5 In Arabic - Array Methods - Sort Associative Array} => Lesson 40 PHP File Webpage by Localhost
+               </a>             
+           </section> <br> 
+            
+             <!-- <script  src="14 PHP 5 In Arabic - Comparison Operators.php">
+            </script> 
+
+            <button class=btn onclick="test()"> Click to Start display the Constant Application    
+            </button> 
+            
+            <textarea id="SourceCode" readonly>                
+            </textarea>  -->
+                
+        </section>                           
+        <!-------------------------------------------------------------------------------------->                
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="VideoSection">
+            <h3> Lesson 40 Video File:</h3>
+            
+                <iframe
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
+          frameborder="0"
+          preload="yes"
+          src="https://www.youtube.com/embed/watch?v=DIwa3RjvE4s&list=PLDoPjvoNmBAzH72MTPuAAaYfReraNlQgM&index=40&controls=0&loop=1&autoplay=1&fs=1"    
+        >
+        </iframe>
+
+            <!-- <video controls width="300" height="300">
+                <source src="C:\Users\hp\Videos\pLanguages\web\2 Web Development Back End\PHP\Basic PHP\40 PHP 5 In Arabic - Array Methods - Sort Associative Array.mp4" type="video/mp4">
+                    Your browser Does Not Support the Video file ...              
+            </video> -->
+        </section>
+        
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp; Uploading: <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open>
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shandow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 40 PHP 5 - Array Methods - Sort Associative Array");
+    </script>
+
+
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       

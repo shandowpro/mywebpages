@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title> HTML5 Lesson 14 HTML5 New Form elements [Output] </title>
+    <link rel="stylesheet" href="HTML5 New Form Elements [Output].css" media="all" >
+    <style>  </style>    
+    <script src="html5shiv.min.js">        
+    </script>    
+    <!-- [if lt IE 9]>
+        <script src="html5shiv.min.js" >  </script>
+    <![End if]-->
+    
+</head>
+
+<body>
+    <header class="Main" id="Main">
+        HTML5 Lesson 14 HTML5 New Form Elements [Output]
+    </header>
+    
+    <!-------------------------------------------------------------------------------------------------------->
+    
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC  title="HTML5 New Form Elements Output Main Concept" > HTML5 New Form Elements        [Output] Main Concept </a> </li>
+            <li> <a href=#OutputNTag   title="Go to Output Tag" > Output Tag  </a> </li>         
+        </ol>
+        
+        <a class="Home" href="#Main"  title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->    
+    <main class="Welcome"> Welcome to HTML 5 Course <span> Lesson 14 {Output} </span> </main>
+
+<!-------------------------------------------------------------------------------------------------------------->                        
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+        
+            <header>
+                HTML5 New Form Elements [Output] Concept 
+            </header>
+            
+            <article>                
+                <p> &gt; The New HTML5 Form Elements in this lesson as following :</p>
+                
+                <ol>                    
+                    <li> &lt; output &gt; &nbsp; &nbsp; &lt; /output &gt; </li>           
+                </ol>    
+            </article>            
+        </Section>
+    
+        <!------------------------------------------------------------------------------------------------------>
+      
+        <section class="OutputNTag" id="OutputNTag">
+            <header>
+                Output Tag [ &lt; output &gt; &lt; /output &gt; ]
+            </header>
+            
+            <article>
+                <header>
+                    <h1> [Output Tag] Concept: </h1>
+                    <p> =&gt; [Output Tag] is a container to hold the result of a arithmetic calculation with in           a Form. 
+                    <p> =&gt; [Output Tag] usually dealing with Input Tags's values as thier arithmetic                     calculation input, to hold the result with in it. 
+                    <p> =&gt; [Output Tag] absolutely being get their arithmetic operation results via Javascript           codes. 
+                </header>
+                
+                <header>
+                    <h1> Main & Features of [Output] Tag Usages: </h1>                    
+                    <p> =&gt; It is critical to display the out put result of Arthmetic operation with in form. </p>     
+                    <p> =&gt; It is very handy by using Javascript codes to manage it. </p>                    
+                    <p> =&gt; It is also can be formated by CSS codes. </p>                    
+                </header>
+                
+                <header class="OutputExp">
+                    <h1>Example:</h1>
+                    <p> Calculating User's Age by Days and Months put the Result in output field</p>
+                    <section>
+                        <h3> Enter your Age by years to get by days & months: </h3>
+                        <form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months' ">
+                            <input type="text" name="age">                            
+                            <input type="hidden" name="days" value="365">                                       
+                            <input type="hidden" name="months" value="12">                                       
+                            &nbsp; <output name="resultD"> </output> &nbsp;
+                            <output name="resultM"> </output>
+                        </form>
+                    </section>
+                    
+                    <div class="OutputExp1">                                            
+                        <code> 
+                            &lt;aside&gt; <br>                            
+                            &nbsp;&nbsp;&lt;section&gt; <br>                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt; Enter your Age by years to get by days & monthss: &lt;/h3&gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;form &nbsp; oninput = "resultD.value = parseInt(age.value) * <span class="space">parseInt(days.value)</span> + ' Days'; resultM.value =    parseInt(age.value) <span class="space">* parseInt(months.value)</span> + ' Months'"&gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp;&nbsp; type = "text" &nbsp;&nbsp;&nbsp; name = "age"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp;&nbsp; type = "hidden" &nbsp; name = "days" value = "365" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp;&nbsp; type = "hidden" &nbsp; name = "months" value = "12" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;output &nbsp; name = "resultD" &gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;output &nbsp; name = "resultM" &gt;<br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp; &lt;/form&gt;<br>
+                            &nbsp;&nbsp;&lt;/section&gt;<br>
+                            &lt;/aside&gt; <br>                            
+                        </code>                    
+                    </div>       
+                </header>    
+                
+                <header class="Calculator">
+                    <h1>Example:</h1>
+                    <p> This is a simple calculator Application</p>
+                    <section>
+                        <h3> Enter two numbers to get all basic arithmetic calculation: </h3>
+                        
+                        <form oninput="Rsum.value='Summition Result: ' + (parseInt(num1.value)+parseInt(num2.value)); Rsub.value='Substraction Result: ' + (parseInt(num1.value)-parseInt(num2.value));Rmult.value='Multiply Result: ' + (parseInt(num1.value)*parseInt(num2.value));Rdiv.value='Division Result: ' + (parseInt(num1.value)/parseInt(num2.value)) ">
+                            
+                            Enter number 1 <input type = "text" name="num1" ><br>                            
+                            Enter number 2 <input type = "text" name="num2" ><br>                                       
+                            
+                            &nbsp; <output name="Rsum"> </output> &nbsp;
+                            &nbsp; <output name="Rsub"> </output> &nbsp;
+                            &nbsp; <output name="Rmult"> </output> &nbsp;
+                            &nbsp; <output name="Rdiv"> </output> &nbsp;
+                            
+                        </form>
+                        
+                    </section>
+                    
+                    <div class="Calculator1">                                            
+                        <code> 
+                            &lt;section&gt; <br>                            
+                            &nbsp;&nbsp;&lt;h3&gt; Enter two numbers to get all basic arithmetic calculation: &lt;/h3&gt; <br>           
+                            
+                            &nbsp;&nbsp;&lt;form &nbsp; oninput = "Rsum.value='Summition Result: ' + 
+                            <span class="space0">(parseInt(num1.value)+parseInt(num2.value));</span><br> 
+                            <span class="space0">Rsub.value='Substraction Result: ' + (parseInt(num1.value)-</span><br>
+                            <span class="space0">parseInt(num2.value));</span><br>
+                            <span class="space0">Rmult.value='Multiply Result: ' </span><br>
+                            <span class="space0">+(parseInt(num1.value)*parseInt(num2.value));</span><br>
+                            <span class="space0">Rdiv.value='Division Result: ' + </span><br>
+                            <span class="space0">(parseInt(num1.value)/parseInt(num2.value)) "&gt;</span><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp;&nbsp; type = "text" &nbsp;&nbsp;&nbsp; name = "num1"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input &nbsp;&nbsp; type = "text" &nbsp;&nbsp;&nbsp; name = "num2"&gt;<br>
+                                                        
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;output &nbsp; name = "Rsum" &gt;&nbsp;&lt;/output&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;output &nbsp; name = "Rsub" &gt;&nbsp;&lt;/output&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;output &nbsp; name = "Rmult"&gt;&nbsp;&lt;/output&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;output &nbsp; name = "Rdiv" &gt;&nbsp;&lt;/output&gt;<br>
+                            
+                            &nbsp;&nbsp;&lt;/form&gt;<br>
+                            &lt;/section&gt;<br>
+                        </code>                    
+                    </div>       
+                </header>    
+                
+            </article>                
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+        
+    </div>    
+<!-------------------------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------->
+    
+    <aside>
+       <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Intro </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+       </section>
+       
+       <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU: <meter value=".6" min="0" max="1" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
+                Uploading: <progress value="80" max="100"></progress>
+            </div>
+            
+       </section> 
+        
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+       </section>
+        
+       <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+           <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+               <input type="text" name="age">
+               <input type="hidden" name="days" value="365">
+               <input type="hidden" name="months" value="12">
+               <output name="resultD"> </output>
+               <output name="resultM"> </output>
+           </Form> 
+       </section>
+        
+    </aside>
+
+    <div class="Clear"></div>
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------->
+    <dialog class="Note" open>
+        <details>
+            <summary>Hypernate Links:</summary>
+            <ul>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+    
+    
+    <footer id ="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade; 
+    </footer>    
+</body>
+</html>

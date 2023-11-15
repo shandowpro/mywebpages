@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Css Lesson 16 [Position]</title>
+    <link rel="stylesheet" href="Position.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="title" id="title">Css/ Lesson 16 [Position (Static, Fixed, Relative ,Absolute) ]</h1>
+                        
+        <fieldset class="index">
+            <legend class="index">Lesson Index</legend>
+            <p>Position Property is a very important one.</br>
+               It is provides [4] positioning modes for the element</br>
+               And allows to full control of any element'position in web-page.
+            </p>
+            
+            <ol>
+                <li> <a href="#Static" title="Go to Position:Static">Position: Static</a></li>
+                <li> <a href="#Fixed" title="Go to Position:Fixed">Position: Fixed</a></li>
+                <li> <a href="#Relative" title="Go to Position:Relative">Position: Relative</a></li>
+                <li> <a href="#Absolute" title="Go to Position:Absolute">Position: Absolute</a></li>
+            </ol>
+        </fieldset>
+        
+        <fieldset id="Static">            
+            <legend>(A)Position: Static</legend>    
+            
+            <h2 class="subtitle">(1)Static position (Default position) Concept:</h2>            
+            <p>This default position for the element to be holded in its position and not to be attached with Scrolling.</p>                    
+            
+            <h2 class="subtitle">(2)Static position examples:</h2>
+            <div class="expstatic">
+                <h3 class="subtitle0">Some elements with static position:</h3>
+                
+                <a class="ai" href="http://google.com">Google</a> <br>                    
+                <img class="imgi" src="Shadi.jpg"> 
+                <span class="spani">This is my photo</span>                
+            </div>                    
+        </fieldset>
+    <!----------------------------------------------------------------------------------------------->        
+        <fieldset id="Fixed">
+            <legend>(B)Position: Fixed</legend>      
+            <h2 class="subtitle">(1)Fixed Position Concept:</h2>            
+            <p>The element position will be fixed in screen even while scrolling.</p>                    
+            
+            <h2 class="subtitle">(2)Fixed Position elements Examples:</h2>
+            
+            <div class="expfixed">                
+                <h3 class="subtitle0">Home internal link for this web-page[Home]</h3>
+                <a class="home" href="#title" title="Home">Home</a>    
+                    
+                <h3 class="subtitle0">End internal link for this web-page[End]</h3>
+                <a class="end" href="#footer" title="End">End</a>    
+            </div>
+        </fieldset>
+        
+    <!----------------------------------------------------------------------------------------------->        
+        <fieldset id="Relative">
+            
+            <legend>(C)Position: Relative</legend>    
+            <h2 class="subtitle">(1)Relative Position Concept:</h2>            
+            <p> In this position element will be relative to its container Position.</br>
+                Also the element margins are reserved to the element even after changing its position
+                and can't be replaced by any other surrounding element</p>
+            
+                
+            <h2 class="subtitle">(2)Relative Position elements Examples:</h2>
+            
+            <h3 class="subtitle0">I) Relative position element without changing any of its position coordinates
+                [Top, rigth, bottom, left] </h3>
+            <div class="relparent">
+                This is the parent Div.
+                <div class="relchild">
+                    This is the Child Div.
+                    <img class="relelement" src="Shadi.jpg">
+                    <p>The above image is mine...</p>
+                </div>                                            
+            </div>
+            
+            <h3 class="subtitle0">II) Relative position element [Parent position] with making changes with its position coordinates
+                [Top, rigth, <mark>bottom</mark>, left] </h3>
+            <div class="relparent0">
+                This is the parent Div.
+                <div class="relchild0">
+                    This is the Child Div.
+                    <img class="relelement0" src="Shadi.jpg">
+                    <p>The above image is mine...</p>
+                </div>                                            
+            </div>                    
+        </fieldset>
+<!----------------------------------------------------------------------------------------------------------->        
+        <fieldset id="Absolute">
+            <legend>(D)Position: Absolute</legend>    
+            <h2 class="subtitle">(1)Absolute Position Concept:</h2>            
+            <p> In this position element will be in absolute Position mode but in parent container only with
+                Relative Position.</br>
+                And if there are not any of it container with relative position ... the element will be in
+                absolute position mode to the body it self.</p>
+            
+            <h2 class="subtitle">(2)Absolute Position elements Examples:</h2>
+            
+            <h3 class="subtitle0">I) Absolute position element with a first direct parent of Relative Position </h3>
+            <div class="absparent">
+                This is the parent Div.
+                <div class="abschild">
+                    This is the Child Div.
+                    <img class="abselement" src="Shadi.jpg">
+                    <p>The above image is mine...</p>
+                </div>                                            
+            </div>            
+            <h3 class="subtitle0">II)Absolute position element with a second in-direct parent of Relative Position </h3>
+            <div class="absparent0">
+                This is the parent Div.
+                <div class="abschild0">
+                    This is the Child Div.
+                    <img class="abselement0" src="Shadi.jpg">
+                    <p>The above image is mine...</p>
+                </div>                                            
+            </div>                    
+        </fieldset>        
+        <!----------------------------------------------------------------------------------------------->                
+        <fieldset id="Absolute-test">
+            
+            <legend>(E) Position-Test: Absolute & Relative {mix}</legend>    
+            
+                        
+            <h2 class="subtitle">(1)[Absolute Child] inside {Relative Parent}:</h2>            
+            
+            <p> The following is a [Parent div] with {Position: Relative} => has [Child div] with {Position: Absolute} .</p>
+                                                
+            <div class="Parent-Rel">
+                This is the [Parent div] with {Position: Relative}: <br>
+                <div class="Child-Abs">
+                    This is [Child div] with {Position: Absolute}
+                    <!-- <img class="abselement" src="Shadi.jpg">
+                    <p>The above image is mine...</p> -->
+                </div>                                            
+            </div>
+            
+            
+            <hr>
+
+
+            <h2 class="subtitle">(2)[Relative Child] inside {Absolute Parent}:</h2>            
+            
+            <p> The following is a [Parent div] with {Position: Absolute} => has [Child div] with {Position: Relative} .</p>
+                                                
+            <div class="Parent-Abs">
+                This is the [Parent div] with {Position: Absolute}: <br>
+                <div class="Child-Rel">
+                    This is [Child div] with {Position: Relative}
+                    <!-- <img class="abselement" src="Shadi.jpg">
+                    <p>The above image is mine...</p> -->
+                </div>                                            
+            </div>
+            
+        </fieldset>        
+                
+<!----------------------------------------------------------------------------------------------->        
+        <fieldset class="footer" id="footer">
+            This is the page Footer.
+        </fieldset>
+    </div>
+</body>
+</html>

@@ -1,0 +1,518 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> 16 Learn VueJs In Arabic - Computed Properties Part 1 </title>
+    <link rel="stylesheet" href="16 Learn VueJs In Arabic - Computed Properties Part 1.css" media="all">
+
+    <style>
+        .span{color: red ; font-weight:bold};
+        /* #app-main * {border: 2px solid #111; margin:10px; background-color:aqua}; */
+
+    </style>
+    <script>
+    </script>
+
+</head>
+<!-------------------------------------------------------------------------------------------------------->
+
+<body>
+    <header class="Main" id="Main">
+        16 Learn VueJs In Arabic - Computed Properties Part 1
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <nav>
+        <ol type="A">
+            <li> <a href=#MainC title="Go to 16 Learn VueJs In Arabic - Computed Properties Part 1 ">
+                16 Learn VueJs In Arabic - Computed Properties Part 1 Main Topics </a> </li>
+
+            <li> <a href=#PHPCon title="Go to  [16 Learn VueJs In Arabic - Computed Properties Part 1 ] Concept">
+                16 Learn VueJs In Arabic - Computed Properties Part 1 Concept </a> </li>
+
+            <li> <a href=#PHPImp title="Go to  [16 Learn VueJs In Arabic - Computed Properties Part 1 ] Importance & Benefits">
+                16 Learn VueJs In Arabic - Computed Properties Part 1 Importance & Benefits </a> </li>
+
+            <li> <a href=#PHPSyntx title="Go to  [16 Learn VueJs In Arabic - Computed Properties Part 1] Syntax">
+                16 Learn VueJs In Arabic - Computed Properties Part 1 Syntax & Steps </a> </li>
+
+            <li> <a href=#PHPPract title="Go to  [16 Learn VueJs In Arabic - Computed Properties Part 1] Practical Applications">
+                16 Learn VueJs In Arabic - Computed Properties Part 1 Practical Applications </a> </li>
+
+        </ol>
+
+        <a class="Home" href="#Main" title="Go to page header"> Home </a>
+        <a class="End" href="#footer" title="Go to page footer"> End </a>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <main class="Welcome"> Welcome to Vue.js Course <span> 16 Learn VueJs In Arabic - Computed Properties Part 1 </span>
+    </main>
+    
+    <div class="Post">
+        <Section id="MainC" class="MainC">
+
+            <header>
+                Vue.js [16 Learn VueJs In Arabic - Computed Properties Part 1] Main Topics :
+            </header>
+
+            <article>
+                <p> &gt; Main Subjects in this lesson are as following : </p>
+                <ol type="A">
+                                                                                                                        
+                    <li> [Using computed Instance in the Main Vue Model] ->   <br>
+                        <code style="text-align:left; align-items: left;">
+                            <span class="one"> var vm = new Vue({ <br>
+                                <span class="two"> el: 'Vue Html Id' <br> <br>
+                                
+                                <span class="two"> data: { <br> 
+                                    <span class="three"> propertName1: property1Value, <br>
+                                <span class="two"> }, <br> <br>
+    
+                                <span class="two"> methods: { <br>                         
+                                    <span class="three"> methodName: function() { <br>
+                                        <span class="four"> cosole.log('Test process Expression') ; <br>
+                                        <span class="four"> return this.prop * value ; <br>
+                                    <span class="three"> } <br>
+                                <span class="two"> }, <br> <br>
+                                
+                                <span class="two"> computed: { <br>                         
+                                    <span class="three"> compMethodName: function() { <br>
+                                        <span class="four"> cosole.log('Test process Expression') ; <br>
+                                        <span class="four"> return this.prop * value ; <br>
+                                    <span class="three"> } <br>
+                                <span class="two"> } <br>
+                            <span class="one"> } <br>
+                        </code>
+                    </li>
+                    <li> [Displaying Computed Method Instance in the Main Vue Model ( as a Variable )] ->   <br>
+                        <span class="one"> &lt; p &gt; { { compMethodName } } &lt; /p &gt; </span>
+                    </li>
+                </ol>                                
+            </article>
+        </Section>
+        
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPCon" id="PHPCon">
+            <header>
+                <h3> [Computed Properties] Concept: </h3>
+            </header>
+                        
+            <h2> =&gt; [Computed Properties] Concept : <br>
+                <ul>
+                    <li> It is a kind of Vue Instances , and it is methods can used as Cashed Variable to provide Best Performance by avoiding Repeating all Metods and Storing the Return Value in a serperated Cash Value  </li>
+                    <li> Defined Methods in {Comptued Instance} can be Called in the Vue HTML Elements as [Variables] </li>
+                    <li> Defined Methods has NO Parameters (as it in normal functions) , because it is Cashed Value  </li>
+                    <li> Defined Methods Not responding to the User Events and Actions, but it is responding to any Independencies of it's Logic </li>
+                    <li> Main Differences between {Computed Methods} & {Normal Methods} <br>
+                        <ol> 
+                            <li> Called in Vue HTML Element Syntax : <br>
+                                <ul>  
+                                    <li> {Computed Methods} => As Single Variable => { { funName } }  </li>
+                                    <li> {Normal Methods} => As Normal function => { { funName() } } </li>
+                                </ul>    
+                            </li>
+                            <li> Dealing with Parameters (Arguments) Syntax : <br>
+                                <ul>  
+                                    <li> {Computed Methods} => Not has Parameters in it's Building Sytnax  </li>
+                                    <li> {Normal Methods} =>  Could has Parameters in it's Building Sytnax as usual </li>
+                                </ul>    
+                            </li>
+                            <li> Called by Events & Reponding to User Action : <br>
+                                <ul>  
+                                    <li> {Computed Methods} => Not Built to be called by Events or to respond to user Action </li>
+                                    <li> {Normal Methods} =>  Built to be called by the Events and tesponding to both user Actions </li>
+                                </ul>    
+                            </li>
+                            <li> Responding to Change in Function Logic's Independencies: <br>
+                                <ul>  
+                                    <li> {Computed Methods} => Reponding and Re-calculate Directly to any change in logic Independencies, with only one Rendering Process </li>
+                                    <li> {Normal Methods} => Reponding and Re-calculate Directly to any change in logic Independencies, BUT with start over all Function Processes when Rendering </li>
+                                </ul>    
+                            </li>
+                        </ol>
+                     </li>
+                </ul>
+            </h2>                                                                         
+            
+        </section>
+        <!------------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------>
+
+        <section class="PHPImp" id="PHPImp">
+            <header>
+                <h3> Vue.js [Global Vs Local Components] Importance & Benefits : </h3>
+            </header>
+                        
+            <p> [Local Components] => Provides a certain, limited and certain usages for the  => Vue Application  <br>            
+                        
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPSyntx" id="PHPSyntx"> -->
+            <header>
+                <h3> [ Vue.js [ Global Vs Local Components] Syntax & Methods: </h3>
+            </header>                 
+            
+            <p> =&gt; [ Global Component Vs Local Component ] =>  <br> </p>
+                         
+             <p> Syntax: <br> </p>            
+                <div id="Code" class="Code">                
+                    A)  Vue HTML Container  <br>
+                    <span class= one></span> &lt; div id="app-one" &gt;  <br>                         
+
+                        <span class= two></span> Calling the Global Component by (kabab-case) : <br>
+                        <span class= two></span> &lt; comp-name &gt; &lt; /comp-name &gt; <br>
+                        
+                        OR <br>
+
+
+                        <span class= two></span> Calling the Global Component by (PascalCase) : <br>
+                        <span class= two></span> &lt;  CompName &gt; &lt; /CompName &gt; <br>  <br> <hr> <br>
+                        
+                        
+
+                        <span class= two></span> Calling the Global Component by (kabab-case) : <br>
+                        <span class= two></span> &lt; comp-name1 &gt; &lt; /comp-name1 &gt; <br>
+                        
+                        OR <br>
+                        
+
+                        <span class= two></span> Calling the Global Component by (PascalCase) : <br>
+                        <span class= two></span> &lt; CompName1 &gt; &lt; /CompName1 &gt; <br>
+                    <span class= one></span> &lt; /div &gt;  <br> 
+                    //=========================================================== <br> <br>
+                    
+                    B)  VueJS Libraries Importing  <br>
+                    <span class= one></span> &lt; script src="js/ vue.js " &gt;  &lt; /script &gt;  <br>                     
+                    //=========================================================== <br> <br>
+                    
+                    C)  VueJS Main Model  <br>
+                    <span class= one></span> &lt; script &gt;  <br>                     
+                                                
+                        <span class= two></span> // 1) [Vue Main Model] Defining : <br> 
+                        
+                        <span class= two></span> var vm = new Vue({ <br>
+                            <span class= three></span> el: '#Vue Html Id', { <br>
+                            
+                            <span class= three></span> data: { <br>
+                                <span class= four></span> propName1: propValue1 <br>
+                                <span class= four></span> propName1: propValue1 <br>
+                            <span class= three></span> } <br>
+
+                            <span class= three></span> method: { <br>    
+                                <span class= four></span> methodName: function() {}, <br>
+                            <span class=three></span> }, <br>
+                            
+                            <span class= three></span> props : ['passedProp1 (form Global name)', 'passedProp2 (from Local1: name1)', 'passedProp3 (from Local2 : name2)'],  <br>
+                            
+                            <span class= three></span> // Adding Local component(s) to the Main Vue Model : <br>
+                            <span class= three></span> component: { <br>
+                                <span class= four></span> 'comp-name1' (kabab-case): CompName1 (PascalCase) <br>
+                                <span class= four></span> 'comp-name2' (kabab-case): CompName2 (PascalCase) <br>
+                            <span class=three></span> }, <br> <br> <hr>                                                                                                                                                                            
+                        <span class=two></span> }); <br> <hr> <br> <br>
+                        //=========================================================== <br> <br>
+                                                                
+                        <span class= two></span> 2) {Global Component} Defining : <br> 
+                        <span class= two></span> Vue.component('CompNameGlob' , { <br> 
+                            
+                            <span class= three></span> // 2-a) [Vue Global component Data] Defining : <br>                             
+                            <span class= three></span> data: function() { <br> 
+                                <span class= four></span> return { <br> 
+                                    <span class= five></span> name : 'shadi', <br> 
+                                    <span class= five></span> count : 0 <br> 
+                                <span class=four></span> } <br> 
+                            <span class=three></span> }, <br>  <br>                                                                                        
+
+                            <span class= three></span> // 2-b) [Vue Global Component Template] Elements Defining : <br> 
+                            <span class= three></span> template: '&lt; p @click="count++" &gt; Hello { { name } } Your count is : { { count } } &lt; /p &gt;'  <br> <br>
+                        <span class=two></span> }); <br> 
+                        //=========================================================== <br> <br>
+
+                        <span class= two></span> 3) {Local Component 1} Defining : <br> 
+                        <span class= two></span> var CompNameLoc1 = { <br> 
+                            
+                            <span class= three></span> // 3-a) [Vue Local component 1 Data] Defining : <br>
+                            <span class= three></span> data: function() { <br> 
+                                <span class= four></span> return { <br> 
+                                    <span class= five></span> name1 : 'shadi1', <br> 
+                                    <span class= five></span> count1 : 0 <br> 
+                                <span class=four></span> } <br>
+                            <span class=three></span> }, <br>  <br>                                                                                        
+
+                            <span class= three></span> // 3-b) [Vue Global Component Template] Elements Defining : <br> 
+                            <span class= three></span> template: '&lt; p &gt; Hello This is Local Component 1 Test  &lt; /p &gt;'  <br> <br>
+                        <span class=two></span> }) <br> 
+                        //=========================================================== <br> <br>
+                        
+                        <span class= two></span> 4) {Local Component 2} Defining : <br> 
+                        <span class= two></span> var CompNameLoc2 = { <br> 
+                            
+                            <span class= three></span> // 4-a) [Vue Local component 2 Data] Defining : <br>
+                            <span class= three></span> data: function() { <br> 
+                                <span class= four></span> return { <br> 
+                                    <span class= five></span> name2 : 'shadi2', <br> 
+                                    <span class= five></span> count2 : 0 <br> 
+                                <span class=four></span> } <br>
+                            <span class=three></span> }, <br>  <br>                                                                                        
+
+                            <span class= three></span> // 4-b) [Vue Local Component Template] Elements Defining : <br> 
+                            <span class= three></span> template: '&lt; p &gt; Hello This is Local Component 2 Test  &lt; /p &gt;'  <br> <br> 
+                        <span class=two></span> }) <br> 
+                        //=========================================================== <br> <br>
+                                            
+                    <span class= one></span> &lt; /script &gt;  <br>
+                    <br><br> 
+               </div> 
+            <hr>
+        </section>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <section class="PHPPract" id="PHPPract"> 
+             <header>
+                <h3> Vue.js [Global & Local Components] General Practical Application : </h3>
+            </header>
+            
+            <p> In this lesson will be (1) Application { Global Vs Local Components} ]= > as following :  </p>
+
+                <ol type="A">
+                
+                    <li> First Example => Creating a [Vue Application Container] with {Vue Model Instances} Including [ computed{ (2)methods } Instance + methods{ (2)methods } Instance  ], and including the following steps : <br>
+                        <ul>
+                            <li> Defining and Creating the [Vue Main Container {app-one}] with HTML Element has passed Data from Vue Model to the Component => Including the following : <br> 
+                                <ul>                                                                     
+                                    <li> {Vue Model Instances} => Including the following (4) Instances : <br>
+                                        <ul> 
+                                            <li> el = '#app-one' </li>
+                                            <li> data : { Inlcluding (2) Properties => 1) Message = 'Welcome to the Vue Application' && 2) age = 36 } </li>
+                                            <li> computed : [ calcAgeComp , revMsgComp ] </li>
+                                            <li> methods : [ calcAge() , revMsg() ] </li>
+                                        </ul>                                                                    
+                                    </li>                                    
+                                    <li> {Vue HTML Elements} => Including the following (4) Divs : <br>
+                                        <ol> 
+                                            <li> First Div => Displaying Normal Method [ calcAge() ] {3 Times} </li>
+                                            <li> Second Div => Displaying Computed Method [ calcAgeComp ] {3 Times} </li>
+                                            <li> Thrid Div => Displaying Normal Method [revMsg()] {3 Times} </li>
+                                            <li> Fourth Div => Displaying Computed Method [revMsgComp] {3 Times} </li>
+                                        </ol>
+                                </ul>
+                            </li>                            
+                        </ul>                                                                                    
+                    </li>      
+                </ol> <hr>                  
+                                                                         
+        </section>                     
+        
+        <!-- The following is the main Vue application Container , which will be accessed by the Vue Framework using the Container [ID]   -->
+        
+        <!-- First Vue Application [Using Both {Creating new Component} + {Vue Model Instances}]  -->
+            <div id="app-main"> 
+                <div class="cont" style="border: 2px solid #111; margin:10px; background-color:aqua; padding:7px; font-size: 20px;" > 
+                    <h3 style="margin-bottom:10px;"> Displaying Normal Method [calcAge()] : </h3>
+                    <p> First Display a Normal Method [calcAge()] Return Value : {{calcAge()}} </p>
+                    <p> Second Display a Normal Method [calcAge()] Return Value : {{calcAge()}} </p>
+                    <p> Third Display a Normal Method [calcAge()] Return Value : {{calcAge()}} </p>
+                </div>
+
+                <div class="cont" style="border: 2px solid #111; margin:10px; background-color:aqua; padding:7px; font-size: 20px;"> 
+                    <h3 style="margin-bottom:10px"> Displaying Computed Method [calcAgeComp] : </h3>
+                    <p> First Display a Computed Method [calcAgeComp] Return Value : {{calcAgeComp}} </p>
+                    <p> Second Display a Computed Method [calcAgeComp] Return Value : {{calcAgeComp}} </p>
+                    <p> Third Display a Computed Method [calcAgeComp] Return Value : {{calcAgeComp}} </p>
+                </div> <br> <hr> <br>
+                
+                
+                <div class="cont" style="border: 2px solid #111; margin:10px; background-color:aqua; padding:7px; font-size: 20px;"> 
+                    <h3 style="margin-bottom:10px"> Displaying Normal Method [revMsg()] : </h3>
+                    <p> First Display a Normal Method [revMsg()] Return Value : {{revMsg()}} </p>
+                    <p> Second Display a Normal Method [revMsg()] Return Value : {{revMsg()}} </p>
+                    <p> Third Display a Normal Method [revMsg()] Return Value : {{revMsg()}} </p>
+                </div>
+
+                <div class="cont" style="border: 2px solid #111; margin:10px; background-color:aqua; padding:7px; font-size: 20px;" > 
+                    <h3 style="margin-bottom:10px"> Displaying Computed Method [revMsgComp] : </h3>
+                    <p> First Display a Computed Method [revMsgComp] Return Value : {{revMsgComp}} </p>
+                    <p> Second Display a Computed Method [revMsgComp] Return Value : {{revMsgComp}} </p>
+                    <p> Third Display a Computed Method [revMsgComp] Return Value : {{revMsgComp}} </p>
+                </div>
+
+                
+                                                
+                <!-- -------------------------------------------------------------- -->
+            
+            </div> 
+
+        
+            <!-- The following is the main Vue Framework Importing Syntax [from Application Folder]  -->
+            <script src="js/vue.js"></script>
+            
+            <!-- The following is the main Vue application Model Container Including => [{Vue Resuable component} + {Vue Model Instances}]  -->
+            <script> 
+                                            
+                //  A) Vue (Main Model) Defining [Including Computed Instance]: 
+                var vm = new Vue({
+                    el: '#app-main',                         
+                    data: {                                                                        
+                        age : 36,
+                        message  : 'Welcome to Vue Application [Computed Properties Part1] ',
+                    },  
+                    
+                    //  1) Adding New Methods in {Methods} Instance : 
+                    methods: {
+                        calcAge : function(){
+                            console.log('Run Process of [calcAge()] ');
+                            return this.age * 2;
+                        },
+                        
+                        revMsg : function(){
+                            console.log('Run Process of [revMsg()] ');
+                            return this.message.split(' ').reverse().join(' ');
+                        },                        
+                    },
+                    
+                    //  2) Adding New Methods in {Computed} Instance : 
+                    computed: {
+                        calcAgeComp : function(){
+                            console.log('Run Process of [calcAgeComp] ');
+                            return this.age * 2;
+                        },
+                        
+                        revMsgComp : function(){
+                            console.log('Run Process of [revMsgComp] ');
+                            return this.message.split(' ').reverse().join(' ');
+                        },                        
+                    },
+                    
+                });                
+                
+            </script>
+        <!-- =========================================================================================================== -->
+            
+        <!------------------------------------------------------------------------------------------------------>                                 
+        <!---------------------------------------------------------------------------------------->
+    </div>
+    <!------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------>
+    <aside>
+        
+        <section class="VideoSection">
+            <h3> Lesson 16 Video File:</h3>
+            <video controls width="300" height="300">
+                <source src="E:\Web videos lessons\Web Framworks\Vue.js\Vue.js Frame Work\16 Learn VueJs In Arabic - Computed Properties Part 1.mp4" type="video/mp4">
+                Your browser Does Not Support the Video file ...              
+            </video>
+        </section>
+        
+        <section class="AudioSection">
+            <h3> Epic Autoplay Audio File:</h3>
+            <audio controls loop>
+                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
+                    Your browser Does Not Support the Audio file ...              
+                </audio>
+        </section>
+
+        <section class="Links">
+            <h3>Categories</h3>
+            <ul>
+                <li> Check </li>
+                <li> Semantics </li>
+                <li> Api </li>
+                <li> New Attributes </li>
+                <li> Multimedia Elements </li>
+            </ul>
+        </section>
+
+        <section class="Meters">
+            <h3>Performance</h3>
+            <div>
+                CPU:
+                 <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter>
+                 &nbsp;&nbsp;&nbsp; Uploading: 
+                 <progress value="80" max="340"></progress>
+            </div>
+
+        </section>
+
+        <section class="Poll">
+            <h3>What is the your best Browser? </h3>
+            <input list="Browsers">
+            <datalist id="Browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Internet Explorer">
+                <option value="Baidu">
+            </datalist>
+            <input type="submit" value="Choose">
+        </section>
+
+        <section class="Age-Calculate">
+            <h3> Calculate your age by days & months: </h3>
+            <Form oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
+                <input type="text" name="age"> <br>
+                <input type="hidden" name="days" value="385">
+                <input type="hidden" name="months" value="34">
+                <output name="resultD"> </output>
+                <output name="resultM"> </output>
+            </Form>
+        </section>
+
+        <section class="Calculator">
+            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
+            <Form oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
+           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
+
+                <input type="text" name="num1">
+                <input type="text" name="num2">
+
+                <output name="Rsum"> Summition Result: </output><br>
+                <output name="Rsub"> Substraction Result: </output><br>
+                <output name="Rmult"> Multiply Result: </output><br>
+                <output name="Rdiv"> Division Result: </output>
+            </Form>
+        </section>
+
+    </aside>
+
+    <div class="Clear"></div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------->
+
+    <dialog class="Note" open style="display: flex; width:100%">
+        <details>
+            <summary> Hypernate Links: </summary>
+            <ul>
+                <li> <a href="https://shadi-pro.epizy.com"> My Personal Reference </a></li>
+                <li> <a href="https://shadi-cv.epizy.com"> My Personal Resume </a></li>
+                <li> <a href="https://google.com">Google</a></li>
+                <li> <a href="https://youtube.com">Youtube</a></li>
+                <li> <a href="https://facebook.com">Facebook</a></li>
+            </ul>
+        </details>
+    </dialog>
+
+
+    <footer id="footer" class="footer">
+        All right reserved by &nbsp; &copy; &nbsp; initiated by Shindow &trade;
+    </footer>
+
+
+    <script>
+        alert("Welcome to 16 Learn VueJs In Arabic - Computed Properties Part 1");
+    </script>
+
+    
+    <script src="onmouseover.js"></script>
+
+</body>
+
+</html>       
