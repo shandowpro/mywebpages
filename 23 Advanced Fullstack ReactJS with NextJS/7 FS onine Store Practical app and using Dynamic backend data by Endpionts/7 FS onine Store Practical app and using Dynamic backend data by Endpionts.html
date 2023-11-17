@@ -359,7 +359,8 @@
                 <ol>
                     <li> Main Points of lesson  : <br>
                         <ul> 
-                            <li>   </li>                             
+                            <li> Concept , Methodology and Circle of using the NextJS in dealing with the Database and API   </li>                             
+                            <li> Practical steps of using the NextJS in dealing with the Database and API   </li>                             
                         </ul>
                     </li>
  
@@ -374,42 +375,90 @@
                 <h3> 7 FS onine Store Practical app and using Dynamic backend data by Endpionts : </h3>
             </header>
 
-            <p> The prevous lesson was about the creating the componts , but this lesson is about creating pages Routers of this projects </p>
-            <p> Pages Routers are who displaying the created Components within the page functional components , by importing them and it's props properties  </p>
-            <p> In this lesson we will use [assumed static data] of the products details [just for conceptual explaining] , [instead of using dynamic data comming form fetched the database by using Endpoints]  </p>
-            <p> Next lesson we will use [fetched dynamic data] of products detials data coming form the database by using {endpoints} which will deal with API to connect with database]  </p>
-           
-            <p>  Main (3) Pages Routers of this project [main properties] :  <br>
-                <li> {Home Page} Page [index.js] : <br>
-                    <ol> 
-                        <li> Method used =>  using [file method]  </li>
-                        <li> Router path => {'/'}  </li>
-                        <li> Main Functional Component Name => { HomePage() } </li>
-                        <li> Imported components =>  { ProductList() | ProductList.js  }  </li>
-                        <li> Imported classes    =>  The public css formating file  {globals.css} [optional]  </li>
-                    </ol>  
-                </li> <br> <br> 
+            <ol>
+                <li> First =>  Concept , Methodology and Circle of using the NextJS in dealing with the Database and API : <br>
+                    <p> To Deal with NextyJS backend => you need to got good understand of the [PreRendering] within the lifecycle of working flow of the NextJS  , which include intertnal concepts , such as follwoikng :  <br>
+                        <ul> 
+                            <li> {Static side generation}  </li> 
+                            <li> {Server side generation}  </li> 
+                        </ul>
+                    </p>
+                    <p> NextJS backend Methodology => will give great benefites of the Seafrch engine optimization  {SEO}  </p>
+                </li>
+                <br><br> <hr> <br>                                                
                 
-                <li> {new-product} Page [index.js] : <br>
-                    <ol> 
-                        <li> Method used =>  using [folder  method]  </li>
-                        <li> Router path => {'DomainName/new-product'}  </li>
-                        <li> Main Functional Component Name => { NewProductPage() } </li>
-                        <li> Imported components =>  { NewProductForm() | NewProductForm.js  }  </li>
-                        <li> Imported classes    =>  No specific CSS files for this page </li>
-                    </ol>  
-                </li> <br>  <br> 
-                 
-                <li> { [productId] } Dynamic Page [index.js] : <br>
-                    <ol> 
-                        <li> Method used =>  using [folder  method]  </li>
-                        <li> Router path => {'DomainName/productID'}  </li>
-                        <li> Main Functional Component Name => { productDetailsPage() } </li>
-                        <li> Imported components =>  { productDetails() | productDetails.js  }  </li>
-                        <li> Imported classes  => No specific files  </li>
-                    </ol>  
-                </li> <br>  <br> 
-            </p> <br>  <hr> <br> <br> 
+                <li> Second => Practical steps of using the NextJS in dealing with the Database and API :  <br>
+                    <p> The Methodology of the NextJS backend => require to create {End Pionts} to deal and fetch of data from the Database through API , by following next steps :   </p>
+                    <ul type="A" >
+                        <li>  Establishing the Endpoints inside the {index.js} file within the (homepage) functional component , as following : <br>  
+                            <p> This is the main page to handle the fetched data form the backend , using the {useState()} {useEffect()} Hocks functions from the NextJS built-in functions , to use them  as following : <br>   
+                                <ol> 
+                                    <li> {useState} :  define an empty Array extracted from the imported [useState] => to receive the data from backend inside it by rendering  </li>
+                                    <li> {useEffect} : define a call back function to process the fetching process as following [in order] : <br>  
+                                        <p> Proccess sending the fetching Request to the API to get data from assinged database </p>
+                                        <p> Assinging the Fetched data into the defined [useState] array by using its Handler function  </p>
+                                        <p> Calling the [useState] function inside the script element  </p>
+                                    </li>
+                                </ol>  
+                            </p> 
+
+                            <p> This step script as following : <br>
+                                
+                                <code>
+                                    <span class="one"></span> // 1] Importing the each of [useState()] & [useEffect()] + the other functional components [ProductList]  <br>    
+                                    <span class="one"></span>  import {useState , useEffect} from "react" ;      <br>    
+                                    <span class="one"></span>  import ProductList  from "../components/product/productList" ;      <br>    
+                                     
+                                  
+                                    <span class="one"></span> // 2] Define the functional component {HomePage}  : <br>    
+                                    <span class="one"></span>  function HomePage()  { <br>
+                                        
+                                        <span class="two"></span> // 3] Define the [useState()] Empty Array as a container  of fetched data : <br>    
+                                        <span class="two"></span>  const [loadedProduct , setLoadedProduct ] = useState()  ;      <br>    
+                                         
+                                        <span class="two"></span> // 4] Define the [useEffect()] callback function of sending fetching request to the assigned API , and assinging the get data to [useState()] Empty Array    : <br>    
+                                        <span class="two"></span> useState( () => {   <br>
+                                            <span class="three"></span> // a] sending the request to the API [will be studied later] ...   <br> <br>
+                                            
+                                            <span class="three"></span> // b] Using the useState Hanlder function to set/assign  the fetched data into it's variable [Empty Array]   :     <br>
+                                            <span class="three"></span>  setLoadedProduct(variable name of recieved data -product- as example ) ;  <br>
+
+                                        <span class="two"></span> } , []  )  ; => [we used empty dependencies array ]  <br>    
+
+
+                                        <span class="two"></span> // 5] assining the return of functional component  : <br>    
+                                        <span class="two"></span> return ( <br>
+                                            <span class="three"></span> // returning the imported component [productList] & assign the passed props{products} with the fetched data container array {loadedProduct} after being filled with the fetched data by using it's hander function : <br>
+                                            <span class="three"></span> &lt;&gt;  <br>
+                                                <span class="four"></span> &lt;  ProductList products={loadedProduct} /  &gt;  <br>
+                                            <span class="three"></span> &lt;/&gt;  <br>
+                                        <span class="two"></span> );   <br>
+                                    <span class="one"></span> }    <br>      
+                                </code>
+                            </p>
+                             
+                            <p> There is a problem of using the useEffect() in public , which is twice rendering , as following : <br>
+                                <ul>
+                                    <li> {Initial Rendering} :  when at first page rendering, and this cause to display the page with empty data , due to use state array is still empty now </li> 
+                                    <li> {After fetching Rendering} : after the useEffect function is sent the request to the API and get the data from the database , and useState is filled with data </li> 
+                                    <li> The solution of this problem is => using {Pre-Rendering} concept   </li> 
+                                </ul>
+                            </p>    
+                            <!-- im here >>>>>>>>>>>>>>>>   -->
+                            <p> {Pre-Rendering} concept :  <br>
+                                <ul>
+                                     <li></li>
+                                     <li></li>
+                                     <li></li>
+                                     <li></li>
+                                </ul>
+                            </p>                                                      
+                        </li> 
+                    </ul>              
+                </li>                             
+                <br><br> <hr> <br>                                                
+            </ol>
+            
  
             <p> The {Page Routers} practical Procedures steps : <br> 
                 <ol type="A"> 
