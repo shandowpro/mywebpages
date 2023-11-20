@@ -337,7 +337,7 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">
-            <h2 class="h1" class="hidden-xs"> About Section => Start Creating a online store fullstack reactJS application [part3] -> conceptual and practical steps of the using backend data via using {End Points} & {API}    <span><strong> ReactJS & NextJS & NodeJS </strong> </span>
+            <h2 class="h1" class="hidden-xs"> About Section => Start Creating a online store fullstack reactJS application [part3] -> conceptual and practical steps of the using backend data via using {End Points} & {API} <span><strong> ReactJS & NextJS & NodeJS </strong> </span>
             </h2>
             <h3 class="visible-xs"> About Section => This is the third lesson in Creating online store application FS app => conceptual and practical steps of the using backend data via using {End Points} & {API}  [part3]  in [ReactJS & NextJS & NodeJS] </span>
             </h3>
@@ -359,8 +359,9 @@
                 <ol>
                     <li> Main Points of lesson  : <br>
                         <ul> 
-                            <li> Concept , Methodology and Circle of using the NextJS in dealing with the Database and API   </li>                             
-                            <li> Practical steps of using the NextJS in dealing with the Database and API   </li>                             
+                            <li> Concept , Methodology and Circle of using the NextJS backend [End Point] in dealing with the Database and API   </li>                             
+                            <li> Practical steps of using the NextJS backend [End Point]  in dealing with the Database and API   </li>                             
+                            <li> Disccusions and analysis of using the NextJS backend [End Point] procedures in dealing with the Database and API   </li>                             
                         </ul>
                     </li>
  
@@ -377,24 +378,25 @@
 
             <ol>
                 <li> First =>  Concept , Methodology and Circle of using the NextJS in dealing with the Database and API : <br>
-                    <p> To Deal with NextyJS backend => you need to got good understand of the [PreRendering] within the lifecycle of working flow of the NextJS  , which include intertnal concepts , such as follwoikng :  <br>
+                    <p> To Deal with NextyJS backend => you need to got good understand of the [PreRendering] within the Lifecycle of working flow of the NextJS  , which include intertnal concepts , such as follwoikng :  <br>
                         <ul> 
+                            <li> {Pre Rendering }  </li> 
                             <li> {Static side generation}  </li> 
                             <li> {Server side generation}  </li> 
                         </ul>
                     </p>
-                    <p> NextJS backend Methodology => will give great benefites of the Seafrch engine optimization  {SEO}  </p>
+                    <p> NextJS backend Methodology => will give great benefites of the Search engine optimization  {SEO}  </p>
                 </li>
                 <br><br> <hr> <br>                                                
                 
                 <li> Second => Practical steps of using the NextJS in dealing with the Database and API :  <br>
                     <p> The Methodology of the NextJS backend => require to create {End Pionts} to deal and fetch of data from the Database through API , by following next steps :   </p>
                     <ul type="A" >
-                        <li>  Establishing the Endpoints inside the {index.js} file within the (homepage) functional component , as following : <br>  
+                        <li> Establishing the Endpoints inside the {index.js} file within the (homepage) functional component , as following : <br>  
                             <p> This is the main page to handle the fetched data form the backend , using the {useState()} {useEffect()} Hocks functions from the NextJS built-in functions , to use them  as following : <br>   
                                 <ol> 
-                                    <li> {useState} :  define an empty Array extracted from the imported [useState] => to receive the data from backend inside it by rendering  </li>
-                                    <li> {useEffect} : define a call back function to process the fetching process as following [in order] : <br>  
+                                    <li> {useState} array variable :  define an empty Array extracted from the imported [useState] => to receive the data from backend inside it by rendering  </li>
+                                    <li> {useEffect} callback funtion   : define a call back function to process the fetching process as following [in order] : <br>  
                                         <p> Proccess sending the fetching Request to the API to get data from assinged database </p>
                                         <p> Assinging the Fetched data into the defined [useState] array by using its Handler function  </p>
                                         <p> Calling the [useState] function inside the script element  </p>
@@ -402,8 +404,7 @@
                                 </ol>  
                             </p> 
 
-                            <p> This step script as following : <br>
-                                
+                            <p> This step script as following : <br>        
                                 <code>
                                     <span class="one"></span> // 1] Importing the each of [useState()] & [useEffect()] + the other functional components [ProductList]  <br>    
                                     <span class="one"></span>  import {useState , useEffect} from "react" ;      <br>    
@@ -413,22 +414,22 @@
                                     <span class="one"></span> // 2] Define the functional component {HomePage}  : <br>    
                                     <span class="one"></span>  function HomePage()  { <br>
                                         
-                                        <span class="two"></span> // 3] Define the [useState()] Empty Array as a container  of fetched data : <br>    
+                                        <span class="two"></span> // 3] Define the [useState()] Empty Array as a container  of fetched data  : <br>    
                                         <span class="two"></span>  const [loadedProduct , setLoadedProduct ] = useState()  ;      <br>    
                                          
-                                        <span class="two"></span> // 4] Define the [useEffect()] callback function of sending fetching request to the assigned API , and assinging the get data to [useState()] Empty Array    : <br>    
+                                        <span class="two"></span> // 4] Define the [useEffect()] callback function of sending fetching request to the assigned API & assinging the get data to [useState()] Empty Array : <br>    
                                         <span class="two"></span> useState( () => {   <br>
                                             <span class="three"></span> // a] sending the request to the API [will be studied later] ...   <br> <br>
                                             
-                                            <span class="three"></span> // b] Using the useState Hanlder function to set/assign  the fetched data into it's variable [Empty Array]   :     <br>
+                                            <span class="three"></span> // b] Using the useState Hanlder function to set/assign the fetched data into it's variable [Empty Array] :  <br>
                                             <span class="three"></span>  setLoadedProduct(variable name of recieved data -product- as example ) ;  <br>
 
                                         <span class="two"></span> } , []  )  ; => [we used empty dependencies array ]  <br>    
 
 
-                                        <span class="two"></span> // 5] assining the return of functional component  : <br>    
+                                        <span class="two"></span> // 5] assigning the return of functional component  : <br>    
                                         <span class="two"></span> return ( <br>
-                                            <span class="three"></span> // returning the imported component [productList] & assign the passed props{products} with the fetched data container array {loadedProduct} after being filled with the fetched data by using it's hander function : <br>
+                                            <span class="three"></span> // Returning the imported component [productList] & assign the passed props{products} with the fetched data container array {loadedProduct} after being filled with the fetched data by using it's hander function : <br>
                                             <span class="three"></span> &lt;&gt;  <br>
                                                 <span class="four"></span> &lt;  ProductList products={loadedProduct} /  &gt;  <br>
                                             <span class="three"></span> &lt;/&gt;  <br>
@@ -436,30 +437,91 @@
                                     <span class="one"></span> }    <br>      
                                 </code>
                             </p>
-                             
-                            <p> There is a problem of using the useEffect() in public , which is twice rendering , as following : <br>
-                                <ul>
-                                    <li> {Initial Rendering} :  when at first page rendering, and this cause to display the page with empty data , due to use state array is still empty now </li> 
-                                    <li> {After fetching Rendering} : after the useEffect function is sent the request to the API and get the data from the database , and useState is filled with data </li> 
-                                    <li> The solution of this problem is => using {Pre-Rendering} concept   </li> 
-                                </ul>
-                            </p>    
-                            <!-- im here >>>>>>>>>>>>>>>>   -->
-                            <p> {Pre-Rendering} concept :  <br>
-                                <ul>
-                                     <li></li>
-                                     <li></li>
-                                     <li></li>
-                                     <li></li>
-                                </ul>
-                            </p>                                                      
-                        </li> 
-                    </ul>              
-                </li>                             
+                  </ul>   
+                </li>
+                <br><br> <hr> <br>  
+                        
+                        
+                <li>  Disccusions and analysis of using the NextJS backend [End Point] procedures in dealing with the Database and API  :    <br>
+
+                    <p> There is a problem of using the useEffect() in public , which is twice rendering , as following : <br>
+                        <ul>
+                            <li> {Initial Rendering} :  when at first page rendering, and this cause to display the page with empty compenents data , due to use state array is still empty now </li> 
+                            <li> {After fetching Rendering} : after the useEffect function is being run =>  sent the request to the API and get the data from the database , and useState is filled with data </li> 
+                            <li> This probelem will afffect directly the {SEO} standards , due it will cause the data of the web page will be empty for web source browser, which is against the SEO standards [due the Web browser is reading only the first Rendering with in the source code ]   </li>
+                            <li> The SEO is evaluating your web according to it's  contents [images, text , link ]   </li> 
+                            <li> The solution of this problem is => using {Pre-Rendering} concept , via NextJS   </li> 
+                        </ul>
+                    </p>    
+                        
+                    <p> The concept of {Pre-Rendering} as a solution of the Twice Rendering problem  & in compatability with [SEO] :  <br>
+                        <ul>
+                            <li> by making Pre-Rendering page of the current page functional component    </li>
+                            <li> [Pre-Rendering page] => is being loaded after sending the request of the curent page to servers, and after fetching the data from the server , so the apge component will be dispalyed after filling the endpoint wiht data      </li>
+                            <li> [Pre-Rendering page] => it is being loaded with the web brower first and then being readed by the brower first => solve the problem of empty data of the functional component        </li>
+                        </ul>
+                    </p> 
+
+                    <p> The Diagram of the {Pre-Rendering} process :  <br>
+                        <ul type="A"> 
+                            <li> First => sending the request of the current Page component Router to the server to obtain the HTML of the snet functional component  </li>    
+                            <li> Second => instead of  return  the main component , the NEXTJS will return the {Pre-Rendering} to solve the problem of the twice rendering  and the empty component   </li>    
+                            <li> This will make the current functional component of the page is compatable with [SEO]   </li>    
+                        </ul>
+                    </p>
+
+                    <p> {Pre-Rendering} proceesing requirements : <br>
+                        <ul> 
+                            <li> require a certain script in the main funcational component </li>
+                        </ul>
+                    </p>     
+
+                    <p> The {SEO} checking procedures [(2) Methods] : <br> 
+                        <ul> 
+                            <li> via [ page source ]  => by checking page source of the current page as following  : <br> 
+                                <p> [if existed and readable ] => the page is applying the SEO </p>                               
+                                <p> [if Not existed and readable ] => the page is NOT applying the SEO </p>                               
+                            </li>
+                            
+                            <li> via [ Light House ] =>  which is a dev tool can be installed to generate a report of your current page compatability with the SEO and other standards , as following  :   <br>
+                                <p> Light house analyzing standards : <br>
+                                    <ol> 
+                                        <li> Performance  </li>
+                                        <li> Accessibility  </li>
+                                        <li> SEO </li>
+                                        <li> Best practise  </li>
+                                        <li> Best Progressive  Web App  </li>
+                                    </ol>
+                                </p>
+
+                                <p> The Light House report => is dispalying the report as percentage of each [Search Ranking] & [Core Web vitals]   </p>
+                                <p> Now the percentage might be low due not using the [pre-rendering] , but will raise after using the [pre-rendering] configuration within our page      </p> 
+                            </li>
+                        </ul>
+                    </p>
+                </li> 
+                <br><br> <hr> <br>                                                
+ 
+                <li> Dealing with [Pre-Rendering] in NextJS => <br>
+                    <p> There are (2) types in the NextJS  [both help in the SEO] : <br>
+                        <ol> 
+                            <li> [Static Side Generation] {SSG} =>  <br>
+                                <p> usually used with static and fixed components webpage , such as [header , footer , logo]   </p>
+                            </li> <br>
+                            
+                            <li> [Server Side Rendering ] {SSR} => <br>
+                                <p>    </p>
+                            </li>
+                        </ol>
+                         
+                    </p>
+                
+                
+                </li>
+
                 <br><br> <hr> <br>                                                
             </ol>
             
- 
             <p> The {Page Routers} practical Procedures steps : <br> 
                 <ol type="A"> 
                     <li> {Home Page} Page [index.js] : <br>   
