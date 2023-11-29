@@ -1,32 +1,32 @@
-//  5 Arrow Function And This Value
+//  09-Export and Import
 /* Main lessons functions :
-    1- [This] Reference value in the Regular function  
-    2- {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }
-    3- {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value }
+    1-  exporting and importing [single (func / var) 
+    2-  exporting and importing [multiple (funcs / vars) ]
+     
 */
 // ---------------------------------------------------------------------
 
-// 5 Arrow Function And [This] operator  :
+// 09-Export and Import :
 function myTest() {
     'use strict' ;
-    alert('Welcome to 5 Arrow Function And This Value ') ;
+    alert('Welcome to 09-Export and Import ') ;
     
     var dis = document.getElementById('note');
      
-    var x = prompt(' Please choose one of functions from below options : \n  1] [This] Reference value in the Regular function \n  2] {This} Reference value in the Arrow function  \n  3] {This} attidute value in the both {Arrow function} & {Regular Function }  ');    
+    // var x = prompt(' Please choose one of functions from below options : \n  1] [This] Reference value in the Regular function \n  2] {This} Reference value in the Arrow function  \n  3] {This} attidute value in the both {Arrow function} & {Regular Function }  ');    
 
-    if (x == 1 ) {
+    // if (x == 1 ) {
         
-        regFuncValue();
+        // regFuncValue();
 
-    } else if (x == 2) {
+    // } else if (x == 2) {
     
-        regFuncThis();
+        // regFuncThis();
         
-    } else if (x == 3) {
+    // } else if (x == 3) {
     
-        arrowFuncThis();       
-    
+        // arrowFuncThis();       
+        
     // } else if (x == 4) {
 
     //     arrowShortFunc2();
@@ -35,9 +35,9 @@ function myTest() {
 
     //     arrowShortFunc3();
 
-    } else {
-        alert('No option has been selected !');
-    } 
+    // } else {
+        // alert('No option has been selected !');
+    // } 
 
     // =========================================================================
 

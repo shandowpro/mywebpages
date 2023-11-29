@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section =>  Importing and Exporting Functions and Variables <span><strong>  in Modern JS ES6   </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> Importing and Exporting  Functions and Variables  in ES6 </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1091,14 +1091,13 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about {Importing and Exporting for Functions and Variables }  Syntax , methods and practical examples , as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li>  Importing and Exporting single Function and Variable   </li>
+                    <li>  Importing and Exporting multiple Functions and Variables  </li>                     
                 </ol>
             </article>
         </Section>
@@ -1110,26 +1109,197 @@
                 <h3> 09-Export and Import concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
+            <p>  Exporting and Importing is common and critical in the ReactJS's projects  </p>
 
-            <p> {This} Reference value in the {Regular function} Rules : <br>
+            <p> Basic syntax rules & methods  of  Importing and Exporting   : <br>
                 <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
+                       
+                    <li> {First method} => using one {accumulated keyword  - export default  -} of single func/var OR all exported function and variables in the current script  : <br>
+                        <p> A] Exporting Single one function / variable :  </p>
+                        
+                        <code>    
+                            // 1] [Exporter file] {class1.mjs} : <br>
+                            <span class="one"></span> // First function :   <br>
+                            <span class="one"></span> const func1 = (param) = () =>  { <br>
+                                <span class="two"></span> console.log(param) ;    <br>
+                            <span class="one"></span> } <br>  <br>
+
+                            <span class="one"></span> export default func1 ;   <br>
+                        </code> <br>  <br>
+                        
+                        <code>
+                            // 2] [Importer file] {mainApp.mjs} : <br>
+                            <span class="one"></span> // Importing the single function [func1] from {class1.mjs} file :   <br>
+                            <span class="one"></span> import func1 from  './class1.mjs' ;    <br> <br>
+                                 
+                            <span class="one"></span> // using/calling the imported function [func1] :   <br>
+                            <span class="one"></span> func1('Hello')  ;    <br> <br>
+
+                        </code>  <hr>
+                    
+                        <p> B] Exporting multiple functions / variables :  </p>
+                        
+                        <code>    
+                            // 1] [Exporter file] {class1.mjs} : <br>
+                            <span class="one"></span> // First function :   <br>
+                            <span class="one"></span> const func1 = (param) = () =>  { <br>
+                                <span class="two"></span> console.log(param) ;    <br>
+                            <span class="one"></span> } <br>  <br>
+
+                            <span class="one"></span> // Second function :   <br>
+                            <span class="one"></span> const func2 = (param) = () =>  { <br>
+                                <span class="two"></span> console.log(param) ;    <br>
+                            <span class="one"></span> } <br> <br>  
+
+                            <span class="one"></span> // First variable :   <br>
+                            <span class="one"></span> const var1 = 'variableOne ;   <br> <br>
+                                    
+                            <span class="one"></span> // Second  variable :   <br>
+                            <span class="one"></span> const var2 = 'variableTwo ;   <br> <br>
+                            
+                            <span class="one"></span> export default {func1 , func1 , var1 , var2 } ;   <br>
+                        </code> <br>  <br>
+                        
+                        <code>
+                            // 2] [Importer file] {mainApp.mjs} : <br>
+                            <span class="one"></span> // Importing the multiple functions/vars from {class1.mjs} file :   <br>
+                            <span class="one"></span> import {func1 , func2 , var1 , var2} from './class1.mjs' ; <br> <br> 
+
+                            <span class="one"></span> // using/calling imported multiple functions/vars from {class1.mjs} file :   <br> <br>
+                            
+                            
+                            <span class="one"></span> // using/calling first function , with paramater  :   <br>
+                            <span class="one"></span> func1('hello from function 1') ; <br> <br> 
+                            
+ 
+                            <span class="one"></span> // using/calling second function , with paramater  :   <br>
+                            <span class="one"></span> func2('hello from function 2') ; <br> <br> 
+                            
+                            
+                            <span class="one"></span> // using/calling first variable , printing inside console  :   <br>
+                            <span class="one"></span> console.log(var1) ; <br> <br> 
+                            
+                            <span class="one"></span> // using/calling first variable , as parameter value of the first function   :   <br>
+                            <span class="one"></span> fun1(var1) ; <br> <br> 
+ 
+                        </code>
+                        
+                        <code>
+                            // 3] [Importer file] {mainApp.mjs} : <br>
+                            <span class="one"></span> // Importing just one single function Or var from {class1.mjs} file :   <br>
+                            <span class="one"></span> import {var2} from './class1.mjs' ; <br> <br> 
+
+                            <span class="one"></span> // using/calling just one imported  function OR var from {class1.mjs} file :   <br> <br>
+                            
+                            <span class="one"></span> // using/calling  [second variable] :   <br>
+                            <span class="one"></span> console.log(var2) ; <br> <br> 
+   
+                        </code>
+
+                    </li> <br> <hr>
+                 
+                    <li> {Second method} => using each {single keyword  - export -} of single func/var OR all exported function and variables in the current script  : <br>
+                        <p> A] Exporting Single one function / variable :  </p>
+                        
+                        <code>    
+                            // 1] [Exporter file] {class1.mjs} : <br>
+                            <span class="one"></span> // First function :   <br>
+                            <span class="one"></span> export default  const func1 = (param) = () =>  { <br>
+                                <span class="two"></span> console.log(param) ;    <br>
+                            <span class="one"></span> } <br>  <br>
+
+                            <!-- <span class="one"></span> export default func1 ;   <br> -->
+                        </code> <br>  <br>
+                        
+                        <code>
+                            // 2] [Importer file] {mainApp.mjs} : <br>
+                            <span class="one"></span> // Importing the single function [func1] from {class1.mjs} file :   <br>
+                            <span class="one"></span> import func1 from  './class1.mjs' ;    <br> <br>
+                                 
+                            <span class="one"></span> // using/calling the imported function [func1] :   <br>
+                            <span class="one"></span> func1('Hello')  ;    <br> <br>
+
+                        </code>  <hr> <br>
+                    
+                        <p> B] Exporting multiple functions / variables :  </p>
+                        
+                        <code>    
+                            // 1] [Exporter file] {class1.mjs} : <br>
+                            <span class="one"></span> // First function :   <br>
+                            <span class="one"></span> export const func1 = (param) = () =>  { <br>
+                                <span class="two"></span> console.log(param) ;    <br>
+                            <span class="one"></span> } <br>  <br>
+
+                            <span class="one"></span> // Second function :   <br>
+                            <span class="one"></span> export const func2 = (param) = () =>  { <br>
+                                <span class="two"></span> console.log(param) ;    <br>
+                            <span class="one"></span> } <br> <br>  
+
+                            <span class="one"></span> // First variable :   <br>
+                            <span class="one"></span> export const var1 = 'variableOne ;   <br> <br>
+                                    
+                            <span class="one"></span> // Second  variable :   <br>
+                            <span class="one"></span> export const var2 = 'variableTwo ;   <br> <br>
+                            
+                            <!-- <span class="one"></span> export default {func1 , func1 , var1 , var2 } ;   <br> -->
+                        </code> <br>  <br>
+                        
+                        <code>
+                            // 2] [Importer file] {mainApp.mjs} : <br>
+                            <span class="one"></span> // Importing multiple functions/vars from {class1.mjs} file :   <br>
+                            <span class="one"></span> import {func1 , func2 , var1 , var2} from './class1.mjs' ; <br> <br> 
+
+                            <span class="one"></span> // using/calling imported multiple functions/vars from {class1.mjs} file :   <br> <br>
+                            
+                            
+                            <span class="one"></span> // using/calling first function , with paramater  :   <br>
+                            <span class="one"></span> func1('hello from function 1') ; <br> <br> 
+                            
+ 
+                            <span class="one"></span> // using/calling second function , with paramater  :   <br>
+                            <span class="one"></span> func2('hello from function 2') ; <br> <br> 
+                            
+                            
+                            <span class="one"></span> // using/calling first variable , printing inside console  :   <br>
+                            <span class="one"></span> console.log(var1) ; <br> <br> 
+                            
+                            <span class="one"></span> // using/calling first variable , as parameter value of the first function   :   <br>
+                            <span class="one"></span> fun1(var1) ; <br> <br> 
+                        </code> <br>                   
+
+
+                        <code>
+                            // 3] [Importer file] {mainApp.mjs} : <br>
+                            <span class="one"></span> // Importing just one single function Or var from {class1.mjs} file :   <br>
+                            <span class="one"></span> import {func1} from './class1.mjs' ; <br> <br> 
+
+                            <span class="one"></span> // using/calling just one imported  function OR var from {class1.mjs} file :   <br> <br>
+                            
+                            <span class="one"></span> // using/calling  [first function , with paramater] :   <br>
+                            <span class="one"></span> func1('hello from function 1') ; <br> <br> 
+   
+                        </code>                   
+                    </li>
+
                 </ul>    
             </p> <br> <hr> <br>
 
 
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
+            <p> Importing and Exporting cases : <br>
                 <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
+                    <li>  Importing & Exporting a single function and variable  :  <br>
+                        <p>  we use the files extension of {.mjs} in case of only the js without using any frameworks module , but in case of using the framework (such as : ReactJs) we use the normal file extenions   </p>
+                        <p> we use the {} in importing functions or varialbes in case we export multiple vars/funcs in the Exproter file , even if we are importing single component   </p>
+                        <p> It is recommmneded to use the first method [one accumulated code] in case of exproting just one element  </p>                      
+                        <p> In case of using  second  method [Solo exproting code ] ->  we not using the the default keyword    </p>                      
+                        <p> in case of exporting just one var/func => we use the directly the name of the imported var/func   </p>
+                        <p> in case of exporting mulitple funcs/vars & importing just one var/funcs in the importer file  => we use also {}, [due to exporting multiple funcs/vars]   </p>
+                        <p> In is NOT  a condition to import all exported functions/ variables , but we import just we need in the current script     </p>
+                    </li>
                 </ul>    
             </p> <br> <hr>
                         
-            <ol> 
+            <!-- <ol> 
                 <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
 
                     <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
@@ -1208,30 +1378,51 @@
 
                 <hr> <br> <hr> <br>
     
-            </ol>
+            </ol> -->
             <!-- --------------------------- -->
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> [This] {Arrow functions} & {Regular functions} ->  will reperent the value of the method the been called by  </li>
-                    <li> [This] operator in the {Regular function}  ->  Can not access through the inner nested funcions , and needs to be assigned into another variable  </li>
-                    <li> [This] operator in the {Arrow function}  -> Can be used directly inside the inner nested functions  </li>
+                     
+                    <li>  In is NOT  a condition to import all exported functions/ variables , but we import just we need in the current script   </li>
                 </ul>
             </p>
                                                                      
-            <h3> ES6 [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
+            <h3> ReactJS Apps  [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
             
             <ol class="codes" >                    
                 <li> Page Sources : </li>
                 <code> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source page [main.js] file </button>
                     </a> <br> <hr> <br> 
                     
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/myplugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 new Code [myplugins.js] file </button>
-                    </a> <br> <hr> <br>  -->
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="mainApp1.mjs">  
+                        <button id=btn class="btn0" onclick="display()"> Source page [mainApp1.mjs] file </button>
+                    </a> <br> <hr> <br> 
+                    
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="mainApp2.mjs">  
+                        <button id=btn class="btn0" onclick="display()"> Source page [mainApp2.mjs] file </button>
+                    </a> <br> <hr> <br> 
+
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="export1Single.mjs">  
+                        <button id=btn class="btn0" onclick="display()"> Source page [export1Single.mjs] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="export2Single.mjs">  
+                        <button id=btn class="btn0" onclick="display()"> Source page [export2Single.mjs] file </button>
+                    </a> <br> <hr> <br> 
+                    
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="export1mult.mjs">  
+                        <button id=btn class="btn0" onclick="display()"> Source page [export1mult.mjs] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="export2mult.mjs">  
+                        <button id=btn class="btn0" onclick="display()"> Source page [export2mult.mjs] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                     
                     <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
                         <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
                     </a> <br> <br> 
@@ -1455,7 +1646,7 @@
             -->                        
         </section> 
 
-        <button type="button" class="btn" onclick="myTest()"> Click to Start [ (this) operator testing with both functions ] method   Application </button>
+        <button type="button" class="btn" onclick="myTest()"> Click to Start [  not using practial applications , but just files  ] method   Application </button>
 
         <script src="main.js"></script> 
         
@@ -1463,7 +1654,7 @@
         
         <div id="note" class="dis"></div> <br><br><br><br>
 
-        <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>             
+        <!-- <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>              -->
         
                                 
         <!-- <button id=btn class="btn0" onclick="display()">Display JS Code [plugins.js] file </button> -->
