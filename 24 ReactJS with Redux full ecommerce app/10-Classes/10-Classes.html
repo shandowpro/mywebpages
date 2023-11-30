@@ -296,7 +296,7 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
+        <span> Welcome to ReactJS Apps Course | </span> <br>
         10-Classes        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section =>  Classes with  Import and Export  <span><strong>   in Modern ES6+  </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong>  Classes with  Import and Export in the Modern ES6+  </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -988,7 +988,7 @@
             <div class="row text-center">
                 <div class="col-lg-12 wow flip btn-info" data-wow-duration="2s" data-wow-clone="1s" data-wow-offset="200"> Default Flip Animation </div>
             </div> <br> <br>            
--            <h3 class="text-center"> FlipIn Sub/Group </h3>            
+            <h3 class="text-center"> FlipIn Sub/Group </h3>            
             <div class="row text-center">            
                 <div class="col-lg-5 wow flipInX btn-danger" data-wow-duration="2s" data-wow-clone="1s" data-wow-offset="200"> FlipIn X Horizontal Animation </div>
                 <div class="col-lg-2"></div>                                    
@@ -1091,14 +1091,35 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about {Classes} combined with Import and Export concept , Syntax , and practical  Examples as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li>  Main concept of the Classes </li>
+                    <li>  Uses of Classes with Import and Export concept </li>
+                    <li>  Syntax of Classes </li>
+                    <li>  Practical Examples of Classes with Import and Export : <br> 
+                        <ul> 
+                            <il> Normal Class : <br>                                
+                                <ul> 
+                                    <li> Export and Import defiend normal Class (with property, method -with no paramter & with NO using of {this} operator - ) </li>
+                                    <li> Export and Import defiend normal Class (with property, method -with NO paramter & with using of {this} operator - ) </li>
+                                    <li> Export and Import defiend normal Class (with property, method - using simple text -, constructor function ) </li>
+                                    <li> Export and Import defiend normal Class (with property, method - using simple text -, constructor function and super() ) </li>
+                                </ul>
+                            </il> <br>
+
+                            <il> Extended/inheriting Class : <br>                                
+                                <ul> 
+                                    <li> Export and Import defiend Child Class (with property, method -with no paramter & with NO using of {this} operator - ) </li>
+                                    <li> Export and Import defiend Child Class (with property, method -with NO paramter & with using of {this} operator - ) </li>
+                                    <li> Export and Import defiend Child Class (with property, method - using simple text -, constructor function ) </li>
+                                    <li> Export and Import defiend Child Class (with property, method - using simple text -, constructor function and super() ) </li>
+                                </ul>
+                            </il> <br>
+                        </ul>
+                    </li>
                 </ol>
             </article>
         </Section>
@@ -1110,112 +1131,225 @@
                 <h3> 10-Classes concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
+            <p> Main concept of the Classes  : <br>
+                It is about defining container of sets include : <br>
+                <ol type="A"> 
+                    <li>  variables[properties] -> one or more defined variable(s) inside the class , that representing the properites of this Class , and can be inherited by other Extending classses  </li>
+                    <li>  functions[Methods] -> one or more function(s) that inlucding certain commands of funcionality  </li>
+                    <li>  Constructor built-in function -> <br>
+                        <p> This built-In function can include another children define varialbles, methods and paremeters , with higher order exectusion priority    </p>   
+                        <p> This function will extucted once it is being extracted from a new object    </p>   
+                        <p> This function can hold parameter used to deifne another class's property  </p>   
+                    </li>
+                    <li> </li>
+                </ol>  
+            </p>
+            <br> <hr> <br>
+            
+            <p> Main properties of Classes  : <br>
+                <ul>
+                    <li> Any Class can be inherited by extracting Object => [Extraction]  </li>
+                    <li> Any Class can be inherited by another classs => [Extending] </li>
+                    <li> Any Class can inlude a sub built-in function {Constructor function} , which can include a [higher executing functionlality ], defined properties and parameters    </li>   
+                    <li> Any Class[normal or extended] can be exported into another file , and being Imported from another file , and being used in this new file , such as  :  <br>        
+                        <ol> 
+                            <li> Extracting a new object  </li>
+                            <li> Calling any inherted property or method using extracted object  </li>
+                        </ol>
+                    </li>   
+                </ul>            
+            </p>
+            <br> <hr> <br>
 
-            <p> {This} Reference value in the {Regular function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
-                </ul>    
-            </p> <br> <hr> <br>
+            <p> Syntax of Classes and practical examples : <br>
+                <h4> I] {Normal Class} :  </h4>
+                <p> // A] Defining Normal Class[no constructor function/] in the Exportor file [export.mjs] and Import it from another Importer file[import.mjs] :   </p> <br> 
+                    <code>  
+                        <span class="one"></span> // 1] Exportor file [exportFile.mjs] :  <br>
+                        <span class="one"></span> class className {  <br>
+                            <span class="two"></span>  let propName = 'propValue' ;  <br>
 
+                            <span class="two"></span> Define a method[no parameter - simple output] by using (arrow function):  <br>                         
+                            <span class="two"></span>  simpleTxtMethod  = _ => console.log('simple string value') ; <br> <br> 
+                                
+                            <span class="two"></span> Define a method[ parameter -  using parameter to Re-defined Class's Property] by using (arrow function):  <br>                         
+                            <span class="two"></span>  changePropMethod  = (par) => this.propName = par ; <br> <br>
+                                
+                            <span class="two"></span> Define a method[no parameter - printing the defined Class's Property after being changed in the previous method by assinged parameter ]  by using (arrow function):  <br>                         
+                            <span class="two"></span>  methodPropAfterChange  = _ => console.log(this.propName) ; <br> <br>
+                                
+                        <span class="one"></span> }  <br> <br>
 
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
-                </ul>    
-            </p> <br> <hr>
+                        <span class="one"></span> // Exporting the defined class  :    <br>
+                            <span class="one"></span> export default className  ;  <br>
+                    </code> <br> <br>
+
+                    <code>  
+                        <span class="one"></span> // 2]  Importing the defined Class from Importor file [import.mjs]  : <br>
+                        <span class="one"></span>  // importing the class form the  file it defined inside :  <br>
+                        <span class="one"></span>  import  className from './exportFile.mjs' ;  <br> <br>
                         
-            <ol> 
-                <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
-
-                    <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
+                        <span class="one"></span>  // Extracting a new object from the defined imported class :  <br>
+                        <span class="one"></span>  let newObj = new className();  <br> <br>
                         
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
-                            <span class="one"></span> }  <br> <br>
+                        <span class="one"></span>  //  Calling/executing the method of printing a simple text  :  <br>
+                        <span class="one"></span>  newObj.simpleTxtMethod();  <br>
+                            
+                        <span class="one"></span>  //  Calling/executing the method of changing the property   :  <br>
+                        <span class="one"></span>  newObj.changePropMethod('value of parameter to be assinged into the class property value ');  <br>
+                            
+                        <span class="one"></span>  //  Calling/executing the method of printing class's property after being changed  :  <br>
+                        <span class="one"></span>  newObj.methodPropAfterChange();  <br>
+                            
+                    </code>
+                <br><hr> <br>
+
+
+                <p> // B] Defining Normal Class[with Constructor function] in the Exportor file [export.mjs] and Import it from another Improter file[import.mjs] :  </p>
+                    <code>  
+                        <span class="one"></span> // 1] Exportor file [exportFile.mjs] :  <br>
+                        <span class="one"></span> class className {  <br>
+                            <span class="two"></span>  let propName = 'propValue' ;  <br>
+                            
+                            <span class="two"></span>  // Define a constructor function with parameter [using the parameter to Re-define the class'property ] :  <br>
+                            <span class="two"></span> constructor (par) { <br>
+                                <span class="three"></span> this.propName = par ; <br>
+                            <span class="two"></span> }  <br>
+
+                                
+                            <span class="two"></span> Define a method[no parameter - printing the defined Class's Property after being changed in the constructor function by it's assinged parameter ]  by using (arrow function):  <br>                         
+                            <span class="two"></span>  methodPropAfterChange  = _ => console.log(this.propName) ; <br> <br>
+                                
+                        <span class="one"></span> }  <br> <br>
+
+                        <span class="one"></span> // Exporting the defined class  :    <br>
+                            <span class="one"></span> export default className  ;  <br>
+                    </code> <br> <br>
+
+                
+                    <code>  
+                        <span class="one"></span> // 2]  Importing the defined Class from Importor file [import.mjs]  : <br>
+                        <span class="one"></span>  // importing the class form the  file it defined inside :  <br>
+                        <span class="one"></span>  import  className from './exportFile.mjs' ;  <br> <br>
+                        
+                        <span class="one"></span>  // Extracting a new object from the defined imported class :  <br>
+                        <span class="one"></span>  let newObj = new className('value of Constructor function's parameter to be assinged into the class property value');  <br> <br>
+                        
+                        <span class="one"></span>  //  Calling/executing the method of printing class's property after being changed  :  <br>
+                        <span class="one"></span>  newObj.methodPropAfterChange();  <br>
+                            
+                    </code>  
+                <br> <hr> <br>
+                <br> <hr> <br>
+  
+  
+                <h4> I] {Extended Class} :  </h4>
+                <p> // A] Defining Extending Class[no constructor function/] in the Exportor file [export.mjs] and Import it from another Importer file[import.mjs] :   </p> <br> 
+                    <code>  
+                        <span class="one"></span> // 1] Exportor file [exportFile.mjs] :  <br>
+                        
+                        <span class="one"></span> Define the Parent Class  : <br>
+                        <span class="one"></span> class parentClass { <br>
+                            <span class="two"></span>  parentPropName = 'parent property value' ; <br>
+                            <span class="two"></span>  parentMethod = console.log(this.parentPropName) ; <br>
+                        <span class="one"></span> }   <br> <br>  
+                        
+                        
+                        <span class="one"></span> Define the main Extending Class [child class] :   <br>
+                        <span class="one"></span> class className extends parentClass  {  <br>
+                            <span class="two"></span>  let propName = 'propValue' ;  <br>
+
+                            <span class="two"></span> Define a method[no parameter - simple output] by using (arrow function):  <br>                         
+                            <span class="two"></span>  simpleTxtMethod  = _ => console.log('simple string value') ; <br> <br> 
+                                
+                            <span class="two"></span> Define a method[ parameter -  using parameter to Re-defined Class's Property] by using (arrow function):  <br>                         
+                            <span class="two"></span>  changePropMethod  = (par) => this.propName = par ; <br> <br>
+                                                            
+                            <span class="two"></span> Define a method[no parameter - printing the defined Class's Property after being changed in the previous method by assinged parameter ]  by using (arrow function):  <br>                         
+                            <span class="two"></span>  methodPropAfterChange  = _ => console.log(this.propName) ; <br> <br>
+                                
+                        <span class="one"></span> }  <br> <br>
+
+                        <span class="one"></span> // Exporting the defined class  :    <br>
+                            <span class="one"></span> export default className  ;  <br>
+                    </code> <br> <br>
+
+                    <code>  
+                        <span class="one"></span> // 2]  Importing the defined Class from Importor file [import.mjs]  : <br>
+                        <span class="one"></span>  // importing the class form the  file it defined inside :  <br>
+                        <span class="one"></span>  import  className from './exportFile.mjs' ;  <br> <br>
+                        
+                        <span class="one"></span>  // Extracting a new object from the defined imported class :  <br>
+                        <span class="one"></span>  let newObj = new className();  <br> <br>
+                        
+                        <span class="one"></span>  //  Calling/executing the method of printing a simple text  :  <br>
+                        <span class="one"></span>  newObj.simpleTxtMethod();  <br>
+                            
+                        
+                        <span class="one"></span>  //  Calling/executing the method of changing the property   :  <br>
+                        <span class="one"></span>  newObj.changePropMethod('value of parameter to be assinged into the class property value ');  <br>
+                        
+                        <span class="one"></span>  //  Calling/executing the method of printing class's property after being changed  :  <br>
+                        <span class="one"></span>  newObj.methodPropAfterChange();  <br>
+                        
+                        <span class="one"></span>  // Calling/executing the  Inhrited method of printing the Inherited class's property  :  <br>
+                        <span class="one"></span>  newObj.parentMethod();  <br>
+                    </code>
+                <br><hr> <br>
+
+
+                <p> // B] Defining Extending Class[with Constructor function] in the Exportor file [export.mjs] and Import it from another Improter file[import.mjs] :  </p>
+                    <code>  
+                        <span class="one"></span> // 1] Exportor file [exportFile.mjs] :  <br>
+                        
+                        <span class="one"></span> Define the Parent Class  : <br>
+                        <span class="one"></span> class parentClass { <br>
+                            <span class="two"></span>  parentPropName = 'parent property value' ; <br>
+                            <span class="two"></span>  parentMethod = console.log(this.parentPropName) ; <br>
+                        <span class="one"></span> }   <br> <br>  
+                        
+                        <span class="one"></span> Define the main Extending Class [child class] :   <br>
+                        <span class="one"></span> class className {  <br>
+                            <span class="two"></span>  let propName = 'propValue' ;  <br>
+                            
+                            <span class="two"></span>  // Define a constructor function with parameter [using the parameter to Re-define the class'property ] :  <br>
+                            <span class="two"></span> constructor (par) { <br>
+                                <span class="three"></span> this.propName = par ; <br>
+                            <span class="two"></span> }  <br>
+
+                                
+                            <span class="two"></span> Define a method[no parameter - printing the defined Class's Property after being changed in the constructor function by it's assinged parameter ]  by using (arrow function):  <br>                         
+                            <span class="two"></span>  methodPropAfterChange  = _ => console.log(this.propName) ; <br> <br>
+                                
+                        <span class="one"></span> }  <br> <br>
+
+                        <span class="one"></span> // Exporting the defined class  :    <br>
+                            <span class="one"></span> export default className  ;  <br>
+                    </code> <br> <br>
+
+                
+                    <code>  
+                        <span class="one"></span> // 2]  Importing the defined Class from Importor file [import.mjs]  : <br>
+                        <span class="one"></span>  // importing the class form the  file it defined inside :  <br>
+                        <span class="one"></span>  import className from './exportFile.mjs' ;  <br> <br>
+                        
+                        <span class="one"></span>  // Extracting a new object from the defined imported class :  <br>
+                        <span class="one"></span>  let newObj = new className('value of Constructor function's parameter to be assinged into the class property value');  <br> <br>
+                        
+                        <span class="one"></span>  //  Calling/executing the method of printing class's property after being changed  :  <br>
+                        <span class="one"></span>  newObj.methodPropAfterChange();  <br>
+                            
+                        <span class="one"></span>  // Calling/executing the Inhrited method of printing the Inherited class's property  :  <br>
+                        <span class="one"></span>  newObj.parentMethod();  <br>
+                    </code>  
+                <br> <hr> <br>
+            </p>
  
-                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
-                                <span class="one"></span>  window.onload = test;  <br>
-                        </code> <br> <br>
-                    
-                    <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
-                            <span class="one"></span> }  <br> <br>
-                       </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-    
-                <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
-                    <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining constructor funtion : <br>
-                        <span class="one"></span> let test = function () {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  that = this ;  <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  that.age++ ;  <br>
-                                <span class="three"></span>  console.log(that.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
-
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-
-                <li> {Arrow function} => {This} attidute and properties Syntax : <br>
-                    <h4> The {This} has the access through the inner nested function  :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining Arrow constructor funtion : <br>
-                        <span class="one"></span> let test = () => {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
-                                <span class="three"></span>  this.age++ ;  <br>
-                                <span class="three"></span>  console.log(this.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
-
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-
-                <hr> <br> <hr> <br>
-    
-            </ol>
-            <!-- --------------------------- -->
-
+ 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> [This] {Arrow functions} & {Regular functions} ->  will reperent the value of the method the been called by  </li>
-                    <li> [This] operator in the {Regular function}  ->  Can not access through the inner nested funcions , and needs to be assigned into another variable  </li>
-                    <li> [This] operator in the {Arrow function}  -> Can be used directly inside the inner nested functions  </li>
+                    <li> The Defined constructor function in the class  => is being called and used at first before any other contained methods defined inside this class    </li>
+                    <li> The parameter using in constructor function => is being called and used in the main extracted object'parameter    </li>
                 </ul>
             </p>
                                                                      
@@ -1226,16 +1360,17 @@
                 <code> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source main Classes JS [main.js] file </button>
                     </a> <br> <hr> <br> 
                     
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/myplugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 new Code [myplugins.js] file </button>
-                    </a> <br> <hr> <br>  -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="expClasses.mjs">  
+                        <button id=btn class="btn0" onclick="display()"> Source Code of Exporting classes  [expClasses.mjs] file </button>
+                    </a> <br> <hr> <br> 
+
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="imp.mjs">  
+                        <button id=btn class="btn0" onclick="display()"> Source Code of Importing  classes  [imp.mjs] file </button>
                     </a> <br> <br> 
-                    -->
+                    
                     <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
                         <button id=btn class="btn0" onclick="display()"> Display ES6 old Code [plugins.js] file </button>
                     </a> <br> <br> 
