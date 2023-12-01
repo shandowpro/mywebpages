@@ -1,31 +1,31 @@
-//  5 Arrow Function And This Value
+// 12-Destructuring  :
 /* Main lessons functions :
-    1- [This] Reference value in the Regular function  
-    2- {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }
-    3- {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value }
+    1- Destructuring Array  
+    2- Destructuring Object  
+       
 */
 // ---------------------------------------------------------------------
 
-// 5 Arrow Function And [This] operator  :
+// 12-Destructuring :
 function myTest() {
     'use strict' ;
-    alert('Welcome to 5 Arrow Function And This Value ') ;
+    alert('Welcome to 12-Destructuring   ') ;
     
     var dis = document.getElementById('note');
      
-    var x = prompt(' Please choose one of functions from below options : \n  1] [This] Reference value in the Regular function \n  2] {This} Reference value in the Arrow function  \n  3] {This} attidute value in the both {Arrow function} & {Regular Function }  ');    
+    var x = prompt(' Please choose one of functions from below options : \n  1] Destructuring Array  function \n  2] Destructuring Object   function  ');    
 
     if (x == 1 ) {
         
-        regFuncValue();
+        destArr();
 
     } else if (x == 2) {
     
-        regFuncThis();
+        destObj();
         
-    } else if (x == 3) {
+    // } else if (x == 3) {
     
-        arrowFuncThis();       
+        // arrowFuncThis();       
     
     // } else if (x == 4) {
 
@@ -41,92 +41,58 @@ function myTest() {
 
     // =========================================================================
 
-    // 1] Test and print [This] Reference value in the Regular function :
-    function regFuncValue() {
-        alert('Welcome to Test and print [This] Reference value in the Regular function  ');
+    // 1] Test Destructuring Array  :       
+    function destArr() {
+        alert('Welcome to Test Destructuring Array   ');
 
         dis.innerHTML = '';
 
+        // Define an array :
+            const arr =  [1 , 2 , 3 ,  4  , 5 ,  6 ] ;
 
-        // Assigning the element innerHTML by the value of it's caller funtion :
-        let regFuncVal1 = function() {
-            document.getElementById('note').innerHTML = this;
-        }
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {window} object  & {onload} event :
-        window.onload = regFuncVal1;
-        
+         // Destructuring only (2) not in order elements the defined array into (2) varaibles only :  
+            const [n1 , , , n2]  = arr          
+
+        // printing the destructured variables : 
+            console.log(  'The destructured not in order variables from the array are : ', n1 , n2) ;
+ 
         // ---------------------------------------
         
-        // Executing the [this] 's refers value within {Regular function} by using built-in {button} object  & {addEventLister} event  :
-        document.getElementById('elem').addEventListener( 'click' , regFuncVal1);         
-        // ---------------------------------------
         
-        // console.log('Regular Function of calling function by using [this] operator : ' , regFuncVal1() ) ;
-        console.log('Regular Function Syntax by using Default method : '  ,  regFuncVal1 ) ;
+        dis.innerHTML = 'Destructred Array method : ' +  destArr  + '<br>' ;
         
-        dis.innerHTML = 'Regular Function Syntax by using Default method : ' +  regFuncVal1 + '<br>' ;
-
         // ------------------------
-
+        
     }
     // =============================================================
 
-    // 2] {This} usages and attidute value within the [Regular function] => { Auto counter application upon [this] value }:
-    function regFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Regular function] ');
+    // 2]  Testing Destructuring Object Function  :
+    function destObj  () {
+        alert('Welcome to Test Destructuring Object ');
 
         dis.innerHTML = '';
-
-        let regFuncThisApp = function () {
-            let that = this;
-            this.age = 0;
-
-            setInterval( function(){
-                that.age++ ;
-                console.log(that.age);
-            }, 1000 );
-
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new regFuncThisApp();   
-        }
-
-       
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : '  , regFuncThisApp ) ;
-       
-        dis.innerHTML += 'Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : ' + regFuncThisApp + '<br>' ;
         
-    }
-    // =========================================================
+        // Define an Object :
+            const obj =   {
+                id : '1' ,
+                name: 'shadi' ,
+                age : '33' ,             
+                city : 'cairo'  
+            } ;
+
+        // Destructuring only (2) elements[keys : id , name] of the defined object into (2) varaibles only :  
+            const {id , name}  = obj  ;          
+
+        // printing the destructured variables : 
+            console.log( 'The Destructured variables from object are : ' , id , name) ;
     
-    // 3] {This} usages and Attidute value within the [Arrow function] => { Auto counter application upon [this] value }:
-    function arrowFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Arrow function] ');
-
-        dis.innerHTML = '';
-
-        let arrowFuncThisApp = function()  {
-         
-            this.age = 0;
-
-            setInterval( () => {
-                this.age++ ;
-                console.log(this.age);
-            }, 1000 );
+        // ---------------------------------------
+                
+        dis.innerHTML = ' Destructuring Object Function  : ' +  destObj + '<br>' ;
         
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new arrowFuncThisApp();
-        }
-    
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Arrow Function Syntax by using directly [this] Method : '  , arrowFuncThisApp ) ;
-       
-        dis.innerHTML += 'Arrow Function Syntax by using directly [this] Method : '  + arrowFuncThisApp + '<br>' ;
-        
-    }
+    }   
     // =========================================================
-
+      
    //===========================================================
     
     function display() {
