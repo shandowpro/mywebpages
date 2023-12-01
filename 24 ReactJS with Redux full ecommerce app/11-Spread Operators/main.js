@@ -1,31 +1,32 @@
-//  5 Arrow Function And This Value
+//  11-Spread Operators :
 /* Main lessons functions :
-    1- [This] Reference value in the Regular function  
-    2- {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }
-    3- {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value }
+    1- using spread operators with arrays 
+    2- using spread operators with objects 
+    3- using spread operators with functions  
+       
 */
 // ---------------------------------------------------------------------
 
 // 5 Arrow Function And [This] operator  :
 function myTest() {
     'use strict' ;
-    alert('Welcome to 5 Arrow Function And This Value ') ;
+    alert('Welcome to 11-Spread Operators  ') ;
     
     var dis = document.getElementById('note');
      
-    var x = prompt(' Please choose one of functions from below options : \n  1] [This] Reference value in the Regular function \n  2] {This} Reference value in the Arrow function  \n  3] {This} attidute value in the both {Arrow function} & {Regular Function }  ');    
+    var x = prompt(' Please choose one of functions from below options : \n  1] using spread operators with defining Arrays function \n  2]   using spread operators with defining Objects function  \n  3] using spread operators with functions\' parameters   ');    
 
     if (x == 1 ) {
         
-        regFuncValue();
+        spreadArr();
 
     } else if (x == 2) {
     
-        regFuncThis();
+        spreadObj();
         
     } else if (x == 3) {
     
-        arrowFuncThis();       
+        spreadFunc();       
     
     // } else if (x == 4) {
 
@@ -41,88 +42,94 @@ function myTest() {
 
     // =========================================================================
 
-    // 1] Test and print [This] Reference value in the Regular function :
-    function regFuncValue() {
-        alert('Welcome to Test and print [This] Reference value in the Regular function  ');
+    // 1] Test using spread operators with defining Arrays function :
+    function spreadArr() {
+        alert('Welcome to Test using spread operators with defining Arrays function   ');
 
         dis.innerHTML = '';
+ 
+        //  Defining old array :
+            let oldArr = [2 , 3 , 4]  ; 
 
-
-        // Assigning the element innerHTML by the value of it's caller funtion :
-        let regFuncVal1 = function() {
-            document.getElementById('note').innerHTML = this;
-        }
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {window} object  & {onload} event :
-        window.onload = regFuncVal1;
+        //  Defining new array [adding new elements into the spreaded array elements - before the spreaded array and after   -] :
+            let newArr = [1, ...oldArr  , 5 , 6]  ; 
+   
+  
+        //  Printing new Array after adding sereaded old array :
+            console.log(newArr) ;
         
         // ---------------------------------------
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {button} object  & {addEventLister} event  :
-        document.getElementById('elem').addEventListener( 'click' , regFuncVal1);         
-        // ---------------------------------------
-        
-        // console.log('Regular Function of calling function by using [this] operator : ' , regFuncVal1() ) ;
-        console.log('Regular Function Syntax by using Default method : '  ,  regFuncVal1 ) ;
-        
-        dis.innerHTML = 'Regular Function Syntax by using Default method : ' +  regFuncVal1 + '<br>' ;
+         
+        dis.innerHTML = 'spread operators with defining Arrays function : ' +  spreadArr + '<br>' ;
 
         // ------------------------
 
     }
     // =============================================================
 
-    // 2] {This} usages and attidute value within the [Regular function] => { Auto counter application upon [this] value }:
-    function regFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Regular function] ');
+    // 2] Testing using spread operators with defining Objects function :
+    function spreadObj() {
+        alert('Welcome to Test using spread operators with defining Objects function ');
 
         dis.innerHTML = '';
+ 
+        //  Defining old Object :
+           let oldObj = {id:'1' , name: 'ali'}  ; 
 
-        let regFuncThisApp = function () {
-            let that = this;
-            this.age = 0;
-
-            setInterval( function(){
-                that.age++ ;
-                console.log(that.age);
-            }, 1000 );
-
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new regFuncThisApp();   
-        }
-
-       
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : '  , regFuncThisApp ) ;
-       
-        dis.innerHTML += 'Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : ' + regFuncThisApp + '<br>' ;
+        //  Defining new object [ Adding new elements into the spreaded object elements - before the spreaded object and after   -] :
+            let newObj1 = { ip:'100' , ...oldObj , age: '35'  }  ; 
+    
+    
+        //  Defining new object [ Adding new elements into the spreaded object elements - before the spreaded object and after and modify one of the  element   -] :
+            let newObj2 = { ip:'100' , ...oldObj , name:'shadi' , age: '35'  }  ; 
+    
+    
+        //  Printing new Object after adding spreaded old object :
+            console.log(` New Object after adding spreaded old object  : ` ) ;
+            console.log(newObj1) ;
+        
+        
+        //  Printing new Object after adding spreaded old object :
+            console.log(` New Object after adding & Editing spreaded old object  : ` ) ;
+            console.log(newObj2) ;
+        
+        
+        dis.innerHTML = ' using spread operators with defining Objects function   : ' + spreadObj + '<br>' ;
         
     }
     // =========================================================
     
-    // 3] {This} usages and Attidute value within the [Arrow function] => { Auto counter application upon [this] value }:
-    function arrowFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Arrow function] ');
+    // 3] Testing  using spread operators with functions's parameters  :
+    function spreadFunc() {
+        alert('Welcome to Test using spread operators with function\'s parameter ');
 
         dis.innerHTML = '';
 
-        let arrowFuncThisApp = function()  {
-         
-            this.age = 0;
-
-            setInterval( () => {
-                this.age++ ;
-                console.log(this.age);
-            }, 1000 );
-        
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new arrowFuncThisApp();
+        let funcSpreadFilter = (...args) =>  {
+            // Retruning certain value according to the assigned conditon [argument value = 5] {using filter method} :
+            return  args.filter(item  => item === 5 )   ; 
         }
     
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Arrow Function Syntax by using directly [this] Method : '  , arrowFuncThisApp ) ;
-       
-        dis.innerHTML += 'Arrow Function Syntax by using directly [this] Method : '  + arrowFuncThisApp + '<br>' ;
+         
+        let funcSpreadIndex = (...args) =>  {
+            // Retruning certain value according to the assigned condition [argument value = 5] {using array index: 2 } :
+            return  args[2]   ; 
+        }
+    
+         
+        // funcSpreadFilter(1  , 2 , 3 , 4 ,  5 ,  6  ) ;
+
+        // funcSpreadIndex(1  , 2 , 3 , 4 ,  5 ,  6  ) ;
+
+        // printing the fuction of [Returning certain value according to the assigned conditon [argument value = 5] {using filter method}]  :  
+            console.log(' Function return according [using Filter] Method : '  , funcSpreadFilter(1  , 2 , 3 , 4 ,  5 ,  6  ) ) ;
+        
+        
+        // printing the  function of [Returning certain value according to the assigned condition [argument value = 5] {using array index: 2 }   :  
+            console.log(' Function return according [using Index] Method : '  , funcSpreadIndex(1  , 2 , 3 , 4 ,  5 ,  6  ) ) ;
+ 
+
+        dis.innerHTML += 'using spread operators with function\'s parameter : '  + spreadFunc + '<br>' ;
         
     }
     // =========================================================
