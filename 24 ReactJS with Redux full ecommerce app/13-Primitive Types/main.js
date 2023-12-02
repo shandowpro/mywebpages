@@ -1,35 +1,35 @@
-//  5 Arrow Function And This Value
+// 13-Primitive Types :
 /* Main lessons functions :
-    1- [This] Reference value in the Regular function  
-    2- {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }
-    3- {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value }
+    1- {Primitive Types} & {spreading operator } with variables 
+    2- {Primitive Types} & {spreading operator } with arrays 
+    3- {Primitive Types} & {spreading operator } with objects
 */
 // ---------------------------------------------------------------------
 
-// 5 Arrow Function And [This] operator  :
+// 13-Primitive Types :
 function myTest() {
     'use strict' ;
-    alert('Welcome to 5 Arrow Function And This Value ') ;
+    alert('Welcome to 13-Primitive Types  ') ;
     
     var dis = document.getElementById('note');
      
-    var x = prompt(' Please choose one of functions from below options : \n  1] [This] Reference value in the Regular function \n  2] {This} Reference value in the Arrow function  \n  3] {This} attidute value in the both {Arrow function} & {Regular Function }  ');    
+    var x = prompt(' Please choose one of functions from below options : \n  1] {Primitive Types} & {spreading operator } with variables  \n  2] {Primitive Types} & {spreading operator } with arrays  \n  3] {Primitive Types} & {spreading operator } with objects \n   ');    
 
     if (x == 1 ) {
         
-        regFuncValue();
+        primVars();
 
     } else if (x == 2) {
     
-        regFuncThis();
+        primArrs();
         
     } else if (x == 3) {
     
-        arrowFuncThis();       
+        primObjs();       
     
     // } else if (x == 4) {
 
-    //     arrowShortFunc2();
+        // primSpr();
     
     // } else if (x == 5) {
 
@@ -41,88 +41,94 @@ function myTest() {
 
     // =========================================================================
 
-    // 1] Test and print [This] Reference value in the Regular function :
-    function regFuncValue() {
-        alert('Welcome to Test and print [This] Reference value in the Regular function  ');
+    // 1] Test {Primitive Types} & {spreading operator } with variables   :
+    function primVars() {
+        alert('Welcome to Test {Primitive Types} & {spreading operator } with variables  ');
 
         dis.innerHTML = '';
+        
+        // Define a referenced variable : 
+            let var1 = 'ali' ;
 
+        // Assing a new varialbe with defined referenced variable [using the {primitivve Types} ] : 
+            let var2 = var1 ;
 
-        // Assigning the element innerHTML by the value of it's caller funtion :
-        let regFuncVal1 = function() {
-            document.getElementById('note').innerHTML = this;
-        }
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {window} object  & {onload} event :
-        window.onload = regFuncVal1;
-        
-        // ---------------------------------------
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {button} object  & {addEventLister} event  :
-        document.getElementById('elem').addEventListener( 'click' , regFuncVal1);         
-        // ---------------------------------------
-        
-        // console.log('Regular Function of calling function by using [this] operator : ' , regFuncVal1() ) ;
-        console.log('Regular Function Syntax by using Default method : '  ,  regFuncVal1 ) ;
-        
-        dis.innerHTML = 'Regular Function Syntax by using Default method : ' +  regFuncVal1 + '<br>' ;
+        // Assing a new varialbe with defined referenced variable [using the {primitivve Types} ] : 
+        // let var3 = ...var1 ;
+
+        // Changing the value of the reference value of [var1] :
+            var1 = 'shadi' ;
+
+        // Printing the value of [var2] after changing the value of refernece [var1] :
+            console.log('The value of the new variable after changing value of the Refernece variable ' , var2) ;
+
+        dis.innerHTML = ' Test {Primitive Types} & {Spreading operator} with variables : ' +  primVars + '<br>' ;
 
         // ------------------------
 
     }
     // =============================================================
 
-    // 2] {This} usages and attidute value within the [Regular function] => { Auto counter application upon [this] value }:
-    function regFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Regular function] ');
+    // 2] {Primitive Types} & {spreading operator } with arrays :
+    function primArrs() {
+        alert('Welcome to Test {Primitive Types} & {spreading operator } with arrays  ');
 
         dis.innerHTML = '';
 
-        let regFuncThisApp = function () {
-            let that = this;
-            this.age = 0;
+        // Define a referenced array : 
+        let arr1 =  [1 , 2 , 3 ] ;
 
-            setInterval( function(){
-                that.age++ ;
-                console.log(that.age);
-            }, 1000 );
+        // Assign a new array with defined referenced array [using the {primitive Types} ] : 
+            let arr2 = [ arr1 ] ;
 
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new regFuncThisApp();   
-        }
+        // Assign a new array with defined referenced array [using the {spreading operator} ] : 
+            let arr3 = [...arr1] ;
 
-       
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : '  , regFuncThisApp ) ;
-       
-        dis.innerHTML += 'Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : ' + regFuncThisApp + '<br>' ;
+        // Changing the value of the reference value of [var1] :
+            arr1 =  [4 ,  5 ,  6 ] ;
+
+        // Printing the value of [arr2] after changing the value of its Refernece [arr1] :
+            console.log('The value of the new array [assigned primitive operator] after changing value of the Referenece array ' , arr2) ;
+
+        // Printing the value of [arr3] after changing the value of its Refernece [arr1] :
+            console.log('The value of the new array [assigned Spreading operator] after changing value of the Referenece array ' , arr3) ;
+
+  
+        // Printing the value of [arr3] after changing the value of its Refernece [arr1] :
+            console.log('The value of the main reference array  :  ' , arr1) ;
+
+  
+        dis.innerHTML = ' Test {Primitive Types} & {Spreading operator} with arrays : ' + primArrs + '<br>' ;
         
     }
     // =========================================================
-    
-    // 3] {This} usages and Attidute value within the [Arrow function] => { Auto counter application upon [this] value }:
-    function arrowFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Arrow function] ');
+       
+    // 3] Testing {Primitive Types} & {Spreading operator} with the object  :
+    function primObjs() {
+        alert('Welcome to Test {Primitive Types} & {Spreading operator} with objects   ');
 
         dis.innerHTML = '';
 
-        let arrowFuncThisApp = function()  {
-         
-            this.age = 0;
+        // Define a referenced object : 
+            let obj1 =  {name:'ali'  } ;
 
-            setInterval( () => {
-                this.age++ ;
-                console.log(this.age);
-            }, 1000 );
-        
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new arrowFuncThisApp();
-        }
-    
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Arrow Function Syntax by using directly [this] Method : '  , arrowFuncThisApp ) ;
-       
-        dis.innerHTML += 'Arrow Function Syntax by using directly [this] Method : '  + arrowFuncThisApp + '<br>' ;
+        // Assign a new object with defined referenced object [using the {primitive Types} ] : 
+            let obj2 = {obj1} ;
+      
+        // Assign a new object with defined referenced object [using the {spreading operator} ] : 
+            let obj3 = {...obj1} ;
+      
+        // Changing the value of the reference value of [obj1] :
+            obj1.name = "shadi"   ;
+
+        // Printing the value of [obj2] after changing the value of its Refernece [obj1] :
+            console.log('The value of the new object [assinged primitive operator] after changing value of the Referenece object ' , obj2) ;
+ 
+        // Printing the value of [obj3] after changing the value of its Refernece [obj1] :
+            console.log('The value of the new array [assigned Spreading operator] after changing value of the Referenece array ' , obj3) ;
+
+
+        dis.innerHTML = ' Test {Primitive Types} & {Spreading operator} with objects : ' + primObjs + '<br>' ;
         
     }
     // =========================================================

@@ -296,7 +296,7 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
+        <span> Welcome to ReactJs Apps Course | </span> <br>
         13-Primitive Types        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section =>  Primitive Types for using in  <span><strong> Modern  JS ES6  </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> {Primitive Types} for using in advanced modern in ES6 </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1091,14 +1091,22 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about {Primitive Types} concept , syntax, uasges and practical examples  , as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li> {Primitive Types} concept and usages     </li>
+                    <li> {Primitive Types} diffrences between [primitive types] & Assinging  by using [spreading operator] </li>
+                    <li> {Primitive Types} syntax & pracitical examples :  <br>
+                     <ul> 
+                        <li> {Primitive Types}  with array  </li>
+                        <li> {Primitive Types} with object </li>
+                        <li> {Primitive Types} with varialbes  </li>
+                        <li> comparisoining between  {Primitive Types}  & {Spreading operators}  </li>
+                     </ul>   
+                    
+                    </li>
                 </ol>
             </article>
         </Section>
@@ -1110,112 +1118,132 @@
                 <h3> 13-Primitive Types concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
+            <p>  {Primitive Types} : is and old concept in JS , but will help in the modern application   </p>
+            <p>  {Primitive Types} : is about assinging a [variable / array  / object] to another [variable / array / object] , with Referenced responding   </p>
 
-            <p> {This} Reference value in the {Regular function} Rules : <br>
+            <p> Diffrences between [primitive types] & Assinging  by using [spreading operator] : <br>
                 <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
+                    <li> {Primitive Types} : <br> 
+                        <p> It is auto responding to the change of the velue in the basic asssinged [vairalbe array , obejct]      </p>
+                        <p> This measns the new [variables / object / array] will auto change by the change in the main [varaible/ object / array]  </p>
+                    </li>
+                          
+                    <li> {Spreading operator} : <br> 
+                        <p> It is  having a fixed of [vairalbe array , obejct] , and not related to any change will occur in the future      </p>
+                        <p> This measns the new [variables / object / array] will NOT change by the change in the main [varaible/ object / array]  </p>
+                    </li>
+                           
                 </ul>    
             </p> <br> <hr> <br>
 
 
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
+            <p>  {Primitive Types} syntax & pracitical examples : <br>
                 <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
+                    <li> 1] using {Primitive Types} with  [variables]  :  <br>
+                        <code>
+                            <span class="one"></span>  // Define the Reference variable : <br>
+                            <span class="one"></span>  let var1 = 'old value'  ;  <br> <br>
+                            
+                            <span class="one"></span>  // Assigning a new variable wih the old variable :    <br>
+                            <span class="one"></span>  let var2 = var1  ;  <br> <br> 
+                             
+                            <span class="one"></span> // Changing the reference value [var1] {Re-assigning} :  <br>
+                            <span class="one"></span>   var1 = 'new value ' ;  <br> <br>
+                            
+                            <span class="one"></span> // printing the [var2] after the Reference variable [var1]  :    <br>
+                            <span class="one"></span>  console.log(var2);  => [Display : ['new value'] the  new  value after changing the reference value ]   <br>
+                              
+                        </code>
+                    </li> <br>
+                    
+                    <li> 2] using {Primitive Types} with  [array]  :  <br>
+                        <code>
+                            <span class="one"></span>  // Define the [Reference array]  : <br>
+                            <span class="one"></span>  let arr1 = [ 1 , 2 , 3 ]  ;  <br> <br> 
+                            
+                            <span class="one"></span>  // Assigning a new array with the old array :    <br>
+                            <span class="one"></span>  let arr2 = arr1  ;  <br> <br> 
+                             
+                            <span class="one"></span> // Changing the reference value [arr1] {Re-assigning}:  <br>
+                            <span class="one"></span>   arr1 = [ 4 , 5 , 6 ]  ;   <br> <br>
+                            
+                            <span class="one"></span> // printing the [arr2] after the Reference variable [arr1]  :    <br>
+                            <span class="one"></span>  console.log(arr2);  => [Display : [ 4 , 5 , 6 ] the  new  value after changing the reference value  ]   <br>
+                              
+                        </code>
+                    </li>
+                    
+                   
+                    <li> 3] using {Primitive Types} with  [object]  :  <br>
+                        <code>
+                            <span class="one"></span>  // Define the [Reference object]  : <br>
+                            <span class="one"></span>  let obj1 =  { name : 'ali'} ;  <br> <br> 
+                            
+                            <span class="one"></span>  // Assigning a new object with the old object :    <br>
+                            <span class="one"></span>  let obj2 = obj1  ;  <br> <br> 
+                             
+                            <span class="one"></span> // Changing the reference value [obj1] {Re-assigning 'name' keyname}:  <br>
+                            <span class="one"></span>   obj1.name = 'shadi'  ;   <br> <br>
+                            
+                            <span class="one"></span> // printing the [obj2] after the Reference variable [obj1]  :    <br>
+                            <span class="one"></span>  console.log(obj2);  => [Display : [ name : 'shadi' ] the  new  value after changing the reference value ]   <br>
+                              
+                        </code>
+                    </li>
+                    
+                    <li> 4] Comparisoning {Primitive Types} & {Spreading operator}  [with object and array]   :  <br>
+                        <p>  with [object] :  </p>
+                        <code>
+                            <span class="one"></span>  // Define the [Reference object]  : <br>
+                            <span class="one"></span>  let obj1 =  { name : 'ali'} ;  <br> <br> 
+                            
+                            <span class="one"></span>  // Assigning a new object with the old object => using {primitive type} :    <br>
+                            <span class="one"></span>  let obj2 = obj1  ;  <br> <br> 
+                             
+                            <span class="one"></span>  // Assigning another new object with the old object => using {spraeading operator } :    <br>
+                            <span class="one"></span>  let obj3 = { ...obj1 } ;  <br> <br> 
+                             
+                            <span class="one"></span> // Changing the reference value [obj1] {Re-assigning 'name' keyname}:  <br>
+                            <span class="one"></span>   obj1.name = 'shadi'  ;   <br> <br>
+                            
+                            <span class="one"></span> // printing the [obj2] after the Reference variable [obj1] :  <br>
+                            <span class="one"></span>  console.log(obj2);  => [Display : [ name : 'shadi' ] the  new  value after changing the reference value ]   <br>  <br>
+                            
+                            <span class="one"></span> // printing the [obj3] after the Reference variable [obj1] :  <br>
+                            <span class="one"></span>  console.log(obj3);  => [Display : [ name : 'ali' ] the  old value before changing the reference value ]   <br>                         
+                        </code>
+   
+                        <p>  with [array] :  </p>
+                        <code>
+                            <span class="one"></span>  // Define the [Reference array]  : <br>
+                            <span class="one"></span>  let arr1 =  [1 ,  2 , 3]  ;  <br> <br> 
+                            
+                            <span class="one"></span>  // Assigning a new array with the old array => using {primitive type} :    <br>
+                            <span class="one"></span>  let arr2 = arr1  ;  <br> <br> 
+                             
+                            <span class="one"></span>  // Assigning another new array with the old array => using {spraeading operator } :    <br>
+                            <span class="one"></span>  let arr3 = { ...arr1 } ;  <br> <br> 
+                             
+                            <span class="one"></span> // Changing the reference value [arr1] {Re-assigning}:  <br>
+                            <span class="one"></span>   arr1 =  [4 , 5 , 6]  ;   <br> <br>
+                            
+                            <span class="one"></span> // printing the [arr2] after the Reference variable [arr1] :  <br>
+                            <span class="one"></span>  console.log(arr2);  => [Display : [ 4 , 5 , 6  ] the  new  value after changing the reference value ]   <br>  <br>
+                            
+                            <span class="one"></span> // printing the [arr3] after the Reference variable [arr1] :  <br>
+                            <span class="one"></span>  console.log(arr3);  => [Display : [ 1 , 2 , 3 ] the  old value before changing the reference value ]   <br> 
+                        </code>
+    
+                    </li>
+                   
                 </ul>    
             </p> <br> <hr>
-                        
-            <ol> 
-                <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
-
-                    <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
-                            <span class="one"></span> }  <br> <br>
- 
-                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
-                                <span class="one"></span>  window.onload = test;  <br>
-                        </code> <br> <br>
                     
-                    <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
-                            <span class="one"></span> }  <br> <br>
-                       </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-    
-                <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
-                    <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining constructor funtion : <br>
-                        <span class="one"></span> let test = function () {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  that = this ;  <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  that.age++ ;  <br>
-                                <span class="three"></span>  console.log(that.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
-
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-
-                <li> {Arrow function} => {This} attidute and properties Syntax : <br>
-                    <h4> The {This} has the access through the inner nested function  :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining Arrow constructor funtion : <br>
-                        <span class="one"></span> let test = () => {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
-                                <span class="three"></span>  this.age++ ;  <br>
-                                <span class="three"></span>  console.log(this.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
-
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-
-                <hr> <br> <hr> <br>
-    
-            </ol>
             <!-- --------------------------- -->
 
-            <p> Important Notes : <br>
+            <p> Important   Notes : <br>
                 <ul>                    
-                    <li> [This] {Arrow functions} & {Regular functions} ->  will reperent the value of the method the been called by  </li>
-                    <li> [This] operator in the {Regular function}  ->  Can not access through the inner nested funcions , and needs to be assigned into another variable  </li>
-                    <li> [This] operator in the {Arrow function}  -> Can be used directly inside the inner nested functions  </li>
+                    <li> inspite  of the primitive types is an old method in the JS , but we will use it too much in our ReactJS apps    </li>         
                 </ul>
             </p>
                                                                      
@@ -1226,7 +1254,7 @@
                 <code> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source main JS [main.js] file </button>
                     </a> <br> <hr> <br> 
                     
                     <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/myplugins.js">  
@@ -1327,7 +1355,7 @@
                 <h3>  [13-Primitive Types] Importance & Benefits : </h3>
             </header>            
                 <ul>                                                                     
-                    <li> Project/application Structure is critical and basic for any one dealing with project  </li>  
+                    <li> Project/application Primitive Types wil be used always in our reactJS projects  </li>  
                 </ul>                                                               
         </section>
 
@@ -1455,7 +1483,7 @@
             -->                        
         </section> 
 
-        <button type="button" class="btn" onclick="myTest()"> Click to Start [ (this) operator testing with both functions ] method   Application </button>
+        <button type="button" class="btn" onclick="myTest()"> Click to Start [Primitive Types] method & in comparisoning with [Spreading Operators]   Application </button>
 
         <script src="main.js"></script> 
         
@@ -1463,7 +1491,7 @@
         
         <div id="note" class="dis"></div> <br><br><br><br>
 
-        <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>             
+        <!-- <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>              -->
         
                                 
         <!-- <button id=btn class="btn0" onclick="display()">Display JS Code [plugins.js] file </button> -->
