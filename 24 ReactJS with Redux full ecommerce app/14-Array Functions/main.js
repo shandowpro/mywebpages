@@ -1,35 +1,37 @@
-//  5 Arrow Function And This Value
+//  14-Array Functions :
 /* Main lessons functions :
-    1- [This] Reference value in the Regular function  
-    2- {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }
-    3- {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value }
+    1-   using mapping function to return the array value inside another array [without changing] 
+    2-   using mapping function to return the array value inside another array [with boolean values ]   
+    3-   using mapping function to return the array value inside another array [with math calcuation values ]   
+    4-   using mapping function to return the array value inside another array [with increament values ]   
+        
 */
 // ---------------------------------------------------------------------
 
-// 5 Arrow Function And [This] operator  :
+// 14-Array Functions  :
 function myTest() {
     'use strict' ;
-    alert('Welcome to 5 Arrow Function And This Value ') ;
+    alert('Welcome to  Array Functions ') ;
     
     var dis = document.getElementById('note');
      
-    var x = prompt(' Please choose one of functions from below options : \n  1] [This] Reference value in the Regular function \n  2] {This} Reference value in the Arrow function  \n  3] {This} attidute value in the both {Arrow function} & {Regular Function }  ');    
+    var x = prompt(' Please choose one of functions from below options : \n  1] using mapping function to return the array value inside another array [without changing]  \n  2] using mapping function to return the array value inside another array [with boolean values ] \n 3] using mapping function to return the array value inside another array [with  Math calculation  values ] \n   4] using mapping function to return the array value inside another array [with  increament  values ]  ');    
 
     if (x == 1 ) {
         
-        regFuncValue();
+        mapSimpleValue();
 
     } else if (x == 2) {
     
-        regFuncThis();
+        mapBooleanValue();
         
     } else if (x == 3) {
     
-        arrowFuncThis();       
+        mapMathCalcValue();       
     
-    // } else if (x == 4) {
+    } else if (x == 4) {
 
-    //     arrowShortFunc2();
+        mapIncrementValue();
     
     // } else if (x == 5) {
 
@@ -41,93 +43,104 @@ function myTest() {
 
     // =========================================================================
 
-    // 1] Test and print [This] Reference value in the Regular function :
-    function regFuncValue() {
-        alert('Welcome to Test and print [This] Reference value in the Regular function  ');
+    // 1] Test using mapping function to return the array value inside another array [without changing]  :
+    function mapSimpleValue() {
+        alert('Welcome to Test using mapping function to return the array value inside another array [without changing]  ');
 
         dis.innerHTML = '';
-
-
-        // Assigning the element innerHTML by the value of it's caller funtion :
-        let regFuncVal1 = function() {
-            document.getElementById('note').innerHTML = this;
-        }
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {window} object  & {onload} event :
-        window.onload = regFuncVal1;
-        
+ 
+        //  Define the main array :
+        let arr =  [ 1 , 2 , 3 ];  
+         
+        // Define another array with the value of main array after mapping [returing simple values]  :
+        let newArr = arr.map( (item) => {
+            return item; 
+        } );        
         // ---------------------------------------
         
-        // Executing the [this] 's refers value within {Regular function} by using built-in {button} object  & {addEventLister} event  :
-        document.getElementById('elem').addEventListener( 'click' , regFuncVal1);         
-        // ---------------------------------------
+        // printing the new array after mapping :
+            console.log(newArr) ;              
         
-        // console.log('Regular Function of calling function by using [this] operator : ' , regFuncVal1() ) ;
-        console.log('Regular Function Syntax by using Default method : '  ,  regFuncVal1 ) ;
-        
-        dis.innerHTML = 'Regular Function Syntax by using Default method : ' +  regFuncVal1 + '<br>' ;
+
+        dis.innerHTML = 'using mapping function to return the array value inside another array [without changing]  : ' + mapSimpleValue + '<br>' ;
 
         // ------------------------
-
     }
     // =============================================================
 
-    // 2] {This} usages and attidute value within the [Regular function] => { Auto counter application upon [this] value }:
-    function regFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Regular function] ');
+    // 2] Testing using mapping function to return the array value inside another array [with boolean values ]   :
+    function mapBooleanValue() {
+        alert('Welcome to Test  using mapping function to return the array value inside another array [with boolean values ]  ');
 
         dis.innerHTML = '';
-
-        let regFuncThisApp = function () {
-            let that = this;
-            this.age = 0;
-
-            setInterval( function(){
-                that.age++ ;
-                console.log(that.age);
-            }, 1000 );
-
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new regFuncThisApp();   
-        }
-
-       
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : '  , regFuncThisApp ) ;
-       
-        dis.innerHTML += 'Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : ' + regFuncThisApp + '<br>' ;
-        
-    }
-    // =========================================================
+ 
+        //  Define the main array :
+           let arr =  [ 1 , 2 , 3 ];  
     
-    // 3] {This} usages and Attidute value within the [Arrow function] => { Auto counter application upon [this] value }:
-    function arrowFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Arrow function] ');
-
-        dis.innerHTML = '';
-
-        let arrowFuncThisApp = function()  {
-         
-            this.age = 0;
-
-            setInterval( () => {
-                this.age++ ;
-                console.log(this.age);
-            }, 1000 );
+        // Define another array with the value of main array after mapping [returing boolean values]  :
+            let newArr = arr.map( (item) => {
+                return item === 3 ; 
+            } );        
+        // ---------------------------------------
+ 
+        // printing the new array after mapping :
+           console.log(newArr) ;              
+            
         
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new arrowFuncThisApp();
-        }
-    
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Arrow Function Syntax by using directly [this] Method : '  , arrowFuncThisApp ) ;
-       
-        dis.innerHTML += 'Arrow Function Syntax by using directly [this] Method : '  + arrowFuncThisApp + '<br>' ;
+        dis.innerHTML += 'using mapping function to return the array value inside another array [with boolean values ]   : ' +  mapBooleanValue + '<br>' ;
         
     }
     // =========================================================
 
-   //===========================================================
+    // 3] Testing using mapping function to return the array value inside another array [with math processing values ]   :
+    function mapMathCalcValue() {
+        alert('Welcome to Test  using mapping function to return the array value inside another array [with math processing values ]    ');
+
+        dis.innerHTML = '';
+ 
+        //  Define the main array :
+           let arr =  [ 1 , 2 , 3 ];  
+    
+        // Define another array with the value of main array after mapping [returing math calculation values]  :
+            let newArr = arr.map( (item) => {
+                return item + 10 ; 
+            } );        
+        // ---------------------------------------
+ 
+        // printing the new array after mapping :
+           console.log(newArr) ;              
+            
+        
+        dis.innerHTML += 'using mapping function to return the array value inside another array [with math processing values ]  : ' + mapMathCalcValue + '<br>' ;
+        
+    }
+    // =========================================================
+ 
+    //===========================================================
+    // 4] Testing using mapping function to return the array value inside another array [with increment values ]   :
+    function mapIncrementValue() {
+        alert('Welcome to Test  using mapping function to return the array value inside another array [with increment values ]    ');
+
+        dis.innerHTML = '';
+ 
+        //  Define the main array :
+           let arr =  [ 1 , 2 , 3 ];  
+    
+        // Define another array with the value of main array after mapping [returing math calculation values]  :
+            let newArr = arr.map( (item) => {
+                return item +=1  ; 
+            } );        
+        // ---------------------------------------
+ 
+        // printing the new array after mapping :
+           console.log(newArr) ;              
+            
+        
+        dis.innerHTML += 'using mapping function to return the array value inside another array [with increament values ]  : ' + mapIncrementValue + '<br>' ;
+        
+    }
+    // =========================================================
+       //===========================================================
     
     function display() {
         document.getElementById("note").innerHTML = myTest + "\n\n" + "=".repeat(90) + "\n\n";

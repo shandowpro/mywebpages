@@ -296,7 +296,7 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
+        <span> Welcome to ReactJS APPS Course | </span> <br>
         14-Array Functions        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section => {Array functions} concept , Syntax and examples with  <span><strong> in modern JS  </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong>  {Array functions} examples usages modern JS in ES6 </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1091,14 +1091,14 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about {Array Functions}  basics concept , Syntax , practical  EXPs as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li> {Array Functions} concept , common kinds and usages  </li>
+                    <li> {Array Functions} syntax  </li>
+                    <li> {Array Functions}  practical EXPS  </li>
                 </ol>
             </article>
         </Section>
@@ -1109,113 +1109,85 @@
             <header>
                 <h3> 14-Array Functions concept : </h3>
             </header>
-           
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
-
-            <p> {This} Reference value in the {Regular function} Rules : <br>
+          
+            <p>  {Array Functions} concept : <br>
                 <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
+                    <li> Group of Methods and functions used with array , to process certain processing to the main array or another array  </li>
+                </ul>
+            </p>
+
+            <p>  commmon kinds of Array funcions  : <br>
+                <ul> 
+                    <li> obj/arr.filter() ; => [used with spreading operators in previous lesson ] </li>
+                    <li> obj/arr.map() ;   => <br> 
+                        <ol> 
+                            <li> it is callback functoin , and uses inner arrow function to loop inside the array or object    </li>
+                            <li> [ it some sort looping method , and it is about dealing with each item inside the array , object ]   </li>
+                        </ol>
+                    </li>
                 </ul>    
             </p> <br> <hr> <br>
-
-
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
+            
+            <p>  Some usages of Array functions  : <br>
                 <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
+                    <li> {arr.map()} => used usually with dealing storing another dataset inside another dataset with some processing in it's contents     </li>
+                    <li> will be used alot inside the reactJs applications => [even with more detialed advanced]  </li>
                 </ul>    
-            </p> <br> <hr>
+            </p> <br> <hr> <br>
+            
+            <p>   { Array functions} syntax and practical exps [.map()]   : <br>
+                <ul> 
+                    <li> using {arr.map()} for mapping inside an array and return simple value of the each item inside another new array  <br>                        
+                        <code>
+                            <span class="one"></span> // Define the main array : <br>
+                            <span class="one"></span> const arr = [1 , 2 , 3 ] ; <br>
+                            
+                            <span class="one"></span> // Mapping the old array items[simple value] inside the new array  : <br>
+                            <span class="one"></span> const newArr = arr.map( (item) => { <br>
+                                <span class="two"></span> return  item ;  <br>
+                            <span class="one"></span> } ) ; <br>
                         
-            <ol> 
-                <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
+                            <span class="one"></span>  console.log(newArr) ; =>  [print the array value wthout any changing ] <br>
+                        </code>
+                    </li> <br> <br>
 
-                    <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
-                            <span class="one"></span> }  <br> <br>
+                    <li> using {arr.map()} for mapping inside an array and return simple value of the each item inside another new array  <br>                        
+                        <code>
+                            <span class="one"></span> // Define the main array : <br>
+                            <span class="one"></span> const arr = [1 , 2 , 3 ] ; <br>
+                            
+                            <span class="one"></span> // Mapping the old array items[condition return] inside the new array  : <br>
+                            <span class="one"></span> const newArr = arr.map( (item) => { <br>
+                                <span class="two"></span> return  item === 2  ;  <br>
+                            <span class="one"></span> } ) ; <br>
+
+                            <span class="one"></span>  console.log(newArr) ; =>  [print the array with boolean values  ] <br>
+                        </code>
+                    </li>
  
-                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
-                                <span class="one"></span>  window.onload = test;  <br>
-                        </code> <br> <br>
-                    
-                    <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
-                            <span class="one"></span> }  <br> <br>
-                       </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-    
-                <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
-                    <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining constructor funtion : <br>
-                        <span class="one"></span> let test = function () {  <br>
+                    <li> using {arr.map()} for mapping inside an array and return proecced value [increament] of the each item inside another new array  <br>                        
+                        <code>
+                            <span class="one"></span> // Define the main array : <br>
+                            <span class="one"></span> const arr = [1 , 2 , 3 ] ; <br>
                             
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  that = this ;  <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  that.age++ ;  <br>
-                                <span class="three"></span>  console.log(that.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
+                            <span class="one"></span> // Mapping the old array items[condition return] inside the new array  : <br>
+                            <span class="one"></span> const newArr = arr.map( (item) => { <br>
+                                <span class="two"></span> return  item +=  ;  <br>
+                            <span class="one"></span> } ) ; <br>
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-
-                <li> {Arrow function} => {This} attidute and properties Syntax : <br>
-                    <h4> The {This} has the access through the inner nested function  :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining Arrow constructor funtion : <br>
-                        <span class="one"></span> let test = () => {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
-                                <span class="three"></span>  this.age++ ;  <br>
-                                <span class="three"></span>  console.log(this.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
-
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-
-                <hr> <br> <hr> <br>
-    
-            </ol>
-            <!-- --------------------------- -->
+                            <span class="one"></span>  console.log(newArr) ; =>  [print the array with increased  values  ] <br>
+                        </code>
+                    </li>
+ 
+                </ul>    
+            </p> <br> <hr> <br>
+ 
+             <!-- --------------------------- -->
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> [This] {Arrow functions} & {Regular functions} ->  will reperent the value of the method the been called by  </li>
-                    <li> [This] operator in the {Regular function}  ->  Can not access through the inner nested funcions , and needs to be assigned into another variable  </li>
-                    <li> [This] operator in the {Arrow function}  -> Can be used directly inside the inner nested functions  </li>
+                    <li>   </li>
+                     
                 </ul>
             </p>
                                                                      
@@ -1226,7 +1198,7 @@
                 <code> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source main JS [main.js] file </button>
                     </a> <br> <hr> <br> 
                     
                     <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/myplugins.js">  
