@@ -1,37 +1,43 @@
-//  5 Arrow Function And This Value
+//   15-Array Simple MethodesSlice,Splice,Reverse,Concat,Join :
 /* Main lessons functions :
-    1- [This] Reference value in the Regular function  
-    2- {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }
-    3- {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value }
+    1- slice() 
+    2- splice()
+    3- reverse() 
+    4- concat() & spread operator {...} 
+    5- join() 
 */
 // ---------------------------------------------------------------------
 
-// 5 Arrow Function And [This] operator  :
+// 15-Array Simple MethodesSlice,Splice,Reverse,Concat,Join :
 function myTest() {
     'use strict' ;
-    alert('Welcome to 5 Arrow Function And This Value ') ;
+    alert('Welcome to  15-Array Simple Methodes Slice,Splice,Reverse,Concat,Join  ') ;
     
     var dis = document.getElementById('note');
      
-    var x = prompt(' Please choose one of functions from below options : \n  1] [This] Reference value in the Regular function \n  2] {This} Reference value in the Arrow function  \n  3] {This} attidute value in the both {Arrow function} & {Regular Function }  ');    
+    var x = prompt(' Please choose one of functions from below options : \n  1]  using slice() to assign a copy of aray inside another array \n  2]  using splice() to assign a cutten part of a given array inside another array   \n  3] using reverse() to assign a reversed array value of a given array inside another array \n 4] using concat() & (spreading operator)  to merge between (2) arrays  inside another array  \n 5]  using join() to insert a special string between array\' elements ');    
 
     if (x == 1 ) {
         
-        regFuncValue();
+        sliceArr();
 
     } else if (x == 2) {
     
-        regFuncThis();
+        spliceArr();
         
     } else if (x == 3) {
     
-        arrowFuncThis();       
+        reverseArr();       
     
-    // } else if (x == 4) {
+    } else if (x == 4) {
 
-    //     arrowShortFunc2();
+        concatArr();
     
-    // } else if (x == 5) {
+    } else if (x == 5) {
+
+        joinArr();
+
+    // } else if (x == 6) {
 
     //     arrowShortFunc3();
 
@@ -41,88 +47,156 @@ function myTest() {
 
     // =========================================================================
 
-    // 1] Test and print [This] Reference value in the Regular function :
-    function regFuncValue() {
-        alert('Welcome to Test and print [This] Reference value in the Regular function  ');
+    // 1] Test using slice() to assign a copy of aray inside another array  :
+    function sliceArr() {
+        alert('Welcome to Test using slice() to assign a copy of aray inside another array    ');
 
         dis.innerHTML = '';
+        
+        // Define the main Array :
+        let arr = [ 1 , 2 , 3 , 4 , 5] ;  
+ 
+        // Define a new Array with value of sliced of the main array  [with starting index] :
+        let arr1 = arr.slice(1) ;  
+ 
+        // Define a new Array with value of sliced of the main array  [with starting index & ending index] :
+        let arr2 = arr.slice(1 , 3) ;  
+ 
+        // Define a new Array with value of sliced of the main array  [with negative index -1] :
+        let arr3 = arr.slice(-1) ;  
+ 
+        // Define a new Array with value of sliced of the main array  [with negative index -2] :
+        let arr4 = arr.slice(-2) ;  
+ 
 
-
-        // Assigning the element innerHTML by the value of it's caller funtion :
-        let regFuncVal1 = function() {
-            document.getElementById('note').innerHTML = this;
-        }
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {window} object  & {onload} event :
-        window.onload = regFuncVal1;
-        
+        // printing all sliced arrays :
+        console.log(`new Array with value of sliced of the main array  [with starting index] ${arr1}
+        new Array with value of sliced of the main array  [with starting index & ending index]  ${arr2}
+        new Array with value of sliced of the main array [with negative index -1]  ${arr3}
+        new Array with value of sliced of the main array  [with negative index -2] ${arr4}
+        `   );
         // ---------------------------------------
+         
         
-        // Executing the [this] 's refers value within {Regular function} by using built-in {button} object  & {addEventLister} event  :
-        document.getElementById('elem').addEventListener( 'click' , regFuncVal1);         
-        // ---------------------------------------
-        
-        // console.log('Regular Function of calling function by using [this] operator : ' , regFuncVal1() ) ;
-        console.log('Regular Function Syntax by using Default method : '  ,  regFuncVal1 ) ;
-        
-        dis.innerHTML = 'Regular Function Syntax by using Default method : ' +  regFuncVal1 + '<br>' ;
+        dis.innerHTML = ' using slice() to assign a copy of aray inside another array: ' +  sliceArr + '<br>' ;
 
         // ------------------------
 
     }
     // =============================================================
 
-    // 2] {This} usages and attidute value within the [Regular function] => { Auto counter application upon [this] value }:
-    function regFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Regular function] ');
+    // 2] using splice() to assign a cutten part of a given array inside another array :
+    function spliceArr() {
+        alert('Welcome to Test using splice() to assign a cutten part of a given array inside another array ');
 
         dis.innerHTML = '';
 
-        let regFuncThisApp = function () {
-            let that = this;
-            this.age = 0;
+        // Define the main Array :
+           let arr = [ 1 , 2 , 3 , 4 , 5 , 6 , 7, 8 , 9] ;  
+ 
+        // Define a new Array with value of spliced of the main array  [with starting index] :
+           let arr1 = arr.splice(5) ;  
+ 
+        // Define a new Array with value of spliced of the main array  [with starting index & ending index] :
+            let arr2 = arr.splice(1 , 2) ;  
+ 
+        // Define a new Array with value of spliced of the main array  [with negative index -1] :
+            let arr3 = arr.splice(-1) ;  
+ 
+        // Define a new Array with value of spliced of the main array  [with negative index -2] :
+            let arr4 = arr.splice(-2) ;  
+ 
 
-            setInterval( function(){
-                that.age++ ;
-                console.log(that.age);
-            }, 1000 );
-
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new regFuncThisApp();   
-        }
-
-       
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : '  , regFuncThisApp ) ;
-       
-        dis.innerHTML += 'Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : ' + regFuncThisApp + '<br>' ;
+        // printing all spliced arrays :
+            console.log(`new Array with value of spliced of the main array  [with starting index] ${arr1}
+            new Array with value of spliced of the main array  [with starting index & ending index]  ${arr2}
+            new Array with value of spliced of the main array [with negative index -1]  ${arr3}
+            new Array with value of spliced of the main array  [with negative index -2] ${arr4}
+            `   );
+        // ---------------------------------------
+         
+        dis.innerHTML += '  using splice() to assign a cutten part of a given array inside another array : ' + spliceArr + '<br>' ;
         
     }
     // =========================================================
     
-    // 3] {This} usages and Attidute value within the [Arrow function] => { Auto counter application upon [this] value }:
-    function arrowFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Arrow function] ');
+    // 3] using reverse() to assign a reversed array value of a given array inside another array :
+    function reverseArr() {
+        alert('Welcome to Test using reverse() to assign a reversed array value of a given array inside another array ');
 
         dis.innerHTML = '';
 
-        let arrowFuncThisApp = function()  {
-         
-            this.age = 0;
+        // Define the main Array :
+        let arr = [ 1 , 2 , 3 , 4 , 5 , 6 , 7, 8 , 9] ;  
+            
+        // Define an array with reversed main array  :
+        let arr1 =  arr.reverse();  
 
-            setInterval( () => {
-                this.age++ ;
-                console.log(this.age);
-            }, 1000 );
+
+        // printing reversed array and main array :
+        console.log(` The main array is :  ${arr}
+        new Array with value of reversed of main array  :  ${arr1}
+        `   );
+        // ---------------------------------------
         
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new arrowFuncThisApp();
-        }
-    
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Arrow Function Syntax by using directly [this] Method : '  , arrowFuncThisApp ) ;
-       
-        dis.innerHTML += 'Arrow Function Syntax by using directly [this] Method : '  + arrowFuncThisApp + '<br>' ;
+
+        dis.innerHTML += '  using reverse() to assign a reversed array value of a given array inside another array : '  + reverseArr + '<br>' ;
+        
+    }
+    // =========================================================
+
+    // 4] using concat() & (spreading operator)  to merge between (2) arrays  inside another array   :
+    function concatArr() {
+        alert('Welcome to Test using concat() & (spreading operator)  to merge between (2) arrays  inside another array    ');
+
+        dis.innerHTML = '';
+ 
+        // Define (2) arrays  : 
+            let arr1 = [ 1 , 2 , 3 , 4 , 5 , 6 , 7, 8 , 9] ;    
+            let arr2 = [ 'a' , 'b' , 'c' ,'d' ,'e'] ;    
+            
+        
+        // Define new array of value of merged (2) arrays [using conct()  ]  : 
+            let arr3 = arr1.concat(arr2) ; 
+        
+         // Define new array of value of merged (2) arrays [using spreading operatar()  ]  : 
+            let arr4 = [arr1, ...arr2]; 
+
+        // printing main (2) arrays +  merged array :
+            console.log(`main first  Array  :  ${arr1}           
+            main second Array  :  ${arr2}
+            Final merged Array [using concat() method]  :  ${arr3}
+            Final merged Array [using  spreading operator{...} method]  :  ${arr4}
+            ` );
+        // ---------------------------------------
+              
+        dis.innerHTML += 'using both concat() & (spreading operator) to merge between (2) arrays  inside another array  Method : '  + concatArr + '<br>' ;
+        
+    }
+    // =========================================================
+
+    // 5] using join() to insert a special string between array  elements :
+
+    function joinArr() {
+        alert('Welcome to Test using join() to insert a special string between array\' elements     ');
+
+        dis.innerHTML = '';
+ 
+
+        // Define  the main array :
+        let arr1 = [ 1 , 2 , 3 , 4 , 5 , 6 , 7, 8 , 9] ;    
+
+        // Define a new array with inserted special stirng  : 
+        let arr2 = arr1.join('-') ;
+        
+        // printing main (2) arrays [main array + joined array] :
+            console.log(`main Array  :  ${arr1}           
+            joined Array  :  ${arr2}
+            ` );
+        // ---------------------------------------
+
+
+        dis.innerHTML += 'using join() to insert a special string between array\' elements : '  + joinArr + '<br>' ;
         
     }
     // =========================================================
