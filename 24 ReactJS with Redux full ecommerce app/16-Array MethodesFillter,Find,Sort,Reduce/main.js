@@ -1,35 +1,37 @@
-//  5 Arrow Function And This Value
+// /16-Array MethodesFillter,Find,Sort,Reduce
 /* Main lessons functions :
-    1- [This] Reference value in the Regular function  
-    2- {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }
-    3- {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value }
+     1- filter() 
+     2- find()
+     3- sort()
+     4- reduce()
+
 */
 // ---------------------------------------------------------------------
 
-// 5 Arrow Function And [This] operator  :
+// 16-Array Methodes Fillter,Find,Sort,Reduce   :
 function myTest() {
     'use strict' ;
-    alert('Welcome to 5 Arrow Function And This Value ') ;
+    alert('Welcome to 16-Array Methodes Fillter,Find,Sort,Reduce   ') ;
     
     var dis = document.getElementById('note');
      
-    var x = prompt(' Please choose one of functions from below options : \n  1] [This] Reference value in the Regular function \n  2] {This} Reference value in the Arrow function  \n  3] {This} attidute value in the both {Arrow function} & {Regular Function }  ');    
+    var x = prompt(' Please choose one of functions from below options : \n  1] using the filter method to get a new array a given array  \n  2] using the find methoed to find certtain value inside a given array \n 3] using the sort method to sort a given array according to a certain sorting pattern  \n  4] using the reduce method to apply a accumulative/concatentating process on the given array ');    
 
     if (x == 1 ) {
         
-        regFuncValue();
+        filterArr();
 
     } else if (x == 2) {
     
-        regFuncThis();
+        findArr();
         
     } else if (x == 3) {
     
-        arrowFuncThis();       
+        sortArr();       
     
-    // } else if (x == 4) {
+    } else if (x == 4) {
 
-    //     arrowShortFunc2();
+        reduceArr();
     
     // } else if (x == 5) {
 
@@ -41,88 +43,167 @@ function myTest() {
 
     // =========================================================================
 
-    // 1] Test and print [This] Reference value in the Regular function :
-    function regFuncValue() {
-        alert('Welcome to Test and print [This] Reference value in the Regular function  ');
+    //  1] using the {.filter()} method to get a new array a given array   :
+    function filterArr() {
+        alert('Welcome to Test using the {.filter()} method to get a new array a given array ');
 
         dis.innerHTML = '';
 
 
-        // Assigning the element innerHTML by the value of it's caller funtion :
-        let regFuncVal1 = function() {
-            document.getElementById('note').innerHTML = this;
-        }
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {window} object  & {onload} event :
-        window.onload = regFuncVal1;
-        
+        //  Define a Main array : 
+            const arr = [1 , 2 , 3 , 4 , 5 , 6] ;
+ 
+        //  Define new array of filtered value of the main array [according to equal certain value ]  : 
+            const arr1 = arr.filter(item=> item === 5  )  ;
         // ---------------------------------------
         
-        // Executing the [this] 's refers value within {Regular function} by using built-in {button} object  & {addEventLister} event  :
-        document.getElementById('elem').addEventListener( 'click' , regFuncVal1);         
+        //  Define new array of filtered value of the main array [according to biggrer than certain value ]  : 
+            const arr2 = arr.filter( item => item > 3  )  ;
+
         // ---------------------------------------
-        
-        // console.log('Regular Function of calling function by using [this] operator : ' , regFuncVal1() ) ;
-        console.log('Regular Function Syntax by using Default method : '  ,  regFuncVal1 ) ;
-        
-        dis.innerHTML = 'Regular Function Syntax by using Default method : ' +  regFuncVal1 + '<br>' ;
+        //  Define new array of filtered value of the main array [according to smaller than certain value ]  : 
+            const arr3 = arr.filter( item => item < 5  )  ;
+
+        // ---------------------------------------
+
+        // printing the main array : 
+        console.log(`The main array is 
+         ${arr}`
+         );
+    
+        // printing the filtered array by using [equality condition] : 
+        console.log(`The filtered array by using [equality condition] :
+         ${arr1}` 
+         );
+     
+        // printing the filtered array by using [Bigger than condition] : 
+        console.log(`The filtered array by using [equality condition] :
+         ${arr2}` 
+         );
+     
+        // printing the filtered array by using [Smaller than condition] : 
+        console.log(`The filtered array by using [Smaller condition] :
+         ${arr3}` 
+         );
+     
+    
+        dis.innerHTML = 'using the {.filter()} method to get a new array a given array   : ' +  filterArr + '<br>' ;
 
         // ------------------------
 
     }
     // =============================================================
 
-    // 2] {This} usages and attidute value within the [Regular function] => { Auto counter application upon [this] value }:
-    function regFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Regular function] ');
+    // 2] using the {.find()} method to find certtain value inside a given array :
+    function  findArr() {
+        alert('Welcome to Test using the find method to find certtain value inside a given array ');
 
         dis.innerHTML = '';
+  
+         // Define the main array :
+            const arr = [1 , 2 , 3 , 4 , 5 , 6 ] ;
 
-        let regFuncThisApp = function () {
-            let that = this;
-            this.age = 0;
+        // Define the find variable :
+            const firstFindBiggerValue =  arr.find(item => item > 3   ) ;
 
-            setInterval( function(){
-                that.age++ ;
-                console.log(that.age);
-            }, 1000 );
+        // Define the find variable :
+            const firstFindSmallerValue =  arr.find(item => item < 3  ) ;
 
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new regFuncThisApp();   
-        }
+        // printing the first value is applying the assinged condition by using find() : 
+            console.log(`
+            The first value is applying the assinged condition [bigger than 3] by using find() is :
+            ${firstFindBiggerValue} 
+            
+            The first value is applying the assinged condition [smaller than 3] by using find() is :
+            ${firstFindSmallerValue} 
+            
+            The main array is :
+            ${arr} 
+            ` ) ;
+        // ------------------------------------
 
-       
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : '  , regFuncThisApp ) ;
-       
-        dis.innerHTML += 'Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : ' + regFuncThisApp + '<br>' ;
+        dis.innerHTML += 'using the {.find()} method to find certtain value inside a given array  : ' + findArr  + '<br>' ;
         
     }
     // =========================================================
     
-    // 3] {This} usages and Attidute value within the [Arrow function] => { Auto counter application upon [this] value }:
-    function arrowFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Arrow function] ');
+    //  3]  using the {.sort()} method to sort a given array according to a certain sorting pattern :
+    function sortArr() {
+        alert('Welcome to Test using the {.sort()} method to sort a given array according to a certain sorting pattern  ');
+
+        dis.innerHTML = '';
+  
+        // Define the main array [not ordered numeric array] :
+            const arr1 = [1 ,5, 4, 10, 7, 6 , 2] ;
+            const arr2 = [1 ,5, 4, 10, 7, 6 , 2] ;
+
+
+        // Define new sorted array according to [{Assendingly pattern} -> (from smaller to the bigger) ]  : 
+            const arrs1 = arr1.sort( (a , b) => {
+                if (a > b) return 1
+                if (b > a) return -1
+            } );        
+
+  
+        // Define new sorted array according to [{Desendingly pattern} -> (from bigger to the smaller ) ]  : 
+            const arrs2 = arr2.sort( (a , b) => {
+                if (a < b) return 1 
+                if (b < a) return -1 
+            } );        
+
+        // printing the both value of arrays after being sorted :  
+            console.log(`
+            The main first array is :
+            ${arr1} 
+            The sorted array by using [Assendengily] sorting pattern of first array is :
+            ${arrs1} 
+            The second array is :
+            ${arr2} 
+            The sorted array by using [Descendengily] sorting pattern of second array  is :
+            ${arrs2} 
+            ` ) ;
+        // ---------------------------------------------
+   
+        dis.innerHTML += ' using the {.sort()} method to sort a given array according to a certain sorting pattern [Ascendingly] & [Descndingly]  : '  +  sortArr + '<br>' ;
+        
+    }
+    // =========================================================
+
+    //  4] using the {reduce()} method to apply a accumulative/concatentating process on the given array     :
+    function reduceArr() {
+        alert('Welcome to Test using the {reduce()} method to apply a accumulative/concatentating process on the given array      ');
 
         dis.innerHTML = '';
 
-        let arrowFuncThisApp = function()  {
-         
-            this.age = 0;
 
-            setInterval( () => {
-                this.age++ ;
-                console.log(this.age);
-            }, 1000 );
+        // Define the main array [numeric array] :
+            const arrNum = [1 ,2, 3, 4] ;
         
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new arrowFuncThisApp();
-        }
-    
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Arrow Function Syntax by using directly [this] Method : '  , arrowFuncThisApp ) ;
-       
-        dis.innerHTML += 'Arrow Function Syntax by using directly [this] Method : '  + arrowFuncThisApp + '<br>' ;
+        // Define the main array [letters array] :
+            const arrLetter = ['a' ,'b', 'c', 'd', 'e', 'f'] ;
+
+        // Define a new reduced array from   main numeric array  : 
+            const arrNumR = arrNum.reduce( (total, current) => total + current ,0   );
+         
+        // Define a new reduced array from  main letter array  : 
+            const arrLetterR = arrLetter.reduce( (total, current) => total + current , 'z');
+        
+        //  printing reduced arrays : 
+            console.log(`
+                The main numeric array is :
+                ${arrNum} 
+                The main Letter array is :
+                ${arrLetter} 
+                --------
+                The sorted numeric array is :
+                ${arrNumR} 
+                The sorted Letter array is :
+                ${arrLetterR}  
+            ` ) ;
+        // ---------------------------------------------
+
+
+        dis.innerHTML += 'using the {reduce()} method to apply a accumulative/concatentating process on the given array  : '  + reduceArr + '<br>' ;
         
     }
     // =========================================================

@@ -206,7 +206,7 @@
             
    <!-------------------------------------------------------------------------------------------------------->
     <header id="Main" class="Main wow fadeInDown" data-wow-duration="1s">
-        16-Array MethodesFillter,Find,Sort,Reduce
+        16-Array Methodes Fillter,Find,Sort,Reduce
     </header>
 
 <!-------------------------------------------------------------------------------------------------------->
@@ -296,8 +296,8 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
-        16-Array MethodesFillter,Find,Sort,Reduce       
+        <span> Welcome to ReactJS Course | </span> <br>
+        16-Array Methodes Fillter,Find,Sort,Reduce       
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
     <!-- Options Tool box -->
@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section =>  Js old methods concept , Syntax & pracitcal exps  <span><strong> in modern JS   </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> old methods of js  Methodes Fillter,Find,Sort,Reduce and uses in the modern Js </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1087,18 +1087,19 @@
     <div class="Post" id=post>
         <Section  id="MainC" class="MainC">
             <header>
-                ES6 [5 Arrow Function And This Value] Main Topics : <br>
+                ReactJs [16-Array Methodes Fillter,Find,Sort,Reduce ] Main Topics : <br>
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about {Array Methodes Fillter,Find,Sort,Reduce } old methods concepts Syntax , pracitical Exps as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li>  {filter()} => </li>
+                    <li>  {find()} => </li>
+                    <li>  {sort()} => </li>
+                    <li>  {reduce()} => </li>
                 </ol>
             </article>
         </Section>
@@ -1107,33 +1108,129 @@
         <!------------------------------------------------------------------------------>
         <section class="JSDOMCon" id="JSDOMCon">
             <header>
-                <h3> 16-Array MethodesFillter,Find,Sort,Reduceconcept : </h3>
+                <h3> 16-Array MethodesFillter,Find,Sort,Reduce concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
+        
+            <p> These are group of old JS's methods , which will be used a lot in the reactJs applications    </p>
+             
+            <p> The concpet and functionality of these methods as following   : <br>
+                <ul>               
+                    <li>  {filter()} =>  <br>
+                        <p>  to filter the given array according to a certain conditon     </p>  
+                        <p>  this method  (NOT affecting) on the given main array  </p>  
+                        <p>  this method  uses [callback] function logic condition to filter the given array according to it </p>                     
+                        <p>  this method is simmiler to {.map()} , but differs from it in the result type as following : <br>
+                            <ol> 
+                                <li> {arr.filter()} => return simple values [that applying the assigned condition]  as a new array  </li>
+                                <li> {arr.map()} => return boolean values [that applying the assigned condition - applying :true || NOT applying : false -] as a new array    </li>
+                            </ol>
+                        </p>                     
+                    </li> <br>
 
-            <p> {This} Reference value in the {Regular function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
+                    <li>  {find()} =>   <br>
+                        <p>  to find certain value insdie the given array according to a certain conditon     </p>  
+                        <p>  this method  return a simple variable , not array , which is the main defference between it and {arr.filter()} method which is returnging a new array   </p>  
+                        <p>  this method  (NOT affecting) on the given main array  </p>  
+                    </li> <br>
+                    
+                    
+                    <li>  {sort()} =>  <br>
+                        <p>  to sort certain the given array according to a [certain assignend conditon] OR [sorting pattern] => which are comparisoning between  [2] prarameters : <br>
+                           <ol> 
+                                <li> {a} : (the first current value ) </li> 
+                                <li> {b} : (the second current value)    </li> 
+                           </ol>      
+                         </p>  
+                         <p> the common usages :  <br>
+                            <ol>
+                                 <li> [assendengily sorting - from smaller to bigger] :  by adding sorting pattern as following :   <br>
+                                    <code>
+                                        <span class="one"></span>  const sortedArr =  arr.sort( (a,b) =>  <br>
+                                            <span class="two"></span>  if (a &gt; b)   return  1 [Adding switch]  <br>
+                                            <span class="two"></span>  if (a &lt; b)   return -1 [NOT adding switch]  <br>
+                                        <span class="one"></span> ) ;  <br> <br>
+                                    </code> 
+                                </li>
+                                 
+                                 <li> [Desendengily sorting - from bigger to smaller] :  by adding sorting pattern as following :   <br>
+                                    <code>
+                                        <span class="one"></span>  const sortedArr =  arr.sort( (a,b) =>  <br>
+                                            <span class="two"></span>  if (a &gt; b)   return -1  [NOT adding switch] <br>
+                                            <span class="two"></span>  if (a &lt; b)   return  1  [Adding switch]  <br>
+                                        <span class="one"></span> ) ;  <br> <br>
+                                    </code> 
+                                </li>
+                            </ol>
+                        </p>
+
+                        <p>  this method (IS AFFECTING) on the given main array  </p>  
+                    </li> <br>
+                    
+                    <li>  {reduce()} =>    <br>
+                        <p>  to gather or assemble all the given array's elements , according to [3] main parameters :<br>
+                            <ol> 
+                                <li> [total]: the final accumulative value  => [obligatory]  </li>
+                                <li> [current] : the current value => [obligatory]  </li>
+                                <li> [initial value]: any assigned value (number or letter) => [optional]   </li>
+                            </ol>
+                        </p>  
+                        <p>  this method is (NOT affecting) on the given main array  </p>  
+                        <p>  this method can be used with both numeric array and letter array</p>
+                        <p>  Cases to use the initial value with both [numeric array] and [letter array] :  <br>
+                            <ol> 
+                                <li> using [initial value] with [numeric array] => (must be numeric value)  will be added on all other array elements as number value </li>
+                                <li> using [initial value] with [letter array] => (must be string value)  will be concatenated with all other array elements as string value  </li>
+                            </ol>    
+                        </p>  
+                    </li>
                 </ul>    
             </p> <br> <hr> <br>
-
-
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
-                </ul>    
-            </p> <br> <hr>
                         
-            <ol> 
-                <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
-
-                    <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
+            <p>  pracitcal examples of these methods as following  -> [look at the app  button  ] : <br>
+                <!-- <ul>               
+                    <li>  {filter()} => <br>
                         
+                        <code>  
+                            <span class="one"></span> // Deine a main array : <br>
+                            <span class="one"></span> const arr = [ 1 , 2 , 3 , 4 , 5 , 6]  <br><br>
+ 
+                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
+                                <span class="one"></span>  window.onload = test;  <br>
+                        </code> <br> <br>
+                    
+                     
+                    </li>
+                    
+                    <li>  {find()} =>  <br>
+                        <code>  
+                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
+                            <span class="one"></span> let test = function () {  <br>
+                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
+                            <span class="one"></span> }  <br> <br>
+ 
+                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
+                                <span class="one"></span>  window.onload = test;  <br>
+                        </code> <br> <br>
+                      
+                    
+                    </li>
+                    
+                    <li>  {sort()} =>   <br>
+                        <code>  
+                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
+                            <span class="one"></span> let test = function () {  <br>
+                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
+                            <span class="one"></span> }  <br> <br>
+ 
+                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
+                                <span class="one"></span>  window.onload = test;  <br>
+                        </code> <br> <br>
+                        
+                    
+                    </li>
+                    
+                    <li>  {reduce()} =>    <br>
                         <code>  
                             <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
                             <span class="one"></span> let test = function () {  <br>
@@ -1144,82 +1241,20 @@
                                 <span class="one"></span>  window.onload = test;  <br>
                         </code> <br> <br>
                     
-                    <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
-                            <span class="one"></span> }  <br> <br>
-                       </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-    
-                <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
-                    <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining constructor funtion : <br>
-                        <span class="one"></span> let test = function () {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  that = this ;  <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  that.age++ ;  <br>
-                                <span class="three"></span>  console.log(that.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-
-                <li> {Arrow function} => {This} attidute and properties Syntax : <br>
-                    <h4> The {This} has the access through the inner nested function  :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining Arrow constructor funtion : <br>
-                        <span class="one"></span> let test = () => {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
-                                <span class="three"></span>  this.age++ ;  <br>
-                                <span class="three"></span>  console.log(this.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
-
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-
-                <hr> <br> <hr> <br>
-    
-            </ol>
+                    </li>
+                </ul>     -->
+            </p> <br> <hr> <br>
+                  
             <!-- --------------------------- -->
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> [This] {Arrow functions} & {Regular functions} ->  will reperent the value of the method the been called by  </li>
-                    <li> [This] operator in the {Regular function}  ->  Can not access through the inner nested funcions , and needs to be assigned into another variable  </li>
-                    <li> [This] operator in the {Arrow function}  -> Can be used directly inside the inner nested functions  </li>
+                    <li> all of these Js methods will be used apps in the reactJS Apps   </li>
                 </ul>
             </p>
                                                                      
-            <h3> ES6 [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
+            <h3>  [main.js] Functions and scripts file of this lesson as following :  </h3> <br>
             
             <ol class="codes" >                    
                 <li> Page Sources : </li>
@@ -1455,7 +1490,7 @@
             -->                        
         </section> 
 
-        <button type="button" class="btn" onclick="myTest()"> Click to Start [ (this) operator testing with both functions ] method   Application </button>
+        <button type="button" class="btn" onclick="myTest()"> Click to Start [ Array methods {filter() , find() , sort() , reduce() }  ] methods   Application </button>
 
         <script src="main.js"></script> 
         
@@ -1602,7 +1637,7 @@
     </section>
 
     <script>
-        alert("Welcome to 16-Array MethodesFillter,Find,Sort,Reduce");
+        alert("Welcome to 16-Array Methodes Fillter,Find,Sort,Reduce");
     </script>
     
 <!-- Resources files -->
