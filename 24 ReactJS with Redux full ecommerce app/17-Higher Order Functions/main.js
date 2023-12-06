@@ -1,31 +1,30 @@
-//  5 Arrow Function And This Value
+//  17-Higher Order Functions
 /* Main lessons functions :
-    1- [This] Reference value in the Regular function  
-    2- {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }
-    3- {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value }
+    1- First type of higher order function [with functional parameter ] :
+    2- Second type of higher order function [with functional return ]  : 
 */
 // ---------------------------------------------------------------------
 
-// 5 Arrow Function And [This] operator  :
+// 17-Higher Order Functions  :
 function myTest() {
     'use strict' ;
-    alert('Welcome to 5 Arrow Function And This Value ') ;
+    alert('Welcome to 17-Higher Order Functions ') ;
     
     var dis = document.getElementById('note');
      
-    var x = prompt(' Please choose one of functions from below options : \n  1] [This] Reference value in the Regular function \n  2] {This} Reference value in the Arrow function  \n  3] {This} attidute value in the both {Arrow function} & {Regular Function }  ');    
+    var x = prompt(' Please choose one of functions from below options : \n  1] Test First type of higher order function [with functional parameter ]    \n  2] Test Second type of higher order function [with functional return ] ');    
 
     if (x == 1 ) {
         
-        regFuncValue();
+        hoFuncPar();
 
     } else if (x == 2) {
     
-        regFuncThis();
+        hoFuncReturn();
         
-    } else if (x == 3) {
+    // } else if (x == 3) {
     
-        arrowFuncThis();       
+        // arrowFuncThis();       
     
     // } else if (x == 4) {
 
@@ -41,92 +40,80 @@ function myTest() {
 
     // =========================================================================
 
-    // 1] Test and print [This] Reference value in the Regular function :
-    function regFuncValue() {
-        alert('Welcome to Test and print [This] Reference value in the Regular function  ');
+    //  1] Test First type of higher order function [with functional parameter ]   :  
+     function hoFuncPar() {
+        alert('Welcome to  Test First type of higher order function [with functional parameter ]   ');
 
         dis.innerHTML = '';
 
 
-        // Assigning the element innerHTML by the value of it's caller funtion :
-        let regFuncVal1 = function() {
-            document.getElementById('note').innerHTML = this;
-        }
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {window} object  & {onload} event :
-        window.onload = regFuncVal1;
-        
-        // ---------------------------------------
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {button} object  & {addEventLister} event  :
-        document.getElementById('elem').addEventListener( 'click' , regFuncVal1);         
-        // ---------------------------------------
-        
-        // console.log('Regular Function of calling function by using [this] operator : ' , regFuncVal1() ) ;
-        console.log('Regular Function Syntax by using Default method : '  ,  regFuncVal1 ) ;
-        
-        dis.innerHTML = 'Regular Function Syntax by using Default method : ' +  regFuncVal1 + '<br>' ;
+        //  Define a normal function of converting a given string value parameter in to lower case  :
+            const  lowerCase = (str) => {
+                return str.toLowerCase(str) ; 
+            }
+        // ------------------------------
+
+
+        // Define a function of first type Higher order function [that using the perious defined normal  function as one of it's parameter ] :  
+            const transform = ( fn , word) => {
+                // returning the both [functional parameter {callback function}] & [ other parameter as it's functional parameter 's inner parameter] :   
+                return fn(word) ;
+            }
+        // ---------------------------
+
+        // calling and using the Higher Order Function [with assigning main higher order function's parameters => predefined callback function  & stringvalue ] :
+            console.log(transform(lowerCase , 'SHADI' ) );    
+        // ---------------------------------
+       
+
+        dis.innerHTML = 'Test First type of higher order function [with functional parameter ] app  : ' +  hoFuncPar + '<br>' ;
 
         // ------------------------
 
     }
     // =============================================================
 
-    // 2] {This} usages and attidute value within the [Regular function] => { Auto counter application upon [this] value }:
-    function regFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Regular function] ');
+    // 2] Test Second type of higher order function [with functional return ] :
+    function  hoFuncReturn() {
+        alert('Welcome to Test Second type of higher order function [with functional return ] ');
 
         dis.innerHTML = '';
-
-        let regFuncThisApp = function () {
-            let that = this;
-            this.age = 0;
-
-            setInterval( function(){
-                that.age++ ;
-                console.log(that.age);
-            }, 1000 );
-
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new regFuncThisApp();   
+ 
+         // Define a function of second type Higher order function [that return a new fuction as the value of it's reutnrining    ] :  
+         const sayHi = (welcome) => {
+            // returning  a new function [arrow function] with it's own paramnter and the main funcion's parameter (to access to this function's return value -> must use the defined functional variable with it's value   )  :  
+            return  (name) => {
+                console.log(`${welcome} ${name} `) ;
+            } 
         }
+        // ---------------------------
 
-       
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : '  , regFuncThisApp ) ;
-       
-        dis.innerHTML += 'Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : ' + regFuncThisApp + '<br>' ;
+        //  Define a new functional variable with the value of the main higher order fuction return value   :
+             const hi = sayHi('welcome [from the functional variable ] ') ;
+        // ---------------------------------
+
+
+        // Trying the calling and using of the [direct high order function] -> (will throw an Error) or present no thing : 
+            console.log( `The return value of [direct high order function] is : 
+           : `);    
+        
+             sayHi('Welcome [from the main direct high order function ] ')  ;
+            //  --------------------------------
+             
+        // calling and using of defined functional variable return value [with using the inner functinal return parameter ]   : 
+            console.log( `The return value of [defined functional variable] is : 
+             `);    
+             
+             hi('Shadi') ;
+            
+        // ---------------------------------
+   
+        dis.innerHTML += 'Test Second type of higher order function [with functional return ] app : ' + hoFuncReturn + '<br>' ;
         
     }
     // =========================================================
     
-    // 3] {This} usages and Attidute value within the [Arrow function] => { Auto counter application upon [this] value }:
-    function arrowFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Arrow function] ');
-
-        dis.innerHTML = '';
-
-        let arrowFuncThisApp = function()  {
-         
-            this.age = 0;
-
-            setInterval( () => {
-                this.age++ ;
-                console.log(this.age);
-            }, 1000 );
-        
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new arrowFuncThisApp();
-        }
-    
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Arrow Function Syntax by using directly [this] Method : '  , arrowFuncThisApp ) ;
-       
-        dis.innerHTML += 'Arrow Function Syntax by using directly [this] Method : '  + arrowFuncThisApp + '<br>' ;
-        
-    }
-    // =========================================================
-
+  
    //===========================================================
     
     function display() {
