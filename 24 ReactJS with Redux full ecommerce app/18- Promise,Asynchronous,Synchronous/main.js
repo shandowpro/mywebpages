@@ -1,31 +1,30 @@
-//  5 Arrow Function And This Value
+//  18- Promise,Asynchronous,Synchronous :
 /* Main lessons functions :
-    1- [This] Reference value in the Regular function  
-    2- {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }
-    3- {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value }
+    1- Defining [Defualt form] promise object and then function  
+    2- Defining [Shorted chain form] promise object and then function   
 */
 // ---------------------------------------------------------------------
 
-// 5 Arrow Function And [This] operator  :
+// 18- Promise,Asynchronous,Synchronous  :
 function myTest() {
     'use strict' ;
-    alert('Welcome to 5 Arrow Function And This Value ') ;
+    alert('Welcome to 18- Promise,Asynchronous,Synchronous ') ;
     
     var dis = document.getElementById('note');
      
-    var x = prompt(' Please choose one of functions from below options : \n  1] [This] Reference value in the Regular function \n  2] {This} Reference value in the Arrow function  \n  3] {This} attidute value in the both {Arrow function} & {Regular Function }  ');    
+    var x = prompt(' Please choose one of functions from below options : \n  1] Defining [Defualt form] promise object and then function   \n  2] Defining [Shorted chain form] promise object and then function ');    
 
     if (x == 1 ) {
         
-        regFuncValue();
+        defPromise();
 
     } else if (x == 2) {
     
-        regFuncThis();
+        shortPromise();
         
-    } else if (x == 3) {
+    // } else if (x == 3) {
     
-        arrowFuncThis();       
+        // arrowFuncThis();       
     
     // } else if (x == 4) {
 
@@ -41,96 +40,85 @@ function myTest() {
 
     // =========================================================================
 
-    // 1] Test and print [This] Reference value in the Regular function :
-    function regFuncValue() {
-        alert('Welcome to Test and print [This] Reference value in the Regular function  ');
+    // 1] Defining [Defualt form] promise object and then function :
+    function defPromise() {
+        alert('Welcome to Test  Defining [Defualt form] promise object and then function  ');
 
         dis.innerHTML = '';
 
+        const x = 1 ;
 
-        // Assigning the element innerHTML by the value of it's caller funtion :
-        let regFuncVal1 = function() {
-            document.getElementById('note').innerHTML = this;
-        }
+        // Defining the promise as extracted object froim the main promise Class :
+        let myPromise = new Promise( (success , error) => {
+            if (x === 1) { 
+                console.log('Correct');
+                success('Fethcing data from API has Done') ;
+                console.log('Suceess'); 
+            } else {
+                console.log('Wrong'); 
+                error('Fetching Data from API is Failed ') 
+                console.log('Fialed'); 
+            }
+        } ) ;
+        // ------------------------------------
         
-        // Executing the [this] 's refers value within {Regular function} by using built-in {window} object  & {onload} event :
-        window.onload = regFuncVal1;
-        
+        // Executing the defined promise :     
+            myPromise.then(
+                (resolve) => console.log(resolve) , 
+                (rejected) => console.log(rejected)  
+            ) ; 
         // ---------------------------------------
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {button} object  & {addEventLister} event  :
-        document.getElementById('elem').addEventListener( 'click' , regFuncVal1);         
-        // ---------------------------------------
-        
-        // console.log('Regular Function of calling function by using [this] operator : ' , regFuncVal1() ) ;
-        console.log('Regular Function Syntax by using Default method : '  ,  regFuncVal1 ) ;
-        
-        dis.innerHTML = 'Regular Function Syntax by using Default method : ' +  regFuncVal1 + '<br>' ;
+          
+        dis.innerHTML = 'Defining [Defualt form] promise object and then function : ' + defPromise + '<br>' ;
 
         // ------------------------
 
     }
     // =============================================================
 
-    // 2] {This} usages and attidute value within the [Regular function] => { Auto counter application upon [this] value }:
-    function regFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Regular function] ');
+    // 2] Defining [Shorted chain form] promise object and then function    :
+    function shortPromise() {
+        alert('Welcome to Test Defining [Shorted chain form] promise object and then function ');
 
         dis.innerHTML = '';
 
-        let regFuncThisApp = function () {
-            let that = this;
-            this.age = 0;
+        // Define a testing variable in the promise :
+            const x = 0 ;
+        // --------------------
 
-            setInterval( function(){
-                that.age++ ;
-                console.log(that.age);
-            }, 1000 );
 
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new regFuncThisApp();   
-        }
+        // Define a new promise object  :
+        let myPromise = new Promise ( ( success , failed ) =>  {
+            if (x === 1) {
+                 console.log('Correct');
+                success('Fethcing data from API has Done') ;
+                console.log('Suceess'); 
+            } else {
+                console.log('Wrong'); 
+                failed('Fetching Data from API is Failed ') 
+                console.log('Fialed'); 
+            }
 
-       
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : '  , regFuncThisApp ) ;
-       
-        dis.innerHTML += 'Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : ' + regFuncThisApp + '<br>' ;
-        
-    }
-    // =========================================================
-    
-    // 3] {This} usages and Attidute value within the [Arrow function] => { Auto counter application upon [this] value }:
-    function arrowFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Arrow function] ');
+        }).then(
+            // Returning resolve value with custom value :  
+            (resolve) => console.log('Promise Success'),
+            // Returning rejected value with exact value :  
+            (rejected) => console.log(rejected)  
+        ) ; 
 
-        dis.innerHTML = '';
-
-        let arrowFuncThisApp = function()  {
          
-            this.age = 0;
-
-            setInterval( () => {
-                this.age++ ;
-                console.log(this.age);
-            }, 1000 );
         
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new arrowFuncThisApp();
-        }
-    
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Arrow Function Syntax by using directly [this] Method : '  , arrowFuncThisApp ) ;
-       
-        dis.innerHTML += 'Arrow Function Syntax by using directly [this] Method : '  + arrowFuncThisApp + '<br>' ;
+        
+        dis.innerHTML += 'Defining [Shorted chain form] promise object and then function  : ' + shortPromise + '<br>' ;
         
     }
+
     // =========================================================
 
-   //===========================================================
+       //===========================================================
     
     function display() {
-        document.getElementById("note").innerHTML = myTest + "\n\n" + "=".repeat(90) + "\n\n";
+        document.getElementById("note").innerHTML = myTest + "\n\n" + "=".repeat(20) + "\n\n";
     }
 
 }
