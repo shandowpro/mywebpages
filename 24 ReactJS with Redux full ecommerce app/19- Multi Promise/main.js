@@ -1,31 +1,30 @@
-//  5 Arrow Function And This Value
+//  19- Multi Promise :
 /* Main lessons functions :
-    1- [This] Reference value in the Regular function  
-    2- {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }
-    3- {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value }
+    1-  Using default Multi promises by {Asynchronous} concept using [seperated then()] {In-Dependency}  
+    2-  Using default Multi promises by {Asynchronous} concept using [nested then()] {Dependency}
 */
 // ---------------------------------------------------------------------
 
-// 5 Arrow Function And [This] operator  :
+// 19- Multi Promise   :
 function myTest() {
     'use strict' ;
-    alert('Welcome to 5 Arrow Function And This Value ') ;
+    alert('Welcome to 19- Multi Promise  ') ;
     
     var dis = document.getElementById('note');
      
-    var x = prompt(' Please choose one of functions from below options : \n  1] [This] Reference value in the Regular function \n  2] {This} Reference value in the Arrow function  \n  3] {This} attidute value in the both {Arrow function} & {Regular Function }  ');    
+    var x = prompt(' Please choose one of functions from below options : \n  1]  Using default Multi promises by {Asynchronous} concept [seperated then()] {In-Dependency}  \n  2] Using default Multi promises by {Asynchronous} concept [nested then)] {Dependency} ');    
 
     if (x == 1 ) {
         
-        regFuncValue();
+        sepAsyncMultProms();
 
     } else if (x == 2) {
     
-        regFuncThis();
+        nestAsyncMultProms();
         
-    } else if (x == 3) {
+    // } else if (x == 3) {
     
-        arrowFuncThis();       
+        // arrowFuncThis();       
     
     // } else if (x == 4) {
 
@@ -41,92 +40,140 @@ function myTest() {
 
     // =========================================================================
 
-    // 1] Test and print [This] Reference value in the Regular function :
-    function regFuncValue() {
-        alert('Welcome to Test and print [This] Reference value in the Regular function  ');
+    // 1] Test Using default Multi promises by {Asynchronous} concept [seperated then()]   {In-Dependency} :
+    function sepSyncMultProms() {
+        alert('Welcome to Test Using default Multi promises by {Synchronous} concept [seperated then()]    ');
 
         dis.innerHTML = '';
 
+        //  Define serveral variables as dependencies    :
+            let eat = true ; 
+            let play = false ; 
+            let sleep = true ; 
+        // ---------------------------------
+        
+        // Define the first promise [eating] :
+            let eating  = new Promise( (success , failed ) => {
+                if (eat) {
+                    success('Im eating ');
+                } else {
+                    failed('Im NOT eating ');
+                }
+            }); 
 
-        // Assigning the element innerHTML by the value of it's caller funtion :
-        let regFuncVal1 = function() {
-            document.getElementById('note').innerHTML = this;
-        }
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {window} object  & {onload} event :
-        window.onload = regFuncVal1;
-        
-        // ---------------------------------------
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {button} object  & {addEventLister} event  :
-        document.getElementById('elem').addEventListener( 'click' , regFuncVal1);         
-        // ---------------------------------------
-        
-        // console.log('Regular Function of calling function by using [this] operator : ' , regFuncVal1() ) ;
-        console.log('Regular Function Syntax by using Default method : '  ,  regFuncVal1 ) ;
-        
-        dis.innerHTML = 'Regular Function Syntax by using Default method : ' +  regFuncVal1 + '<br>' ;
+        // Define the second promise [playing ] :
+            let playing  = new Promise( (success , failed ) => {
+                if (play) {
+                    success('Im playing ');
+                } else {
+                    failed('Im NOT playing ');
+                }
+            }); 
+
+        // Define the third promise [sleeping] :
+            let sleeping  = new Promise( (success , failed ) => {
+                if (sleep) {
+                    success('Im sleeping ');
+                } else {
+                    failed('Im NOT sleeping ');
+                }
+            }); 
+        //---------------------------------- 
+        //---------------------------------- 
+ 
+        // Exceute the first promise :
+            eating.then(
+                (resolve) => console.log(resolve) ,
+                (rejected) => console.log(rejected)
+            );
+
+            // Exceute the second promise :
+            playing.then(
+                (resolve) => console.log(resolve) ,
+                (rejected) => console.log(rejected)
+            );
+            
+            // Exceute the third promise :
+            sleeping.then(
+                (resolve) => console.log(resolve) ,
+                (rejected) => console.log(rejected)
+            );
+        // ------------------------------
+
+        dis.innerHTML = 'Test Using default Multi promises by {Synchronous} concept [seperated then()]   : ' +  sepSyncMultProms + '<br>' ;
 
         // ------------------------
 
     }
     // =============================================================
 
-    // 2] {This} usages and attidute value within the [Regular function] => { Auto counter application upon [this] value }:
-    function regFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Regular function] ');
+    // 2] Test Using default Multi promises by {Asynchronous} concept [nested then()] {Dependency} :
+    function nestAsyncMultProms() {
+        alert('Welcome to Test Using default Multi promises by {Asynchronous} concept [nested then()]   ');
 
         dis.innerHTML = '';
 
-        let regFuncThisApp = function () {
-            let that = this;
-            this.age = 0;
+        //  Define serveral variables as dependencies    :
+            let eat = true ; 
+            let play = false ; 
+            let sleep = true ; 
+        // ---------------------------------
+    
+        // Define the first promise [eating] :
+            let eating  = new Promise( (success , failed ) => {
+                if (eat) {
+                    success('Im eating ');
+                } else {
+                    failed('Im NOT eating ');
+                }
+            }); 
 
-            setInterval( function(){
-                that.age++ ;
-                console.log(that.age);
-            }, 1000 );
+        // Define the second promise [playing ] :
+            let playing  = new Promise( (success , failed ) => {
+                if (play) {
+                    success('Im playing ');
+                } else {
+                    failed('Im NOT playing ');
+                }
+            }); 
 
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new regFuncThisApp();   
-        }
+        // Define the third promise [sleeping] :
+            let sleeping  = new Promise( (success , failed ) => {
+                if (sleep) {
+                    success('Im sleeping ');
+                } else {
+                    failed('Im NOT sleeping ');
+                }
+            }); 
+        //---------------------------------- 
+        //---------------------------------- 
 
-       
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : '  , regFuncThisApp ) ;
-       
-        dis.innerHTML += 'Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : ' + regFuncThisApp + '<br>' ;
+        // Exceute the all promise [using nested then() in order => {eating -> palying ->  sleeping } ] :
+        // starting the first promise [eating] : 
+        eating.then(
+            (resolve) =>{
+                console.log(resolve) ,
+                // starting the second promise [playing] :
+                playing.then(
+                    (resolve) => {
+                        console.log(resolve) ,
+                        // starting the thired promise [sleeping] :
+                        sleeping.then(
+                            (resolve) => {console.log(resolve)} ,
+                            (rejected) => {console.log(rejected)}
+                        );
+                    },
+                    (rejected) => console.log(rejected)
+                );
+            } ,
+            (rejected) => console.log(rejected)
+        );
+       // -------------------------------------------      
+
+        dis.innerHTML += 'Test Using default Multi promises by {Asynchronous} concept [nested then()]  : ' + nestAsyncMultProms + '<br>' ;
         
     }
     // =========================================================
-    
-    // 3] {This} usages and Attidute value within the [Arrow function] => { Auto counter application upon [this] value }:
-    function arrowFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Arrow function] ');
-
-        dis.innerHTML = '';
-
-        let arrowFuncThisApp = function()  {
-         
-            this.age = 0;
-
-            setInterval( () => {
-                this.age++ ;
-                console.log(this.age);
-            }, 1000 );
-        
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new arrowFuncThisApp();
-        }
-    
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Arrow Function Syntax by using directly [this] Method : '  , arrowFuncThisApp ) ;
-       
-        dis.innerHTML += 'Arrow Function Syntax by using directly [this] Method : '  + arrowFuncThisApp + '<br>' ;
-        
-    }
-    // =========================================================
-
    //===========================================================
     
     function display() {

@@ -296,7 +296,7 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
+        <span> Welcome to ReactJS Course | </span> <br>
         19- Multi Promise       
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section => the default method to deal/executing with multiple Promiseses concept , Syntax , practical exps  <span><strong>  in Modern JS   </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> the default method to deal/executing with multiple Promiseses concept , Syntax , practical exps  in Modern JS and ES6  , which is the introduction to the new tool to deal with multiple promises   </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1087,18 +1087,19 @@
     <div class="Post" id=post>
         <Section  id="MainC" class="MainC">
             <header>
-                ES6 [5 Arrow Function And This Value] Main Topics : <br>
+                ReactJs [19- Multi Promise] Main Topics : <br>
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about {Default method of mutiple promises }  concept , Syntax , practcal exps as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li> Multiple Promises concept   </li>
+                    <li> Multiple Promises Execution methods    </li>
+                    <li> Multiple Promises syntax  </li>
+                    <li> Multiple Promises  practical exps  </li>
                 </ol>
             </article>
         </Section>
@@ -1107,126 +1108,111 @@
         <!------------------------------------------------------------------------------>
         <section class="JSDOMCon" id="JSDOMCon">
             <header>
-                <h3> 19- Multi Promiseconcept : </h3>
+                <h3> 19- Multi Promise concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
+            <p> {Multi Promise} => is  define/execute several promises at Asynchronously (seperatly)  , [Dependency] OR [In-Dependency] </p>
 
-            <p> {This} Reference value in the {Regular function} Rules : <br>
+            <p> {Multi Promise} executing methods   : <br>
                 <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
+                    <li> {Dependency} execution [using nested then() ] => each promise's executing <span class="fa-red-river">Depends</span> on the previous promise executing </li>
+                    <li> {In-Dependency} execution [using seperated then() ] => each promise's executing does <span class="fa-red-river">Not Depends</span> on the previous prosmise executing   </li>
                 </ul>    
             </p> <br> <hr> <br>
 
 
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
+            <p> {Multi Promise} executing Syntax  : <br>
                 <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
+                    <li>  {Synchronous} Executing method  =>  <br>
+                        <code>  
+                            //  Define multiple Promises [2] : <br>
+                            <span class="one"></span> //  Define first Promise : <br>
+                            <span class="one"></span> let promise1 = new Promise( (success , failed) =>  {   <br>
+                                <span class="two"></span>  if (x ===1 ) { <br>
+                                    <span class="three"></span>  success('done'); <br>
+                                <span class='two'></span>  } else {   <br>
+                                    <span class="three"></span>  failed('failed'); <br>
+                                <span class='two'></span>  }     <br>
+                            <span class='one'></span>  });  <br> <br>    
+
+                            <span class="one"></span> //  Define second Promise : <br>
+                            <span class="one"></span> let promise2 = new Promise( (success , failed) =>  {   <br>
+                                <span class="two"></span>  if (x ===1 ) { <br>
+                                    <span class="three"></span>  success('done'); <br>
+                                <span class='two'></span>  } else {   <br>
+                                    <span class="three"></span>  failed('failed'); <br>
+                                <span class='two'></span>  }     <br>
+                            <span class='one'></span>  });  <br> <br>    
+
+                            <span class="one"></span> // Executing the First Promise {using seprated then()}  :    <br>
+                                <span class="two"></span> promise1.then(
+                                    <span class="three"></span> (resolved) => console.log(resolved), <br>
+                                    <span class="three"></span> (rejected) => console.log(rejected) <br>
+                                <span class="two"></span>);    <br>
+
+                            <span class="one"></span> // Executing the Second Promise {using seprated then()}  :    <br>
+                                <span class="two"></span> promise2.then(
+                                    <span class="three"></span> (resolved) => console.log(resolved), <br>
+                                    <span class="three"></span> (rejected) => console.log(rejected) <br>
+                                <span class="two"></span>);    <br>
+                        </code> <br> <br>     
+                    </li> <br>
+                     
+                    <li>  {Asynchronous} Executing method  =>  <br>
+                        <code>  
+                            //  Define multiple Promises [2]  : <br>
+                            <span class="one"></span> //  Define first Promise : <br>
+                            <span class="one"></span> let promise1 = new Promise( (success , failed) =>  {   <br>
+                                <span class="two"></span>  if (x ===1 ) { <br>
+                                    <span class="three"></span>  success('done'); <br>
+                                <span class='two'></span>  } else {   <br>
+                                    <span class="three"></span>  failed('failed'); <br>
+                                <span class='two'></span>  }     <br>
+                            <span class='one'></span>  });  <br> <br>    
+
+                            <span class="one"></span> //  Define second Promise : <br>
+                            <span class="one"></span> let promise2 = new Promise( (success , failed) =>  {   <br>
+                                <span class="two"></span>  if (x ===1 ) { <br>
+                                    <span class="three"></span>  success('done'); <br>
+                                <span class='two'></span>  } else {   <br>
+                                    <span class="three"></span>  failed('failed'); <br>
+                                <span class='two'></span>  }     <br>
+                            <span class='one'></span>  });  <br> <br> <br>    
+
+                            <span class="one"></span> // Executing the First Promise & Second Promise {using Nested then()}  :    <br>
+                            <span class="one"></span> promise1.then(  <br>
+                                <span class="two"></span> (resolved) => { <br>
+                                    <span class="three"></span> console.log(resolved); <br>
+                                    <span class="three"></span> promise2.then( <br>
+                                        <span class="four"></span> (resolved) =>  { console.log(resolved) } ,  <br>
+                                        <span class="four"></span> (rejected) =>  { console.log(rejected) }    <br>
+                                    <span class="three"></span> );   <br>
+                                <span class="two"></span> },  <br>
+                                <span class="two"></span> (rejected) => { console.log(rejected) } <br> 
+                            <span class="one"></span> ); <br>
+                        </code> <br> <br>     
+                    </li>
+                     
                 </ul>    
             </p> <br> <hr>
-                        
-            <ol> 
-                <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
-
-                    <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
-                            <span class="one"></span> }  <br> <br>
- 
-                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
-                                <span class="one"></span>  window.onload = test;  <br>
-                        </code> <br> <br>
-                    
-                    <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
-                            <span class="one"></span> }  <br> <br>
-                       </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-    
-                <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
-                    <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining constructor funtion : <br>
-                        <span class="one"></span> let test = function () {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  that = this ;  <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  that.age++ ;  <br>
-                                <span class="three"></span>  console.log(that.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
-
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-
-                <li> {Arrow function} => {This} attidute and properties Syntax : <br>
-                    <h4> The {This} has the access through the inner nested function  :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining Arrow constructor funtion : <br>
-                        <span class="one"></span> let test = () => {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
-                                <span class="three"></span>  this.age++ ;  <br>
-                                <span class="three"></span>  console.log(this.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
-
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-
-                <hr> <br> <hr> <br>
-    
-            </ol>
+                         
             <!-- --------------------------- -->
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> [This] {Arrow functions} & {Regular functions} ->  will reperent the value of the method the been called by  </li>
-                    <li> [This] operator in the {Regular function}  ->  Can not access through the inner nested funcions , and needs to be assigned into another variable  </li>
-                    <li> [This] operator in the {Arrow function}  -> Can be used directly inside the inner nested functions  </li>
+                    <li>  The nested mehtjod to execute multiple promises is the default method to implement {multiple promises} by using the {Asynchronous} concept </li>
+                    <li>  In the next lesson will take the new advnaced tool to deal/execute the {multiple promises} by using { { Async , Await } } tool , which is shorter &  much easier to modify {multiple promises} inside it </li>
                 </ul>
             </p>
                                                                      
-            <h3> ES6 [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
+            <h3> main file [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
             
             <ol class="codes" >                    
                 <li> Page Sources : </li>
                 <code> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source main  [main.js] file </button>
                     </a> <br> <hr> <br> 
                     
                     <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/myplugins.js">  
@@ -1294,7 +1280,7 @@
 
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
                         <button id=btn13 class="btn0" > [Grouped basic selectors (of the mixed types)]  {loading event}-> [all functions]  </button>
-                    </a> <br> <br> 
+                    </a> <br> <br> *
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
                         <button id=btn13 class="btn0" > Access certain element's siblings [with using advanced selector (Tagname) ] -> for persue [all functions] </button>
@@ -1324,10 +1310,10 @@
 
         <section class="JSDOMImp" id="JSDOMImp">
             <header>
-                <h3>  [5 Arrow Function And This Value] Importance & Benefits : </h3>
+                <h3>  [19 Multi Promise] Importance & Benefits : </h3>
             </header>            
                 <ul>                                                                     
-                    <li> Project/application Structure is critical and basic for any one dealing with project  </li>  
+                    <li>  It is critical and basic for any one dealing several promises with project according to both {Asynchronous} & {Synchronous}   </li>  
                 </ul>                                                               
         </section>
 
@@ -1455,7 +1441,7 @@
             -->                        
         </section> 
 
-        <button type="button" class="btn" onclick="myTest()"> Click to Start [ (this) operator testing with both functions ] method   Application </button>
+        <button type="button" class="btn" onclick="myTest()"> Click to Start [ Multiple Promises default ] method   Application </button>
 
         <script src="main.js"></script> 
         
@@ -1463,7 +1449,7 @@
         
         <div id="note" class="dis"></div> <br><br><br><br>
 
-        <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>             
+        <!-- <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>              -->
         
                                 
         <!-- <button id=btn class="btn0" onclick="display()">Display JS Code [plugins.js] file </button> -->
