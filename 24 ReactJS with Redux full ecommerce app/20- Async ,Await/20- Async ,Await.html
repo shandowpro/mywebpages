@@ -296,7 +296,7 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
+        <span> Welcome to ReactJs  Course | </span> <br>
         20- Async ,Await        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section => {async , await} new advanced tool to deal/execute several promises {Asynchronous} [dependently]      <span><strong> in modern JS ES6  </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> new advanced tool to deal/execute several promises {Asynchronous} [dependently] modern ES6+  </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1091,14 +1091,15 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about {Asyc , Await } advanced method concept and pracitical exps  Syntax , as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li> {async , await} concept   </li>
+                    <li> {async , await} Requirments  </li>
+                    <li> {async , await}  syntax   </li>
+                    <li> {async , await} practical exps   </li>
                 </ol>
             </article>
         </Section>
@@ -1110,123 +1111,180 @@
                 <h3> 20- Async ,Await concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
-
-            <p> {This} Reference value in the {Regular function} Rules : <br>
+            <p> {async , await} concept : <br>
                 <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
-                </ul>    
-            </p> <br> <hr> <br>
-
-
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
-                </ul>    
-            </p> <br> <hr>
-                        
-            <ol> 
-                <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
-
-                    <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
-                            <span class="one"></span> }  <br> <br>
+                    <li> A better , modern and shorten tool to deal with promises , by {Asynchronous} concept     </li>
+                    <li> This tool combine of (2) inner method to run all promises , as functional return   </li>
+                    <li> This tool uses {try , catch }  to prevent any Errors </li>
+                </ul>            
+            </p>
  
-                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
-                                <span class="one"></span>  window.onload = test;  <br>
-                        </code> <br> <br>
-                    
-                    <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
-                        
+            <p> {async , await} Requirments  : <br>
+                <ul> 
+                    <li> Must define the promise as functional return of the defined , which wil be called [instead of prmise variable it self as previous ]    </li>
+                    <li> Require to define run function ,with following properties  :  <br> 
+                        <ol>
+                            <li> using {async} inside it's parameters </li> 
+                            <li> define a variable of return of each promise , to access to the promise's return    </li> 
+                            <li> using the [await()] before the value of promise return    </li> 
+                            <li> can add additional action after each await defined promise return value    </li> 
+                        </ol> 
+                    </li>
+                    <li> Require to  run the defined running function  </li>
+                </ul>            
+            </p>
+  
+            <p> {async , await} Syntax  : <br>
+                <ul> 
+                    <li> using {Async , Await} and {try , catch}  with the defining Arrow running function : <br>    
                         <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
+                            // A] Define main dependcies varialbles of the promises  : <br>
+                            <span class="one"></span> let x = 0 ; <br>
+                            <span class="one"></span> let y = 1 ; <br> 
+                            <span class="one"></span> let z = 1 ; <br> <br>  <hr>
+                            
+                            
+                            
+                            // B] Define main promises [by using object method + the inner functional return of extracted promise]  : <br>
+                            <span class="one"></span> // Define first promise  : <br>
+                            <span class="one"></span> const promise1 = () => {  <br>
+                                <span class="two"></span>   return new Promise ((success, failed) => { <br> 
+                                    <span class="three"></span> if ( x === 1 ) { <br> 
+                                        <span class="four"></span> success('Done') ; <br>
+                                    <span class="three"></span> } else { <br>
+                                        <span class="four"></span> failed('Failed') ; <br>
+                                    <span class="three"></span> } <br> 
+                                <span class="two"></span> }) ; <br>
                             <span class="one"></span> }  <br> <br>
-                       </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-    
-                <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
-                    <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining constructor funtion : <br>
-                        <span class="one"></span> let test = function () {  <br>
+            
+                            <span class="one"></span> // Define second promise : <br>
+                            <span class="one"></span> const promise2 = () => {  <br>
+                                <span class="two"></span>   return new Promise ((success, failed) => { <br> 
+                                    <span class="three"></span> if ( y === 1 ) { <br> 
+                                        <span class="four"></span> success('Done') ; <br>
+                                    <span class="three"></span> } else { <br>
+                                        <span class="four"></span> failed('Failed') ; <br>
+                                    <span class="three"></span> } <br> 
+                                <span class="two"></span> }) ; <br>
+                            <span class="one"></span> }  <br> <br>
+              
+                            <span class="one"></span> // Define third promise : <br>
+                            <span class="one"></span> const promise3 = () => {  <br>
+                                <span class="two"></span>   return new Promise ((success, failed) => { <br> 
+                                    <span class="three"></span> if ( z === 1 ) { <br> 
+                                        <span class="four"></span> success('Done') ; <br>
+                                    <span class="three"></span> } else { <br>
+                                        <span class="four"></span> failed('Failed') ; <br>
+                                    <span class="three"></span> } <br> 
+                                <span class="two"></span> }) ; <br>
+                            <span class="one"></span> }  <br> <br>
+              
+
+                            // C]  Define {async} function :  <br>
+                            <span class="one"></span> const run = async()=> { <br>
+                                <span class="two"></span> try{ <br>
+                                    <span class="three"></span> // Storing the value of first  promise inside varialbe [incase of promise return 'resolved'] :  <br>
+                                    <span class="three"></span> const promise1Msg  = await promise1();    <br><br>
+                                    
+                                    <span class="three"></span> // Storing the value of second promise inside varialbe [incase of promise return 'resolved'] :  <br>
+                                    <span class="three"></span> const promise2Msg  = await promise2();    <br> <br>
+                                    
+                                    <span class="three"></span> // Storing the value of third promise inside varialbe [incase of promise return 'resolved'] :  <br>
+                                    <span class="three"></span> const promise3Msg  = await promise3();    <br>
+                                <span class="two"></span> } <br> <br>
+
+                                <span class="two"></span>  // using the catch method to catach the vaolue of the promise in case of return 'rejected' ]  <br>
+                                <span class="two"></span> catch(e) { console.log(e);  } <br>
+                            <span class="one"></span> }  <br>
+                        </code> <br> <br>          
+                    </li> <hr>
+
+                    <li> using {Async , Await} and {try , catch}  with the defining default running function : <br>    
+                        <code>  
+                            // A] Define main dependcies varialbles of the promises  : <br>
+                            <span class="one"></span> let x = 0 ; <br>
+                            <span class="one"></span> let y = 1 ; <br> 
+                            <span class="one"></span> let z = 1 ; <br> <br>  <hr>
                             
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  that = this ;  <br>
-                            <span class="two"></span>  this.age = 0;  <br>
                             
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  that.age++ ;  <br>
-                                <span class="three"></span>  console.log(that.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
-
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-
-                <li> {Arrow function} => {This} attidute and properties Syntax : <br>
-                    <h4> The {This} has the access through the inner nested function  :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining Arrow constructor funtion : <br>
-                        <span class="one"></span> let test = () => {  <br>
                             
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
-                                <span class="three"></span>  this.age++ ;  <br>
-                                <span class="three"></span>  console.log(this.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
+                            // B] Define main promises [by using object method + the inner functional return of extracted promise]  : <br>
+                            <span class="one"></span> // Define first promise  : <br>
+                            <span class="one"></span> const promise1 = () => {  <br>
+                                <span class="two"></span>   return new Promise ((success, failed) => { <br> 
+                                    <span class="three"></span> if ( x === 1 ) { <br> 
+                                        <span class="four"></span> success('Done') ; <br>
+                                    <span class="three"></span> } else { <br>
+                                        <span class="four"></span> failed('Failed') ; <br>
+                                    <span class="three"></span> } <br> 
+                                <span class="two"></span> }) ; <br>
+                            <span class="one"></span> }  <br> <br>
+            
+                            <span class="one"></span> // Define second promise : <br>
+                            <span class="one"></span> const promise2 = () => {  <br>
+                                <span class="two"></span>   return new Promise ((success, failed) => { <br> 
+                                    <span class="three"></span> if ( y === 1 ) { <br> 
+                                        <span class="four"></span> success('Done') ; <br>
+                                    <span class="three"></span> } else { <br>
+                                        <span class="four"></span> failed('Failed') ; <br>
+                                    <span class="three"></span> } <br> 
+                                <span class="two"></span> }) ; <br>
+                            <span class="one"></span> }  <br> <br>
+              
+                            <span class="one"></span> // Define third promise : <br>
+                            <span class="one"></span> const promise3 = () => {  <br>
+                                <span class="two"></span>   return new Promise ((success, failed) => { <br> 
+                                    <span class="three"></span> if ( z === 1 ) { <br> 
+                                        <span class="four"></span> success('Done') ; <br>
+                                    <span class="three"></span> } else { <br>
+                                        <span class="four"></span> failed('Failed') ; <br>
+                                    <span class="three"></span> } <br> 
+                                <span class="two"></span> }) ; <br>
+                            <span class="one"></span> }  <br> <br>
+              
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
+                            // C]  Define {async} function :  <br>
+                            <span class="one"></span> async function run () { <br>
+                                <span class="two"></span> try{ <br>
+                                    <span class="three"></span> // Storing the value of first  promise inside varialbe [incase of promise return 'resolved'] :  <br>
+                                    <span class="three"></span> const promise1Msg  = await promise1();    <br><br>
+                                    
+                                    <span class="three"></span> // Storing the value of second promise inside varialbe [incase of promise return 'resolved'] :  <br>
+                                    <span class="three"></span> const promise2Msg  = await promise2();    <br> <br>
+                                    
+                                    <span class="three"></span> // Storing the value of third promise inside varialbe [incase of promise return 'resolved'] :  <br>
+                                    <span class="three"></span> const promise3Msg  = await promise3();    <br>
+                                <span class="two"></span> } <br> <br>
 
-                    </code> <br> <br>
-                </li>
+                                <span class="two"></span>  // using the catch method to catach the vaolue of the promise in case of return 'rejected' ]  <br>
+                                <span class="two"></span> catch(e) { console.log(e);  } <br>
+                            <span class="one"></span> }  <br>
+                        </code> <br> <br>          
+                    </li> <hr>
 
-                <hr> <br> <hr> <br>
-    
-            </ol>
+                     
+                </ul>            
+            </p>
+  
             <!-- --------------------------- -->
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> [This] {Arrow functions} & {Regular functions} ->  will reperent the value of the method the been called by  </li>
-                    <li> [This] operator in the {Regular function}  ->  Can not access through the inner nested funcions , and needs to be assigned into another variable  </li>
-                    <li> [This] operator in the {Arrow function}  -> Can be used directly inside the inner nested functions  </li>
+                    <li> {async , await} will used oftenly in fetching data form API , or dealing with database in all reactJS applications   </li>
+                    <li>  It is recommended to use try and catch with the {async , await} to get the value of promise's rejected value  </li>
+                    <li>  catch{} => responsiple for getting the value of promise [incase of rejected]   </li>
+                    <li>  await defined variable => responsiple for getting the value of promise [incase of resolved]  </li>
                 </ul>
             </p>
                                                                      
-            <h3> ES6 [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
+            <h3> main file [main.js] Functions and scripts file of this lesson as following :  </h3> <br>
             
             <ol class="codes" >                    
                 <li> Page Sources : </li>
                 <code> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source main JS [main.js] file </button>
                     </a> <br> <hr> <br> 
                     
                     <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/myplugins.js">  
@@ -1327,7 +1385,7 @@
                 <h3>  [20- Async ,Await] Importance & Benefits : </h3>
             </header>            
                 <ul>                                                                     
-                    <li> Project/application Structure is critical and basic for any one dealing with project  </li>  
+                    <li>  {Async , Await} is critical and basic for any one dealing with project  </li>  
                 </ul>                                                               
         </section>
 
@@ -1463,7 +1521,7 @@
         
         <div id="note" class="dis"></div> <br><br><br><br>
 
-        <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>             
+        <button class="btn" id="elem" onclick="display()"> Click to activate {async , await}  application  </button> <br>             
         
                                 
         <!-- <button id=btn class="btn0" onclick="display()">Display JS Code [plugins.js] file </button> -->

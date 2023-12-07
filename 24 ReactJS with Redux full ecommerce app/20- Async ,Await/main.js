@@ -1,31 +1,30 @@
-//  5 Arrow Function And This Value
+// 20- Async ,Await
 /* Main lessons functions :
-    1- [This] Reference value in the Regular function  
-    2- {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }
-    3- {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value }
+    1- Testing using [Async , Await] & [try , Catch] with using {Arrow function}    
+    2- Testing using [Async , Await] & [try , Catch] with using {Default function}      
 */
 // ---------------------------------------------------------------------
 
-// 5 Arrow Function And [This] operator  :
+// 20- Async ,Await :
 function myTest() {
     'use strict' ;
-    alert('Welcome to 5 Arrow Function And This Value ') ;
+    alert('Welcome to 20- Async ,Await  ') ;
     
     var dis = document.getElementById('note');
      
-    var x = prompt(' Please choose one of functions from below options : \n  1] [This] Reference value in the Regular function \n  2] {This} Reference value in the Arrow function  \n  3] {This} attidute value in the both {Arrow function} & {Regular Function }  ');    
+    var x = prompt(' Please choose one of functions from below options : \n  1] Testing using [Async , Await] & [try , Catch] with using {Arrow function}  \n  2] Testing using [Async , Await] & [try , Catch] with using {Default function}  \n    ');    
 
     if (x == 1 ) {
         
-        regFuncValue();
+        AsyncAwaitArrow();
 
     } else if (x == 2) {
     
-        regFuncThis();
+        AsyncAwaitDef();
         
-    } else if (x == 3) {
+    // } else if (x == 3) {
     
-        arrowFuncThis();       
+        // arrowFuncThis();       
     
     // } else if (x == 4) {
 
@@ -41,92 +40,160 @@ function myTest() {
 
     // =========================================================================
 
-    // 1] Test and print [This] Reference value in the Regular function :
-    function regFuncValue() {
-        alert('Welcome to Test and print [This] Reference value in the Regular function  ');
+    // 1]  Testing using [Async , Await] & [try , Catch] with using {Arrow function}    :
+    function AsyncAwaitArrow() {
+        alert('Welcome to Testing using [Async , Await] & [try , Catch] with using {Arrow function}  ');
 
         dis.innerHTML = '';
 
+        // Define several dependnecies variables  :     
+            let eat = true  ; 
+            let play  = false ; 
+            let sleep = true ; 
+        // -------------------------------
 
-        // Assigning the element innerHTML by the value of it's caller funtion :
-        let regFuncVal1 = function() {
-            document.getElementById('note').innerHTML = this;
-        }
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {window} object  & {onload} event :
-        window.onload = regFuncVal1;
-        
+
+        // A] Define several promises : 
+            // 1) Define the first promise [EATING]:
+                // Define a constainer function to be callaed inside the async function :  
+                const EATING = () => {
+                    // adding the promise definition inside the return of the function :   
+                    return new Promise( (success , failed) => {
+                        if (eat) {
+                            success('Im eating') ;
+                        } else {
+                            failed('Im not eating ') ;
+                        }
+                    });
+                }
+
+            // 2) Define the second promise [PLAYING]:
+                const PLAYING = () => {
+                    return new Promise( (success , failed) => {
+                        if (play ) {
+                            success('Im playing') ;
+                        } else {
+                            failed('Im not playing ') ;
+                        }
+                    });
+                }
+
+            // 3) Define the Third promise [SLEEPING]:
+                const SLEEPING = () => {
+                    return new Promise( (success , failed) => {
+                        if (sleep) {
+                            success('Im sleeping') ;
+                        } else {
+                            failed('Im not sleeping ') ;
+                        }
+                    });
+                }
+            // ----------------------------------------
+
+        // B] Define the {Async} function p[using arrow function form]  :
+            // Define an Async function with await , inside a try and catch [to catch the value of rejected value ] : 
+            const run = async() => {
+                try{
+                    const eatMessage = await EATING();
+                    console.log(eatMessage);
+                    const playMessage = await PLAYING ();
+                    console.log(playMessage);
+                    const sleepMessage = await SLEEPING();
+                    console.log(sleepMessage);
+                }catch(e) { console.log(e); }
+            } 
+            
+        // C] Execute the Async running function :
+            run();
         // ---------------------------------------
-        
-        // Executing the [this] 's refers value within {Regular function} by using built-in {button} object  & {addEventLister} event  :
-        document.getElementById('elem').addEventListener( 'click' , regFuncVal1);         
-        // ---------------------------------------
-        
-        // console.log('Regular Function of calling function by using [this] operator : ' , regFuncVal1() ) ;
-        console.log('Regular Function Syntax by using Default method : '  ,  regFuncVal1 ) ;
-        
-        dis.innerHTML = 'Regular Function Syntax by using Default method : ' +  regFuncVal1 + '<br>' ;
+
+ 
+            dis.innerHTML = 'Testing using [Async , Await] & [try , Catch] with using {Arrow function} : ' +  AsyncAwaitArrow + '<br>' ;
+
 
         // ------------------------
 
     }
     // =============================================================
 
-    // 2] {This} usages and attidute value within the [Regular function] => { Auto counter application upon [this] value }:
-    function regFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Regular function] ');
+    // 2] Testing using [Async , Await] & [try , Catch] with using {Default function}       :
+    function AsyncAwaitDef() {
+        alert('Welcome to Testing using [Async , Await] & [try , Catch] with using {Default function} ');
 
         dis.innerHTML = '';
+ 
+        // Define several dependnecies variables  :     
+            let eat = false ; 
+            let play  = true  ; 
+            let sleep = true ; 
+        // -------------------------------
+     
+        // Define several promisees [using default fuction ] :
+            // Define the first promise [EATING] : 
+                const EATING = () => {
+                    return new Promise( (success , failed) => {
+                        if (eat) {
+                            success('Eating done ');
+                        } else {
+                            failed('Eating failed ');
+                       }
+                    } ) ;
+                } 
+            //-------------------------------
+            
+            // Define the second promise [PLAYING] : 
+                const PLAYING = () => {
+                    return new Promise( (success , failed) => {
+                        if (play) {
+                            success('Playing Done ');
+                        } else {
+                            failed('Playing Failed ');
+                       }
+                    } ) ;
+                } 
+            //-------------------------------
 
-        let regFuncThisApp = function () {
-            let that = this;
-            this.age = 0;
+            // Define the third promise [SLEEPING] : 
+                const SLEEPING = () => {
+                    return new Promise( (success , failed) => {
+                        if (sleep) {
+                            success('Sleeping Done ');
+                        } else {
+                            failed('Sleeping Failed ');
+                       }
+                    } ) ;
+                } 
+            //-------------------------------
+            //-------------------------------
 
-            setInterval( function(){
-                that.age++ ;
-                console.log(that.age);
-            }, 1000 );
+        //  Define the [Async] running function [using the default function form]:
+            async function run() {
+                try{
+                    const eatMessage = await EATING() ;
+                    console.log(eatMessage);
+                    
+                    const playMessage = await PLAYING() ;
+                    console.log(playMessage);
+                    
+                    const sleepMessage = await SLEEPING() ;
+                    console.log(sleepMessage);
+                }
+                catch (e) {
+                    console.log(e);
+                } 
+            } 
+        // ------------------------------          
 
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new regFuncThisApp();   
-        }
+        // Executing [Async] :
+            run();            
+        // ------------------------------
 
-       
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : '  , regFuncThisApp ) ;
-       
-        dis.innerHTML += 'Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : ' + regFuncThisApp + '<br>' ;
+
+ 
+        dis.innerHTML += 'Testing using [Async , Await] & [try , Catch] with using {Default function} : ' + AsyncAwaitDef + '<br>' ;
         
     }
     // =========================================================
-    
-    // 3] {This} usages and Attidute value within the [Arrow function] => { Auto counter application upon [this] value }:
-    function arrowFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Arrow function] ');
-
-        dis.innerHTML = '';
-
-        let arrowFuncThisApp = function()  {
-         
-            this.age = 0;
-
-            setInterval( () => {
-                this.age++ ;
-                console.log(this.age);
-            }, 1000 );
-        
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new arrowFuncThisApp();
-        }
-    
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Arrow Function Syntax by using directly [this] Method : '  , arrowFuncThisApp ) ;
-       
-        dis.innerHTML += 'Arrow Function Syntax by using directly [this] Method : '  + arrowFuncThisApp + '<br>' ;
-        
-    }
-    // =========================================================
-
    //===========================================================
     
     function display() {
