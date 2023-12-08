@@ -1,4 +1,4 @@
-//  5 Arrow Function And This Value
+//  22- How React Work
 /* Main lessons functions :
     1- [This] Reference value in the Regular function  
     2- {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }
@@ -9,7 +9,7 @@
 // 5 Arrow Function And [This] operator  :
 function myTest() {
     'use strict' ;
-    alert('Welcome to 5 Arrow Function And This Value ') ;
+    alert('Welcome to 22- How React Work ') ;
     
     var dis = document.getElementById('note');
      

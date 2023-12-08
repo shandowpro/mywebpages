@@ -296,7 +296,7 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
+        <span> Welcome to ReactJS Course | </span> <br>
         22- How React Work        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section =>  concept and syntax of the ReactJs flowchart and work mechanism as conceptual <span><strong> in work frame   </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> concept of the ReactJs flowchart and work mechanism as conceptual in {codepen.io}     </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1087,18 +1087,24 @@
     <div class="Post" id=post>
         <Section  id="MainC" class="MainC">
             <header>
-                ES6 [22- How React Work] Main Topics : <br>
+                  [22- How React Work] Main Topics : <br>
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about {ReactJs library} concept  and   Syntax , as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li> {ReactJs library} main mechanism concept  </li>
+                    <li> {ReactJs library} main flowchart   </li>
+                    <li> {ReactJs library} main simple conceptual Exp <br> 
+                        <ol> 
+                            <li> Render a simple HTML  </li>
+                            <li> Render a {SPA} component in the rendering method    </li>
+                            <li> Render a {SPA} component in the rendering method [including (2) other comnpoonets   ]   </li>
+                        </ol>
+                    </li>
                 </ol>
             </article>
         </Section>
@@ -1110,212 +1116,134 @@
                 <h3> 22- How React Work concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
+            <p> {ReactJs library} main mechanism concept   <br>
+                <ol> 
+                    <li> consist of only one page and several of reusable components , which being used/called/rendered {assembled} in each project's pages     </li>
+                    <li> The browser in the reactJS is dealing with only one page , and it's coponents is being rendered without need to return to the server    </li>
+                    <li> main contents of each component :  <br>
+                        <ul> 
+                            <li> each component is about a function that returning several elemetns inside it's return    </li>
+                            <li> each function's return must be () brackets , and inside one containter {&gt; div &lt;} </li>
+                            <li> each component's function's return cn include several other componets and other JSX Elements   </li>
+                        </ul>
+                    </li>
+                </ol>
+            </p>
 
-            <p> {This} Reference value in the {Regular function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
-                </ul>    
-            </p> <br> <hr> <br>
-
-
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
-                </ul>    
+             
+            <p> {ReactJs library} main flowchart parts  : <br>
+                <ol type="A"> 
+                    <li> Components functions    </li>
+                    <li> Main component App {SPA} , which assembling all other components    </li>
+                    <li> Website Browsers Rendering    </li>
+                </ol>    
             </p> <br> <hr>
                         
-            <ol> 
-                <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
+             
+            <p> {ReactJs library} main simple conceptual Exp : <br>
+                <ol> 
+                    <li> using the {codepen.io} website simulator by using the reactJS settting . as following :  <br>
+                        <p> Javascript proceessor => babel </p>
+                        <p> Add external scripts/pens => React +  ReactDom </p>
+                    </li>
 
-                    <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
-                            <span class="one"></span> }  <br> <br>
- 
-                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
-                                <span class="one"></span>  window.onload = test;  <br>
-                        </code> <br> <br>
-                    
-                    <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
-                            <span class="one"></span> }  <br> <br>
-                       </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-    
-                <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
-                    <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining constructor funtion : <br>
-                        <span class="one"></span> let test = function () {  <br>
+                    <li> {codepen.io} is consists of (3) parts :  <br>
+                        <p> [HTML] => write the main HTML container Element  <br>
+                            <code>
+                                <span class="one"></span> // Adding the Html container [with id value] : <br>
+                                <span class="one"></span>  &lt; div id="root" &gt;  <br>
+                                <span class="one"></span>    &lt; /div &gt; 
+                            </code> <br> <br>
+                        </p>
+
+                        <p>  [CSS]  => Not use now   </p>
+              
+                        <p>  [JS](babel)  =>  wirte the JS code with JSX + rendering the components inside the assinged html container  , as following : 
+                            // A] First Exp =>  rendering a simple HTML  element inside the direct  rendering method :   <br>
+                            <code>  
+                                <span class="one"></span> // Assigning the  simple HTML element isadie the  render method :  <br>
+                                <span class="one"></span>   ReactDom.render(  &lt; h1  &gt; Hello from ReactJS &lt; /h1  &gt; , document.getElemnetById('root') )   <br>  
+                                <br> <br>
+                            </code> <br> <br>               
                             
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  that = this ;  <br>
-                            <span class="two"></span>  this.age = 0;  <br>
+                            // B] Second Exp =>  rendering a [SPA] component element inside the direct rendering method :    <br>
+                            <code>  
+                                <span class="one"></span> // Assigning the  simple HTML element iside the  render method :  <br>
+                                <span class="one"></span> const App = ()  => {        <br>  
+                                    <span class="two"></span> return ( <br>
+                                        <span class="three"></span> &lt; div  &gt;  <br>
+                                            <span class="four"></span> &lt; h1  &gt;  Hello from the App ReactJs component &lt; /h1  &gt; <br>
+                                        <span class="three"></span> &lt; / div  &gt; <br>
+                                    <span class="two"></span> ); <br>  
+                                <span class="one"></span> }    <br> <br>
+                                 
+                                <span class="one"></span>   ReactDom.render(  &lt; App/  &gt;  , document.getElemnetById('root') )   <br>  
+                                <br> <br>
+                            </code> <br> <br>               
+                          
+                            // C] Thrid Exp =>  rendering a [SPA] component element [including serveral other defiend componets] inside the direct rendering method :    <br>
+                            <code>  
+                                
+                                <span class="one"></span> //  Define first inner component:  <br>
+                                <span class="one"></span> const Header = ()  => {        <br>  
+                                    <span class="two"></span> return ( <br>
+                                        <span class="three"></span> &lt; div  &gt;  <br>
+                                            <span class="four"></span> &lt; h1  &gt;  Hello from the Header ReactJs component &lt; /h1  &gt; <br>
+                                        <span class="three"></span> &lt; / div  &gt; <br>
+                                    <span class="two"></span> ); <br>  
+                                <span class="one"></span> }    <br> <br>
+                                 
                             
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  that.age++ ;  <br>
-                                <span class="three"></span>  console.log(that.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
+                                <span class="one"></span> //  Define second inner component:  <br>
+                                <span class="one"></span> const Footer = ()  => {        <br>  
+                                    <span class="two"></span> return ( <br>
+                                        <span class="three"></span> &lt; div  &gt;  <br>
+                                            <span class="four"></span> &lt; h1  &gt;  Hello from the Footer ReactJs component &lt; /h1  &gt; <br>
+                                        <span class="three"></span> &lt; / div  &gt; <br>
+                                    <span class="two"></span> ); <br>  
+                                <span class="one"></span> }    <br> <br>
+                                                             
+                                <span class="one"></span> // Assigning the  main component [App] including other 2 components  :  <br>
+                                <span class="one"></span> const App = ()  => {        <br>  
+                                    <span class="two"></span> return ( <br>
+                                        <span class="three"></span> &lt; div  &gt;  <br>
+                                            <span class="four"></span> &lt; Header /  &gt;    <br>
+                                            <span class="four"></span> &lt; Footer /  &gt;    <br>
+                                        <span class="three"></span> &lt; / div  &gt; <br>
+                                    <span class="two"></span> ); <br>  
+                                <span class="one"></span> }    <br> <br>
+                                 
+                                <span class="one"></span>   // Adding the main componet {App} to the rendering method :
+                                <br>  
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-
-                <li> {Arrow function} => {This} attidute and properties Syntax : <br>
-                    <h4> The {This} has the access through the inner nested function  :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining Arrow constructor funtion : <br>
-                        <span class="one"></span> let test = () => {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
-                                <span class="three"></span>  this.age++ ;  <br>
-                                <span class="three"></span>  console.log(this.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
-
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-
-                <hr> <br> <hr> <br>
-    
-            </ol>
+                                <span class="one"></span>   ReactDom.render(  &lt; App/  &gt;  , document.getElemnetById('root') )   <br>  
+                                <br> <br>
+                            </code> <br> <br>               
+                        </p>
+                    </li>
+                </ol>    
+            </p> <br> <hr>
+              
             <!-- --------------------------- -->
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> [This] {Arrow functions} & {Regular functions} ->  will reperent the value of the method the been called by  </li>
-                    <li> [This] operator in the {Regular function}  ->  Can not access through the inner nested funcions , and needs to be assigned into another variable  </li>
-                    <li> [This] operator in the {Arrow function}  -> Can be used directly inside the inner nested functions  </li>
+                    <li> using the [codepen.io] => is just simulator for ReactJS working     </li>
                 </ul>
             </p>
                                                                      
-            <h3> ES6 [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
+            <h3>  [main.js] Functions and scripts file of this lesson as following :  </h3> <br>
             
             <ol class="codes" >                    
                 <li> Page Sources : </li>
                 <code> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source main JS file  [main.js] file </button>
                     </a> <br> <hr> <br> 
-                    
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/myplugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 new Code [myplugins.js] file </button>
-                    </a> <br> <hr> <br>  -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
-                    </a> <br> <br> 
-                    -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 old Code [plugins.js] file </button>
-                    </a> <br> <br> 
-                    -->
                 </code>                 
             </ol>
 
-            <!-- <ol class="codes0" > 
-               
-                <h2 id="h2"> {end()} function method [Using { buttons} to activate {2 Modes} of applying changes -> </h2>  <br>
-                
-                <h3> [ First method : Default mode (multiple seperted chains - one chain code for each Procedure - )] : </h3>
-            
-                <h4> Applying multiple Changes on parent by using default method [Multiple Chains] : {CSS > fontSize + font color} </h4>
-                
-                <div id="defElem"> 
-                    <p> This is normal paragraph  </p>
-                    <span> This is normal Span  </span>
-                </div>
-        
-                <button id="defMode" class="btn0"> [Using {2 seperated chain codes } ] -> {CSS > fontSize + font color}  </button>
-                <hr> <hr></hr>
-                
-                <h3> [ Second method : Using end() mode (One seperted chain - for all procedures - )] : </h3>
-            
-                <h4> Applying multiple Changes on parent by using end() method [One Chains] : {CSS > fontSize + font color} </h4>
-                
-                <div id="endElem"> 
-                    <p> This is normal paragraph  </p>
-                    <span> This is normal Span  </span>
-                </div>
-        
-                <button id="endMode" class="btn0"> [Using {1 chain code } ] -> {CSS > fontSize + font color}  </button>
-                <hr> <hr></hr>
-                
-            <br> <hr> <br>
-            </ol>
-                 -->
-             <!------------------------------------------------->           
-             <!------------------------------------------------->       
-
-            <!-- <ol class="codes">        
-              <h3> Practical applications [2] main groups functions {with Total functions : 2 }  [up bove] </h3>
-             <li> First group [ Main  ] => [3 functions] {  } : <br>
-                <button class="plus" id="plus1"> +  Using [ $(":input") ] to select any input element (regardless of it's type) }  </button> 
-            </li>
-
-                 <code id="group1">
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn11 class="btn0" > a) Using [ $(":input") ] to Apply CSS properties on select any input element (Regardless of it's type) } </button>
-                    </a> <br> <br>  
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn12 class="btn0" >  b) Using [ $("[attrname1], [attrname2] , [attrname3]") ] multiple to select any elements types has a certain attribute Name }  </button>
-                    </a> <br> <br> 
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > [Grouped basic selectors (of the mixed types)]  {loading event}-> [all functions]  </button>
-                    </a> <br> <br> 
-                    
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > Access certain element's siblings [with using advanced selector (Tagname) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn14 class="btn0" > Access certain element's siblings [with using advanced filter(contains) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-                    
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > Access certain element's siblings [with using advanced selector (Tagname) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn14 class="btn0" > Access to element's direct children [with using advanced selector - className - ] => -> to [all functions] </button>
-                    </a> <br> <br>
-                                                           
-                </code>  <hr>          
-            
-                <script src="js/myplugins.js"></script>
-            </ol>   -->
             <br> <hr>                                     
         </section>
 
