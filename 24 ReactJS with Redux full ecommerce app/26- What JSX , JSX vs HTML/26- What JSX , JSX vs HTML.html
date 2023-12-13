@@ -296,7 +296,7 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
+        <span> Welcome to ReactJS Course | </span> <br>
         26- What JSX , JSX vs HTML        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section => {JSX} {JSX vs HTML } conept and Syntax  <span><strong>  in JS ReactJS   </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> {JSX} {JSX vs HTML } conept and Syntax   in ReactJS  </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1087,18 +1087,17 @@
     <div class="Post" id=post>
         <Section  id="MainC" class="MainC">
             <header>
-                ES6 [26- What JSX , JSX vs HTML] Main Topics : <br>
+                ReactJS  [26- What JSX , JSX vs HTML] Main Topics : <br>
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about {JSX and comparisoning wiht HTML }   concept and  Syntax , as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li>  JSX concept  </li>
+                    <li> JSX vs HTML   </li>
                 </ol>
             </article>
         </Section>
@@ -1110,23 +1109,103 @@
                 <h3> 26- What JSX , JSX vs HTML concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
+            <p> {JSX} =>  <br>
+                <ol> 
+                    <li> It is combined languages between JS and  HTML  </li>
+                    <li> JSX is being translated by using built-in Babel library  to be able to read by web browser  </li>
+                </ol>
+            </p>
 
-            <p> {This} Reference value in the {Regular function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
-                </ul>    
-            </p> <br> <hr> <br>
+            <p>  {Babel} => <br> 
+                <ol> 
+                    <li> {Babel}  =>  is translating the modern Js [ES6+] (which is written inside the VS code) => into  old JS (which is using by web browser)  </li>
+                    <li> JSX is being translated by using built-in Babel library insdde the ReactJ project [package-lock.json] to be able to read by web browser</li>
+                    <li> We use the Web browser for reading  translated old JS </li>
+                    <li> {Babel} official web site => {babeljs.io}  </li>
+                </ol>
+            </p>
+  
+            <p> JSX vs HTML main comparisoning :  <br>
+                <ol> 
+                    <li> a] Attributes =>  <br>
+                        <p> [ClassName & class] Attribute :  <br>
+                            <ul>
+                                <li>  with [HTML] => using the [class = '' ] </li> 
+                                <li>  with [JSX] => using [className= ''  ]    </li>
+                            </ul>                       
+                        </p> <br>
+                        
+                        <p> [  htmlFor  &  for  ] Attribute :  <br>
+                            <ul>
+                                <li>  with [HTML] => using the [ for = '' ] </li> 
+                                <li>  with [JSX] => using [ htmlFor = ''  ]    </li>
+                            </ul>                       
+                        </p> <br>
 
+                        <p> [  style  ] Attribute :  <br>
+                            <ul>
+                                <li>  with [HTML] => using the [ style = 'prop-name1 : value1 ; prop-name2 : value2 ; ' ] </li> 
+                                <li>  with [JSX] => using [ style = { {  propName1 : 'value1' , propName2 : 'value2' } }  ] , [as an object ], with folllowing rules : <br>  
+                                    <ol>
+                                        <li> write double curly brackets { { } } after style attribute / instead of double quotes  '' =>  <br>
+                                            <code> 
+                                                <span class="one"></span> &lt; elem  style = { { } }   &gt;     <br> 
+                                            </code>
+                                        </li> <br> 
+                                         
+                                        <li> write Css properties's Name (of multiple Words) using [CamelCase] instead of using [sheesh-case] =>  <br>
+                                            <code> 
+                                                <span class="one"></span> &lt; elem  style = { { CssProp1: 'CssPropValue' } }   &gt;     <br> 
+                                            </code>
+                                        </li> <br>
 
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
-                </ul>    
+                                        <li> write Css properties's value inside ''  =>  <br>
+                                            <code> 
+                                                <span class="one"></span> &lt; elem  style = { { CssProp1: 'CssPropValue' } }   &gt;     <br> 
+                                            </code>
+                                        </li> <br> 
+
+                                        <li> using (,) insteed of (;) to seperate between  Css properties  =>  <br>
+                                            <code> 
+                                                <span class="one"></span> &lt; elem  style = { { CssProp1: 'CssPropValue' } }   &gt;     <br> 
+                                            </code>
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ul>                       
+                        </p> <br> 
+                    </li>
+                    <br> <br>
+                    
+                    <li> b] Element Text Node & [Ref Variables]   =>  <br>
+                        <p> Ability to use varialbes values inside the JSX Element TextNode   :  <br>
+                            <ul>
+                                <li>  with [HTML] => using only fixed text Node values  </li> 
+                                <li>  with [JSX] =>  can use defined varialbes inside the functional component as Element's TextNode || Wrtite direct JS codes  , as following syntax : <br>
+                                    <code> 
+                                         <span class="one"></span> const funcComp = () => { <br>
+                                            <span class="two"></span> const refVar =  'element content ' ; <br> <br>
+                                              
+                                            <span class="two"></span> return (  <br>
+                                   
+                                                <span class="three"></span> // (1) using the defined {Ref Var} as  Element's TextNode :    <br>
+                                                <span class="three"></span>  &lt;  elem  &gt;  <br>
+                                                    <span class="four"></span>   {refVar}  <br>
+                                                <span class="three"></span>  &lt; / elem  &gt;  <br>
+                                   
+                                                <span class="three"></span> // (2) Driect Writing JS and JSX codes   :    <br>
+                                                <span class="three"></span>  { Js codes }  <br>
+                                                     
+                                            <span class="two"></span> );  <br>
+
+                                        <span class="one"></span> } <br>
+                                    </code>
+                                </li>
+                            </ul>                       
+                        </p> <br>
+                    </li>
+                    <br> <br>
+                </ol>    
             </p> <br> <hr>
                         
             <ol> 
@@ -1219,25 +1298,25 @@
                 </ul>
             </p>
                                                                      
-            <h3> ES6 [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
+            <h3> ReactJS  [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
             
             <ol class="codes" >                    
                 <li> Page Sources : </li>
                 <code> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS  JS [main.js] file </button>
                     </a> <br> <hr> <br> 
                     
                     <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/myplugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 new Code [myplugins.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Display ReactJS  new Code [myplugins.js] file </button>
                     </a> <br> <hr> <br>  -->
                     <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS  JS [main.js] file </button>
                     </a> <br> <br> 
                     -->
                     <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 old Code [plugins.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Display ReactJS  old Code [plugins.js] file </button>
                     </a> <br> <br> 
                     -->
                 </code>                 
@@ -1343,7 +1422,7 @@
             <!-- <div id="Code" class="Code">
                 
                 [1] { Login [Default ] into current DB Client from [CMD] } : <br>
-                    <span class= one></span> { ES6 -u root; } <br><br>
+                    <span class= one></span> { ReactJS  -u root; } <br><br>
             
                 [2] { Show all availble DBs in current Client from [CMD] } : <br>
                     <span class= one></span> { SHOW DATABASES; } <br><br>
@@ -1496,7 +1575,7 @@
         <section class="Links">
             <h3>Course Map : </h3>
             <ul>              
-                <li> <a href="course map/ES6 course map.html"> ES 6 Course Map </a> </li>
+                <li> <a href="course map/ReactJS  course map.html"> ES 6 Course Map </a> </li>
             </ul>
         </section>
         

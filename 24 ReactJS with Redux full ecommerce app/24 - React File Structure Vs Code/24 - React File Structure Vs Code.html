@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
  
 <html>
@@ -296,7 +295,7 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
+        <span> Welcome to ReactJS Course | </span> <br>
         24 - React File Structure Vs Code        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -322,9 +321,9 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
-            <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
+            <h2 class="h1" class="hidden-xs"> About Section =>    <span><strong> ReactJS file structure concept and sytnax in JS ReactJS  </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> ReactJS file structure and relation ship concept and sytnax  in ReactJS </strong> </span> </h3> 
+            <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashng Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
              
@@ -1087,18 +1086,17 @@
     <div class="Post" id=post>
         <Section  id="MainC" class="MainC">
             <header>
-                ES6 [24 - React File Structure Vs Code] Main Topics : <br>
+                ReactJS [24 - React File Structure Vs Code] Main Topics : <br>
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about { ReactJS file structure } concept and  Syntax ,  as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li> Main ReactJs files Structure and relation ship   </li>
+                    <li> Main method of use {style files} in the reactJS projects   </li>
                 </ol>
             </article>
         </Section>
@@ -1110,212 +1108,299 @@
                 <h3> 24 - React File Structure Vs Code concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
+            <p>  Main ReactJs structure :  <br>
+                <ol> 
+                    
+                    <li> A] General strcuture files Cycle of reactJs project , as following steps  : <br>
+                        <ul> 
+                            <li> Creating serveral sub conponents in seperatred files inside the  [src] folder -> export    </li> 
+                            <li> Creating the main home page file [src/App.js] -> Import the exported sub components files -> Export the App functional component    </li> 
+                            <li> Creating the {src/index.js}  </li> 
+                        </ul>
+                    </li> <br>
+                    
+                    <li> B] Files building content details  : <br>
+                        <p> First Create sepertated files of Sub childern components => inside {src} folder => [Header.js ,Footer.js  , Navbar.js , ....] , as following syntax :  <br>
+                            <code>
+                                <span class="one "></span> // (1) Define the First Sub childern component(s) functions [src-> component1.js]:  <br>  
+                                <span class="one "></span> const Component1 = () =>  { <br>  
+                                    <span class="two "></span> return ( <br>  
+                                        <span class="three"></span>  &lt; h1 &gt; Hello from the first Component1  &lt; /h1 &gt;    <br>  
+                                    <span class="two "></span> );   <br>  
+                                <span class="one "></span> } <br>  <br>                              
+                                
+                                <span class="one "></span> // Exporting the defined child component function  :   <br>  
+                                <span class="one "></span>  export default Component1  ;  <br>  <br></br> <br>
+                                <!-- ------------------------------------------ -->
 
-            <p> {This} Reference value in the {Regular function} Rules : <br>
+                                <span class="one "></span> // (2) Define the Second Sub childern component(s) functions -> [src-> component2.js]:  <br>  
+                                <span class="one "></span> const Component2 = () =>  { <br>  
+                                    <span class="two "></span> return ( <br>  
+                                        <span class="three"></span>  &lt; h1 &gt; Hello from the second Component2  &lt; /h1 &gt;    <br>  
+                                    <span class="two "></span> );   <br>  
+                                <span class="one "></span> } <br>  <br>
+                                
+                                <span class="one "></span> // Exporting the defined child compnent function  :   <br>  
+                                <span class="one "></span>  export default Component2 ;  <br>  
+                            </code>
+                        </p> <br> <hr> <br> 
+
+
+                        <p> Second Create the file of main component{App} of {main home page} => inside {src} folder [src=> app.js] , as following syntax :  <br>
+                            <code>
+                                <span class="one "></span> // (1) Import the sub children components files , to include them inside the current file :  <br>  
+                                <span class="one "></span>  import Component1 from './component1.js'  ;  <br>  
+                                <span class="one "></span>  import Component2 from './component2.js'  ;  <br>   <br></br>
+                                
+                                <span class="one "></span> // (2) Define the Main Component function :  <br>  
+                                <span class="one "></span> const App = () =>  { <br>  
+                                    <span class="two "></span> return ( <br>  
+                                        <span class="three"></span>  &lt; div &gt;  <br>  
+                                        
+                                            <span class="four"></span> // Adding single HTML : <br>  
+                                            <span class="four"></span>  &lt; h1 &gt;  <br>  
+                                                <span class="five"></span>   This is the main App file page   <br>  
+                                            <span class="four"></span>  &lt; /h1 &gt;  <br> <br>
+
+
+                                            <span class="four"></span> // Calling the imported sub component1  : <br>  
+                                            <span class="four"></span>  &lt; Component1/  &gt;  <br>  
+                                        
+                                            <span class="four"></span> // Calling the imported sub component2  : <br>  
+                                            <span class="four"></span>  &lt; Component2/  &gt;  <br>   <br>
+                                        
+                                        <span class="three"></span>  &lt; /div &gt;  <br>  
+                                    <span class="two "></span> );   <br>  
+                                <span class="one "></span> } <br>  <br>
+                                
+                                <span class="one "></span> // Exporting the defined Component function  :   <br>  
+                                <span class="one "></span>  export default App  ;  <br>  
+                            </code>
+                        </p>  <br><hr><br>
+
+ 
+                        <p> 3] Create main assmebling file [index.js]  => inside {src} folder [src=> index.js] , as following syntax :  <br>
+                            <code>
+                                <span class="one "></span> // Importing the required Libraries of the ReactJS :  <br>  
+                                <span class="one "></span>  import React from 'react'  ;  <br>  
+                                <span class="one "></span>  import ReactDOM from 'react-dom'  ;  <br> </br>
+                                
+                                <span class="one "></span> // Importing the main component[App.js] file , to include it inside the current Assmebling  file :  <br>  
+                                <span class="one "></span>  import App from './App.js'  ;  <br>  <br></br>
+                                
+                                <span class="one "></span> // Rendering the main imported component function , to be assinged inside the main html file    :  <br>  
+                                <span class="one "></span>  ReectDOM.render(  &lt; App/ &gt; , document.getElementById('root') ) ; <br>  
+                                  
+                            </code>
+                        </p>
+
+                    </li>                    
+                    
+                </ol>    
+            
+            </p>
+
+            <p> Main method ot use style files in hte reactJS projects  : <br>
+                There are (2) methods to use Css files : <br>
                 <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
+                    <li> [Public CSS file] method  : <br>
+                        <ol> 
+                            <li> This method is to create the css fle inside the [public] folder </li>
+                            <li> This method provide to access generally  to any certain class in the imported css file , from any file of project     </li>
+                            <li> This method is requiring to add the css file in the {index.html} aby the default of HTML {&lt;link&gt;} </li>
+                            <li> by using this method you can access/use [any class name in the imported file] within any Element from any component file in the current project    </li> 
+                            <li> Syntax : <br> 
+                                <code>  
+                                    <span class="one"></span> // Creating the css file inside {public/style.css} : <br>
+                                    <span class="one"></span>  .style1  {  <br>
+                                        <span class="two"></span> color: red ; <br>
+                                    <span class="one"></span> }    <br>
+                                    
+                                    <span class="one"></span>  .style2  {  <br>
+                                        <span class="two"></span> color: green ; <br>
+                                    <span class="one"></span> }    <br>
+                                    
+                                    <span class="one"></span>  .style3  {  <br>
+                                        <span class="two"></span> color: blue ; <br>
+                                    <span class="one"></span> }  <br> <hr> <br> <br>
+                                     
+                                    
+                                    <span class="one"></span> // Adding the public CSS file {style.css} inside {index.html} file inside  &lt;head&gt; section    : <br>
+                                    <span class="one"></span>  &lt; head &gt;   <br>                                         
+                                        <span class="two"></span>  &lt; link rel="styleSheet" href="style.css"  &gt;   <br>                                         
+                                    <span class="one"></span>  &lt; / head &gt;   <br> <hr> <br>  <br>
+                                    
+
+                                    <span class="one"></span>  // Using one of Classes {style1} from imported public css file inside [App] component function  : <br>
+                                    <span class="one"></span> import Component1 from './Component1' ;    <br>  
+                                    <span class="one"></span> import Component2 from './Component2' ;    <br>  <br>
+
+                                    <span class="one"></span> const App = () => {   <br>  <br>
+                                        <span class="two"></span> return (   <br>
+                                            <span class="three"></span> // Using the sytle1 class inside the [h1] element :  <br>
+                                            <span class="three"></span> &lt; div className='style1'  &gt;   <br>
+                                                <span class="four"></span>  Hello from App Home page [formated by using public method]    <br>
+                                            <span class="three"></span> &lt; /div &gt;   <br>
+                                            
+                                            <span class="three"></span> // Using the sytle2 class inside the imported [Component1] :  <br>
+                                            <span class="three"></span> &lt; Component1 className='style2'  &gt;   <br> <br>
+
+                                            <span class="three"></span> // Using the sytle2 class inside the imported [Component2] :  <br>
+                                            <span class="three"></span> &lt; Component2 className='style3'  &gt;   <br>
+                                        <span class="two"></span> ) ;   <br>
+                                    <span class="one"></span>  } <br>  <br> <br>
+                                     
+                                    <span class="one"></span> //  Exporting the component [App] :    <br>
+                                    <span class="one"></span>  export default App ;  <br> <hr> <br> <br> 
+                                    
+                                    
+                                    
+                                    <span class="one"></span>  // Using one of Classes {style2} from imported public css file inside [Component1] Sub component function  : <br>
+                                    <span class="one"></span> const Component1 = () => {   <br>  <br>
+                                        <span class="two"></span> return (   <br>
+                                            <span class="three"></span> &lt; h1 className='style1'  &gt;   <br>
+                                                <span class="four"></span>  Hello from Component1 inner page [formated by using public method]    <br>
+                                            <span class="three"></span> &lt; /h1 &gt;   <br>
+                                        <span class="two"></span> ) ;   <br>
+                                    <span class="one"></span>  } <br>  <br> <br>
+                                     
+                                    <span class="one"></span> //  Exporting the Component [Component1] :    <br>
+                                    <span class="one"></span>  export default Component1 ;  <br> <br> <br> 
+                                
+                                
+                                    <span class="one"></span>  // Using one of Classes {style2} from imported public css file inside [Component2] Sub component function  : <br>
+                                    <span class="one"></span> const Component2 = () => {   <br>  <br>
+                                        <span class="two"></span> return (   <br>
+                                            <span class="three"></span> &lt; h1 className='style2'  &gt;   <br>
+                                                <span class="four"></span>  Hello from Component2 inner page [formated by using public method]    <br>
+                                            <span class="three"></span> &lt; /h1 &gt;   <br>
+                                        <span class="two"></span> ) ;   <br>
+                                    <span class="one"></span>  } <br>  <br> <br>
+                                     
+                                    <span class="one"></span> //  Exporting the Component [Component2] :    <br>
+                                    <span class="one"></span>  export default Component2 ;  <br> <br> <br> 
+                                </code> <br> <br>                  
+                            </li>                            
+                        </ol>
+                    </li> <br>
+                    
+                    <li>  [Special/private CSS file] method : <br> 
+                        <ol> 
+                            <li> This method is to create the css file inside the [src] folder  </li>
+                            <li> This method provide to access directly to any certain class in the imported css file , from specific imported file of project only    </li>
+                            <li> This method is requiring to imported the certain css file in the {importer component file} by using direct import code {  import 'css file path' }    </li>
+                            <li> by using this method you can access/use [any class name in the imported file]  within the Element inside Importer componnent file ONLY      </li>
+                            <li> Syntax : <br> 
+                                <code>  
+                                    <span class="one"></span> // Creating the css file inside {src/css/styleCopmonent1.css} -> to imported from [Copmonent1] : <br>
+                                    <span class="one"></span>  .style1  {  <br>
+                                        <span class="two"></span> color: blue ; <br>
+                                    <span class="one"></span> }    <br>
+                                    <br> <hr> <br> <br>
+                                     
+                                    <span class="one"></span> // Creating the css file inside {src/css/styleCopmonent2.css} -> to imported from [Copmonent2] : <br>
+                                    <span class="one"></span>  .style2  {  <br>
+                                        <span class="two"></span> color: red ; <br>
+                                    <span class="one"></span> }    <br>
+                                    <br> <hr> <br> <br>
+                                    
+                                    <span class="one"></span>  // Using {style1} from imported private CSS file {styleCopmonent1.css} from file inside [src/Component1.js] Sub component function  : <br>
+                                    <span class="one"></span>  // Importing {styleCopmonent1.css}  {Directly}   : <br>
+                                    <span class="one"></span>   import 'css/headerStyle.css' ; <br>
+                                    
+                                    <span class="one"></span> const Component1 = () => {   <br>  <br>
+                                        <span class="two"></span> return (   <br>
+                                            <span class="three"></span> &lt; h1 className='style1'  &gt;   <br>
+                                                <span class="four"></span>  Hello from Component1 inner page [formated by using private method]    <br>
+                                            <span class="three"></span> &lt; /h1 &gt;   <br>
+                                        <span class="two"></span> ) ;   <br>
+                                    <span class="one"></span>  } <br>  <br> <br>
+                                     
+                                    <span class="one"></span> //  Exporting the Component [Component1] :    <br>
+                                    <span class="one"></span>  export default Component1 ;  <br> <br> <br> 
+                                
+                                
+                                    <span class="one"></span>  // Using {style2} from imported private css file inside [styleComponent2.css] from file inside [src/Component2.js] Sub component function   : <br>
+                                    <span class="one"></span> const Component2 = () => {   <br>  <br>
+                                        <span class="two"></span> return (   <br>
+                                            <span class="three"></span> &lt; h1 className='style2'  &gt;   <br>
+                                                <span class="four"></span>  Hello from Component2 inner page [formated by using private method]    <br>
+                                            <span class="three"></span> &lt; /h1 &gt;   <br>
+                                        <span class="two"></span> ) ;   <br>
+                                    <span class="one"></span>  } <br>  <br> <br>
+                                     
+                                    <span class="one"></span> //  Exporting the Component [Component2] :    <br>
+                                    <span class="one"></span>  export default Component2 ;  <br> <br> <br> 
+                                </code> <br> <br>                  
+                            </li>
+                        </ol>        
+                    </li>
                 </ul>    
             </p> <br> <hr> <br>
-
-
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
-                </ul>    
-            </p> <br> <hr>
-                        
-            <ol> 
-                <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
-
-                    <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
-                            <span class="one"></span> }  <br> <br>
- 
-                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
-                                <span class="one"></span>  window.onload = test;  <br>
-                        </code> <br> <br>
-                    
-                    <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
-                            <span class="one"></span> }  <br> <br>
-                       </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-    
-                <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
-                    <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining constructor funtion : <br>
-                        <span class="one"></span> let test = function () {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  that = this ;  <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  that.age++ ;  <br>
-                                <span class="three"></span>  console.log(that.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
-
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-
-                <li> {Arrow function} => {This} attidute and properties Syntax : <br>
-                    <h4> The {This} has the access through the inner nested function  :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining Arrow constructor funtion : <br>
-                        <span class="one"></span> let test = () => {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
-                                <span class="three"></span>  this.age++ ;  <br>
-                                <span class="three"></span>  console.log(this.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
-
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-
-                <hr> <br> <hr> <br>
-    
-            </ol>
+           
             <!-- --------------------------- -->
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> [This] {Arrow functions} & {Regular functions} ->  will reperent the value of the method the been called by  </li>
-                    <li> [This] operator in the {Regular function}  ->  Can not access through the inner nested funcions , and needs to be assigned into another variable  </li>
-                    <li> [This] operator in the {Arrow function}  -> Can be used directly inside the inner nested functions  </li>
+                    <li> Some sytnax and Rules in Importing files :   <br>
+                        <ol>
+                            <li>  start path by [ './' ] => in the import file =>  incase the importer file is exists in the same folder of import file        </li>
+                            <li>  start path by [ '../' ] => in the import file =>  incase the  we importing a CSS file [outside the current file ]  OR the file is in upper folder   </li>
+                        </ol>    
+                    </li>
+                   
+                    <li> Best practise is to use both of Formating CSS files methods in the project :  <br>
+                        <ol> 
+                            <li>  {public method} => <br> 
+                                <ul> 
+                                    <li> Requring only to be called in the main Html file ][index.html]  </li>
+                                    <li> all the public CSS's Classes -> can be used from any where in the project's files and components   </li>
+                                </ul>
+                            </li> <br>
+ 
+                            <li>  {private method} =>  </li>
+                                <ul> 
+                                    <li> Requiring a [Direct import] in each file that using it => with following syntax  : <br>
+                                        <p> using the '../ ' before the main file path to get upper current path </p> 
+                                        <p> then get access to the specific path by using (src/css/CSSfileName.css)   </p>
+                                    </li>
+                                    <li>
+                                </ul>
+                            </li>
+                        </ol>    
+                    </li>
                 </ul>
             </p>
                                                                      
-            <h3> ES6 [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
+            <h3> ReactJS [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
             
             <ol class="codes" >                    
                 <li> Page Sources : </li>
                 <code> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS JS [main.js] file </button>
                     </a> <br> <hr> <br> 
-                    
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/myplugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 new Code [myplugins.js] file </button>
-                    </a> <br> <hr> <br>  -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
-                    </a> <br> <br> 
-                    -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 old Code [plugins.js] file </button>
-                    </a> <br> <br> 
-                    -->
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/index.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS assembling file JS [index.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/App.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main App file {Main Component} [App.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/Header.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS Header sub child component  file JS [Header.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/Footer.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS Footer sub child component  file JS [Footer.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
                 </code>                 
             </ol>
-
-            <!-- <ol class="codes0" > 
-               
-                <h2 id="h2"> {end()} function method [Using { buttons} to activate {2 Modes} of applying changes -> </h2>  <br>
-                
-                <h3> [ First method : Default mode (multiple seperted chains - one chain code for each Procedure - )] : </h3>
-            
-                <h4> Applying multiple Changes on parent by using default method [Multiple Chains] : {CSS > fontSize + font color} </h4>
-                
-                <div id="defElem"> 
-                    <p> This is normal paragraph  </p>
-                    <span> This is normal Span  </span>
-                </div>
-        
-                <button id="defMode" class="btn0"> [Using {2 seperated chain codes } ] -> {CSS > fontSize + font color}  </button>
-                <hr> <hr></hr>
-                
-                <h3> [ Second method : Using end() mode (One seperted chain - for all procedures - )] : </h3>
-            
-                <h4> Applying multiple Changes on parent by using end() method [One Chains] : {CSS > fontSize + font color} </h4>
-                
-                <div id="endElem"> 
-                    <p> This is normal paragraph  </p>
-                    <span> This is normal Span  </span>
-                </div>
-        
-                <button id="endMode" class="btn0"> [Using {1 chain code } ] -> {CSS > fontSize + font color}  </button>
-                <hr> <hr></hr>
-                
-            <br> <hr> <br>
-            </ol>
-                 -->
-             <!------------------------------------------------->           
-             <!------------------------------------------------->       
-
-            <!-- <ol class="codes">        
-              <h3> Practical applications [2] main groups functions {with Total functions : 2 }  [up bove] </h3>
-             <li> First group [ Main  ] => [3 functions] {  } : <br>
-                <button class="plus" id="plus1"> +  Using [ $(":input") ] to select any input element (regardless of it's type) }  </button> 
-            </li>
-
-                 <code id="group1">
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn11 class="btn0" > a) Using [ $(":input") ] to Apply CSS properties on select any input element (Regardless of it's type) } </button>
-                    </a> <br> <br>  
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn12 class="btn0" >  b) Using [ $("[attrname1], [attrname2] , [attrname3]") ] multiple to select any elements types has a certain attribute Name }  </button>
-                    </a> <br> <br> 
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > [Grouped basic selectors (of the mixed types)]  {loading event}-> [all functions]  </button>
-                    </a> <br> <br> 
-                    
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > Access certain element's siblings [with using advanced selector (Tagname) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn14 class="btn0" > Access certain element's siblings [with using advanced filter(contains) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-                    
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > Access certain element's siblings [with using advanced selector (Tagname) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn14 class="btn0" > Access to element's direct children [with using advanced selector - className - ] => -> to [all functions] </button>
-                    </a> <br> <br>
-                                                           
-                </code>  <hr>          
-            
-                <script src="js/myplugins.js"></script>
-            </ol>   -->
+ 
             <br> <hr>                                     
         </section>
 
@@ -1327,7 +1412,7 @@
                 <h3>  [24 - React File Structure Vs Code] Importance & Benefits : </h3>
             </header>            
                 <ul>                                                                     
-                    <li> Project/application Structure is critical and basic for any one dealing with project  </li>  
+                    <li> Well Knowledge of ReactJS's Project/application file Structure is critical and basic for any one dealing with project  </li>  
                 </ul>                                                               
         </section>
 
@@ -1339,47 +1424,7 @@
             </header>   
 
              <p> =&gt;  Scenario Procedures :   </p>
-            
-            <!-- <div id="Code" class="Code">
-                
-                [1] { Login [Default ] into current DB Client from [CMD] } : <br>
-                    <span class= one></span> { ES6 -u root; } <br><br>
-            
-                [2] { Show all availble DBs in current Client from [CMD] } : <br>
-                    <span class= one></span> { SHOW DATABASES; } <br><br>
-                                                                                                            
-                [3] { Choosing Database {controlflow} from [CMD] } : <br>
-                    <span class= one></span> { use controlflow; } <br><br>                            
-                                                                                                            
-                [4] { Show all tables status in the Database {controlflow} from [CMD] } : <br>
-                    <span class= one></span> { show table status ; } <br><br>                            
-                                                                                                            
-                [5] { Display/Inquiry about all rows in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT * FROM casecond; } <br><br>
-                
-                [6] { Custom Display/Inquiry [Select] about (2) existed columms and custom column [CASE - First Method (Long) ] according to {number} in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT id , name , CASE number <br>
-                        <span class= two></span> When nubmer &gt; 95 Then 'Excellent'  <br>
-                        <span class= two></span> When nubmer &gt; 85 Then 'V.Good'  <br>
-                        <span class= two></span> When nubmer &gt; 75 Then 'Good'  <br>
-                        <span class= two></span> When nubmer &gt; 50 Then 'Passed'  <br>
-                        <span class= two></span> Else 'Failed' <br>
-                    <span class= one></span> END AS Final Result FROM casecond; } <br> <br>
-                                                                                                                
-                [7] { Custom Display/Inquiry [Select] about (2) existed columms and custom column [CASE - Second Method (Short) ] according to {number} in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT id , name , CASE number <br>
-                        <span class= two></span> When  &gt; 95 Then 'Excellent'  <br>
-                        <span class= two></span> When  &gt; 85 Then 'V.Good'  <br>
-                        <span class= two></span> When  &gt; 75 Then 'Good'  <br>
-                        <span class= two></span> When  &gt; 50 Then 'Passed'  <br>
-                        <span class= two></span> Else 'Failed' <br>
-                    <span class= one></span> END AS Final Result FROM casecond; } <br> <br>
-                                                                                                                                                                                                                            
-                //=========================================================== <br> <br>                                                                
-            
-            <br><br>
-            </div>   -->
-            
+      
             <hr>
         </section>
 
@@ -1389,73 +1434,10 @@
                 <h3> CMD [24 - React File Structure Vs Code()]  => {this lesson can be accessed throuh the github repo [webpages] } </h3>
             </header>
                         
-            <!-- <p> Using [cmd] For performing Scenario of controling with [Directories] processes and functions:   </p>
-            
-             <div class=JSOOPObjConstTraining >                                        
-                    <code>                        
-                        // A] Main Scenario Commands in lessons : <br>
-                        // 1- Accessing the working path and folder , by next code :  <br>
-                            <code> 
-                                <span class= one></span>  {cd C:\Users\Eng-Shadi\Commandline\testing}  <br><br>
-                            </code>  <br>
-                            
-                        // 2- Creating (3) new Directories inside this Dirctory : <br>
-                            <code> 
-                                <span class= one></span>  {md folder1 folder2 folder3}  <br><br>
-                            </code>  <br>
-                        
-                        // 3- Moving {folder3} to the upper line Directory: <br>
-                            <code> 
-                                <span class= one></span> {mv folder3 ..} <br><br>
-                            </code>  <br>
-
-                        // 4- Copying {folder2} in the same line by new name {folder22} : <br>
-                            <code> 
-                                <span class= one></span> {cp -r folder2 folder22} <br><br>
-                            </code>  <br>
-                        
-                        // 5- Renaming {folder1} to {folder11} : <br>
-                            <code> 
-                                <span class= one></span> {rename folder1 folder11} <br><br>
-                                <span class= one></span> {mv folder1 folder11} <br><br>
-                            </code>  <br>                            
-                        
-                        // 6- Listing contents of current directory  : <br>
-                            <code> 
-                                <span class= one></span> {ls} -> (Unix) <br><br>
-                                <span class= one></span> {dir} -> (Windows) <br><br>
-                            </code>  <br>                            
-                        
-                        // 7- Tree contents of current directory  : <br>
-                            <code> 
-                                <span class= one></span> {tree} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                        // 8- Access the {folder11} inside Testing & adding inner directory {subDirectory} :  <br>
-                            <code> 
-                                <span class= one></span> {cd folder11} -> (Unix) <br><br>
-                                <span class= one></span> {md subDirectory} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                        // 9- Access upper line of {Testing} Directory & removing the {folder11-which has inner contents-} :  <br>
-                            <code>  
-                                <span class= one></span> {cd ..\..\} -> (Unix) <br><br>
-                                <span class= one></span> {rm -r folder11} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                                                                   
-                        =======================================================<br><br><br>
-
-                    </code>                    
-                </div> 
-                 
-            <hr> <br> <br>                                        
-            <br>                
-            <hr>
-            -->                        
+     
         </section> 
 
-        <button type="button" class="btn" onclick="myTest()"> Click to Start [ (this) operator testing with both functions ] method   Application </button>
+        <button type="button" class="btn" onclick="myTest()"> Click to Start [  ReactJs file structure ]  Application </button>
 
         <script src="main.js"></script> 
         
@@ -1463,7 +1445,7 @@
         
         <div id="note" class="dis"></div> <br><br><br><br>
 
-        <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>             
+        <!-- <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>              -->
         
                                 
         <!-- <button id=btn class="btn0" onclick="display()">Display JS Code [plugins.js] file </button> -->
@@ -1496,7 +1478,7 @@
         <section class="Links">
             <h3>Course Map : </h3>
             <ul>              
-                <li> <a href="course map/ES6 course map.html"> ES 6 Course Map </a> </li>
+                <li> <a href="course map/ReactJS course map.html"> ES 6 Course Map </a> </li>
             </ul>
         </section>
         
