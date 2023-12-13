@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// App main file [App comonent ] :
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import React from 'react';
+
+// import (directly) private css files  ; 
+    import '../src/css/headerStyle.css' ;
+    import '../src/css/footerStyle.css' ;
+ 
+// importing the children components -=> to insert them inside this component :
+    import Header from './Header'; 
+    import Footer from './Footer.js';
+
+
+// Define the main file of Home page : 
+const App = () =>  {
+    return (    
+        <div>
+            <h1 className='mainStyle'> Hello this is App file main page -  formatted by using main css file    </h1>
+            <h1 className='style1'> Hello this is Element -  formatted by using private css file 'headerStyle.css'    </h1>
+            <h1 className='style2'> Hello this is Element  - formatted by using private css file 'footerStyle.css'    </h1>
+            
+            <Header/>
+            <Footer/>
+        </div>
+    ) 
+    
 }
 
-export default App;
+ 
+export default App ; 
