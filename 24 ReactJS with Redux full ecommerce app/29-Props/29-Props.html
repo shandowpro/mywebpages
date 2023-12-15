@@ -296,7 +296,7 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
+        <span> Welcome to ReactJS Course | </span> <br>
         29-Props        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section =>  using ReactJS  {Props} concept ,  Syntax and practical exps   <span><strong>  in JS ReactJS   </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> using ReactJS  {Props} concept ,  Syntax and practical exps      </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1087,18 +1087,18 @@
     <div class="Post" id=post>
         <Section  id="MainC" class="MainC">
             <header>
-                ES6 [29-Props] Main Topics : <br>
+                ReactJS  [29-Props] Main Topics : <br>
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about using ReactJS  {Props} concept ,  Syntax and practical exps , as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li>  {props} => concept   </li>
+                    <li>  {props}  => syntax and Requirments steps  </li>
+                    <li>  {props}  => practical examples    </li>
                 </ol>
             </article>
         </Section>
@@ -1110,212 +1110,286 @@
                 <h3> 29-Props concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
+            <p>  {props} => concept    <br>
+                <ol> 
+                    <li> It is a sort of parameter/arguments , which is passing through the data between the components     </li>
+                    <li> The mechanism of props working [circle] : <br>
+                        <ol> 
+                            <li>  inside the {App.js} => Sending the data from the ( API  or fixed varialbe )  into the  imported component by using  [RefVar] as an attributes isnde the imported components   </li>
+                            <li>  inside the {component.js} =>  Recieving the data  sent from the  sender [App.js] by using the {props} of the comnponent   </li>
+                            <li>  inside the {component.js} =>  Assign the data sent from the  sender [App.js] by using the {props}'s values [by the existed attriubtes isndie the main {App.js}   ]   </li>   
+                        </ol>        
+                    </li>
 
-            <p> {This} Reference value in the {Regular function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
-                </ul>    
-            </p> <br> <hr> <br>
+                    <li> Types of data could be sent  [via Props] : <br>  
+                        <ul>
+                            <li> Fixed data > using defined consts || vairables || array of objects    </li>
+                            <li> Dynmaic data => using API from Database   </li>
+                        </ul> 
+                    </li>
 
+                    <li> Methods of using {props} inside the main component   : <br>  
+                        <ul>
+                            <li> by directly write the imported component , and use the sent varialbe's name data inside componet  </li>
+                            <li> by using {map()} loop function inside the used data source , and return the imported  component with the certain data of each item , for following reasons :  <br> 
+                                <p> allow to create new compnoes by the numbers of counter in the used [datasource]/[Databases] reach each data buy looping inside the given data source , wether the count of data is  </p>
+                                <p> allow to reach each data buy looping inside the given data source , regardless of the Records count of data is  </p>
+                                <p> not requirgin to assign a counter varialble  , but only to use (index) paramater incase of non exited {key} property name for the component      </p>
+                                <p> this method require to use the same of attribute used in the main importer component function , within the compoonent it self </p>
+                                <p> this method require to use the {key} property name with each  generated component by map() Loop method </p>
+                            </li>
+                        </ul> 
+                    </li>
+                </ol>
+            </p>
+  
+               
+            <p> Using {Props} with comonents  => practical examples => <br> 
+                <ol> 
+                    <li> 1] Passing through data to the imported defined component function using [Props] in the {src/App.js} : <br>
+                        <p> a] with using following methods :   <br>  
+                            <ul>
+                                <li> {Data Soruce method} => Simple fixed datasource [one single variable for each one single component's property  </li>
+                                <li> {Assining/using component method} => Simple assinging/using of the each reusable component  </li>
+                                <li> {Assining/using component's properies values method} =>  using defined varialbe    </li>
+                            </ul>  <br> 
+                            
+                            <code>  
+                                <span class="one"></span>  // Importing the defined components :  <br> 
+                                    <span class="two"></span>  import {CardsDetails}  from './component/CardsDetails.js'  ;     <br>  <br>
+                                
+                                <span class="one"></span>  // Importing some images's pathes to be used in [fixed data source] :     <br> 
+                                    <span class="two"></span>  import img1  from './component/images/img1.jpg'  ;     <br> 
+                                    <span class="two"></span>  import img2  from './component/images/img2.jpg'  ;     <br> 
+                                    <span class="two"></span>  import img3  from './component/images/img3.jpg'  ;     <br> <br> 
+                                
+                                    
+                                <span class="one"></span>  // Define fixed data Source [one single variables - var for each component's single property ]  : <br>  
+                                   <span class="two"></span>   const title1  = 'component title1' ;   <br>  
+                                   <span class="two"></span>   const title2  = 'component title2' ;   <br>  
+                                   <span class="two"></span>   const title3  = 'component title3' ;   <br>   <br>
+                                 
 
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
-                </ul>    
-            </p> <br> <hr>
-                        
-            <ol> 
-                <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
+                                <span class="one"></span>  // Define component main {App} functional component  : <br>  
+                                <span class="one"></span>   const App = ()=> { <br>  
+                                  
+                                    <span class="two"></span>  return (  <br>  
+                                        <span class="three"></span> &lt; div   &gt;  <br>  
+                                            
+                                            <span class="four"></span> // several using of the imported component [re using] with assigning a single property for each comppnent [title] by using the defined varialble  :  <br>  
+                                            <span class="four"></span> &lt; CardsDetails title={title1} / &gt;  <br>  
+                                            <span class="four"></span> &lt; CardsDetails title={title2} / &gt;  <br>  
+                                            <span class="four"></span> &lt; CardsDetails title={title3} / &gt;  <br>  
+                                             
+                                        <span class="three"></span> &lt; /div &gt;  <br>  
+                                    <span class="two"></span>  ) ; <br>  
+                                <span class="one"></span> }     <br>  <br>
 
-                    <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
-                            <span class="one"></span> }  <br> <br>
+                                <span class="one"></span> export default App ; <br> 
+                            </code>      
+                        </p> <br> <hr> <br>
+                       
+                        <p> b] with using following methods :   <br>  
+                            <ul>
+                                <li> {Data Soruce method} => array of objects fixed datasource [one object for each one component's properties  </li>
+                                <li> {Assining/using component method} =>  using [map()] looping method to the main data variable   </li>
+                                <li> {Assining/using component's properties values method} =>  several properties assinging/using of each reusable component    </li>
+                            </ul>  <br> 
+                            
+                            <code>  
+                                <span class="one"></span>  // Importing the defined components :  <br> 
+                                    <span class="two"></span>  import {CardsDetails}  from './component/CardsDetails.js'  ;     <br> 
+                                
+                                <span class="one"></span>  // Importing some images's pathes to be used in [array of object data source] :     <br> 
+                                    <span class="two"></span>  import img1  from './component/images/img1.jpg'  ;     <br> 
+                                    <span class="two"></span>  import img2  from './component/images/img2.jpg'  ;     <br> 
+                                    <span class="two"></span>  import img3  from './component/images/img3.jpg'  ;     <br> <br>
+                                
+                                    
+                                <span class="one"></span>  // 1] Define fixed data Source [one object[array element] - for each component's  group of properties ] {without using [id] OR [key] property}  : <br>  
+                                <span class="one"></span> const data  =  [  <br>
+                                   <span class="two"></span> { title: 'title1' , desc: 'Description1' , img: img1 } , <br>
+                                   <span class="two"></span> { title: 'title2' , desc: 'Description2' , img: img2 } , <br>
+                                   <span class="two"></span> { title: 'title3' , desc: 'Description3' , img: img3 } <br>
+                                <span class="one"></span> ] ;   <br>  <br>
+                                   
+                                <span class="one"></span>  // 2] Define fixed data Source [one object[array element] - for each component's  group of properties ] {with using [id] OR [key] property}  : <br>  
+                                <span class="one"></span> const data  =  [  <br>
+                                   <span class="two"></span> { id:'1' ,  title: 'title1' , desc: 'Description1' , img: img1 } , <br>
+                                   <span class="two"></span> { id:'2' , title: 'title2' , desc: 'Description2' , img: img2 } , <br>
+                                   <span class="two"></span> { id:'3' , title: 'title3' , desc: 'Description3' , img: img3 } <br>
+                                <span class="one"></span> ] ;   <br>  <br>
+                                   
+                                     
+                                <span class="one"></span>  // Define component main {App} functional component  : <br>  
+                                <span class="one"></span>   const App = () => { <br>  
+                                  
+                                    <span class="two"></span>  return (  <br>  
+                                        <span class="three"></span> &lt; div   &gt;  <br>  
+                                            
+                                            <span class="four"></span> // Assigning imported several Reusing component by Maping through the {data} [the data source variable] and use it's [object's properties] <br>
+                                                <span class="three"></span> for each Re-Usable component {in case of not definging [key] property and using [index] parameter in map method instead  } :  <br>  
+                                            
+                                            <span class="four"></span> data.map( (item , index) => { <br>
+                                                <span class="five"></span>  return ( <br> 
+
+                                                    <span class="six"></span>  Asssining the component with dynamic properties from the maped data source {data} each looop , by the number of existed records   <br>
+                                                    <span class="six"></span>  &lt; CardDetails  <br>
+                                                        <span class="seven"></span>   title={item.title} <br>
+                                                        <span class="seven"></span>   desc={item.desc} <br>
+                                                        <span class="seven"></span>   img={item.img} <br>
+                                                        <span class="seven"></span>   key={index} -> [using the 'index' parameter  represent the current counter of the map looping] <br>
+                                                    <span class="six"></span> /&gt; <br>
+
+                                                <span class="five"></span>) <br>
+                                            <span class="four"></span>}) ;   <br>  </hr> <br>                                         
  
-                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
-                                <span class="one"></span>  window.onload = test;  <br>
-                        </code> <br> <br>
-                    
-                    <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
-                            <span class="one"></span> }  <br> <br>
-                       </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
+
+                                            <span class="four"></span> // Assigning imported several Reusing component by Maping through the {data} [the data source variable]  <br>
+                                                <span class="three"></span> and use it's [object's properties] for each Re-Usable component {in case of definging [key] property  , and not using [index] } :  <br>  
+                                            
+                                            <span class="three"></span> starting [map()] method inside a seperated JS : <br>
+                                            <span class="three"></span>  { <br>
+                                                <span class="four"></span> data.map( (item ) => { <br>
+                                                    <span class="five"></span>  return ( <br> 
+
+                                                        <span class="six"></span>  Assigning the component with dynamic properties from the maped data source {data} each looop , by the number of existed records :   <br>
+                                                        <span class="six"></span>  &lt; CardDetails  <br>
+                                                            <span class="seven"></span>   title={item.title} <br>
+                                                            <span class="seven"></span>   desc={item.desc} <br>
+                                                            <span class="seven"></span>   img={item.img} <br>
+                                                            <span class="seven"></span>   key={item.id} -> [using the 'id' property directly from the [data]  , that represent the current counter of the map looping] <br>
+                                                        <span class="six"></span> /&gt; <br>
+
+                                                    <span class="five"></span>) <br>
+                                                <span class="four"></span>}) ;   <br>
+
+                                            <span class="three"></span> }   <br>  <br>  
     
-                <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
-                    <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining constructor funtion : <br>
-                        <span class="one"></span> let test = function () {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  that = this ;  <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  that.age++ ;  <br>
-                                <span class="three"></span>  console.log(that.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
+                                        <span class="three"></span> &lt; /div &gt;  <br>  
+                                    <span class="two"></span>  ) ; <br>  
+                                <span class="one"></span> }     <br>  <br>
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
+                                <span class="one"></span> export default App ; <br> 
+                            </code>      
+                        </p> <br>  <hr> </br> <br> 
+                       
+                       
+                        <p> Creating the component {Card} : Define the main component => in {src/component/CardsDetails.js} : <br> 
+                            <code>                                  
+                                <span class="one"></span>  // Importing several components from 'react-bootstrap' to define the imported bootstrap component  :  <br> 
+                                <span class="one"></span>  import {Card , Button ,  , }  from 'react-bootstrap'  ;     <br> 
+                                
+                                <span class="one"></span>  // Define component function of bootstrap element [with using the recieved {props}] : <br>  
+                                <span class="one"></span>  const CardsDetails = (props)=> { <br>  
+                                  
+                                    <span class="two"></span> return (  <br>  
+                                        <span class="three"></span> &lt; div &gt;  <br>  
+                                            <span class="four"></span> &lt; Card &gt;  <br>  
+                                                <span class="five"></span> &lt; Card.Img img={props.img} /&gt;  <br>  
+                                                <span class="five"></span> &lt; Card.Body &gt;  <br>  
+                                                
+                                                    <span class="six"></span> &lt; Card.Title &gt;  <br>  
+                                                        <span class="seven"></span>  title={props.title} <br>  
+                                                    <span class="six"></span> &lt; /Card.Title &gt;  <br>   <br>
+                                                    
+                                                    <span class="six"></span> &lt; Card.Text &gt;  <br>  
+                                                        <span class="seven"></span>  title={props.text} <br>  
+                                                    <span class="six"></span> &lt; /Card.Text &gt;  <br>  <br>
+                                                                                                        
+                                                <span class="five"></span> &lt; /Card.Body &gt;  <br>  
+                                            <span class="four"></span> &lt; /Card &gt;  <br>  
 
-                    </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
+                                        <span class="three"></span> &lt; /div &gt;  <br>      
+                                    <span class="two"></span>  ) ; <br>  
+                                <span class="one"></span> }     <br> <br>
 
-                <li> {Arrow function} => {This} attidute and properties Syntax : <br>
-                    <h4> The {This} has the access through the inner nested function  :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining Arrow constructor funtion : <br>
-                        <span class="one"></span> let test = () => {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
-                                <span class="three"></span>  this.age++ ;  <br>
-                                <span class="three"></span>  console.log(this.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
-
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-
-                <hr> <br> <hr> <br>
-    
-            </ol>
-            <!-- --------------------------- -->
+                                <span class="one"></span> export default  CardsDetails ;  <br> 
+                            </code>
+                        </p> <br> <hr> <br>
+                    </li>
+                </ol>
+            </p>
+  
+             <!-- --------------------------- -->
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> [This] {Arrow functions} & {Regular functions} ->  will reperent the value of the method the been called by  </li>
-                    <li> [This] operator in the {Regular function}  ->  Can not access through the inner nested funcions , and needs to be assigned into another variable  </li>
-                    <li> [This] operator in the {Arrow function}  -> Can be used directly inside the inner nested functions  </li>
+                    <li>  There are several types of datasource an be used it inside the comoponents : <br>
+                        <ol>
+                            <li> Fixed Source  [form the local device ] -> [used in trial learning projects ] , and it can be as  : <br>
+                                <ul> 
+                                    <li> Simple varaible inside the same script [single or multiple defined variables]  </li> 
+                                    <li> Multiple varaible  inside the same script [Array OR of objects]  </li> 
+                                </ul>
+                            </li>  
+                            <li> Database/API received from server -> [usually used in real projects]=> {will be studied later }   </li>  
+                        </ol>    
+                    </li>
+
+                    <li> The passed properties [by props] must be with the same spelling in the [App.js] and the main functional component   </li>
+                    
+                    <li> There are (2) methods to add/assign the component's properties [inside main {App.js} ] : <br>
+                        <ol> 
+                            <li> 1] Direct writing the component  and manually assing component's property   =>  <br>
+                                <P> Manually controling the number of created components   </P>
+                                <P> suit only the smalll and small count of records of data , and Not suiting the large projects  </P>
+                                <P> suit fixed data projects  </P>
+                            </li> <br>
+
+                            <li> 2] Using {map() looping method }  =>  <br>  
+                                <P> used to loop inside the given [data source] and get each component's properties</P> 
+                                <p> used to create the components according to count records existed in the datasource  </P>
+                                <P> suit dynamic data projects displaying and retreiving </P>
+                            </li>                             
+                        </ol>
+                    
+                    </li>
+                
                 </ul>
             </p>
                                                                      
-            <h3> ES6 [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
+            <h3> ReactJS  [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
             
             <ol class="codes" >                    
                 <li> Page Sources : </li>
                 <code> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS JS [main.js] file </button>
                     </a> <br> <hr> <br> 
-                    
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/myplugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 new Code [myplugins.js] file </button>
-                    </a> <br> <hr> <br>  -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
-                    </a> <br> <br> 
-                    -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 old Code [plugins.js] file </button>
-                    </a> <br> <br> 
-                    -->
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/index.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS assembling file JS [index.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/App.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main App file {Main Component} [App.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/component/NavBar.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [NavBar] sub child component  file JS [NavBar.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/component/CardDetails.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [CardDetails] sub child component  file JS [CardDetails.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/Header.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS Header sub child component  file JS [Header.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/Footer.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS Footer sub child component  file JS [Footer.js] file </button>
+                    </a> <br> <hr> <br> 
+  
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/BootstrapComps.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS bootstrap components sub child component  file JS [BootstrapComps.js] file </button>
+                    </a> <br> <hr> <br> 
+  
                 </code>                 
             </ol>
-
-            <!-- <ol class="codes0" > 
-               
-                <h2 id="h2"> {end()} function method [Using { buttons} to activate {2 Modes} of applying changes -> </h2>  <br>
-                
-                <h3> [ First method : Default mode (multiple seperted chains - one chain code for each Procedure - )] : </h3>
-            
-                <h4> Applying multiple Changes on parent by using default method [Multiple Chains] : {CSS > fontSize + font color} </h4>
-                
-                <div id="defElem"> 
-                    <p> This is normal paragraph  </p>
-                    <span> This is normal Span  </span>
-                </div>
-        
-                <button id="defMode" class="btn0"> [Using {2 seperated chain codes } ] -> {CSS > fontSize + font color}  </button>
-                <hr> <hr></hr>
-                
-                <h3> [ Second method : Using end() mode (One seperted chain - for all procedures - )] : </h3>
-            
-                <h4> Applying multiple Changes on parent by using end() method [One Chains] : {CSS > fontSize + font color} </h4>
-                
-                <div id="endElem"> 
-                    <p> This is normal paragraph  </p>
-                    <span> This is normal Span  </span>
-                </div>
-        
-                <button id="endMode" class="btn0"> [Using {1 chain code } ] -> {CSS > fontSize + font color}  </button>
-                <hr> <hr></hr>
-                
-            <br> <hr> <br>
-            </ol>
-                 -->
-             <!------------------------------------------------->           
-             <!------------------------------------------------->       
-
-            <!-- <ol class="codes">        
-              <h3> Practical applications [2] main groups functions {with Total functions : 2 }  [up bove] </h3>
-             <li> First group [ Main  ] => [3 functions] {  } : <br>
-                <button class="plus" id="plus1"> +  Using [ $(":input") ] to select any input element (regardless of it's type) }  </button> 
-            </li>
-
-                 <code id="group1">
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn11 class="btn0" > a) Using [ $(":input") ] to Apply CSS properties on select any input element (Regardless of it's type) } </button>
-                    </a> <br> <br>  
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn12 class="btn0" >  b) Using [ $("[attrname1], [attrname2] , [attrname3]") ] multiple to select any elements types has a certain attribute Name }  </button>
-                    </a> <br> <br> 
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > [Grouped basic selectors (of the mixed types)]  {loading event}-> [all functions]  </button>
-                    </a> <br> <br> 
-                    
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > Access certain element's siblings [with using advanced selector (Tagname) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn14 class="btn0" > Access certain element's siblings [with using advanced filter(contains) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-                    
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > Access certain element's siblings [with using advanced selector (Tagname) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn14 class="btn0" > Access to element's direct children [with using advanced selector - className - ] => -> to [all functions] </button>
-                    </a> <br> <br>
-                                                           
-                </code>  <hr>          
-            
-                <script src="js/myplugins.js"></script>
-            </ol>   -->
+ 
             <br> <hr>                                     
         </section>
 
@@ -1327,7 +1401,7 @@
                 <h3>  [29-Props] Importance & Benefits : </h3>
             </header>            
                 <ul>                                                                     
-                    <li> Project/application Structure is critical and basic for any one dealing with project  </li>  
+                    <li> Using Custom Components wit using bootstrap is critical  Project/application Structure is critical and basic for any one dealing with project  </li>  
                 </ul>                                                               
         </section>
 
@@ -1339,47 +1413,7 @@
             </header>   
 
              <p> =&gt;  Scenario Procedures :   </p>
-            
-            <!-- <div id="Code" class="Code">
-                
-                [1] { Login [Default ] into current DB Client from [CMD] } : <br>
-                    <span class= one></span> { ES6 -u root; } <br><br>
-            
-                [2] { Show all availble DBs in current Client from [CMD] } : <br>
-                    <span class= one></span> { SHOW DATABASES; } <br><br>
-                                                                                                            
-                [3] { Choosing Database {controlflow} from [CMD] } : <br>
-                    <span class= one></span> { use controlflow; } <br><br>                            
-                                                                                                            
-                [4] { Show all tables status in the Database {controlflow} from [CMD] } : <br>
-                    <span class= one></span> { show table status ; } <br><br>                            
-                                                                                                            
-                [5] { Display/Inquiry about all rows in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT * FROM casecond; } <br><br>
-                
-                [6] { Custom Display/Inquiry [Select] about (2) existed columms and custom column [CASE - First Method (Long) ] according to {number} in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT id , name , CASE number <br>
-                        <span class= two></span> When nubmer &gt; 95 Then 'Excellent'  <br>
-                        <span class= two></span> When nubmer &gt; 85 Then 'V.Good'  <br>
-                        <span class= two></span> When nubmer &gt; 75 Then 'Good'  <br>
-                        <span class= two></span> When nubmer &gt; 50 Then 'Passed'  <br>
-                        <span class= two></span> Else 'Failed' <br>
-                    <span class= one></span> END AS Final Result FROM casecond; } <br> <br>
-                                                                                                                
-                [7] { Custom Display/Inquiry [Select] about (2) existed columms and custom column [CASE - Second Method (Short) ] according to {number} in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT id , name , CASE number <br>
-                        <span class= two></span> When  &gt; 95 Then 'Excellent'  <br>
-                        <span class= two></span> When  &gt; 85 Then 'V.Good'  <br>
-                        <span class= two></span> When  &gt; 75 Then 'Good'  <br>
-                        <span class= two></span> When  &gt; 50 Then 'Passed'  <br>
-                        <span class= two></span> Else 'Failed' <br>
-                    <span class= one></span> END AS Final Result FROM casecond; } <br> <br>
-                                                                                                                                                                                                                            
-                //=========================================================== <br> <br>                                                                
-            
-            <br><br>
-            </div>   -->
-            
+         
             <hr>
         </section>
 
@@ -1389,73 +1423,10 @@
                 <h3> CMD [29-Props()]  => {this lesson can be accessed throuh the github repo [webpages] } </h3>
             </header>
                         
-            <!-- <p> Using [cmd] For performing Scenario of controling with [Directories] processes and functions:   </p>
             
-             <div class=JSOOPObjConstTraining >                                        
-                    <code>                        
-                        // A] Main Scenario Commands in lessons : <br>
-                        // 1- Accessing the working path and folder , by next code :  <br>
-                            <code> 
-                                <span class= one></span>  {cd C:\Users\Eng-Shadi\Commandline\testing}  <br><br>
-                            </code>  <br>
-                            
-                        // 2- Creating (3) new Directories inside this Dirctory : <br>
-                            <code> 
-                                <span class= one></span>  {md folder1 folder2 folder3}  <br><br>
-                            </code>  <br>
-                        
-                        // 3- Moving {folder3} to the upper line Directory: <br>
-                            <code> 
-                                <span class= one></span> {mv folder3 ..} <br><br>
-                            </code>  <br>
-
-                        // 4- Copying {folder2} in the same line by new name {folder22} : <br>
-                            <code> 
-                                <span class= one></span> {cp -r folder2 folder22} <br><br>
-                            </code>  <br>
-                        
-                        // 5- Renaming {folder1} to {folder11} : <br>
-                            <code> 
-                                <span class= one></span> {rename folder1 folder11} <br><br>
-                                <span class= one></span> {mv folder1 folder11} <br><br>
-                            </code>  <br>                            
-                        
-                        // 6- Listing contents of current directory  : <br>
-                            <code> 
-                                <span class= one></span> {ls} -> (Unix) <br><br>
-                                <span class= one></span> {dir} -> (Windows) <br><br>
-                            </code>  <br>                            
-                        
-                        // 7- Tree contents of current directory  : <br>
-                            <code> 
-                                <span class= one></span> {tree} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                        // 8- Access the {folder11} inside Testing & adding inner directory {subDirectory} :  <br>
-                            <code> 
-                                <span class= one></span> {cd folder11} -> (Unix) <br><br>
-                                <span class= one></span> {md subDirectory} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                        // 9- Access upper line of {Testing} Directory & removing the {folder11-which has inner contents-} :  <br>
-                            <code>  
-                                <span class= one></span> {cd ..\..\} -> (Unix) <br><br>
-                                <span class= one></span> {rm -r folder11} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                                                                   
-                        =======================================================<br><br><br>
-
-                    </code>                    
-                </div> 
-                 
-            <hr> <br> <br>                                        
-            <br>                
-            <hr>
-            -->                        
         </section> 
 
-        <button type="button" class="btn" onclick="myTest()"> Click to Start [ (this) operator testing with both functions ] method   Application </button>
+        <!-- <button type="button" class="btn" onclick="myTest()"> Click to Start [ (this) operator testing with both functions ] method  Application </button> -->
 
         <script src="main.js"></script> 
         
@@ -1463,7 +1434,7 @@
         
         <div id="note" class="dis"></div> <br><br><br><br>
 
-        <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>             
+        <!-- <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>              -->
         
                                 
         <!-- <button id=btn class="btn0" onclick="display()">Display JS Code [plugins.js] file </button> -->
@@ -1496,7 +1467,7 @@
         <section class="Links">
             <h3>Course Map : </h3>
             <ul>              
-                <li> <a href="course map/ES6 course map.html"> ES 6 Course Map </a> </li>
+                <li> <a href="course map/ReactJS  course map.html"> ES 6 Course Map </a> </li>
             </ul>
         </section>
         
