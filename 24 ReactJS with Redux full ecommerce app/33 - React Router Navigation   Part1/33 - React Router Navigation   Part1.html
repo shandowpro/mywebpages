@@ -13,7 +13,7 @@
     <!-- First Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1" >    
  
-    <meta content="Learning Course" description="This is Lesson 33 - React Router Navigation   Part1 " >    
+    <meta content="Learning ReactJS Course" description="This is Lesson 33 - React Router Navigation   Part1 " >    
     
     <title> 33 - React Router Navigation   Part1 </title>
     
@@ -296,7 +296,7 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
+        <span> Welcome to ReactJS Course | </span> <br>
         33 - React Router Navigation   Part1        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section => sing ReactJS passsing {functions} as props and {children destructured prop} concept ,  Syntax and practical exps   <span><strong>  in JS ReactJS   </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> using ReactJS passing {functions} as props and {children destructured prop} concept ,  Syntax and practical exps      </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1087,18 +1087,20 @@
     <div class="Post" id=post>
         <Section  id="MainC" class="MainC">
             <header>
-                ES6 [33 - React Router Navigation   Part1] Main Topics : <br>
+                ReactJS  [33 - React Router Navigation   Part1] Main Topics : <br>
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about using ReactJS { ReactJs Routers Navigation}  [part1] concept ,  Syntax and practical exps , as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li>  Navigation Router in the ReactJs => concept   </li>
+                    <li>  Navigation Router in the ReactJs => Requriments   </li>
+                    <li>  Navigation Router in the ReactJs => syntax    </li>
+                    <li>  Navigation Router in the ReactJs => how to use and mechanism of working    </li>
+                    <li>  Navigation Router in the ReactJs => practical examples    </li>
                 </ol>
             </article>
         </Section>
@@ -1110,212 +1112,242 @@
                 <h3> 33 - React Router Navigation   Part1 concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
+            <p> Navigation Router in the ReactJs  => concept : <br>
+                <ol> 
+                    <li> It is about a method for navigation between defined pages and components  </li>
+                    <li> Every page in the react is called a [router]    </li>
+                    <li> The diffenreces of Navigation in both and {reactJS}  & {default Html} in concept process : <br>
+                        <ul> 
+                            <li> Concept =>   <br>
+                                <ol>
+                                    <li> {default Html} => Depends on reloading the target location url  tio access to the url    </li>
+                                    <li> {reactJS} => Depends on  {SPA}  to access the to the target url , without reloading the current page     </li>
+                                </ol>
+                            </li>
+                            
+                            <li> Mechanism =>     <br>
+                                <ol>
+                                    <li> {default Html} => <br> 
+                                        <p> Send the target location url [page router]  to server to  and then reload ther current page  </p>
+                                        <p> use the assigned url value in the current request  </p>
+                                    </li>  <br>
 
-            <p> {This} Reference value in the {Regular function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
-                </ul>    
-            </p> <br> <hr> <br>
+                                    <li> {reactJS} => <br> 
+                                        <p> Render the curent page router with new rquested page router , without relaoding the current page   </p>
+                                        <p> use the assigned url value in certain library of list of routers in the current page , assgined in the [App.js] inside special element  </p>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ul> 
+                    </li>  
+                </ol> <br>
+            </p>       
+             <br><br> <hr><br> 
+             
+             <p> Navigation Router in the ReactJs  =>  Requriments : <br>
+                <ol> 
+                    <li> setup and install the  {react-router-dom} in the current project main path , usintg the folloiwng codes :   <br>
+                        <code>
+                            <span class="one"></span> npm i react-router-dom  ; <br>
+                        </code>
+                    </li>
+
+                    <li> {react-router-dom}  properties as following : <br> 
+                        <ul> 
+                            <li> must be imported in the main [App.js] as following overall importing code : <br>
+                                <span class="one"></span> import {BrowsRouter , Routers , Router} from 'react-router-dom' ;  <br>
+                            </li>
+                            <li>  each imported object represent a certain function : <br>
+                                <ol> 
+                                    <li>  {BrowserRouter} => represent the main container of all defined pages routers in the main project  </li>
+                                    <li>  {Routers} => represent the inner conatiner of all defined routers </li>
+                                    <li>  {Router} => represent the single page router , and incoluds the follwing properties : <br>
+                                        <ul> 
+                                            <li> [path] => will include page router's path  </li>
+                                            <li> [element] => will include page router's Element Tag  </li>
+                                        </ul>
+                                    </li>
+                                </ol>        
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </p>    
+            <br><br> <hr><br> 
 
 
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
-                </ul>    
-            </p> <br> <hr>
-                        
-            <ol> 
-                <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
-
-                    <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
-                            <span class="one"></span> }  <br> <br>
- 
-                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
-                                <span class="one"></span>  window.onload = test;  <br>
-                        </code> <br> <br>
+            <p> Navigation Router in the ReactJs Syntax =>  [App.js] :: <br>
+                <code>  
+                    <span calss="one"></span>  // Importing the required libraries for routering [react-router-dom ] :  <br>
+                    <span calss="one"></span>  import {BrowerRouter, Route , Routes} from  'react-router-dom' ;    <br>
                     
-                    <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
-                            <span class="one"></span> }  <br> <br>
-                       </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-    
-                <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
-                    <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining constructor funtion : <br>
-                        <span class="one"></span> let test = function () {  <br>
+                    <span calss="one"></span>  // Importing the defined and used components [to be called as pages routers ||  fixed components ] :    <br>
+                    <span calss="one"></span>  import fixedComp from './component/fixedComp' ; <br>
+                    <span calss="one"></span>  import routerComp1 from './component/routerComp1' ; <br>
+                    <span calss="one"></span>  import routerComp2 from './component/routerComp2' ; <br>
+                    <span calss="one"></span>  import routerComp3 from './component/routerComp3' ; <br>
+                                          
+
+                    <span calss="one"></span> const App = () => { <br>
+                        <span calss="two"></span> return ( <br>
+
+                            <span calss="three"></span> // Calling the fixed  component : <br>
+                            <span calss="three"></span> &lt; fixedComp  &gt; <br> <br>
+
                             
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  that = this ;  <br>
-                            <span class="two"></span>  this.age = 0;  <br>
+                            <span calss="three"></span>  // start using the Pages Routers to assign defined components as page Routers : <br>
+                            <span calss="three"></span> &lt; BorwerRouter &gt; <br>
+                                <span calss="four"></span> &lt; Routers &gt; <br>
+
+                                    <span calss="five"></span>  // define the first router of component  [routerComp1] :  <br>
+                                    <span calss="five"></span> &lt; Router path='/routercomp1'  element={&lt; routerComp1 /&gt; } /&gt; <br>
+                                    
+                                    <span calss="five"></span>  // define the second router of component  [routerComp2] :  <br>
+                                    <span calss="five"></span> &lt; Router path='/routercomp2'  element={&lt; routerComp2 /&gt; } /&gt; <br>
+                                    
+                                    <span calss="five"></span>  // define the third router of component   [routerComp3] :  <br>
+                                    <span calss="five"></span> &lt; Router path='/routercomp3'  element={&lt; routerComp3 /&gt; } /&gt; <br>
+                                    
+                                     
+                                <span calss="four"></span> &lt; /Routers &gt; <br>
+                            <span calss="three"></span> &lt; /BorwerRouter &gt; <br> <br>
+
+
+                            <span calss="three"></span> // Calling the Footer as fixed component : <br>
+                            <span calss="three"></span> &lt; Footer  &gt; <br> 
+
+                        <span calss="two"></span>   ) <br>  <br>
+                    <span calss="one"></span> }    <br>                         
+                </code>                    
+            </p>       
+             <br><br> <hr><br> 
+ 
+            <p>  Navigation Router in the ReactJs =>  Rules ot use  : <br>
+                <ol> 
+                    <li> Install and setup: {react-router-dom} in  main project path   </li> <br>
+                    <li> import the main objects from  : {react-router-dom} in the main page {App.js}   </li> <br>
+                    <li> Define each component {as Route} element slefclosed =>  inside the main continer of {BrowserRourter} and inside the inner container {Routers}      </li> <br>  /
+                    <li> each [Route] must include the following [2] properties :  <br>
+                        <ol> 
+                            <li> {path} => stirng value of page browser path , to be used ot naviagate to this page router => (must be in small case)      </li>
+                            <li> {element} => include the page/component's Tag inside {} => [to be rendered by reactJS]  </li>
+                        </ol>
+                    </li>
+                </ol><br>
+            </p>       
+             <br><br> <hr><br> 
+             
+             <p> Next lesson feautres about Navigation :   <br>
+                <ul> 
+                    <li> Activate the routing Naviagation by using buttons </li>
+                    <li> Display an Error in case wrong written router in the browser address bar   </li>
+                    <li> Display certain action in case of the main page is active   </li>
+                </ul>
+            </p>
+            <br><br> <hr><br> 
+
+
+            <p> Navigation Router in the ReactJs => practical examples => <br> 
+                <code>  
+                    <span calss="one"></span>  // Importing the required libraries for routering [react-router-dom ] :  <br>
+                    <span calss="one"></span>  import {BrowerRouter, Route , Routes } from  'react-router-dom' ;    <br>
+                    
+                    <span calss="one"></span>  // Improting the defined components to be called as pages routers :    <br>
+                    <span calss="one"></span>  import About from './component/About' ; <br>
+                    <span calss="one"></span>  import Content from './component/Content' ; <br> <br>
+                    
+                    <span calss="one"></span>  // Improting the defined components to be called as fixed components :    <br>
+                    <span calss="one"></span>  import NavBar from './component/NavBar' ; <br>
+                    <span calss="one"></span>  import Footer from './component/Footer' ; <br> <br>
+                    
+                    <span calss="one"></span> const App = () => { <br>
+                        <span calss="two"></span> return ( <br>
+
+
+                            <span calss="three"></span> // Calling the Navbar as fixed component : <br>
+                            <span calss="three"></span> &lt; NavBar  &gt; <br> <br>
+
                             
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  that.age++ ;  <br>
-                                <span class="three"></span>  console.log(that.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
+                            <span calss="three"></span>  // start using the Pages Routers to assign defined components as page Routers : <br>
+                            <span calss="three"></span> &lt; BorwerRouter &gt; <br>
+                                <span calss="four"></span> &lt; Routers &gt; <br>
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
+                                    <span calss="five"></span>  // define the router of the about page :  <br>
+                                    <span calss="five"></span> &lt; Router path='/about'  element={&lt; About /&gt; } /&gt; <br>
+                                    
+                                    <span calss="five"></span>  // define the router of the content page :  <br>
+                                    <span calss="five"></span> &lt; Router path='/content'  element={&lt; Content /&gt; } /&gt; <br>
+                                
+                                <span calss="four"></span> &lt; /Routers &gt; <br>
+                            <span calss="three"></span> &lt; /BorwerRouter &gt; <br> <br>
 
-                    </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
 
-                <li> {Arrow function} => {This} attidute and properties Syntax : <br>
-                    <h4> The {This} has the access through the inner nested function  :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining Arrow constructor funtion : <br>
-                        <span class="one"></span> let test = () => {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
-                                <span class="three"></span>  this.age++ ;  <br>
-                                <span class="three"></span>  console.log(this.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
+                            <span calss="three"></span> // Calling the Footer as fixed component : <br>
+                            <span calss="three"></span> &lt; Footer  &gt; <br> 
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
-
-                    </code> <br> <br>
-                </li>
-
-                <hr> <br> <hr> <br>
-    
-            </ol>
-            <!-- --------------------------- -->
+                        <span calss="two"></span>   ) <br>  <br>
+                    <span calss="one"></span> }    <br>                         
+                </code>                    
+ 
+            </p>
+  
+             <!-- --------------------------- -->
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> [This] {Arrow functions} & {Regular functions} ->  will reperent the value of the method the been called by  </li>
-                    <li> [This] operator in the {Regular function}  ->  Can not access through the inner nested funcions , and needs to be assigned into another variable  </li>
-                    <li> [This] operator in the {Arrow function}  -> Can be used directly inside the inner nested functions  </li>
+                    <li> Define the {Routers} in the main [App.js] : <br>
+                        <ol> 
+                            <li> Must import the {react-router-dom} with all it's objects {BrowerRouter, Route , Routes } to use it properly in the defining the routes   </li>
+                            <li> Inside each [Route] => {path} , must write the path of each router in small letter = > [to be read properly by the brwoser]  </li>
+                            <li> Inside each [Route] => {element} , must write the router page as an component self colsed Tag  = > [to be read properly by the ReactJs script]  </li>
+                            <li> We must add only the page routers , not the fixed pages/components </li>
+                        </ol>
+                    </li>
+     
                 </ul>
             </p>
                                                                      
-            <h3> ES6 [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
+            <h3> ReactJS [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
             
             <ol class="codes" >                    
                 <li> Page Sources : </li>
                 <code> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS JS [main.js] file </button>
                     </a> <br> <hr> <br> 
-                    
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/myplugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 new Code [myplugins.js] file </button>
-                    </a> <br> <hr> <br>  -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
-                    </a> <br> <br> 
-                    -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 old Code [plugins.js] file </button>
-                    </a> <br> <br> 
-                    -->
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/index.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS assembling file JS [index.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/App.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main App file {Main Component} [App.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/component/NavBar.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [NavBar] sub child component  file JS [NavBar.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/component/CardDetails.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [CardDetails] sub child component  file JS [CardDetails.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/Header.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS Header sub child component  file JS [Header.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/Footer.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS Footer sub child component  file JS [Footer.js] file </button>
+                    </a> <br> <hr> <br> 
+  
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/BootstrapComps.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS bootstrap components sub child component  file JS [BootstrapComps.js] file </button>
+                    </a> <br> <hr> <br> 
+  
                 </code>                 
             </ol>
-
-            <!-- <ol class="codes0" > 
-               
-                <h2 id="h2"> {end()} function method [Using { buttons} to activate {2 Modes} of applying changes -> </h2>  <br>
-                
-                <h3> [ First method : Default mode (multiple seperted chains - one chain code for each Procedure - )] : </h3>
-            
-                <h4> Applying multiple Changes on parent by using default method [Multiple Chains] : {CSS > fontSize + font color} </h4>
-                
-                <div id="defElem"> 
-                    <p> This is normal paragraph  </p>
-                    <span> This is normal Span  </span>
-                </div>
-        
-                <button id="defMode" class="btn0"> [Using {2 seperated chain codes } ] -> {CSS > fontSize + font color}  </button>
-                <hr> <hr></hr>
-                
-                <h3> [ Second method : Using end() mode (One seperted chain - for all procedures - )] : </h3>
-            
-                <h4> Applying multiple Changes on parent by using end() method [One Chains] : {CSS > fontSize + font color} </h4>
-                
-                <div id="endElem"> 
-                    <p> This is normal paragraph  </p>
-                    <span> This is normal Span  </span>
-                </div>
-        
-                <button id="endMode" class="btn0"> [Using {1 chain code } ] -> {CSS > fontSize + font color}  </button>
-                <hr> <hr></hr>
-                
-            <br> <hr> <br>
-            </ol>
-                 -->
-             <!------------------------------------------------->           
-             <!------------------------------------------------->       
-
-            <!-- <ol class="codes">        
-              <h3> Practical applications [2] main groups functions {with Total functions : 2 }  [up bove] </h3>
-             <li> First group [ Main  ] => [3 functions] {  } : <br>
-                <button class="plus" id="plus1"> +  Using [ $(":input") ] to select any input element (regardless of it's type) }  </button> 
-            </li>
-
-                 <code id="group1">
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn11 class="btn0" > a) Using [ $(":input") ] to Apply CSS properties on select any input element (Regardless of it's type) } </button>
-                    </a> <br> <br>  
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn12 class="btn0" >  b) Using [ $("[attrname1], [attrname2] , [attrname3]") ] multiple to select any elements types has a certain attribute Name }  </button>
-                    </a> <br> <br> 
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > [Grouped basic selectors (of the mixed types)]  {loading event}-> [all functions]  </button>
-                    </a> <br> <br> 
-                    
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > Access certain element's siblings [with using advanced selector (Tagname) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn14 class="btn0" > Access certain element's siblings [with using advanced filter(contains) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-                    
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > Access certain element's siblings [with using advanced selector (Tagname) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn14 class="btn0" > Access to element's direct children [with using advanced selector - className - ] => -> to [all functions] </button>
-                    </a> <br> <br>
-                                                           
-                </code>  <hr>          
-            
-                <script src="js/myplugins.js"></script>
-            </ol>   -->
+ 
             <br> <hr>                                     
         </section>
 
@@ -1327,7 +1359,7 @@
                 <h3>  [33 - React Router Navigation   Part1] Importance & Benefits : </h3>
             </header>            
                 <ul>                                                                     
-                    <li> Project/application Structure is critical and basic for any one dealing with project  </li>  
+                    <li> Routering is essensal to be used in any reactJs  project , and it depends on the  {SPA} concept , to acheive the main feature of uing react     </li>  
                 </ul>                                                               
         </section>
 
@@ -1339,47 +1371,7 @@
             </header>   
 
              <p> =&gt;  Scenario Procedures :   </p>
-            
-            <!-- <div id="Code" class="Code">
-                
-                [1] { Login [Default ] into current DB Client from [CMD] } : <br>
-                    <span class= one></span> { ES6 -u root; } <br><br>
-            
-                [2] { Show all availble DBs in current Client from [CMD] } : <br>
-                    <span class= one></span> { SHOW DATABASES; } <br><br>
-                                                                                                            
-                [3] { Choosing Database {controlflow} from [CMD] } : <br>
-                    <span class= one></span> { use controlflow; } <br><br>                            
-                                                                                                            
-                [4] { Show all tables status in the Database {controlflow} from [CMD] } : <br>
-                    <span class= one></span> { show table status ; } <br><br>                            
-                                                                                                            
-                [5] { Display/Inquiry about all rows in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT * FROM casecond; } <br><br>
-                
-                [6] { Custom Display/Inquiry [Select] about (2) existed columms and custom column [CASE - First Method (Long) ] according to {number} in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT id , name , CASE number <br>
-                        <span class= two></span> When nubmer &gt; 95 Then 'Excellent'  <br>
-                        <span class= two></span> When nubmer &gt; 85 Then 'V.Good'  <br>
-                        <span class= two></span> When nubmer &gt; 75 Then 'Good'  <br>
-                        <span class= two></span> When nubmer &gt; 50 Then 'Passed'  <br>
-                        <span class= two></span> Else 'Failed' <br>
-                    <span class= one></span> END AS Final Result FROM casecond; } <br> <br>
-                                                                                                                
-                [7] { Custom Display/Inquiry [Select] about (2) existed columms and custom column [CASE - Second Method (Short) ] according to {number} in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT id , name , CASE number <br>
-                        <span class= two></span> When  &gt; 95 Then 'Excellent'  <br>
-                        <span class= two></span> When  &gt; 85 Then 'V.Good'  <br>
-                        <span class= two></span> When  &gt; 75 Then 'Good'  <br>
-                        <span class= two></span> When  &gt; 50 Then 'Passed'  <br>
-                        <span class= two></span> Else 'Failed' <br>
-                    <span class= one></span> END AS Final Result FROM casecond; } <br> <br>
-                                                                                                                                                                                                                            
-                //=========================================================== <br> <br>                                                                
-            
-            <br><br>
-            </div>   -->
-            
+         
             <hr>
         </section>
 
@@ -1389,73 +1381,10 @@
                 <h3> CMD [33 - React Router Navigation   Part1()]  => {this lesson can be accessed throuh the github repo [webpages] } </h3>
             </header>
                         
-            <!-- <p> Using [cmd] For performing Scenario of controling with [Directories] processes and functions:   </p>
             
-             <div class=JSOOPObjConstTraining >                                        
-                    <code>                        
-                        // A] Main Scenario Commands in lessons : <br>
-                        // 1- Accessing the working path and folder , by next code :  <br>
-                            <code> 
-                                <span class= one></span>  {cd C:\Users\Eng-Shadi\Commandline\testing}  <br><br>
-                            </code>  <br>
-                            
-                        // 2- Creating (3) new Directories inside this Dirctory : <br>
-                            <code> 
-                                <span class= one></span>  {md folder1 folder2 folder3}  <br><br>
-                            </code>  <br>
-                        
-                        // 3- Moving {folder3} to the upper line Directory: <br>
-                            <code> 
-                                <span class= one></span> {mv folder3 ..} <br><br>
-                            </code>  <br>
-
-                        // 4- Copying {folder2} in the same line by new name {folder22} : <br>
-                            <code> 
-                                <span class= one></span> {cp -r folder2 folder22} <br><br>
-                            </code>  <br>
-                        
-                        // 5- Renaming {folder1} to {folder11} : <br>
-                            <code> 
-                                <span class= one></span> {rename folder1 folder11} <br><br>
-                                <span class= one></span> {mv folder1 folder11} <br><br>
-                            </code>  <br>                            
-                        
-                        // 6- Listing contents of current directory  : <br>
-                            <code> 
-                                <span class= one></span> {ls} -> (Unix) <br><br>
-                                <span class= one></span> {dir} -> (Windows) <br><br>
-                            </code>  <br>                            
-                        
-                        // 7- Tree contents of current directory  : <br>
-                            <code> 
-                                <span class= one></span> {tree} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                        // 8- Access the {folder11} inside Testing & adding inner directory {subDirectory} :  <br>
-                            <code> 
-                                <span class= one></span> {cd folder11} -> (Unix) <br><br>
-                                <span class= one></span> {md subDirectory} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                        // 9- Access upper line of {Testing} Directory & removing the {folder11-which has inner contents-} :  <br>
-                            <code>  
-                                <span class= one></span> {cd ..\..\} -> (Unix) <br><br>
-                                <span class= one></span> {rm -r folder11} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                                                                   
-                        =======================================================<br><br><br>
-
-                    </code>                    
-                </div> 
-                 
-            <hr> <br> <br>                                        
-            <br>                
-            <hr>
-            -->                        
         </section> 
 
-        <button type="button" class="btn" onclick="myTest()"> Click to Start [ (this) operator testing with both functions ] method   Application </button>
+        <!-- <button type="button" class="btn" onclick="myTest()"> Click to Start [ (this) operator testing with both functions ] method  Application </button> -->
 
         <script src="main.js"></script> 
         
@@ -1463,7 +1392,7 @@
         
         <div id="note" class="dis"></div> <br><br><br><br>
 
-        <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>             
+        <!-- <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>              -->
         
                                 
         <!-- <button id=btn class="btn0" onclick="display()">Display JS Code [plugins.js] file </button> -->
@@ -1496,7 +1425,7 @@
         <section class="Links">
             <h3>Course Map : </h3>
             <ul>              
-                <li> <a href="course map/ES6 course map.html"> ES 6 Course Map </a> </li>
+                <li> <a href="course map/ReactJS  course map.html"> ES 6 Course Map </a> </li>
             </ul>
         </section>
         

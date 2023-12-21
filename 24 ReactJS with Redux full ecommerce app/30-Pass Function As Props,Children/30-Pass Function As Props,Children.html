@@ -1,4 +1,4 @@
-    
+
 <!DOCTYPE html>
  
 <html>
@@ -296,7 +296,7 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
+        <span> Welcome to ReactJS Course | </span> <br>
         30-Pass Function As Props,Children        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section => sing ReactJS passsing {functions} as props and {children destructured prop} concept ,  Syntax and practical exps   <span><strong>  in JS ReactJS   </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> using ReactJS passing {functions} as props and {children destructured prop} concept ,  Syntax and practical exps      </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1087,18 +1087,19 @@
     <div class="Post" id=post>
         <Section  id="MainC" class="MainC">
             <header>
-                ES6 [30-Pass Function As Props,Children] Main Topics : <br>
+                ReactJS  [30-Pass Function As Props,Children] Main Topics : <br>
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about using ReactJS {function Props} {children desturcted props} concept ,  Syntax and practical exps , as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li>  Sending Function as {props}  => concept   </li>
+                    <li>  {Destructuring props} & {Children} destructed prop  => concept   </li>
+                    <li>  Sending Function as {props} & {Destructuring props} & {Children} destructed prop  => syntax and Requirments steps  </li>
+                    <li>  Sending Function as {props} & {Destructuring props} & {Children} destructed prop  => practical examples    </li>
                 </ol>
             </article>
         </Section>
@@ -1110,212 +1111,547 @@
                 <h3> 30-Pass Function As Props,Children concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
-
-            <p> {This} Reference value in the {Regular function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
-                </ul>    
-            </p> <br> <hr> <br>
-
-
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
-                </ul>    
-            </p> <br> <hr>
-                        
-            <ol> 
-                <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
-
-                    <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
-                            <span class="one"></span> }  <br> <br>
- 
-                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
-                                <span class="one"></span>  window.onload = test;  <br>
-                        </code> <br> <br>
+            <p> Sending Function as {props}  => concept : <br>
+                <ol> 
+                    <li> It is a about passing functions as parameter/arguments via {Porps} ,  from the [main paraent app.js] to the [child component]   </li>
                     
-                    <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
-                            <span class="one"></span> }  <br> <br>
-                       </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
+                    <li> Cases of using [props] to pass function from the parent component into a child component    :  <br>
+                        <ul> 
+                            <li> to assgning a direct inner function assigned inside the button ,and call it via the button's onClick() event  </li> 
+                            <li> to call a defined function inside the child component via the button's onClick() event  </li> 
+                            <li> to call a defined and sent function defined inside the parent component and recieve it into a child component via {props} inside a container function , and call this container function inside the button's onClick event  </li> 
+                        </ul>
+                    </li>
+                </ol> <br>
+            </p> 
+            
+            <p> Main methodologies of using [props] to send peorpties from [parent component] -> to  [child component]  : <br> 
+                <ol>
+                    <li> Using [prop] as total object  :  <br>
+                        <p> to use the props as one object which is [including all defined propreties] inside the {childComponent.js} : <br>
+                            <code class="codes0"> 
+                                <span class="one"></span> // Define the child component :   <br> 
+                                <span class="one"></span> const childComp = (props) => {} <br> 
+                            </code>
+                        </p>        
+                    </li>
+
+                    <li> Using Solo certain specified [properites] as desturtured object, which can include one of next (2) options :  <br>
+                        <ul>
+                            <li> 1] to use certain specific [defined properties] inside the {childComponent.js} , as following syntax :   <br>
+                                <code> 
+                                    <span class="one"></span> // Define the child component [with destructured {props} , without using {children}] :   <br> 
+                                    <span class="one"></span> const childComp = (property1, property2, property3) => {} <br> 
+                                </code>                                
+                            </li> <br>
+
+                            <li> 2] to use certain specific [defined properties + (children)] inside the {childComponent.js} , as following syntax : <br> 
+                                <code> 
+                                    <span class="one"></span> // Define the child component [with destructured {props} , with using {children} Built-in property ] :   <br> 
+                                    <span class="one"></span> const childComp = (property1, property2, property3 , children ) => {} <br> 
+                                </code>
+
+                               <p> [children] concept  => : <br> 
+                                    <p> To send uncounted number of elements assigned in the parent component , in to a child component as accomulated built-in property called [childern]  </p>
+                                    <p> Main common usages of the [children] proporty is to send/passing unlimited number of elements from parent component [App.js] into a inside chlid component 's function , in any where of it </p>
+                                
+                                    <p> Main Requirments to Use [children] property : <br>
+                                        <ol> 
+                                            <li> Assigning the [children elements] inside the parent component {App.js}  => To use the {start-close tag} of the component element instead of the [default self closed tag]  <br>
+                                                <code class="code0" > 
+                                                    <span class=one></span>  &lt; childComponent  prop1={propValue1} prop2={propValue2} prop3={propValue3}   &gt;    <br>
+                                                        <span class=two></span>  &lt; h1 &gt; Child element &lt; /h1 &gt;  <br>
+                                                        <span class=two></span>  &lt; h2 &gt; Child element &lt; /h2 &gt;  <br>
+                                                    <span class=one></span>  &lt; /childComponent  &gt;    <br>
+                                                </code>
+                                            </li> 
+
+                                            <li> Using All recieved {children} defined and assigned elements inside the component element {childComponent.js}  :  <br> 
+                                                <code> 
+                                                    <span class=one></span> const childComponent = (prop1, prop2, prop3, children) => { <br> 
+                                                        <span class=two></span> return ( <br> 
+                                                            <span class=three></span>  &lt; Card &gt;  <br>
+                                                                
+                                                                <span class=four></span> // using the recieved children inside the component  <br>
+                                                                <span class=four></span>   {children}  <br>
+                                                            
+                                                            <span class=three></span>  &lt; /Card &gt;  <br>
     
-                <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
-                    <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
+                                                        <span class=two></span> ) ; <br>
+     
+                                                    <span class=one></span>}   <br>                                            
+                                                </code>
+                                            </li>
+                                        </ol>
+                                    </p>
+                                </p>    
+                            </li>        
+                        </ul>
+                    </li>
+                </ol>        
+            </p><br></br> 
+ 
+            <p> passing {function} into with child components => practical examples => <br> 
+                <ol> 
+                    <li> 1] Calling/using inside {src/component/CardsDetails.js} a direct simple function inside a chlid component {childComponent.js}  via using  [onClick() event]{with using any props}   : <br>
                         
-                    <code>  
-                        <span class="one"></span> // Defining constructor funtion : <br>
-                        <span class="one"></span> let test = function () {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  that = this ;  <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  that.age++ ;  <br>
-                                <span class="three"></span>  console.log(that.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
+                        <p> a]  using simple inner direct function [without using any props ]  :   <br>  
+ 
+                            <code>                                  
+                                <span class="one"></span>  // Importing several components from 'react-bootstrap' to define the imported bootstrap component  :  <br> 
+                                <span class="one"></span>  import {Card , Button ,  , }  from 'react-bootstrap'  ;     <br> 
+                                
+                                <span class="one"></span>  // Define component function of bootstrap element [with using the recieved {props}] : <br>  
+                                <span class="one"></span>  const CardsDetails = () => { <br>  
+                                  
+                                    <span class="two"></span> return (  <br>  
+                                        <span class="three"></span> &lt; div &gt;  <br>  
+                                            <span class="four"></span> &lt; Card &gt;  <br>  
+                                                <span class="five"></span> &lt; Card.Img img={props.img} /&gt;  <br>  
+                                                <span class="five"></span> &lt; Card.Body &gt;  <br>  
+                                                
+                                                    <span class="six"></span> &lt; Card.Title &gt;  <br>  
+                                                        <span class="seven"></span>  title={props.title} <br>  
+                                                    <span class="six"></span> &lt; /Card.Title &gt;  <br>   <br>
+                                                    
+                                                    <span class="six"></span> &lt; Card.Text &gt;  <br>  
+                                                        <span class="seven"></span>  title={props.text} <br>  
+                                                    <span class="six"></span> &lt; /Card.Text &gt;  <br>  <br>
+                                                                                                        
+                                                <span class="five"></span> &lt; /Card.Body &gt;  <br>  
+                                            <span class="four"></span> &lt; /Card &gt;  <br>  
+                                            
+                                            <span class="four"></span> &lt; Button onclick={ () =>{console.log('Hello from inner function') } } &gt;  <br>  
+                                                <span class="five"></span>  Click to play meassage from the innner assinged function   <br>  
+                                            <span class="four"></span> &lt; Button &gt;  <br>  
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
+                                        <span class="three"></span> &lt; /div &gt;  <br>      
+                                    <span class="two"></span>  ) ; <br>  
+                                <span class="one"></span> }     <br> <br>
 
-                    </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
+                                <span class="one"></span> export default  CardsDetails ;  <br> 
+                            </code>
+                        </p> <br> <hr> <br>
+                    
+                    
+                        <p> b]  using defined function [without using any props ]  :   <br>  
+                            <code>                                  
+                                <span class="one"></span>  // Importing several components from 'react-bootstrap' to define the imported bootstrap component  :  <br> 
+                                <span class="one"></span>  import {Card , Button ,  , }  from 'react-bootstrap'  ;     <br> 
+                                
+                                <span class="one"></span>   // define  a simple function inside the child  component :    <br> 
+                                <span class="one"></span>   const func = () => { <br>
+                                    <span class="two"></span>    alert( 'Hello from a defiend function in the same child function  ) ; <br>
+                                <span class="one"></span>}   <br>  <br>
+                                
+                                <span class="one"></span>  // Define component function of bootstrap element [with using the defined function 0-;with using {props} ] : <br>  
+                                <span class="one"></span>  const CardsDetails = () => { <br>  
+                                  
+                                    <span class="two"></span> return (  <br>  
+                                        <span class="three"></span> &lt; div &gt;  <br>  
+                                            <span class="four"></span> &lt; Card &gt;  <br>  
+                                                <span class="five"></span> &lt; Card.Img img={props.img} /&gt;  <br>  
+                                                <span class="five"></span> &lt; Card.Body &gt;  <br>  
+                                                
+                                                    <span class="six"></span> &lt; Card.Title &gt;  <br>  
+                                                        <span class="seven"></span>  title={props.title} <br>  
+                                                    <span class="six"></span> &lt; /Card.Title &gt;  <br>   <br>
+                                                    
+                                                    <span class="six"></span> &lt; Card.Text &gt;  <br>  
+                                                        <span class="seven"></span>  title={props.text} <br>  
+                                                    <span class="six"></span> &lt; /Card.Text &gt;  <br>  <br>
+                                                                                                        
+                                                <span class="five"></span> &lt; /Card.Body &gt;  <br>  
+                                            <span class="four"></span> &lt; /Card &gt;  <br>  
+                                            
+                                            <span class="four"></span> &lt; Button onclick={ func}  &gt;  <br>  
+                                                <span class="five"></span>  Click to play meassage form the defiend function    <br>  
+                                            <span class="four"></span> &lt; Button &gt;  <br>  
 
-                <li> {Arrow function} => {This} attidute and properties Syntax : <br>
-                    <h4> The {This} has the access through the inner nested function  :  </h4>
+                                        <span class="three"></span> &lt; /div &gt;  <br>      
+                                    <span class="two"></span>  ) ; <br>  
+                                <span class="one"></span> }     <br> <br>
+
+                                <span class="one"></span> export default  CardsDetails ;  <br> 
+                            </code>
+                    
+                        </p> <br> <hr> <br>
+                    
+                    </li>
+                    <br> <hr></br>
+                    
+                    
+                    <li> 2] Passing a [defined function] from inside parent component {src/App.js} in to a child component {chlidComponent.js}  via using  [Default props - without using destruction method ]: <br>
                         
-                    <code>  
-                        <span class="one"></span> // Defining Arrow constructor funtion : <br>
-                        <span class="one"></span> let test = () => {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
-                                <span class="three"></span>  this.age++ ;  <br>
-                                <span class="three"></span>  console.log(this.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
+                        <p>{src/App.js.js} => Define the main component with defining the function to be sent in to child component {src/App.js.js} : <br> 
+                            <code>                                                                  
+                                <span class="one"></span>  // Define component function of bootstrap element [with using the sending {props} including (2) defined function ] : <br>  
+                                    <span class="one"></span>  const App = ()=> { <br>  
+                                
+                                    <span class="one"></span>  // Define the first function with paramenter  to be sent into the child component [as one of it's property] :  <br> 
+                                    <span class="one"></span>   const sentFunc1 = (name1) => {  <br>
+                                        <span class="two"></span>  console.log('Hello' + name + 'This function sent by deined function form the parent component App.js  '); <br>
+                                    <span class="one"></span> }    <br> <br> 
+                                
+                                    <span class="one"></span>  // Define the second function with paramenter to be sent into the child component [as one of it's property] :  <br> 
+                                    <span class="one"></span>   const sentFunc2 = (name2) => {  <br>
+                                        <span class="two"></span>  console.log('Hello' + name + 'This function sent by deined function form the parent component App.js  '); <br>
+                                    <span class="one"></span> }    <br> <br> 
+                                
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
+                                        <span class="two"></span>   // Define the data source variable [used as value of the assigned component's properites  ]  : <br> 
+                                        <span class="two"></span>   const  data  = [ <br> 
+                                            <span class="three"></span> { id: '1' , title: 'Title1', decs:'Description1' , img: '../img/img1.jpg'  } , <br> 
+                                            <span class="three"></span> { id: '2' , title: 'Title2', decs:'Description2' , img: '../img/img2.jpg'  } , <br> 
+                                            <span class="three"></span> { id: '3' , title: 'Title3', decs:'Description3' , img: '../img/img3.jpg'  }  <br> 
+                                        <span class="two"></span>   ]  ; <br>  <br>
+                                    
+                                    <span class="two"></span> return (  <br>  
+                                        <span class="three"></span> &lt; div &gt;  <br>  
+                                            <span class="four"></span>  // using {map()} to Loop on the defined data source array of objects to return functional Componnet's properties with values get from the datasource object's properites : <br>
+                                            <span class="four"></span>  data.map( (item) => { <br>
+                                                <span class="five"></span> return (  <br>
+                                                    <span class="six"></span> // calling a defined child component with assigning a property's values of accessed data object's properties + (including the defiend function as value of one of assingned property   ) [which will be sent to the child component via {props} ] :  <br>
+                                                    <span class="six"></span> &lt; CardsDetails  key={item.id}  title={item.title}  desc={item.Desc} img={item.img} clickMe1={sentFunc1} clickMe2={sentFunc2}   /&gt;  <br>
+                                                <span class="five"></span> ) ; <br>
+                                            <span class="four"></span> } ) ;   <br>  
+                                        <span class="three"></span> &lt; /div &gt;  <br>      
+                                    <span class="two"></span>  ) ; <br>  
+                                <span class="one"></span> }   <br> <br>
 
-                    </code> <br> <br>
-                </li>
+                                <span class="one"></span> export default  App ;  <br> 
+                            </code>
+                        </p> <br> <hr> <br>
 
-                <hr> <br> <hr> <br>
-    
-            </ol>
-            <!-- --------------------------- -->
+                        <p> {src/component/CardsDetails.js} =>  Recieving the sent function property [props - inlcuding the (2) sent functional props ] inside the component {CardsDetails} => in {src/component/CardsDetails.js} : <br> 
+                            <code>                                  
+                                <span class="one"></span>  // Importing Several components from 'react-bootstrap' to define the imported bootstrap component  :  <br> 
+                                <span class="one"></span>  import {Card , Button }  from 'react-bootstrap'  ;     <br> 
+                                 
+                                <span class="one"></span>  // Define component function of bootstrap element [with using the recieved {props}] : <br>  
+                                <span class="one"></span>  const CardsDetails = (props)=> { <br>  
+                                  
+                                    <span class="two"></span> // 1] Receiving the first sent function in a container funciton , with the assinging the sent function's parameter's simple string value ] : <br>
+                                    <span class="two"></span> const fucnContainer1 = () { <br>
+                                        <span class="three"></span>  props.clickMe('shadi') ;<br>
+                                    <span class="two"></span> } <br> <br>
+
+                                    <span class="two"></span> // 2] Receiving the second sent function in a container funciton , with the assinging the sent function's parameter's value of one of the sent props] : <br>
+                                    <span class="two"></span> const fucnContainer2 = () { <br>
+                                        <span class="three"></span>  props.clickMe(props.title) ;<br>
+                                    <span class="two"></span> } <br> <br>
+  
+                                    <span class="two"></span> return (  <br>  
+                                        <span class="three"></span> &lt; div &gt;  <br>  
+                                            <span class="four"></span> &lt; Card &gt;  <br>  
+                                                <span class="five"></span> &lt; Card.Img img={props.img} /&gt;  <br>  
+                                                <span class="five"></span> &lt; Card.Body &gt;  <br>  
+                                                
+                                                    <span class="six"></span> &lt; Card.Title &gt;  <br>  
+                                                        <span class="seven"></span>  title={props.title} <br>  
+                                                    <span class="six"></span> &lt; /Card.Title &gt;  <br>   <br>
+                                                    
+                                                    <span class="six"></span> &lt; Card.Text &gt;  <br>  
+                                                        <span class="seven"></span>  title={props.text} <br>  
+                                                    <span class="six"></span> &lt; /Card.Text &gt;  <br>  <br>
+                                          
+                                          
+                                                    <span class="six"></span>  // 1- Calling and executing the sent functional prop [by the button onClick event ]  <br>
+                                                    <span class="six"></span> &lt; Button onClick={fucnContainer1}  &gt;   <br>  <br>
+                                                        <span class="seven"></span>  Click to  run the first function passed from the parent component    <br>  
+                                                    <span class="six"></span> &lt; /Button  &gt;   <br>  <br>
+                                                    
+                                                    <span class="six"></span>  // 2- Calling and executing the sent functional prop [by the button onClick event ]  <br>
+                                                    <span class="six"></span> &lt; Button onClick={fucnContainer2}  &gt;   <br>  <br>
+                                                        <span class="seven"></span>  Click to  run the first function passed from the parent component    <br>  
+                                                    <span class="six"></span> &lt; /Button  &gt;   <br>  <br>
+                                                    
+                                                <span class="five"></span> &lt; /Card.Body &gt;  <br>  
+                                            <span class="four"></span> &lt; /Card &gt;  <br>  
+
+                                        <span class="three"></span> &lt; /div &gt;  <br>      
+                                    <span class="two"></span>  ) ; <br>  
+                                <span class="one"></span> }     <br> <br>
+
+                                <span class="one"></span> export default  CardsDetails ;  <br> 
+                            </code>
+                        </p> <br> <hr> <br>
+                    </li>
+                    <br> <hr><br> <br>
+
+                    
+                    <li> 3] Passing a [defined function] from inside parent component {src/App.js} in to a child component {chlidComponent.js}  via using  [ destructured props method { without using children} ]: <br>
+                        
+                        <p>{src/App.js.js} => Define the main component with defining the function to be sent in to child component {src/App.js.js} : <br> 
+                            <code>                                                                  
+                                <span class="one"></span>  // Define component function of bootstrap element [with using the sending {props} including the defined function : <br>  
+                                    <span class="one"></span>  const App = ()=> { <br>  
+                                
+                                    <span class="one"></span>  // Define the first function with paramenter  to be sent into the child component [as one of it's property] :  <br> 
+                                    <span class="one"></span>   const sentFunc1 = (name1) => {  <br>
+                                        <span class="two"></span>  console.log('Hello' + name + 'This function sent by deined function form the parent component App.js  '); <br>
+                                    <span class="one"></span> }    <br> <br> 
+                                
+                                    <span class="one"></span>  // Define the second function with paramenter to be sent into the child component [as one of it's property] :  <br> 
+                                    <span class="one"></span>   const sentFunc2 = (name2) => {  <br>
+                                        <span class="two"></span>  console.log('Hello' + name + 'This function sent by deined function form the parent component App.js  '); <br>
+                                    <span class="one"></span> }    <br> <br> 
+                                
+
+                                        <span class="two"></span>   // Define the data source variable [used as value of the assigned component's properites  ]  : <br> 
+                                        <span class="two"></span>   const  data  = [ <br> 
+                                            <span class="three"></span> { id: '1' , title: 'Title1', decs:'Description1' , img: '../img/img1.jpg'  } , <br> 
+                                            <span class="three"></span> { id: '2' , title: 'Title2', decs:'Description2' , img: '../img/img2.jpg'  } , <br> 
+                                            <span class="three"></span> { id: '3' , title: 'Title3', decs:'Description3' , img: '../img/img3.jpg'  }  <br> 
+                                        <span class="two"></span>   ]  ; <br>  <br>
+                                    
+                                    <span class="two"></span> return (  <br>  
+                                        <span class="three"></span> &lt; div &gt;  <br>  
+                                            <span class="four"></span>  // using {map()} to Loop on the defined data source array of objects to return functional Componnet's properties with values get from the datasource object's properites : <br>
+                                            <span class="four"></span>  data.map( (item) => { <br>
+                                                <span class="five"></span> return (  <br>
+                                                    <span class="six"></span> // calling a defined child component [as default self closed Tag] with assigning a property's values of accessed data object's properties + (including the defiend function as value of one of assingned property) [which will be sent to the child component via {props} ] :  <br>
+                                                    <span class="six"></span> &lt; CardsDetails  key={item.id}  title={item.title}  desc={item.Desc} img={item.img} clickMe1={sentFunc1} clickMe2={sentFunc2}   /&gt;  <br>
+                                                <span class="five"></span> ) ; <br>
+                                            <span class="four"></span> } ) ;   <br>  
+                                        <span class="three"></span> &lt; /div &gt;  <br>      
+                                    <span class="two"></span>  ) ; <br>  
+                                <span class="one"></span> }   <br> <br>
+
+                                <span class="one"></span> export default  App ;  <br> 
+                            </code>
+                        </p> <br> <hr> <br>
+
+                        <p> {src/component/CardsDetails.js} =>  Receving the sent function property [props - inlcuding the (2) sent functional props - with using destrucuring mehtod- ] inside the component {CardsDetails} => in {src/component/CardsDetails.js} : <br> 
+                            <code>                                  
+                                <span class="one"></span>  // Importing Several components from 'react-bootstrap' to define the imported bootstrap component  :  <br> 
+                                <span class="one"></span>  import {Card , Button }  from 'react-bootstrap'  ;     <br> 
+                                 
+                                <span class="one"></span>  // Define component function of bootstrap element [with using the recieved {props}] : <br>  
+                                <span class="one"></span>  const CardsDetails = ( {title , desc, img, key, clickMe1, clickMe2} )=> { <br>  
+                                  
+                                    <span class="two"></span> // 1] Receiving the first sent function in a container funciton , with the assinging the sent function's parameter's simple string value ] : <br>
+                                    <span class="two"></span> const fucnContainer1 = () { <br>
+                                        <span class="three"></span> // calling the functional prop inside the container function [with assign string value of the parameter ] :  <br>
+                                        <span class="three"></span>  clickMe1('shadi') ;<br>
+                                        <span class="two"></span> } <br> <br>
+
+                                    <span class="two"></span> // 2] Receiving the second sent function in a container funciton , with the assinging the sent function's parameter's value of one of the sent props] : <br>
+                                    <span class="two"></span> const fucnContainer2 = () { <br>
+                                        <span class="three"></span> // calling the functional prop inside the container function [with assign another sent prop value of the parameter] :  <br>
+                                        <span class="three"></span>  clickMe2(title) ;<br>
+                                    <span class="two"></span> } <br> <br>
+  
+                                    <span class="two"></span> return (  <br>  
+                                        <span class="three"></span> &lt; div &gt;  <br>  
+                                            <span class="four"></span> &lt; Card &gt;  <br>  
+                                                <span class="five"></span> &lt; Card.Img img={props.img} /&gt;  <br>  
+                                                <span class="five"></span> &lt; Card.Body &gt;  <br>  
+                                                
+                                                    <span class="six"></span> &lt; Card.Title &gt;  <br>  
+                                                        <span class="seven"></span>  title={title} <br>  
+                                                    <span class="six"></span> &lt; /Card.Title &gt;  <br>   <br>
+                                                    
+                                                    <span class="six"></span> &lt; Card.Text &gt;  <br>  
+                                                        <span class="seven"></span>  title={text} <br>  
+                                                    <span class="six"></span> &lt; /Card.Text &gt;  <br>  <br>
+                                          
+                                                    <span class="six"></span>  // 1- Calling and executing the first sent functional prop [by the button onClick event ]  <br>
+                                                    <span class="six"></span> &lt; Button onClick={fucnContainer1}  &gt;   <br>  <br>
+                                                        <span class="seven"></span>  Click to run the [first functional prop] passed from the parent component  <br>  
+                                                    <span class="six"></span> &lt; /Button  &gt;   <br>  <br>
+                                                    
+                                                    <span class="six"></span>  // 2- Calling and executing the second sent functional prop [by the button onClick event ]  <br>
+                                                    <span class="six"></span> &lt; Button onClick={fucnContainer2}  &gt;   <br>  <br>
+                                                        <span class="seven"></span>  Click to  run the [second functional prop] passed from the parent component <br>  
+                                                    <span class="six"></span> &lt; /Button  &gt;   <br>  <br>
+                                                    
+                                                <span class="five"></span> &lt; /Card.Body &gt;  <br>  
+                                            <span class="four"></span> &lt; /Card &gt;  <br>  
+
+                                        <span class="three"></span> &lt; /div &gt;  <br>      
+                                    <span class="two"></span>  ) ; <br>  
+                                <span class="one"></span> }     <br> <br>
+
+                                <span class="one"></span> export default  CardsDetails ;  <br> 
+                            </code>
+                        </p>
+                    </li>
+                    <br> <hr> <br> <br>
+                    
+                    
+                    <li> 4] Passing a [defined function] from inside parent component {src/App.js} in to a child component {chlidComponent.js}  via using  [ destructured props method { with using children built-in prop} ]: <br>
+                        
+                        <p>{src/App.js.js} => Define the main component with defining the function to be sent in to child component {src/App.js.js} : <br> 
+                            <code>                                                                  
+                                <span class="one"></span>  // Define component function of bootstrap element [with using the sending {props} including the defined function : <br>  
+                                    <span class="one"></span>  const App = ()=> { <br>  
+                                
+                                    <span class="one"></span>  // Define the first function with paramenter  to be sent into the child component [as one of it's property] :  <br> 
+                                    <span class="one"></span>   const sentFunc1 = (name1) => {  <br>
+                                        <span class="two"></span>  console.log('Hello' + name + 'This function sent by deined function form the parent component App.js  '); <br>
+                                    <span class="one"></span> }    <br> <br> 
+                                
+                                    <span class="one"></span>  // Define the second function with paramenter to be sent into the child component [as one of it's property] :  <br> 
+                                    <span class="one"></span>   const sentFunc2 = (name2) => {  <br>
+                                        <span class="two"></span>  console.log('Hello' + name + 'This function sent by deined function form the parent component App.js  '); <br>
+                                    <span class="one"></span> }    <br> <br> 
+                                
+
+                                        <span class="two"></span>   // Define the data source variable [used as value of the assigned component's properites  ]  : <br> 
+                                        <span class="two"></span>   const  data  = [ <br> 
+                                            <span class="three"></span> { id: '1' , title: 'Title1', decs:'Description1' , img: '../img/img1.jpg'  } , <br> 
+                                            <span class="three"></span> { id: '2' , title: 'Title2', decs:'Description2' , img: '../img/img2.jpg'  } , <br> 
+                                            <span class="three"></span> { id: '3' , title: 'Title3', decs:'Description3' , img: '../img/img3.jpg'  }  <br> 
+                                        <span class="two"></span>   ]  ; <br>  <br>
+                                    
+                                    <span class="two"></span> return (  <br>  
+                                        <span class="three"></span> &lt; div &gt;  <br>  
+                                            <span class="four"></span>  // using {map()} to Loop on the defined data source array of objects to return functional Componnet's properties with values get from the datasource object's properites : <br>
+                                            <span class="four"></span>  data.map( (item) => { <br>
+                                                <span class="five"></span> return (  <br>
+                                                    <span class="six"></span> // calling a defined child component [as start & closed Tag type] with assigning a property's values of accessed data object's properties + (including the defiend function as value of one of assingned property) [which will be sent to the child component via {props} ] :  <br>
+                                                    <span class="six"></span> &lt; CardsDetails  key={item.id}  title={item.title}  desc={item.Desc} img={item.img} clickMe1={sentFunc1} clickMe2={sentFunc2}   &gt;  <br>
+                                                        <span class="seven"></span> &lt; h1  &gt; This the header [as first children prop]  &lt; /h1  &gt;  <br>
+                                                        <span class="seven"></span> &lt; h2  &gt; This the  second header [as second children prop]  &lt; /h2  &gt;  <br>
+                                                    <span class="six"></span> &lt; /CardsDetails  &gt;  <br>
+                                                <span class="five"></span> ) ; <br>
+                                            <span class="four"></span> } ) ;   <br>  
+                                        <span class="three"></span> &lt; /div &gt;  <br>      
+                                    <span class="two"></span>  ) ; <br>  
+                                <span class="one"></span> }   <br> <br>
+
+                                <span class="one"></span> export default  App ;  <br> 
+                            </code>
+                        </p> <br> <hr> <br>
+
+                        <p> {src/component/CardsDetails.js} =>  Receving the sent function property [props - inlcuding the (2) sent functional props - with using destrucuring mehtod + using children builtin  {children} prop  - ] inside the component {CardsDetails} => in {src/component/CardsDetails.js} : <br> 
+                            <code>                                  
+                                <span class="one"></span>  // Importing Several components from 'react-bootstrap' to define the imported bootstrap component  :  <br> 
+                                <span class="one"></span>  import {Card , Button }  from 'react-bootstrap'  ;     <br> 
+                                 
+                                <span class="one"></span>  // Define component function of bootstrap element [with using the recieved {props}] : <br>  
+                                <span class="one"></span>  const CardsDetails = ( {title , desc, img, key, clickMe1, clickMe2 , children} )=> { <br>  
+                                  
+                                    <span class="two"></span> // 1] Receiving the first sent function in a container funciton , with the assinging the sent function's parameter's simple string value ] : <br>
+                                    <span class="two"></span> const fucnContainer1 = () { <br>
+                                        <span class="three"></span> // calling the functional prop inside the container function [with assign string value of the parameter ] :  <br>
+                                        <span class="three"></span>  clickMe1('shadi') ;<br>
+                                        <span class="two"></span> } <br> <br>
+
+                                    <span class="two"></span> // 2] Receiving the second sent function in a container funciton , with the assinging the sent function's parameter's value of one of the sent props] : <br>
+                                    <span class="two"></span> const fucnContainer2 = () { <br>
+                                        <span class="three"></span> // calling the functional prop inside the container function [with assign another sent prop value of the parameter] :  <br>
+                                        <span class="three"></span>  clickMe2(title) ;<br>
+                                    <span class="two"></span> } <br> <br>
+  
+                                    <span class="two"></span> return (  <br>  
+                                        <span class="three"></span> &lt; div &gt;  <br>  
+                                            <span class="four"></span> &lt; Card &gt;  <br>  
+                                                <span class="five"></span> &lt; Card.Img img={props.img} /&gt;  <br>  
+                                                <span class="five"></span> &lt; Card.Body &gt;  <br>  
+                                                
+                                                    <span class="six"></span> &lt; Card.Title &gt;  <br>  
+                                                        <span class="seven"></span>  title={title} <br>  
+                                                    <span class="six"></span> &lt; /Card.Title &gt;  <br>   <br>
+                        
+                                                    <span class="six"></span> // using and Assging the sent children inside the component : <br>
+                                                    <span class="six"></span> { <br>
+                                                        <span class="seven"></span> children   <br>
+                                                    <span class="six"></span> } <br>
+
+                                                    <span class="six"></span> &lt; Card.Text &gt;  <br>  
+                                                        <span class="seven"></span>  title={text} <br>  
+                                                    <span class="six"></span> &lt; /Card.Text &gt;  <br>  <br>
+                                          
+                                                    <span class="six"></span>  // 1- Calling and executing the first sent functional prop [by the button onClick event ]  <br>
+                                                    <span class="six"></span> &lt; Button onClick={fucnContainer1}  &gt;   <br>  <br>
+                                                        <span class="seven"></span>  Click to run the [first functional prop] passed from the parent component  <br>  
+                                                    <span class="six"></span> &lt; /Button  &gt;   <br>  <br>
+                                                    
+                                                    <span class="six"></span>  // 2- Calling and executing the second sent functional prop [by the button onClick event ]  <br>
+                                                    <span class="six"></span> &lt; Button onClick={fucnContainer2}  &gt;   <br>  <br>
+                                                        <span class="seven"></span>  Click to  run the [second functional prop] passed from the parent component <br>  
+                                                    <span class="six"></span> &lt; /Button  &gt;   <br>  <br>
+                                                    
+                                                <span class="five"></span> &lt; /Card.Body &gt;  <br>  
+                                            <span class="four"></span> &lt; /Card &gt;  <br>  
+
+                                        <span class="three"></span> &lt; /div &gt;  <br>      
+                                    <span class="two"></span>  ) ; <br>  
+                                <span class="one"></span> }     <br> <br>
+
+                                <span class="one"></span> export default  CardsDetails ;  <br> 
+                            </code>
+                        </p>
+                    </li>
+                    <br> <hr> <br> <br>
+                </ol>
+            </p>
+  
+             <!-- --------------------------- -->
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> [This] {Arrow functions} & {Regular functions} ->  will reperent the value of the method the been called by  </li>
-                    <li> [This] operator in the {Regular function}  ->  Can not access through the inner nested funcions , and needs to be assigned into another variable  </li>
-                    <li> [This] operator in the {Arrow function}  -> Can be used directly inside the inner nested functions  </li>
+                    <li> {Children} destructed bulit-in property   : <br>
+                        <ol> 
+                            <li> The recevied children Can be used and assingned any where inside the child functional component's return </li>
+                        </ol>
+                    </li>
+    
+                    <li> Passing function via using [props] : <br> 
+                        <ol> 
+                            <li> it is passed as the define [prop] , but with value of functional variable  </li>
+                            <li> Props can be destructured in the reciever child component's parmameters    </li>
+                            <li> Desturcted Props can be  inlcude a {children} builtin props , to present a group of countless elements asssinged and being sent from the [App.js] in to any where inside the child component  </li>
+                            <li> the passed functional prop must be recieved inside a defined container function in the child functional conponent , to able to uesed inside the component function  </li>
+                            <li> the common usage of the passed functional prop  => to be called inside a button element , using a {onClick()} event   </li>
+                        </ol>    
+                    </li>
                 </ul>
             </p>
                                                                      
-            <h3> ES6 [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
+            <h3> ReactJS [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
             
             <ol class="codes" >                    
                 <li> Page Sources : </li>
                 <code> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS JS [main.js] file </button>
                     </a> <br> <hr> <br> 
-                    
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/myplugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 new Code [myplugins.js] file </button>
-                    </a> <br> <hr> <br>  -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
-                    </a> <br> <br> 
-                    -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 old Code [plugins.js] file </button>
-                    </a> <br> <br> 
-                    -->
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/index.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS assembling file JS [index.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/App.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main App file {Main Component} [App.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/component/NavBar.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [NavBar] sub child component  file JS [NavBar.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/component/CardDetails.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [CardDetails] sub child component  file JS [CardDetails.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/Header.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS Header sub child component  file JS [Header.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/Footer.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS Footer sub child component  file JS [Footer.js] file </button>
+                    </a> <br> <hr> <br> 
+  
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/BootstrapComps.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS bootstrap components sub child component  file JS [BootstrapComps.js] file </button>
+                    </a> <br> <hr> <br> 
+  
                 </code>                 
             </ol>
-
-            <!-- <ol class="codes0" > 
-               
-                <h2 id="h2"> {end()} function method [Using { buttons} to activate {2 Modes} of applying changes -> </h2>  <br>
-                
-                <h3> [ First method : Default mode (multiple seperted chains - one chain code for each Procedure - )] : </h3>
-            
-                <h4> Applying multiple Changes on parent by using default method [Multiple Chains] : {CSS > fontSize + font color} </h4>
-                
-                <div id="defElem"> 
-                    <p> This is normal paragraph  </p>
-                    <span> This is normal Span  </span>
-                </div>
-        
-                <button id="defMode" class="btn0"> [Using {2 seperated chain codes } ] -> {CSS > fontSize + font color}  </button>
-                <hr> <hr></hr>
-                
-                <h3> [ Second method : Using end() mode (One seperted chain - for all procedures - )] : </h3>
-            
-                <h4> Applying multiple Changes on parent by using end() method [One Chains] : {CSS > fontSize + font color} </h4>
-                
-                <div id="endElem"> 
-                    <p> This is normal paragraph  </p>
-                    <span> This is normal Span  </span>
-                </div>
-        
-                <button id="endMode" class="btn0"> [Using {1 chain code } ] -> {CSS > fontSize + font color}  </button>
-                <hr> <hr></hr>
-                
-            <br> <hr> <br>
-            </ol>
-                 -->
-             <!------------------------------------------------->           
-             <!------------------------------------------------->       
-
-            <!-- <ol class="codes">        
-              <h3> Practical applications [2] main groups functions {with Total functions : 2 }  [up bove] </h3>
-             <li> First group [ Main  ] => [3 functions] {  } : <br>
-                <button class="plus" id="plus1"> +  Using [ $(":input") ] to select any input element (regardless of it's type) }  </button> 
-            </li>
-
-                 <code id="group1">
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn11 class="btn0" > a) Using [ $(":input") ] to Apply CSS properties on select any input element (Regardless of it's type) } </button>
-                    </a> <br> <br>  
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn12 class="btn0" >  b) Using [ $("[attrname1], [attrname2] , [attrname3]") ] multiple to select any elements types has a certain attribute Name }  </button>
-                    </a> <br> <br> 
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > [Grouped basic selectors (of the mixed types)]  {loading event}-> [all functions]  </button>
-                    </a> <br> <br> 
-                    
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > Access certain element's siblings [with using advanced selector (Tagname) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn14 class="btn0" > Access certain element's siblings [with using advanced filter(contains) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-                    
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > Access certain element's siblings [with using advanced selector (Tagname) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn14 class="btn0" > Access to element's direct children [with using advanced selector - className - ] => -> to [all functions] </button>
-                    </a> <br> <br>
-                                                           
-                </code>  <hr>          
-            
-                <script src="js/myplugins.js"></script>
-            </ol>   -->
+ 
             <br> <hr>                                     
         </section>
 
@@ -1327,7 +1663,7 @@
                 <h3>  [30-Pass Function As Props,Children] Importance & Benefits : </h3>
             </header>            
                 <ul>                                                                     
-                    <li> Project/application Structure is critical and basic for any one dealing with project  </li>  
+                    <li> Passing the functinoal prop to be recieved and used inside the child component is critical and basic for any one dealing with reactJs  project  </li>  
                 </ul>                                                               
         </section>
 
@@ -1339,47 +1675,7 @@
             </header>   
 
              <p> =&gt;  Scenario Procedures :   </p>
-            
-            <!-- <div id="Code" class="Code">
-                
-                [1] { Login [Default ] into current DB Client from [CMD] } : <br>
-                    <span class= one></span> { ES6 -u root; } <br><br>
-            
-                [2] { Show all availble DBs in current Client from [CMD] } : <br>
-                    <span class= one></span> { SHOW DATABASES; } <br><br>
-                                                                                                            
-                [3] { Choosing Database {controlflow} from [CMD] } : <br>
-                    <span class= one></span> { use controlflow; } <br><br>                            
-                                                                                                            
-                [4] { Show all tables status in the Database {controlflow} from [CMD] } : <br>
-                    <span class= one></span> { show table status ; } <br><br>                            
-                                                                                                            
-                [5] { Display/Inquiry about all rows in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT * FROM casecond; } <br><br>
-                
-                [6] { Custom Display/Inquiry [Select] about (2) existed columms and custom column [CASE - First Method (Long) ] according to {number} in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT id , name , CASE number <br>
-                        <span class= two></span> When nubmer &gt; 95 Then 'Excellent'  <br>
-                        <span class= two></span> When nubmer &gt; 85 Then 'V.Good'  <br>
-                        <span class= two></span> When nubmer &gt; 75 Then 'Good'  <br>
-                        <span class= two></span> When nubmer &gt; 50 Then 'Passed'  <br>
-                        <span class= two></span> Else 'Failed' <br>
-                    <span class= one></span> END AS Final Result FROM casecond; } <br> <br>
-                                                                                                                
-                [7] { Custom Display/Inquiry [Select] about (2) existed columms and custom column [CASE - Second Method (Short) ] according to {number} in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT id , name , CASE number <br>
-                        <span class= two></span> When  &gt; 95 Then 'Excellent'  <br>
-                        <span class= two></span> When  &gt; 85 Then 'V.Good'  <br>
-                        <span class= two></span> When  &gt; 75 Then 'Good'  <br>
-                        <span class= two></span> When  &gt; 50 Then 'Passed'  <br>
-                        <span class= two></span> Else 'Failed' <br>
-                    <span class= one></span> END AS Final Result FROM casecond; } <br> <br>
-                                                                                                                                                                                                                            
-                //=========================================================== <br> <br>                                                                
-            
-            <br><br>
-            </div>   -->
-            
+         
             <hr>
         </section>
 
@@ -1389,73 +1685,10 @@
                 <h3> CMD [30-Pass Function As Props,Children()]  => {this lesson can be accessed throuh the github repo [webpages] } </h3>
             </header>
                         
-            <!-- <p> Using [cmd] For performing Scenario of controling with [Directories] processes and functions:   </p>
             
-             <div class=JSOOPObjConstTraining >                                        
-                    <code>                        
-                        // A] Main Scenario Commands in lessons : <br>
-                        // 1- Accessing the working path and folder , by next code :  <br>
-                            <code> 
-                                <span class= one></span>  {cd C:\Users\Eng-Shadi\Commandline\testing}  <br><br>
-                            </code>  <br>
-                            
-                        // 2- Creating (3) new Directories inside this Dirctory : <br>
-                            <code> 
-                                <span class= one></span>  {md folder1 folder2 folder3}  <br><br>
-                            </code>  <br>
-                        
-                        // 3- Moving {folder3} to the upper line Directory: <br>
-                            <code> 
-                                <span class= one></span> {mv folder3 ..} <br><br>
-                            </code>  <br>
-
-                        // 4- Copying {folder2} in the same line by new name {folder22} : <br>
-                            <code> 
-                                <span class= one></span> {cp -r folder2 folder22} <br><br>
-                            </code>  <br>
-                        
-                        // 5- Renaming {folder1} to {folder11} : <br>
-                            <code> 
-                                <span class= one></span> {rename folder1 folder11} <br><br>
-                                <span class= one></span> {mv folder1 folder11} <br><br>
-                            </code>  <br>                            
-                        
-                        // 6- Listing contents of current directory  : <br>
-                            <code> 
-                                <span class= one></span> {ls} -> (Unix) <br><br>
-                                <span class= one></span> {dir} -> (Windows) <br><br>
-                            </code>  <br>                            
-                        
-                        // 7- Tree contents of current directory  : <br>
-                            <code> 
-                                <span class= one></span> {tree} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                        // 8- Access the {folder11} inside Testing & adding inner directory {subDirectory} :  <br>
-                            <code> 
-                                <span class= one></span> {cd folder11} -> (Unix) <br><br>
-                                <span class= one></span> {md subDirectory} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                        // 9- Access upper line of {Testing} Directory & removing the {folder11-which has inner contents-} :  <br>
-                            <code>  
-                                <span class= one></span> {cd ..\..\} -> (Unix) <br><br>
-                                <span class= one></span> {rm -r folder11} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                                                                   
-                        =======================================================<br><br><br>
-
-                    </code>                    
-                </div> 
-                 
-            <hr> <br> <br>                                        
-            <br>                
-            <hr>
-            -->                        
         </section> 
 
-        <button type="button" class="btn" onclick="myTest()"> Click to Start [ (this) operator testing with both functions ] method   Application </button>
+        <!-- <button type="button" class="btn" onclick="myTest()"> Click to Start [ (this) operator testing with both functions ] method  Application </button> -->
 
         <script src="main.js"></script> 
         
@@ -1463,7 +1696,7 @@
         
         <div id="note" class="dis"></div> <br><br><br><br>
 
-        <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>             
+        <!-- <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>              -->
         
                                 
         <!-- <button id=btn class="btn0" onclick="display()">Display JS Code [plugins.js] file </button> -->
@@ -1475,7 +1708,7 @@
         
     <aside>        
         <section class="VideoSection" id="VideoSection">
-            <h3> Lesson 30 Video File: </h3>
+            <h3> Lesson 29 Video File: </h3>
             <video controls width="300" height="300">
                 <source src="E:\Web videos lessons\Web Framworks\ReactJs\\ReactJs-Build Full E-Commerce From Scratch Redux Arabic\30-Pass Function As Props,Children.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
@@ -1496,7 +1729,7 @@
         <section class="Links">
             <h3>Course Map : </h3>
             <ul>              
-                <li> <a href="course map/ES6 course map.html"> ES 6 Course Map </a> </li>
+                <li> <a href="course map/ReactJS  course map.html"> ES 6 Course Map </a> </li>
             </ul>
         </section>
         
