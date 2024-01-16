@@ -296,7 +296,7 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
+        <span> Welcome to ReactJS Course | </span> <br>
         28 - Building Custom Component,Reuse        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section =>  Building the custom component full responsive concept ,  Syntax and practical exps   <span><strong>  in JS ReactJS   </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> Building the custom component concept full responsive with using the bootstrap and reuse it  ,  Syntax and practical exps    </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1087,18 +1087,18 @@
     <div class="Post" id=post>
         <Section  id="MainC" class="MainC">
             <header>
-                ES6 [28 - Building Custom Component,Reuse] Main Topics : <br>
+                ReactJS  [28 - Building Custom Component,Reuse] Main Topics : <br>
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about Building the custom component and reUse it  concept ,  Syntax and practical exps   , as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li>  Custom component & Reusing with using bootstrap  => concept   </li>
+                    <li>  Custom component & Reusing with using bootstrap  => syntax and Requirments steps  </li>
+                    <li>  Custom component & Reusing with using bootstrap  => practical examples    </li>
                 </ol>
             </article>
         </Section>
@@ -1110,212 +1110,167 @@
                 <h3> 28 - Building Custom Component,Reuse concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
+            <p>  custom component & Reusing  => concept    <br>
+                <ol> 
+                    <li>  Is to build function component with using reactJs bootstrap  </li>
+                    <li>  we use reactJS component function and copy the bootstrap component form the original website    </li>      
+                    <li>  {Re using }  concept =>  is to using the defined and imoprted component several times in the same file    </li>      
+                </ol>
+            </p>
 
-            <p> {This} Reference value in the {Regular function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
-                </ul>    
-            </p> <br> <hr> <br>
+               
+             
+            <p>  Custom Component & Reusing with bootstrap  =>  syntax and Requirments steps [for each single imported component]  <br>
+                <ol> 
+                    <li> 1] Create a new folder for hte all project's derfined components files     </li>
+                    <li> 2] Create and define component files, as following steps    :  <br>                        
+                         <ul> 
+                            <li> Standard defining of the functinal component , with the name of component [using the 'rafc' shortcut order]   </li>   
+                            <li> Copying the component script from the react bootstrap     </li>   
+                            <li> importing the bootstrap component link  => using the offical website of the reactJS bootstrap   </li>   
+                            <li> Re-defining the undefined  imported elements's script       => using [auto complete feature of the auto import 'adds-on' and ctrl+space and rewrite thje last letter of new element   ]   </li>   
+                            <li> importing the defined component inside the [app.js]     </li>   
+                        </ul>
+                    </li>
+                </ol>
+            </p>
+
+               
+            <p> Custom Component & Reusing with bootstrap   => practical examples => <br> 
+                <ol> 
+                    <li> Creating the components functions   : <br>
+                        <p> Creating the first component  [NavBar] : Define the main componet inside  => {src/component/NavBar.js} : <br> 
+                            <code>                                  
+                                <span class="one"></span>  // Importing several components from 'react-bootstrap' :     <br> 
+                                <span class="one"></span>  import {NavBar, Button , , }  from 'react-bootstrap'  ;     <br> 
+                                
+                                <span class="one"></span>   // Define conmpnent function including  one bootstrap element : <br>  
+                                <span class="one"></span>   const NavBar = ()=> { <br>  
+                                  
+                                    <span class="two"></span>    return (  <br>  
+                                        <span class="three"></span> &lt; div   &gt;  <br>  
+                                    
+                                        
 
 
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
-                </ul>    
-            </p> <br> <hr>
-                        
-            <ol> 
-                <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
+                                        <span class="three"></span> &lt; /div &gt;  <br>  
+                                    
+                                    <span class="two"></span>  ) ; <br>  
 
-                    <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
-                            <span class="one"></span> }  <br> <br>
- 
-                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
-                                <span class="one"></span>  window.onload = test;  <br>
-                        </code> <br> <br>
-                    
-                    <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
-                            <span class="one"></span> }  <br> <br>
-                       </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
-    
-                <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
-                    <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining constructor funtion : <br>
-                        <span class="one"></span> let test = function () {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  that = this ;  <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  that.age++ ;  <br>
-                                <span class="three"></span>  console.log(that.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
+                                <span class="one"></span> }     <br> 
+                                <span class="one"></span> export default  NavBar ;     <br> 
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
+                            </code>
+                        </p> <br>
 
-                    </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
+                        <p> Creating the second component  [Card] : Define the main componet inside  => {src/component/CardsDetails.js} : <br> 
+                            <code>                                  
+                                <span class="one"></span>  // Importing several components from 'react-bootstrap' :     <br> 
+                                <span class="one"></span>  import {Card , Button ,  , }  from 'react-bootstrap'  ;     <br> 
+                                
+                                <span class="one"></span>   // Define component function including  one bootstrap element : <br>  
+                                <span class="one"></span>   const CardsDetails = ()=> { <br>  
+                                  
+                                    <span class="two"></span>    return (  <br>  
+                                        <span class="three"></span> &lt; div   &gt;  <br>  
+                                    
+                                        
 
-                <li> {Arrow function} => {This} attidute and properties Syntax : <br>
-                    <h4> The {This} has the access through the inner nested function  :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining Arrow constructor funtion : <br>
-                        <span class="one"></span> let test = () => {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
-                                <span class="three"></span>  this.age++ ;  <br>
-                                <span class="three"></span>  console.log(this.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
+                                        <span class="three"></span> &lt; /div &gt;  <br>      
+                                    <span class="two"></span>  ) ; <br>  
+                                <span class="one"></span> }     <br> <br>
 
-                    </code> <br> <br>
-                </li>
 
-                <hr> <br> <hr> <br>
-    
-            </ol>
-            <!-- --------------------------- -->
+                                <span class="one"></span> export default  CardsDetails ;     <br> 
+
+                            </code>
+                        </p> <br> <hr> <br>
+
+                        <p> importing the defined components inside the main component file   => {src/App.js} : <br> 
+                            <code> 
+                                 
+                                <span class="one"></span>  // Importing the defiend components    :     <br> 
+                                <span class="one"></span>  import {NavBar}  from './component/NavBar.js'  ;     <br> 
+                                <span class="one"></span>  import {CardsDetails}  from './component/CardsDetails.js'  ;     <br> 
+                                
+                                <span class="one"></span>   // Define component main App function  : <br>  
+                                <span class="one"></span>   const App = ()=> { <br>  
+                                  
+                                    <span class="two"></span>    return (  <br>  
+                                        <span class="three"></span> &lt; div   &gt;  <br>  
+                                            
+                                            <span class="four"></span>  // single  using the imported component : <br>  
+                                            <span class="four"></span> &lt; NavBar  / &gt;  <br>  
+                                            
+                                            <span class="four"></span>  // several using of the imported component :  <br>  
+                                            <span class="four"></span> &lt; CardsDetails  / &gt;  <br>  
+                                            <span class="four"></span> &lt; CardsDetails  / &gt;  <br>  
+                                            <span class="four"></span> &lt; CardsDetails  / &gt;  <br>  
+                                             
+                                        <span class="three"></span> &lt; /div &gt;  <br>  
+                                    <span class="two"></span>  ) ; <br>  
+                                <span class="one"></span> }     <br>  <br>
+
+                                <span class="one"></span> export default  App ;     <br> 
+                            </code>
+                        </p>                         
+                    </li>
+                     
+                </ol>
+            </p>
+  
+             <!-- --------------------------- -->
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> [This] {Arrow functions} & {Regular functions} ->  will reperent the value of the method the been called by  </li>
-                    <li> [This] operator in the {Regular function}  ->  Can not access through the inner nested funcions , and needs to be assigned into another variable  </li>
-                    <li> [This] operator in the {Arrow function}  -> Can be used directly inside the inner nested functions  </li>
+                    <li>  After copying the imported component => it is recommended to use the 'auto import' add-ons feature in the VsCode on the undefined components and elements within the imported script    </li>
+                    <li>  To use the 'auto import' add-ons with undefined elements => re-write the last letter of undefined to open the shortcut menu OR by press on [ctrl + Space] || OR using manually importing           </li>
+                    <li>  The imported Components will be with fixed data contents  , but will be with dynmaic contents later in this course    </li>
                 </ul>
             </p>
                                                                      
-            <h3> ES6 [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
+            <h3> ReactJS  [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
             
             <ol class="codes" >                    
                 <li> Page Sources : </li>
                 <code> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS JS [main.js] file </button>
                     </a> <br> <hr> <br> 
-                    
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/myplugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 new Code [myplugins.js] file </button>
-                    </a> <br> <hr> <br>  -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
-                    </a> <br> <br> 
-                    -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 old Code [plugins.js] file </button>
-                    </a> <br> <br> 
-                    -->
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/index.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS assembling file JS [index.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/App.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main App file {Main Component} [App.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/component/NavBar.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [NavBar] sub child component  file JS [NavBar.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/component/CardDetails.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [CardDetails] sub child component  file JS [CardDetails.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/Header.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS Header sub child component  file JS [Header.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/Footer.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS Footer sub child component  file JS [Footer.js] file </button>
+                    </a> <br> <hr> <br> 
+  
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/BootstrapComps.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS bootstrap components sub child component  file JS [BootstrapComps.js] file </button>
+                    </a> <br> <hr> <br> 
+  
                 </code>                 
             </ol>
-
-            <!-- <ol class="codes0" > 
-               
-                <h2 id="h2"> {end()} function method [Using { buttons} to activate {2 Modes} of applying changes -> </h2>  <br>
-                
-                <h3> [ First method : Default mode (multiple seperted chains - one chain code for each Procedure - )] : </h3>
-            
-                <h4> Applying multiple Changes on parent by using default method [Multiple Chains] : {CSS > fontSize + font color} </h4>
-                
-                <div id="defElem"> 
-                    <p> This is normal paragraph  </p>
-                    <span> This is normal Span  </span>
-                </div>
-        
-                <button id="defMode" class="btn0"> [Using {2 seperated chain codes } ] -> {CSS > fontSize + font color}  </button>
-                <hr> <hr></hr>
-                
-                <h3> [ Second method : Using end() mode (One seperted chain - for all procedures - )] : </h3>
-            
-                <h4> Applying multiple Changes on parent by using end() method [One Chains] : {CSS > fontSize + font color} </h4>
-                
-                <div id="endElem"> 
-                    <p> This is normal paragraph  </p>
-                    <span> This is normal Span  </span>
-                </div>
-        
-                <button id="endMode" class="btn0"> [Using {1 chain code } ] -> {CSS > fontSize + font color}  </button>
-                <hr> <hr></hr>
-                
-            <br> <hr> <br>
-            </ol>
-                 -->
-             <!------------------------------------------------->           
-             <!------------------------------------------------->       
-
-            <!-- <ol class="codes">        
-              <h3> Practical applications [2] main groups functions {with Total functions : 2 }  [up bove] </h3>
-             <li> First group [ Main  ] => [3 functions] {  } : <br>
-                <button class="plus" id="plus1"> +  Using [ $(":input") ] to select any input element (regardless of it's type) }  </button> 
-            </li>
-
-                 <code id="group1">
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn11 class="btn0" > a) Using [ $(":input") ] to Apply CSS properties on select any input element (Regardless of it's type) } </button>
-                    </a> <br> <br>  
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn12 class="btn0" >  b) Using [ $("[attrname1], [attrname2] , [attrname3]") ] multiple to select any elements types has a certain attribute Name }  </button>
-                    </a> <br> <br> 
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > [Grouped basic selectors (of the mixed types)]  {loading event}-> [all functions]  </button>
-                    </a> <br> <br> 
-                    
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > Access certain element's siblings [with using advanced selector (Tagname) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn14 class="btn0" > Access certain element's siblings [with using advanced filter(contains) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-                    
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn13 class="btn0" > Access certain element's siblings [with using advanced selector (Tagname) ] -> for persue [all functions] </button>
-                    </a> <br> <br>
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" >  
-                        <button id=btn14 class="btn0" > Access to element's direct children [with using advanced selector - className - ] => -> to [all functions] </button>
-                    </a> <br> <br>
-                                                           
-                </code>  <hr>          
-            
-                <script src="js/myplugins.js"></script>
-            </ol>   -->
+ 
             <br> <hr>                                     
         </section>
 
@@ -1327,7 +1282,7 @@
                 <h3>  [28 - Building Custom Component,Reuse] Importance & Benefits : </h3>
             </header>            
                 <ul>                                                                     
-                    <li> Project/application Structure is critical and basic for any one dealing with project  </li>  
+                    <li> Using Custom Components wit using bootstrap is critical  Project/application Structure is critical and basic for any one dealing with project  </li>  
                 </ul>                                                               
         </section>
 
@@ -1339,47 +1294,7 @@
             </header>   
 
              <p> =&gt;  Scenario Procedures :   </p>
-            
-            <!-- <div id="Code" class="Code">
-                
-                [1] { Login [Default ] into current DB Client from [CMD] } : <br>
-                    <span class= one></span> { ES6 -u root; } <br><br>
-            
-                [2] { Show all availble DBs in current Client from [CMD] } : <br>
-                    <span class= one></span> { SHOW DATABASES; } <br><br>
-                                                                                                            
-                [3] { Choosing Database {controlflow} from [CMD] } : <br>
-                    <span class= one></span> { use controlflow; } <br><br>                            
-                                                                                                            
-                [4] { Show all tables status in the Database {controlflow} from [CMD] } : <br>
-                    <span class= one></span> { show table status ; } <br><br>                            
-                                                                                                            
-                [5] { Display/Inquiry about all rows in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT * FROM casecond; } <br><br>
-                
-                [6] { Custom Display/Inquiry [Select] about (2) existed columms and custom column [CASE - First Method (Long) ] according to {number} in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT id , name , CASE number <br>
-                        <span class= two></span> When nubmer &gt; 95 Then 'Excellent'  <br>
-                        <span class= two></span> When nubmer &gt; 85 Then 'V.Good'  <br>
-                        <span class= two></span> When nubmer &gt; 75 Then 'Good'  <br>
-                        <span class= two></span> When nubmer &gt; 50 Then 'Passed'  <br>
-                        <span class= two></span> Else 'Failed' <br>
-                    <span class= one></span> END AS Final Result FROM casecond; } <br> <br>
-                                                                                                                
-                [7] { Custom Display/Inquiry [Select] about (2) existed columms and custom column [CASE - Second Method (Short) ] according to {number} in Table [casecond] from [CMD] } : <br>
-                    <span class= one></span> { SELECT id , name , CASE number <br>
-                        <span class= two></span> When  &gt; 95 Then 'Excellent'  <br>
-                        <span class= two></span> When  &gt; 85 Then 'V.Good'  <br>
-                        <span class= two></span> When  &gt; 75 Then 'Good'  <br>
-                        <span class= two></span> When  &gt; 50 Then 'Passed'  <br>
-                        <span class= two></span> Else 'Failed' <br>
-                    <span class= one></span> END AS Final Result FROM casecond; } <br> <br>
-                                                                                                                                                                                                                            
-                //=========================================================== <br> <br>                                                                
-            
-            <br><br>
-            </div>   -->
-            
+         
             <hr>
         </section>
 
@@ -1389,73 +1304,10 @@
                 <h3> CMD [28 - Building Custom Component,Reuse()]  => {this lesson can be accessed throuh the github repo [webpages] } </h3>
             </header>
                         
-            <!-- <p> Using [cmd] For performing Scenario of controling with [Directories] processes and functions:   </p>
             
-             <div class=JSOOPObjConstTraining >                                        
-                    <code>                        
-                        // A] Main Scenario Commands in lessons : <br>
-                        // 1- Accessing the working path and folder , by next code :  <br>
-                            <code> 
-                                <span class= one></span>  {cd C:\Users\Eng-Shadi\Commandline\testing}  <br><br>
-                            </code>  <br>
-                            
-                        // 2- Creating (3) new Directories inside this Dirctory : <br>
-                            <code> 
-                                <span class= one></span>  {md folder1 folder2 folder3}  <br><br>
-                            </code>  <br>
-                        
-                        // 3- Moving {folder3} to the upper line Directory: <br>
-                            <code> 
-                                <span class= one></span> {mv folder3 ..} <br><br>
-                            </code>  <br>
-
-                        // 4- Copying {folder2} in the same line by new name {folder22} : <br>
-                            <code> 
-                                <span class= one></span> {cp -r folder2 folder22} <br><br>
-                            </code>  <br>
-                        
-                        // 5- Renaming {folder1} to {folder11} : <br>
-                            <code> 
-                                <span class= one></span> {rename folder1 folder11} <br><br>
-                                <span class= one></span> {mv folder1 folder11} <br><br>
-                            </code>  <br>                            
-                        
-                        // 6- Listing contents of current directory  : <br>
-                            <code> 
-                                <span class= one></span> {ls} -> (Unix) <br><br>
-                                <span class= one></span> {dir} -> (Windows) <br><br>
-                            </code>  <br>                            
-                        
-                        // 7- Tree contents of current directory  : <br>
-                            <code> 
-                                <span class= one></span> {tree} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                        // 8- Access the {folder11} inside Testing & adding inner directory {subDirectory} :  <br>
-                            <code> 
-                                <span class= one></span> {cd folder11} -> (Unix) <br><br>
-                                <span class= one></span> {md subDirectory} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                        // 9- Access upper line of {Testing} Directory & removing the {folder11-which has inner contents-} :  <br>
-                            <code>  
-                                <span class= one></span> {cd ..\..\} -> (Unix) <br><br>
-                                <span class= one></span> {rm -r folder11} -> (Unix) <br><br>
-                            </code>  <br>                            
-                        
-                                                                   
-                        =======================================================<br><br><br>
-
-                    </code>                    
-                </div> 
-                 
-            <hr> <br> <br>                                        
-            <br>                
-            <hr>
-            -->                        
         </section> 
 
-        <button type="button" class="btn" onclick="myTest()"> Click to Start [ (this) operator testing with both functions ] method   Application </button>
+        <!-- <button type="button" class="btn" onclick="myTest()"> Click to Start [ (this) operator testing with both functions ] method  Application </button> -->
 
         <script src="main.js"></script> 
         
@@ -1463,7 +1315,7 @@
         
         <div id="note" class="dis"></div> <br><br><br><br>
 
-        <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>             
+        <!-- <button class="btn" id="elem" onclick="display()"> Click to activate {this} operator dispalying value  </button> <br>              -->
         
                                 
         <!-- <button id=btn class="btn0" onclick="display()">Display JS Code [plugins.js] file </button> -->
@@ -1496,7 +1348,7 @@
         <section class="Links">
             <h3>Course Map : </h3>
             <ul>              
-                <li> <a href="course map/ES6 course map.html"> ES 6 Course Map </a> </li>
+                <li> <a href="course map/ReactJS  course map.html"> ES 6 Course Map </a> </li>
             </ul>
         </section>
         

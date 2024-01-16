@@ -17,6 +17,7 @@ const Header = () => {
     const refVar1 = 'This is the container of JSX Styling properties   ' ;
     const refVar2 = 'This is the container of JSX Syntax properties  ' ;
     const contRefVar = 'This is the  contents come from the defined RefVar ' ;
+    const btnSecRefVar = 'This  Section about the bootstrap buttons ' ;
      
     
     return (

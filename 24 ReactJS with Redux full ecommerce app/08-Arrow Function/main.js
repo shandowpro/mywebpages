@@ -1,133 +1,213 @@
-//  5 Arrow Function And This Value
-/* Main lessons functions :
-    1- [This] Reference value in the Regular function  
-    2- {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }
-    3- {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value }
+//  8 Normal Funcion Arrow Function  :
+/* Main Creteria comparisoning  :
+    1-  Overall syntax 
+    2-  funcionm with one line of code
+    3-  function with one paramaeter 
+    4-  function with Returning calculation with paramater 
+    5-  function with Returning calculation with NO paramater 
+     
 */
 // ---------------------------------------------------------------------
 
-// 5 Arrow Function And [This] operator  :
+//  8 Normal Funcion Arrow Function     :
 function myTest() {
     'use strict' ;
-    alert('Welcome to 5 Arrow Function And This Value ') ;
+    alert('Welcome to 8 Normal Funcion Arrow Function  ') ;
     
     var dis = document.getElementById('note');
      
-    var x = prompt(' Please choose one of functions from below options : \n  1] [This] Reference value in the Regular function \n  2] {This} Reference value in the Arrow function  \n  3] {This} attidute value in the both {Arrow function} & {Regular Function }  ');    
+    var x = prompt(' Please choose one of functions from below options : \n 1] over all syntax functions  \n 2] Function with one line of Code  \n  3] Function with one Param  \n  4] Function Return calculation one Param \n 5] Function Return calculation with NO Param ');    
 
     if (x == 1 ) {
         
-        regFuncValue();
-
+        overallSyntax();
+        
     } else if (x == 2) {
-    
-        regFuncThis();
+        
+        funcOnelineCode();
         
     } else if (x == 3) {
-    
-        arrowFuncThis();       
-    
-    // } else if (x == 4) {
-
-    //     arrowShortFunc2();
-    
-    // } else if (x == 5) {
-
-    //     arrowShortFunc3();
-
+        
+        funcOneParam();
+        
+    } else if (x == 4) {
+        
+        funcReturnParamCalc();       
+        
+    } else if (x == 5) {
+        
+        funcReturnNoParamCalc();
+        
     } else {
         alert('No option has been selected !');
     } 
 
     // =========================================================================
 
-    // 1] Test and print [This] Reference value in the Regular function :
-    function regFuncValue() {
-        alert('Welcome to Test and print [This] Reference value in the Regular function  ');
+// 1] Test {over all syntax comparisoning}  between  [Normal Function] & [Arrow Function]  :
+    function overallSyntax() {
+        alert('Welcome to Test {over all syntax} [Normal Function] & [Arrow Function]  ');
 
         dis.innerHTML = '';
 
 
-        // Assigning the element innerHTML by the value of it's caller funtion :
-        let regFuncVal1 = function() {
-            document.getElementById('note').innerHTML = this;
+        //  Define a [Normal Function] with [multiple lines and Paramters ]  :
+        function Nfunc(a, b, c) {
+            console.log('This is Normal function : ') ;             
+            console.log('Hello : ' , a  ) ;             
+            console.log('Age is : ' , b  ) ;             
+            console.log(' phone is : ' , c ) ;             
         }
         
-        // Executing the [this] 's refers value within {Regular function} by using built-in {window} object  & {onload} event :
-        window.onload = regFuncVal1;
+        // Executing the Normal Function :
+        Nfunc('shadi' , 30  , '123456') ;
+        
+        
+        
+        //  Define a [Arrow  Function] with  [multiple lines and Paramters ]  :
+        const Afunc = (a, b, c) => {
+            console.log('This is an Arrow functoin ') ;             
+            console.log('Hello : ' , a  ) ;             
+            console.log('Age is : ' , b  ) ;             
+            console.log(' phone is : ' , c ) ;             
+        }
+        
+        
+        // Executing the Arrow Function :
+        Afunc('shadi' , 30  , '123456') ;
         
         // ---------------------------------------
         
-        // Executing the [this] 's refers value within {Regular function} by using built-in {button} object  & {addEventLister} event  :
-        document.getElementById('elem').addEventListener( 'click' , regFuncVal1);         
-        // ---------------------------------------
-        
-        // console.log('Regular Function of calling function by using [this] operator : ' , regFuncVal1() ) ;
-        console.log('Regular Function Syntax by using Default method : '  ,  regFuncVal1 ) ;
-        
-        dis.innerHTML = 'Regular Function Syntax by using Default method : ' +  regFuncVal1 + '<br>' ;
+          
+        dis.innerHTML = '  : ' +  overallSyntax + '<br>' ;
 
         // ------------------------
 
     }
     // =============================================================
 
-    // 2] {This} usages and attidute value within the [Regular function] => { Auto counter application upon [this] value }:
-    function regFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Regular function] ');
+    // 2] Test {Function with one line of Code}  between  [Normal Function] & [Arrow Function]  :
+    function funcOnelineCode() {
+        alert('Welcome to  Test Function with one line of Code  between  [Normal Function] & [Arrow Function]  ');
 
         dis.innerHTML = '';
 
-        let regFuncThisApp = function () {
-            let that = this;
-            this.age = 0;
 
-            setInterval( function(){
-                that.age++ ;
-                console.log(that.age);
-            }, 1000 );
-
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new regFuncThisApp();   
+        //  Define a [Normal Function] with [one line of code]  :
+        function Nfunc() {
+            console.log('This is a normal function :  Hello shadi' ) ;             
         }
-
-       
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : '  , regFuncThisApp ) ;
-       
-        dis.innerHTML += 'Regular Function Syntax by using this solution Method [assigning (this) to another variable ] : ' + regFuncThisApp + '<br>' ;
         
+        // Executing the Normal Function :
+        Nfunc() ;
+        
+        // ---------------------------------------
+                 
+        //  Define a [Arrow Function] with [one line of code]  :
+        const Afunc = () => console.log('This is an Arrow function : Hello shadi' ) ;             
+ 
+        // Executing the Arrow Function :
+        Afunc() ;
+             
+        // ---------------------------------------
+                 
+        dis.innerHTML = '  : ' +  funcOnelineCode + '<br>' ;
+        // ------------------------
+
     }
-    // =========================================================
-    
-    // 3] {This} usages and Attidute value within the [Arrow function] => { Auto counter application upon [this] value }:
-    function arrowFuncThis() {
-        alert('Welcome to Test and print {this} usages and attidute value within the [Arrow function] ');
+    // =============================================================
+  
+    // 3] Test {Function with one parameter }  between  [Normal Function] & [Arrow Function]  :
+    function funcOneParam() {
+        alert('Welcome to  Test {Function with one parameter }  between  [Normal Function] & [Arrow Function]  ');
 
         dis.innerHTML = '';
-
-        let arrowFuncThisApp = function()  {
-         
-            this.age = 0;
-
-            setInterval( () => {
-                this.age++ ;
-                console.log(this.age);
-            }, 1000 );
-        
-            // Executing the current fuction by Extracting new object form the constrcutor function : 
-            let user = new arrowFuncThisApp();
+ 
+        //  Define a [Normal Function] with [one parameter]  :
+        function Nfunc(n) {
+            console.log(' Hello ' , n ) ;             
         }
-    
-        // console.log('Regular Function : ' , regFuncThisApp() ) ;
-        console.log('Arrow Function Syntax by using directly [this] Method : '  , arrowFuncThisApp ) ;
-       
-        dis.innerHTML += 'Arrow Function Syntax by using directly [this] Method : '  + arrowFuncThisApp + '<br>' ;
         
-    }
-    // =========================================================
+        // Executing the Normal Function :
+        Nfunc('shadi') ;
+        
+        // ---------------------------------------
+                 
+        //  Define a [Arrow Function] with [one parameter]  :
+        const Afunc = n =>  console.log(' Hello' , n ) ;             
 
-   //===========================================================
+        // Executing the [Arrow Function] :
+        Afunc('shadi') ;
+        
+        // ---------------------------------------
+                                   
+        dis.innerHTML = '  : ' +  funcOneParam + '<br>' ;
+        // ------------------------
+
+    }
+    // =============================================================
+  
+    // 4] Test {Function Return calculation one Param}  between  [Normal Function] & [Arrow Function]  :
+    function funcReturnParamCalc() {
+        alert('Welcome to  Test {Function Return calculation one Param  }  between  [Normal Function] & [Arrow Function]  ');
+
+        dis.innerHTML = '';
+ 
+        //  Define a [Normal Function] with [one parameter]  :
+        function Nfunc(num) {
+             return num * 3 ;
+        }
+        
+        // Executing the Normal Function :
+        console.log(Nfunc(2)) ;
+        
+        // ---------------------------------------
+                 
+        //  Define a [Arrow Function] with [one parameter]  :
+        const Afunc = num => num * 3 ;             
+
+        // Executing the [Arrow Function] :
+        console.log(Afunc(2)) ;
+        
+        // ---------------------------------------
+                                   
+        dis.innerHTML = '  : ' +  funcReturnParamCalc  + '<br>' ;
+        // ------------------------
+
+    }
+    // =============================================================
+  
+    // 5] Test {Function Return calculation NO Param}  between  [Normal Function] & [Arrow Function]  :
+    function funcReturnNoParamCalc() {
+        alert('Welcome to  Test {Function Return calculation NO Param  }  between  [Normal Function] & [Arrow Function]  ');
+
+        dis.innerHTML = '';
+ 
+        //  Define a [Normal Function] with [NO parameter]  :
+        function Nfunc() {
+            return 3 ;
+        }
+        
+        // Executing the [Normal Function] :
+        console.log(Nfunc()) ;
+        
+        // ---------------------------------------
+                 
+        //  Define a [Arrow Function] with [NO parameter]  :
+        const Afunc = _ =>  3 ;             
+
+        // Executing the [Arrow Function] :
+        console.log(Afunc())  ;
+        
+        // ---------------------------------------
+                                   
+        dis.innerHTML = '  : ' +  funcReturnNoParamCalc  + '<br>' ;
+        // ------------------------
+
+    }
+    // =============================================================
+  
+    //===========================================================
     
     function display() {
         document.getElementById("note").innerHTML = myTest + "\n\n" + "=".repeat(90) + "\n\n";

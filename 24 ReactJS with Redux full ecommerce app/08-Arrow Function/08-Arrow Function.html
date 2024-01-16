@@ -296,7 +296,7 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
+        <span> Welcome to ReactJs Apps Course | </span> <br>
         08-Arrow Function        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section => Comparisoning between [Normal function] & [Arrow Function] Syntax  and examples   <span><strong>   in JS ES6  </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong>  Syntax compriosining between [Normal function] & [Arrow Function] in  ES6 </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1091,14 +1091,16 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be =>  comparisining [Normal function] & [Arrow Function] Syntax , as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
-                 <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                 <ol type="A"> comparisoining Standards : <br>                                        
+                    <li>  Overall syntax </li>
+                    <li> includinmg one line of code </li>
+                    <li> includinmg one  parameter  </li>
+                    <li> Returning calcualtion with one parmeter    </li>
+                    <li> Returning calcualtion with NO parmeter    </li>
                 </ol>
             </article>
         </Section>
@@ -1110,105 +1112,130 @@
                 <h3> 08-Arrow Function concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
-
-            <p> {This} Reference value in the {Regular function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
-                </ul>    
+             
+            <p> Main concept of [Arrow function] :  <br>  
+                <ul>
+                    <li> [Arrow function] is the same functionality , but with different syntax  </li>
+                    <li> [Arrow function] is defined a value of a variable , and can use both of [let] and [const]   </li>
+                    <li> [Arrow function] is more shorten than the normal function </li>
+                </ul>
             </p> <br> <hr> <br>
 
 
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
+            <p> Main Syntax of comparisoning between [Normal function] & [Arrow function] : <br>
                 <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
-                </ul>    
-            </p> <br> <hr>
-                        
-            <ol> 
-                <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
-
-                    <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
+                    <li> [Normal function] main syntax   : <br>
+                        <code>
+                            <span class="one"></span> //  Defining a Normal funtion syntax: <br>
+                            <span class="one"></span> function funcName (par) {  <br>
+                                <span class="two"></span>  console.log(par) ;  <br>
                             <span class="one"></span> }  <br> <br>
- 
-                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
-                                <span class="one"></span>  window.onload = test;  <br>
-                        </code> <br> <br>
+
+                            <span class="one"></span> // calling the defined normal  function : <br>
+                            <span class="one"></span> funcName('paramvalue')  <br>
+                        </code>
+                    </li> <br> <br> 
+                
                     
-                    <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
+                    <li> [Arrow function] main syntax   : <br>
+                        <code>
+                            <span class="one"></span> //  Defining an Arrow function syntax: <br>
+                            <span class="one"></span> const funcName = (par) => {  <br>
+                                <span class="two"></span>  console.log(par) ;  <br>
                             <span class="one"></span> }  <br> <br>
-                       </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
+
+                            <span class="one"></span> // calling the defined arrow function : <br>
+                            <span class="one"></span> funcName('paramvalue')  <br>
+                        </code>
+                    </li>
+                </ul>    
+            </p> <br> <hr> <br>
+               
+            <p> Comparisonal Examples of [Normal function] & [Arrow function]: <br>
+                <!-- im here >>>>>>>>> -->
+                <ol> 
+                    <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
+
+                        <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
+                            
+
+                            <code>  
+                                <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
+                                <span class="one"></span> let test = function () {  <br>
+                                    <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
+                                <span class="one"></span> }  <br> <br>
     
-                <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
-                    <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
+                                <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
+                                    <span class="one"></span>  window.onload = test;  <br>
+                            </code> <br> <br>
                         
-                    <code>  
-                        <span class="one"></span> // Defining constructor funtion : <br>
-                        <span class="one"></span> let test = function () {  <br>
+                        <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
                             
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  that = this ;  <br>
-                            <span class="two"></span>  this.age = 0;  <br>
+                            <code>  
+                                <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
+                                <span class="one"></span> let test = function () {  <br>
+                                    <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
+                                <span class="one"></span> }  <br> <br>
+                        </code> <br> <br>
+                    </li>
+                    <hr> <br> <hr> <br>
+        
+                    <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
+                        <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
                             
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  that.age++ ;  <br>
-                                <span class="three"></span>  console.log(that.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
+                        <code>  
+                            <span class="one"></span> // Defining constructor funtion : <br>
+                            <span class="one"></span> let test = function () {  <br>
+                                
+                                <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
+                                <span class="two"></span>  that = this ;  <br>
+                                <span class="two"></span>  this.age = 0;  <br>
+                                
+                                <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
+                                <span class="two"></span>  setIntevral( function () { <br>
+                                    <span class="three"></span>  that.age++ ;  <br>
+                                    <span class="three"></span>  console.log(that.age) ;  <br>
+                                <span class="two"></span> } , 1000) ; <br>
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
+                            <span class="one"></span> }  <br> <br>
+        
+                            <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
+                            <span class="one"></span>  let user = new Person() ;  <br>
 
-                    </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
+                        </code> <br> <br>
+                    </li>
+                    <hr> <br> <hr> <br>
 
-                <li> {Arrow function} => {This} attidute and properties Syntax : <br>
-                    <h4> The {This} has the access through the inner nested function  :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining Arrow constructor funtion : <br>
-                        <span class="one"></span> let test = () => {  <br>
+                    <li> {Arrow function} => {This} attidute and properties Syntax : <br>
+                        <h4> The {This} has the access through the inner nested function  :  </h4>
                             
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
-                                <span class="three"></span>  this.age++ ;  <br>
-                                <span class="three"></span>  console.log(this.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
+                        <code>  
+                            <span class="one"></span> // Defining Arrow constructor funtion : <br>
+                            <span class="one"></span> let test = () => {  <br>
+                                
+                                <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
+                                <span class="two"></span>  this.age = 0;  <br>
+                                
+                                <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
+                                <span class="two"></span>  setIntevral( function () { <br>
+                                    <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
+                                    <span class="three"></span>  this.age++ ;  <br>
+                                    <span class="three"></span>  console.log(this.age) ;  <br>
+                                <span class="two"></span> } , 1000) ; <br>
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
+                            <span class="one"></span> }  <br> <br>
+        
+                            <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
+                            <span class="one"></span>  let user = new Person() ;  <br>
 
-                    </code> <br> <br>
-                </li>
+                        </code> <br> <br>
+                    </li>
 
-                <hr> <br> <hr> <br>
-    
-            </ol>
+                    <hr> <br> <hr> <br>
+        
+                </ol>
+
+            </p> 
             <!-- --------------------------- -->
 
             <p> Important Notes : <br>

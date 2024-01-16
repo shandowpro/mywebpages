@@ -296,7 +296,7 @@
     
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
-        <span> Welcome to JQuerry Course | </span> <br>
+        <span> Welcome to ReactJS Course | </span> <br>
         27-React Bootstrap ,Styling        
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -322,8 +322,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">     
-            <h2 class="h1" class="hidden-xs"> About Section => new advanced function Syntax {arrow} for more  <span><strong>  Shorthand syntax Function in JS ES6  </strong> </span> </h2> 
-            <h3 class="visible-xs"> About Section => This lesson about <strong> standards { Arrow Function } method for more advanced and shortrer functions  in ES6 </strong> </span> </h3> 
+            <h2 class="h1" class="hidden-xs"> About Section =>  installing , setting up and using ReactJS Bootstrap in styling JSX Elements  , concept ,  Syntax and practical exps   <span><strong>  in JS ReactJS   </strong> </span> </h2> 
+            <h3 class="visible-xs"> About Section => This lesson about <strong> installing , setting up and using ReactJS Bootstrap in styling JSX Elements  , concept ,  Syntax and practical exps </strong> </span> </h3> 
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->        </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1087,18 +1087,20 @@
     <div class="Post" id=post>
         <Section  id="MainC" class="MainC">
             <header>
-                ES6 [27-React Bootstrap ,Styling] Main Topics : <br>
+                ReactJS  [27-React Bootstrap ,Styling] Main Topics : <br>
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about {Arrow Function } advanced {this} Syntax , as following :   </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about installing , setting up and using { ReactJS Bootstrap in styling JSX Elements  , concept ,  Syntax and practical exps  } concept and  Syntax , as following :   </p>
                 
                 <h2> Main Subjects :  </h2>                        
                 
                  <ol type="A">                                       
-                    <li> [This] Reference value in the Regular function  </li>
-                    <li> {This} usage and attidute within in the Regular function { Auto counter application upon [this] value }  </li>
-                    <li> {This} usage and attidute within in the Arrow function { Auto counter application upon [this] value } </li>
+                    <li> ReactJs Bootstrap library => concept  </li>
+                    <li> ReactJs Bootstrap library => Installing and setting up    </li>
+                    <li> ReactJs Bootstrap library => Using requirment </li>
+                    <li> ReactJs Bootstrap library => Importing inside  the [app.js , index.js , index.html] syntax   </li>
+                    <li> ReactJs Bootstrap library => using Ready components from the offiical website   </li> 
                 </ol>
             </article>
         </Section>
@@ -1110,136 +1112,172 @@
                 <h3> 27-React Bootstrap ,Styling concept : </h3>
             </header>
            
-            <p> {This} => is an operator refer to it's parent function that calling it to be persued  </p>
+            <p> ReactJs Bootstrap library concept  =>  <br>
+                <ol> 
+                    <li>  It the same library of Bootstrap , but specillaized for reactJS using   </li>
+                    <li>  {react-bootstrap} has the same properties and classes in the normal library    </li>
+                    <li>  {react-bootstrap}  => the official website is [react-bootstrap.github.io]   </li>
+                    <li>  {react-bootstrap} is the most popular library being used with the ReactJS  projects   </li>
+                    <li>  there are other than {react-bootstrap} libraires used with ReactJS  projects ,such as: <br> 
+                        <ul>
+                            <li> [Material UI]  </li>
+                            <li> [Semantic UI]  </li>
+                        </ul>
+                    </li>
+                </ol>
+            </p>
 
-            <p> {This} Reference value in the {Regular function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another varialbe with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> Every function needs it's only [This] </li>
-                </ul>    
-            </p> <br> <hr> <br>
-
-
-            <p> {This} Reference value in the {Arrow function} Rules : <br>
-                <ul> 
-                    <li> Referes to it's only Direct parent function  </li>
-                    <li> Needs to define another variable with the {This} to be uesed and passed inside the inner nesed funciton  </li>
-                    <li> [This] refers the main function perent function   </li>
-                </ul>    
-            </p> <br> <hr>
-                        
-            <ol> 
-                <li> Regular Function [printing the value of the caller function {This} ] syntax : <br>
-
-                    <h4> {Regular function} by using built-in {window} object  & {onload} event  :  </h4>
-                        
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('elemId').innerHTML = this ;  <br>
-                            <span class="one"></span> }  <br> <br>
- 
-                            <span class="one"></span> // Executing the {test} variable constructor funciton by {onload} event of the {window object} :    <br>
-                                <span class="one"></span>  window.onload = test;  <br>
-                        </code> <br> <br>
+            <p>  ReactJs Bootstrap library Installing and setting up  steps => <br> 
+                <ol> 
+                    <li> using the vscode inner cmd =>  must stop the runing server of the current project , and run the next code : <br>
+                        <code> 
+                            <span></span> npm install react-bootstrap bootstrap@5.1.3 <br>                            
+                        </code>
+                    </li>
                     
-                    <h4> {Regular function} by using built-in {button} object  & {addEventListner=> click} event  :  </h4>
+                    <li> after installing the libray of react-bootstrap => the {package.json} will be added [libarary's version ] by the  installed and set library  </li>
+                     
+                </ol>
+            </p>
+  
+            <p> ReactJs Bootstrap library Usage requirments steps  => <br> 
+                <ol> 
+                    <li> inside {index.js} || {App.js}  => Importing the library path as following {form the official website} :  <br>
+                        <code> 
+                            <span class='one'></span>  import 'bootstrap/dist/css/bootstrap.min.css' ;      <br>
+                        </code>
+                    </li>
+                     
+                    <li> inside {index.html}  => assinging the bootgstrap library file path inside the [link] tag {from the offical website} as following :  <br>
+                        <code> 
+                            <span class='one'></span>  &lt; link  <br> 
+                                <span class='two'></span> rel="stylesheet" <br>
+                                <span class='two'></span> href="bootstrap/dist/css/bootstrap.min.css" <br>
+                                <span class='two'></span> integrity=" " <br>
+                                <span class='two'></span> crossorigin="anonymous" <br>            
+                            <span class='one'></span>    /&gt;   <br>
+                        </code>
                         
-                        <code>  
-                            <span class="one"></span> // Assigning the element innerHTML by the value of it's caller funtion : <br>
-                            <span class="one"></span> let test = function () {  <br>
-                                <span class="two"></span>  document.getElementByID('btnId').addEventListner('click' , test) ;  <br>
-                            <span class="one"></span> }  <br> <br>
-                       </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
+                    </li>
+                     
+                </ol>
+            </p>
     
-                <li> {Regular function} => Solving the problem the This [not accessing the nested inner function ] Syntax : <br>
-                    <h4> Creating interval counter application and solving the {this} problem by defining the value of the this in another variable {let} :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining constructor funtion : <br>
-                        <span class="one"></span> let test = function () {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  that = this ;  <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  that.age++ ;  <br>
-                                <span class="three"></span>  console.log(that.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
+            <p>  ReactJs Bootstrap library => using (copying) Ready components from the offiical website => <br> 
+                <ol> 
+                    <li> any used bootstrap element must be imported as an object {from 'react-bootstrap'} in the upper code of the current page {app.js || index.js}   </li>
+                    <li> after copying the element => all will be done is just ading our modifications in the imported script    </li>
+                    <li> some popular examples of the bootstarp components : <br>
+                        <ul> 
+                            <li> button </li>
+                            <li> badge </li>
+                            <li> navBar </li>
+                            <li> cards  </li>
+                        </ul>                        
+                    </li> <br>
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
+                    <li>  syntax examples fo imported components : <br> 
+                        <p> Importing only one single  bootstrap component   : <br> 
+                            <code> 
+                                <span class="one"></span>  import {Fragment}  from 'react' ; => [for adding several elements]     <br> 
+                                <span class="one"></span>  import {Button}  from 'react-bootstrap' ;     <br> 
+                                
+                                <span class="one"></span>   // Define conmpnent function including  one bootstrap element : <br>  
+                                <span class="one"></span>   const App = ()=> { <br>  
+                                    <span class="two"></span>  const  name = 'this is a primary type button' ; <br>  
+                                    <span class="two"></span>    return (  <br>  
+                                        <span class="three"></span> &lt; div   &gt;  <br>  
+                                            <span class="four"></span> &lt; button variant='primary' &gt;   <br>  
+                              
+                                                <span class="five"></span>  {name}  <br>  
+                                            
+                                            <span class="four"></span> &lt; / button  &gt;   <br>  
+                                        
+                                        <span class="three"></span> &lt; /div &gt;  <br>  
+                                    
+                                    <span class="two"></span>  ) ; <br>  
 
-                    </code> <br> <br>
-                </li>
-                <hr> <br> <hr> <br>
+                                <span class="one"></span> }     <br> 
+                            </code>
+                        </p> <br> <hr> <br>
 
-                <li> {Arrow function} => {This} attidute and properties Syntax : <br>
-                    <h4> The {This} has the access through the inner nested function  :  </h4>
-                        
-                    <code>  
-                        <span class="one"></span> // Defining Arrow constructor funtion : <br>
-                        <span class="one"></span> let test = () => {  <br>
-                            
-                            <span class="two"></span>  // Defining a variable will be used to as counter starter <br>
-                            <span class="two"></span>  this.age = 0;  <br>
-                            
-                            <span class="two"></span>  // using {setIntevral} built-in function to start counting upon the {This} value which assigned with in the another variable value [that] <br>                            
-                            <span class="two"></span>  setIntevral( function () { <br>
-                                <span class="three"></span>  // Using directly the {this} operator [because it refers to the parent function {test} ] :  <br>
-                                <span class="three"></span>  this.age++ ;  <br>
-                                <span class="three"></span>  console.log(this.age) ;  <br>
-                            <span class="two"></span> } , 1000) ; <br>
+                        <p> Importing several bootstrap components  : <br>
+                            <code> 
+                                <span class="one"></span>  import {Button , Card, Badge }  from 'react-bootstrap' ;     <br> 
+                                
+                                <span class="one"></span>   // Define conmpnent function including  several  bootstrap elements   : <br>  
+                                <span class="one"></span>   const App = ()=> { <br>  
+                                    <span class="two"></span>  const  name = 'this is a primary type button' ; <br>  
+                                    <span class="two"></span>    return (  <br>  
+                                        <span class="three"></span> &lt; div   &gt;  <br>  
+                                          
+                                            <span class="four"></span> // adding a [button] bootstrap component : <br>
+                                            <span class="four"></span> &lt; button variant='primary' &gt;   <br>  
+                                                <span class="five"></span>  {name}  <br>  
+                                            <span class="four"></span> &lt; / button  &gt;   <br>  
+                                        
+      
+                                            <span class="four"></span>  // adding a head with [badge] bootstrap component :  <br>  
+                                            <span class="four"></span> &lt; h1  &gt;   <br>  
+                                                <span class="five"></span>  This is a heading   <br>  
+                                                
+                                                <span class="five"></span>  &lt;Badge bg="secondary" &gt; <br>
+                                                    <span class="six"></span> This is a badge  <br>  
+                                                <span class="five"></span>  &lt; /Badge &gt; <br>
+                                            
+                                            <span class="four"></span> &lt; / h1  &gt;   <br>  
+                                        
+                                        <span class="three"></span> &lt; /div &gt;  <br>  
+                                    
+                                    <span class="two"></span>  ) ; <br>  
 
-                        <span class="one"></span> }  <br> <br>
-       
-                        <span class="one"></span> // Extracting a new Object from the constructor function -> to operate the method through it  :  <br>
-                        <span class="one"></span>  let user = new Person() ;  <br>
+                                <span class="one"></span> }     <br> 
 
-                    </code> <br> <br>
-                </li>
 
-                <hr> <br> <hr> <br>
-    
-            </ol>
-            <!-- --------------------------- -->
+
+
+                            </code>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+  
+             <!-- --------------------------- -->
 
             <p> Important Notes : <br>
                 <ul>                    
-                    <li> [This] {Arrow functions} & {Regular functions} ->  will reperent the value of the method the been called by  </li>
-                    <li> [This] operator in the {Regular function}  ->  Can not access through the inner nested funcions , and needs to be assigned into another variable  </li>
-                    <li> [This] operator in the {Arrow function}  -> Can be used directly inside the inner nested functions  </li>
+                    <li> This course will concertrate on the reactJS it self , not the boottrap  </li>
+                    <li> you should be familier with main concept of bootstrap such as : [layout , grid]  </li>
+                    <li> using the bootstrap is about using bootstrap classes inside JSX elements , but as imrorted object inside the reactJS components  </li>
                 </ul>
             </p>
                                                                      
-            <h3> ES6 [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
+            <h3> ReactJS  [plugins.js] Functions and scripts file of this lesson as following :  </h3> <br>
             
             <ol class="codes" >                    
                 <li> Page Sources : </li>
                 <code> 
                     
                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS JS [main.js] file </button>
                     </a> <br> <hr> <br> 
-                    
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/myplugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 new Code [myplugins.js] file </button>
-                    </a> <br> <hr> <br>  -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ES6 JS [main.js] file </button>
-                    </a> <br> <br> 
-                    -->
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="js/plugins.js">  
-                        <button id=btn class="btn0" onclick="display()"> Display ES6 old Code [plugins.js] file </button>
-                    </a> <br> <br> 
-                    -->
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/index.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS assembling file JS [index.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/App.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main App file {Main Component} [App.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/Header.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS Header sub child component  file JS [Header.js] file </button>
+                    </a> <br> <hr> <br> 
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/Footer.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS Footer sub child component  file JS [Footer.js] file </button>
+                    </a> <br> <hr> <br> 
+  
                 </code>                 
             </ol>
 
@@ -1343,7 +1381,7 @@
             <!-- <div id="Code" class="Code">
                 
                 [1] { Login [Default ] into current DB Client from [CMD] } : <br>
-                    <span class= one></span> { ES6 -u root; } <br><br>
+                    <span class= one></span> { ReactJS  -u root; } <br><br>
             
                 [2] { Show all availble DBs in current Client from [CMD] } : <br>
                     <span class= one></span> { SHOW DATABASES; } <br><br>
@@ -1475,7 +1513,7 @@
         
     <aside>        
         <section class="VideoSection" id="VideoSection">
-            <h3> Lesson 27 Video File: </h3>
+            <h3> Lesson 26 Video File: </h3>
             <video controls width="300" height="300">
                 <source src="E:\Web videos lessons\Web Framworks\ReactJs\\ReactJs-Build Full E-Commerce From Scratch Redux Arabic\27-React Bootstrap ,Styling.mp4" type="video/mp4">
                 Your browser Does Not Support the Video file ...              
@@ -1496,7 +1534,7 @@
         <section class="Links">
             <h3>Course Map : </h3>
             <ul>              
-                <li> <a href="course map/ES6 course map.html"> ES 6 Course Map </a> </li>
+                <li> <a href="course map/ReactJS  course map.html"> ES 6 Course Map </a> </li>
             </ul>
         </section>
         
