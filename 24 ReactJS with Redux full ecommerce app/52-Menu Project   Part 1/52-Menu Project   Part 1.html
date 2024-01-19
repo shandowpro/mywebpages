@@ -1227,7 +1227,7 @@
         </div>
     </section>
     <i class="gear-option1 hvr-pulse-grow"> wow.js </i>
-    <!-- ---------------------------------------- -->
+    <!-- ---------------------------------------- --> 
 
     <!-- Page contents with Old CSS  -->
     <div class="Post" id=post>
@@ -1242,9 +1242,7 @@
                 <h2> Main Subjects : </h2>
 
                 <ol type="A">
-                     <li> Main concept and porpuses of this application   </li>
-                     <li> Main Feautres and  Options available in this application   </li>
-                     <!-- <li> Technical functionalities used in this application   </li> -->
+                     <li> Main steps of this application   </li>
                 </ol>
             </article>
         </Section>
@@ -1257,108 +1255,320 @@
             </header>
 
 
-            <p>  Main concept and porpuses of this application :   <br>
+            <p>  Main steps of this application :   <br>
                 <ol> 
-                    <li> This project can be desinged wiht mulitple types of projects kinds ,  not just memnu of meals </li>    
+                    <li>  Installing and setup the application using [boiling plates] inside external folder  , by using the nextcode : <br>
+                         <code>
+                            { npx create-react-app menu-list  }
+                         </code>
+                    </li>  <br> 
+
+                    <li>  Installing and setup the  [react-bootstrap] library (inside the installed project folder) , by using the nextcode : <br>
+                        <ul> 
+                            <li> Install the main {bootstrap} library by using following cmd of the vscode  : <br> 
+                                <code>
+                                   { npm install  react-bootstrap bootstrap@5.1.3 } => [for a certain version ]
+                                   { npm install  react-bootstrap } => [for a public latest version ]
+                                </code>
+                            </li> <br>
+                            
+                            <li> Assign the installed {bootstrap} library into the project files , by following procedures and  steps : <br>      
+                                <ol> 
+                                    <li> 1] inside the {index.html} => adding the main link tag of the bootstrasp library wihtin the main {index.html} file , by the following code : <br>
+                                        <code>                                            
+                                            <span class="one"></span> &lt; head &gt; <br>
+                                            
+                                                <span class="two"></span> &lt; link rel="stylesheet" <br>
+                                                    <span class="three"></span> href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" <br>
+                                                    <span class="three"></span> integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" <br>
+                                                    <span class="three"></span> crossorigin="anonymous" /&gt; <br>
+                                            
+                                            <span class="one"></span> &lt; head &gt; 
+                                        </code>
+                                    </li> <br>
+                                    
+                                    <li> 2] inside the {index.js} =>  importing the main {bootstrap} library file  into tyhe main acembling index.js file be applied into any called components , by the following code : <br>
+                                        <code>
+                                            <span class="one"></span>  import 'bootstrapdist/css/bootstrap.min.css'; <br>
+                                        </code>
+                                    </li>
+                                </ol> 
+                            </li>
+                        </ul>
+                    </li> <br>    
+                    
+                    <li> creating the custom {index.css} to apply a specific css properties into a certain elements  inside tehe application : <br>
+                         <code> 
+                            // These codes for the main {div} element of the [App.js] : <br> 
+                            <span class="one"></span> .color-body { <br>
+                                <span class="two"></span> background-color: #f8f8f8; <br>
+                                <span class="two"></span> height: 100vh  <br> 
+                            <span class="one"></span> }
+                             <br> <br>
+                         
+                            <span class="one"></span> .font { <br>
+                                <span class="two"></span> font-family: "Almarai" , "san-serif" ;  <br>
+                            <span class="one"></span> }
+                             <br> <br> <hr> <br>
+                                
+                            // This code for the main {div} element [the title name of menu list] of the [Header.js] : <br> 
+                            <span class="one"></span> .title { <br>
+                                <span class="two"></span> color: #224f61 ; <br>
+                                <span class="two"></span> font-family: "Almarai" , "san-serif" ;  <br>
+                                <span class="two"></span> font-size: 30px ; <br> 
+                                <span class="two"></span> font-weight: bold ; <br>
+                                <span class="two"></span> letter-spacing: 0 ; <br>
+                                <span class="two"></span> line-height: 64px ; <br>
+                            <span class="one"></span> }  <br> <br>
+                            
+                            
+                            // This code for the main {button} element [searching button] of the [NavBar.js] : <br> 
+                            <span class="one"></span> .brand-color { <br>
+                                <span class="two"></span> color :  #b45b35;  <br>
+                            <span class="one"></span> } <br>
+                            <br> <br> <hr> <br>
+                            
+                            // This code for the main {div} element [the element after the title ] of the [Header.js] : <br> 
+                            <span class="one"></span>  .underline { <br>
+                                <span class="two"></span> height: 1px ; <br>
+                                <span class="two"></span> width: 200px ; <br>
+                                <span class="two"></span> border-radius: 10px ;<br>
+                                <span class="two"></span> border: 2px solid #b45b35 ; <br>
+                            <span class="one"></span> } 
+                            <br> <br> <hr> <br>
+                        
+                            // This code for the main { } element [ ] of the [ ] : <br> 
+                            <span class="one"></span> .btn  { <br>
+                                <span class="two"></span> color: #8c8c8c8c; <br>
+                                <span class="two"></span> font-family: "Almarai" , "san-serif" ; <br>
+                                <span class="two"></span> font-size:  18px ; <br>
+                                <span class="two"></span> font-weight: bold ; <br>
+                                <span class="two"></span> letter-spacing :  0 ; <br>
+                                <span class="two"></span> line-height : 20px ; <br>
+                            <span class="one"></span> } 
+                            <br> <br>
+                                    
+                            // This code for the main { } element [ ] of the [ ] : <br> 
+                            <span class="one"></span> .btn:hover  { <br>
+                                <span class="two"></span> color: #fff; <br>
+                                <span class="two"></span> font-family: "Almarai" , "san-serif" ; <br>
+                                <span class="two"></span> font-size:  18px ; <br>
+                                <span class="two"></span> font-weight: bold ; <br>
+                                <span class="two"></span> letter-spacing :  0 ; <br>
+                                <span class="two"></span> line-height : 24px ; <br>
+                                <span class="two"></span> border-radius : 11px  ; <br>
+                                <span class="two"></span> border: none  ; <br>
+                                <span class="two"></span> background-color:  #b45b35  ; <br> 
+                            <span class="one"></span> } 
+                            <br> <br> <hr> <br>
+                                
+                        
+                            // This code for the main {button} element [searching button] of the [NavBar.js] : <br> 
+                            <span class="one"></span> .btn-search  { <br>
+                                <span class="two"></span> color: #b45b35  ; <br>
+                                <span class="two"></span> background-color: #fff; <br>
+                                <span class="two"></span> border: 3px solid #b45b35 ; <br>
+                                <span class="two"></span> border-radius: 8px ; <br>
+                                <span class="two"></span> font-weight: bold  ; <br>
+                            <span class="one"></span> } 
+                            <br> <br> 
+
+                            // This code for the main {button} element [searching button] of the [NavBar.js] : <br> 
+                            <span class="one"></span> .btn-search:hover  { <br>
+                                <span class="two"></span> color: #fff; <br>
+                                <span class="two"></span> background-color: #b45b35; <br>
+                                <span class="two"></span> border: 3px solid #fff ; <br>
+                                <span class="two"></span> border-radius: 8px ; <br>
+                                <span class="two"></span> font-weight: bold ; <br>
+                            <span class="one"></span> } 
+                             <br> <br> <hr> <br>
+                            
+
+                            
+                             // This code for the main { menu list : item title name } element [ ] of the [ .js] : <br> 
+                             <span class="one"></span> .item-title { <br>
+                                <span class="two"></span> color: #555555 ; <br>
+                                <span class="two"></span> font-family: "Almarai" , "san-serif" ; <br>
+                                <span class="two"></span> font-size : 16px ;<br>
+                                <span class="two"></span> font-weight : bold ;<br>
+                                <span class="two"></span> letter-spacing : 0 ;<br>
+                                <span class="two"></span> line-height : 20px ;<br>
+                            <span class="one"></span>  } <br> <br> 
+                                
+                            // This code for the main { menu list : item descrition  } element [ ] of the [ .js] : <br> 
+                            <span class="one"></span> .item-description {   <br>
+                                <span class="two"></span> color: #8c8c8c;<br>
+                                <span class="two"></span> font-family: "Almarai" , "san-serif" ; <br>
+                                <span class="two"></span> letter-spacing : 0 ;<br>
+                                <span class="two"></span> line-height : 20px ;<br>
+                                <span class="two"></span>font-size : 16px ;<br>
+                            <span class="one"></span> } <br> <br> 
+                                
+                            // This code for the main { menu list : item image  } element [ ] of the [ .js] : <br> 
+                            <span class="one"></span> .img-item { <br>
+                                <span class="two"></span> height: 180px; <br>
+                                <span class="two"></span> width: 252px ; <br>
+                                <span class="two"></span> border-radius: 5px ;  <br>
+                            <span class="one"></span>   } 
+                            <br> <br> <hr> <br>    
+                        </code> 
+                    </li>
+
+
+                    <li>  seperating the components into several components files , and import them into the main {App.js}, by using the nextcode : <br>
+                        <ul> 
+                            <li> creating {src/component/NavBar.js} component file , as following  vscode  : <br> 
+                                <code>
+                                    // Importing section : <br> 
+                                    <span class="one"></span> import React from "react"; <br>
+                                    <span class="one"></span> import { Row , Container, Nav, Navbar, Form } from "react-bootstrap"; <br></br>
+
+                                    // Define them main functional component :   <br>
+                                    <span class="one"></span> const NavBar = () => { <br>
+                                        <span class="two"></span> return ( <br> 
+                                            <span class="three"></span> &lt; Row &gt; <br>
+                                                <span class="four"></span> &lt; Navbar expand="lg" bg="dark" variant="dark"  &gt; <br>
+                                                    <span class="five"></span> &lt; Container &gt; <br>
+
+                                                        <span class="six"></span> &lt; Navbar.Brand &gt; <br>
+                                                            <span class="seven"></span> &lt; div className='brand-color' &gt; <br>
+                                                                <span class="eight"></span> مطعم جديد <br>
+                                                            <span class="seven"></span>  &lt; /div &gt;   <br>                                                  
+                                                        <span class="six"></span> &lt; /Navbar.Brand &gt; <br> <br>
+                                                          
+                                                        <span class="six"></span> &lt; Navbar.Toggle aria-controls="navbarScroll" / &gt; <br> <br>
+                                                
+                                                
+                                                        <span class="six"></span>  &lt; Navbar.Collapse id="navbarScroll"  &gt;  <br>
+                                                            <span class="seven"></span> &lt; Nav <br> 
+                                                                <span class="eight"></span> className="me-auto my-2 my-lg-0" <br>
+                                                                <span class="eight"></span> style={ { maxHeight: "100px" } } <br>
+                                                                <span class="eight"></span> navbarScroll <br>
+                                                            <span class="seven"></span> > &lt; /Nav &gt; <br> <br>
+
+                                                            <span class="seven"></span> &lt; Form className="d-flex" &gt; <br>
+                                                                <span class="eight"></span> &lt; Form.Control <br>
+                                                                    <span class="nine"></span> type="text"  <br>
+                                                                    <span class="nine"></span> placeholder="ابحث ..." <br>
+                                                                    <span class="nine"></span> className=" mx-2" <br>
+                                                                    <span class="nine"></span> aria-label="Search" <br>
+                                                                <span class="eight"></span> /&gt; <br>
+
+                                                                <span class="eight"></span> &lt; button className="btn-search" &gt; بحث &lt; /button &gt;  <br>
+                                                            <span class="seven"></span> &lt;  /Form &gt; <br> <br>
+ 
+                                                        <span class="six"></span>  &lt;  /Navbar.Collapse id="navbarScroll"  &gt;  <br>
+                                                    <span class="five"></span> &lt; /Container &gt; <br>
+                                                <span class="four"></span> &lt; /Navbar &gt; <br>
+                                            <span class="three"></span> &lt; /Row &gt; <br>
+                                        <span class="two"></span> ); <br>
+                                    <span class="one"></span> };  <br><br>
+
+                                    // Exporting the [NavBar] component : <br>
+                                    <span class="one"></span> export default NavBar; <br>
+                                </code>
+                            </li> <br> <br>
+                            
+                            <li> creating {src/component/Header.js} component file , as following  vscode  : <br> 
+                                <code>
+                                    // Importing section : <br> 
+                                    <span class="one"></span> import React from "react"; <br>
+                                    <span class="one"></span> import { Row, Col } from "react-bootstrap";  <br></br>
+
+                                    // Define them main functional component :   <br>
+                                    <span class="one"></span> const Header = () => { <br>
+                                        <span class="two"></span> return ( <br> 
+                                            <span class="three"></span> &lt; Row &gt; <br>
+                                                <span class="four"></span> &lt;  Col sm="12" className="justify-content-center text-center" &gt; <br>
+                                                    <span class="five"></span> &lt;  div className="title" &gt; <br>
+                                                        <span class="six"></span>  قائمة الطعام  <br>
+                                                    <span class="five"></span> &lt;  /div  &gt; <br> <br>
+
+                                                    <span class="five"></span> &lt; div className="justify-content-center d-flex" &gt; <br>
+                                                        <span class="six"></span> // This is an empty [div] lay after the title element  to be formated by undleine css properites :   <br>
+                                                        <span class="six"></span> &lt;   div className="underline"  &gt; &lt;  /div  &gt;  <br>
+                                                    <span class="five"></span> &lt;  /div  &gt; <br> <br>
+
+                                                <span class="four"></span> &lt;  /Col   &gt; <br>
+                                             <span class="three"></span> &lt; /Row &gt; <br>
+                                        <span class="two"></span> ); <br>
+                                    <span class="one"></span> };  <br><br>
+
+                                    // Exporting the [Header] component : <br>
+                                    <span class="one"></span> export default Header; <br>
+                                </code>
+                            </li> <br> <br>
+                             
+                        </ul>
+                    </li> <br>
+                    
+                    <li> Assembling all comoponets inside the main file [App.js] {src/App.js}  : <br>
+                        <code>
+                            // Importing section : <br> 
+                            <span class="one"></span> import React from "react"; <br>
+                            <span class="one"></span> import { Row, Col } from "react-bootstrap";  <br></br>
+                            <span class="one"></span> import Header from "components/Header"; <br>
+                            <span class="one"></span> import NavBar from "components/NavBar"; <br>
+                             
+
+                            // Define them main App.js function:   <br>
+                            <span class="one"></span> function App () => { <br>
+                                <span class="two"></span> return ( <br> 
+                                    <span class="three"></span> &lt; div className="color-body font" &gt; <br>
+                                        
+                                        <span class="four"></span>  // calling the {NavBar} before the container element [to be not effected by it's width]  <br>
+                                        <span class="four"></span> &lt;  NavBar / &gt; <br>
+                                        
+                                        <span class="four"></span> &lt; Container &gt; <br>
+                                            <span class="five"></span> &lt; Header/  &gt; <br> <br>
+                                        <span class="four"></span> &lt; /Container &gt; <br>
+
+                                    <span class="three"></span> &lt; /div   &gt; <br>
+
+                                <span class="two"></span> ); <br>
+                            <span class="one"></span> };  <br><br>
+
+                            // Exporting the [App] component : <br>
+                            <span class="one"></span> export default App; <br>
+                        </code>
+                    </li>
                 </ol>    
             </p>
             <br> <br>
             
 
-            <p> Main Feautres and  Options available in this application: <br>    
-                <ol> 
-                    <li> This project will include a new features in reacts , such as  :  <br>
-                        <ul> 
-                            <li> [Search box] => to search of the existed meals[items] according to the inserted searchning pattern   </li>
-                            <li> [Filteration navbvar] =>  displaying meals in the list by using the selected category </li>
-                            <li> Using animation of loading items inside the list of meals </li>
-                        </ul>
-                    </li> 
-                </ol>
-            </p>
-            <br> <br>
-            
-
-            <p>  Main components with this application    : <br>
-                <ol> 
-                    <li>  {Searching top Navabar } => including : <br>
-                        <ul>
-                            <li> searching box => include [ search input , search button ] </li>   
-                            <li> logo  </li>   
-                        </ul>
-                    </li>
-
-                    <li> { Filteration catagories Navbar}  => for  applying filtered list of items , which include all existed categories   </li>
-  
-
-                    <li> each item  [meal] consists of :  <br>
-                        <ol> 
-                            <li> meal image  </li>
-                            <li> meal name  </li>
-                            <li> meal descrtipion  </li>
-                            <li> meal price  </li>
-                        </ol>
-                    </li>
-                </ol>
-                
-            </p>
-            <br> <br>
-            
-  
-            <h3> ReactJS [plugins.js] Functions and scripts file of this lesson as following : </h3> <br>
+             <h3> ReactJS [plugins.js] Functions and scripts file of this lesson as following : </h3> <br>
 
             <ol class="codes">
                 <li> Page Sources : </li>
+                
                 <code>
 
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="main.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS JS [main.js] file </button>
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/public/index.html">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS public HTML file  [index.html] file </button>
                     </a> <br> <hr> <br> 
                      
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/index.js">  
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/src/index.js">  
                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS assembling file JS [index.js] file </button>
                     </a> <br> <hr> <br> 
                      
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/App.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main App file {Main Component} [App.js] file </button>
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/src/index.css">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS custom formating css properites file JS [index.css] file </button>
                     </a> <br> <hr> <br> 
                      
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/component/fetch() & axios().js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [fetch() & axios()Func] sub child component  file JS [fetch() & axios().js] file </button>
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/src/App.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main [App] file {Main Component} [App.js] file </button>
                     </a> <br> <hr> <br> 
- 
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/component/UseMemo.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [UseMemoFunc] sub child component  file JS [UseMemo.js] file </button>
+                     
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/src/components/Header.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [Header] sub child component  file JS [Header.js] file </button>
                     </a> <br> <hr> <br> 
-
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/component/NavBar.js">  
+   
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/src/components/NavBar.js">  
                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS [NavBar] sub child component  file JS [NavBar.js] file </button>
                     </a> <br> <hr> <br> 
+ 
                      
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/component/Shadi.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [Shadi] sub child component  file JS [Shadi.js] file </button>
-                    </a> <br> <hr> <br> 
-                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/component/useContext, ContextApiExps.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [useContext, ContextApiExps] sub child component  file JS [useContext, ContextApiExps.js] file </button>
-                    </a> <br> <hr> <br> 
-                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/component/CardDetails.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [CardDetails] sub child component  file JS [CardDetails.js] file </button>
-                    </a> <br> <hr> <br> 
-                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/Header.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS Header sub child component  file JS [Header.js] file </button>
-                    </a> <br> <hr> <br> 
-                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/Footer.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS Footer sub child component  file JS [Footer.js] file </button>
-                    </a> <br> <hr> <br> 
-  
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/shadiapp/src/BootstrapComps.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS bootstrap components sub child component  file JS [BootstrapComps.js] file </button>
-                    </a> <br> <hr> <br> 
-   -->
                 </code>
             </ol>
 
