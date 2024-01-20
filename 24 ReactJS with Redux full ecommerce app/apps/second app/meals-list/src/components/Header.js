@@ -1,3 +1,6 @@
+// This is the [Header] function component : 
+
+
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 
@@ -6,8 +9,9 @@ const Header = () => {
     <Row>
       <Col sm="12" className="justify-content-center text-center">
         <div className="title">
-        قائمة الطعام
+          قائمة الطعام
         </div>
+
         <div className="justify-content-center d-flex" >     
             <div className="underline"></div>
         </div>
