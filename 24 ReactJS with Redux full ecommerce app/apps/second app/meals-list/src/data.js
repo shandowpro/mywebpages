@@ -1,7 +1,5 @@
 // External file of Datasource of the projedct :
 
-import React from "react";
-
 export const items = [
   {
     id: Math.random(),
