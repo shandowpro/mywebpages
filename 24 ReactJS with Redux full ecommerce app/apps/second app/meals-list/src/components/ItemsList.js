@@ -1,31 +1,37 @@
 // This is the  funciaonal component of the [card] , which is repersent the meal item :  
 
 import React from 'react'
-import {Col ,Row , Card  } from 'react-bootstrap'
+import {Col ,Row , Card} from 'react-bootstrap'
 
-const ItemsList = () => {
+const ItemsList = ({stateData}) => {
   return (
     <Row > 
-        <Col sm="12" className="mb-3">
-            <Card className='d-flex flex-row' style={{ backgorundColor: '#f8f8f8'}}  >
-                <Card.Img className="img-item" style={{  width:'252px'}}  Variant='top' src='p1.jpg'  />
+     
+        { 
+            stateData.length >= 1 ? ( stateData.map((item) => {
+            return (
+                <Col sm="12" className="mb-3">
+                    <Card className='d-flex flex-row' style={{ backgorundColor: '#f8f8f8'}}  >
+                        <Card.Img className="img-item" style={{  width:'252px'}}  Variant='top' src={item.img}  />
+                        
+                        <Card.Body>
+                        
+                            <Card.Title className="d-flex  justify-content-between " >
+                                <div className="item-title"> {item.name}   </div> 
+                                <div className="item-price">  {item.price}  </div> 
+                            </Card.Title>  
+                        
+                            <Card.Text className='py-2'>
+                            <div className="item-description"> {item.description} </div>
+                            </Card.Text>
+                        
+                        </Card.Body>
+                        
+                    </Card>    
                 
-                <Card.Body>
-                
-                    <Card.Title className="d-flex  justify-content-between " >
-                        <div className="item-title" > وجبة الافطار   </div> 
-                        <div className="item-price">  50 جنيه  </div> 
-                    </Card.Title>  
-                
-                    <Card.Text className='py-2'>
-                        <div className="item-description">   وجبة الافطار وجبة الافطار وجبة الافطار وجبة الافطار وجبة الافطار    وجبة الافطار وجبة الافطار وجبة الافطار وجبة الافطار وجبة الافطار </div>
-                    </Card.Text>
-                 
-                </Card.Body>
-                 
-            </Card>    
-         
-        </Col>    
+                </Col>    
+            )})) :<h2>  لا يوجد اصناف </h2> 
+         }
     </Row>
   )
 }

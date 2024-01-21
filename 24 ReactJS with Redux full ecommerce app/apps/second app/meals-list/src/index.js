@@ -1,4 +1,4 @@
-
+// This is the [index.js] of {meals-List} appliction  
 
 
 

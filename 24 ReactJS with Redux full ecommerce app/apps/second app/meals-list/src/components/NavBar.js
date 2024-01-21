@@ -29,8 +29,7 @@ const NavBar = () => {
                 type="text"
                 placeholder="ابحث ..."
                 className=" mx-2"
-                aria-label="Search"
-                
+                aria-label="Search"                
               />
               <button className="btn-search"> بحث </button>
             </Form>
