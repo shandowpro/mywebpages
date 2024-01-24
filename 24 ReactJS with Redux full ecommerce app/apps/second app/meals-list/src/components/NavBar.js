@@ -7,7 +7,7 @@ import { Row , Container, Nav, Navbar, Form } from "react-bootstrap";
 const NavBar = ({filterBySearch}) => {
   
   // Define useState variable to store the searching input's value inside it [with empty initial value] :   
-    const [searchValue , setSearchValue ] = useState('');
+  const [searchValue , setSearchValue ] = useState('');
 
  
   // Define a parent container of the recieved function of [filterBySearch] :
@@ -15,10 +15,10 @@ const NavBar = ({filterBySearch}) => {
     // Using the prevent default method to prevent the default actrion of submit button of searching form [which is using this function by onclick() event]  
     e.preventDefault();
     
-    // Assigning the value of [state] variable as a imported filter by searching function : 
+    //  Assigning the value of [state] variable [which will be assinged by the value of input by calling this function ] as a parameter of [imported filter by searching function] : 
     filterBySearch(searchValue) ;
     
-    // Setting the state variable by empty value [ after sendgin it to as a paramter of {filterBySearch()} ] :
+    // Setting the state variable by empty value [ after sending it to as a paramter of {filterBySearch()}] => which is used to set the value of search  input , after implementing the searching procces :
     setSearchValue('') ;
   } 
 
