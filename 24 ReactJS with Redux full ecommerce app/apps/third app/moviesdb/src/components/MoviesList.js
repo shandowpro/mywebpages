@@ -8,9 +8,12 @@ const MoviesList = () => {
   return (
     
     <Row className='mt-3'>
+      <CardMovie /> 
       <CardMovie />
       <CardMovie />
       <CardMovie />
+      <CardMovie />
+ 
     </Row>
 
   );
