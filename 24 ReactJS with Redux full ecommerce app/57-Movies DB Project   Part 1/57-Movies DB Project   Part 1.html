@@ -1244,10 +1244,13 @@
                 <ol type="A">
                     <li> Main steps of this application : <br>
                         <ul>
-                            <li>   </li>
-                            <li>   </li>
-                            <li>   </li>
-                             
+                            <li> Introduction about the API   </li>
+                            <li> General concept and structure of API   </li>
+                            <li> Main requirements of application and tools to use API </li>
+                            <li> Main reference of real API data to used in this project   </li>
+                            <li> The application [MoviesDB] main files structure </li>
+                            <li> Importing and using API from ['themoviesdb.org']  </li>
+                            <li> practical steps of using API that generated from {Postman} application by using {axios()}    </li>  
                         </ul>                         
                     </li> <br> <br>
                 </ol>
@@ -1261,92 +1264,130 @@
                 <h3> 57-Movies DB Project   Part 1 concept : </h3>
             </header>
  
-             <p>  The main concept of the project : <br>
+             <p> Introduction about the API: <br>
                 <ol> 
-                    <li>  This is the fourth project in the course , and the first project to use a live data came from API and database from a real server </li> 
-                    <li>  This is project will be as simmiler to [shahid.mbc.net] & [netflex.com]    </li> 
+                    <li> this applictoin will use a real API impororted from a website of real movies API with full scale    </li> 
+                    <li> This is project will be  use the {Postman} applcation to get and generate  usable API form , to be ready to used in with {axios()} , NOT fetch()   </li> 
                 </ol>
              </p>
 
-             <p>  Main user features : <br>
+             <p> General concept of API : <br>
                 <ol> 
-                    <li> Get it's data from a real API  and database </li> 
-                    
-                    <li> Containing a following main elements : <br>
-                        <ul> 
-                            <li> [Home page] : <br> 
-                                <ol> 
-                                    <li>  {Advanced Live search} in the navbar => {searching pattern will be inclulding any detail of whole  items data }  </li>
-                                    <li>  {Logo} in the navbar => t access to the main home page [re-rendering]   </li>
-
-                                    <li>  {Film Card} -> <br>
-                                         <p> contain the film poster and main film details  </p>
-                                         <p> Has a Hover effect with more flim details  </p>
-                                         <p> work as inner button to this film [This film inner page - router-]   </p>
-                                    </li> <br>
-
-                                    <li> {Advanced Pagination bar} -> <br> 
-                                        <p> Contain advanced feature of the react pagination  </p>
-                                        <p> The inserted live searching pattern is interactive with displayed pagination [number of pages is realtive with the current inserted pattern of live searching     <p>
-                                    </li>
-                                </ol>
-                            </li>  <br> 
-
-                            <li> [Single element/Film inner page router ]  : <br>
-                                <ol>
-                                    <li> This inner page can be accessed by click on each film item in the home page   </li> 
-                                    <li> This inner page  include more details about this fiim , as following components  : <br>
-                                        <ul>
-                                            <li>  film poster   </li>
-                                            <li>  film name   </li>
-                                            <li>  film Description  </li>
-                                            <li>  film nubmer of Raters   </li>
-                                            <li>  film average valru of evalutation / Rating   </li>
-                                            <li>  film story   </li>
-                                            <li>   [2] functional buttons , of :   <br>
-                                                <ol>
-                                                    <li> [Return to the main page ] </li>
-                                                    <li> [Hypernate to this film page official page ] </li>
-                                                </ol>    
-                                            </li>
-                                        </ul>    
-                                    </li> 
-                                </ol> 
-                            
-                            </li>
-                        </ul>    
-                    
-                     
-                    </li> 
+                    <li> [API] => it is about a data fomred in object or array or object of arrays  </li> 
+                    <li> [API] => is comming from a real database in a real server  </li> 
+                    <li> [API] => it will be used in the project to get a live data into the application , via using {axios()} download and installed library   </li> 
+                    <li> {API structure}  => consist of mainly (3) :   <br> 
+                        <ul>
+                            <li> first part  =>  the main domain provider     </li>
+                            <li> second part  => the  main folder  and sub folder ....    </li>
+                            <li> third part  => the '?' symbol of php server open file      </li>
+                            <li> fourth part  => the  'api_key' => which is the obrtain token api from the api website provider </li>
+                            <li> fifth part  => the  'api attributes' => which  are api  main properties     </li>
+                        </ul>                    
+                    </li>
                 </ol>
              </p>
 
-
-             <p> Main Developers Technical benefits : <br>
-            
+             <p> Main requirements of application and tools to use API : <br>
                 <ol> 
-                    <li> Using {Axio}  library to handle and deal with live came from a real and live [API] and [Database] from a real server   </li> 
-                    <li> Exectuing the advanced [live seraching] and display it's return through the live data came from a real and live [API] and [Database] from a real server   </li> 
-                    <li> Linking with the live searching with the displayed pagination </li> 
-                    <li> Advanced feature of the Pagination in react , such as  : <br> 
+                    <li> [Postman] => it is a free applicaton to be installed  => to handle and format the Form of token API => to be ready for usage witin the reactJS application's script via  {axios()}   </li> 
+                    <li> [axios()] => it is  a react library used  to handle the gotten API data   </li> 
+                    <li> [API Reference] =>  there are several API providers (for each type of API) , and we will use {themoviedb.org} => which  is providing  free APIs  , by foolowing steps :  <br>
                         <ul> 
-                            <li> Creating navigation control through the real live data in the API server  </li>
-                            <li> Linking between the live searching pattern & displayed data in the paginaaiton  </li>
-                            <li> Navigation control pagination buttons  such as :  <br>
-                                <ol>
-                                    <li> Display [Current page] count </li>
-                                    <li> Go to the [First page] button </li>
-                                    <li> Go to the [Last page] button  </li>
-                                    <li> Go to the [Custom page count] input  </li>
-                                    <li> Go to the [Next page] button  </li>
-                                    <li> Go to the [Previous page] button  </li>
-                                </ol> 
-                            </li>
+                            <li> [signup] => by creating a new account to obtain a  free token {api_key} to use it as an authorized {API key}    </li> 
+                            <li> [access your profile] => to get starated and test free [api] provieded by this website , with different folders and  attriburtes   </li>                            
+                            <li> [using the Postman ] => to  formating the get api , before using it in the application files     </li>                            
                         </ul>
                     </li> 
                 </ol>
+             </p>
+
+             <p> Main reference of real API data to used in this project  : <br>
+                <ol>                     
+                    <li> This is the first step to get a free app in a certain categoroy of movies , and sub category    </li>
+                    <li> {'themoviedb.org'} =>  it is nore of most common and popular free api providers for movies , by following steps :  <br>
+                        <ul> 
+                            <li> [signup] => by creating a new account to obtain a  free token {api_key} to use it as an authorized {API key}    </li> 
+                            <li> [access your profile] => to get starated and test free [api] provieded by this website , with different folders and  attriburtes   </li>                            
+                            <li> [copy the token api in the Postman ] => for formating the get api , before using it in the application files     </li> 
+                        </ul>
+                    </li> 
+                </ol>
+             </p>
+
+
+
+             <p> The application [MoviesDB] main files structure : <br>
+                <ol> 
+                    <li> The main [libraries] used in this application   : <br>
+                        <ul> 
+                            <li> [react-bootstrap] => to formating the css of the elemetns   </li>
+                            <li> [axios] => to deal with a real API  </li>      
+                        </ul>
+                    </li><br> <br>
+                    
+                    <li> [components files ]  : <br>    
+                        <ul> 
+                            <li> [public] folder => including  the following files :    <br>
+                                <ol>
+                                    <li> {index.html} </li>        
+                                    <li> {logo.png}  </li>        
+                                    <li> {main.png}  </li>        
+                                </ol> 
+                            </li> <br>
+
+                            <li> [src] folder => including the following component files :   <br>     
+                                <ol>
+                                    <li> {index.js}  => the javascript assembling file   </li>
+                                    <li> {App.js}    => the main component of all other defined components   </li>
+                                    <li> {index.css} => the main formating file for css properties of all elements     </li> <br>
+                                    
+                                    <li> [components] subfolder : <br>  
+                                         <ul>   
+                                             <li> {NavBar.js} </li>        
+                                             <li> {MoviesList.js} </li>        
+                                             <li> {CardMovie.js} </li>           
+                                            </ul>
+                                        </li>
+                                    <li> {.gitignore}   => containing the abondoned files    </li>
+                                    <li> {package.json}   => containing the installed libraries in this application     </li>
+                                </ol> 
+                            </li> <br>
+                        </ul>
+                    </li> 
+                </ol>
+             </p>
+
+
+             <p> Importing and using the token {API} from ['themoviesdb.org']  : <br>
+                <ul> 
+                    <li> sing-up[create new account] in this website and verfy the nbew account via mail     </li>
+                    <li> Setting your account type between [indviduals || commerce] =>  {indviduals} is recommended    </li>
+                    <li> Getting the private {api token}     </li>
+                    <li> Selecting your desired category and subcategory     </li>
+                    <li> Testing the selected api's request via the inner site tool [vai several languages and tools]    </li>
+                    <li> Testing the selected  api via the inner site tool    </li>
+                </ul>
             </p>
 
+             <p> practical steps of using API that generated from {Postman} application by using {axios()} within the project files  : <br>
+                <ul> 
+                    <li> The using {axios()} must be in the main {App.js} file => [but it will be refactored -  seperating - later ]    </li>
+                    <li> The using {axios()} require using each of -in order- : <br>
+                        <ol> 
+                            <li> {useState()} => Must defeind first , and used to store the fetched[get] datasource , within the [seperated function thst containting the axios()]    </li> 
+                            <li> {seperated function} including :   <br>
+                                <ul>
+                                    <li> {axios()} => </li>
+                                    <li> {useState()} varialbe setter => </li>         
+                                </ul>
+                            <li> {useEffect()} => used to implement the previous seperated function </li> 
+                        </ol>
+                    </li>
+                     
+                </ul>
+            </p>
+ 
 
              <h3> ReactJS [plugins.js] Functions and scripts file of this lesson as following : </h3> <br>
 
@@ -1355,44 +1396,35 @@
                 
                 <code>
 
-                    <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/public/index.html">  
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app/moviesdb/public/index.html">  
                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS public HTML file  [index.html] file </button>
                     </a> <br> <hr> <br> 
                      
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/src/index.js">  
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app/moviesdb/src/index.js">  
                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS assembling file JS [index.js] file </button>
                     </a> <br> <hr> <br> 
                      
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/src/index.css">  
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app/moviesdb/src/index.css">  
                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS custom formating css properites file JS [index.css] file </button>
                     </a> <br> <hr> <br> 
                      
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/src/App.js">  
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app/moviesdb/src/App.js">  
                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main [App] file {Main Component} [App.js] file </button>
                     </a> <br> <hr> <br> 
-                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/src/data.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main ["items"] datasource in exteranal [data.js] file </button>
-                    </a> <br> <hr> <br> 
-                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/src/components/Header.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [Header] sub child component  file JS [Header.js] file </button>
-                    </a> <br> <hr> <br> 
-   
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/src/components/NavBar.js">  
+                      
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app/moviesdb/src/components/NavBar.js">  
                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS [NavBar] sub child component  file JS [NavBar.js] file </button>
                     </a> <br> <hr> <br> 
- 
-                     
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/src/components/Category.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [Category] sub child component  file JS [Category.js] file </button>
+   
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app/moviesdb/src/components/CardMovies.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [CardMovies] sub child component  file JS [CardMovies.js] file </button>
                     </a> <br> <hr> <br> 
  
-                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/second app/meals-list/src/components/ItemsList.js">  
-                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [ItemsList] sub child component  file JS [ItemsList.js] file </button>
-                    </a> <br> <hr> <br> 
-  -->
                      
+                    <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app/moviesdb/src/components/MoviesList.js">  
+                        <button id=btn class="btn0" onclick="display()"> Source main ReactJS [MoviesList] sub child component  file JS [MoviesList.js] file </button>
+                    </a> <br> <hr> <br> 
+  
                 </code>
             </ol>
 
