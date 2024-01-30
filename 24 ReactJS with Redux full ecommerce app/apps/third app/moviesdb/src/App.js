@@ -20,7 +20,7 @@ function App() {
   const  getAllMovies = async () => {
     const res = await axios.get('https://api.themoviedb.org/3/movie/popular?api_key=893adba5dca668458f2a181bcbd88e02&language=ar') ;
     console.log(res.data.results);
-    setMovies(res); 
+    setMovies(res.data.results); 
   } 
   
   // Define a useEffect to implememnt the denfined  sperated function => [to bve caled while the page first render  ]   :
@@ -33,7 +33,7 @@ function App() {
       <NavBar />
 
       <Container>
-        <MoviesList />
+        <MoviesList movies={movies}  />
       </Container>
     </div>
   );

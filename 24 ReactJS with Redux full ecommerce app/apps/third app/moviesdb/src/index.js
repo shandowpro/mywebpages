@@ -1,4 +1,4 @@
-
+// The {index.js} file of the thrid project [MoviesDB]
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
