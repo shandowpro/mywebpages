@@ -28,9 +28,22 @@ function App() {
     getAllMovies() ;
   } , [])
  
+  // Define the searching method:
+  const search = async (word) => {
+    if (word ==='') {
+      getAllMovies() 
+    } else {
+      const res = await axios.get(`https://api.themoviedb.org/3/search/movie/popular?api_key=893adba5dca668458f2a181bcbd88e02&query=${word}&language=ar`);
+      setMovies(res);
+    }
+
+  }
+
+
+
   return (
     <div className="color-body">
-      <NavBar />
+      <NavBar search={search}  />
 
       <Container>
         <MoviesList movies={movies}  />

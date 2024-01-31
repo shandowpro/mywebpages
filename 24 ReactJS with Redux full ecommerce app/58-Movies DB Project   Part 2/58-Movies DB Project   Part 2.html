@@ -1237,14 +1237,14 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about Third ReactJS Project  {  Movies DB project } [part2] , as following : </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about Third ReactJS Project {Movies DB project } [part2] , as following : </p>
 
                 <h2> Main Subjects : </h2>
 
                 <ol type="A">
                     <li> Main steps of this application : <br>
                         <ol> 
-                            <li>  First => Receiving from the a real live API and assinging it in frontend element    : <br>
+                            <li>  First => Receiving from the a real live API and assinging it in frontend element    :    <br>
                                 <ul>
                                     <li> Define the datasource recieved from the real API  in a useState variable in {App.js} and send it as a [Prop] into the {MoviesList.js} component </li>
                                     <li> Recieving datasource prop in the {MoviesList.js} component , and send it to the {CardMoive.js}  as a prop while mapping + inner propreerites of  object of datasouce    </li>
@@ -1254,7 +1254,8 @@
                             
                             <li> Second => programming the live search feature   : <br>
                                 <ul>
-                                    <li>   </li>                                     
+                                    <li> Define the searcing url variable in the [app.js] main component & send it into the NavBar component as a prop      </li> 
+                                    <li> recieve the Defined the searcing url variable in the [NavBar.js] user  component  inside a parent funtion with parameter of the value of the input field </li> 
                                 </ul>                         
                             </li>
                         </ol>
@@ -1270,7 +1271,9 @@
                 <h3> 58-Movies DB Project   Part 2 concept : </h3>
             </header>
  
-             <p> {App.js} => Define the datasource recieved from the real API  in a useState variable in {App.js} and send it as a [Prop] into the {MoviesList.js} component     : <br>
+
+            <h1>First => Receiving from the a real live API and assinging it in frontend element    : </h1>
+             <p> 1] {App.js} => Define the datasource recieved from the real API  in a useState variable in {App.js} and send it as a [Prop] into the {MoviesList.js} component     : <br>
                 <ol>
                    <li> Defining the [useState()] variable to recieve the datasoucrce inside it         </li> 
                    <li> Define seperate function of using {axios()} method to recieve the [api] datasource data with using [aync + await] + assiging it inside the useState setter parmanter </li> 
@@ -1331,7 +1334,7 @@
              </p>
   
 
-             <p> {MoviesList.js} => Recieving datasource prop in the {MoviesList.js} component , and send it to the {CardMoive.js}  as a prop while mapping + inner propreerites of  object of datasouce :  <br>
+             <p> 2] {MoviesList.js} => Recieving datasource prop in the {MoviesList.js} component , and send it to the {CardMoive.js}  as a prop while mapping + inner propreerites of  object of datasouce :  <br>
                 <ol>
                    <li> Imporing the {CardMoive.js} of the single component    </li> 
                    <li> Recieving the sent prop of state variable {movies}    </li> 
@@ -1373,7 +1376,7 @@
                 </code>
              </p>
  
-             <p> {CardMovie.js} => Recieving datasource prop & inner propreerites in the {CardMovie.js} component  to assing each property :  <br>
+             <p>  3] {CardMovie.js} => Recieving datasource prop & inner propreerites in the {CardMovie.js} component  to assing each property :  <br>
                 <ol>
                    <li> Recieving the sent prop of iner object {mov}  as a prop of {CardMovie.js} functional component       </li> 
                    <li> Sending the {mov} parameter's inner properties inside each property data , as following       : <br>
@@ -1421,10 +1424,128 @@
  
                 </ol>                
              </p>
- 
- 
-             <h3> ReactJS [plugins.js] Functions and scripts file of this lesson as following : </h3> <br>
 
+             <hr> <br>
+             <!-- ------------------------------------------ -->
+             
+             
+             <h1> Second => programming the live search feature   : </h1>
+              
+             <p> 1] {App.js} => Define the searching method with parameter of the recieved value of input element , with using conditional if according to the parmenter's value : <br>
+                <ol>
+                   <li> Define a  function of seraching operation according to the receved parameter value , that include the following   : 
+                        <ul> 
+                            <li> This function contianer a pamreter => [represent the incoming value of input from {NavBar} comopnent ]   </li>
+                            <li> Conditional if upon the recived paramter value  , with the follwing  condtions :  <br>
+                                <ul>
+                                    <li> empty value (=== '')  => [means that the input value is empty] => must display the  all elements  method  </li>
+                                    <li> has a any value =>  [means the input field has a value] => must start the searching opertion by defining variable of the api search url  , with using the paramater value </li>
+                                </ul>
+                           </li>
+                         </ul>
+                     </li> <br> 
+
+                     <li> Passing through the defined variable into the user component as a prop </li> <br>
+                    
+                    <code>
+                        // 1] importing section : <br> 
+                        <span class="one"></span> import React,{useState, useEffect} from "react"; <br>
+                        <span class="one"></span> import 'bootstrap/dist/css/bootstrap.min.css'; <br>
+                        <span class="one"></span> import { Container } from "react-bootstrap"; <br>
+                        <span class="one"></span> import NavBar from "./components/NavBar"; <br>
+                        <span class="one"></span> import MoviesList from "./components/MoviesList"; <br>
+                        <span class="one"></span> import axios from "axios";   <br> <hr> <br>
+ 
+                        // 2]  functional component section : <br> 
+                         <span class="one"></span>  function App() { <br>
+
+                            <span class="two"></span> // a] Define the useState  variable  : <br>
+                            <span class="two"></span> const [movies, setMovies] = useState([])  ;  <br> <br> 
+                            
+                            <span class="two"></span> // b] Define a seperated function of recievcing a api variable and assinging it's value inside a useState variable : <br> 
+                            <span class="two"></span> const  getAllMovies = async () => { <br>
+                             
+                                <span class="three"></span> // 1- Define variable of recieving the datasource of api [using (axios) method wiht (async await) ] :  <br>
+                                <span class="three"></span> const res = await axios.get('https://api.themoviedb.org/3/movie/popular?api_key=893adba5dca668458f2a181bcbd88e02&language=ar') ; <br> <br>
+
+                                <span class="three"></span> // 2- printing testing of the defiend variable of api [accessing to the 'result' prop]  :     <br>
+                                <span class="three"></span> console.log(res.data.results);    <br> <br>
+                                
+                                <span class="three"></span> // 3- setting  [variable of recieving the datasource of {api} as the value of  defined [state] [accessing to the 'result' prop]   :   <br>
+                                <span class="three"></span> setMovies(res.data.results);  <br>
+                            <span class="two"></span> }  <br> <br> 
+                            
+                            <span class="two"></span> // c] Define a useEffect to implememnt the denfined  sperated function => [to bve caled while the page first rendering] : <br>
+                            <span class="two"></span> useEffect(() => { <br>
+                                <span class="three"></span>  getAllMovies() ; <br>
+                            <span class="two"></span> } , []) <br> <br> 
+                            
+                            <span class="two"></span> // d] Define a seperated function of searching proccessing:  a api variable and assinging it's value inside a useState variable : <br> 
+                            <span class="two"></span> const search = async (word) => {  <br>
+                                <span class="three"></span> if (word ==='') { <br>
+                                    <span class="four"></span> getAllMovies() <br>
+                                <span class="three"></span> } else { <br>
+                                    <span class="four"></span> const res = await axios.get(`https://api.themoviedb.org/3/search/movie/popular?api_key=893adba5dca668458f2a181bcbd88e02&query=${word}&language=ar`); <br>
+                                    <span class="four"></span> setMovies(res);   <br>    
+                                <span class="three"></span> } <br>
+                            <span class="two"></span> }  <br> <br>                            
+                            
+
+                            <span class="two"></span> // 3] the return section  : <br> 
+                            <span class="two"></span> return (   <br> 
+                                <span class="three"></span> &lt; div className="color-body" &gt; <br>
+                                    <span class="four"></span> &lt; NavBar / &gt; <br>
+                                    <span class="four"></span> &lt; Container &gt; <br>
+                                        <span class="five"></span> // Sending the [state] variable of datasource as a prop into the component that using it :  <br>
+                                        <span class="five"></span> &lt; MoviesList movies={movies}  / &gt; <br>
+                                    <span class="four"></span> &lt; /Container &gt; <br> 
+                                <span class="three"></span> &lt;/ div &gt; <br>
+                            <span class="two"></span> ); <br>
+                        <span class="one"></span> }  <br>
+                        <br> <hr> <br>
+
+                          // 3] export section : <br>
+                        <span class="one"></span>  export default App; <br></br>
+                   </code>
+                </ol>                
+             </p>
+
+             <p> 2]  Recieving the defind function into the NavBar component  : <br>  
+                <ul> 
+                    <li> Recieving the functional paramter inside {NavBar} component  </li>
+                    <li> Define a parent function to use the functional paramter , with the paramter from which it will be used  [input element]    </li>
+                    <li> Passing through parmamter into  the recieved functional parameter {search} => to be assinged where it has been defined the main  {App.js} component => to be used as the data Source of  in the main page      </li>
+                 </ul>
+                 <code>
+                     
+                     <span class="one"></span>  function NavBar = ({search}) => { <br>
+
+                        <span class="two"></span> // a] Define the parent searching container  : <br>
+                        <span class="two"></span> const onSearch = (word) => { <br>
+                            <span class="three"></span> // passing through the parameter (word) [comming from the input value element] of the parent function  into the  functional parameter {search}  :  <br>
+                            <span class="three"></span>  search(word); <br>
+                        <span class="two"></span>  } <br> <br>
+
+
+                        <span class="two"></span> return (   <br> 
+                            <span class="three"></span>  &lt; input <br>
+                                <span class="four"></span> onChange={(e) => onSearch(e.target.value)} <br>
+                                <span class="four"></span> type="text" <br>
+                                <span class="four"></span> className="form-control"  <br>
+                                <span class="four"></span> placeholder="ابحث ..." <br>
+                            <span class="three"></span> / &gt;  <br> 
+                        <span class="two"></span> )   <br>  
+                    <span class="one"></span> }  <br>
+                    <br> <hr> <br>
+
+                    
+                    <span class="one"></span>  export default NavBar; <br></br>
+               </code>
+             </p>
+ 
+
+
+            <h3> ReactJS [plugins.js] Functions and scripts file of this lesson as following : </h3> <br>
             <ol class="codes">
                 <li> Page Sources : </li>
                 

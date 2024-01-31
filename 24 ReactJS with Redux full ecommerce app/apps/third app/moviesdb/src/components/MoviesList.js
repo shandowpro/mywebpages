@@ -10,7 +10,7 @@
 import React from "react";
 import CardMovie from "./CardMovie";
 import { Row, Card, Col } from "react-bootstrap";
-// import CardMovie from './CardMovie';
+ 
 
 const MoviesList = ({movies}) => {
   return (
