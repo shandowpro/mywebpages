@@ -1,7 +1,7 @@
 
-//  This is ther main component that inlcude thr following components :
-// 1] {NavBar} =>
-// 2] {MoviesList} =>
+//  This is the main component that include thr following components :
+// 1] {NavBar} =>   contain a {live search }
+// 2] {MoviesList} => contain {live api datasource}
 
 
 import React,{useState, useEffect} from "react";
@@ -10,6 +10,7 @@ import { Container } from "react-bootstrap";
 import NavBar from "./components/NavBar";
 import MoviesList from "./components/MoviesList";
 import axios from "axios";
+
 
 function App() {
 
@@ -33,13 +34,13 @@ function App() {
     if (word ==='') {
       getAllMovies() 
     } else {
-      const res = await axios.get(`https://api.themoviedb.org/3/search/movie/popular?api_key=893adba5dca668458f2a181bcbd88e02&query=${word}&language=ar`);
-      setMovies(res);
+      // const res = await axios.get(`https://api.themoviedb.org/3/search/movie/popular?api_key=893adba5dca668458f2a181bcbd88e02&query=${word}&language=ar`);
+      // const res = await axios.get(`https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&query=${word}&api_key=893adba5dca668458f2a181bcbd88e02`);
+      // const res = await axios.get( `https://api.themoviedb.org/3/search/movie?language=ar&query=${word}&api_key=893adba5dca668458f2a181bcbd88e02`);
+      const res = await axios.get( `https://api.themoviedb.org/3/search/movie?query=${word}&api_key=893adba5dca668458f2a181bcbd88e02`);
+      setMovies(res.data.results);
     }
-
   }
-
-
 
   return (
     <div className="color-body">

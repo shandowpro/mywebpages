@@ -7,7 +7,7 @@ const NavBar = ({ search }) => {
   
   // Define the parent searching container :
   const onSearch = (word) => {
-     // passing through the parameter (w*ord) [comming from the input value element] of the parent function  into the  functional parameter {search}  :
+     // passing through the parameter (word) [comming from the input value element] of the parent function  into the  functional parameter {search}  :
     search(word);
   };
 
