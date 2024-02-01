@@ -8,7 +8,7 @@
 import React from "react";
 import CardMovie from "./CardMovie";
 import { Row, Card, Col } from "react-bootstrap";
-import PaginationComponent from "./components/Pagination";
+import PaginationComponent from "./Pagination";
 
 const MoviesList = ({ movies }) => {
   return (
