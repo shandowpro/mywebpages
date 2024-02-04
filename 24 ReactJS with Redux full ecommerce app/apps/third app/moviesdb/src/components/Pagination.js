@@ -19,19 +19,16 @@ const PaginationComponent = ({getPage ,pagesCount }) => {
     console.log(pagesCount);
     
     // Assinging the value  of page value [with using the [+1] to prevent the array count]  :
-     if ( data.selected == pagesCount  ) {
-       getPage(data.selected );
-
-     } else  {
-
-       getPage(data.selected + 1);
-
-     }
-
+      getPage(data.selected + 1);
+    
+     
   };
 
-  // Define the count of total pages :
+  // Define the count of total pages [static ] :
   const pageCount = pagesCount ;
+  
+  // Define the count of total pages [dynamic => error in api ] :
+  // const pageCount = pagesCount ;
 
   return (
     <ReactPaginate

@@ -2,23 +2,30 @@
 
 import React from "react";
 import { Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const CardMovie = ({mov}) => {
+const CardMovie = ({ mov }) => {
   return (
     <Col xs="6" sm="6" md="4" lg="3" className="my-1">
-      <div className="card" >
-        <img src={`https://image.tmdb.org/t/p/w500/` + mov.poster_path} className="card__image" alt="ka" />
+      <Link to = {`/movie/${mov.id}`}  >
+        <div className="card">
+          <img
+            src={`https://image.tmdb.org/t/p/w500/` + mov.poster_path}
+            className="card__image"
+            alt="ka"
+          />
 
-        <div className="card__overlay d-flex  ">
-          <div className="overlay__text  text-center  w-100 p-3 ">
-            <p> اسم الفيلم : {mov.title} </p>
-            <p> اسم الفيلم الاصلي: {mov.original_title} </p>
-            <p> تاريخ الاصدار : {mov.release_date} </p>
-            <p> عدد المقيمين: {mov.vote_count} </p>
-            <p> التقييم: {mov.vote_average} </p>
+          <div className="card__overlay d-flex  ">
+            <div className="overlay__text  text-center  w-100 p-3 ">
+              <p> اسم الفيلم : {mov.title} </p>
+              <p> اسم الفيلم الاصلي: {mov.original_title} </p>
+              <p> تاريخ الاصدار : {mov.release_date} </p>
+              <p> عدد المقيمين: {mov.vote_count} </p>
+              <p> التقييم: {mov.vote_average} </p>
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
     </Col>
   );
 };
