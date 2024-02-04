@@ -2,21 +2,36 @@
 // Methods used in creation :
 // 1- [react-paginate]  => this will be used in this application
 // 2- [react-bootstrap] => will not be used
+// 3- [Props] => 
+    // a- {getPage} =>  represent the fuction fo asiinging the curent page  
+     
 
-// import { ReactPaginate } from 'reactPaginate';
 
-import Pagination from "react-bootstrap";
 import React from "react";
 import ReactPaginate from "react-paginate";
 
-const PaginationComponent = () => {
-  // Define the {onPageChange} method of the handling the ReactPaginate responding when click on one buttons of paniagtion :
+const PaginationComponent = ({getPage ,pagesCount }) => {
+
+    // Define the {onPageChange} method of the handling the ReactPaginate responding when click on one buttons of paniagtion :
   const handlePageClick = (data) => {
-    console.log(data + 1);
+    //  Testing printing  of the  page value [comming from the {ReactPaginate} pagination element
+    console.log(data.selected + 1);
+    console.log(pagesCount);
+    
+    // Assinging the value  of page value [with using the [+1] to prevent the array count]  :
+     if ( data.selected == pagesCount  ) {
+       getPage(data.selected );
+
+     } else  {
+
+       getPage(data.selected + 1);
+
+     }
+
   };
 
   // Define the count of total pages :
-  const pageCount = 500;
+  const pageCount = pagesCount ;
 
   return (
     <ReactPaginate
