@@ -331,19 +331,68 @@
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
     <!-- Options Tool box -->
-    <section class="option-box">
+    <section class="option-box" style="min-height: fit-content; " >
         <!-- First Tool OPtion {Changing the color of the Whole the Website Template } -->
 
-        <div class="color-option text-center" style="float:left">
-            <h4> Color Options </h4>
-            <ul class="list-unstyled">
-                <li data-value="css/default_theme.css"></li>
-                <li data-value="css/blue_theme.css"></li>
-                <li data-value="css/purple_theme.css"></li>
-                <li data-value="css/yellow_theme.css"></li>
-            </ul>
-        </div>
+        <!-- <div class="color-option text-center" style="float:left; height:auto "> -->
+        <div class="color-option text-center">
+            
+            <!-- <aside style="float:left ; width:auto " > -->
+                <div class="container"  >
+                    <div class="row"> 
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                            <h4> Color Options </h4>
+                            
+                            <ul class="list-unstyled">
+                                <li data-value="css/default_theme.css"></li>
+                                <li data-value="css/blue_theme.css"></li>
+                                <li data-value="css/purple_theme.css"></li>
+                                <li data-value="css/yellow_theme.css"></li>
+                            </ul>
+                        </div>
+                    </div>
 
+                    <div class="row"> 
+                        <!--  Lesson Video  -->
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+                            
+                            <h3 style="margin-bottom:-10px "> Lesson 60 Video File: </h3>
+                            <video controls  height="300" width="300" style="margin-top:-10px; ">
+                                <source
+                                    src="E:\Web videos lessons\Web Framworks\ReactJs\\ReactJs-Build Full E-Commerce From Scratch Redux Arabic\60- Movies DB Project   Part 4.mp4"
+                                    type="video/mp4">
+                                Your browser Does Not Support the Video file ...
+                            </video>
+                        </div>
+                         
+                        <!--  Course Requriments & Course Map & MyPortfolio Website  -->
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+                            <h3>Course Requirments : </h3>
+                            <ol style=" list-style: none;"  >
+                                <li> HTML </li>
+                                <li> CSS </li>
+                                <li> Bootstrap & React Bootstrap </li>
+                                <li> JS [advanced] => [ES6+] </li>
+                                <li> ReactJs </li>
+                            </ol>
+
+                            <h3> Course Map : </h3>
+                            <ol class="list-unstyled">
+                                <li> <a href="course map/ReactJS  course map.html"> ReactJS Course Map </a> </li>
+                            </ol>
+                             
+                            <h3> My portfolio website  : </h3>
+                            <ol class="list-unstyled">
+                                <li> <a class='brand' href=" https://shindowpro.github.io/">  My Portfolio  </a> </li>
+                            </ol>
+                             
+                        </div>
+                    </div>
+            </div>
+        
+            
+        </div>
+ 
         <i class="fas fa-gear fa-2x gear-option"></i>
 
     </section>
@@ -1244,7 +1293,7 @@
                 <ol type="A">
                     <li> Main steps of this application : <br>
                         <ol> 
-                            <li> A] Programming  the [Pagination bar] tasks and functions  , following steps :    <br>
+                            <li> A] Programming the [Pagination Bar] tasks and functions , following steps :    <br>
                                 <ul>
                                     <li> [1] Rendering movies list according to the selected page Number in the pagination  bar : <br>
                                         <ol>
@@ -1268,7 +1317,7 @@
                                 </ul>                         
                             </li> <br>
 
-                            <li> B] Creating inner {Router Page} into the each movie {Part 1}  :   <br> 
+                            <li> B] Creating inner {Router Page} for the each movie {Part 1}  :   <br> 
                                 <ul> 
                                     <li> [Api provider] =>  Get the movie id parameter from the api provider {' movie / {movie.id}  '}     </li>
                                     <li> [Npm] => Download and install  the [react-router -dom] library     </li>
@@ -1458,23 +1507,121 @@
               <hr> <br>
              <!-- ------------------------------------------ -->
              
-             <h1>  B] Creating inner {Router Page} into the each movie {Part 1},  by following steps   : <br>
+             <h1>  B] Creating inner {Router Page} for each movie {Part 1},  by following steps   : <br>
 
                 <p> [Api provider] =>  Get the movie id parameter from the api provider {' movie / {movie.id}  '}  <br>
-                    <!-- im here >>>>>>>> -->
-                
-                
-                
+                    <ol> 
+                        <li> 1- Obtain the the API paramater responsible for the {single movie details} => from  : <br>
+                            <code> {Movie details} ->  '/movie/{movie_id}' ->  Try it -> get the api with the [movie details] as following :   <br>
+                                 <span class="one"></span> 'https://api.themoviedb.org/3/movie/{movie_id}?api_key=....&langauge=ar' => [this will return the selected movie's details]  <br>
+                            </code>                            
+                        </li> <br>
+
+                        <li> 2- Download and setup the ['react-router-dom'] library via the npm by the following code :   <br>  
+                            <code>
+                                <span class="one"></span> npm i react-router-dom <br> 
+                            </code>
+                        </li> <br>
+
+                        <li> 3- Import the required classes from ['react-router-dom'] library inside the {App.js} as following  :   <br>  
+                             <code>
+                                <span class="one"></span> import { BrowserRouter, Routes, Route } from "react-router-dom";  <br>
+                            </code> 
+                        </li> <br>
+                        
+                        <li> 4-  Use the imported Routering classes in the return() by wrapping the components and elements desired to be used as Routers , as following  : <br> 
+                            <code>
+                                <span class="one"></span> &lt; BrowserRouter &gt;   <br>
+                                    <span class="two"></span>  // Routes container :   <br>
+                                    <span class="two"></span> &lt; Routes &gt;  <br>
+                                    
+                                        <span class="three"></span>  //  First Route [of the main page ] : <br>
+                                        <span class="three"></span> &lt; Route  <br>
+                                            <span class="four"></span> path = '/' <br>
+                                            <span class="four"></span> element = { <br>
+                                                <span class="five"></span>  &lt; component propName1={propValue1} propName2={propValue2}  / &gt;   <br>
+                                            <span class="four"></span> } <br>
+                                        <span class="three"></span>  /&gt;   <br> <br>
+                                        
+                                        
+                                        <span class="three"></span>  //  Second  Route [of a static inner page ] :    <br>
+                                        <span class="three"></span> &lt; Route  <br>
+                                            <span class="four"></span> path ='/directoryName/fileName.exe' <br>
+                                            <span class="four"></span> element = { <br>
+                                                <span class="five"></span>  &lt; component propName1={propValue1} propName2={propValue2}  / &gt;   <br>
+                                            <span class="four"></span> } <br>
+                                        <span class="three"></span>  /&gt;   <br> <br>
+                                     
+                                        <span class="three"></span>  // Third  Route [of a Dynamic inner page according to an api parmenter  ] :    <br>
+                                        <span class="three"></span> &lt; Route  <br>
+                                            <span class="four"></span> path ='/APIdirectoryName:parameterName' <br>
+                                            <span class="four"></span> element = { <br>
+                                                <span class="five"></span>  &lt; component propName1={propValue1} propName2={propValue2}  / &gt;   <br>
+                                            <span class="four"></span> } <br>
+                                        <span class="three"></span>  /&gt;   <br>
+                                     
+                                    <span class="two"></span> &lt; /Routes &gt;   <br> 
+                                <span class="one"></span> &lt; / BrowerRouter &gt;   <br>
+
+                            </code>          
+                        </li>
+
+                        <li> 5-  Importing and Using the {link} class inside the routed component : <br>
+                            <span class="one"></span>  import {Link}  from 'react-router-dom' ;  <br>
+                            <span class="one"></span>  const Component = () => {
+                                <span class="two"></span> return  ( <br>
+
+                                    <span class="three"></span>  //  adding a staitc {link} : <br>
+                                    <span class="three"></span> &lt;  Link  to = { 'router path '  }    <br>
+                                        <span class="four"></span> &lt;  commponent container      <br>
+                                            <span class="five "></span> ...      <br>
+                                        <span class="four"></span> &lt;  /commponent contnaienr      <br>
+                                    <span class="three"></span> <br> <hr> <br>
+
+
+                                    <span class="three"></span>  //  adding a dynamic {link } : <br>
+                                    <span class="three"></span> &lt;  Link  to = { `router path/ ${ prop } `  }    <br>
+                                        <span class="four"></span> &lt;  commponent container      <br>
+                                            <span class="five "></span> ...      <br>
+                                        <span class="four"></span> &lt;  /commponent contnaienr      <br>
+                                    <span class="three"></span>
+                                <span class="two"></span> ) <br>
+                            <span class="one"></span> }   <br>
+                        </li>
+
+                    </ol>
                 </p>
+                
+                <p> Vip Notes about routering with using {link} [Requirements-breifly]  :  <br> 
+                    <ol>
+                        <li> {App.js} => <br>
+                            <ul> 
+                                <li> Must import each of {BrowerRouter , Routes , Route} from the  'react-router-dom' library </li>
+                                <li> Wrapped All desired Routes components in this project  between [BrowerRouter & Routes]    </li>
+                                <li> Each Route components => must be wrapped between [Route] , with assigning following props :  <br> 
+                                    <ol> 
+                                        <li> [path] => 'the hypernate sub domain of this Route ' </li> 
+                                        <li> [element] => {the full element script}  </li> 
+                                    </ol>                                
+                                </li>
+                            </ul>
+                        </li> <br>
 
-
-
-
-
-
-
-
-             
+                        <li> {Component.js} =>  <br>
+                            <ul> 
+                                <li> Must import {Link} from the  'react-router-dom' library  </li>
+                                <li> Wrapped component's script between [Link] , with the following  props :
+                                    <ol> 
+                                        <li> [to] => 'the hypernate sub domain value  ' => [typical equal to that used in this Route define in the [path] prop] </li> 
+                                        <li> [element] => {the full element script}  </li> 
+                                    </ol>                                
+                                </li>
+                            </ul>
+                        </li>
+                   </ol> 
+                </p>
+                
+             </h1>
              <br>
             <hr>
         </section>
@@ -1487,7 +1634,12 @@
                 <h3> [60- Movies DB Project   Part 4] Importance & Benefits : </h3>
             </header>
             <ul>
-                <li> This is the Third practical project of reactJS      </li>
+                <li> This is the Third practical project of reactJS [ Programming the [Pagination Bar] tasks and functions  + Routering to the inner page of each movie according to the [movie_id]  (part 1) ]      </li>
+                <li> Next Lesson : <br> 
+                    <ol> 
+                        <li> Routering to the inner page of each movie according to the [movie_id]  (part 2) </li>
+                    </ol>
+                </li>
             </ul>
         </section>
 
@@ -1526,102 +1678,17 @@
         <!-- <button id=btn class="btn0" onclick="display()">Display JS Code [plugins.js] file </button> -->
         <!------------------------------------------------------------------------------------->
         <!---------------------------------------------------------------------------------------->
+
+        <footer id="footer" class="footer0">
+            All right reserved by &nbsp; &copy; &nbsp; Initiated by <a class="brand" href="https://shindowpro.github.io/"> ShindowPro </a> &trade;
+        </footer>
+    
     </div>
     <!------------------------------------------------------------------------------------------------------>
     <!------------------------------------------------------------------------------------------------------>
-
-    <aside>
-        <section class="Section" id="Section">
-            <h3> Lesson 60 Video File: </h3>
-            <video controls width="300" height="300">
-                <source
-                    src="E:\Web videos lessons\Web Framworks\ReactJs\\ReactJs-Build Full E-Commerce From Scratch Redux Arabic\60- Movies DB Project   Part 4.mp4"
-                    type="video/mp4">
-                Your browser Does Not Support the Video file ...
-            </video>
-        </section>
-
-        <section class="Links">
-            <h3>Course Requirments : </h3>
-            <ul>
-                <li> HTML </li>
-                <li> CSS </li>
-                <li> Bootstrap </li>
-                <li> JS [advanced] </li>
-                <li> JQuery </li>
-            </ul>
-        </section>
-
-        <section class="Links">
-            <h3>Course Map : </h3>
-            <ul>
-                <li> <a href="course map/ReactJS  course map.html"> ReactJS Course Map </a> </li>
-            </ul>
-        </section>
-
-
-        <section class="Meters">
-            <h3>Performance</h3>
-            <div>
-                CPU: <meter value=".6" min="0" max="2" low=".4" high=".8" optimum=".7"> </meter> &nbsp;&nbsp;&nbsp;
-                Uploading: <progress value="80" max="340"></progress>
-            </div>
-
-        </section>
-
-        <section class="Poll">
-            <h3>What is the your best Browser? </h3>
-            <input list="Browsers">
-            <datalist id="Browsers">
-                <option value="Chrome">
-                <option value="Firefox">
-                <option value="Safari">
-                <option value="Opera">
-                <option value="Internet Explorer">
-                <option value="Baidu">
-            </datalist>
-            <input type="submit" value="Choose">
-        </section>
-
-        <section class="Age-Calculate">
-            <h3> Calculate your age by days & months: </h3>
-            <Form
-                oninput="resultD.value=parseInt(age.value)*parseInt(days.value) + ' Days'; resultM.value=parseInt(age.value)*parseInt(months.value) + ' Months'">
-                <input type="text" name="age"> <br>
-                <input type="hidden" name="days" value="385">
-                <input type="hidden" name="months" value="34">
-                <output name="resultD"> </output>
-                <output name="resultM"> </output>
-            </Form>
-        </section>
-
-        <section class="Calculator">
-            <h3> Enter two numbers to now-parse-Conv basic operation: </h3>
-            <Form
-                oninput="Rsum.value='Summition Result: '+(parseInt(num1.value)+parseInt(num2.value)) ; Rsub.value='Substraction Result: '+(parseInt(num1.value)-parseInt(num2.value)); 
-           Rmult.value='Multiply Result: '+(parseInt(num1.value)*parseInt(num2.value)); Rdiv.value='Division Result: '+(parseInt(num1.value)/parseInt(num2.value))">
-
-                <input type="text" name="num1">
-                <input type="text" name="num2">
-
-                <output name="Rsum"> Summition Result: </output><br>
-                <output name="Rsub"> Substraction Result: </output><br>
-                <output name="Rmult"> Multiply Result: </output><br>
-                <output name="Rdiv"> Division Result: </output>
-            </Form>
-        </section>
-
-        <!-- <section class="AudioSection">
-            <h3> Epic Autoplay Audio File:</h3>
-            <audio controls loop>
-                    <source src="C:\Users\hp\Downloads\Music Epic\Epic Vip\Elnhaya.Tetr-MaTb3aa.Com.mp3" type="Audio/mpeg">                 
-                    Your browser Does Not Support the Audio file ...              
-                </audio>
-        </section> -->
-
-
-    </aside>
-
+    
+    <!-- Here is the Aside  -->
+    
     <div class="Clear"></div>
     <!-------------------------------------------------------------------------------------------------------------->
     <!------------------------------------------------------------------------------------------------------------->
@@ -1630,21 +1697,11 @@
         <details>
             <summary> Hypernate Links: </summary>
             <ul>
-                <li> <a href="https://google.com" target="self">Google</a></li>
-                <li> <a href="https://youtube.com" target="self">Youtube</a></li>
-                <li> <a href="https://facebook.com" target="self">Facebook</a></li>
-                <li> <a href="http://shadi-pro.epizy.com" target="self">My Refs</a></li>
-                <li> <a href="http://shadi-cv.epizy.com" target="self">My CV</a></li>
+                <li> <a href="http://shindowpro.github.io" target="self">My Portfolio website </a></li>
                 <li> <a href="https://github.com/shindowpro/git-course" target="self">My Github Repo </a></li>
             </ul>
         </details>
     </dialog>
-
-
-    <footer id="footer" class="footer0">
-        All right reserved by &nbsp; &copy; &nbsp; Initiated by Shindow &trade;
-    </footer>
-
 
 
     <!-- loading overlay  -->
