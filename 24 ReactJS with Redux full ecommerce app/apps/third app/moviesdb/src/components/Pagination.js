@@ -10,7 +10,7 @@
 import React from "react";
 import ReactPaginate from "react-paginate";
 
-const PaginationComponent = ({getPage ,pagesCount }) => {
+const PaginationComponent = ({getPage , pagesCount }) => {
 
     // Define the {onPageChange} method of the handling the ReactPaginate responding when click on one buttons of paniagtion :
   const handlePageClick = (data) => {
@@ -20,9 +20,9 @@ const PaginationComponent = ({getPage ,pagesCount }) => {
     
     // Assinging the value  of page value [with using the [+1] to prevent the array count]  :
       getPage(data.selected + 1);
-    
-     
+       
   };
+
 
   // Define the count of total pages [static ] :
   const pageCount = pagesCount ;
