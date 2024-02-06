@@ -3,6 +3,12 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
+// importing the [logo image] from the images folder for best pracitise => to be used in {NavBar} : 
+import logo from  '../images/logo.svg' ;
+
+
+// import {Link} from  'react-router-dom' ;
+
 const NavBar = ({ search }) => {
   
   // Define the parent searching container :
@@ -16,7 +22,9 @@ const NavBar = ({ search }) => {
       <Container>
         <Row className="pt-2">
           <Col xs="2" lg="1">
-            <img className="logo" src="" alt="dfs" />
+            <a href='/'>
+              <img className="logo" src={logo} alt="logo image" />
+            </a>      
           </Col>
 
           <Col xs="10" lg="11" className="d-flex align-items-center">

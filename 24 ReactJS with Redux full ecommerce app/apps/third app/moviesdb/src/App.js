@@ -29,18 +29,17 @@ function App() {
     const res = await axios.get(
       "https://api.themoviedb.org/3/movie/popular?api_key=893adba5dca668458f2a181bcbd88e02&language=ar"
     );
-  
-  
+
     // Assigning the botained  value of Api's result property inside the defined state [movies]  :
     setMovies(res.data.results);
 
-    // Testing the value of {total_pages} api parameter :   
+    // Testing the value of {total_pages} api parameter :
     console.log(res.data.total_pages);
 
     // Dynamic Method of Assigning {total_pages} inside the [pagesCount] defined state  :
     // setPagesCount(res.data.total_pages) ;
-    
-    // Static Method of Assigning {total_pages} inside the [pagesCount] defined state : 
+
+    // Static Method of Assigning {total_pages} inside the [pagesCount] defined state :
     setPagesCount(500);
   };
 
@@ -59,10 +58,10 @@ function App() {
         `https://api.themoviedb.org/3/search/movie?query=${word}&api_key=893adba5dca668458f2a181bcbd88e02`
       );
       setMovies(res.data.results);
-  
+
       // Dynamic Method of Assigning {total_pages} inside the [pagesCount] defined state  :
       setPagesCount(res.data.total_pages);
-      
+
       // Static Method of Assigning {total_pages} inside the [pagesCount] defined state  :
       // setPagesCount(500) ;
     }
@@ -77,10 +76,10 @@ function App() {
     );
     console.log(res.data.results);
     setMovies(res.data.results);
-    
+
     // Dynamic Method of Assigning {total_pages} inside the [pagesCount] defined state  :
     // setPagesCount(res.data.total_pages) ;
-      
+
     // Static Method of Assigning {total_pages} inside the [pagesCount] defined state  :
     setPagesCount(500);
   };
