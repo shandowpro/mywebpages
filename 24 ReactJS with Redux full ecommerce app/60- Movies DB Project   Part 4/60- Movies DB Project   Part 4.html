@@ -1364,16 +1364,18 @@
                         <li> 2] Passing the defined function into the {MoviesList}  component [due to it include the {Pagination} ]  : <br>
                             <ol>   
                                 <li> Inside the  [App.js]   :  <br>
-                                    <span class="one"></span> return ( <br>
-                                        <span class="two"></span> &lt;  div className="color-body" &gt; <br>
-                                            <span class="three"></span> &lt; NavBar search={search}  &gt; <br> 
-        
-                                            <span class="three"></span> &lt; Container &gt; <br>
-                                                <span class="four"></span> // sending the defined pagination function into  the {MoviesList}   <br> 
-                                                <span class="four"></span> &lt;  MoviesList movies={movies} getPage={getPage}  /&gt;  <br>
-                                            <span class="three"></span> &lt; /Container &gt; <br> 
-                                        <span class="two"></span> &lt;/div &gt; <br>
-                                    <span class="one"></span> ); <br>
+                                    <code>
+                                        <span class="one"></span> return ( <br>
+                                            <span class="two"></span> &lt;  div className="color-body" &gt; <br>
+                                                <span class="three"></span> &lt; NavBar search={search}  &gt; <br> 
+            
+                                                <span class="three"></span> &lt; Container &gt; <br>
+                                                    <span class="four"></span> // sending the defined pagination function into  the {MoviesList}   <br> 
+                                                    <span class="four"></span> &lt;  MoviesList movies={movies} getPage={getPage}  /&gt;  <br>
+                                                <span class="three"></span> &lt; /Container &gt; <br> 
+                                            <span class="two"></span> &lt;/div &gt; <br>
+                                        <span class="one"></span> ); <br>
+                                    </code>
                                 </li>
                             </ol>                 
                         </li> <br>
@@ -1478,27 +1480,31 @@
                         </li> <br>  <br>
                          
                         <li> {MoviesList.js} =>    : <br>
-                            <span class="one"></span> // Recieving to the the sent [pagesCount] prop & pass it into the {PaginationComponent} component <br> 
-                            <span class="one"></span> const MoviesList = ({ movies , getPage , pagesCount }) => { <br>
-                                <span class="two"></span>  return ( <br>
-                                    <span class="three"></span> &lt; Row className="mt-3" &gt;  <br>
-                                        <span class="four"></span> {....} <br>
-                                        <span class="four"></span> &lt; PaginationComponent getPage={getPage} pagesCount={pagesCount} / &gt;  <br>
-                                    <span class="three"></span> &lt;/Row  &gt;  <br>
-                                <span class="two"></span>  ) <br>                                
-                            <span class="one"></span>  } <br>
+                           <code>
+                               <span class="one"></span> // Recieving to the the sent [pagesCount] prop & pass it into the {PaginationComponent} component <br> 
+                               <span class="one"></span> const MoviesList = ({ movies , getPage , pagesCount }) => { <br>
+                                   <span class="two"></span>  return ( <br>
+                                       <span class="three"></span> &lt; Row className="mt-3" &gt;  <br>
+                                           <span class="four"></span> {....} <br>
+                                           <span class="four"></span> &lt; PaginationComponent getPage={getPage} pagesCount={pagesCount} / &gt;  <br>
+                                       <span class="three"></span> &lt;/Row  &gt;  <br>
+                                   <span class="two"></span>  ) <br>                                
+                               <span class="one"></span>  } <br>
+                           </code>
                         </li> <br>
                          
                         <li> {Pagination.js} =>    : <br>
-                            <span class="one"></span> // Recieving to the the sent [pagesCount] prop & pass it into the {ReactPaginate} eleement <br> 
-                            <span class="one"></span>  const PaginationComponent = ({getPage , pagesCount }) => { <br>
-                                <span class="two"></span>  return ( <br>
-                                    <span class="three"></span> &lt; ReactPaginate   <br>
-                                        <span class="four"></span>  // [Dynamic Method] Passing the incoming prop [pagesCount] into the 'pageCount' property as it's value br>
-                                        <span class="four"></span>  pageCount={pageCount}  <br>
-                                    <span class="three"></span> /&gt;  <br>
-                                <span class="two"></span>  ) <br>                                
-                            <span class="one"></span>  } <br>
+                            <code>
+                                <span class="one"></span> // Recieving to the the sent [pagesCount] prop & pass it into the {ReactPaginate} eleement <br> 
+                                <span class="one"></span>  const PaginationComponent = ({getPage , pagesCount }) => { <br>
+                                    <span class="two"></span>  return ( <br>
+                                        <span class="three"></span> &lt; ReactPaginate   <br>
+                                            <span class="four"></span>  // [Dynamic Method] Passing the incoming prop [pagesCount] into the 'pageCount' property as it's value br>
+                                            <span class="four"></span>  pageCount={pageCount}  <br>
+                                        <span class="three"></span> /&gt;  <br>
+                                    <span class="two"></span>  ) <br>                                
+                                <span class="one"></span>  } <br>
+                            </code>
                         </li>
                     </ol>
                 </p>
@@ -1567,26 +1573,28 @@
                         </li>
 
                         <li> 5-  Importing and Using the {link} class inside the routed component : <br>
-                            <span class="one"></span>  import {Link}  from 'react-router-dom' ;  <br>
-                            <span class="one"></span>  const Component = () => {
-                                <span class="two"></span> return  ( <br>
-
-                                    <span class="three"></span>  //  adding a staitc {link} : <br>
-                                    <span class="three"></span> &lt;  Link  to = { 'router path '  }    <br>
-                                        <span class="four"></span> &lt;  commponent container      <br>
-                                            <span class="five "></span> ...      <br>
-                                        <span class="four"></span> &lt;  /commponent contnaienr      <br>
-                                    <span class="three"></span> <br> <hr> <br>
-
-
-                                    <span class="three"></span>  //  adding a dynamic {link } : <br>
-                                    <span class="three"></span> &lt;  Link  to = { `router path/ ${ prop } `  }    <br>
-                                        <span class="four"></span> &lt;  commponent container      <br>
-                                            <span class="five "></span> ...      <br>
-                                        <span class="four"></span> &lt;  /commponent contnaienr      <br>
-                                    <span class="three"></span>
-                                <span class="two"></span> ) <br>
-                            <span class="one"></span> }   <br>
+                            <code>
+                                <span class="one"></span>  import {Link}  from 'react-router-dom' ;  <br>
+                                <span class="one"></span>  const Component = () => {
+                                    <span class="two"></span> return  ( <br>
+    
+                                        <span class="three"></span>  //  adding a staitc {link} : <br>
+                                        <span class="three"></span> &lt;  Link  to = { 'router path '  }    <br>
+                                            <span class="four"></span> &lt;  commponent container      <br>
+                                                <span class="five "></span> ...      <br>
+                                            <span class="four"></span> &lt;  /commponent contnaienr      <br>
+                                        <span class="three"></span> <br> <hr> <br>
+    
+    
+                                        <span class="three"></span>  //  adding a dynamic {link } : <br>
+                                        <span class="three"></span> &lt;  Link  to = { `router path/ ${ prop } `  }    <br>
+                                            <span class="four"></span> &lt;  commponent container      <br>
+                                                <span class="five "></span> ...      <br>
+                                            <span class="four"></span> &lt;  /commponent contnaienr      <br>
+                                        <span class="three"></span>
+                                    <span class="two"></span> ) <br>
+                                <span class="one"></span> }   <br>
+                            </code>
                         </li>
 
                     </ol>
