@@ -1295,10 +1295,13 @@
                         <ol> 
                             <li> A] Creating inner {Router Page} for the each movie {Part 2}  :   <br> 
                                 <ul> 
-                                    <li> 1] Complete the router => {MovieDetails.js} by Creating the component of inner router of  each movie will be used as routered => {MovieDetails.js}  </li>
+                                    <li> 1] Complete the router => {MovieDetsails.js} by Creating the component of inner router of  each movie will be used as routered => {MovieDetails.js}  </li>
                                     <li> 2] Creating a route of return to the main page of the [button] of  ['return to main page'] in the => {MovieDetails.js}  component   </li>
                                     <li> 3] Creating  seperated folder of all images in this project isnie the [src] folder = > with name of [images] </li>
                                     <li> 4] Creating a route of return to the main page of the [logo image] in the => {NavBar.js}  component => using old method of {a 'href'} wrapping the image    </li>
+                                    <li> 5] Getting all movie's  details in the inner page router component by using [useParams] Hook + Movie dynamic Poster Image  </li>
+                                    <li> 6] Programming the button of watch the movie in it's official website  </li>
+                                    <li> 7] Programming Pagination Bar to be displayed just in case of existed movie , and NOT to be displayed incase there are NO Movies  to displayed </li>
                                 </ul>
                             </li>
                         </ol>
@@ -1577,10 +1580,99 @@
                             </code>
                         </li>
                     </ol>
-                </p>
-                
+                </p> <br>
+             
+                <p>  5] Getting all movie's details in the inner page router component => inside the  {MovieDetails.js } : <br>
+                    <ol>
+                        <li> (a) Importing {useParams} Hook form the  [ react-router-dom ] library , by the next code :  <br>
+                            <code> 
+                                <span class="one"></span> import {Link , useParams} from 'react-router-dom' ;    <br>
+                            </code>
+                        </li> <br>
 
-                <p> Vip Notes about routering with using {link} [Requirements-breifly]  :  <br> 
+                        <li> (b) using the imported {useParams} to Define a variable of value of current selected Movie's  [Api id] param  : <br>
+                            <code>
+                                <span class="one"></span> const param = useParams(); <br>
+                            </code>
+                        </li> <br>     
+                        
+                        <li> (c)  Defining a useState variable to store the gotten api of al params of this selected movie : <br>
+                            <code>
+                                <span class="one"></span> const [movie , setMovie] = useState([]) ;  <br>
+                            </code>
+                        </li> <br>     
+                        
+                        <li> (d)  Define a function include the following taks : <br>         
+                                     
+                            <span class="one"></span> const getMoviesDetails = async () => { <br>
+                                
+                                <span class="two">s</span> //  (1) Define a function of get the all api parameters  according to the return [Api_id] :  <br>
+                                <span class="two">s</span> const res = await axios.get( <br>
+                                    <span class="three"></span> `https://api.themoviedb.org/3/movie/${param.id}?api_key=893adba5dca668458f2a181bcbd88e02&language=ar` <br>
+                                <span class="two"></span> ); <br> <br>
+                            
+                                <span class="two"></span> // (2) Store the retunred api of all paramters inside the defined state variable  : <br>
+                                <span class="two"></span> setMovie(res.data); <br>
+                             
+                            <span class="one"></span> }; <br>
+                        </li> <br>
+   
+                        <li> (e) Define a {useEffect()}  method to run the defined function of getting the api of all parameters , to  be implemented by the first only  rendering of thie router innier page : <br>         
+                            <code>
+                                <span class="one"></span> useEffect(() => {  <br>
+                                    <span class="two"></span> getMoviesDetails();  <br>
+                                <span class="one"></span> }, []);  <br>
+                            </code>
+                        </li> <br>
+
+                        <li> (f)  Calling inside each element prop's value from the defined state [that holding all params values{movie} ] of from the api of current movie : <br>         
+                            <code>                               
+                                <span class="one"></span> // (1) Call the Movie [image poster] prop  :    <br>
+                                <span class="one"></span> &lt; img    <br>
+                                    <span class="two"></span>   className="img-movie w-30"  <br>
+                                    <span class="two"></span>  // using the literal of public  image string url (obtained from the api provider)  +  defined variable of all [api props] to get access to t{'poster_path'} : <br>
+                                    <span class="two"></span>  src={`https://image.tmdb.org/t/p/w500/` + movie.poster_path}  <br>
+                                    <span class="two"></span>   alt="movieImage"   <br>
+                                <span class="one"></span>  / &gt;    <br>
+                            </code>
+                        </li> <br>
+ 
+                    </ol>
+                </p> <br>
+                
+                <p>  6] Programming the button of watch the movie in it's official website => inside the {MovieDetails.js } : <br>
+                    <ol>
+                        <li> By using the default [<a> element with 'href' property] as a Wrapper of the API prop ['homepage'] & defined state variable {movie} that stores all this movie's according it's [move_id] using the defined  {useParams()} 's variable, as following  :  <br>
+                            <code>
+                                <span class="one"></span>  &lt; a href={movie.homepage} &gt; <br>
+                                 
+                                    <span class="two"></span> &lt;  button <br> 
+                                        <span class="three"></span> target='_self' <br>
+                                        <span class="three"></span> style={ { backgroundColor: "#b45b53", border: "none" } } <br>
+                                        <span class="three"></span> className="btn btn-primary" <br>
+                                    <span class="two"></span>   &gt; <br>
+                                        <span class="three"></span>  مشاهدة الفيلم <br>
+                                    <span class="two"></span> &lt;  /button &gt; <br>
+                                <span class="one"></span>   &lt;  /a &gt; <br>
+                            </code>
+                        </li>                        
+                    </ol>
+                </p> <br>
+                
+                <p>  7] Programming Pagination Bar to be displayed just in case of existed movie , and NOT to be displayed incase there are NO Movies  to displayed  => inside the  {MovieList.js} : <br>
+                    <ol>
+                        <li>  Making a conditional rendering of calling the pagination Component inside the {MovieListj.js} file & and after the Conditional Rendering of Mapping movies , as following :  <br> 
+                            <code>  
+                                <span class="one"></span> { movies.length >= 1 ? ( <br>
+                                    <span class="two"></span> <PaginationComponent getPage={getPage} pagesCount={pagesCount} /> <br>
+                                    <span class="two"></span> ) : null <br>  
+                                <span class="one"></span> } <br>
+                            </code>                       
+                        </li>                        
+                    </ol>
+                </p> <br>
+                  
+                <p> Vip Notes about {Routering} with using {link} [Requirements-breifly]  :  <br> 
                     <ol>
                         <li> To use the asssined route [in the App.js] from another  component =>  must commit with the following  conditons  :   <br>
                             <ol> 
@@ -1600,11 +1692,24 @@
                             </ol>
                         </li> <br> 
                    </ol> 
-                </p>
+                </p> <br>
                 
+                <p> Choosing between using React method  {&lt; Link &gt; to=''} & old method of [&lt;a&gt; href=''] ,to allocate and hypernate into the wrapped element : <br>  
+                    <ol>
+                        <li> [React method  {&lt; Link to='' &gt; }] => used if the targeted Router is inside my project [of defeied inner router page  ]    </li>
+                        <li> [Old method of [&lt; a  href='' &gt; ]   => used if the targeted Router is an  external  [Not defined inside the project router system]    </li>
+                    </ol>
+                </p>
+
+                <p> Note about this  project and course  :  <br>
+                    <ol>                         
+                        <li> This lesson is a great preperation of the final  project in this course {online store/ E-commerce }   </li>
+                        <li> In next lessons in this course => we will learn how to manage/handle the throuwn errors to be displayed  atg best pracitse to the users    </li>
+                        <li>  This project will be recoded by using Reducx in the future after styding {Redux library}   </li>
+                    </ol>
+                </p>
              </h1>
-             <br>
-            <hr>
+             <br> <hr>
         </section>
 
         <!------------------------------------------------------------------------------------------------------>

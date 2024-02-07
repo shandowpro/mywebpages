@@ -3,7 +3,7 @@
   // [conditional Rendering]
   // [map()] => with using :
   // {mov} object =>
-  // {mvo.id}
+  // {mov.id}
   // {PaginationComponent.js} component 
 
 import React from "react";
@@ -22,7 +22,11 @@ const MoviesList = ({ movies , getPage , pagesCount }) => {
         <h2 className="text-center p-5 "> لا يوجد افلام </h2>
       )}
 
-      <PaginationComponent getPage={getPage} pagesCount={pagesCount}     />
+      {movies.length >= 1 ? (
+        <PaginationComponent getPage={getPage} pagesCount={pagesCount} />
+        ) : null  
+      }
+      
     </Row>
   );
 };

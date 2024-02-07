@@ -1,34 +1,28 @@
 // This is the inner page of the defeind router of each movie detials  :
 
-import React, {useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
-import { Link , useParams} from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
- 
 
 const MovieDetails = () => {
-
   // Define the a variable  of current [Api id param] of this router inner page of selected movie => to use it in the api url to get all parameters   :
-    const param = useParams() ;
+  const param = useParams();
 
-    
   // Define the a state variable to store the array of all returned API parameters api url that  uses [api_id] parameter  :
-    const [movie , setMovie] = useState([]) ;
+  const [movie, setMovie] = useState([]);
 
-  
   // Define a function of get the all api parameters  according to the return [Api_id] :
   const getMoviesDetails = async () => {
     const res = await axios.get(
       `https://api.themoviedb.org/3/movie/${param.id}?api_key=893adba5dca668458f2a181bcbd88e02&language=ar`
     );
 
-    // poster_path
     // Store the retunred api paramters inside the defined state :
-    setMovie(res.data) ;
+    setMovie(res.data);
 
     // Store the retunred api paramters inside the defined state :
     console.log(res.data);
-    
   };
 
   // (3) Define a useEffect to implement the denfined function of get the api url    =>  oncde thejpage is being rendered for rhe first time     :
@@ -42,8 +36,12 @@ const MovieDetails = () => {
       <Row className="justify-content-center">
         <Col md="12" xs="12" sm="12" className="mt-4">
           <div className="card-details d-flex align-items-center">
-            <img className="img-movie w-30" src={`https://image.tmdb.org/t/p/w500/` + movie.poster_path} alt="movieImage" />
-              
+            <img
+              className="img-movie w-30"
+              src={`https://image.tmdb.org/t/p/w500/` + movie.poster_path}
+              alt="movieImage"
+            />
+
             <div className=" justify-content-center text-center mx-auto ">
               <p className="card-text-details border-bottom">
                 اسم الفيلم : {movie.title}
@@ -54,7 +52,9 @@ const MovieDetails = () => {
               <p className="card-text-details border-bottom">
                 عدد المفيمين: {movie.vote_count}
               </p>
-              <p className="card-text-details border-bottom">التفييم : {movie.vote_average} </p>
+              <p className="card-text-details border-bottom">
+                التفييم : {movie.vote_average}{" "}
+              </p>
             </div>
           </div>
         </Col>
@@ -90,12 +90,15 @@ const MovieDetails = () => {
             </button>
           </Link>
 
-          <button
-            style={{ backgroundColor: "#b45b53", border: "none" }}
-            className="btn btn-primary"
-          >
-            مشاهدة الفيلم
-          </button>
+          <a href={movie.homepage}>
+            <button
+              target='_self'
+              style={{ backgroundColor: "#b45b53", border: "none" }}
+              className="btn btn-primary"
+            >
+              مشاهدة الفيلم
+            </button>
+          </a>
         </Col>
       </Row>
     </div>
