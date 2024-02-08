@@ -1286,14 +1286,14 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be => Information about Third ReactJS Project {Movies DB project } [Part 5] , as following : </p>
+                <p> &gt; Main Subjects in this lesson will be => Information about  { Redux Library} [Intro] , as following : </p>
 
                 <h2> Main Subjects : </h2>
 
                 <ol type="A">
                     <li> Main steps of this Lesson  : <br>
                         <ol> 
-                            <li>     </li>
+                            <li> Basic intro about {Redux }  </li>
                         </ol>
                     </li> <br> <br>
                 </ol>
@@ -1307,398 +1307,25 @@
                 <h3> 62-Redux Section Intro concept : </h3>
             </header>
  
-            <h1>  Main concept of => A] Complete the routing to the inner page of the each movie => {MovieDetails.js} by Creating the component of inner router of  each movie will be used as routered => {src/component/ MovieDetails.js}  , following steps  : <br>
-                <p>  This component will include  [3] sections(Rows) , as the following: <br>
-                    <ol>
-                        <li> 1]  first Row will include (1) Column contains  the following main (2) div elements  :  <br>
-                            <ol>
-                                <li> first div =>   Movie image , with the following properties  :  <br>
-                                    <ul> 
-                                        <li> Using Over Wrappd by {Link} Class element => in case of using routering system [require to insert the NavBar comppnent in the main {App.js} inside the {BrowserRouter} and define new {route}  wrapping over the {NavBar} component  (which inlcude the logo image) which will be fixed in all project's component ] </li> 
-                                        <li> Using the old  method  of {href=""} prop within this logo [img] element  => in case of  NOT using the react routering system  </li> 
-                                    </ul>                                
-                                </li> <br>
-
-                                <li> second  div => Movie's details , including   :   <br>
-                                    <ul> 
-                                        <li> Movie name </li>
-                                        <li> Movie date  </li>
-                                        <li> Movie Rators count  </li>
-                                        <li> Movie average Rating value    </li>
-                                    </ul>
-                                </li> <br>
-                            </ol>
-                        </li> <br>
-
-                        <li> 2]  Second Row will include (1) column contains the following (2) paragraphes  elements    : <br>
-                            <ol>   
-                                <li> Movie Story Title </li>
-                                <li> Movie Story Details </li>
-                            </ol>                 
-                        </li> <br>
-                    
-                        <li>  3] Third Row will include (1) column contains the following (2) buttons elements      :  <br>
-                            <ol>
-                                <li> first button ['return to the main page'] , with the  following properties    :  <br>
-                                        <ol>
-                                            <li> Wrapper {Link} over this button with prop ['to'] = '/' => to hypernate to the main page    </li> 
-                                        </ol>        
-                                </li> <br>
-                                <li>  second  button [' Watch in official site '] , with the  following properties    :  <br>
-                                        <ol>
-                                            <li> Wrapper {Link} over this button with prop ['to'] = 'Dynmaic vlaue of movie watch inner page ' => to hypernate to this move inner page     </li> 
-                                        </ol>        
-                                </li> <br>
-                            </ol>                 
-                        </li>
-           
-                    </ol>
-                </p>
-
-                <p>  [II] Auto responding to the of [total pages counter] value in each { main rendering , auto respnoding to the selected pagintation value  , search result input } : <br>
-                    <ol>           
-                        <li> {App.js} =>    :   <br>
-                            <code>
-                                <span class="one"></span> const  App () => { <br>
-                                    <span class="two"></span> // 1] Define a useState [pagesCount] variable  to store the value of total_page inside  :  <br>
-                                    <span class="two"></span>  const [pagesCount ,  setpagesCount] = useState(0)  <br> <br>
-
-                                    
-                                    <span class="two"></span> // 2] Assign the useState [pagesCount] variable value inside the function {getAllMovies()} of getting all movies cards details from returned Api => [to be obained by rendering cards items imn the main page ]: <br>
-                                    <span class="two"></span> const getAllMovies = async () => { <br>
-                                        <span class="three"></span> const res = await axios.get( <br> 
-                                            <span class="four"></span> "https://api.themoviedb.org/3/movie/popular?api_key=893adba5dca668458f2a181bcbd88e02&language=ar"
-                                        <span class="three"></span> ); <br> <br>
-
-
-                                        <span class="three"></span>  // Assigning the obtained  value of Api's result property inside the defined state [movies] : <br>
-                                        <span class="three"></span> setMovies(res.data.results); <br> <br>
-                                    
-                                        <span class="three"></span>  // Testing the value of {total_pages} api parameter :    <br>
-                                        <span class="three"></span>  console.log(res.data.total_pages); <br> <br>
-                                    
-                                        <span class="three"></span> // Dynamic Method of Assigning {total_pages} inside the [pagesCount] defined state => [will be abandoned before an error in apiu  ]  : <br>
-                                        <span class="three"></span>  // setPagesCount(res.data.total_pages) ; <br> <br>
-                                        
-                                        <span class="three"></span> // Static Method of Assigning {total_pages} inside the [pagesCount] defined state : <br> 
-                                        <span class="three"></span>  setPagesCount(500); <br> <br>
-                                    <span class="two"></span> };  <br> <hr> <br>
-                                    
-                                    <span class="two"></span> // 3] Assign the useState [pagesCount] variable value inside the function {getPage()} of getting current page number in pagination : <br> 
-                                    <span class="two"></span> const getPage = async (page) => { <br>
-                                        
-                                        <span class="three"></span> // Define an api url link with dynammic value of page : <br>
-                                        <span class="three"></span> const res = await axios.get( <br>
-                                            <span class="four"></span> `https://api.themoviedb.org/3/movie/popular?api_key=893adba5dca668458f2a181bcbd88e02&language=ar&page=${page}`
-                                        <span class="three"></span>  ); <br> <br>
-
-                                        <span class="three"></span> setMovies(res.data.results); <br> <br>
-                                        
-                                        <span class="three"></span>  // Dynamic Method of Assigning {total_pages} inside the [pagesCount] defined state  : <br>
-                                        <span class="three"></span>  // setPagesCount(res.data.total_pages) ; <br> <br>
-                                          
-                                       <span class="three"></span>  // Static Method of Assigning {total_pages} inside the [pagesCount] defined state  : <br>
-                                       <span class="three"></span>  setPagesCount(500); <br>
-                                    <span class="two"></span> }; <br> <hr> <br> 
-                             
-                                    <span class="two"></span> // 3] Assign the useState [pagesCount] variable value inside the function {getPage()} of getting current page number in pagination : <br> 
-                                    <span class="two"></span> const search = async (word) => { <br>
-                                        <span class="three"></span> if (word === "") { <br>
-                                            <span class="four"></span> getAllMovies(); <br>
-                                        <span class="three"></span> } else { <br>
-                                            <span class="four"></span> const res = await axios.get( <br>
-                                                <span class="five"></span> `https://api.themoviedb.org/3/search/movie?query=${word}&api_key=893adba5dca668458f2a181bcbd88e02` <br>
-                                            <span class="four"></span> ); <br>
-                                            
-                                            <span class="four"></span> setMovies(res.data.results); <br> 
-                                      
-                                            <span class="four"></span> // Dynamic Method of Assigning {total_pages} inside the [pagesCount] defined state  : <br>
-                                            <span class="four"></span> setPagesCount(res.data.total_pages); <br>
-                                          
-                                          <span class="four"></span> // Static Method of Assigning {total_pages} inside the [pagesCount] defined state  : <br>
-                                          <span class="four"></span> // setPagesCount(500) ; <br>
-                                        <span class="three"></span> } <br>
-                                    <span class="two"></span> }; <br>
-                                <span class="one"></span> }  <br> 
-                            </code>    
-                        </li> <br>  <br>
-                         
-                        <li> {MoviesList.js} =>    : <br>
-                            <code>
-                                <span class="one"></span> // Recieving to the the sent [pagesCount] prop & pass it into the {PaginationComponent} component <br> 
-                                <span class="one"></span> const MoviesList = ({ movies , getPage , pagesCount }) => { <br>
-                                    <span class="two"></span>  return ( <br>
-                                        <span class="three"></span> &lt; Row className="mt-3" &gt;  <br>
-                                            <span class="four"></span> {....} <br>
-                                            <span class="four"></span> &lt; PaginationComponent getPage={getPage} pagesCount={pagesCount} / &gt;  <br>
-                                        <span class="three"></span> &lt;/Row  &gt;  <br>
-                                    <span class="two"></span>  ) <br>                                
-                                <span class="one"></span>  } <br>
-                            </code>
-                        </li> <br>
-                         
-                        <li> {Pagination.js} =>    : <br>
-                            <code> 
-                                <span class="one"></span> // Recieving to the the sent [pagesCount] prop & pass it into the {ReactPaginate} eleement <br> 
-                                <span class="one"></span>  const PaginationComponent = ({getPage , pagesCount }) => { <br>
-                                    <span class="two"></span>  return ( <br>
-                                        <span class="three"></span> &lt; ReactPaginate   <br>
-                                            <span class="four"></span>  // [Dynamic Method] Passing the incoming prop [pagesCount] into the 'pageCount' property as it's value br>
-                                            <span class="four"></span>  pageCount={pageCount}  <br>
-                                        <span class="three"></span> /&gt;  <br>
-                                    <span class="two"></span>  ) <br>                                
-                                <span class="one"></span>  } <br>
-                            </code>
-                        </li>
-                    </ol>
-                </p>
-
+            <h1> Basic intro about {Redux } : <br>
+                <p> {Redux} Main Concept  => it is a library that managing the props in the frontend framework  </p>
+                <p> {Redux} =>  can work with any framework or library in the frontend such as {vanilla JS}  </p>
             </h1>
               <hr> <br>
              <!-- ------------------------------------------ -->
-             
-             <h1> Practical steps of => A] Creating inner {Router Page} for each movie {Part 2},  by following steps   : <br>
-
-                <p> a]  Complete the router => {MovieDetails.js} by Creating the component of inner router of  each movie will be used as routered => {MovieDetails.js } :   <br>
+           
+            <h1>  Main section  of {Redux} Libray  : <br>
+                <p>  Theriticial part   =>  will include  : [3-4] lesson => about Redux When to use , Redux Flow  , Methedology   </p>
+                <p>  Practical  part   =>  will include (2) sub section  as folowing  <br> 
                     <ol> 
-                        <li> 1]  Add all component's elements  script  in {Movie details.js } as following : <br>
-                            <code>                                    
-                                <!-- <span class="one"></span>  // importing the required libraries for [dynamic logo image]  : <br>
-                                <span class="one"></span>   import logo  from '../images/logo.png'   ;   <br> -->
-                                
-                                <span class="one"></span>  // importing the required libraies for  [Link] : <br>
-                                <span class="one"></span>   import {Link}  from 'react-router-dom' ;   <br>
-                                 
-                                <span class="one"></span>  const MovieDetails = () => { <br>
-                                    <span class="two"></span>   return ( <br>
-                                        <span class="three"></span>  &lt; div &gt; <br> 
-                                        
-                                            <span class="four"></span>  // First Row :  <br>
-                                            <span class="four"></span> &lt; Row className="justify-content-center" &gt; <br>
-                                                <span class="five"></span> &lt;  Col md="12" xs="12" sm="12" className="mt-4" &gt; <br>
-                                                    <span class="six"></span> &lt; div className="card-details d-flex align-items-center"&gt; <br>
-                                                        <span class="seven"></span>  &lt; img className="img-movie w-30" src='' alt="movieImage" / &gt; <br>
-                                                        
-                                                        <span class="seven"></span>  &lt; div className=" justify-content-center text-center mx-auto " &gt;  <br>
-                                                
-                                                            <span class="eight"></span>  &lt;  p className="card-text-details border-bottom" &gt; <br>
-                                                                <span class="nine"></span> اسم الفيلم : فيلم   <br>
-                                                            <span class="eight"></span> &lt;  /p &gt;   <br>
-                                                
-                                                            <span class="eight"></span>  &lt;  p className="card-text-details border-bottom" &gt; <br>
-                                                                <span class="nine"></span> تاريخ الفيلم : تاريخ   <br>
-                                                            <span class="eight"></span> &lt;  /p &gt;   <br>
-                                                
-                                                            <span class="eight"></span>  &lt;  p className="card-text-details border-bottom" &gt; <br>
-                                                                <span class="nine"></span> عدد المفيمين: عدد   <br>
-                                                            <span class="eight"></span> &lt;  /p &gt;   <br>
-                                                
-                                                            <span class="eight"></span>  &lt;  p className="card-text-details border-bottom" &gt; <br>
-                                                                <span class="nine"></span> التفييم :8.5   <br>
-                                                            <span class="eight"></span> &lt;  /p &gt;   <br>
- 
-                                                        <span class="seven"></span>  &lt; /div &gt;  <br>
-                                                    <span class="six"></span>  &lt; /div &gt;  <br>
-                                                <span class="five"></span> &lt; /Col &gt;   <br>
-                                            <span class="four"></span> &lt; /Row &gt; <br> <br>
-
-                                   
-                                            <span class="four"></span>  Second Row :  <br> 
-                                            <span class="four"></span> &lt; Row className="justify-content-center"   &gt; <br> 
-                                                <span class="five"></span> &lt; Col md="12" xs="12" sm="12" className="mt-1" &gt; <br>
-                                                    <span class="six"></span> &lt; div className="card-story d-flex flex-column align-tems-start " &gt;  <br>
-                                                        <span class="seven"></span> &lt;  div className="text-end p-4" &gt; <br>
-                                                            <span class="eight"></span> &lt;  p className="card-text-title border-bottom" &gt;  القصة&lt; /p &gt;
-                                                        <span class="seven"></span> &lt; /div &gt; <br> 
-                                   
-                                                        <span class="seven"></span> &lt; div className="text-end px-2" &gt;  <br>
-                                                            <span class="eight"></span>  &lt; p className="card-text-story" &gt; قصة الفيلم &lt;  /p &gt; <br>
-                                                        <span class="seven"></span> &lt; /div &gt;  <br>
-                                                    <span class="six"></span> &lt; /div &gt;  <br> 
-                                                <span class="five"></span> &lt; /Col  &gt; <br> 
-                                          <span class="four"></span> &lt; /Row &gt; <br>  <br>
-                                  
-                                          
-                                          <span class="four"></span>  Third Row :  <br> 
-                                          <span class="four"></span> &lt; Row className="justify-content-center" &gt; <br>  
-                                            <span class="five"></span> &lt; Col md="12" xs="12" sm="12" className="mt-2  d-flex justify-content-center" &gt; <br>
-                                                
-                                                <span class="six"></span> //  2] Creating a route of return to the main page of the [button] of  ['return to main page'] in the => {MovieDetails.js}  component    : <br>
-                                                <span class="six"></span> // Wrapping the button of navigating to the main page by using [Link] imported class , with [to] value of '/' : <br>
-                                                <span class="six"></span> &lt; Link to="/" &gt;  <br>
-                                                    <span class="seven"></span> &lt; button <br>
-                                                        <span class="eight"></span> style={{ backgroundColor: "#b45b53", border: "none" }} <br>
-                                                        <span class="eight"></span> className="btn btn-primary mx-2" <br>
-                                                    <span class="seven"></span>  &gt; <br> 
-                                                        <span class="eight"></span> عودة للصفحة الرئيسية <br>
-                                                    <span class="seven"></span> &lt; /button &gt; <br> 
-                                                <span class="six"></span> &lt; /Link  &gt;  <br>
-                                        
-                                                <span class="six"></span> &lt; button <br>
-                                                    <span class="seven"></span> style={{ backgroundColor: "#b45b53", border: "none" }} <br>
-                                                    <span class="seven"></span> className="btn btn-primary" <br>
-                                                <span class="six"></span> &gt; <br>
-                                                    <span class="seven"></span>مشاهدة الفيلم <br>
-                                                <span class="six"></span> &lt; /button &gt;  <br> 
-                                            <span class="five"></span> &lt; /Col &gt; <br>
-                                        <span class="four"></span> &lt; /Row &gt;  <br>
-
-                                    <span class="three"></span> &lt;  /div &gt; <br>
-                                <span class="two"></span> ); <br> 
-                            <span class="one"></span>  }; <br> <br> <br> 
-                                   
-                            <span class="one"></span> export default MovieDetails; <br><br><br>
-                            </code>                             
-                        </li>
-
-
-                        <li> 3] Creating  seperated folder of all images in this project isnie the [src] folder = > with name of [images] : <br>
-                            <p> It is best pracitse to create a seperated folder to store all images of the project inside it   </p>    
-                            <p> It is easier to call an use the image which is stored in a sperated folder than stored in the public folder  </p>    
-                            <p> To use the image in any component => must import a class name by the name of this  image from  it's path in comparison with this component  file </p>    
-                        </li>
-
-                        <li>  4] Creating a route of return to the main page of the [logo image] in the => {NavBar.js}  component => using old method of {a 'href'} wrapping the image     : <br>
-                            <code> 
-                                <span class="one"></span> // importing the [logo image] from the images folder for best pracitise => to be used in {NavBar} :  <br>
-                                <span class="one"></span>  import logo from  '../images/logo.svg' ; <br> <br>
-        
-                                <span class="one"></span> Wrapping the image by using the old method of [a href='/'] with the value of the main page route   :     <br>
-                                <span class="one"></span> &lt; a href='/' &gt; <br>
-                                    <span class="two"></span> &lt; img className="logo" src={logo} alt="logo image" / &gt; <br>
-                                <span class="one"></span> &lt; /a &gt;  <br>
-                            </code>
-                        </li>
-                    </ol>
-                </p> <br>
-             
-                <p>  5] Getting all movie's details in the inner page router component => inside the  {MovieDetails.js } : <br>
-                    <ol>
-                        <li> (a) Importing {useParams} Hook form the  [ react-router-dom ] library , by the next code :  <br>
-                            <code> 
-                                <span class="one"></span> import {Link , useParams} from 'react-router-dom' ;    <br>
-                            </code>
-                        </li> <br>
-
-                        <li> (b) using the imported {useParams} to Define a variable of value of current selected Movie's  [Api id] param  : <br>
-                            <code>
-                                <span class="one"></span> const param = useParams(); <br>
-                            </code>
-                        </li> <br>     
-                        
-                        <li> (c)  Defining a useState variable to store the gotten api of al params of this selected movie : <br>
-                            <code>
-                                <span class="one"></span> const [movie , setMovie] = useState([]) ;  <br>
-                            </code>
-                        </li> <br>     
-                        
-                        <li> (d)  Define a function include the following taks : <br>         
-                                     
-                            <span class="one"></span> const getMoviesDetails = async () => { <br>
-                                
-                                <span class="two"></span> //  (1) Define a function of get the all api parameters  according to the return [Api_id] :  <br>
-                                <span class="two"></span> const res = await axios.get( <br>
-                                    <span class="three"></span> `https://api.themoviedb.org/3/movie/${param.id}?api_key=893adba5dca668458f2a181bcbd88e02&language=ar` <br>
-                                <span class="two"></span> ); <br> <br>
-                            
-                                <span class="two"></span> // (2) Store the retunred api of all paramters inside the defined state variable  : <br>
-                                <span class="two"></span> setMovie(res.data); <br>
-                             
-                            <span class="one"></span> }; <br>
-                        </li> <br>
-   
-                        <li> (e) Define a {useEffect()}  method to run the defined function of getting the api of all parameters , to  be implemented by the first only  rendering of thie router innier page : <br>         
-                            <code>
-                                <span class="one"></span> useEffect(() => {  <br>
-                                    <span class="two"></span> getMoviesDetails();  <br>
-                                <span class="one"></span> }, []);  <br>
-                            </code>
-                        </li> <br>
-
-                        <li> (f)  Calling inside each element prop's value from the defined state [that holding all params values{movie} ] of from the api of current movie : <br>         
-                            <code>                               
-                                <span class="one"></span> // (1) Call the Movie [image poster] prop  :    <br>
-                                <span class="one"></span> &lt; img    <br>
-                                    <span class="two"></span>   className="img-movie w-30"  <br>
-                                    <span class="two"></span>  // using the literal of public  image string url (obtained from the api provider)  +  defined variable of all [api props] to get access to t{'poster_path'} : <br>
-                                    <span class="two"></span>  src={`https://image.tmdb.org/t/p/w500/` + movie.poster_path}  <br>
-                                    <span class="two"></span>   alt="movieImage"   <br>
-                                <span class="one"></span>  / &gt;    <br>
-                            </code>
-                        </li> <br>
- 
-                    </ol>
-                </p> <br>
-                
-                <p>  6] Programming the button of watch the movie in it's official website => inside the {MovieDetails.js } : <br>
-                    <ol>
-                        <li> By using the default [<a> element with 'href' property] as a Wrapper of the API prop ['homepage'] & defined state variable {movie} that stores all this movie's according it's [move_id] using the defined  {useParams()} 's variable, as following  :  <br>
-                            <code>
-                                <span class="one"></span>  &lt; a href={movie.homepage} &gt; <br>
-                                 
-                                    <span class="two"></span> &lt;  button <br> 
-                                        <span class="three"></span> target='_self' <br>
-                                        <span class="three"></span> style={ { backgroundColor: "#b45b53", border: "none" } } <br>
-                                        <span class="three"></span> className="btn btn-primary" <br>
-                                    <span class="two"></span>   &gt; <br>
-                                        <span class="three"></span>  مشاهدة الفيلم <br>
-                                    <span class="two"></span> &lt;  /button &gt; <br>
-                                <span class="one"></span>   &lt;  /a &gt; <br>
-                            </code>
-                        </li>                        
-                    </ol>
-                </p> <br>
-                
-                <p>  7] Programming Pagination Bar to be displayed just in case of existed movie , and NOT to be displayed incase there are NO Movies  to displayed  => inside the  {MovieList.js} : <br>
-                    <ol>
-                        <li>  Making a conditional rendering of calling the pagination Component inside the {MovieListj.js} file & and after the Conditional Rendering of Mapping movies , as following :  <br> 
-                            <code>  
-                                <span class="one"></span> { movies.length >= 1 ? ( <br>
-                                    <span class="two"></span> <PaginationComponent getPage={getPage} pagesCount={pagesCount} /> <br>
-                                    <span class="two"></span> ) : null <br>  
-                                <span class="one"></span> } <br>
-                            </code>                       
-                        </li>                        
-                    </ol>
-                </p> <br>
-                  
-                <p> Vip Notes about {Routering} with using {link} [Requirements-breifly]  :  <br> 
-                    <ol>
-                        <li> To use the asssined route [in the App.js] from another  component =>  must commit with the following  conditons  :   <br>
-                            <ol> 
-                                <li> in main [App.js] =>  <br>
-                                    <ul> 
-                                        <li> The [user component] OR one of it's inner elements  =>   must be included inside  the React Routing system [BrowserRouter] & [Routes] </li>
-                                    </ul>
-                                </li>
-                                
-                                <li> In the [Router user component] => <br> 
-                                    <ul> 
-                                        <li>  Must import the {Link} class to be able to use inside  this component  </li>
-                                        <li>  The imported the {Link} class Must wrap the eleement desired to be acting as Router   </li>
-                                        <li>  The assigned  {Link} class Must  include the defined router path as [TYPICALLY EQUAL]  with the assigned in the [App.js] , to be matched with it  as hyperantew path    </li>
-                                    </ul>                               
-                                </li>
-                            </ol>
-                        </li> <br> 
-                   </ol> 
-                </p> <br>
-                
-                <p> Choosing between using React method  {&lt; Link &gt; to=''} & old method of [&lt;a&gt; href=''] ,to allocate and hypernate into the wrapped element : <br>  
-                    <ol>
-                        <li> [React method  {&lt; Link to='' &gt; }] => used if the targeted Router is inside my project [of defeied inner router page  ]    </li>
-                        <li> [Old method of [&lt; a  href='' &gt; ]   => used if the targeted Router is an  external  [Not defined inside the project router system]    </li>
-                    </ol>
-                </p>
-
-                <p> Note about this  project and course  :  <br>
-                    <ol>                         
-                        <li> This lesson is a great preperation of the final  project in this course {online store/ E-commerce }   </li>
-                        <li> In next lessons in this course => we will learn how to manage/handle the throuwn errors to be displayed  atg best pracitse to the users    </li>
-                        <li>  This project will be recoded by using Reducx in the future after styding {Redux library}   </li>
-                    </ol>
-                </p>
-             </h1>
+                        <li> [1] lesson about simple application  creatd by uwsing React with Redux + with using simple local static datasource  </li>
+                        <li> [3] lessons about upgrading {MoieDB} application using React Redux + with using real online API  datasource  </li>
+                    </ol> 
+                </p>                   
+            </h1>
+              <hr> <br>
+             <!-- ------------------------------------------ -->
+           
              <br> <hr>
         </section>
 
@@ -1710,12 +1337,12 @@
                 <h3> [62-Redux Section Intro] Importance & Benefits : </h3>
             </header>
             <ul>
-                <li> This is the Third practical project of reactJS [ Programming the [Pagination Bar] tasks and functions  + Routering to the inner page of each movie according to the [movie_id]  (part 1) ]      </li>
-                <li> Next Lesson : <br> 
+                <li> This is the  intro of Redux reactJS ,  require :  <br>
                     <ol> 
-                        <li> Routering to the inner page of each movie according to the [movie_id]  (part 2) </li>
+                        <li> Great understanding and focus of theoritical concepts </li>
+                        <li> Well understanding of theoritical   => will lead to easy apply ion practical applictions </li>
                     </ol>
-                </li>
+                </li>            
             </ul>
         </section>
 
