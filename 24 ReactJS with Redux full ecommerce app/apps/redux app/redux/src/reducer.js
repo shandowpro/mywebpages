@@ -4,17 +4,23 @@
 export const reducerCounter = (state = { counter: 0 }, action) => {
   // Define a first action value of  this {Reducer} :
   if (action.type === "INCREMENT") {
-    state = state.counter + 1;
+    return {
+      counter : state.counter + 1
+    } 
   }
 
   // Define  a second  return of only action in this {Reducer} :
   if (action.type === "DECREMENT") {
-    state = state.counter - 1;
+    return {
+      counter : state.counter - 1
+    } 
   }
 
   // Define  a third  return of only action in this {Reducer} :
   if (action.type === "RESET") {
-    state = 0;
+    return {
+      counter : 0 
+    }  
   }
 
   // Define the default value of the action of  this  {Reducer}   :

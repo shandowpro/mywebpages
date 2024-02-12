@@ -1291,11 +1291,12 @@
                 <h2> Main Subjects : </h2>
 
                 <ol type="A">
-                    <li> Main points of this lesson  : <br>
+                    <li> Main points of this lesson , components  methods to access and use the defiend {store} and {reducer} methods in the Redux  system  : <br>
                         <ol> 
-                            <li>   </li>
-                            <li>   </li>
-                            
+                            <li> Main concept  of  both { useSelector() }   & { useDispatch () }  methods </li>
+                            <li> Main Practical steps  of  both { useSelector() }   & { useDispatch () }  methods </li>
+                            <li> Main mechanism of {useSelector()} & {useDispatch()}  work flow      </li>
+                            <li> Vip notes about of both {useSelector()} & {useDispatch()},  it's work flow , best pracitse </li>
                         </ol>
                      </li> <br> <br>
                 </ol>
@@ -1304,123 +1305,183 @@
 
         <!------------------------------------------------------------------------------>
         <!------------------------------------------------------------------------------>
-        <section class="JSDOMCon" id="JSDOMCon">-
+        <section class="JSDOMCon" id="JSDOMCon">
             <header>
                 <h3> 67-Redux useSelector  useDispatch concept : </h3>
             </header>
  
-            <h1>  Main Points in this lesson  =>   as following steps  : <br>
-                <p> 1]  Creating a new project of react with name of ['redux'] &   Installing the both {React-Redux}  {Redux} libraries : <br>
+            <h1>  Main Points in this lesson  => [methods to access and use the defiend {store} and {reducer}]  as following steps  : <br>
+                <p> A]  Main concept  of  both { useSelector()}   & { useDispatch () }  methods  : <br>
                     <ol> 
-                        <li> using the main  react project  following  CMD : <br>
-                              <code>
-                                  <span class="one "></span> { npx create-react-app redux } <br>
-                               </code>
-                        </li> <br> 
-
-                        <li>  install the following libraries , by following  CMD  [inside the project folder  ]: <br>
-                              <code>
-                                  <span class="one "></span> // installing the react bootstrap : <br> 
-                                  <span class="one "></span> { npm  i react-bootstrap } <br>
-
-                                  <span class="one "></span>  // installing the both {redux}  & {react-redux} of libraries    : <br> 
-                                  <span class="one "></span> { npm  i redux react-redux } <br>
-                               </code>
-                        </li> <br> 
-                          
+                        <li> 1]  Concept of { useSelector() } : <br>
+                            <ol>    
+                                <li> It is a hook in the {react-redux} , which used to access the defined [prop] data value in the {store} by it's Reducer method 's  assined data state value    </li>
+                                <li> It is being defined as exraction of the imported {useSelector()} hook  inside any file  of project     </li>
+                                <li> useSelector() => Is including a function with parameter ,  contains  the following :   <br>
+                                    <ul> 
+                                        <li>  [state prop ] => Which is State name assinged in the {reducer} method's  parmanter     </li>
+                                        <li>  [state value ] => the state value desired to be assinged inside the {useSelector()}'s variable ,which canbe the whole data , or partial data  </li>
+                                    </ul>                                
+                                </li>
+                                <li> After defined , it is being called and used directly inside the copmponet's elements , by direct {}   curly brackets      </li>
+                            </ol>
+                        </li> <br>
+                        
+                        
+                        <li> 2]  Concept of { useDispatch()} : <br>
+                            <ol>    
+                                <li> It is another Hook in the {react-redux} , wihch used to call the deifned {Reducer}'s assieed [conditional reutrns]        </li>
+                                <li> It is being defeind inside the any file by exaction of the imported hook {useDispatch()} [wihthuout assuind  parmatners]   </li>
+                                <li> Is is being used with {useSelector()} for acessing  to the redux  defind  {store} and it's {reducer} method  </li>
+                                <li> Is is being  calling inside the current  component 's elements  , via using event   [such as : onClick]  , by callback function, as folowing : <br> 
+                                    <ul> 
+                                        <li> Defenied by simply extration of imported [useDispatch] as a value of variable     </li>
+                                        <li> Called by using the new defined exracted variable , with assinging a parameter of object value as the one assinged in the {reducer} method's action prop name    </li>
+                                        <li> The used paramtwer state prop Name MUST  be typelically equal with the  one assigned the main {reducer}  method </li>
+                                    </ul>
+                                </li>
+                            </ol>   
+                        </li> <br>                           
                     </ol>                 
                 </p> <br>               
                 
-                <p> 2] Create {store} and {reducer} with syntax    : <br>
-                    <ol> 
-                        <li> A] Creating  a file of {store.js} inside [src] folder and exporting it  , with following syntax    : <br>
-                              <code>
-                                  <span class="one "></span> // a] Importing the following  libraries :  <br>
-                                    
-                                    <span class="two"></span> // 1- import the  {createStore} from the  main redux libray => [ to be used in define  a new variable of store :    <br>
-                                    <span class="two"></span> import {createStore} from  'redux  <br>
-                                    
-                                    <span class="two"></span> // 2- import the defined {Reducer}   from  it's file  to be used to define the store as a paramter   :    <br>
-                                    <span class="two"></span> import {reducerName } from  './reducer.js  '  <br> <br>
-
-                                  <span class="one"></span> // b] Define hte store variable:  <br>
-                                    <span class="two"></span> // Define a variable [with exporting] of store as an extracted from the importred {createStore}  class from redux   :     <br>
-                                    <span class="two"></span>  export const storeName  = createStore(reducerName)   <br>
-                                     
-                               </code>
-                        </li> <br>  <br>
+                <p> B]   Main Practical steps  of  both { useSelector() }   & { useDispatch () }  methods  in a component  : <br>
+                     <code>
+                        // 1] Importing section   : <br> 
+                        <span  class="one"></span> import React from 'react'  <br>
+                        <span  class="one"></span> import {useSelector , useDispatch  } from 'react-redux'      <br> <br>
+                        
+                     
+                        <span  class="one"></span>  const App = () {
+                            <span  class="two"></span> // 2] Define the {useSelector} variable with of  [assinged parameter's whole value ] inside the {reducer} method  :   <br>
+                            <span  class="two"></span> const selectorVar  = (stateprop => stateprop  )  <br>
+                            
+                            <span  class="two"></span> // 2] Define the {useSelector} variable with of  [assinged parameter's inner valu]e inside the {reducer} method  :   <br>
+                            <span  class="two"></span> const selectorVar  = (stateprop => stateprop.dataPorpName )  <br>
+                            
+                            <span  class="two"></span> // 3] Define the {useDisptach} variable of extrearted useDispatch impoted method   :    <br>
+                            <span  class="two"></span> const disptchVar  = useDisptach();  <br>
  
- 
-                        <li> B] Creating  a file of {reducer.js} inside [src] folder and exporting it  , with following syntax    : <br>
- 
-                            <code>
-                                  <span class="one"></span> // a] Define the {reducer} method :  <br>
-                                    
-                                    <span class="two"></span>   // Define  the reducer with (2)  main paramters of state [with assinging a default inital value with object of one property ] and action , as following  :  <br>
-                                    <span class="two"></span>  export const reducerName  = (state = {counter:0} , action ) => { <br>
-                                        
-                                        <span class="three"></span> // Define the first action method [according to recieved value of action's type dispatch method = 'INCREAMENT'] a conditional returned value   :  <br>
-                                        <span class="three"></span>  if (action.type  === 'INCREAMENT' ) { <br> 
-                                            <span class="four"></span>  return { <br> 
-                                                <span class="five"></span> counter = state.counter + 1  ;   <br> 
-                                            <span class="four"></span>  }   <br> 
-                                        <span class="three"></span> } <br> <br>
-                                        
-                                        <span class="three"></span> // Define the second  action method [according to recieved value of action's type dispatch method = 'DECREAMENT']  a conditional returned value   :  <br>
-                                        <span class="three"></span>  if (action.type === 'DECREAMENT' ) { <br> 
-                                            <span class="four"></span>  return { <br> 
-                                                <span class="five"></span> counter = state.counter - 1  ;   <br> 
-                                            <span class="four"></span>  }   <br> 
-                                        <span class="three"></span> }   <br>
-                                        
-                                        <span class="three"></span> // Define the third action method [according to recieved value of action's type  dispatch method = 'RESET' ] a conditional returned value   :  <br>
-                                        <span class="three"></span>  if (action.type === 'RESET' ) { <br> 
-                                            <span class="four"></span>  return { <br> 
-                                                <span class="five"></span> counter = 0  ;   <br> 
-                                            <span class="four"></span>  }   <br>  
-                                        <span class="three"></span> }   <br>
-                                        
-                                        <span class="three"></span> // Define the default state  value  [ incase of nothing retured via [dispatch method of action   ]  the  to the reducer method ]  a conditional returned value   :  <br>
-                                        <span class="three"></span>    return state ;   <br>                                           
-                                    <span class="two"></span> }   <br>
-                               </code>
-                        </li> <br>  <br>
- 
-                        <li> C]  {index.js} => Wrapping the App main component by Importing the {Provider} function & including defined and imported  Store variable as it's prop   : <br>
-                            <code>
-                                  <span class="one"></span> // a]  Importing section  :  <br>
-                                    <span class="two"></span>   import React from 'react'    <br>
-                                    <span class="two"></span>   import ReactDOM from 'react-dom'    <br>
-                                    <span class="two"></span>   import App from './App'    <br>
-
-                                    <span class="two"></span> // Importing the  Provider builtin function form the react redux  :  <br>
-                                    <span class="two"></span>   import {Provider} from 'react-redux'   <br>
-                                    
-                                    <span class="two"></span> // Importing the defined store from the store file    :  <br>
-                                    <span class="two"></span>   import {storeName} from './store'   <br> <br>
-                                    
-                                <span class="one"></span> // b] Define  the main [App] component with using the  imported {Provider} function as a wrapper  , as following  :  <br>
-                                    <span class="two"></span> ReactDom.render( <br>
-                                        <span class="three"></span>  // Wrapping  the [App] with imported {Provider} function with using the  imporrted {store} as the prop value of provider  <br>
-                                        <span class="three"></span> &lt; Provider  store ={storeName} &gt;  <br>
-                                            <span class="four"></span> &lt; /App  &gt;       </br>
-                                        <span class="three"></span> &lt; / Provider    &gt;  </br>
-                                        <span class="three"></span> , document.getElementById('root')  </br>
-                                    <span class="two"></span> ) ;   <br>
-                                     
-
-                            </code>
-                        </li> <br> 
-
-                     </ol>                 
+                            <span  class="two"></span> // 4]  Return the functional component    :    <br>
+                            <span  class="two"></span>  return ( <br>
+                                <span  class="three"></span>  &lt; div &gt;    <br>
+                                    <span  class="four"></span>  &lt; button onClick= { () => disptchVar( {ActionType:'typeValue1'} )  } &gt;    <br>
+                                    <span  class="four"></span>  &lt; button onClick= { () => disptchVar( {ActionType:'typeValue2'} )  } &gt;    <br>
+                                    <span  class="four"></span>  &lt; button onClick= { () => disptchVar( {ActionType:'typeValue3'} )    } &gt;    <br>
+                                <span  class="three"></span>  &lt; /div &gt;    <br>
+                            <span  class="two"></span> )  <br>
+                        <span  class="one"></span> }     <br>
+                    </code>
+                         
                 </p> <br>               
-            </h1>
+                                 
+                <p> C]   Main mechanism of {useSelector()} & {useDispatch()}  work flow : <br>
+                    <ol> 
+                        <li> Once a new extreacted vaarlbe of {useSeletctor} is being deinfed => all defined redux {store} data will be accessible into the current  compoent => and then the assigned  {reducer} method will be accessed         </li>
+                        <li> Once an event in the a component is being called =>  the defined and assigned dispatch() variable will be go to the accesed {reducer} method , and seek for the assined prop value of action  prop </li>
+                        <li> If the assigned state's action  prop value in the called {dispatch()} will be implemented and returned , and then the state will be Re-rendered , andthen returned in the currenty component  file      </li>
+                    </ol>                 
+                </p> <br>               
+                                   
+            </h1> <br>
 
             <h1>
-                <p> Notes : <br>
+                <p> Vip notes about of both {useSelector()} & {useDispatch()},  it's work flow , best pracitse : <br>
                     <ol> 
-                        <li> In this lesson we just create the {store} and {reducer} , but not used them   , but we start use them in the next lesson    </li>
-                        <li>  By Wrappning hte  App with the Provider fuciton , the whole proejct's files will be accessible for the defined {store} and {reducer}     </li>
+                        <li> we can create several {reducer} methods in the same project, but it must be only (1) {store} in the single project       </li>
+                        <li> It is recommended to create unified file for all used values of action's [type] values [string valaues] , to be much easier to call from many where inside the project  , as folwoping  : <br>    
+                            <code> 
+                                <span class="one"></span> // inside the {src/types.js} => [define variable with 'string vlaues' ] <br>   
+                                <span class="one"></span> <br>  export const TypeVar1 = 'TypeValue1' ;  <br> <br>
+                                <span class="one"></span> <br>  export const TypeVar2 = 'TypeValue2' ;  <br> <br>
+                                <span class="one"></span> <br>  export const TypeVar3 = 'TypeValue3' ;   <br> <br>
+                                <!-- ---------------------------------------- -->
+
+                                <span class="one"></span> // inside the {src/component.js} <br>   
+                                <span class="one"></span>  import {TypeVar1 , TypeVar2 ,TypeVar3}  from './types'  <br> 
+                                <span  class="one"></span> import {useSelector , useDispatch  } from 'react-redux'   <br> <br>
+                                
+                                
+
+                                <span  class="one"></span>  // define the  main functional component : <br>
+                                <span  class="one"></span>  const App = () { <br>
+                                    <span  class="two"></span> // 2] Define the {useSelector} variable with of  [assinged parameter's whole value ] inside the {reducer} method  :   <br>
+                                    <span  class="two"></span> const selectorVar  = (stateprop => stateprop  )  <br>
+                                    
+                                    <span  class="two"></span> // 2] Define the {useSelector} variable with of  [assinged parameter's inner valu]e inside the {reducer} method  :   <br>
+                                    <span  class="two"></span> const selectorVar  = (stateprop => stateprop.dataPorpName )  <br>
+                                    
+                                    <span  class="two"></span> // 3] Define the {useDisptach} variable of extrearted useDispatch impoted method   :    <br>
+                                    <span  class="two"></span> const disptchVar  = useDisptach();  <br>
+         
+                                    <span  class="two"></span> // 4]  Return the functional component    :    <br>
+                                    <span  class="two"></span>  return ( <br>
+                                    <span  class="three"></span>  &lt; div &gt;    <br>
+                                        
+                                        <span  class="four"></span> // calling the defeind {dispatch} method   with using the imported tyhpes value inside the event's calback function : <br>
+                                        <span  class="four"></span>  &lt; button onClick= { () => disptchVar( {ActionType:TypeVar1 } )  } &gt;    <br>
+                                        <span  class="four"></span>  &lt; button onClick= { () => disptchVar( {ActionType:TypeVar2 } )  } &gt;    <br>
+                                        <span  class="four"></span>  &lt; button onClick= { () => disptchVar( {ActionType:TypeVar3 } )    } &gt;    <br>
+                                    
+                                    <span  class="three"></span>  &lt; /div &gt;    <br>
+                                    
+                                    <span  class="two"></span> )  <br>
+                                <span  class="one"></span> }     <br> 
+                            </code>                    
+                        </li> <br> <hr> <br>
+
+                        <li> It is recommended to create unified file for all used whole object of [action] expression values , to be much easier to call from many where inside the project  , as following  : <br>    
+                            <code> 
+                                <span class="one"></span> // inside the {src/actions.js} => [define functions with return of objects [with the same proName as in the {reducer}  metjhod , but different values] ] <br>   
+                                <span class="one"></span> export const action1 = () => {  <br>
+                                    <span class="two"></span> return  { type : 'TypeValue1'   }   <br>
+                                <span class="one"></span>  } <br> <br>
+                                
+                                <span class="one"></span> export const action2 = () => {  <br>
+                                    <span class="two"></span> return  { type : 'TypeValue2'   }   <br>
+                                <span class="one"></span>  } <br> <br>
+ 
+                                <span class="one"></span> export const action3 = () => {  <br>
+                                    <span class="two"></span> return  { type : 'TypeValue3'   }   <br>
+                                <span class="one"></span>  } <br> <br>
+ 
+                                <!-- ---------------------------------------- -->
+
+                                <span class="one"></span> // inside the {src/component.js} <br>   
+                                <span class="one"></span>  import {action1 , action2 ,action3 }  from './actions'  <br> 
+                                <span  class="one"></span> import {useSelector , useDispatch  } from 'react-redux'   <br> <br>
+                                
+                                
+
+                                <span  class="one"></span>  // define the  main functional component : <br>
+                                <span  class="one"></span>  const App = () { <br>
+                                    <span  class="two"></span> // 2] Define the {useSelector} variable with of  [assinged parameter's whole value ] inside the {reducer} method  :   <br>
+                                    <span  class="two"></span> const selectorVar  = (stateprop => stateprop  )  <br>
+                                    
+                                    <span  class="two"></span> // 2] Define the {useSelector} variable with of  [assinged parameter's inner valu]e inside the {reducer} method  :   <br>
+                                    <span  class="two"></span> const selectorVar  = (stateprop => stateprop.dataPorpName )  <br>
+                                    
+                                    <span  class="two"></span> // 3] Define the {useDisptach} variable of extrearted useDispatch impoted method   :    <br>
+                                    <span  class="two"></span> const disptchVar  = useDisptach();  <br>
+         
+                                    <span  class="two"></span> // 4]  Return the functional component    :    <br>
+                                    <span  class="two"></span>  return ( <br>
+                                    <span  class="three"></span>  &lt; div &gt;    <br>
+                                        
+                                        <span  class="four"></span> // calling the defined {dispatch} method  with using the imported actions value inside the event's calback function : <br>
+                                        <span  class="four"></span>  &lt; button onClick= { () => disptchVar( { action1  } ) } &gt; <br>
+                                        <span  class="four"></span>  &lt; button onClick= { () => disptchVar( { action2  } ) } &gt; <br>
+                                        <span  class="four"></span>  &lt; button onClick= { () => disptchVar( { action3 } ) } &gt; <br>
+                                    
+                                    <span  class="three"></span>  &lt; /div &gt;    <br>
+                                    
+                                    <span  class="two"></span> )  <br>
+                                <span  class="one"></span> }     <br> 
+                            </code>                    
+                        </li>
+
+                        <li> In the next lesson =>  will defjine several {reducers} methods  in the same project , btut only one {store}     </li>
+
                     </ol>
                 </p> 
             </h1>
