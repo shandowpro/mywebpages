@@ -1293,7 +1293,9 @@
                 <ol type="A">
                     <li> Main points of this lesson , define multiple reducers with [Redux Devtools] system  : <br>
                         <ol> 
-                            <li>  </li>                             
+                            <li> Create specified folder to hold all related files inside </li>                             
+                            <li> Main concept and practical steps  Define severals reducers inside a single project  the a {compbined reducer}    </li>                             
+                            <li> Download , install and use  {redux-devtools-extenion }     </li>                             
                         </ol>
                      </li> <br> <br>
                 </ol>
@@ -1308,51 +1310,148 @@
             </header>
  
             <h1>  Main Points in this lesson  =>  define multiple reducers with [Redux Devtools] system   as following steps  : <br>
-                <p> A]     : <br>
-                    <ol> 
-                        <li> 1]   </li> <br>
-                        
-                        
-                            
-                </p> <br>               
                 
-                <p> B]   Main Practical steps  of     : <br>
-                     <code>
-                        // 1] Importing section   : <br> 
-                        <span  class="one"></span> import React from 'react'  <br>
-                        <span  class="one"></span> import {useSelector , useDispatch  } from 'react-redux'      <br> <br>
-                        
-                     
-                        <span  class="one"></span>  const App = () {
-                            <span  class="two"></span> // 2] Define the {useSelector} variable with of  [assinged parameter's whole value ] inside the {reducer} method  :   <br>
-                            <span  class="two"></span> const selectorVar  = (stateprop => stateprop  )  <br>
-                            
-                            <span  class="two"></span> // 2] Define the {useSelector} variable with of  [assinged parameter's inner valu]e inside the {reducer} method  :   <br>
-                            <span  class="two"></span> const selectorVar  = (stateprop => stateprop.dataPorpName )  <br>
-                            
-                            <span  class="two"></span> // 3] Define the {useDisptach} variable of extrearted useDispatch impoted method   :    <br>
-                            <span  class="two"></span> const disptchVar  = useDisptach();  <br>
- 
-                            <span  class="two"></span> // 4]  Return the functional component    :    <br>
-                            <span  class="two"></span>  return ( <br>
-                                <span  class="three"></span>  &lt; div &gt;    <br>
-                                    <span  class="four"></span>  &lt; button onClick= { () => disptchVar( {ActionType:'typeValue1'} )  } &gt;    <br>
-                                    <span  class="four"></span>  &lt; button onClick= { () => disptchVar( {ActionType:'typeValue2'} )  } &gt;    <br>
-                                    <span  class="four"></span>  &lt; button onClick= { () => disptchVar( {ActionType:'typeValue3'} )    } &gt;    <br>
-                                <span  class="three"></span>  &lt; /div &gt;    <br>
-                            <span  class="two"></span> )  <br>
-                        <span  class="one"></span> }     <br>
-                    </code>
-                         
-                </p> <br>               
-                                 
-                <p> C]   Main mechanism of {useSelector()} & {useDispatch()}  work flow : <br>
+                <p> A]  Create specified fllder to hold all related fiels inside , as following  : <br> 
                     <ol> 
-                        <li> Once a new extreacted vaarlbe of {useSeletctor} is being deinfed => all defined redux {store} data will be accessible into the current  compoent => and then the assigned  {reducer} method will be accessed         </li>
-                        <li> Once an event in the a component is being called =>  the defined and assigned dispatch() variable will be go to the accesed {reducer} method , and seek for the assined prop value of action  prop </li>
-                        <li> If the assigned state's action  prop value in the called {dispatch()} will be implemented and returned , and then the state will be Re-rendered , andthen returned in the currenty component  file      </li>
-                    </ol>                 
+                        <li> [reducers]  => to holds all defeind reducers methods , as following : <br>
+                            <ul> 
+                                <li> {reducerCounter.js} =>  include reducer method of [increament, decreament, reset ]    </li>
+                                <li> {reducerAuth.js} =>   include reducer method of [inLog, notLog ]   </li>
+                                <li> {combineReducers.js}  => include all defiend reducers methods [reducerAuth.js , reducerCounter.js ]    </li>
+                            </ul>
+                        </li>
+                        <li> [store]   =>  holds the defiend file of store deptsite => {store.js}        </li>
+                        <li> [actions] =>  holds all used object actions types values in all reducers [will not e used in this lesson]   </li>
+                        <li> [types]   =>  holds all used string values of actions types values in all reducers [will not e used in this lesson]   </li>
+                    </ol>
+                
+                </p>
+                
+                <p> B]  main concept and usage  of multiple reducers methods  : <br>
+                    <ol> 
+                        <li> Is to gather and combine all defined recuedrs inside a one {reducer}  method , as an object's props values  </li> <br>
+                        <li> Requirements : <br> 
+                            <p>  1] inside the {rootReducer.js} [the combinded reducer] : </p>
+                            <ul>
+                                <li> To create a new Reducer file [src/reduces/rootReducer.js] that includes all othre deifned reducers methods  </li>
+                                <li> Importing all defiend reducers from other files of project    </li> 
+                                <li> Importing special class {combineReducers} from 'redux' => to be used in creating a new combined reducer      </li> 
+                                <li> The new created {combineReducers} Reducer  should include an object of all defined reducers as props values  , as following : <br>
+                                    <code>
+                                        <span class="one" ></span>  Importing the defineed reducers    : <br>
+                                        <span class="one" ></span>  import {reducerVar1} from './reducer1.js'   <br>
+                                        <span class="one" ></span>  import {reducerVar2} from './reducer2.js'   <br> <br>
+
+
+                                        <span class="one" ></span>  // define the main combined {reducer}  :   <br>
+                                        <span class="one" ></span>  export const rootReducer = combineReducers({   <br>
+                                            <span class="two" ></span> prop1: reducerVar1 ,  <br>
+                                            <span class="two" ></span> prop2: reducerVar2   <br>
+                                        <span class="one" ></span> }) ;    <br>
+                                    </code>
+                                </li>
+                            </ul> <br>                          
+ 
+                        
+                           <p> 2] inside the {store.js} [the main deposite file ] : </p>
+                            <ul>
+                                <li> To create the main store variable assigned with the new defined combined reducer method  [instead of the single previous reducer]  , as following : <br>
+                                    <code>
+                                        <span class="one" ></span>  import {createStore} from 'redux'       : <br>
+                                        <span class="one" ></span>  import { rootReducer } from "../reducers/rootReducer";   <br> <br>
+
+                                        <span class="one" ></span>  // define the main store  :   <br>
+                                        <span class="one" ></span>  export const rootReducer = createStore(rootReducer) ;    <br>  
+                                    </code>
+                                </li>
+                            </ul>  <br>                        
+
+
+                            
+                           <p> 3] inside the {index.js} [the main assemble file ] : </p>
+                            <ul>
+                                <li> To Wrap the Main App by the Provider function , including the store prop  valur of the  imported {store} variable name ` , as following : <br>
+                                    <code>
+                                        <span class="one" ></span> // 1] Importing the  class of [Provider] form [react-redux]   : <br>
+                                        <span class="one" ></span>  import {Provider} from 'react-redux' <br>
+
+                                        <span class="one" ></span>  2] Importing the main defined store variable [from the specified folder]  : <br>
+                                        <span class="one" ></span>  import { storeAll } from './store'   <br> <br>
+                                         
+
+                                        <span class="one"></span>  // 3] Define the main App compont wrppaed by the imorpted  [Provider]  function +  using store prop assiend value of imported defined {store} :   <br>
+                                        <span class="one"></span> ReactDOM.render( <br>
+                                            <span class="two" ></span>  &lt; Provider store={storeAll} &gt; <br>
+                                                <span class="three"></span> &lt;  App / &gt;  <br>
+                                            <span class="two"></span> &lt;  /Provider &gt; ,  <br>
+                                            <span class="two" ></span> document.getElementById("root") <br>
+                                        <span class="one" ></span>  );  <br>
+                                    </code>
+                                </li>
+                            </ul>                          
+
+
+
+                           <p> 4] inside the {component.js} [the  user component] : </p>
+                            <ul>
+                                <li> To create the main store variable assigned with the new defined combined reducer method  [instead of the single previous reducer]  , as following : <br>
+                                    <code>
+                                        <span class="one" ></span>  // Importing the main classes required to  specify and access to defioned store and assigned values inside reducers          : <br>
+                                        <span class="one" ></span>  import {useSelector  , useDispatch}  from  'react-redux' ; <br> <br>
+                                        
+                                        <span class="one" ></span> Define the main [App] component :   <br>
+                                        <span class="one" ></span> function App () {  <br>
+                                            <span class="two" ></span>  // 1] Define the variable of extracted {useSelector} [of the first defined Reducer method => via {rootReducer} prop [Count]  & inner prop [Counter] of {reducerCounter} ] :   <br>
+                                            <span class="two" ></span>  const count = useSelector(state => state.Count.counter) ;  <br> <br>
+
+                                            <span class="two" ></span>  // 2] Define the variable of extracted useSelector [of the second  defiend reducer method  ]  :   <br>
+                                            <span class="two" ></span>  const login = useSelector(state => state.Auth.isLog) ;   <br>  <br>
+  
+                                            <span class="two"></span> // 3] Define the just only one dispatch variable of extracted {useDispatch} for all defiend reducers :  <br>
+                                            <span class="two" ></span> const dispatch  = useDispatch(); <br>      
+
+                                            
+                                            <span class="two" ></span> return (  <br>
+                                                <span class="three" ></span> &lt; div &gt;    <br>
+                                                    <span class="four" ></span>  // 4] Calling the first store data[string value] variable [of the first reducer method ] :     <br>
+                                                    <span class="four" ></span>  &lt;  h1 &gt;   {count}   &lt;  /h1 &gt;  <br>  <br>
+                                                
+                                                    <span class="four" ></span>  //  Calling the defined accessing  {dispatch } within the buttons and {onClick}  event , via callig the first store defined variable [count] : <br>
+                                                    <span class="four" ></span>  &lt;  button  onClick={ () => dispatch( { type: 'INCREMENT'  } ) }  &gt;  Increment   &lt;  /h1 &gt;  <br>   
+                                                    <span class="four" ></span>  &lt;  button  onClick={ () => dispatch( { type: 'DECREMENT'  } ) }  &gt;  Decrement   &lt;  /h1 &gt;  <br>   
+                                                    <span class="four" ></span>  &lt;  button  onClick={ () => dispatch( { type: 'RESET'  } ) }  &gt;  Reset       &lt;  /h1 &gt;  <br>  <br>
+                                                    
+                                                    <span class="four" ></span>  // 5] Calling the second store data[boolean value] variable [of the second reducer method] => using conditional Rendering  :     <br>
+                                                    <span class="four" ></span>     {login === true ? &lt; h1 &gt;  You are login  &lt; /h1 &gt; : &lt; h1 &gt;  You are NOT login  &lt; /h1 &gt;    }     <br>  <br>
+                                                
+                                                    <span class="four" ></span>  //  Calling the defined accessing  {dispatch } within the buttons and {onClick}  event , via calling the second store defined variable [login] : <br>
+                                                    <span class="four" ></span>  &lt;  button  onClick={ () => dispatch( { type: 'Login'  } ) }  &gt;  click to login     &lt;  /h1 &gt;  <br>   
+                                                    <span class="four" ></span>  &lt;  button  onClick={ () => dispatch( { type: 'notLogin'  } ) }  &gt;  click to logoff   &lt;  /h1 &gt;  <br> <br>
+                                                     
+                                                <span class="three" ></span> &lt; / div &gt;    <br>
+                                            <span class="two" ></span> ) <br>
+                                        <span class="one" ></span>  }     <br>
+                                    </code>
+                                </li>
+                            </ul>                          
+                        </li>
                 </p> <br>               
+                <!-- im here >>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+                 <p> Download , install and use  {redux-devtools-extenion } : <br>                    
+                    <ul>
+                        <li> The concapt and usages of {redux-devtools-extenion} in the browser :  <br>
+                            <p>     </p>    
+                        </li>
+
+                        <li> </li>
+
+
+                    </ul>
+
+
+
+
+                </p>
                                    
             </h1> <br>              
               <hr> <br>
