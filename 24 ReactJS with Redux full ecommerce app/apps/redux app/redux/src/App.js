@@ -19,7 +19,7 @@ function App() {
     console.log(count) ;        
     // -------------------------------
 
-    // Define the variable of extracted useSelector [of the secoind  defiend reducer method  ]  :
+    // Define the variable of extracted useSelector [of the second defiend reducer method  ]  :
     const login = useSelector(state => state.Auth.isLog)   
    
     // Printing the [log] of returned  value of accessed {store} :
@@ -33,9 +33,7 @@ function App() {
       <header>
          This is the React-Redux &  Redux  testing applications   
       </header>
-     
        
-      
         <h1> Button events of : Increament,Decreament,Reset of assigned reducer 'reducerCounter' method : </h1>
         <br></br>
       

@@ -1,4 +1,4 @@
-    
+
 
 // This is  the whole combined ruducer that includes all other defined reducers : 
 
@@ -8,7 +8,6 @@ import { reducerCounter } from './reducerCounter';
  
 // Importing  combined Reducer from the redux   :
 import { combineReducers } from 'redux'; 
-
 
 // Define the main {combineReducers} method :
 export const rootReducer =  combineReducers({

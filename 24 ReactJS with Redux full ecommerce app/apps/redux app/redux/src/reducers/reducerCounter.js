@@ -1,4 +1,6 @@
-// The main {Reducer} method Definition file :
+// The First  {Reducer}  method [reducerCounter] Definition file :
+// allocataed for  the [counter] appliation :
+
 
 // Define Reducer method including state wiht assinged value of object + (1) types of actions with 3 values   :
 export const reducerCounter = (state = { counter: 0 }, action) => {

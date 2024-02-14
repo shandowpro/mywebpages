@@ -1,3 +1,4 @@
+// The Second  {Reducer}  method [reducerAuth] Definition file :
 // Define a new recuder metjod  of Authentication process : 
 
 // Define the main redcuer method [with iniitial value of false  ]  :
