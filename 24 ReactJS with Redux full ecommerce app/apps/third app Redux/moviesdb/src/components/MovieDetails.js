@@ -1,4 +1,14 @@
-// This is the inner page of the defeind router of each movie detials  :
+// This is the {inner page} of the defined Router of each movie details  :
+  // A] used {classes} in this component : 
+    // 1- {useParams} => to define an extracteed variable  of the returned api params to obtain [ID param] of this API to use it in creating page link of defied router  => in order to this Movie all details accordgin the obtained {ID}      
+    // 2- {Link} => to create the react link [of the main home page router]   
+    // 3- {a} => to create a {default link} of {go to official page of this movie} 
+   
+  // B]  main functions  in this component :
+    // 1- Define the a state variable to store the array of all returned API parameters api url that  uses [api_id] parameter  : 
+    // 2- Define a function of get the all api parameters  according to the return [Api_id] 
+
+
 
 import React, { useState, useEffect } from "react";
 import { Col, Row } from "react-bootstrap";

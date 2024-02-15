@@ -1,4 +1,9 @@
 // The {NavBar} of the third  project { MoviesDB}
+  // functions & links  used in this component  :  
+    // 1- [live searching]  ->   using the impojted functional  prop from main [App] , with the  retunrned parameter  value of the inpout  
+    // 2- [default link] to the main page within the logo image 
+ 
+
 
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";

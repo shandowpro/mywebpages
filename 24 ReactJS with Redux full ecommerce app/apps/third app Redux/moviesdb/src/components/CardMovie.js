@@ -1,4 +1,14 @@
-// the single component of card unit {CardMovie}  :
+
+// the single component of card unit {CardMovie} => This component is being called inside the [MoviesList]   :
+
+  // A] used classes in this component  :
+    // 1- {Link} [1] => to create the link to navigatge to the defined Dynamic router of {Each component  inner page} according to the obtaind {Movie ID} to use it in each movie  
+  
+ 
+  // B]  Receiving [props] in this component  :
+    // 1- {mov} => from Mapping on the datasource {movies} -> within {MoviesList} to create the link to navigatge to the defined Dynamic router of {Each component  inner page} according to the obtaind {Movie ID} to use it in each movie  
+  
+ 
 
 import React from "react";
 import { Col } from "react-bootstrap";
@@ -14,7 +24,7 @@ const CardMovie = ({ mov }) => {
           <img
             src={`https://image.tmdb.org/t/p/w500/` + mov.poster_path}
             className="card__image"
-            alt="ka"
+            alt="Movie Poster"
           />
 
           <div className="card__overlay d-flex  ">

@@ -1,9 +1,19 @@
-//  This is the main component that include thr following components :
-// 1] {NavBar} =>   contain a {live search }
-// 2] {MoviesList} => contain {live api datasource}
+//  This is the main component [App] of application  :
 
-// 3]    =>  Dynamic responding of {total page} value in all stutus of [dynamic renderuing + dynamic searcching  +  pagination navigation] :
-// 4] {Routing inner page of []} =>
+// A] This component includes the following imported {components} :
+  // 1] {NavBar}     => contain a {live search }
+  // 2] {MoviesList} => contain {live api datasource}
+
+// B] Main Functions : 
+  // 1- Dynamic live getting the data of {each page} 
+  // 2- Dynamic responding of {total page} value in all status of [dynamic rendering]
+  // 3- Dynamic searching  
+  // 4- Pagination navigation
+  
+  
+// C] Main {Routers} created in this project [2 Routers] :
+    // 1) Static Router to {main page} inside [Movies List] component } 
+    // 2) Dynamic Router to {inner page of each movie} according to the obtained {ID}
 
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";

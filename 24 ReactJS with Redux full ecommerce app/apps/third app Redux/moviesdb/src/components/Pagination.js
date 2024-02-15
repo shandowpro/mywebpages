@@ -1,10 +1,14 @@
-// this is the {pagination} component of movieslist  , which include :
-// Methods used in creation :
-// 1- [react-paginate]  => this will be used in this application
-// 2- [react-bootstrap] => will not be used
-// 3- [Props] => 
-    // a- {getPage} =>  represent the fuction fo asiinging the curent page  
-     
+// This is the {pagination} component of movieslist  , which include :
+
+// Methods used within creating the [Pagination]   :
+  // 1- [react-paginate]  => this will be used in this application
+  // 2- [react-bootstrap] => will not be used
+  // 3- Receiving [Props] => 
+    // a- {getPage}     =>  represent the function of assigning the current page  
+    // b- {pagesCount}  =>  represent the  [dynamic / static] state variable value of current cards movies count in the current page , in both cases of :
+      // I- First Rendering    
+      // II- Live searching working         
+      
 
 
 import React from "react";
