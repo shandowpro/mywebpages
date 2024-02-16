@@ -1291,12 +1291,15 @@
                 <h2> Main Subjects : </h2>
 
                 <ol type="A">
-                    <li> Main points of this lesson ,  using the {Redux} system with the previous project {MoviesDB} {part1}  : <br>
+                    <li> Main points of this lesson ,  setting the {Redux} system to organize the previous project {MoviesDB} {part1} , by using the foolwoing steps    : <br>
                         <ol> 
-                            <li>   </li>                             
-                            <li>   </li>                             
-                            <li>   </li>                             
-                             
+                            <li> Update the project folder tree by  the Redux system     </li> 
+                            <li> download and setup the both 'redux'  & 'react-redux  </li>                             
+                            <li> Create the {storeAll} variable inside { store.js } file   </li>                             
+                            <li> Create the {AllMOVIES} variable inside {src/redux/types/moviesTypes.js} file  </li> 
+                            <li> Create the {moviesReducer} method inside {src/redux/reducer/moviesReducer.js} file  </li>                             
+                            <li> Wrapping the {App} main component by the {Provider} function inside the {index.js}  </li>  
+                            <li> Define the {getAllMovies} method action  inside the [src/redux/actions/movieAction.js]      </li>   
                         </ol>
                      </li> <br> <br>
                 </ol>
@@ -1312,176 +1315,83 @@
  
             <h1>  Main Points in this lesson  =>  define multiple reducers with [Redux Devtools] system   as following steps  : <br>
                 
-                <p> A]  Create specified fllder to hold all related fiels inside , as following  : <br> 
+                <p> A] Update the project folder tree by  the Redux system , as following  : <br> 
                     <ol> 
-                        <li> [reducers]  => to holds all defeind reducers methods , as following : <br>
+                        <li> [public] folder => index.html    </li>
+                        <li> [src]  folder => to holds all  next folders and files : <br>
                             <ul> 
-                                <li> {reducerCounter.js} =>  include reducer method of [increament, decreament, reset ]    </li>
-                                <li> {reducerAuth.js} =>   include reducer method of [inLog, notLog ]   </li>
-                                <li> {combineReducers.js}  => include all defiend reducers methods [reducerAuth.js , reducerCounter.js ]    </li>
+                                <li> {App.js} file => the main component  </li>
+                                
+                                <li> {index.js} file => the assembling file       </li>
+                                
+                                <li> {index.css} file  </li>
+                                
+                                <li> [redux] folder  =>  include any Redux  folders and files, as following   :   <br>                                    
+                                    <ol> 
+                                        <li> [store] folder => include the {store.js}  => which will contains the main store variable  </li> 
+                                        <li> [reducer] folder => include the single Reducer method {moviesReducer()}    </li> 
+                                        <li> [actions] folder => include any actions functions of the project {movieAction.js}      </li> 
+                                        <li> [types] folder =>  include any type's expression value in the project {moviesType.js}  </li> 
+                                    </ol>
+                                </li>
+
+                                <li> [components]  folder  =>   include  all project components files , as following : <br>  
+                                    <ol> 
+                                        <li> {CardMovie.js}  </li>
+                                        <li> {MovieDetails.js} </li>
+                                        <li> {MoviesList.js} </li>
+                                        <li> {NavBar.js}    </li>
+                                        <li> {Pagination.js}    </li>
+                                    </ol>    
+                                </li>
+ 
+                                <li> [images] folder  => include all  images in the project   </li>           
                             </ul>
-                        </li>
-                        <li> [store]   =>  holds the defiend file of store deptsite => {store.js}        </li>
-                        <li> [actions] =>  holds all used object actions types values in all reducers [will not e used in this lesson]   </li>
-                        <li> [types]   =>  holds all used string values of actions types values in all reducers [will not e used in this lesson]   </li>
-                    </ol>
-                
+                        </li> 
+                    </ol>              
                 </p>
                 
-                <p> B]  main concept and usage  of multiple reducers methods  : <br>
-                    <ol> 
-                        <li> Is to gather and combine all defined recuedrs inside a one {reducer}  method , as an object's props values  </li> <br>
-                        <li> Requirements : <br> 
-                            <p>  1] inside the {rootReducer.js} [the combinded reducer] : </p>
-                            <ul>
-                                <li> To create a new Reducer file [src/reduces/rootReducer.js] that includes all othre deifned reducers methods  </li>
-                                <li> Importing all defiend reducers from other files of project    </li> 
-                                <li> Importing special class {combineReducers} from 'redux' => to be used in creating a new combined reducer      </li> 
-                                <li> The new created {combineReducers} Reducer  should include an object of all defined reducers as props values  , as following : <br>
-                                    <code>
-                                        <span class="one" ></span>  Importing the defineed reducers    : <br>
-                                        <span class="one" ></span>  import {reducerVar1} from './reducer1.js'   <br>
-                                        <span class="one" ></span>  import {reducerVar2} from './reducer2.js'   <br> <br>
-
-
-                                        <span class="one" ></span>  // define the main combined {reducer}  :   <br>
-                                        <span class="one" ></span>  export const rootReducer = combineReducers({   <br>
-                                            <span class="two" ></span> prop1: reducerVar1 ,  <br>
-                                            <span class="two" ></span> prop2: reducerVar2   <br>
-                                        <span class="one" ></span> }) ;    <br>
-                                    </code>
-                                </li>
-                            </ul> <br>                          
- 
-                        
-                           <p> 2] inside the {store.js} [the main deposite file ] : </p>
-                            <ul>
-                                <li> To create the main store variable assigned with the new defined combined reducer method  [instead of the single previous reducer]  , as following : <br>
-                                    <code>
-                                        <span class="one" ></span>  import {createStore} from 'redux'       : <br>
-                                        <span class="one" ></span>  import { rootReducer } from "../reducers/rootReducer";   <br> <br>
-
-                                        <span class="one" ></span>  // define the main store  :   <br>
-                                        <span class="one" ></span>  export const rootReducer = createStore(rootReducer) ;    <br>  
-                                    </code>
-                                </li>
-                            </ul>  <br>                        
-
-
+                <p> B] download and setup the both 'redux'  & 'react-redux' & 'redux-devtool-extension'  : <br>
+                    
+                    <code>
+                        <span class="one" ></span>  1] downloading and setup 'redux'  & 'react-redux' via cmd  :  <br>
+                        <span class="one" ></span> { npm i redux react-redux   } <br> <br>
                             
-                           <p> 3] inside the {index.js} [the main assemble file ] : </p>
-                            <ul>
-                                <li> To Wrap the Main App by the Provider function , including the store prop  valur of the  imported {store} variable name ` , as following : <br>
-                                    <code>
-                                        <span class="one" ></span> // 1] Importing the  class of [Provider] form [react-redux]   : <br>
-                                        <span class="one" ></span>  import {Provider} from 'react-redux' <br>
+                        <span class="one" ></span>  2] downloading and setup 'redux-devtool-extension'  via cmd  :   <br>
+                        <span class="one" ></span> { npm i redux-devtool-extension   } <br> <br>    
 
-                                        <span class="one" ></span>  2] Importing the main defined store variable [from the specified folder]  : <br>
-                                        <span class="one" ></span>  import { storeAll } from './store'   <br> <br>
-                                         
-
-                                        <span class="one"></span>  // 3] Define the main App compont wrppaed by the imorpted  [Provider]  function +  using store prop assiend value of imported defined {store} :   <br>
-                                        <span class="one"></span> ReactDOM.render( <br>
-                                            <span class="two" ></span>  &lt; Provider store={storeAll} &gt; <br>
-                                                <span class="three"></span> &lt;  App / &gt;  <br>
-                                            <span class="two"></span> &lt;  /Provider &gt; ,  <br>
-                                            <span class="two" ></span> document.getElementById("root") <br>
-                                        <span class="one" ></span>  );  <br>
-                                    </code>
-                                </li>
-                            </ul>                          
-
-
-
-                           <p> 4] inside the {component.js} [the  user component] : </p>
-                            <ul>
-                                <li> To create the main store variable assigned with the new defined combined reducer method  [instead of the single previous reducer]  , as following : <br>
-                                    <code>
-                                        <span class="one" ></span>  // Importing the main classes required to  specify and access to defioned store and assigned values inside reducers          : <br>
-                                        <span class="one" ></span>  import {useSelector  , useDispatch}  from  'react-redux' ; <br> <br>
-                                        
-                                        <span class="one" ></span> Define the main [App] component :   <br>
-                                        <span class="one" ></span> function App () {  <br>
-                                            <span class="two" ></span>  // 1] Define the variable of extracted {useSelector} [of the first defined Reducer method => via {rootReducer} prop [Count]  & inner prop [Counter] of {reducerCounter} ] :   <br>
-                                            <span class="two" ></span>  const count = useSelector(state => state.Count.counter) ;  <br> <br>
-
-                                            <span class="two" ></span>  // 2] Define the variable of extracted useSelector [of the second  defiend reducer method  ]  :   <br>
-                                            <span class="two" ></span>  const login = useSelector(state => state.Auth.isLog) ;   <br>  <br>
-  
-                                            <span class="two"></span> // 3] Define the just only one dispatch variable of extracted {useDispatch} for all defiend reducers :  <br>
-                                            <span class="two" ></span> const dispatch  = useDispatch(); <br>      
-
-                                            
-                                            <span class="two" ></span> return (  <br>
-                                                <span class="three" ></span> &lt; div &gt;    <br>
-                                                    <span class="four" ></span>  // 4] Calling the first store data[string value] variable [of the first reducer method ] :     <br>
-                                                    <span class="four" ></span>  &lt;  h1 &gt;   {count}   &lt;  /h1 &gt;  <br>  <br>
-                                                
-                                                    <span class="four" ></span>  //  Calling the defined accessing  {dispatch } within the buttons and {onClick}  event , via callig the first store defined variable [count] : <br>
-                                                    <span class="four" ></span>  &lt;  button  onClick={ () => dispatch( { type: 'INCREMENT'  } ) }  &gt;  Increment   &lt;  /h1 &gt;  <br>   
-                                                    <span class="four" ></span>  &lt;  button  onClick={ () => dispatch( { type: 'DECREMENT'  } ) }  &gt;  Decrement   &lt;  /h1 &gt;  <br>   
-                                                    <span class="four" ></span>  &lt;  button  onClick={ () => dispatch( { type: 'RESET'  } ) }  &gt;  Reset       &lt;  /h1 &gt;  <br>  <br>
-                                                    
-                                                    <span class="four" ></span>  // 5] Calling the second store data[boolean value] variable [of the second reducer method] => using conditional Rendering  :     <br>
-                                                    <span class="four" ></span>     {login === true ? &lt; h1 &gt;  You are login  &lt; /h1 &gt; : &lt; h1 &gt;  You are NOT login  &lt; /h1 &gt;    }     <br>  <br>
-                                                
-                                                    <span class="four" ></span>  //  Calling the defined accessing  {dispatch } within the buttons and {onClick}  event , via calling the second store defined variable [login] : <br>
-                                                    <span class="four" ></span>  &lt;  button  onClick={ () => dispatch( { type: 'Login'  } ) }  &gt;  click to login     &lt;  /h1 &gt;  <br>   
-                                                    <span class="four" ></span>  &lt;  button  onClick={ () => dispatch( { type: 'notLogin'  } ) }  &gt;  click to logoff   &lt;  /h1 &gt;  <br> <br>
-                                                     
-                                                <span class="three" ></span> &lt; / div &gt;    <br>
-                                            <span class="two" ></span> ) <br>
-                                        <span class="one" ></span>  }     <br>
-                                    </code>
-                                </li>
-                            </ul>                          
-                        </li>
-                </p> <br>               
-  
-
-                 <p> C] Download , install and use  {redux-devtools-extenion } : <br>                    
-                    <ul>
-                        <li> The concapt and usages of {redux-devtools-extenion} in the browser :  <br>
-                            <p>  Devtool addition used in any browser to analyze & inspect the [react redux]  in the browser        </p>    
-                            <p> This addtion must gbe insatalled fropm the browser  &  download it's syntax within the react project with redux , as follwoin :  <br>
-                                <ul>
-                                    <li> Install the Devtool within the browser , using next stops : <br>                                       
-                                        <ol>
-                                            <li> search on google on ' redux devtool extension '     </li>
-                                            <li> download the related version for your browser  </li>
-                                        </ol>                                             
-                                    </li>
-
-        
-                                    <li>  Activate the redux devtool extension on your redux syntax ,by following steps :   <br>
-                                        <ol> 
-                                            <li> inside your project folder => install  {redux-devtool-extension} via cmd , by folwoin code      <br> 
-                                                <code>  
-                                                    <span clas="one"></span>  npm i redux-devtools-extension     <br>
-                                                </code>    
-                                            </li> <br>
-
-                                            <li> inside {store.js} =>   import the  donloaded library {redux-devtools-extension}  :    <br> 
-                                                <code>  
-                                                    <span clas="one"></span>  import {composeWithDevTools}  from  'redux-devtools-extension'    <br> 
-                                                </code>    
-                                            </li> <br>
- 
-                                            <li> inside {store.js} => assign the impoterd library inside the difinitonin of the store variable [as as second paremter] :    <br> 
-                                                <code>  
-                                                    <span clas="one"></span> export  const  store = createStore(reducer ,  compnteWithDevTools  ) ;  <br>
-                                                </code>    
-                                            </li>
-                                        </ol>
-                                    </li>
-                                </ul>                               
-                            </p>    
-                        </li>
- 
-                    </ul>
- 
+                    </code>
                 </p>
-                                   
+
+
+                <!-- im here >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+                <p> C]  Create the {storeAll} variable inside { store.js } file : <br>
+                    
+                    // Import main class of defining the store varialbe   :  
+import  {createStore}  from 'redux' ;
+ 
+
+// importing the defined reducer function from it's seperated file :           
+import { moviesReducer } from '../reducer/moviesReducer';
+
+// Define a store varialbe according to the imported reducer :
+export const storeAll  = createStore(moviesReducer ) ; 
+
+
+                    <code>
+                         
+
+
+
+
+                    </code>
+                </p>
+
+
+
+
+
+
             </h1> <br>              
               <hr> <br>
              <!-- ------------------------------------------ -->
@@ -1494,40 +1404,42 @@
                  
                  <code>
  
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/redux app/redux/public/index.html">  
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/public/index.html">  
                          <button id=btn class="btn0" onclick="display()"> Source main ReactJS public HTML file  [index.html] file </button>
                      </a> <br> <hr> <br> 
                       
-                     <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/redux app/redux/src/index.js">  
+                     <!-- <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/redux/src/index.js">  
                          <button id=btn class="btn0" onclick="display()"> Source main ReactJS assembling file JS [index.js] file </button>
                      </a> <br> <hr> <br>   -->
 
                      
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/redux app/redux/src/index.css">  
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/index.css">  
                          <button id=btn class="btn0" onclick="display()"> Source main ReactJS custom formating css properites file JS [index.css] file </button>
                      </a> <br> <hr> <br> 
                       
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/redux app/redux/src/App.js">  
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/App.js">  
                          <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main [App] file {Main Component} [App.js] file </button>
                      </a> <br> <hr> <br> 
                       
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/redux app/redux/src/store/store.js">  
-                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main  Redux [store] variable in exteranal [store.js] file </button>
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/redux/store/store.js">  
+                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main  Redux [storeAll] variable in exteranal [store.js] file </button>
                      </a> <br> <hr> <br> 
                       
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/redux app/redux/src/reducers/rootReducer.js">  
-                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS Redux main  reducer [combined Reducer] file JS [rootReducer.js] file </button>
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/redux/reducers/moviesReducer.js">  
+                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS Redux main  reducer [moviesReducer] file JS [moviesReducer.js] file </button>
                      </a> <br> <hr> <br> 
     
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/redux app/redux/src/reducers/reducerCounter.js ">  
-                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main  First Reducer file JS [reducerCounter.js] file </button>
+                         
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/redux/types/moviesType.js">  
+                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS Redux  single type variable [moviesType] file JS [moviesType.js] file </button>
                      </a> <br> <hr> <br> 
-  
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/redux app/redux/src/reducers/reducerAuth.js">  
-                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS main   Second  Reducer file JS [reducerAuth.js] file </button>
+
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/redux/actions/movieAction.js">  
+                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS Redux single action method  [getAllMovies] file JS [movieAction.js] file </button>
                      </a> <br> <hr> <br> 
-                        
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/redux app/redux/package.json">  
+    
+                         
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/package.json">  
                          <button id=btn class="btn0" onclick="display()"> Source main ReactJS [package file]  of project  file JS [package.json] file </button>
                      </a> <br> <hr> <br> 
   

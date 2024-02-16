@@ -7,7 +7,7 @@
     // a- {getPage}     =>  represent the function of assigning the current page  
     // b- {pagesCount}  =>  represent the  [dynamic / static] state variable value of current cards movies count in the current page , in both cases of :
       // I- The pages count in of First Rendering    
-      // II- The pages count of Live searching working         
+      // II- The pages count of Live searching working
       
 
 
