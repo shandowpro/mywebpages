@@ -1299,7 +1299,7 @@
                             <li> Create the {AllMOVIES} variable inside {src/redux/types/moviesTypes.js} file  </li> 
                             <li> Create the {moviesReducer} method inside {src/redux/reducer/moviesReducer.js} file  </li>                             
                             <li> Wrapping the {App} main component by the {Provider} function inside the {index.js}  </li>  
-                            <li> Define the {getAllMovies} method action  inside the [src/redux/actions/movieAction.js]      </li>   
+                            <li> Define the {getAllMovies}  action method  inside the [src/redux/actions/movieAction.js]      </li>   
                         </ol>
                      </li> <br> <br>
                 </ol>
@@ -1335,7 +1335,7 @@
                                     </ol>
                                 </li>
 
-                                <li> [components]  folder  =>   include  all project components files , as following : <br>  
+                                <li> [components] folder  =>  include all project components files , as following : <br>  
                                     <ol> 
                                         <li> {CardMovie.js}  </li>
                                         <li> {MovieDetails.js} </li>
@@ -1349,7 +1349,7 @@
                             </ul>
                         </li> 
                     </ol>              
-                </p>
+                </p> <br> 
                 
                 <p> B] download and setup the both 'redux'  & 'react-redux' & 'redux-devtool-extension'  : <br>
                     
@@ -1361,38 +1361,104 @@
                         <span class="one" ></span> { npm i redux-devtool-extension   } <br> <br>    
 
                     </code>
-                </p>
-
-
-                <!-- im here >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-                <p> C]  Create the {storeAll} variable inside { store.js } file : <br>
-                    
-                    // Import main class of defining the store varialbe   :  
-import  {createStore}  from 'redux' ;
+                </p> <br>   
  
-
-// importing the defined reducer function from it's seperated file :           
-import { moviesReducer } from '../reducer/moviesReducer';
-
-// Define a store varialbe according to the imported reducer :
-export const storeAll  = createStore(moviesReducer ) ; 
-
-
+                <p> C]  Create the {storeAll} variable inside { store.js } file : <br>
                     <code>
+                        <span class="one" ></span>  // Import main class of defining the store varialbe  :  <br>
+                        <span class="one" ></span> import  {createStore}  from 'redux' ;       <br> <br>
+                          
+                        <span class="one" ></span>  // Importing the defined Reducer function from it's seperated file :  <br>
+                        <span class="one" ></span>   import { moviesReducer } from '../reducer/moviesReducer'; <br> <br>
+                        
+                        <span class="one" ></span>  // Define a store varialbe according to the imported reducer :   <br>
+                        <span class="one" ></span>  export const storeAll  = createStore(moviesReducer ) ;   <br> <br>
+                    </code>   
+                </p> <br>
+ 
+                <p> D]  Create the {AllMOVIES} variable inside {src/redux/types/moviesTypes.js} file : <br>
+                    <code>
+                        <span class="one" ></span>  // This is the shortcuts of the [type's value] -> to beused inside the reducers  : <br>
+                        <span class="one" ></span> export const moviesType = 'AllMOVIES' ;   <br> <br>
+                    </code>   
+                </p> <br>
+ 
+                <p> E] Create the {moviesReducer} method inside {src/redux/reducer/moviesReducer.js} file : <br>
+                    <code>
+                        <span class="one" ></span>  // This the main Reducer method of {moviesReducer} , and will contain the folwoing functions  : <br>
+                            <span class="two" ></span>  // 1- Displyaing all movies for the first rederning  -> {getAllMovies()} & {getPage()} <br>
+                            <span class="two" ></span>  // 2- Live Searching -> {serach()}   <br>
+                            <span class="two" ></span>  // 3- Pagination   -> { ()}   <br> <hr> <br>
+                            
                          
+                        
+                        <span class="one" ></span>  // Importing the defined class to be used as  one of type parameter value  :   <br>
+                        <span class="one" ></span> import { moviesType } from "../types/moviesType"   <br>
+  
+                        <span class="one" ></span>  // Define a object variable [as a values of initial state values = object of (2 properties  => empty array of movies data from api , pageCount ) ]  :   <br>
+                        <span class="one" ></span>  const initalValue = {movies:[] , pageCount :0 }    <br> <br>
+  
+   
+                        <span class="one" ></span>  // Define the main Reducer function [with using the define and imoprted initial variable as the state object value  +  using the switch() ]  :  <br>
+                        <span class="one" ></span>  export const moviesReducer  = (state = initalValue , action) => {   <br>
+                            <span class="two" ></span>  switch(action.type) {   <br>
+                                <span class="three" ></span>  // using the imported variable of the [type expresion value] : <br>
+                                <span class="three" ></span>  case moviesType :  <br>
+                                    <span class="four" ></span> // using the imported variable of the first object's property {movies array} of initial value of the reducer state prop :      <br>
+                                    <span class="four" ></span> return { movies :  action.data }     <br>
+                                <span class="three" ></span> default :    <br>
+                                    <span class="four" ></span> return state;  <br>
+                            <span class="two" ></span>  }  <br>
+                        <span class="one" ></span>  }  <br>
+        
+                    </code>   
+                </p> <br>  <br>
+ 
+                <p> F]  Wrapping the {App} main component by the {Provider} function inside the {index.js} : <br>
+                    <code>
+                        <span class="one" ></span> // Importing section :   <br>
+                        <span class="one" ></span>  import React from 'react'; <br>
+                        <span class="one" ></span>  import ReactDOM from 'react-dom';   <br>
+                        <span class="one" ></span>  import './index.css';    <br> 
+                        <span class="one" ></span>  import 'bootstrap/dist/css/bootstrap.min.css';    <br> 
+                        <span class="one" ></span>  import App from './App';    <br> 
+                        
+                        <span class="one" ></span>  // importing the Provider class from the modificatied Redux ' react-redux'  : <br> 
+                        <span class="one" ></span>  import { Provider } from "react-redux";  <br>  <br>
+                             
+                        <span class="one" ></span>  // importing the defined {store} variable : <br> 
+                        <span class="one" ></span>  import { storeAll } from './redux/store/store';   <br> <hr>  <br> 
+                              
+                            
+                        <span class="one"></span>   // Using the imported {Provider} class to wrapp main App [to enable all files and component in the project access both of {store} and {reducer} ] :  <br> 
+                        <span class="one"></span> ReactDOM.render( <br>
+                            <span class="two"></span> &lt;  Provider store={storeAll} &gt; <br>
+                                <span class="three"></span>  &lt; App / &gt;   <br>
+                            <span class="two"></span> &lt;  /Provider  &gt;   , <br>
+                            <span class="two"></span> document.getElementById("root")   <br></br>
+                        <span class="one" ></span> ); <br>
+                    </code>   
+                </p> <br><br>
+                
+                
+                <p> G]  Define the {getAllMovies}  action method  inside the [src/redux/actions/movieAction.js] : <br>
+                    <code>
+                        <span class="one" ></span> //  This file will contain the action function to return of [object] value to be considered as [reducer's state] value  ,  to be returned when it being used inside any element of any component  witin the {dispach} callback function method :   <br>
+                        
+                        <span class="one" ></span> //  This function must import and include the defined value of expression type value {movieAction.js} :  <br>
+                        <span class="one" ></span>  import { moviesType } from '../types/moviesType'; <br>  <br>
 
-
-
-
-                    </code>
-                </p>
-
-
-
-
-
-
-            </h1> <br>              
+                        <span class="one" ></span>  export const getAllMovies = ()  =>  {    <br>
+                            <span class="two" ></span>  // will return the object of both [ type's value with using the importerd variable  & data array of the movies to be obained form the api] :     <br> 
+                            <span class="two" ></span>  return { type: moviesType  , data:[]  }   <br> 
+                        <span class="one" ></span>  }      <br> 
+                         
+                    </code>   
+                </p> <br>
+ 
+            </h1> <br> 
+            
+            <h1> Next lesson will => cleaning the App main pre-logic codes to be in seperated files   </h1> 
               <hr> <br>
              <!-- ------------------------------------------ -->
 
@@ -1425,7 +1491,7 @@ export const storeAll  = createStore(moviesReducer ) ;
                          <button id=btn class="btn0" onclick="display()"> Source main ReactJS  main  Redux [storeAll] variable in exteranal [store.js] file </button>
                      </a> <br> <hr> <br> 
                       
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/redux/reducers/moviesReducer.js">  
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/redux/reducer/moviesReducer.js">  
                          <button id=btn class="btn0" onclick="display()"> Source main ReactJS Redux main  reducer [moviesReducer] file JS [moviesReducer.js] file </button>
                      </a> <br> <hr> <br> 
     
