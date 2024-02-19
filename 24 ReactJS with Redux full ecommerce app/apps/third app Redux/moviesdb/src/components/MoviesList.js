@@ -15,12 +15,43 @@
     // 3- {pagesCount} -> represent the  value of state variable of current page count [staic / dynamic ]           
 
 
-import React from "react";
+import React , {useState , useEffect } from "react";
 import { Row, Card, Col } from "react-bootstrap";
 import CardMovie from "./CardMovie";
 import PaginationComponent from "./Pagination";
+import { useSelector , useDispatch } from "react-redux";
 
-const MoviesList = ({ movies , getPage , pagesCount }) => {
+// importing the action method of {getAllMovie} from the action file : 
+import { getAllMovie } from "../redux/actions/movieAction";  
+
+const MoviesList = ({ getPage , pagesCount }) => {
+  
+  // All following logic codes is comming from the main component {App} : 
+  
+    // 1] define the variable to store the current total pages inside it to pass into another comnponents until reaching the to {PagiationComponent} to be used to store the incomming page count    :
+    // const [pagesCount, setPagesCount] = useState(0); => [not using it now]
+  
+    // (2) Define the useState [of the  movie card ] :
+    const [movies, setMovies] = useState([]);
+        
+    // Extract a new dispatch method to be able to send a dispatch action :
+    const dispatch = useDispatch() ;
+    
+    // using useEffect with Dispatching the defined action method:{getAllMovie()} ->  to get all movies data in the first rendering and send it to the reducer and store before extracting a new store {dataMovies} :
+    useEffect( () => {
+      dispatch(getAllMovie()) ;
+    }, [])
+
+  // Define a new extracted variable from the store [after being assigned by the previous step of updating store by reducer] by using the useSelector : 
+    const dataMovies = useSelector( (state) => state.movies ) ;    
+    
+    // using useEffect to render the obtained data stored by [dataMovies]  each time the  page is being Re-rendered by [ setting hte defined state by [dataMovies] + using [dataMovies] extreacted store variable as the useEffect dependencies ]  :      
+    useEffect( () => {
+      setMovies(dataMovies) ;
+    }, [dataMovies])
+  // -------------------
+  
+  
   return (
     <Row className="mt-3">
       {movies.length >= 1 ? (
