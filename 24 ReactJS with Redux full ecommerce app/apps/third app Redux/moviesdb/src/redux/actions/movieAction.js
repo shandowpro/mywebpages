@@ -1,18 +1,25 @@
 
 // This file will contain the action funciton to return of [object] value to be considered as [reducer's state] value  ,  to be returned when it being used inside any element of any component  witin the {dispach} callback function method :
-// This file  will also use higher order fucnoin to obtain the abliity to use the redux system  :
+// This file will also use higher order function to obtain the ability to use the redux system  :
 
-// This function must import and include the defined value of expression type value {movieAction.js} :
+// A] Importing section :  
+// Import and include the defined value of expression type value from the {moviesTypes.js} , as following  :
+    // [moviesType] => will be used  as  the value of the type property  of the retunred object of the the defined {dispatch} function              
+    // [moviesApi]  => will be used  as [api url] value of the {axios} method             
 import { moviesType , moviesApi } from '../types/moviesType';
-import  axios  from  'axios' ; 
 
-// Define the main action method of getting all data of the movies from api   :   
+// Importing the { axios }  calss to be used in defining the api url :
+import  axios  from  'axios' ; 
+ 
+
+// B] Dfine the main Action method section :  
+// Define the main action method {getAllMovie} of getting all data of the movies from api , with using the higher order function to make the redux accept the [aync-await]         :   
 export  const getAllMovie = ()  =>  {
   
-    // Using the higher order function method to make the redux accept the [async-await]  :  
+    // [A : First function] of getting all movies by using the redux system ] via Using the higher order function method to make the redux accept the [async-await]  =>    
     return async (dispatch) => {
         
-        // [A : First function] of getting all movies by using the redux system ] via => Define the variable of getting the api of the movies data , the  using the imported variable of [url value ]   :   
+        // Define the variable of getting the api of the movies data , the  using the imported variable {moviesApi} of [url value ]   :    
         const res = await axios.get(moviesApi);
 
         // Returning the action method's object data using the dispatch :

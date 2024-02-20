@@ -5,7 +5,7 @@
   // 2] {MoviesList} => contain {live api datasource}
 
 // B] Main Functions : 
-  // 1- Dynamic live getting the data of {each page} 
+  // 1- Dynamic live getting the data of {each page}  => [moved to the {MoveisList} component] (according to the redux )
   // 2- Dynamic responding of {total page} value in all status of [dynamic rendering]
   // 3- Dynamic searching  
   // 4- Pagination navigation
@@ -87,7 +87,7 @@ function App() {
       `https://api.themoviedb.org/3/movie/popular?api_key=893adba5dca668458f2a181bcbd88e02&language=ar&page=${page}`
     );
     console.log(res.data.results);
-    setMovies(res.data.results);
+    // setMovies(res.data.results);
 
     // Dynamic Method of Assigning {total_pages} inside the [pagesCount] defined state  :
     // setPagesCount(res.data.total_pages) ;

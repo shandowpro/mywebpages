@@ -1344,7 +1344,7 @@
                         </li> <br> <hr> <br> 
 
 
-                        <li> 2]  Adusting and cleaning the {App.js} by removing all related codes of  the First function of [getting all movies data] , as following :    <br>  
+                        <li> 2]  Adusting and Cleaning the {App.js} by removing all related codes of  the First function of [getting all movies data] , as following :    <br>  
                            <ul> 
                                 <li> Removing all related classes and libraries of redux and react required to define the Redux system files as following :  <br>
                                     <ol> 
@@ -1382,12 +1382,48 @@
                                     </ol>                            
                                 </li>
                             </ul>
+                        </li>  <br><br> 
+
+                        <li> 3]  Adusting and updating  {MoviesList.js} component file of {MoviesList} by adding all related codes of the First function of [getting all movies data]  according to using {middleware} & {redux-thunk} system , as following :    <br>  
+                            <ul> 
+                                <li> Adding all related classes and libraries of redux and react required to define the Redux system files as following :  <br>
+                                    <ol> 
+                                        <li> a- The importing section , including   :  <br>
+                                            <ul>
+                                                <li> { UseSelector } from "react-redux"  => Requrired to extract new store varialbe </li> 
+                                                <li> { useDispatch } from "react-redux"  => Requried to extract  the disptach method to be used to send the action method into the {Reducer} main method   </li> 
+                                                <li> { getAllMovie } from "../redux/actions/movieAction";   => the main action defined method within the redux    </li> 
+                                            </ul>
+                                        </li> <br>
+  
+                                        <li> b- The sent props int the {MoviesList} component :  <br>
+                                            <ul>
+                                                 <li> { movies}  =>  must be removed from the main {MoviesList} functional component [because we dont need it now]     </li> 
+                                            </ul>
+                                        </li> <br>
+  
+                                        <li> c- Defined Variables and Functions =>  [inside the functional component and before the main return ]  :  <br>
+                                            <ul> 
+                                                <li> { const [movies, setMovies] = useState([]) } => Defined variable of useState of [the movie card] ->  to use it as  local data storege of extracted store variable    </li>
+                                            
+                                                <li> { const dispatch = useDispatch() } => the new Extracted dispatch method , to be able for  dispatching the imported action method [getAllMovie] </li>
+                                                
+                                                <li> { useEffect( () => {} ) } => the defined useEffect to be used twice in :  <br>
+                                                    <ol>
+                                                        <li> First usage  : using useEffect() for Dispatching the imported  action method:{getAllMovie()} -> to get all movies data from API in the first rendering and send it into the {Reducer} to save the data inside the  {Store}   before extracting a new store {dataMovies} below    </li>
+                                                        <li> Second usage : using useEffect() to render the obtained data stored by [dataMovies]  each time the  page is being Re-rendered [defined after the define the extracted Store:{dataMovies} ]   </li>
+                                                    </ol>
+                                                </li>
+                                                
+                                                <li> { const dataMovies = useSelector( (state) => state.movies)  }  => Define a new extracted variable from the store [after beng assigned by the previous step of updating store by reducer] by using the useSelector </li>
+                                            </ul>
+
+                                        </li> <br>
+                                    </ol>                            
+                                </li>
+                            </ul>
                         </li>
 
-                        <li> 3]  Adusting and updating  {MoviesList.js} component file of {MoviesList} by adding all related codes of the First function of [getting all movies data]  according to using {middleware} & {redux-thunk} , as following :    <br>  
-
-                        
-                        </li>
                     </ol>              
                 </p> <br> 
             </h1> <br>
