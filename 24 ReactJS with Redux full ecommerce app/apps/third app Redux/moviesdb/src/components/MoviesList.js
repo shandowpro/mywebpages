@@ -50,7 +50,7 @@ const MoviesList = ({ getPage , pagesCount }) => {
   // Define a new extracted variable from the store [after being assigned by the previous step of updating store by reducer] by using the useSelector : 
     const dataMovies = useSelector( (state) => state.movies ) ;    
     
-    // using useEffect to render the obtained data stored by [dataMovies]  each time the  page is being Re-rendered by [ setting hte defined state by [dataMovies] + using [dataMovies] extreacted store variable as the useEffect dependencies ]  :      
+    // using useEffect to render the obtained data stored by [dataMovies] each time the page is being Re-rendered by [ setting the defined state by [dataMovies] + using [dataMovies] extracted store variable as the useEffect dependencies]  :      
     useEffect( () => {
       setMovies(dataMovies) ;
     }, [dataMovies])

@@ -401,8 +401,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">
-            <h2 class="h1" class="hidden-xs"> About Section =>  update the  {MoviesDB}  by using {Redux}  <span><strong> pracitcal  (3) </strong> </span> </h2>
-            <h3 class="visible-xs"> About Section => This lesson about <strong> update the  {MoviesDB}  by using {Redux}  </strong> pracitcal (3)  </span> </h3>
+            <h2 class="h1" class="hidden-xs"> About Section =>  update the  {MoviesDB}  by using {Redux}  <span><strong> pracitcal  (4) </strong> </span> </h2>
+            <h3 class="visible-xs"> About Section => This lesson about <strong> update the  {MoviesDB}  by using {Redux}  </strong> pracitcal (4)  </span> </h3>
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing] Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->
         </div>
     </section>
@@ -1293,8 +1293,7 @@
                 <ol type="A">
                     <li> Main points of this lesson ,  setting the {Redux} system to organize the previous project {MoviesDB} {part3} , by using the following steps    : <br>
                         <ol> 
-                            <li> starting the practical steps of using hte {middleware} & {thunk} isndie the project's files to solve  the onapplicatble between the {redux} and {aync - await}   </li> 
-                            <li>  Cleaning the logic codes in the main {App.js} component  </li> 
+                            <li>  Continue the converting data into the Redux system => [second, thired , fourth] main  functions in the main [App.js]    </li> 
                         </ol>
                      </li> <br> <br>
                 </ol>
@@ -1308,9 +1307,9 @@
                 <h3> 72-Update Movies Project with Redux Part 4 concept : </h3>
             </header>
  
-            <h1>  Main Points in this lesson => define multiple reducers with [Redux Devtools] system   as following steps  : <br>
+            <h1> Main Points in this lesson => define multiple reducers with [Redux Devtools] system   as following steps  : <br>
                 
-                <p> A]  starting the practical steps of using hte {middleware} & {thunk} inside the project's files to solve the non compatiblity between the {redux} and {aync - await} , as following  : <br> 
+                <p> A]  Continuing the practical steps of using the {middleware} & {thunk} inside the project's files to solve the non compatiblity between the {redux} and {aync - await} , as following  : <br> 
                     <ol>
                         <li> 1] {movieAction.js} =>  Updating the built action method of first Method of the application {getAllMovie}  [getting all movies data  from api ] by using the new concept of redux [higher order function] the following  :   <br> 
                             <code> 
@@ -1344,7 +1343,7 @@
                         </li> <br> <hr> <br> 
 
 
-                        <li> 2]  Adusting and Cleaning the {App.js} by removing all related codes of  the First function of [getting all movies data] , as following :    <br>  
+                        <li> 2]  Adjusting and Cleaning the {App.js} by removing all related codes of  the First function of [getting all movies data] , as following :    <br>  
                            <ul> 
                                 <li> Removing all related classes and libraries of redux and react required to define the Redux system files as following :  <br>
                                     <ol> 
@@ -1384,9 +1383,45 @@
                             </ul>
                         </li>  <br><br> 
 
-                        <li> 3]  Adusting and updating  {MoviesList.js} component file of {MoviesList} by adding all related codes of the First function of [getting all movies data]  according to using {middleware} & {redux-thunk} system , as following :    <br>  
+                        <li> 3]  Adjusting and updating  {MoviesList.js} component file of {MoviesList} by adding all related codes of the Second function of [Dynamic Live seacrh]  & third fucion [Getting the current page for Pagininastion   ]  according to using {middleware} & {redux-thunk} system , as following :    <br>  
                             <ul> 
-                                <li> Adding all related classes and libraries of redux and react required to define the Redux system files as following :  <br>
+                                <li> Second Function : Define the dynamic live searching method  ,  as following :  <br>
+                                    <ol> 
+                                        <li> a- The importing section , including   :  <br>
+                                            <ul>
+                                                <li> { UseSelector } from "react-redux"  => Requrired to extract new store varialbe </li> 
+                                                <li> { useDispatch } from "react-redux"  => Requried to extract  the disptach method to be used to send the action method into the {Reducer} main method   </li> 
+                                                <li> { getAllMovie } from "../redux/actions/movieAction";   => the main action defined method within the redux    </li> 
+                                            </ul>
+                                        </li> <br>
+  
+                                        <li> b- The sent props int the {MoviesList} component :  <br>
+                                            <ul>
+                                                 <li> { movies}  =>  must be removed from the main {MoviesList} functional component [because we dont need it now]     </li> 
+                                            </ul>
+                                        </li> <br>
+  
+                                        <li> c- Defined Variables and Functions =>  [inside the functional component and before the main return ]  :  <br>
+                                            <ul> 
+                                                <li> { const [movies, setMovies] = useState([]) } => Defined variable of useState of [the movie card] ->  to use it as  local data storege of extracted store variable    </li>
+                                            
+                                                <li> { const dispatch = useDispatch() } => the new Extracted dispatch method , to be able for  dispatching the imported action method [getAllMovie] </li>
+                                                
+                                                <li> { useEffect( () => {} ) } => the defined useEffect to be used twice in :  <br>
+                                                    <ol>
+                                                        <li> First usage  : using useEffect() for Dispatching the imported  action method:{getAllMovie()} -> to get all movies data from API in the first rendering and send it into the {Reducer} to save the data inside the  {Store}   before extracting a new store {dataMovies} below    </li>
+                                                        <li> Second usage : using useEffect() to render the obtained data stored by [dataMovies]  each time the  page is being Re-rendered [defined after the define the extracted Store:{dataMovies} ]   </li>
+                                                    </ol>
+                                                </li>
+                                                
+                                                <li> { const dataMovies = useSelector( (state) => state.movies)  }  => Define a new extracted variable from the store [after beng assigned by the previous step of updating store by reducer] by using the useSelector </li>
+                                            </ul>
+
+                                        </li> <br>
+                                    </ol>                            
+                                </li>
+
+                                <li> Third Function : Define the dynamic gettintg the current page value to be sent as parmejter to {MovieList} to be used in Pagination  function,  as following :  <br>
                                     <ol> 
                                         <li> a- The importing section , including   :  <br>
                                             <ul>
@@ -1428,41 +1463,10 @@
                 </p> <br> 
             </h1> <br>
      
-            <h1>  main steps of Discovering and solving the problem of non-applicable syntax betweeen {Redux} system & {async-await} syntax , by downloading  {redux-thunk} library within redux project  : <br> 
-  
-                <p> A  Theoritcial comparison of flow chart between [Redux without using {Async-await}] &  [Redux with using {redux-thunk}]:  <br>
-                    <ol> 
-                        <li> [Redux without using {Async-await}] : <br>
-                            <p>  {view-component} -> {action Creator - dispatch } -> {reducers}  -> {store} -> {view-component}   </p>
-                        </li> <br> <hr> <br>
-                        
-                        <li>  [Redux with using {redux-thunk}] : <br>
-                            <p>  {view-component} -> {action Creator - dispatch} -> {Middleware} -> {reducers}  -> {store} -> {view-component}   </p>
-                             
-                            <p>  {redux-thunk} working mechanism : <br>
-                                <ul> 
-                                    <li> when the dispatch action method is being sent ferom the a component ->  it will be reciveed by the {Middleware} , and then will apply the alternative method fo dealing with the {async-await}    </li> 
-                                    <li> after the {middleware} tool of hte redux-thunk is prossessing  the recieved action -> it will be sent to the  {reducer}  mehtod      </li> 
-                                    <li> And then the {reducer}  mehtod wil send the proccessed action into the store    </li> 
-                                </ul>
-                            </p>
-                        </li>
-                    </ol>
-                </p>
-            </h1>
-
-
+       
             <h1> Vip Note about the data flowing beteen the  {Action} Method -> {Reducer}    : <br>
                 <ol>  
-                    <li> when the action is being sent to the reducer method :  <br>
-                        <p> all defined parameters/props in the [action dispatch() method :  {type} & {action} & any other defined props] => will be passed into the main {Reducer} method as it's props values ,  according to the assinged values inside the action return function , as following  : <br>    
-                            <ul> 
-                                <li> [type] => it's value will be assinged as the Expression Type value inside the {Reducer} method </li>
-                                <li> [data] => it's value will be assinged as a value of one of the main reducer [action] parameter's extended props => {action.data} , inside the {Reducer} method </li>
-                                <li> [pages] => it's value will be assinged as a value of one of the main reducer [action] parameter's extended props => {action.pages} , inside the {Reducer} method </li>
-                            </ul> 
-                        </p>
-                    </li>
+                    <li> One of  the main purpose of using Redux system is to cleaning loig codes of main functions  existed in the [App.js] before the return  </li>
                 </ol>
                 
             </h1>
