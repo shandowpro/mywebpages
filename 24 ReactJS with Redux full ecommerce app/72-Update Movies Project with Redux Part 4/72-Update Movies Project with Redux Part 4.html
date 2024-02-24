@@ -1295,8 +1295,8 @@
                         <ol> 
                             <li>  Continue the converting data into the Redux system => [second, third  ] main  functions in the main [App.js]  , with following details  :   <br>
                                  <ul> 
-                                    <li> Second Function {} =>   </li> 
-                                    <li> Third Function {} =>   </li> 
+                                    <li> Second Function {Live Searching } =>   </li> 
+                                    <li> Third Function {Dynamic Pagination } =>   </li> 
                                  </ul>
                             </li> 
                         </ol>
@@ -1490,49 +1490,89 @@
 
                                     </ul>
                                 </li> <br>
+        
+                            </ol>              
+                        </li> <br> <br></br>
+                          <!-- --------------------------- -->
 
-                                <li> Third Function : Define the dynamic gettintg the current page value to be sent as parameter to {MovieList} to be used in Pagination  function,  as following :  <br>
+                        <li> Converting [ {Third function}: [ Dynimc pagination ] according to  gotten value of the current page ]  according to Redux system : <br>
+                            
+                            <ol>
+                                <li>  1] {movieAction.js} =>  Updating the built action method of Third  Method {getPage} of the application {getAllMovie}  [ getting the current pages count method [acccording to the got parameter of current page value ]  by using the new concept of redux [higher order function] the following :   <br>
+                                    <code> 
+                                        // (a) Importing section :   <br>
+                                        <span class=one> </span>    // importing types expressions values to be used  within the disptached action methods  in this component: <br>
+                                        <span class=one> </span>  import { moviesType , moviesApi } from '../types/moviesType';  <br>
+                                        
+                                        <span  class="one "></span>  import  {axios}  from  'axios' ;  <br> <br>
+           
+                                        // (b)  Define the main action method  of the getting the current pages count method [acccording to the got parameter of {current page value} ] :  <br>
+                                        <span class=one> </span>  export  const  getPage = (page)  =>  { <br>
+                                            
+                                            <span  class="two"></span>  // Using the higher order function method to make the redux accept the [async-await]  :  <br>  
+                                            <span  class="two"></span>  return async (dispatch) => { <br> 
+            
+
+                                                <span  class="three"></span>  // [C : Third function] of Define the variable of getting the api [pages count] prop of the current result ,  according to the dynamic assinged value inside   [api url]   :  <br>
+                                                <span  class="three"></span>   const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=893adba5dca668458f2a181bcbd88e02&language=ar&page=${page}`); <br>  <br>
+                                                  
+                                                <span  class="three"></span> // Returning the action method's object data using the dispatch : <br>
+                                                <span  class="three"></span>  dispatch({ <br>  
+                                                    <span  class="four"></span> // 1- [type's expression value] - > as the imported variable of the movie type expression form {moviesType.js}    :    <br>  
+                                                    <span  class="four"></span>  type: moviesType ,    <br>  
+                                                    <span  class="four"></span> // 2- [data array of the serathed movies data to be obained form the assinged api ] ->  by assinging extension [data.results] of  the varaible of axios obtainted [search url api] value :  <br>  
+                                                    <span  class="four"></span>  data: res.data.results ,    <br>  
+                                                    <span  class="four"></span> // 3- [page prop] ->   by assinging extension [data.total_pages]  of  the varaible of axios obtainted [search url api] value : <br>  
+                                                    <span  class="four"></span>  pages : res.data.total_pages  <br>  
+                                                <span  class="three"></span>   })  <br>  
+        
+                                            <span  class="two"></span>  } <br>
+                                        <span  class="one"></span>  } <br>           
+                                                 
+                                    </code>
+                                </li> <br>
+                                
+                                
+                                <li> 2]  Adjusting and Cleaning the {App.js} by removing all related codes of  the Third function of [getting the current pages count method [acccording to the got parameter of current page value ]] , as following :      <br>
                                     <ol> 
-                                        <li> a- The importing section , including   :  <br>
+                                        <li> a- The importing section , removing including   :  <br>
                                             <ul>
-                                                <li> { UseSelector } from "react-redux"  => Requrired to extract new store varialbe </li> 
-                                                <li> { useDispatch } from "react-redux"  => Requried to extract  the disptach method to be used to send the action method into the {Reducer} main method   </li> 
-                                                <li> { getAllMovie } from "../redux/actions/movieAction";   => the main action defined method within the redux    </li> 
+                                                <li> {  useState , useEffect  } from "react-redux"  =>  Not needed here , we will be used inside the  {Pagination.js} ->  to  define both varilbes of [pagesCount] state & [implementing the defined state {setPagesCount(pages)} - for the first rendering   ]        </li> 
+                                                <li> { useSelector } from "react-redux"  =>  Not needed here , we will be used inside the  {Pagination.js} ->  to extract a value of current page count [pages : the extracted prop {pageCount} form the main {state}  ]  </li> 
+                                                <li> { useDispatch } from "react-redux"  => Not needed here , we will be used inside the  {Pagination.js} ->  to send  a action method  of [current page count]  from the Pagination component    into the {reducer} main method     </li> 
+                                                <li> { getPage  } from "../redux/actions/movieAction";   => Not needed here ,  we will be imported  in the {pagination.js} component file     </li> 
                                             </ul>
                                         </li> <br>
-  
-                                        <li> b- The sent props int the {MoviesList} component :  <br>
+        
+                                        <li> b- The sent props into the component {Pagination.js } :  <br>
                                             <ul>
-                                                 <li> { movies}  =>  must be removed from the main {MoviesList} functional component [because we dont need it now]     </li> 
+                                                 <li>   NON => the  using of redux is not need to use props </li> 
                                             </ul>
                                         </li> <br>
-  
+        
                                         <li> c- Defined Variables and Functions =>  [inside the functional component and before the main return ]  :  <br>
                                             <ul> 
-                                                <li> { const [movies, setMovies] = useState([]) } => Defined variable of useState of [the movie card] ->  to use it as  local data storege of extracted store variable    </li>
+                                                <li> { const [ pagesCount , setPagesCount] = useState([]) } => Defined variable of useState of [ current page count ] ->  to use  be assigned by extracted store variable [pages]    </li>
                                             
-                                                <li> { const dispatch = useDispatch() } => the new Extracted dispatch method , to be able for  dispatching the imported action method [getAllMovie] </li>
+                                                <li> { const dispatch = useDispatch() } => the new Extracted dispatch method , to be able for  dispatching the imported action method [getPage(pages)] to the reducer with  asssined value of parameter   </li>
                                                 
-                                                <li> { useEffect( () => {} ) } => the defined useEffect to be used twice in :  <br>
+                                                <li> { useEffect( () => {} ) } => the defined useEffect to be used once in :  <br>
                                                     <ol>
-                                                        <li> First usage  : using useEffect() for Dispatching the imported  action method:{getAllMovie()} -> to get all movies data from API in the first rendering and send it into the {Reducer} to save the data inside the  {Store}   before extracting a new store {dataMovies} below    </li>
-                                                        <li> Second usage : using useEffect() to render the obtained data stored by [dataMovies]  each time the  page is being Re-rendered [defined after the define the extracted Store:{dataMovies} ]   </li>
+                                                        <li> using useEffect() for Dispatching the imported action method:{ getPage(pages)} -> to get current page count  from API in the first rendering and send it into the {Reducer} to save the data inside the {Store} after  extracting a new store {pageCount} value    </li>
                                                     </ol>
                                                 </li>
                                                 
                                                 <li> { const dataMovies = useSelector( (state) => state.movies)  }  => Define a new extracted variable from the store [after beng assigned by the previous step of updating store by reducer] by using the useSelector </li>
                                             </ul>
-
-                                        </li> <br>
-                                    </ol>                            
-                                </li>
         
-                            </ol>              
-                        </li> <br> <br></br>
-                          
-                        <li> Converting [ {Third function}: [live searching] according to inserted value inside the input ]  according to Redux system : <br>
-                        
-                        
+                                        </li> <br>
+                                    </ol>
+                                    
+
+
+                                </li>
+                                
+                            </ol>                        
                         </li>
                     </ol>
                 </p> <br> 

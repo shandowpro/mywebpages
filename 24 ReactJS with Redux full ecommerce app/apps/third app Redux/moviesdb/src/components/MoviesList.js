@@ -9,7 +9,7 @@
     // 2- {Conditional Rendering} of displayed Pagination => [according to the obtained  [Datasource's length] prop -> {} 
     // 3- {Mapping} on the  recieved prop {movies} with using the imported {CardMovie} component     
  
-  // C]  Main recived props    :,
+  // C]  Main recived props    :  
     // 1- {movies} X -> represent the main datasource of api Movies data => [ canceled ]         
     // 2- {getPage} -> represent the  Defined a seperated pagination function [with parameter of recieved value of current page ] of getting the curent page from pagination to send it the {MoviesList} component  
     // 3- {pagesCount} -> represent the  value of state variable of current page count [staic / dynamic ]           
@@ -29,6 +29,8 @@ import { useSelector , useDispatch } from "react-redux";
 // importing the [action method] of {getAllMovie} from the action file -> [to  be used wihtin the dispatch to send the it's  defined  {action mehtod}  into the Reducer  ]   : 
 import { getAllMovie } from "../redux/actions/movieAction";  
 
+// define {MoviesList}  with using parmanters {getPage , pagesCount} of     :        
+// const MoviesList = ({ getPage , pagesCount }) => {
 const MoviesList = ({ getPage , pagesCount }) => {
   
   // All following logic codes has been comming from the main component {App} [accordign to the Redux] : 
@@ -36,7 +38,7 @@ const MoviesList = ({ getPage , pagesCount }) => {
     // 1] define the variable to store the current total pages inside it to pass into another comnponents until reaching the to {PagiationComponent} to be used to store the incomming page count    :
     // const [pagesCount, setPagesCount] = useState(0); => [not using it now]
   
-    // (2) Define the useState [of the movie card] ->  to use it as  local data storege of extracted store variable   :
+    // 2] Define the useState [of the movie card] ->  to use it as  local data storege of extracted store variable   :
     const [movies, setMovies] = useState([]);
         
     // Extract a new dispatch method to be able to send a dispatch action :

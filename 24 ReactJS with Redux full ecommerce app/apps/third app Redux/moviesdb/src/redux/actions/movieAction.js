@@ -66,7 +66,7 @@
 // Define the third action method {getPage} of the getting the current pages count method [acccording to the got parameter of current page value ] :   
     export  const getPage = (page)  =>  {
     
-        // [C: Third function] of Getting Total current pages count according to the recevied parmatner of teh current selceted page value =>    
+        // [C: Third function] of Getting Total current pages count according to the recevied parameter of the current selceted page value =>    
         return async (dispatch) => {
             
             // Define the variable of getting the api [pages count] prop of the current result ,  according to the dynamic assinged value inside   [api url]   :    
@@ -80,13 +80,17 @@
                 // 2- [data array of the movies to be obained form the api ] ->  by assinging extesssion [data.results]  of  the varaible of axios obtainted value   
                     // Assign the [data] prop key by value of [res.data.results (which is the whole movies extracted data from given api's data 's {results} paramter )] , which will be obtaned from the reducer after recieving this action method their .  
 
-                // 3- [page prop] ->  by assinging extesion [data.total_pages] of the variable of axios obtainted value :
+                // 3- [page prop] ->  by assinging extension [data.total_pages] of the variable of axios obtainted value :
                     //  Assign the [pages] prop key by value of [res.data.total_pages]  (which is the current pages count  extracted  value from given api's data 's {total_pages} paramter) , which will be obtaned from the reducer after recieving this action method their .  
             dispatch({          
+                // This prop will be used as the value of expression :  
                 type: moviesType ,
-    
+
+                // This prop will be  used  as the value of defined prop {data} inside the Reducer method :      
                 data: res.data.results ,
                 
+                
+                // This prop will be used as the vleu of the defined prop {pageCount} inside the Reducer method  :     
                 pages : res.data.total_pages
             })
         }
