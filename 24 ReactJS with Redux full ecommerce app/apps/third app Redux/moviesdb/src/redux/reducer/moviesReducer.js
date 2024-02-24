@@ -22,6 +22,7 @@
             case moviesType :
  
                 // using the imported variable of the first object's property {movies array} of initial value of the reducer state prop  :      
+                   // 
                 return { movies :  action.data  , pageCount: action.pages }
 
             default :

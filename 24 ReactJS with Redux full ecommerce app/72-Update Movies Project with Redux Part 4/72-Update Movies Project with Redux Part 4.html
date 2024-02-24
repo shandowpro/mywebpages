@@ -1291,9 +1291,14 @@
                 <h2> Main Subjects : </h2>
 
                 <ol type="A">
-                    <li> Main points of this lesson ,  setting the {Redux} system to organize the previous project {MoviesDB} {part3} , by using the following steps    : <br>
+                    <li> Main points of this lesson ,  setting the {Redux} system to organize the previous project {MoviesDB} {part4} , by using the following steps    : <br>
                         <ol> 
-                            <li>  Continue the converting data into the Redux system => [second, thired , fourth] main  functions in the main [App.js]    </li> 
+                            <li>  Continue the converting data into the Redux system => [second, third  ] main  functions in the main [App.js]  , with following details  :   <br>
+                                 <ul> 
+                                    <li> Second Function {} =>   </li> 
+                                    <li> Third Function {} =>   </li> 
+                                 </ul>
+                            </li> 
                         </ol>
                      </li> <br> <br>
                 </ol>
@@ -1309,83 +1314,184 @@
  
             <h1> Main Points in this lesson => define multiple reducers with [Redux Devtools] system   as following steps  : <br>
                 
-                <p> A]  Continuing the practical steps of using the {middleware} & {thunk} inside the project's files to solve the non compatiblity between the {redux} and {aync - await} , as following  : <br> 
+                <p> A]  Continuing the practical Applying {redux} system steps on using the {middleware} & {thunk} inside the project's files to solve the non compatiblity between the {redux} and {aync-await} on  both Second funciton & Third function ] , as following : <br> 
                     <ol>
-                        <li> 1] {movieAction.js} =>  Updating the built action method of first Method of the application {getAllMovie}  [getting all movies data  from api ] by using the new concept of redux [higher order function] the following  :   <br> 
-                            <code> 
-                                // (a) Importing section :   <br>
-                                <span class=one> </span>  import { moviesType , moviesApi } from '../types/moviesType';  <br>
-                                <span  class="one "></span>  import  axios  from  'axios' ;  <br> <br>
-   
-                                // (b)  Define the main action method of getting all data of the movies from api :  <br>
-                                <span class=one> </span>  export  const getAllMovie = ()  =>  { <br>
-                                    
-                                    <span  class="two"></span>  // Using the higher order function method to make the redux accept the [async-await]  :  <br>  
-                                    <span  class="two"></span>  return async (dispatch) => { <br> 
-    
-                                        <span  class="three"></span>  // [A : First function] of getting all movies by using the redux system ] via => Define the variable of getting the api of the movies data ,  by  using the imported variable of [url value ]   :  <br>  
-                                        <span  class="three"></span>   const res = await axios.get(moviesApi);  <br>  
+                        <li> Converting [ {Second function}: [live searching] according to inserted value inside the input ]  according to Redux system :   <br>
+                            <ol>
+                                <li> 1] {movieAction.js} =>  Updating the built action method of Second Method {getMovieSearchs} of the application {getAllMovie}  [getting all serached movies data from api accordig to the inserted value in the input] by using the new concept of redux [higher order function] the following :  <br> 
+                                    <code> 
+                                        // (a) Importing section :   <br>
+                                        <span class=one> </span>    // importing types expressions values to be used  within the disptached action methods  in this component: <br>
+                                        <span class=one> </span>  import { moviesType , moviesApi } from '../types/moviesType';  <br>
                                         
-                                        <span  class="three"></span> // Returning the action method's object data using the dispatch : <br>
-                                        <span  class="three"></span>  dispatch({ <br>  
-                                            <span  class="four"></span> // 1- [type's expression value ] -> as the imported variable of the movie type expression   :   <br>  
-                                            <span  class="four"></span>  type: moviesType ,    <br>  
-                                            <span  class="four"></span> // 2- [data array of the movies to be obained form the api ] ->  by assinging extesssion [data.results]  of  the varaible of axios obtainted value :  <br>  
-                                            <span  class="four"></span>  data: res.data.results ,    <br>  
-                                            <span  class="four"></span> // 3- [page prop] ->   by assinging extesssion [data.total_pages]  of  the varaible of axios obtainted value : <br>  
-                                            <span  class="four"></span>  pages : res.data.total_pages  <br>  
-                                        <span  class="three"></span>   })  <br>  
-
-                                    <span  class="two"></span>  } <br>
-                                <span  class="one"></span>  } <br>           
-                                         
-                            </code>
-                        </li> <br> <hr> <br> 
-
-
-                        <li> 2]  Adjusting and Cleaning the {App.js} by removing all related codes of  the First function of [getting all movies data] , as following :    <br>  
-                           <ul> 
-                                <li> Removing all related classes and libraries of redux and react required to define the Redux system files as following :  <br>
-                                    <ol> 
-                                        <li> a- The importing section , including   :  <br>
-                                            <ul>
-                                                <li> { UseSelector } from "react-redux"  => Requrired to extract new store varialbe </li> 
-                                                <li> { useDispatch } from "react-redux"  => Requried to extract  the disptach method to be used to send the action method into the {Reducer} main method   </li> 
-                                                <li> { getAllMovie } from "../redux/actions/movieAction";   => the main action defined method  within hte redux   </li> 
-                                            </ul>
-                                        </li> <br>
-  
-                                        <li> b- The sent props int the  component , including   :  <br>
-                                            <ul>
-                                                 <li> { movies}  from &lt; MovieDetails / &gt;  => which was required to send the defind method of [getAllMovies()]   </li> 
-                                            </ul>
-                                        </li> <br>
-  
-                                        <li> c- Defined Variables and Functions  :  <br>
-                                            <ul> 
-                                                <li> { const [movies, setMovies] = useState([]) } => Defined variable of useState of [the movie card] </li>
+                                        <span  class="one "></span>  import  {axios}  from  'axios' ;  <br> <br>
+           
+                                        // (b)  Define the main action method of getting all data of the movies from api [wih using parameter of return serach value  ] :  <br>
+                                        <span class=one> </span>  export  const  getMovieSearch = (word)  =>  { <br>
                                             
-                                                <li> { const dispatch = useDispatch() } => the new Extracted dispatch method , to be able to send a dispatch action  </li>
+                                            <span  class="two"></span>  // Using the higher order function method to make the redux accept the [async-await]  :  <br>  
+                                            <span  class="two"></span>  return async (dispatch) => { <br> 
+            
+                                                <span  class="three"></span>  // [B : Second function] of [{live searching} according to inserted value inside the input]  by using the redux system ] via => Define the variable of getting the api of the movies data ,  by  using the imported variable of [url value] & [word] parameter   :  <br>  
+                                                <span  class="three"></span>   const res = await axios.get(https://api.themoviedb.org/3/search/movie?query=${word}&api_key=893adba5dca668458f2a181bcbd88e02);  <br>  
                                                 
-                                                <li> { useEffect( () => {} ) } => the defined useEffect to be used twice in :  <br>
-                                                    <ol>
-                                                        <li> First usage  : using useEffect() with Dispatching the defined action method:{getAllMovie()} -> to get all movies data from API in the first rendering and send it into the {Reducer} and store before extracting a new store {dataMovies} below   </li>
-                                                        <li> Second usage : using useEffect() to render the obtained data stored by [dataMovies]  each time the  page is being Re-rendered   </li>
-                                                    </ol>
+                                                <span  class="three"></span> // Returning the action method's object data using the dispatch : <br>
+                                                <span  class="three"></span>  dispatch({ <br>  
+                                                    <span  class="four"></span> // 1- [type's expression value] - > as the imported variable of the movie type expression form {moviesType.js}    :    <br>  
+                                                    <span  class="four"></span>  type: moviesType ,    <br>  
+                                                    <span  class="four"></span> // 2- [data array of the serathed movies data to be obained form the assinged api ] ->  by assinging extension [data.results] of  the varaible of axios obtainted [search url api] value :  <br>  
+                                                    <span  class="four"></span>  data: res.data.results ,    <br>  
+                                                    <span  class="four"></span> // 3- [page prop] ->   by assinging extension [data.total_pages]  of  the varaible of axios obtainted [search url api] value : <br>  
+                                                    <span  class="four"></span>  pages : res.data.total_pages  <br>  
+                                                <span  class="three"></span>   })  <br>  
+        
+                                            <span  class="two"></span>  } <br>
+                                        <span  class="one"></span>  } <br>           
+                                                 
+                                    </code>
+                                </li> <br> <hr> <br> 
+        
+                                <li> 2]  Adjusting and Cleaning the {App.js} by removing all related codes of  the First function of [getting all movies data] , as following :    <br>  
+                                   <ul> 
+                                        <li> Removing all related classes and libraries of redux and react required to define the Redux system files as following :  <br>
+                                            <ol> 
+                                                <li> a- Removing from  The importing section , including   :  <br>
+                                                    <ul>
+                                                        <li> { useDispatch } from "react-redux"  => Requried to extract  the disptach method to be used to send the action method into the {Reducer} main method  [will NOT be used here , but in the {NavBar.js} ]   </li> 
+                                                        <li> { getAllMovie , getMovieSearch } from "../redux/actions/movieAction";   => the main action defined method  within hte redux [will NOT used be here, but wintin the acton ]   </li> 
+                                                    </ul>
+                                                </li> <br>
+          
+                                                <li> b- The sent props into the component , including   :  <br>
+                                                    <ul>
+                                                         <li> { search }  from &lt; NavBar / &gt;  =>  [will use the defined action method {getMovieSearch} instead] </li> 
+                                                    </ul>
+                                                </li> <br>
+          
+                                                <li> c- Defined Variables and Functions :  <br>
+                                                    <ul> 
+                                                        <li> { const [pagesCount, setPagesCount] = useState(0) }   => Defined variable of useState of [the current search pages count]  => [will be used inside the component {Pagination.js} instead ]    
+                                                        </li>
+                                                    
+                                                        <li> { const dispatch = useDispatch() } => the new Extracted dispatch method , to be able to send a dispatch action [will be used inside {Pagination.js} component  instead ]  </li>
+                                                        
+                                                        <li> { useEffect( () => {} ) } =>  used to render data  -> [wil NOT used here , but inside the {Pagination.js } ]  </li>
+                                                        
+                                                        <li> { const pages = useSelector( (state) => state.pageCount  ) }  => Define a new certain extracted variable from extracted the store by using the useSelector [ will NOT be used here  , but inside the {Pagination.js} ] </li>
+                                                    </ul>
+        
+                                                </li> <br>
+                                            </ol>                            
+                                        </li>
+                                    </ul>
+                                </li>  <br><br> 
+        
+                                <li> 3]  Adjusting and updating  {NavBar} component file of {NavBar.js} by adding all related codes of the Second function of [Dynamic Live search]  &  [Getting  movies data accordng to inserted value of input] according to the  using {middleware} & {redux-thunk} system , as following :  <br>  
+                                    <ul> 
+                                        <li>  Define the {dynamic live searching} method , as following :  <br>
+                                            <ol> 
+                                                <li> a- The importing section , including   :  <br>
+                                                    <ul>
+                                                        <li> { useDispatch } from "react-redux"  => Requried to extract  the disptach method to be used to send the action method into the  main {Reducer}  method   </li> 
+                                                        <li> { getAllMovie , getMovieSearch } from "../redux/actions/movieAction";  => both are deifned actions methods in  within the redux  </li> 
+                                                    </ul>
+                                                </li> <br>
+          
+                                                <li> b- NO props needed to be  sent inside this component   </li> <br>
+          
+                                                <li> c- Defined Variables and Functions => [inside the functional component and before the main return ]  :  <br>
+                                                    <ul> 
+                                                        <li> { const dispatch = useDispatch() } => the new Extracted dispatch method , to be able for  dispatching the imported actions methods [getAllMovie , getMovieSearch] </li>
+                                                                                                                    
+                                                        <li> { search(word) } => defined method of conditional executing for both [imoprted  actions methods {getAllMovie , getMovieSearch} ] , with using {word} parameter to passs it through  into the  {getMovieSearch()} dispatched action method   </li>    
+    
+                                                        <li> { onSearch(word) } => parent container of defined method {search(word)}   </li>
+                                                    </ul>
+        
+                                                </li> <br>
+                                            </ol>                            
+                                        </li> <br> <hr> <br>
+                                            
+                                         <li>  Practical scripts   : <br> 
+                                            
+                                            <ol>
+                                                <li> [NavBar.js] :  <br>
+                                                    <code>
+                                                        // A] Importing section  :  <br> 
+                                                        <span class=one></span> // importing the [logo image] from the images folder for best pracitise => to be used in {NavBar} :  <br>
+                                                        <span class=one></span> import logo from  '../images/logo.svg' ; <br> <br>
+                                                        
+                                                        <span class=one></span> import React from "react"; <br>
+                                                        <span class=one></span> import { Col, Container, Row } from "react-bootstrap"; <br>
+        
+                                                        <span class=one></span > // importing the [useDisptach] class from [react-redux] to be sued in sendgin the recieved actions methods into the reducer and then store : <br>    
+                                                        <span class=one></span>  import { useDispatch} from 'react-redux';   <br>
+        
+                                                        <span class=one></span>  // importing the [getMovieSearch] defined action  method  from [ movieAction.js] to be used to send the dispatch mehtod to reducer method : <br>   
+                                                        <span class=one></span> import {  getAllMovie , getMovieSearch } from '../redux/actions/movieAction'; <br>
+                                                        // ------------------------------------------ <br> <br>
+        
+                                                        <span class=one></span> //  Define the [B: Second function] : [dynamic live searching] method :  <br>   
+                                                        <span class=one></span> const NavBar = () => { <br>
+                
+                                                            <span class=two ></span> // 1] Define the disptach extracted method :  <br>
+                                                            <span class=two></span> const dispatch = useDispatch() ; <br> <br>
+            
+                
+                                                            <span class=two></span> // 2] Define the main method of the searching [according to the redux system ] : <br> 
+                                                            <span class=two></span> const search = async (word) => {
+                                                                <span class=three></span> if (word === "") {  <br>
+                                                                    <span class=four></span>  // Executing the first action method {getAllMovie} incase of inserted value of the input [if this value is empty] : <br>
+                                                                    <span class=four></span> dispatch(getAllMovie()); <br> 
+                                                                <span class=three></span> } else { <br>
+                                                                    <span class=four></span> //  Executing the second action method {getMovieSearch(word)} according to recived  value  of inserted value of the input [of this vallue is NOT empty] : <br>
+                                                                    <span class=four></span> dispatch(getMovieSearch(word)); <br>
+                                                                <span class=three></span> }  <br> 
+                                                            <span class=two></span> };  <br> <br>
+        
+                                                            <span class=two></span> // 3] Define the parent searching container =>  to prevent the infite executive looping : <br>
+                                                            <span class=two></span> const onSearch = (word) => { <br>
+                                                                <span class=three></span>  // passing through the parameter (word) [comming from the input value element] of the parent function  into the  functional parameter {search} :  <br> 
+                                                                <span class=three></span> search(word); <br>
+                                                            <span class=two></span> }; <br>
+                                                            // ------------------ <br>  <br>
+            
+                                                        <span class=two></span> return ( <br>
+                                                            <span class=three></span> &lt; div className="nav-style w-100" &gt;  <br>
+                                                                <span class=four></span> &lt;  Container  &gt;  <br>
+                                                                    <span class= five ></span> &lt;  Row className="pt-2" &gt; <br>
+                                                                        <span class=six></span> &lt; Col xs="2" lg="1" &gt; <br>
+                                                                            <span class=seven></span>  &lt;  a href='/' &gt; <br> 
+                                                                                <span class=eight></span> &lt;  img className="logo" src={logo} alt="logo image" / &gt; <br>
+                                                                            <span class=seven></span> &lt;  / a  &gt; <br>      
+                                                                        <span class=six></span> &lt;  /Col &gt;  <br>  
+         
+                                                                        <span class=six></span> &lt;  Col xs="10" lg="11" className="d-flex align-items-center" &gt; <br>
+                                                                            <span class=seven></span>   &lt;  div className="search w-100"  &gt;   <br>
+                                                                                <span class=eight></span> &lt; i className="fa fa-search"&gt; &lt;/i &gt; <br>
+                                                                                <span class=eight></span> &lt; input <br> 
+                                                                                    <span class=nine ></span> onChange={(e) => onSearch(e.target.value)} <br> 
+                                                                                    <span class=nine></span> type="text" <br>
+                                                                                    <span class=nine></span> className="form-control" <br>
+                                                                                    <span class=nine></span> className="form-control"placeholder="ابحث ..."  /> <br> 
+                                                                                <span class=eight></span> &lt; /div &gt;  <br>
+                                                                            <span class=six></span>   &lt;  /Col &gt; <br>
+                                                                        <span class=five></span>   &lt; /Row &gt;   <br>                                                                 
+                                                                    <span class=four></span>  &lt;  /Container  &gt;   <br>
+                                                                <span class=three></span> &lt;  /div  &gt;  <br>
+                                                            <span class=two></span> ); <br>
+                                                        <span class=one></span> };  <br>  <br>  <br> 
+        
+                                                        <span class=one></span> export default NavBar;  <br>  
+                                                    </code>   
                                                 </li>
-                                                
-                                                <li> { const dataMovies = useSelector( (state) => state.movies)  }  => Define a new extracted variable from the store [after beng assigned by the previous step of updating store by reducer] by using the useSelector </li>
-                                            </ul>
+                                            </ol> 
+                                        </li>
 
-                                        </li> <br>
-                                    </ol>                            
-                                </li>
-                            </ul>
-                        </li>  <br><br> 
+                                    </ul>
+                                </li> <br>
 
-                        <li> 3]  Adjusting and updating  {MoviesList.js} component file of {MoviesList} by adding all related codes of the Second function of [Dynamic Live seacrh]  & third fucion [Getting the current page for Pagininastion   ]  according to using {middleware} & {redux-thunk} system , as following :    <br>  
-                            <ul> 
-                                <li> Second Function : Define the dynamic live searching method  ,  as following :  <br>
+                                <li> Third Function : Define the dynamic gettintg the current page value to be sent as parameter to {MovieList} to be used in Pagination  function,  as following :  <br>
                                     <ol> 
                                         <li> a- The importing section , including   :  <br>
                                             <ul>
@@ -1420,53 +1526,22 @@
                                         </li> <br>
                                     </ol>                            
                                 </li>
-
-                                <li> Third Function : Define the dynamic gettintg the current page value to be sent as parmejter to {MovieList} to be used in Pagination  function,  as following :  <br>
-                                    <ol> 
-                                        <li> a- The importing section , including   :  <br>
-                                            <ul>
-                                                <li> { UseSelector } from "react-redux"  => Requrired to extract new store varialbe </li> 
-                                                <li> { useDispatch } from "react-redux"  => Requried to extract  the disptach method to be used to send the action method into the {Reducer} main method   </li> 
-                                                <li> { getAllMovie } from "../redux/actions/movieAction";   => the main action defined method within the redux    </li> 
-                                            </ul>
-                                        </li> <br>
-  
-                                        <li> b- The sent props int the {MoviesList} component :  <br>
-                                            <ul>
-                                                 <li> { movies}  =>  must be removed from the main {MoviesList} functional component [because we dont need it now]     </li> 
-                                            </ul>
-                                        </li> <br>
-  
-                                        <li> c- Defined Variables and Functions =>  [inside the functional component and before the main return ]  :  <br>
-                                            <ul> 
-                                                <li> { const [movies, setMovies] = useState([]) } => Defined variable of useState of [the movie card] ->  to use it as  local data storege of extracted store variable    </li>
-                                            
-                                                <li> { const dispatch = useDispatch() } => the new Extracted dispatch method , to be able for  dispatching the imported action method [getAllMovie] </li>
-                                                
-                                                <li> { useEffect( () => {} ) } => the defined useEffect to be used twice in :  <br>
-                                                    <ol>
-                                                        <li> First usage  : using useEffect() for Dispatching the imported  action method:{getAllMovie()} -> to get all movies data from API in the first rendering and send it into the {Reducer} to save the data inside the  {Store}   before extracting a new store {dataMovies} below    </li>
-                                                        <li> Second usage : using useEffect() to render the obtained data stored by [dataMovies]  each time the  page is being Re-rendered [defined after the define the extracted Store:{dataMovies} ]   </li>
-                                                    </ol>
-                                                </li>
-                                                
-                                                <li> { const dataMovies = useSelector( (state) => state.movies)  }  => Define a new extracted variable from the store [after beng assigned by the previous step of updating store by reducer] by using the useSelector </li>
-                                            </ul>
-
-                                        </li> <br>
-                                    </ol>                            
-                                </li>
-                            </ul>
+        
+                            </ol>              
+                        </li> <br> <br></br>
+                          
+                        <li> Converting [ {Third function}: [live searching] according to inserted value inside the input ]  according to Redux system : <br>
+                        
+                        
                         </li>
-
-                    </ol>              
+                    </ol>
                 </p> <br> 
             </h1> <br>
      
        
             <h1> Vip Note about the data flowing beteen the  {Action} Method -> {Reducer}    : <br>
                 <ol>  
-                    <li> One of  the main purpose of using Redux system is to cleaning loig codes of main functions  existed in the [App.js] before the return  </li>
+                    <li> One of  the main purpose of using Redux system is to cleaning logic codes of main functions  existed in the [App.js] before the return  </li>
                 </ol>
                 
             </h1>

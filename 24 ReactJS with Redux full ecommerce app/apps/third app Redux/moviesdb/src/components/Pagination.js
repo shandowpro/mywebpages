@@ -18,26 +18,25 @@
   // import axios from "axios"; 
 
 
-
   // B] Define the main fuctional conponent  section : 
    const PaginationComponent = () => {
 
   // [C: third function] => Define a seperated pagination function [with parmater of recieved value of current page ] of getting the curent page from pagination to send it the {MoviesList} component :
   
-  // Define a state variable  to store the current pages count : 
+  // Define a state variable to store the current pages count as a state variable [to be later to store the extracted store value inside it]  : 
     const [pagesCount, setPagesCount] = useState(0)   
 
 
   // Extracting a dispatch metod from the {useDispatch} :
     const dispatch = useDispatch() ; 
   
-  // Define a variable of extracted store of a certain value: 
+  // Define a variable of current [pageCount] extension value extracted  from {store}  : 
     const pages = useSelector( (state) => state.pageCount  )
 
 
-  // Use the {useEffect} to assign the extreacted value of [state.pageCount] got from  store :
+  // Use the {useEffect} to assign the extracted value of [state.pageCount] got from store :
     useEffect(()=> {
-      // Dynamic Method of Assigning {total_pages} inside the [pagesCount] defined state [asccorditng to defeined store variable ] => for the only first rendering   :
+      // Dynamic Method of Assigning {total_pages} inside the [pagesCount] defined state [accorditng to defeined store variable ] => for the only first rendering :
         setPagesCount(pages) ;
     } , [] )
     
@@ -49,7 +48,7 @@
     // };
 
 
-  // Define the {onPageChange} method of the handling the ReactPaginate responding when click on one buttons of pagination :
+  // Dispatching the action method of { getPage(page)} via the handling the ReactPaginate responding when click on one buttons of pagination [according to the got value of selected page]  :
   const handlePageClick = (data) => { 
     //  Dispathcing the imported action method according to the got parameter value of pagination component  :
     // Assinging the value  of page value [with using the [+1] to prevent the array count]  :

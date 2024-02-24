@@ -30,9 +30,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
  // The first funcion of [getting all movies data] has been moved into the {redux/actions/MoviesList.js} by using the redux system  
 // -----------------
-// The second funcion of [live searching] according to inserted valieu inside tee input   has been moved into the {redux/actions/MoviesList.js} by using the redux system  
+// The second funcion of [live searching] according to inserted value inside the input   has been moved into the {redux/actions/MoviesList.js} by using the redux system  
 // -----------------
-// The Third funcion of  [get current page ] according to 
+// The Third funcion of  [get current pagee's count] according to reutnred value of api value {data.total_pages} according to parameter [page] of               
   
   // -------------------
 
@@ -46,10 +46,7 @@ function App() {
             <Route
               path="/"
               element={
-                <MoviesList
-                  // getPage={getPage}
-                  // pagesCount={pagesCount}
-                />
+                <MoviesList/>
               }
             />
             <Route path="/movie/:id" element={<MovieDetails />} />
