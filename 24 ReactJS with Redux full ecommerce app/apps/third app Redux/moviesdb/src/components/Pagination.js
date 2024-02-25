@@ -40,7 +40,7 @@
         setPagesCount(pages) ;
     } , [] )
 
-    // Dispatching the action method of { getPage(data.selected + 1) } within the handling function the ReactPaginate responding when click on one buttons of pagination [according to {data} paramater - the gotten value of selected page -]  :
+    // Getting the jretgurtned data of object [including the value of {total_pages}] by  Dispatching the action method of { getPage(data.selected + 1) } within the handling function the ReactPaginate responding for [each  click on one buttons] of pagination [according to {data} paramater - the gotten value of selected page -]  :
     const handlePageClick = (data) => { 
       //  Dispatching the imported action method {getPage()} with assigning  parameter {current page} - gotten from pagination component -   [by  using the [+1] to prevent the array count]   :
       dispatch(getPage(data.selected + 1)); 

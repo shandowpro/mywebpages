@@ -31,7 +31,7 @@ import { getAllMovie } from "../redux/actions/movieAction";
 
 // define {MoviesList}  with using parmanters {getPage , pagesCount} of     :        
 // const MoviesList = ({ getPage , pagesCount }) => {
-const MoviesList = ({ getPage , pagesCount }) => {
+const MoviesList = () => {
   
   // All following logic codes has been comming from the main component {App} [accordign to the Redux] : 
   
@@ -70,7 +70,7 @@ const MoviesList = ({ getPage , pagesCount }) => {
       )}
 
       {movies.length >= 1 ? (
-        <PaginationComponent getPage={getPage} pagesCount={pagesCount} />
+        <PaginationComponent />
         ) : null  
       }
       
