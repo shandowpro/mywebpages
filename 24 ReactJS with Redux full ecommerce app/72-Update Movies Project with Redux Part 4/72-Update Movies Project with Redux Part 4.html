@@ -1495,7 +1495,7 @@
                         </li> <br> <br></br>
                           <!-- --------------------------- -->
 
-                        <li> Converting [ {Third function}: [ Dynimc pagination ] according to  gotten value of the current page ]  according to Redux system : <br>
+                        <li> Converting [ {Third function}: [ Dynamic pagination ] according to gotten value of the current page ]  according to Redux system : <br>
                             
                             <ol>
                                 <li>  1] {movieAction.js} =>  Updating the built action method of Third  Method {getPage} of the application {getAllMovie}  [ getting the current pages count method [acccording to the got parameter of current page value ]  by using the new concept of redux [higher order function] the following :   <br>
@@ -1530,7 +1530,7 @@
                                         <span  class="one"></span>  } <br>           
                                                  
                                     </code>
-                                </li> <br>
+                                </li> <br> <br>
                                 
                                 
                                 <li> 2]  Adjusting and Cleaning the {App.js} by removing all related codes of  the Third function of [getting the current pages count method [acccording to the got parameter of current page value ]] , as following :      <br>
@@ -1552,17 +1552,22 @@
         
                                         <li> c- Defined Variables and Functions =>  [inside the functional component and before the main return ]  :  <br>
                                             <ul> 
-                                                <li> { const [ pagesCount , setPagesCount] = useState([]) } => Defined variable of useState of [ current page count ] ->  to use  be assigned by extracted store variable [pages]    </li>
+                                                <li> { const [ pagesCount , setPagesCount] = useState([]) } => Defined variable of useState of [ current page count ] ->  to use be assigned by extracted store variable [pages] <br> 
+                                                    <p> Note => we used the state to store the value of {pageCount} and just onluy the extracted value from the store =>  [to gain  dynamic changing in the value ] </p>
+                                                </li>
                                             
                                                 <li> { const dispatch = useDispatch() } => the new Extracted dispatch method , to be able for  dispatching the imported action method [getPage(pages)] to the reducer with  asssined value of parameter   </li>
                                                 
-                                                <li> { useEffect( () => {} ) } => the defined useEffect to be used once in :  <br>
+                                                <li> { const pages = useSelector( (state) =>  state.pageCount ) } =>  define  Extracted  variable  of {pageCount}  , to be used in storing it isnde  the define stase of [pageCount]         </li>
+                                                
+                                                <li> { useEffect( () => {} ) } => the defined useEffect to be used once in [ for the first rendering ] :  <br>
                                                     <ol>
-                                                        <li> using useEffect() for Dispatching the imported action method:{ getPage(pages)} -> to get current page count  from API in the first rendering and send it into the {Reducer} to save the data inside the {Store} after  extracting a new store {pageCount} value    </li>
+                                                        <li> using useEffect() for  assigning  [pageCount] state with the extracted variable from the {store}  of pages Count  value {pages}  </li>
                                                     </ol>
                                                 </li>
+
+                                                <li> using handlePageClick(data) for Dispatching the imported action method:{ getPage(par)} with assiging it's parameter  value by the recieved [data]  (with using  extension of selected +1  ) for accureated vlaue of current page value ->  to get and set the value of [store state object parameters ] including the  {total _pages} to be set autmatically inside the pagination bar    </li>
                                                 
-                                                <li> { const dataMovies = useSelector( (state) => state.movies)  }  => Define a new extracted variable from the store [after beng assigned by the previous step of updating store by reducer] by using the useSelector </li>
                                             </ul>
         
                                         </li> <br>
@@ -1586,7 +1591,8 @@
                 
             </h1>
 
-            <h1> Next lesson will => the start of practical solution by  using {Middleware} & {thunk} class from {redux-thunk} library    </h1> 
+            <h1>  This lesson is the last in the updating the {movieDB} application with using Redux system     </h1> 
+            <h1>  Next lessons => will be about the  E-commerce web application       </h1> 
               <hr> <br>
              <!-- ------------------------------------------ -->
 
