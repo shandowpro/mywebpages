@@ -401,8 +401,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">
-            <h2 class="h1" class="hidden-xs"> About Section =>   Planing Project  <span><strong> Theoritcial lseson     </strong> </span> </h2>
-            <h3 class="visible-xs"> About Section => This lesson about <strong>    Planing Project    </strong>   Theoritcial lseson    </span> </h3>
+            <h2 class="h1" class="hidden-xs"> About Section =>   Planing Project  <span><strong> Theoritical lesson     </strong> </span> </h2>
+            <h3 class="visible-xs"> About Section => This lesson about <strong>    Planing Project    </strong>   Theoritical lesson    </span> </h3>
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing] Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->
         </div>
     </section>
@@ -1285,7 +1285,7 @@
                 ReactJS [75- Planing Project] Main Topics : <br>
             </header>
 
-
+ 
             <article>
                 <p> &gt; Main Subjects in this lesson will be =>  =>   Planing Project   ,as following : </p>
 
@@ -1295,11 +1295,11 @@
                     <li> Main steps of Planing Project: <br>
                         <ol>
                             <li>  Continuing the previous proposal of the project </li> 
-                            <li>  Revision about the proeject sturcture </li> 
-                            <li>  Working  Action plan on this project  </li> 
+                            <li>  Suggested project structure </li> 
+                            <li>  Vip notes about project  </li> 
+                            <li>  Major Action plan for reactJs projects  , and used one for this project  </li> 
                         </ol>
                     </li>
- 
                      <br> <br>
                 </ol>
             </article>
@@ -1312,10 +1312,173 @@
                 <h3> 75- Planing Project concept : </h3>
             </header>
  
-            <h1> Main Points in this lesson =>      :  <br>       
+            <h1> Main Points in this lesson =>   <br>       
                 <ul>
-                    <li> 1] Main concept of this section course and the project of the [E-commerce]  project : <br>
-                         
+                    <li> 1]  Continuing the previous proposal [inner pages routes  & components ] of the project , with in the  following   sections  :  <br>
+                         <ol>
+                            <li>  [User]  :   <br>
+                                <ul>
+                                    <li>  {Login} inner page route [as a user ]    </li>
+                                    <li>  Several inner pages routes for user functions/tasks :  <br>
+                                        <ol> 
+                                            <li>  {user/allOrders} =>  managing user's  orders  </li>
+                                            <li>  {user/allproducts} =>  managing user's products  </li>
+                                            <li>  {user/favorite} =>  favorite user products </li>
+                                            <li>  {user/address} =>   manage user addresses ,  by next functions :   <br>
+                                                <ul>
+                                                    <li> adding new suear Address => in the same page via button   </li>
+                                                    <li> editing the existed user addresses   =>  via  branched inner page route => {user/edit-address}   </li>
+                                                    <li> remove a existed user addresses   =>  via  button in the same page  </li>                                                 
+                                                </ul>
+                                            </li>
+
+                                            <li>  {user/user-profile} =>   manage [add , edit , remove ] user profile personal inforamaion , including  following  : <br> 
+                                                <ul> 
+                                                    <li>  User name   </li>
+                                                    <li>  User phone  </li>
+                                                    <li>  User e-mail  </li>
+                                                    <li>  change User password   </li>
+                                                </ul>
+                                            </li>
+                                            
+                                        </ol>
+                                    </li>
+                                </ul> 
+                            </li>   <br>
+ 
+                            <li>  [Admin]  :   <br>
+                                <ul>
+                                    <li>  {Login} inner page route [as a Admin ]   </li>
+                                    <li>  Several inner pages routes for Admin  functions/tasks :  <br>
+                                        <ol> 
+                                            <li>  {admin/allOrders} =>  managing all users's orders , including the next tasks : <br>
+                                                <ul> 
+                                                    <li> View all overview orders overall information  </li> 
+                                                    <li> access each order controling Tool In-details via the inner page route of {admin/orders/#}  </li> 
+                                                </ul>  
+                                            </li>
+
+                                            <li>  {admin/addbrand} =>  Add  a new brand  </li>
+                                            <li>  {admin/addcategory} =>  Add  a new product's Category   </li>
+                                            <li>  {admin/addsubcategory} =>  Add  a new product's Sub Category   </li>
+                                            <li>  {admin/addproducts} =>  Add  a new product with full details , indding  the folllowing : <br>
+                                                <ol>
+                                                    <li> Product Name   </li>
+                                                    <li> Product Image    </li>
+                                                    <li> Product  Category     </li>
+                                                    <li> Product Sub Category   </li>
+                                                    <li> Product Description     </li>
+                                                    <li> Product Brand </li>
+                                                    <li> Product Price  before the discount       </li>
+                                                    <li> Product Price  [final after applying the discount ] </li>
+                                                    <li> Product available Colors [multiple ]  </li>
+                                                </ol>
+                                            </li>
+                                              
+                                        </ol>
+                                    </li>
+                                </ul> 
+                            </li>   <br>
+  
+                         </ol>
+                    </li>  <br> <br>
+                    
+                    
+                    <li> 2]  Suggested  project structure :   <br>   
+                        <p> There is no fixed structure for a project , but the following will be a best pracites for this  project    :  <br>
+                            <ol>
+                                <li>   [public] folder      </li>                              
+                                <li>   [src] folder , including  the following : <br> 
+                                    <ul> 
+                                        <li>  [Components] folder  => including all project components files, and including the follwoing fies :  <br>
+                                            <ol> 
+                                                <li> Admin </li>
+                                                <li> Auth  </li>
+                                                <li> Brand  </li>
+                                                <li> Cart   </li>
+                                                <li> Category  </li>
+                                                <li> Chekout  </li>
+                                                <li> Home    </li>
+                                                <li> Products </li>
+                                                <li> User     </li>
+                                            </ol>    
+                                        </li>
+                                        
+                                        <li>  [Images] folder  => including all project images  </li>
+                                        
+                                        <li>  [Page] folder  => including all project pages files  as following  :  <br> 
+                                            <ol> 
+                                                <li> Admin </li>
+                                                <li> Brand  </li>
+                                                <li> Cart   </li>
+                                                <li> Category  </li>
+                                                <li> Chekout  </li>
+                                                <li> Home    </li>
+                                                <li> Products </li>
+                                                <li> User     </li>
+                                                <li> Rate   </li>
+                                                <li> Utility  </li>
+                                            </ol>
+                                        </li>
+
+                                        <li>  [App.js ] file   =>  the main asssembling file   </li>
+                                        <li>  [index.js ] file   =>  the main Basic file of all project   </li>
+                                        <li>  [index.css ] file   =>  the main css file of all project   </li>
+                                        <li>  [.gitignore ] file   =>   conains  all  ignoroed files of all project   </li>
+                                        <li>  [package.json] file   => installed and dowloaded  librereies  of all project   [ediable]   </li>
+                                        <li>  [package-locked.json] file   => installed and dowloaded  librereies  of all project [locked ]    </li>
+                                    </ul>
+                                </li>    
+                            </ol>
+                        </p>
+                    </li> 
+
+
+                    <li> 3] Vip notes about project  :  <br> 
+                        <ol>
+                            <li> This project may inlcudie about  [15 -> 20 ] inner  pages , or more [maybe added in the future ]    </li> 
+                            <li> One of the most important steps of project planning is [detecting the Libraries and plugins  of the project could be used ,  but needed to be tested before used in general project ]  </li> 
+                            <li> Single inner page route is a dynami route [products/:id]   </li> 
+                            <li> Some Elements  in the  project may use a special library , such as: <br>
+                                <ol> 
+                                    <li> 'Evaluation star Rating'   </li>
+                                    <li> 'Product images slider with inspector zooming effect'  </li>
+                                    <li> Special  'Drop down menu'  for the ordering products tool  </li>
+                                 </ol>                               
+                            </li> 
+                        </ol>
+                    </li>
+ 
+                    <li> 4] Working Action plan on this project  :  <br> 
+                        <p> Theres are (2) main general public  methods or action plans as following :    <br>
+                            <ol>
+                                <li> First action plan common type [part by part] :  <br>
+                                    <ul> 
+                                        <li>  Create the project files structure  </li> 
+                                        <li>  Design the main Home page Template + all it's  included components      </li> 
+                                        <li>  Develop the main Home page Logic + all it's  included components    </li> 
+                                        <li>  Design the  next page Template + all it's  included components      </li> 
+                                        <li>  Develop the next page Logic + all it's  included components    </li> 
+                                    </ul>
+
+                                    <p> This recommended in this case of :  <br>
+                                        => the expert developers  can use this method   
+                                    </p>
+                                </li> <br> 
+                                
+                                <li> Second action plan common type [all design template  +  all logic develop]  => [will be used in this project ] :  <br>
+                                    <ul> 
+                                        <li>  Create the project files structure  </li> 
+                                        <li>  Design the All project pages Template + all pages included components   </li> 
+                                        <li>  Develop the logic All project pages Template + all all pages included components     </li> 
+                                    </ul>
+
+                                    <p> This recommended in this case of :  <br>
+                                        => recommended for beginners  developers    
+                                    </p>
+                                </li> <br> 
+                            </ol>
+                        </p>
                     </li>
  
                 </ul> 
