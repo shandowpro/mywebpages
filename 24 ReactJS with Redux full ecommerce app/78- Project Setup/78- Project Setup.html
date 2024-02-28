@@ -1287,14 +1287,16 @@
 
  
             <article>
-                    <p> &gt; Main Subjects in this lesson will be =>  =>   Design E-commerce Project Section Intro  , as following : </p>
+                    <p> &gt; Main Subjects in this lesson will be =>  =>  project creating and setup vai  CMD  , as following : </p>
 
                 <h2> Main Subjects : </h2>
 
                 <ol type="A">
-                    <li> Main steps of Project setup : <br>
+                    <li> Main steps of Project setup , including the  following steps   : <br>
                         <ol>
-                            <li>       </li>
+                            <li> {Poject name} & {added Libraries}   </li>
+                            <li> building the project files sturcture    </li>
+                            <li> Adjusting the basic files project </li>
                         </ol>
                     </li>
                      <br> <br>
@@ -1311,43 +1313,40 @@
  
             <h1> Main Points in this lesson =>   <br>       
                 <ul>
-                    <li> [*]   Main breifly project  features  , with in the  following pionts :  <br>
+                    <li>  {Poject name} & {added Libraries}  :  <br>
                         <ol>
-                            <li>  the project will use a real dynamic data from a real backend  api        </li>   
-                            <li>  the project will  inlude full functions , even the [ online payment - via real {Visa}  ]       </li>   
-                            <li>  the project in the first   part will use static data for viewing purpose </li>   
-                            <li>  this course focus on the Real tasks and funcions that usuallly used in real life of woriking generally , and for the simmler project </li>   
-                            <li>  the pagination in all pages will return a real data [ at final part  ]      </li>   
-                            <li>  the project contians a full controlling features  for [admin] on :  <br>
+                            <li> project name is : {ecommerce-webapp}   </li>
+                            <li> installed libraries [start basic] , are as following :  <br>
                                 <ul> 
-                                    <li> [Add/edit Products details]  =>  including : <br>
-                                        <ol> 
-                                            <li> Add multiple Images </li>
-                                            <li> Add multiple Colors </li>
-                                            <li> Add/manage Main Categories  </li>
-                                            <li> Add/manage Sub Categories => for multiple layers [first , second , third categorires  ]  </li>
-                                            <li> Add/manage Brands   </li>
-                                        </ol>
-                                    </li> 
-                                    <li> [Users orders] => [review , edit , delete ]  </li> 
+                                    <li> [react-bootstrap]   </li>
+                                    <li> [react-route-dom]     </li>
+                                    <li> [font-awesome]     </li> 
                                 </ul>    
                             </li>
-
-                            <li>  the project contians a full controlling features  for [user] on :  <br>
-                                <ol> 
-                                    <li> all his orders   </li>
-                                    <li> all is favarites list  </li>
-                                    <li> all his personal addresses    </li>
-                                    <li> all his personal information , including  => [name , phone , Email , changing password] </li>
-                                </ol>
-                            </li>
-
-                            <li> Full feaures of {login} and {singup}  for both  [admin] & [user]   </li>
-
                         </ol>          
                     </li>  <br> <br>
 
-                    <li> This lesson is the intro lessson of the First part of [E-commerce] project {Desinging}   </li>  
+                    <li>  building the project files sturcture : <br>
+                        <ol>
+                            <li> [public]  folder , including : <br> 
+                                <ol> 
+                                    <li> [index.html ] </li> 
+                                </ol>    
+                            </li>
+                            <li> [src] folder , including   :     <br> 
+                                <ol> 
+                                    <li> {index.js}    </li>
+                                    <li> {app.js}    </li>
+                                    <li> {index.css}    </li>
+                                </ol>
+                            </li>
+
+                            <li> {.gitingore}  file   </li>
+                            <li> {package.json}  file  </li>
+                            <li> {package-lock.json}   file   </li>
+                            <li> [ node_modules] fodler     </li>
+                        </ol>
+                    </li>
                  
                 </ul> 
             </h1> <br>
@@ -1361,23 +1360,23 @@
              <ol class="codes">
                  <li> Page Sources : </li>
                  
-                 <!-- <code>
+                 <code>
  
                     <h4> (1) Project  files of  main React system :     </h4>
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/public/index.html">  
-                         <button id=btn class="btn0" onclick="display()">  ReactJS  Source code of public HTML file  [index.html] file </button>
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/Ecommerce Web App/ecommerce-webapp/src/index.js">  
+                         <button id=btn class="btn0" onclick="display()">  ReactJS  Source code of public assembling file  [index.js] file </button>
                      </a> <br> <hr> <br> 
                        
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/index.css">  
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/Ecommerce Web App/ecommerce-webapp/src/index.css">  
                          <button id=btn class="btn0" onclick="display()">  ReactJS Source code of custom formating css properties file JS [index.css] file </button>
                      </a> <br> <hr> <br> 
                       
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/App.js">  
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/Ecommerce Web App/ecommerce-webapp/src/App.js">  
                          <button id=btn class="btn0" onclick="display()">  ReactJS Source code of main [App] file {Main Component} [App.js] file </button>
                      </a> <br> <hr> <br> 
                       
 
-                     <h4> (2) Project  files of  main Redux  system :     </h4>
+                     <!-- <h4> (2) Project  files of  main Redux  system :     </h4>
                      <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/redux/store/store.js">  
                          <button id=btn class="btn0" onclick="display()">   ReactJS Redux Source code of main  Redux [storeAll] variable in exteranal [store.js] file </button>
                      </a> <br> <hr> <br> 
@@ -1394,8 +1393,8 @@
                      <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/redux/actions/movieAction.js">  
                          <button id=btn class="btn0" onclick="display()">  ReactJS Redux Source code action methods [getAllMovies] file JS [movieAction.js] file </button>
                      </a> <br> <hr> <br> 
-                     
-                     <h4> (3) Project  files of  main  Compoents  :     </h4>
+                      -->
+                     <!-- <h4> (3) Project  files of  main  Compoents  :     </h4>
                      
                      <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/components/NavBar.js">  
                          <button id=btn class="btn0" onclick="display()">  ReactJS Source code of [Navbar] component  JS [NavBar.js] file </button>
@@ -1415,16 +1414,16 @@
 
                      <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/components/Pagination.js">  
                          <button id=btn class="btn0" onclick="display()"> ReactJS Source code of [Pagination] component  file JS [Pagination.js] file </button>
-                     </a> <br> <hr> <br> 
+                     </a> <br> <hr> <br>  -->
 
  
-                     <h4>  (4) Project  files of all downloaded and setup libraries of  main React project  :  </h4>    
+                     <!-- <h4>  (4) Project  files of all downloaded and setup libraries of  main React project  :  </h4>    
                      <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/package.json">  
                          <button id=btn class="btn0" onclick="display()"> Source main ReactJS [package file]  of project  file JS [package.json] file </button>
                      </a> <br> <hr> <br> 
   
-                      
-                 </code> -->
+                       -->
+                 </code>  
              </ol>
              <br> <hr>
         </section>
