@@ -12,11 +12,11 @@
     <!-- First Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta content="Learning ReactJS Course" description="This is Lesson 3 Segmentaion of main page ">
+    <meta content="Learning ReactJS Course" description="This is Lesson 3 Segmentaion of main page and Dark mode ">
 
-    <title> 3 Segmentaion of main page </title>
+    <title> 3 Segmentaion of main page and Dark mode </title>
 
-    <link rel="stylesheet" href="3 Segmentaion of main page.css" media="all">
+    <link rel="stylesheet" href="3 Segmentaion of main page and Dark mode.css" media="all">
 
     <link rel="stylesheet" href="css/bootstrap.min.css" media="all">
 
@@ -239,7 +239,7 @@
 
     <!-------------------------------------------------------------------------------------------------------->
     <header id="Main" class="Main wow fadeInDown" data-wow-duration="1s">
-        3 Segmentaion of main page
+        3 Segmentaion of main page and Dark mode
     </header>
 
     <!-------------------------------------------------------------------------------------------------------->
@@ -277,7 +277,7 @@
                             Hot Links <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#3 Segmentaion of main pageSection" target="_self" class="3 Segmentaion of main pageLink"> Lesson 3 Segmentaion of main page </a></li>
+                            <li><a href="#3 Segmentaion of main page and Dark modeSection" target="_self" class="3 Segmentaion of main page and Dark modeLink"> Lesson 3 Segmentaion of main page and Dark mode </a></li>
 
                             <li role="separator" class="divider"></li>
 
@@ -327,7 +327,7 @@
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
         <span> Welcome to Fullstack ReactJS   E-commerce App  Course | </span> <br>
-        3 Segmentaion of main page
+        3 Segmentaion of main page and Dark mode
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
     <!-- Options Tool box -->
@@ -401,8 +401,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">
-            <h2 class="h1" class="hidden-xs"> About Section =>  Segmentation of the main page into a components  <span><strong>  starting creating the main page components files </strong> </span> </h2>
-            <h3 class="visible-xs"> About Section => This lesson about <strong>   Segmenting the main page   </strong> starting creating the main page components files     </span> </h3>
+            <h2 class="h1" class="hidden-xs"> About Section =>  Segmentation of the main page into a components  <span><strong>  starting creating the main page components files + applying dark mode  </strong> </span> </h2>
+            <h3 class="visible-xs"> About Section => This lesson about <strong>   Segmenting the main page   </strong> starting creating the main page components files + applying dark mode     </span> </h3>
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing] Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->
         </div>
     </section>
@@ -1282,7 +1282,7 @@
     <div class="Post" id=post>
         <Section id="MainC" class="MainC">
             <header>
-                ReactJS [3 Segmentaion of main page] Main Topics : <br>
+                ReactJS [3 Segmentaion of main page and Dark mode] Main Topics : <br>
             </header>
 
             <article>
@@ -1306,7 +1306,7 @@
         <!------------------------------------------------------------------------------>
         <section class="JSDOMCon" id="JSDOMCon">
             <header>
-                <h3> 3 Segmentaion of main page concept : </h3>
+                <h3> 3 Segmentaion of main page and Dark mode concept : </h3>
             </header>
  
             <h1> A]   Main layout of the main page 's components  , as following steps : <br>
@@ -1351,7 +1351,8 @@
                             </ol>
                         </li>
 
-                        <li>  [public] folder =>  {main.html}   </li>
+                        <li> [public] folder => is empty for now [will hold the public accessed used files only]  , [NOT incliude the index.html file as it is in the default react]    </li>
+                        <li> {index.html}  =>  is the main HTML file to display the whole App and other imported components files </li>
                     </ul>
                 </p>
 
@@ -1359,20 +1360,139 @@
      
             <h1> B] Creating the First group of components files of the main page {header} and it's children components { src/components/header/header1/2/3.jsx}    :  <br> 
                 <ol> 
-                    <li>   {} : <br>
-
-
+                    <li>  {Header1/2/3.jsx} : each one will be as following [before applying the light / dark mode ] :    <br>
+                        <code>
+                            <span class=one></span> // Define the main functional component   :   <br>
+                            <span class=one></span> const Header1/2/3  = () => { <br>
+                                <span class=two></span> return ( <br>
+                                    <span class=three></span> &lt; div  &gt; <br>
+                                        <span class=four></span> &lt; h1  &gt;  Hello from the header1/2/3 &lt; /h1  &gt;  <br>
+                                    <span class=three></span> &lt; /div  &gt;  <br>
+                                <span class=two></span> )    <br>
+                            <span class=one></span> }   <br>
+                            <span class=one></span> export default Header1/2/3 ;   <br>
+                            <hr><br>
+                        </code>
                     </li>
                 </ol>
             </h1>   <br> <hr> <br>
 
 
-            <h1> Creating the [Dark/light]  mode file inside the project , using the [MUI] library  :   <br>
-                
-            
-            
-            
-            
+            <h1> Creating/applying the [Dark/light]  mode file inside the project , using the [MUI] library , by next steps   :   <br>
+                <ol> 
+                    <li> 1]  creating new file of {theme.jsx} inside the [src] folder   , and add all codes in the sources code within the  same file in repo : {mui-drk-mode}    </li>
+                    <li> 2]  Adjusting the file of {App.jsx} , by wrapping the elment of  the  {mui-dark-mode} over exsited codes inside , as folllowing  : <br>
+                        <code> 
+                            // 1] importing the defined components :  <br>
+                           <span class="one"></span> import Header1 from "./components/header/Header1"; <br>
+                           <span class="one"></span> import Header2 from "./components/header/Header2"; <br>
+                           <span class="one"></span> import Header3 from "./components/header/Header3"; <br> <br>
+                            
+                            
+                            // 2] importing the mui darkmode components and classes :  <br>
+                            <span class="one"></span> import Typography from "@mui/material/Typography"; <br>
+                            <span class="one"></span> import { CssBaseline, ThemeProvider } from "@mui/material"; <br>
+                            <span class="one"></span> import { ColorModeContext, useMode } from "./theme"; <br>
+                            <span class="one"></span> import { Outlet } from "react-router-dom"; <br> <br>
+                        
+
+                            <span class="one"></span> function App() { <br>
+                                <span class="two"></span> const [theme, colorMode] = useMode(); <br>
+                              
+                                <span class="two"></span> return ( <br>
+                                    <span class="three"></span> &lt; ColorModeContext.Provider  <br>
+                                        <span class="four"></span> // @ts-ignore <br>
+                                        <span class="four"></span> value={colorMode} <br>
+                                    <span class="three"></span> > <br>
+
+                                    <span class="three"></span> &lt; ThemeProvider <br>
+                                        <span class="four"></span> // @ts-ignore <br> 
+                                        <span class="four"></span> theme={theme} <br>
+                                        <span class="four"></span> > <br>
+                                      
+                                        <span class="four"></span> &lt; CssBaseline / &gt;  <br>
+                              
+                                        <span class="four"></span> // The following is the main content of the App page   :   <br> 
+                                        <span class="four"></span> &lt; div &gt;  <br> 
+                                            <span class="five"></span> &lt; h1 &gt;  Hello from the main app  &lt; /h1 &gt; <br> 
+                                            <span class="five"></span>  &lt; Typography variant="h3" &gt;  Header &lt; /Typography &gt;
+                                            <span class="five"></span> &lt; Outlet / &gt;  <br>
+                              
+                                            <span class="five"></span> &lt; Header1 /&gt; 
+                                            <span class="five"></span> &lt; Header2 /&gt; 
+                                            <span class="five"></span> &lt; Header3 /&gt; 
+                                        <span class="four"></span> &lt; /div &gt; 
+                                    <span class="three"></span> &lt; /ThemeProvider &gt; <br>
+                                <span class="two"></span> &lt; /ColorModeContext.Provider &gt; <br> 
+                            <span class="one"></span> ); } <br>
+                            <br>
+                              
+                            <span class="one"></span> export default App; <br>
+
+                        </code>                                    
+                    </li> <br>
+
+                    <li> 3] Adjusting each file  of [components] to be applied by dark/light mode    : <br> 
+                        <code>
+                            <span class="one"></span> // improrting section [importign the required clqasses and components for applying  the  mui into this component  ] :    <br>
+                            <span class="one"></span> import React from "react"; <br>
+                            <span class="one"></span> import { useContext } from "react"; <br>
+                            <span class="one"></span> import { ColorModeContext } from "../../theme" ; <br>
+                            <span class="one"></span> import { IconButton, useTheme } from "@mui/material"; <br>
+                            <span class="one"></span> import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";  <br>
+                            
+                            <span class="one"></span>   const Header1 = () => { <br>
+                                <span class="two"></span> // Before the return section :    <br>
+                                <span class="two"></span> const colorMode = useContext(ColorModeContext); <br>
+                                <span class="two"></span> const theme = useTheme(); <br>
+                              
+                                <span class="two"></span> return ( <br>
+                                    <span class="three"></span> // This is the main container of component return :  <br>
+                                    <span class="three"></span> &lt; div &gt; <br>
+                                        
+                                        <span class="four"></span>  // This is main conainer of imported [mui] library :   <br>
+                                        <span class="four"></span> &lt; div &gt; <br>
+                                            <span class="five"></span> {theme.palette.mode === "light" ? ( <br>
+                                                <span class="six"></span> &lt;  IconButton  </br>
+                                                    <span class="seven"></span> onClick={() => { <br>
+                                                        <span class="eight"></span> localStorage.setItem( <br>
+                                                            <span class="nine"></span>    "mode",
+                                                            <span class="nine"></span> theme.palette.mode === "dark" ? "light" : "dark" <br>
+                                                        <span class="eight"></span> ); <br>
+                                                        <span class="eight"></span> colorMode.toggleColorMode(); <br> 
+                                                    <span class="seven"></span> }} <br><br>
+                                                    <span class="seven"></span> color="inherit" <br>
+                                                <span class="six"></span>  &gt;   <br>
+                                                    <span class="seven"></span>  &lt; LightModeOutlined / &gt;  <br>
+                                                <span class="six"></span>  &lt; /IconButton &gt;  <br> <br>
+                                            <span class="five"></span> ) : ( <br> 
+                                                <span class="six"></span> &lt; IconButton <br>
+                                             
+                                                    <span class="seven"></span> onClick={() => { <br> 
+                                                    
+                                                        <span class="eight"></span>  localStorage.setItem( <br>
+                                                            <span class="nine"></span>  "mode",  <br>
+                                                            <span class="nine"></span> theme.palette.mode === "dark" ? "light" : "dark" <br>
+                                                        <span class="eight"></span> ); <br>
+                                                        <span class="eight"></span> colorMode.toggleColorMode(); <br>
+                                                    <span class="seven"></span> }} <br>
+                                                    <span class="seven"></span> color="inherit" <br>
+                                                <span class="six"></span> &gt;  <br>
+                                                <span class="six"></span> &lt; DarkModeOutlined / &gt;  <br>
+                                            <span class="five"></span> &lt; /IconButton &gt;  <br></br>
+                                        <span class="four"></span> )} <br>
+                                    <span class="three"></span> &lt; /div &gt;  <br>
+    
+                                <span class="two"></span> &lt; h1 &gt;  This is header 1  &lt; /h1 &gt; <br>
+                            <span class="one"></span> &lt; /div &gt;  <br>
+                          &lt; /div &gt;  <br>  
+                              ); <br>  };
+
+                            }   <br>
+
+                        </code>
+                    </li> 
+                </ol>
             </h1>
              <br>  <hr> <br>
             <!-- ------------------------------------------ -->
@@ -1384,21 +1504,31 @@
                  
                  <code>
  
-                    <!-- <h4> (1) Project  files of  main React system :     </h4>
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/public/index.html">  
+                    <h4> (1) Project  files of  main [React-Vite] system :     </h4>
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/index.html">  
                          <button id=btn class="btn0" onclick="display()">  ReactJS  Source code of public HTML file  [index.html] file </button>
                      </a> <br> <hr> <br> 
-                       
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/index.css">  
-                         <button id=btn class="btn0" onclick="display()">  ReactJS Source code of custom formating css properties file JS [index.css] file </button>
+                     
+                     
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/main.jsx">  
+                         <button id=btn class="btn0" onclick="display()">  ReactJS Source code of  wrapping application [main] file JS [main.jsx] file </button>
                      </a> <br> <hr> <br> 
-                      
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/App.js">  
-                         <button id=btn class="btn0" onclick="display()">  ReactJS Source code of main [App] file {Main Component} [App.js] file </button>
+
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/App.jsx">  
+                         <button id=btn class="btn0" onclick="display()">  ReactJS Source code of main [App] file {Main Component} [App.jsx] file </button>
                      </a> <br> <hr> <br> 
                       
 
-                     <h4> (2) Project  files of  main Redux  system :     </h4>
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/index.css">  
+                         <button id=btn class="btn0" onclick="display()">  ReactJS Source code of main formating css properties file JS [index.css] file </button>
+                     </a> <br> <hr> <br> 
+                      
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/theme.jsx">  
+                         <button id=btn class="btn0" onclick="display()">  ReactJS Source code of  [light/dark mode] library file JS [theme.jsx] file </button>
+                     </a> <br> <hr> <br> 
+                      
+
+                     <!-- <h4> (2) Project  files of  main Redux  system :     </h4>
                      <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/redux/store/store.js">  
                          <button id=btn class="btn0" onclick="display()">   ReactJS Redux Source code of main  Redux [storeAll] variable in exteranal [store.js] file </button>
                      </a> <br> <hr> <br> 
@@ -1414,37 +1544,36 @@
 
                      <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/redux/actions/movieAction.js">  
                          <button id=btn class="btn0" onclick="display()">  ReactJS Redux Source code action methods [getAllMovies] file JS [movieAction.js] file </button>
-                     </a> <br> <hr> <br> 
+                     </a> <br> <hr> <br>  -->
                      
-                     <h4> (3) Project  files of  main  Compoents  :     </h4>
+                     <h4> (2) Project  files of  main  Compoents  :     </h4>
+                        <h5> (a) Header section Compoents  :     </h5>
                      
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/components/NavBar.js">  
-                         <button id=btn class="btn0" onclick="display()">  ReactJS Source code of [Navbar] component  JS [NavBar.js] file </button>
-                     </a> <br> <hr> <br> 
-
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/components/MoviesList.js">  
-                         <button id=btn class="btn0" onclick="display()"> ReactJS Source code of [Movieslist] component  file JS [MoviesList.js] file </button>
-                     </a> <br> <hr> <br> 
-
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/components/CardMovie.js">  
-                         <button id=btn class="btn0" onclick="display()"> ReactJS Source code of [CardMovie] component  file JS [CardMovie.js] file </button>
-                     </a> <br> <hr> <br> 
-                     
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/components/MovieDetails.js">  
-                         <button id=btn class="btn0" onclick="display()"> ReactJS Source code of [MovieDetals] component  file JS [MovieDetails.js] file </button>
-                     </a> <br> <hr> <br> 
-
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/src/components/Pagination.js">  
-                         <button id=btn class="btn0" onclick="display()"> ReactJS Source code of [Pagination] component  file JS [Pagination.js] file </button>
-                     </a> <br> <hr> <br> 
-
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/header/Header1.jsx">  
+                            <button id=btn class="btn0" onclick="display()">  ReactJS Source code of first [Header1] child  component JS [Header1.js] file </button>
+                        </a> <br> <hr> <br> 
+    
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/header/Header2.jsx">  
+                            <button id=btn class="btn0" onclick="display()">  ReactJS Source code of second [Header2] child  component JS [Header2.js] file </button>
+                        </a> <br> <hr> <br> 
  
+
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/header/Header3.jsx">  
+                            <button id=btn class="btn0" onclick="display()">  ReactJS Source code of third [Header3] child  component JS [Header3.js] file </button>
+                        </a> <br> <hr> <br> 
+ 
+
+
                      <h4>  (4) Project  files of all downloaded and setup libraries of  main React project  :  </h4>    
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../apps/third app Redux/moviesdb/package.json">  
-                         <button id=btn class="btn0" onclick="display()"> Source main ReactJS [package file]  of project  file JS [package.json] file </button>
-                     </a> <br> <hr> <br> 
-   -->
                       
+                         <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/package.json">  
+                             <button id=btn class="btn0" onclick="display()">  ReactJS  Source code of main configuration file [package.json] file </button>
+                         </a> <br> <hr> <br> 
+                           
+                         <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/jsconfig.json">  
+                             <button id=btn class="btn0" onclick="display()">  ReactJS  Source code of JS custom  configuration file [jsconfig.json] file </button>
+                         </a> <br> <hr> <br> 
+                           
                  </code>
              </ol>
              <br> <hr>
@@ -1455,7 +1584,7 @@
 
         <section class="JSDOMImp" id="JSDOMImp">
             <header>
-                <h3> [3 Segmentaion of main page] Importance & Benefits : </h3>
+                <h3> [3 Segmentaion of main page and Dark mode] Importance & Benefits : </h3>
             </header>
             <ul>
 
@@ -1466,7 +1595,7 @@
 
         <section class="JSDOMSyntx" id="JSDOMSyntx">
             <header>
-                <h3> [3 Segmentaion of main page] Syntax & Methods: </h3>
+                <h3> [3 Segmentaion of main page and Dark mode] Syntax & Methods: </h3>
             </header>
 
             <p> =&gt; Scenario Procedures : </p>
@@ -1477,7 +1606,7 @@
         <!------------------------------------------------------------------------------------------------------>
         <section class="JSDOMPract container" id="JSDOMPract">
             <header>
-                <h3> CMD [3 Segmentaion of main page] => {this lesson can be accessed through the github repo [webpages] } </h3>
+                <h3> CMD [3 Segmentaion of main page and Dark mode] => {this lesson can be accessed through the github repo [webpages] } </h3>
             </header>
 
 
@@ -1541,7 +1670,7 @@
     </section>
 
     <script>
-        alert("Welcome to 3 Segmentaion of main page");
+        alert("Welcome to 3 Segmentaion of main page and Dark mode");
     </script>
 
     <!-- Resources files -->
