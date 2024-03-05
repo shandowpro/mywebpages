@@ -6,7 +6,7 @@ import Header2 from "./components/header/Header2";
 import Header3 from "./components/header/Header3";
 
 // 2] importing the [MUI] darkmode components and classes :
-import Typography from "@mui/material/Typography";
+ 
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import { Outlet } from "react-router-dom";
@@ -26,10 +26,9 @@ function App() {
         <CssBaseline />
 
         <div>
-          <h1> Hello from the main app </h1>
-          <Typography variant="h3">Header</Typography>
-          <Outlet />
-
+ 
+        <Outlet />
+        
           <Header1 />
           <Header2 />
           <Header3 />
@@ -40,3 +39,5 @@ function App() {
 }
 
 export default App;
+
+// <Typography variant="h3">Header</Typography>
