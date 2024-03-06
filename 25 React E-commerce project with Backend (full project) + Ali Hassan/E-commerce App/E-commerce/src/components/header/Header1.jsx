@@ -1,19 +1,15 @@
+
+
 import React from "react";
 import { useState, useContext } from "react";
 
 // Importing [dark/light] mode + other elements  from the [mui/material] :
 import { ColorModeContext } from "../../theme";
 import { Box, Container, IconButton, Stack, useTheme } from "@mui/material";
-import {
-  DarkModeOutlined,
-  ExpandMore,
-  LightModeOutlined,
-} from "@mui/icons-material";
+import { DarkModeOutlined, ExpandMore,  LightModeOutlined } from "@mui/icons-material";
 
-// Importing the [socialmedia] icons from the [mui/icons-material] library :
-import TwitterIcon from "@mui/icons-material/Twitter";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
+// Importing the [Typography] icons from the [mui/material/Typography] class library :
+import Typography from "@mui/material/Typography";
 
 // Importing the  [SelectedMenuItem] icons library :
 import List from "@mui/material/List";
@@ -21,16 +17,23 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import Typography from "@mui/material/Typography";
 
-// Requried array for the memuList data  :
+// Importing the [socialmedia] icons from the [mui/icons-material] library :
+import TwitterIcon from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+
+
+
+// Required array variable for the [MemuList data]  :
 const options = ["Ar", "En"];
 
 const Header1 = () => {
+  // Required variables for the dark/linght mode :   
   const colorMode = useContext(ColorModeContext);
   const theme = useTheme();
 
-  //  Requried defined states varilables and functions for the [Menu List item ]    :
+  //  Requried defined states variables and functions for the [Menu List item] :
   const [anchorEl, setAnchorEl] = useState(null);
   const [selectedIndex, setSelectedIndex] = useState(1);
   const open = Boolean(anchorEl);
@@ -59,7 +62,7 @@ const Header1 = () => {
         }}
       >
         <Container>
-          <Stack direction={"row"} alignItems={"center"}>
+          <Stack direction={"row"} alignItems={"center"} >
             <Typography
               sx={{
                 mr: 2,
@@ -165,9 +168,10 @@ const Header1 = () => {
               ))}
             </Menu>
 
-            <FacebookIcon sx={{ fontSize: "16px", color: "#FFF" }} />
-            <TwitterIcon sx={{ fontSize: "16px", color: "#FFF" }} />
-            <InstagramIcon sx={{ fontSize: "16px", color: "#FFF" }} />
+            <FacebookIcon sx={{ fontSize: "16px", color: "#FFF" , margin:"3px" }} />
+            <TwitterIcon sx={{ fontSize: "16px", color: "#FFF" , margin:"3px" }} />
+            <InstagramIcon sx={{ fontSize: "16px", color: "#FFF" , margin:"3px" }} />
+
           </Stack>
         </Container>
       </Box>
