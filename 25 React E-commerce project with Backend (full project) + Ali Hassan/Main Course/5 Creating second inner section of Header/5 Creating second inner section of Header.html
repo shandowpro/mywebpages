@@ -1297,7 +1297,7 @@
                                 <ul>    
                                     <li>  Shopping Cart Icon inner section    </li>
                                     <li>  Search Box & inner menu list [Categories]   inner section  </li>
-                                    <li>  Personal Icon [user settings] + Shopping cart Item   inner section  </li>
+                                    <li>  Personal Icon [user settings] + Shopping cart Item  inner section  </li>
                                     <li>  Vip Notes </li>
                                 </ul>
                              </li>
@@ -1319,8 +1319,70 @@
                     <ol>
                         <li> {ShoppingCartOutlined} It is one of MUI icons type insdie '@mui/icons-material' , and it is being used to add the shopping Cart icon   </li>
                         <li>  {Typography} Texual Icon , and it can be importerd from  "@mui/material/Typography"  </li>
-                        
-                        <!-- im here >>>>>>>>>>>>>>>>>     -->
+                          
+                        <li> The main steps and requirements to use {ShoppingCartOutlined} & {Typography}    as following =>   inside the {Header2.jsx} :  <br> 
+                            <ul>
+                                <li> Importings  : <br> 
+                                    <ol>
+                                        <li> {Box} => MUI element form  '@mui/material' library  => <br> 
+                                            <p> The main parent contianer  in [MUI] to hold all other child container and elemtns isnide it </p>
+                                            <p> will be assgined with some properties with 'sx' attribute    </p>
+                                        </li>  <br>
+ 
+                                        <li> {Stack} => MUI element form  '@mui/material' library  => to as an inner child  container of the whole scripts  , with the folloWing aatributes : <br>
+                                            <ul> 
+                                                <li>  direction={"row"} => beosue the default [display : flex] proeprty with  value of direction  = 'column'  </li>
+                                                <li>  alignItems={"center"} => to align all inner items inside this [Stack] with cetner of the row   </li>
+                                            </ul>                                             
+                                        </li>   <br>        
+                                        
+                                        <li>  Typography => MUI element form  "@mui/material/Typography" library => [it's script can be found inside the formal site of MUI comonents] </li>  
+                                        <li> &lt; Box &gt; => will be used as a Horizontal seperator container [inbetween space] between two {Typography} icons used in this script , by assignng this property of : flexGrow={1} </li>
+
+                                    </ol>
+                                </li> <br>
+                                <li> Inner styling attibute  sx = { {  propertyName : 'propertyValue'  } } for all of elments to assign some css propreties   </li>                                 
+                            </ul>    
+                        </li> 
+                    </ol>       
+                </p> <br>                 
+            </h1> <br> <hr> <br>
+                
+            <h1> B] Adding {Search Box & Inner menu list of Categories}  inner section  , as following steps : <br>
+                <p> {Search Parent contianer } , which including  the following main [2] parts : <br> 
+                    <ol>
+                        <li> First part   : {Input search} => which including the following children : <br>
+                            <ul> 
+                                <li> This the part represent the [input search box]   </li>    
+                                <li> This part has some inner css properties insdie the {sx} attribute    </li>    
+                                <li> This part has (2) children elements , as following  : <br>
+                                    <ol>
+                                        <li> [SearchIconWrapper] => which is inluding (1) chlid element {SearchIcon} </li> 
+                                        <li> [StyledInputBase] =>  which  has  the following properties : <br>
+                                            <ul> 
+                                                <li> [placeholder="Search..."]  => which represent the 'placeholder' attribute of input search   </li> 
+                                                <li> inputProps={ { "aria-label": "search" } }   => which is the ID label of this element </li>
+                                            </ul>    
+                                        </li> 
+                                    </ol>    
+                                </li>    
+                            </ul>                        
+                        </li> <br>
+                          
+                        <li> Second part : {Categories Menu list } part => which including the following children : <br>
+                            <ul> 
+                                <li> This part is about {Menu List - SelectedMenuItem} the same used in the {Header1.jsx}   </li>    
+                                <li> This part will inlude (2) main [MUI] parents elements : [ List:{ListItem: { ListItemText , ExpandMore} } | Menu: { options.map = > {MenuItem} } ]  , as following  : <br>
+                                    <!-- im here >>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+                                    <ol> 
+                                        <li>    </li>
+                                        <li> </li>
+                                    </ol>    
+                                </li>    
+                            </ul>                        
+                        </li> <br>
+                          
+                         
                         <li> The main steps and requirements to use {ShoppingCartOutlined} & {Typography}    as following =>   inside the {Header2.jsx} :  <br> 
                             <ul>
                                 <li> Importings  : <br> 
@@ -1350,7 +1412,41 @@
                 
             </h1> <br> <hr> <br>
                 
-            <h1> B] Adding {Menu List - SelectedMenuItem} icon [1]  , as following steps : <br>
+            
+            
+            <h1> C] Adding Personal Icon [user settings] + [Shopping cart] Item  inner section , as following steps : <br>
+                <p>  The Third inner sectoin will including the following sub [2] parts , wrapped inside the a {Stack} sub container  : <br> 
+                    <ol>
+                        <li> The first part > {IconButton} => : <br>
+                            <ul> 
+                                <li> This element  is about a clickable icon of singing icon  sign {PersonAddAltOutlinedIcon} </li>    
+                                <li> This element has the poroperies of   direction={"row"} alignItems={"center"}   :  </li>    
+                                <li> This element include (1) child => {PersonAddAltOutlinedIcon}   </li>    
+                            </ul>                        
+                        </li> <br>
+                        
+                        <li> The second  part > {IconButton} => : <br>
+                            <ul> 
+                                <li> This element is about a clickable icon of  shopping cart icon sign {ShoppingCartOutlinedIcon} </li>    
+                                <li> This element has the poroperies of aria-label="cart"  </li>    
+                                <li> This element include (1) child  => {StyledBadge} with  [2] main properteis of : <br>
+                                    <ol> 
+                                        <li>  badgeContent={4} : which represent the small number upper on this badge   </li>    
+                                        <li>  color="primary"  :  which represent the colllro of the badge    </li>    
+                                    </ol>
+                                </li>
+                            </ul>                        
+                        </li> <br>
+                            
+                    </ol>       
+                </p> <br> 
+                
+            </h1> <br> <hr> <br>
+                
+            
+             
+            
+            <!-- <h1>  ] Adding {Menu List - SelectedMenuItem} icon [1]  , as following steps : <br>
                 <p> {List | ListItem | ListItemText | MenuItem | Menu } elements  : <br> 
                     <ol>
                         <li> It is one of MUI Menu icons ,  and has inner list of menu items </li>
@@ -1446,32 +1542,9 @@
                 </p> <br> 
                 
             </h1> <br> <hr> <br>
-                
-            <h1> C] Adding {Social Media} icons [3]  , as following steps : <br>
-                <p> { FacebookIcon  , TwitterIcon , InstagramIcon } : <br> 
-                    <ol>
-                        <li> These are type of the UI [icons-material] sub library    </li>
-                        <li>  These icons will be placed  at the last of the {Stack} child container inside the header1      </li>
-                        
-                        <li> The main steps and requirements to use this type of icons as following =>   inside the {Header1.jsx} : :   <br> 
-                            <ul>
-                                <li> Importings  : <br> 
-                                    <ol>                                      
-                                        <li> import TwitterIcon from "@mui/icons-material/Twitter"  </li> 
-                                        <li> import FacebookIcon from "@mui/icons-material/Facebook" </li> 
-                                        <li> import InstagramIcon from "@mui/icons-material/Instagram" </li> 
-                                    </ol>
-                                </li> <br>
-                                <li> Inner styling attibute  sx = { {  fontSize: "16px", color: "#FFF" , margin:"3px"  } } for each of social media icon elements to assign some css propreties   </li>                                 
-                            </ul>    
-                        </li> 
-                    </ol>       
-                </p> <br> 
-                
-            </h1> <br> <hr> <br>
-                
+         -->
 
-            <h1> D] Full final script of {Henader1.jsx} after adding all above elements , as following steps : <br>
+            <h1> D] Full final script of {Henader2.jsx} after adding all above elements , as following steps : <br>
                    <code>  
                        // A] First section  [ Importing ] : <br>
                        <span class="one"></span>  // 1- General Importing :  <br> 
