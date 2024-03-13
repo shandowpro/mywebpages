@@ -1,4 +1,4 @@
-
+// This is the {header1.jsx} the first component of the main header :
 
 import React from "react";
 import { useState, useContext } from "react";
