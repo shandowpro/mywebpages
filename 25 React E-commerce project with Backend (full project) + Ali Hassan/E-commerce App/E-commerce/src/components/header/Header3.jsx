@@ -1,5 +1,6 @@
-// This is the {header3.jsx} the third componont of hte main header  :
+// This is the {header3.jsx} the third component of the main header  :
 
+// A] Import section    :
 // a- importing basic libraries :
 import { useState } from "react";
 
@@ -10,11 +11,10 @@ import {
   Container,
   Drawer,
   IconButton,
-  
   ListItemIcon,
-  // ListItemText,
   Typography,
-  useTheme
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
@@ -31,24 +31,26 @@ import {
   ElectricBikeOutlined,
   LaptopChromebookOutlined,
   MenuBookOutlined,
-  Close
+  Close,
 } from "@mui/icons-material";
 
 // 4- Importing According element and it's  inner children  :
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
+// import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-// 5- importing [List]  and its innner children :
+// 5- importing [List] and its innner children + [MenuIcon - burger menu => customized displayed according to different scales  ( Breakpoints:[sx, sm , md , lg , xl] , useMediaQuerry Hook   )   ]     :
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton  from "@mui/material/ListItemButton";
-import ListItemText  from '@mui/material/ListItemText';
- 
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+// import ExpandMore from "@mui/icons-material/ExpandMore";
+import Links from "./Links";
 
 const Header3 = () => {
-  // Required defined functons and variables for the controling the [Categories Menu] :
+  // B] Inside the component function  Before the return Section    :
+  // 1] Required defined functions and variables for the controling the [Categories Menu] :
   const [anchorEl, setAnchorEl] = useState(null);
 
   const open = Boolean(anchorEl);
@@ -61,10 +63,11 @@ const Header3 = () => {
     setAnchorEl(null);
   };
 
-  // Required theme state for [dark/light] mode color controling for the [categories menu]  :
+  // 2] Required theme state for [dark/light] mode color controling for the [categories menu]  :
   const theme = useTheme();
 
-  // Required defined functons and variables for the controling the [Drawer Menu] :
+  // 3] Required defined functons and variables for the controling the [Drawer Menu] =>
+  // a) with assining the all properties of position  by false    :
   const [state, setState] = useState({
     top: false,
     left: false,
@@ -72,6 +75,7 @@ const Header3 = () => {
     right: false,
   });
 
+  // b) Define the method of controling the [toggling] function   :
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -82,12 +86,15 @@ const Header3 = () => {
     setState({ ...state, [anchor]: open });
   };
 
+  // C] Inside the component function and inside the return Section :
+
   return (
     <Container
       sx={{
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
+        mt:5
       }}
     >
       <Box>
@@ -167,16 +174,28 @@ const Header3 = () => {
           </MenuItem>
         </Menu>
       </Box>
+ 
+      <Links/>
+      <Links/>
+      <Links/>
+      <Links/>
+       
 
-      <IconButton onClick={toggleDrawer("top", true)}>
-        <MenuIcon />
-      </IconButton>
+      { useMediaQuery('(max-width:1000px)') && (
+        <IconButton onClick={toggleDrawer("top", true)}>
+          <MenuIcon />
+        </IconButton>
+      )}
 
       <Drawer
         anchor={"top"}
         open={state["top"]}
         onClose={toggleDrawer("top", false)}
-        sx={{ ".MuiPaper-root.css-1sozasi-MuiPaper-root-MuiDrawer-paper": { height: "100%" } }}
+        sx={{
+          ".MuiPaper-root.css-1sozasi-MuiPaper-root-MuiDrawer-paper": {
+            height: "100%",
+          },
+        }}
       >
         <Box
           sx={{
@@ -194,17 +213,26 @@ const Header3 = () => {
             <Close />
           </IconButton>
 
-        {
-          [
-            {mainLink:'Home' , subLink: ["Link1" , "Link2" , "Link3"] } ,
-            {mainLink:'Mega Menu' , subLink: ["Link1" , "Link2" , "Link3"] } ,
-            {mainLink:'Full screen menu' , subLink: ["Link1" , "Link2" , "Link3"] }  , 
-            {mainLink:'Pages' , subLink: ["Link1" , "Link2" , "Link3"] } , 
-            {mainLink:'User Account' , subLink: ["Link1" , "Link2" , "Link3"] } , 
-            {mainLink:'Vendor Account' , subLink: ["Link1" , "Link2" , "Link3"] } 
+          {[
+            { mainLink: "Home", subLink: ["Link1", "Link2", "Link3"] },
+            { mainLink: "Mega Menu", subLink: ["Link1", "Link2", "Link3"] },
+            {
+              mainLink: "Full screen menu",
+              subLink: ["Link1", "Link2", "Link3"],
+            },
+            { mainLink: "Pages", subLink: ["Link1", "Link2", "Link3"] },
+            { mainLink: "User Account", subLink: ["Link1", "Link2", "Link3"] },
+            {
+              mainLink: "Vendor Account",
+              subLink: ["Link1", "Link2", "Link3"],
+            },
           ].map((item) => {
-            return(
-              <Accordion key={item.mainLink} elevation={0} sx={{ bgcolor: "initial" }}>
+            return (
+              <Accordion
+                key={item.mainLink}
+                elevation={0}
+                sx={{ bgcolor: "initial" }}
+              >
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
@@ -212,30 +240,21 @@ const Header3 = () => {
                 >
                   <Typography> {item.mainLink} </Typography>
                 </AccordionSummary>
-                 
-                 <List sx={{ py : 0 , my : 0 }} >
-                    
-                  {item.subLink.map((link) => { 
-                    return(
-                      <ListItem key={link} sx={{ py : 0 , my : 0 }} >
+
+                <List sx={{ py: 0, my: 0 }}>
+                  {item.subLink.map((link) => {
+                    return (
+                      <ListItem key={link} sx={{ py: 0, my: 0 }}>
                         <ListItemButton>
                           <ListItemText primary={link} />
                         </ListItemButton>
                       </ListItem>
- 
-                    )
-                  })  
-                }
-
-
-                  </List>
-                  
+                    );
+                  })}
+                </List>
               </Accordion>
-            )
-          })
-        
-        }
-
+            );
+          })}
         </Box>
       </Drawer>
     </Container>
