@@ -5,7 +5,7 @@
 import { useState } from "react";
 
 // b- importing MUI libraries [component and icons]  :
-// 1- Main [Menu]  :
+// 1- Main [Menu] (Toggling Burger Menu)  :
 import {
   Box,
   Container,
@@ -20,8 +20,8 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
-// 2-  Icons before and after Categories [Menu] :
-import MenuIcon from "@mui/icons-material/Menu";
+// 2-  Icons before and after Categories [Menu] + [Toggle Burger Menu] :
+import MenuIcon from "@mui/icons-material/Menu" ;
 import WindowIcon from "@mui/icons-material/Window";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 
@@ -214,14 +214,22 @@ const Header3 = () => {
           </IconButton>
 
           {[
-            { mainLink: "Home", subLink: ["Link1", "Link2", "Link3"] },
-            { mainLink: "Mega Menu", subLink: ["Link1", "Link2", "Link3"] },
+            { mainLink: "Home",
+             subLink: ["Link1", "Link2", "Link3"] 
+            },
+            { mainLink: "Mega Menu", 
+             subLink: ["Link1", "Link2", "Link3"]
+            },
             {
               mainLink: "Full screen menu",
               subLink: ["Link1", "Link2", "Link3"],
             },
-            { mainLink: "Pages", subLink: ["Link1", "Link2", "Link3"] },
-            { mainLink: "User Account", subLink: ["Link1", "Link2", "Link3"] },
+            { mainLink: "Pages",
+             subLink: ["Link1", "Link2", "Link3"] 
+            },
+            { mainLink: "User Account",
+             subLink: ["Link1", "Link2", "Link3"] 
+            },
             {
               mainLink: "Vendor Account",
               subLink: ["Link1", "Link2", "Link3"],
@@ -241,10 +249,10 @@ const Header3 = () => {
                   <Typography> {item.mainLink} </Typography>
                 </AccordionSummary>
 
-                <List sx={{ py: 0, my: 0 }}>
+                <List sx ={{ py: 0, my: 0 }}>
                   {item.subLink.map((link) => {
                     return (
-                      <ListItem key={link} sx={{ py: 0, my: 0 }}>
+                      <ListItem key={link} sx={{ py: 0, my: 0 }}   >
                         <ListItemButton>
                           <ListItemText primary={link} />
                         </ListItemButton>
