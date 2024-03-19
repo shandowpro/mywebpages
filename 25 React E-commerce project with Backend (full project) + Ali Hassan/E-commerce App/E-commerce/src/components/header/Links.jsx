@@ -1,4 +1,7 @@
-// The third part of Inner contents of the Main menu of links inside  {Header3.jsx} of the main Component of the Header {Header.jsx} :
+
+
+// The Third part of Inner contents of the {Main menu links bar} 
+  // this component => will be called inside the main component {Header3.jsx} of the main Component of the Header {Header.jsx} :
 
 import { ExpandMore, KeyboardArrowRightOutlined } from "@mui/icons-material";
 import { Box, Paper, Typography } from "@mui/material";
@@ -7,7 +10,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 
-const Links = () => {
+const Links = ({title}) => {
   return (
     <Box
       sx={{
@@ -18,7 +21,7 @@ const Links = () => {
         ":hover": { cursor: "pointer" },
       }}
     >
-      <Typography variant="body1">Home</Typography>
+      <Typography variant="body1">{title}</Typography>
 
       <ExpandMore sx={{ fontSize: "16px", ml: 1 }} />
 
@@ -69,7 +72,7 @@ const Links = () => {
                     sx={{
                       ".MuiTypography-root": {
                         fontSize: "15px",
-                        fontWeight: 300,
+                         fontWeight: 300,
                       },
                     }}
                     primary="Products"

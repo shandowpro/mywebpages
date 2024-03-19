@@ -1,55 +1,56 @@
 // This is the {header3.jsx} the third component of the main header  :
 
-// A] Import section    :
-// a- importing basic libraries :
+// A] Imports section    :
+// a- importing basic and general libraries :
 import { useState } from "react";
+import { Stack, useTheme } from "@mui/material";
 
 // b- importing MUI libraries [component and icons]  :
-// 1- Main [Menu] (Toggling Burger Menu)  :
+// 1- Main [Categories Menu]  & (Toggling Burger Menu)  :
 import {
-  Box,
   Container,
+  Box,
   Drawer,
   IconButton,
   ListItemIcon,
   Typography,
   useMediaQuery,
-  useTheme,
-} from "@mui/material";
+  } from "@mui/material";
+  
+import {Close} from "@mui/icons-material";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
-// 2-  Icons before and after Categories [Menu] + [Toggle Burger Menu] :
+// 2-  Icons before and after each Categories [Menu] + [Toggle Burger Menu] :
 import MenuIcon from "@mui/icons-material/Menu" ;
 import WindowIcon from "@mui/icons-material/Window";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 
-// 3-  Icons before each item of Categories [Menu] :
+// 3-  Icons before each list item of [Categories Menu] :
 import {
   SportsEsportsOutlined,
   ElectricBikeOutlined,
   LaptopChromebookOutlined,
-  MenuBookOutlined,
-  Close,
+  MenuBookOutlined 
 } from "@mui/icons-material";
 
-// 4- Importing According element and it's  inner children  :
+// 4- Importing {Accordion} element and it's inner children  :
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
-// import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+// import AccordionDetails from "@mui/material/AccordionDetails";
 
-// 5- importing [List] and its innner children + [MenuIcon - burger menu => customized displayed according to different scales  ( Breakpoints:[sx, sm , md , lg , xl] , useMediaQuerry Hook   )   ]     :
+// 5- importing [List] and its inner children : [MenuIcon - burger menu => customized displayed according to different scales ( Breakpoints:[sx, sm , md , lg , xl] , useMediaQuerry Hook)] :
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-// import ExpandMore from "@mui/icons-material/ExpandMore";
 import Links from "./Links";
+// import ExpandMore from "@mui/icons-material/ExpandMore";
 
 const Header3 = () => {
-  // B] Inside the component function  Before the return Section    :
+  // B] Inside the component function Before the return Section :
   // 1] Required defined functions and variables for the controling the [Categories Menu] :
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -67,7 +68,7 @@ const Header3 = () => {
   const theme = useTheme();
 
   // 3] Required defined functons and variables for the controling the [Drawer Menu] =>
-  // a) with assining the all properties of position  by false    :
+  // a) with assinging the all properties of position by [false]  :
   const [state, setState] = useState({
     top: false,
     left: false,
@@ -75,7 +76,7 @@ const Header3 = () => {
     right: false,
   });
 
-  // b) Define the method of controling the [toggling] function   :
+  // b) Define the method of controling the [toggling Menu] function :
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -86,16 +87,16 @@ const Header3 = () => {
     setState({ ...state, [anchor]: open });
   };
 
-  // C] Inside the component function and inside the return Section :
-
+  // C] Inside the functional component and inside the return Section :
   return (
     <Container
       sx={{
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        mt:5
+        mt:5 
       }}
+      
     >
       <Box>
         <Button
@@ -175,13 +176,36 @@ const Header3 = () => {
         </Menu>
       </Box>
  
-      <Links/>
-      <Links/>
-      <Links/>
-      <Links/>
+      { useMediaQuery('(min-width:1200px)') && (
+        <Stack 
+          gap={5}
+          direction={'row'}
+          alignItems={'center'} 
+          sx={{
+            ".MuiTypography-root":{
+              fontSize:'15px', 
+              // mx:1
+            } , 
+            
+            ".MuiStack-root ":{
+              // marginLeft:'-20px'
+            }
+
+          }} 
+        >
+          <Links title={'Home'} />
+          <Links title={'Mega Menu'} />
+          <Links title={'Full Screen Menu '} />
+          <Links title={'Pages'} />
+          <Links title={'User Account'}/>
+          <Links title={'Vendor Account'}/>
+        </Stack>
+         
+      )}
+
        
 
-      { useMediaQuery('(max-width:1000px)') && (
+      { useMediaQuery('(max-width:1200px)') && (
         <IconButton onClick={toggleDrawer("top", true)}>
           <MenuIcon />
         </IconButton>
