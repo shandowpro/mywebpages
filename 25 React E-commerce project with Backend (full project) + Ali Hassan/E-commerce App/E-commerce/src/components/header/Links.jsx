@@ -34,6 +34,7 @@ const Links = ({title}) => {
           transform: "translateX(-50%)",
           left: "50%",
           display: "none",
+          zIndex: 2 
         }}
       >
         <Paper sx={{ mt: 2 }}>

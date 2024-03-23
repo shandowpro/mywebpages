@@ -44,22 +44,22 @@
 // B] Before the functional component section  :
   // 1- Required functions and varialbes for [Search inner secton] :
     const Search = styled("div")(({ theme }) => ({
+      flexGrow: 0.4,
       position: "relative",
       borderRadius: theme.shape.borderRadius,
       backgroundColor: alpha(theme.palette.common.white, 0.15),
+      border: "1px solid #777",
       "&:hover": {
          backgroundColor: alpha(theme.palette.common.white, 0.25) , 
          border: "1px solid #333",
       },
-      border: "1px solid #777",
-      flexGrow: 0.4,
       marginRight: theme.spacing(2),
       marginLeft: 0,
-      minWidth: "300px",
-      maxHeight: "10px",
+      width: "277px",
       [theme.breakpoints.up("sm")]: {
         marginLeft: theme.spacing(3),
-        width: "auto",
+        width: "330px",
+        paddingLeft: "10px",
       },
     }));
 
@@ -190,7 +190,7 @@
                   <ListItemText
                     secondary = {options[selectedIndex]}
                     sx={{
-                      ".MuiTypography-root": { fontSize: "10px", color :'theme.palette.myColor.main' },
+                      ".MuiTypography-root": { fontSize: "13px", color :'theme.palette.myColor.main' },
                       width: 93 , 
                       textAlign : 'center' , 
                       '&:hover' :  { cursor: 'pointer' } , 
