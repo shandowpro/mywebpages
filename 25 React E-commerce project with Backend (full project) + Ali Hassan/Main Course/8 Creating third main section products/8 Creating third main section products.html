@@ -401,8 +401,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">
-            <h2 class="h1" class="hidden-xs"> About Section => Creating the main third section   {Hero.jsx} <span><strong>  starting a new section in the main page </strong> </span> </h2>
-            <h3 class="visible-xs"> About Section => This lesson about <strong>  Creating the {Hero.jsx} of the Hero main component in the main page </strong> using the {MUI} </span> </h3>
+            <h2 class="h1" class="hidden-xs"> About Section => Creating the main third section   {Main.jsx} <span><strong>  starting a new section in the main page </strong> </span> </h2>
+            <h3 class="visible-xs"> About Section => This lesson about <strong>  Creating the {Main.jsx} of the Hero main component in the main page </strong> using the {MUI} </span> </h3>
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing] Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->
         </div>
     </section>
@@ -1293,13 +1293,14 @@
                 <ol type="A">
                     <li> Main points of this lesson , will include the following steps and points  : <br>
                         <ol> 
-                             <li> Creating the Third  main Section component [Hero]  {Hero.jsx}  , which including the following inner (parts / elements )  : <br>
+                             <li> Creating the Third main Section component [Main]  {Main.jsx}  , which including the following inner (parts / elements )  : <br>
                                 <ul>    
-                                    <li> General information about the Hero section  {Hero.jsx} [briefly]  </li>
-                                    <li> Requirments Hero section & Requirements {Hero.jsx}  </li>
-                                    <li> First inner section : [Left slider] => {Hero.jsx}  </li>
-                                    <li> Second inner section : [Right Banners images] => {Hero.jsx}     </li>
-                                    <li> Third inner section :  [Bottom Icons] => {IconSection.jsx -> exported into {Hero.jsx} }       </li>
+                                    <li> General information & Requirments for this section {Main.jsx} [products section] , including both of:
+                                        <ol>
+                                            <li> First inner section : [ Upper toggling Title sub section] => inside the {Main.jsx}  </li>
+                                            <li> Second inner section : [ Down  products Card sub section] => inside the {Main.jsx}  </li>
+                                        </ol>
+                                    </li>
                                 </ul>
                              </li>
                         </ol>
@@ -1315,16 +1316,19 @@
                 <h3> 7 Creating Main third section of Hero concept : </h3>
             </header>
 
-            <h1> General information about the Hero section  {Hero.jsx} [briefly]  : <br> 
+            <h1> General information & Requirments for this section {Main.jsx} [products section ]  : <br> 
                 <ul> 
-                    <li> This is Third inner section and consists mainly from [2] parent contianers as next  [breifly ] :  <br>                        
+                    <li> This is Third main section , which represent the  products cards  displaying section , and consists mainly from [2] parent contianers {Stack} as next [breifly ] :  <br> 
                         <ul>
-                            <li> [First parent container] : [Box]  => and contains (2) children elements : <br>
+                            <li> First inner section {Stack}  : [ Upper toggling Title sub section] => inside the {Main.jsx}  => <br>
                                 <ol>
-                                    <li> 1- {Swiper} -> represent the (left side) of sliding sliders , which is the imported element from the imported library {swiper} , and contian the following children  : <br>
+                                    <li> Represent the upper title of the products displaying , which is containing [Text Topic] & [Toggling Products displayer Buttons ]   </li>
+                                    <li>  This parnet container will has some props of formating it's contained children   </li>
+                                    
+                                     <li> It will contain (2) sub containers children : <br>
                                         <ol> 
-                                            <li> Some controling properties of sliding  tool inside the Swiper </li>                                         
-                                            <li> Mapping on a defined array of objects about Dynamic data of returned [SwiperSlide] element [according to the array count]  </li> 
+                                            <li> {Box} => inlucde the [Text Title] of this section => include  (2) Typography of Text Title + Text sub Title </li> 
+                                            <li> {ToggleButtonGroup} => include all toggling displayers Buttons , as {ToggleButton} element for each button -> each {ToggleButton} element has inner props and SX css properties  </li> 
                                        </ol>
                                     </li>
 
@@ -1336,177 +1340,42 @@
                                     </li>
                                 </ol>    
                             </li> <br>
-
-                            <li> [Second parent container] : [IconSection] component {IconSection.jsx}  =>  represent the [bottom Icons bar] under the hero section which is imported component from outside this file {IconSection.jsx}  , and including [2] deinfed functional components in the same file       : <br>
-                                <ol>
-                                    <li> First defined main functional component { IconSection() } ->       : <br>
-                                        <ol> 
-                                            <li> Represent the main functional contianer of each called Icon box , from the below defined single dynamic icon   </li>  
-                                            <li> Inside this functional contianer , each called Icon box {MyBox} , will be assigned it's details of Icon content [several times wiht diferent contents each time] , by the values of [ imported iconic element from MUI ]   </li>    
-                                            <li> This functional component will include (2) nested  sub containers  for outer and  inner formating properites ->  for the [icons bar]    </li>    
-                                       </ol>
-                                    </li>
-
-                                    <li> Second defined main functional component { MyBox() } ->       : <br>
-                                        <ol> 
-                                            <li> Represent the seperated defined functional component of each single dynamic icon by {MyBox}  </li>  
-                                            <li> Inside this seperated functional  will use the recieved props from  the {IconSection()}     </li>    
-                                            <li> This functional component will include (2) sub containers for outer and  inner formating properites ->  for the a  [Single icons]  </li>    
-                                       </ol>
-                                    </li>
-                                </ol>    
-                            </li> 
-                        </ul>                        
+  
+                            <li> Second inner section {Stack}  : [ Down  products Card sub section] => inside the {Main.jsx}   => <br>
+                                <p> Represent the Below Cards of the displaying products , which is containing [Dynmaic mapped simulated array of products] => to display one single dynamic product {Card} parent element , with  following properties  : <br>
+                                    <ol>
+                                        <li> using Local defined [array] of simulated data of products , by using map() method to return dynamic [product single] as a {Card } parent element  </li>
+    
+                                       <li>  Each returned {Card} parent element, will includes the folowing   : <br>
+                                           <ol>
+                                               <li> Some of CSS formating and controling props of all included products card  </li>
+                                               <li> Each dynamic {Card} parent will include the following [3] sub  inner sections children elements  :  <br>
+                                                    <ul> 
+                                                        <li> {CardMedia}    => which will contain the Card images properties </li>
+                                                        <li> {CardContent}  => which will contain the Card's inner textual description and details contents </li>
+                                                        <li> {CardActions}  => which will contain the Card's inner common actions and features of the product's Card , such as :
+                                                            <ol> 
+                                                                <li> Adding the product to the Cart   </li>
+                                                                <li> Adding Evaluation stars to the product  </li>
+                                                            </ol>    
+                                                        </li>
+                                                    </ul> 
+                                                </li>
+                                           </ol>                                     
+                                       </li>
+                                    </ol>
+                                </p>     
+                            </li> <br>
+                         </ul>                        
                     </li>
                 </ul>                
             </h1> <br>
 
-
-            <h1> Requirments for Hero section {Hero.jsx}'s components  : <br>
-            
-                <ol>
-                    <li> A] Requirments for the First inner element {Siwper} & its' all contents   :   <br>
-                        <ul>
-                            <li> Downlaod , setup & Importing the {swiper} library usign the npm    </li>
-                            <li> Define an array of objects of dynamic sliders detials data  => to be used as dynamic reference within the mapping method => inside the returned {SwiperSlide} inside the mapped </li>
-                        </ul>
-                    </li>
-
-                    <li> B] Requirments for the Second inner element { } & its' all contents   :   <br>
-                        <ul>
-                            <li>   </li>                             
-                        </ul>
-                    </li>
-
-                </ol>
-
-
-
-            </h1>
-            <!-- --------------------------------- -->
-               
-            <h1> First Inner parent container {&lt;  Box &gt; } section  =>  inside the  main container element  {&lt;  Container &gt;}  inside the  {Hero.jsx} file [in-dertails ] :  <br>
-                <p> This is the First Sub container and it is the only main [Box] inside the main {&lt;  Container &gt; } of {Hero.jsx} </p>
-                <p> This inner parent contianer should include some formating properties of the  this contianer    </p>
-                <p> This inner parent contianer represent both of  [Slider of Sliders] + [Slides contents ] => as (2) children elements :  <br>
-                    <ol>
-                        <li> 1- {Swiper} -> represent the (left side) of sliding sliders , which is the imported element from the imported library {swiper} , and contians the following children  : <br>
-                            <ol> 
-                                <li> Some controling properties of sliding tool inside the Swiper , as the following  :  <br>
-                                    <ol> 
-                                        <li> loop = {true}  => to make the Slider is looping  endlessly     </li>    
-                                        <li> pagination = { { dynamicBullets: true } } => to make the pagination bullets is displayed   </li>    
-                                        <li> modules = {[Pagination]} => to call the pagination style      </li>    
-                                        <li> className = "mySwiper" => to be used to call the assinged css properties in css file of hte swiper library   </li>    
-                                    </ol>
-                                </li>    
-                                                                     
-                                <li> Displaying the sliders as  Mapping on a defined array of objects about Dynamic data of returned  {&lt;  SwiperSlide &gt;  } element [according to the array Elemets count]  </li> 
-                                <li> This Element will include the folowing  :   <br>
-                                    <ol> 
-                                        <li> Mapping through defined vairlable of the data content of each slider , and assingn eahc data insidieet it's position as a dynamic return inside the  {SwiperSlide} conpoinket and it's children  </li>
-                                        <li> The main and only child from the maping reuturn  is {SwiperSlide} , and it will has the key value (the dynamic value of the mapped varialbe )  & and will include (2) main children as  the following :  <br>
-                                            <ul> 
-                                                <li> {img } => which will display the image of each slider , with using the dymaic value of the imaged source  form the mapped vairable </li>
-                                                <li> {Box}  => which will be as a Sub contianer of each slider details  , and will include the following :   <br>
-                                                    <ol>
-                                                        <li> conditional formating properties {sx}    </li> 
-                                                        <li> will contain the next (5) inner children :  <br> 
-                                                            <ul>
-                                                                <li> 1- Typography -> simple text    </li>                                                                
-
-                                                                <li> 2- Typography -> dynamic text {item.text} + sx css formating properties      </li>                                                                
-                                                                
-                                                                <li> 3- Stack  ->  Gourp of typography elements of some of texts inside each slider            </li> 
  
-                                                                <li> 4- Typography ->  simple text + xs css formating properties      </li>                                                                
-
-                                                                <li> 5- Button  ->  a button with some sx formating properties and effects </li>                                                                
-
-                                                            </ul> 
-                                                        </li> 
-                                                    </ol>                                                
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                        <li> </li>
-                                    </ol>
-                                </li> 
-                            </ol>
-                        </li>
-
-                        <li> 2- {Box} -> represent the (right side) of Banners images, which is a Sub container of it's children  of each banner wraped by another a sub container , with the following properties :   <br> 
-                            <li> This Sub container [Box] include the following contents : </li>
-                            <ol> 
-                                <li> Some sx of css formating properties   </li>
-                                <li> Including (2) Sub contains of {Box} one for each banner ->   including the following elements [of inner contents of each Banner] , as following : <br>
-                                    <ul> 
-                                        <li> {img} => which is the banner's Image  </li>
-                                        <li> { Stack } => which is a Sub Container of it's inner children, and has some inner sx css properties & the following children components  :  <br>
-                                            <ol> 
-                                                <li> 1- {Typography} => simple text with inner css properties </li> 
-                                                <li> 2- {Typography} => simple text with inner css properties </li> 
-                                                <li> 3- {Link} => Hyperlink with css properties imported icon from '@mui/icons-material/ArrowForward'   </li>                                         
-                                            </ol>                                                
-                                        </li>
-                                    </ul>                                    
-                                </li>
-                            </ol>                                     
-                        </li>
-                    </ol>
-                </p>   
-            </h1> <br>
+            <!-- --------------------------------- -->
+     
         <!-- --------------------------------- -->
-        
-            <h1> [Second parent container] : [IconSection] component {IconSection.jsx} => imported component from outside this file {IconSection.jsx}  , and including [2] defined functional components in the same file  [in-dertails ] :  <br>
-                <p> This is the Second sub container [called imported  component] -> from {IconSection.jsx} inside the main {&lt;  Container &gt; } of {Hero.jsx} </p>
-                <p> Represent the [Bottom Icons bar] under the upper Hero section  => and include  (2) children elements :  <br>   :  <br> 
-                    <ol>
-                        <li> First defined main functional component { IconSection() } ->       : <br>
-                            <ol> 
-                                <li> Represent the main functional Contianer of all called Icon box  , from the below defined {MyBox()} single dynamic icon    </li>  
-                                <li> Inside this functional Contianer , each called Icon box {MyBox} , will be assigned it's details of Icon content [several times wiht diferent contents each time] , by the values of [ imported iconic element from MUI ]   </li>    
-                                <li> This functional component will include (1) nested sub container inside the main container , for both outer and inner formating frames's properites ->  for the [icons bar]  , as following : <br>
-                                    <ul>
-                                        <li> The main [parent contianer] {&lt;  Container &gt; } , will include the  following : <br>
-                                            <ol> 
-                                                <li> This parent container is for the [Outer] frame with conditional formating using defined theme color </li>
-                                                <li> This parent container will include (1) neseted [child container] {&lt;  Stack &gt; } {Stack} with inner following children component  : <br> 
-                                                    <ul>
-                                                        <li> will call the defined component below , with assigning the sent props with each called icon element [{MyBox}]      </li>
-                                                        <li> Each icon element [{MyBox}] has the following properties  : <br>
-                                                            <ol> 
-                                                                <li> (3) props {icon, title, subTitle} to be recieved from it's used upper component {IconSection} </li>
-                                                                <li> (1) defined variable of [theme = useTheme();] to be used in asingin a dynamic colors </li>
-                                                                <li> (1) main parent container , inlcuding the following  : <br>
-                                                                    <ol>  
-                                                                        <li> Calling the sent dynamic imported  icon as a prop   </li>
-                                                                        <li> (1) Sub containers {Box} ->  which will contain all other each icon's details contents (2) , as following :   <br>
-                                                                            <ul> 
-                                                                                <li> {Typography} ->  The dynamic value of {title} </li>
-                                                                                <li> {Typography} ->  The dynamic value of {subTitle} </li>
-                                                                            </ul>
-                                                                        </li>
-                                                                    </ol>
-                                                                </li>
-                                                            </ol>                                                    
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ol>                                       
-                                        </li>
-                                    </ul>
-                                </li>    
-                            </ol>
-                        </li>
-                    </ol>    
-                </p> 
-             </h1>
-        <!-- ------------------------------------------ -->
-        <!-- ------------------------------------------ -->
-  
-        <!-- ---------------------------------------- -->
+         
              
             <h1> vip notes : <br> 
                 <ul> 
@@ -1606,6 +1475,10 @@
 
                         <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/hero/IconSection.jsx">  
                             <button id=btn class="btn0" onclick="display()">  ReactJS Source code of the sub and imported Section [IconSection] component JS [IconSection.jsx] file </button>
+                        </a> <br> <hr> <br> 
+ 
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/main/Main.jsx">  
+                            <button id=btn class="btn0" onclick="display()">  ReactJS Source code of the main Third imported Section [Main] component JS [Main.jsx] file </button>
                         </a> <br> <hr> <br> 
  
 

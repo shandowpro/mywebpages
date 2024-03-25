@@ -1,4 +1,4 @@
-// This is the {Main} component of the [product secton] => will call real api data form the databsae    :
+// This is the {Main} component of the [product Cards secton] => will call real api data form the databsae    :
 
 import React, { useState } from "react";
 
@@ -13,10 +13,6 @@ import {
 } from "@mui/material";
 
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
-// import FormatAlignCenterIcon from "@mui/icons-material/FormatAlignCenter";
-// import FormatAlignRightIcon from "@mui/icons-material/FormatAlignRight";
-// import FormatAlignJustifyIcon from "@mui/icons-material/FormatAlignJustify";
-
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
@@ -33,8 +29,9 @@ const Main = () => {
   };
 
   const theme = useTheme();
+
   return (
-    <Container sx={{ mt: 9 }}>
+    <Container sx={{ mt: 9 , py: 3 }} >
       <Stack
         direction={"row"}
         alignItems={"center"}
@@ -157,6 +154,7 @@ const Main = () => {
       }
 
       </Stack>
+
     </Container>
   );
 };
