@@ -1,4 +1,4 @@
-// This is the {Main} component of the [product secton] :
+// This is the {Main} component of the [product secton] => will call real api data form the databsae    :
 
 import React, { useState } from "react";
 
@@ -8,10 +8,11 @@ import {
   Stack,
   Typography,
   useTheme,
-  Button ,
+  Button,
+  Rating,
 } from "@mui/material";
 
-// import FormatAlignLeftIcon from "@mui/icons-material/FormatAlignLeft";
+import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 // import FormatAlignCenterIcon from "@mui/icons-material/FormatAlignCenter";
 // import FormatAlignRightIcon from "@mui/icons-material/FormatAlignRight";
 // import FormatAlignJustifyIcon from "@mui/icons-material/FormatAlignJustify";
@@ -19,10 +20,10 @@ import {
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
-import Card from "@mui/material/Card"
-import CardActions from "@mui/material/CardActions"
-import CardContent from "@mui/material/CardContent"
-import CardMedia from "@mui/material/CardMedia"
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
 
 const Main = () => {
   const [alignment, setAlignment] = useState("left");
@@ -74,8 +75,7 @@ const Main = () => {
 
           <ToggleButton
             sx={{ mx: "16px !important", color: theme.palette.text.primary }}
-            className="myButtimport { CardContent } from '@mui/material';
-on"
+            className="myButton"
             value="center"
             aria-label="centered"
           >
@@ -93,30 +93,69 @@ on"
         </ToggleButtonGroup>
       </Stack>
 
-      <Stack>
-        <Card sx = {{ maxWidth : 345  }}     >
-          <CardMedia
-            sx={{ height : 140 }}
-            image = '/static/images/cards/contemplative-reptile.jpg'
-            title = 'green iguana'
-          
-          />
+      <Stack direction={'row'}  flexWrap={'wrap'} justifyContent ={'space-between'}    >
+        {
+          ["aa", "bb", "cc" , "dd", "ee" , "ff"].map((item) => {
+            return (
+              
+              <Card 
+                key={item} 
+                sx={{ 
+                  minWidth:350 ,
+                  maxWidth: 400,
+                  mt: 6 ,
+                  ':hover .MuiCardMedia-root': {
+                    scale:"1.1" ,
+                    rotate:"1deg" ,
+                    transition : ".45s" , 
+                }  }}
+              >
+                <CardMedia
+                  sx={{ height: 277 }}
+                  image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
+                  title="green iguana"
+                />
         
-          <CardContent>
-            <Typography gutterBottom variant="h5" component='div'  >
-              Lizard
-            </Typography>
-            
-            <Typography variant="body2" color='text.secondary' >
-              details details details details details details details details 
-            </Typography>
-          </CardContent>
+                <CardContent>
+                  <Stack
+                    direction={"row"}
+                    justifyContent={"space-between"}
+                    alignItems={"center"}
+                  >
+                    <Typography gutterBottom variant="h6" component="div">
+                      T-Shirt
+                    </Typography>
+        
+                    <Typography variant="subtitle1" component="p">
+                      12.99
+                    </Typography>
+                  </Stack>
+        
+                  <Typography variant="body2" color="text.secondary">
+                    details details details details details
+                  </Typography>
+                </CardContent>
+        
+                <CardActions sx={{ justifyContent: "space-between" }}>
+                  <Button size="small" sx={{ textTransform: "capitalize" }}>
+                    <AddShoppingCartOutlinedIcon fontSize="small" sx={{ mr: 1 }} />
+                    Add to Cart
+                  </Button>
+        
+                  <Rating
+                    name="read-only"
+                    precision={0.5}
+                    value={4.5}
+                    readOnly
+                    size="medium"
+                  />
+                </CardActions>
+              </Card>
 
-          <CardActions>
-            <Button size="small"> Share </Button>
-            <Button size="small"> Learn More </Button>
-          </CardActions>
-        </Card>
+          )
+        }) 
+      }
+
       </Stack>
     </Container>
   );
