@@ -9,6 +9,8 @@ import Hero from "./components/hero/Hero";
 
 import Main from "./components/main/Main";
 import Footer from "./components/footer/Footer";
+import ScrollToTop from "./components/scroll/ScrollToTop";
+   
 
 // 2] importing the [MUI] darkmode components and classes :
 
@@ -47,7 +49,8 @@ function App() {
           <Main />
           <Footer />
         </Box>
-        
+ 
+        <ScrollToTop />
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

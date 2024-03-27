@@ -10,6 +10,8 @@ import {
   useTheme,
   Button,
   Rating,
+  Dialog,
+  IconButton,
 } from "@mui/material";
 
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
@@ -21,6 +23,11 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 
+import {Close} from "@mui/icons-material";
+
+
+import ProductDetails from './ProductDetails' ;
+
 const Main = () => {
   const [alignment, setAlignment] = useState("left");
 
@@ -30,8 +37,19 @@ const Main = () => {
 
   const theme = useTheme();
 
+  // Controling the [dialog] [open , close] functkons  :
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
-    <Container sx={{ mt: 9 , py: 3 }} >
+    <Container sx={{ mt: 9, py: 3 }}>
       <Stack
         direction={"row"}
         alignItems={"center"}
@@ -90,71 +108,107 @@ const Main = () => {
         </ToggleButtonGroup>
       </Stack>
 
-      <Stack direction={'row'}  flexWrap={'wrap'} justifyContent ={'space-between'}    >
-        {
-          ["aa", "bb", "cc" , "dd", "ee" , "ff"].map((item) => {
-            return (
-              
-              <Card 
-                key={item} 
-                sx={{ 
-                  minWidth:350 ,
-                  maxWidth: 400,
-                  mt: 6 ,
-                  ':hover .MuiCardMedia-root': {
-                    scale:"1.1" ,
-                    rotate:"1deg" ,
-                    transition : ".45s" , 
-                }  }}
-              >
-                <CardMedia
-                  sx={{ height: 277 }}
-                  image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
-                  title="green iguana"
-                />
-        
-                <CardContent>
-                  <Stack
-                    direction={"row"}
-                    justifyContent={"space-between"}
-                    alignItems={"center"}
-                  >
-                    <Typography gutterBottom variant="h6" component="div">
-                      T-Shirt
-                    </Typography>
-        
-                    <Typography variant="subtitle1" component="p">
-                      12.99
-                    </Typography>
-                  </Stack>
-        
-                  <Typography variant="body2" color="text.secondary">
-                    details details details details details
+      <Stack
+        direction={"row"}
+        flexWrap={"wrap"}
+        justifyContent={"space-between"}
+      >
+        {["aa", "bb", "cc", "dd", "ee", "ff"].map((item) => {
+          return (
+            <Card
+              key={item}
+              sx={{
+                minWidth: 350,
+                maxWidth: 400,
+                mt: 6,
+                ":hover .MuiCardMedia-root": {
+                  scale: "1.1",
+                  rotate: "1deg",
+                  transition: ".45s",
+                },
+              }}
+            >
+              <CardMedia
+                sx={{ height: 277 }}
+                image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
+                title="green iguana"
+              />
+
+              <CardContent>
+                <Stack
+                  direction={"row"}
+                  justifyContent={"space-between"}
+                  alignItems={"center"}
+                >
+                  <Typography gutterBottom variant="h6" component="div">
+                    T-Shirt
                   </Typography>
-                </CardContent>
-        
-                <CardActions sx={{ justifyContent: "space-between" }}>
-                  <Button size="small" sx={{ textTransform: "capitalize" }}>
-                    <AddShoppingCartOutlinedIcon fontSize="small" sx={{ mr: 1 }} />
-                    Add to Cart
-                  </Button>
-        
-                  <Rating
-                    name="read-only"
-                    precision={0.5}
-                    value={4.5}
-                    readOnly
-                    size="medium"
+
+                  <Typography variant="subtitle1" component="p">
+                    12.99
+                  </Typography>
+                </Stack>
+
+                <Typography variant="body2" color="text.secondary">
+                  details details details details details
+                </Typography>
+              </CardContent>
+
+              <CardActions sx={{ justifyContent: "space-between" }}>
+                <Button
+                  size="small"
+                  sx={{ textTransform: "capitalize" }}
+                  onClick={handleClickOpen}
+                >
+                  <AddShoppingCartOutlinedIcon
+                    fontSize="small"
+                    sx={{ mr: 1 }}
                   />
-                </CardActions>
-              </Card>
+                  Add to Cart
+                </Button>
 
-          )
-        }) 
-      }
-
+                <Rating
+                  name="read-only"
+                  precision={0.5}
+                  value={4.5}
+                  readOnly
+                  size="medium"
+                />
+              </CardActions>
+            </Card>
+          );
+        })}
       </Stack>
 
+      <Dialog
+        sx={{
+          ".MuiPaper-root": {
+            minWidth: { xs: "100%", md: "800px" },
+            border: "3px solid red ",
+          },
+          border: "3px solid red",
+        }}
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <IconButton
+          sx={{
+            ":hover": { color: "red", rotate: "180deg", transition: ".5s" },
+            position: "absolute",
+            top: 0,
+            right: 10,
+          }}
+          onClick={handleClose}
+        >
+          <Close />
+          
+        </IconButton>
+
+        <ProductDetails />
+  
+      </Dialog>
     </Container>
   );
 };

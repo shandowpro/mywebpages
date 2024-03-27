@@ -231,7 +231,12 @@ const Header3 = () => {
           }}
         >
           <IconButton
-            sx={{ position: "absolute", top: 0, right: 0 }}
+            sx={{ 
+              ":hover": { color: "red", rotate: "180deg", transition: ".5s" },
+              position: "absolute",
+              top: 0, 
+              right: 0 
+            }}
             onClick={toggleDrawer("top", false)}
           >
             <Close />
