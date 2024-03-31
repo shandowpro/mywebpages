@@ -1298,6 +1298,7 @@
                             <li>  Main Features and benefits of the {Strapi} CMS and it's dashboard    </li>
                             <li>  Main Requirments for installing and setp   {Strapi}  sever in our project </li>
                             <li>  Practical steps of installing and setup the {Strapi} </li>
+                            <li>  Default pattern of the API link </li>
                         </ol>
                      </li> <br> <br>
                 </ol>
@@ -1393,7 +1394,7 @@
                     </li>
                          
                 </ul>                
-            </h1> <br>
+            </h1> <br> <br>
             <!-- ------------------------------------------ -->
             
             <h1>  Main Requirments for installing and setup  {Strapi}  server in our project :   <br> 
@@ -1473,7 +1474,7 @@
                     </li>  
                 
                 
-                    <li> D] Getting our free main API Link from Strapi :  <br>
+                    <li> D] Getting our free main API [Rest Api] Link from Strapi :  <br>
                         <p>  To obtain the [API Link]  is the main purpose of using [CMS] of Strapi of any other servers , which is e  gate of controling the project data [get/obtain & send/store] </p> 
                         <p>  There are (3) main steps  To obtqain the [API Link] on the Strepi :  <br>
                             <ol> 
@@ -1493,8 +1494,6 @@
                                                 </ol>     
                                             </p>       
                                         </li>
-
-                                        
                                     </ul>    
                                 </li>  <br>
                                 
@@ -1509,46 +1508,87 @@
                                 
                                 <li> 3- Getting the generated API link from  : <br> 
                                     <p> {settings -> Edit role => Users & Permissions Plugin => Public -> Permissions -> Product -> [find ] : this will generate the [Api url link]  }   </p>
-                                    <p>  The generated  [Api url link] => '  localhost:1337 / api/products   '  -> by using this url => you will get access to all your data of [Product]   </p>
-                                    <p>  Our generated  [Api url link] =>  can be accessed after logging in to our [Strapi] account server       </p>
-                                </li>
-                                
+                                    <p> The generated  [Api url link] => '  localhost:1337 / api/products   '  -> by using this url => you will get access to all your data of [Product]   </p>
+                                    <p> Our generated  [Api url link] =>  can be accessed after logging in to our [Strapi] account server       </p>
+                                </li>                                
                             </ol>                            
                         </p> 
                     </li>  
                 
-                    <!-- im here >>>>>>>>>>>>>>>>>>>>>>>> -->
-                    <li> E] Getting our free Image API Link from Strapi  : <br>
-                        <p>   </p>
+                     
+                    <li> E] Getting our free Image API Link [Rest Full Api] from Strapi  : <br>
+                        <p> The previous link web obained is NOT including the Media contents [such as images] , which as the next pattern : <br>
+                            <code>
+                                <span class="one"></span> localhost:1337 / api/products   <br>
+                            </code>
+                        </p> <br>
 
+                        <p> To obtain Full link that including the Media contents [such as images] is called {Rest Full Api} , and to obtain this full link by using the next pattern : <br>
+                            <code>
+                                <span class="one"></span> localhost:1337 / api/ products ? populate = *   <br>
+                            </code>     
+                        </p><br>
 
+                        <p> To obtain the high resolution of the image url [beside  another image url of low iamge resoluion] , form the inner path inside [Rest Full Api] link [in form of json structure ] :  <br> 
+                            <code>
+                                { <br>
+                                    <span class="one"></span> "data"  : [ <br>
+                                        <span class="two"></span>  {  <br>
+                                            <span class="three"></span> "attributes"  : { <br>
+                                                <span class="four"></span> "productImg" : {    <br>
+                                                    <span class="five"></span> "data" : [  <br>
+                                                        <span class="six"></span>  {  <br> 
+                                                            <span class="seven"></span> "attributes" : { <br>
+                                                                <span class="eight"></span> "url" :  "/upload/final_..... .png  "  => [this value is the product image url of this product ] <br>
+                                                                <span class="eight"></span> attribute prop name " :  "prop value " <br>
+                                                                <span class="eight"></span> attribute prop name " :  "prop value " <br>
+                                                            <span class="seven"></span> }  <br>
+                                                        <span class="six"></span> }  <br>
+                                                    <span class="five"></span> ]  <br>
+                                                
+                                                <span class="four"></span>  } <br>
+                                            <span class="three"></span>  }  <br>
+                                        <span class="two"></span>  }  <br>
+                                    <span class="one"></span> ] <br>
+                                } <br>
+                            </code> 
+                        </p>
                     </li>
 
-                
-                
+
+                   <!-- im here >>>>>>>>>>>>>>>>>>>>>>>  [need to have a look on the real api url ] -->
+                    <li>  Default pattern of the API link :  <br>  
+                       <p> The returnd api link is about json object with name ["data"] , which is  about an [array of objects] , and each object is reperesent a single element , and it can ber as jnest form  : <br>
+                            <code>
+                                { <br>
+                                    <span class="one"></span> "data"  : [ <br>
+                                        <span class="two"></span>  {  <br>
+                                            <span class="three"></span> "attributes"  : { <br>
+                                                <span class="four"></span> "productImg" : {    <br>
+                                                    <span class="five"></span> "data" : [  { "attributes"  } ]      <br>
+                                                
+                                                
+                                                
+                                                
+                                                <span class="four"></span>  } <br>
+ 
+                                            <span class="three"></span>  }  <br>
+
+                                        <span class="two"></span>  }  <br>
+
+                                    <span class="one"></span> ] <br>
+
+                                } <br>
+                            </code>                     
+                        </p>
+
+                    </li>
+ 
                 </ul>    
-                
-                
-
             </h1> <br>
             <!-- ------------------------------------------ -->
-
-
-
-            <h1> Practical steps of installing and setup the {Strapi} :   <br> 
-                <ul> 
-                    <li>   </li>
-                    <li>   </li>
-                    <li>   </li>         
-                </ul>                
-            </h1> <br>
             <!-- ------------------------------------------ -->
-
-
-
-
-
-        <!-- ------------------------------------------ -->
+    
                
             <h1> vip notes : <br> 
                 <ul> 
@@ -1572,25 +1612,25 @@
                  <code>
  
                     <h4> (1) Project  files of  main [React-Vite] system :     </h4>
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/index.html">  
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/index.html">  
                          <button id=btn class="btn0" onclick="display()">  ReactJS  Source code of public HTML file  [index.html] file </button>
                      </a> <br> <hr> <br> 
                      
                      
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/main.jsx">  
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/main.jsx">  
                          <button id=btn class="btn0" onclick="display()">  ReactJS Source code of  wrapping application [main] file JS [main.jsx] file </button>
                      </a> <br> <hr> <br> 
 
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/App.jsx">  
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/App.jsx">  
                          <button id=btn class="btn0" onclick="display()">  ReactJS Source code of main [App] file {Main Component} [App.jsx] file </button>
                      </a> <br> <hr> <br> 
                       
 
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/index.css">  
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/index.css">  
                          <button id=btn class="btn0" onclick="display()">  ReactJS Source code of main formating css properties file JS [index.css] file </button>
                      </a> <br> <hr> <br> 
                       
-                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/theme.jsx">  
+                     <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/theme.jsx">  
                          <button id=btn class="btn0" onclick="display()">  ReactJS Source code of  [light/dark mode] library file JS [theme.jsx] file </button>
                      </a> <br> <hr> <hr> <br> 
                       
@@ -1616,52 +1656,52 @@
                      <h4> (2) Project  files of  main  Compoents  :     </h4>
                         <h5> (a) Header section Compoents  :     </h5>
                      
-                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/header/Header1.jsx">  
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/components/header/Header1.jsx">  
                             <button id=btn class="btn0" onclick="display()">  ReactJS Source code of first [Header1] child  component JS [Header1.js] file </button>
                         </a> <br> <hr> <br> 
     
-                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/header/Header2.jsx">  
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/components/header/Header2.jsx">  
                             <button id=btn class="btn0" onclick="display()">  ReactJS Source code of second [Header2] child  component JS [Header2.js] file </button>
                         </a> <br> <hr> <br> 
  
 
-                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/header/Header3.jsx">  
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/components/header/Header3.jsx">  
                             <button id=btn class="btn0" onclick="display()">  ReactJS Source code of third [Header3] child  component JS [Header3.js] file </button>
                         </a> <br> <hr> <br> 
 
-                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/header/Links.jsx">  
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/components/header/Links.jsx">  
                             <button id=btn class="btn0" onclick="display()">  ReactJS Source code of the third inner Section of main header  [Header3] child  component JS [Links.jsx] file </button>
                         </a> <br> <hr> <br>     
  
                         <h5> (b) Hero section Compoents  :     </h5>
-                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/hero/Hero.jsx">  
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/components/hero/Hero.jsx">  
                             <button id=btn class="btn0" onclick="display()">  ReactJS Source code of the main Second  Section of main [Hero] component JS [Hero.jsx] file </button>
                         </a> <br> <hr> <br> 
 
-                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/hero/IconSection.jsx">  
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/components/hero/IconSection.jsx">  
                             <button id=btn class="btn0" onclick="display()">  ReactJS Source code of the sub and imported Section [IconSection] component JS [IconSection.jsx] file </button>
                         </a> <br> <hr> <br> 
  
-                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/hero/slider.css">  
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/components/hero/slider.css">  
                             <button id=btn class="btn0" onclick="display()">  ReactJS Source code of the formating file of [hero] component JS [slider.css] file </button>
                         </a> <br> <hr> <br> 
  
                         <h5> (c) Main section Compoents  :     </h5>
-                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/main/Main.jsx">  
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/components/main/Main.jsx">  
                             <button id=btn class="btn0" onclick="display()">  ReactJS Source code of the main  third  Section of main [Main] component JS [Main.jsx] file </button>
                         </a> <br> <hr> <br> 
 
-                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/main/ProductDetails.jsx">  
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/components/main/ProductDetails.jsx">  
                             <button id=btn class="btn0" onclick="display()">  ReactJS Source code of the sub and imported component [ProductDetails] inside the Third Section [Main] component JS [ProductDetails.jsx] file </button>
                         </a> <br> <hr> <br> 
   
                         <h5> (d) Footer section Compoent  :     </h5>
-                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/footer/Footer.jsx">  
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/components/footer/Footer.jsx">  
                             <button id=btn class="btn0" onclick="display()">  ReactJS Source code of the main Fourth  Section of  [Footer] component JS [Footer.jsx] file </button>
                         </a> <br> <hr> <br> 
    
                         <h5> (e) ScrollToTop section Compoent  :     </h5>
-                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/src/components/scroll/ScrollToTop.jsx">  
+                        <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/components/scroll/ScrollToTop.jsx">  
                             <button id=btn class="btn0" onclick="display()">  ReactJS Source code of the Sub Seperated  Component  of  [ScrollToTop] component JS [ScrollToTop.jsx] file </button>
                         </a> <br> <hr> <hr> <br> 
    
@@ -1669,11 +1709,11 @@
 
                      <h4>  (3) Project files of all downloaded and setup libraries of  main React project  :  </h4>    
                       
-                         <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/package.json">  
+                         <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/package.json">  
                              <button id=btn class="btn0" onclick="display()">  ReactJS  Source code of main configuration file [package.json] file </button>
                          </a> <br> <hr> <br> 
                            
-                         <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/jsconfig.json">  
+                         <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/jsconfig.json">  
                              <button id=btn class="btn0" onclick="display()">  ReactJS  Source code of JS custom  configuration file [jsconfig.json] file </button>
                          </a> <br> <hr> <br> 
                            
