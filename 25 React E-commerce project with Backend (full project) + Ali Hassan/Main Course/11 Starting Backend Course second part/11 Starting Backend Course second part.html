@@ -401,8 +401,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">
-            <h2 class="h1" class="hidden-xs"> About Section =>   Starting this Course second part [Backend] programing  <span><strong>        </strong> </span> </h2>
-            <h3 class="visible-xs"> About Section => This lesson about <strong>   Starting this Course second part [Backend] programing </strong> using the {Srapi} [API] free provider </span> </h3>
+            <h2 class="h1" class="hidden-xs"> About Section =>   Starting this Course second part [Backend] programing  <span><strong> using Srapi       </strong> </span> </h2>
+            <h3 class="visible-xs"> About Section => This lesson about <strong>   install and setup {strapi} CMS server and tool   </strong> using [Nvm] & [Npm] </span> </h3>
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing] Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->
         </div>
     </section>
@@ -1293,8 +1293,11 @@
                 <ol type="A">
                     <li> Main points of this lesson , will include the following steps and points  : <br>
                         <ol> 
-                             <li> </li>
-                             <li> </li>
+                            <li>  Main  Major steps of the our project [E-Commerce ] </li>
+                            <li>  Main Concept of the {Strapi} CMS    </li>
+                            <li>  Main Features and benefits of the {Strapi} CMS and it's dashboard    </li>
+                            <li>  Main Requirments for installing and setp   {Strapi}  sever in our project </li>
+                            <li>  Practical steps of installing and setup the {Strapi} </li>
                         </ol>
                      </li> <br> <br>
                 </ol>
@@ -1308,213 +1311,250 @@
                 <h3> 7 Creating Main third section of Hero concept : </h3>
             </header>
 
-            <h1> General information about the Hero section  {Hero.jsx} [briefly]  : <br> 
+            <h1> Main  Major steps of the our project [E-Commerce ]     :   <br> 
+                <ol> 
+                    <li> Creating the React app using the {Vite} -> [done]     </li>
+                    <li> Designig the React app using the {MUI: material user interface} -> [done]    </li>
+                    <li> Downloading the images of  [Hero section , (6) products]  of the React  from the {courses4arabs.org} website -> [done]   </li>
+                    <li> Creating the sliding section using {swiper.js}  -> [done] </li>
+                    <li> Creating  Backend [CMS: content management system ] using the  {Strapi} -> [now doing] </li>
+                    <li> Deploying  the project website files using the  {Render.com}  server -> [later]  </li> 
+                </ol>
+            </h1>
+ 
+            <!-- --------------------------------------------------- -->
+            <h1>   Main concept of the {Strapi} CMS  :   <br> 
                 <ul> 
-                    <li> This is Third inner section and consists mainly from [2] parent contianers as next  [breifly ] :  <br>                        
-                        <ul>
-                            <li> [First parent container] : [Box]  => and contains (2) children elements : <br>
-                                <ol>
-                                    <li> 1- {Swiper} -> represent the (left side) of sliding sliders , which is the imported element from the imported library {swiper} , and contian the following children  : <br>
-                                        <ol> 
-                                            <li> Some controling properties of sliding  tool inside the Swiper </li>                                         
-                                            <li> Mapping on a defined array of objects about Dynamic data of returned [SwiperSlide] element [according to the array count]  </li> 
-                                       </ol>
-                                    </li>
-
-                                    <li> 2- {Box} -> represent the (right side) of Banners , which is a Sub container of it's children  of each banner wrappeed by another a sub container , and each single child Sub [box] element include the next contents :
-                                        <ol>
-                                            <li> Slide Image [img]  </li>
-                                            <li> Sub container of {Stack} including  {Typgoraphy} + {Link} elements of inner contents inside each Banner  </li>
-                                        </ol>                                     
-                                    </li>
-                                </ol>    
-                            </li> <br>
-
-                            <li> [Second parent container] : [IconSection] component {IconSection.jsx}  =>  represent the [bottom Icons bar] under the hero section which is imported component from outside this file {IconSection.jsx}  , and including [2] deinfed functional components in the same file       : <br>
-                                <ol>
-                                    <li> First defined main functional component { IconSection() } ->       : <br>
-                                        <ol> 
-                                            <li> Represent the main functional contianer of each called Icon box , from the below defined single dynamic icon   </li>  
-                                            <li> Inside this functional contianer , each called Icon box {MyBox} , will be assigned it's details of Icon content [several times wiht diferent contents each time] , by the values of [ imported iconic element from MUI ]   </li>    
-                                            <li> This functional component will include (2) nested  sub containers  for outer and  inner formating properites ->  for the [icons bar]    </li>    
-                                       </ol>
-                                    </li>
-
-                                    <li> Second defined main functional component { MyBox() } ->       : <br>
-                                        <ol> 
-                                            <li> Represent the seperated defined functional component of each single dynamic icon by {MyBox}  </li>  
-                                            <li> Inside this seperated functional  will use the recieved props from  the {IconSection()}     </li>    
-                                            <li> This functional component will include (2) sub containers for outer and  inner formating properites ->  for the a  [Single icons]  </li>    
-                                       </ol>
-                                    </li>
-                                </ol>    
-                            </li> 
-                        </ul>                        
+                    <li> It is a headless open source code  Content management system used to manage , operate and deploy the backend of the project backend server and database  </li>
+                    <li> [headless] => means it deals with any framework used to create the UI design     </li>
+                    <li> This means that it provide [API] and [Database] for your backend server side  </li>
+                    <li> The provided [API]  => is in  a form of array of objects , which can called and used inside the project UI , as following : <br>  
+                        <ol> 
+                            <li> [API]  => it is about a a URL json extension generated and obtained from the sever [CMS]  provider , which is a type of json file     </li>
+                            <li> [API]  => it can be read from the  and can be read on the internet browser [via spceified json reader browser addon] , and the code editor [vsCode] </li>
+                            <li> Each array => represent a collection of data stored with in the Strapi Conntents management system    </li>
+                            <li> Each object [a member of the main API array] => represent a a single item of stored in this database [Data Cellection] , and  it consists of several properties [several data of each row  </li>
+                            <li> To create and mangage content of data => we need to instal and setup the {strapi} sever and libarraies files within our project by using certain steps using [Node Js]   </li>
+                            <li> It is reconmmended to add a plugin on our web brouser [such  as : 'Json reader' ] => to make it easier to read the obtained Json files of the  [API] </li>
+                        </ol>                    
                     </li>
                 </ul>                
             </h1> <br>
+            <!-- ------------------------------------------ -->
 
 
-            <h1> Requirments for Hero section {Hero.jsx}'s components  : <br>
+            <h1> Main Features and benefits of the {Strapi} CMS and it's dashboard:   <br> 
+                <ul> 
+                    <li> Provide a [Database] to store/retreive and deal with project's data    </li>
+                    <li> Provide a [API] to obtain data from the Strapi sever via using it's url in the UI codes </li>
+                    <li> Provide a Content managaemnt system as modern dashboard of controling tool of project data and content </li>
+                    <li> Provide a Content managaemnt system as modern [Dashboard] of controling tool of project data and content </li>
+                    <li> Strapi's [Dashboard] 's  properties    =>  : <br>
+                        <ol> 
+                            <li>  Can be used for both :  <br>
+                                <ol>
+                                    <li>  Basic data Structure {schema} and contents [such as : product's data] => will use it first in the course   </li>
+                                    <li>  Users data Structure {schema} and contents [such as : user's  data] => will be used later in this course  </li>    
+                                </ol>
+                            </li>
+
+                            <li>  Provides Control Panel to control and deal with all Data Collections , by : <br>
+                                <ul>
+                                    <li> Advanced Displaying screen with filteration abitlites of exsited [Data Collections]    </li>
+                                    <li> Ability to [add , modify , delete] any of added item(s) [row/entry of data]   </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </li>
+  
+                    <li> [Data Structure] for each single [Data Collection] type  , has the next features  :  <br>
+                        <ol> 
+                            <li> Ability to add/Modify/delete the following of data types [data fields] :  <br>
+                                <ul> 
+                                    <li> Textual Data [long , short] =>  [Title / Sub Title / Description] </li>
+                                    <li> Numeric Data [decimal , Integar , long] =>   [Price / Rating]     </li>
+                                    <li> MultiSelction Menu [Categories , Sub Categories]  </li>
+                                    <li> Media [Images , Videos , Sound]  </li>
+                                </ul>    
+                            </li>
+                            <li>  Ability to determine the {Obligatory status : Required to be added || Not Required] for each data field's}   </li>
+    
+                        </ol>    
+                    </li>
+                         
+                    <li>  Each Row/Entry added in a single Data Collection , has the next features  :  <br>
+                        <ol> 
+                            <li> Ability to add [single/multiple] image(S) for a single entry/product + assinging priority of displaying    </li>
+                            <li> Ability to choose among available [Categories - added within the data structure ] for a single entry/product  </li>
+                            <li> Ability to [save] and/or [publish] each added entry to teh assigned data collection   </li>
+                     
+                            <li>   </li>
+                        </ol>    
+                    </li>
+                         
+                </ul>                
+            </h1> <br>
+            <!-- ------------------------------------------ -->
             
-                <ol>
-                    <li> A] Requirments for the First inner element {Siwper} & its' all contents   :   <br>
+            <h1>  Main Requirments for installing and setup  {Strapi}  server in our project :   <br> 
+                <ul> 
+                    <li> A] Preperation procedures and steps :  <br>
                         <ul>
-                            <li> Downlaod , setup & Importing the {swiper} library usign the npm    </li>
-                            <li> Define an array of objects of dynamic sliders detials data  => to be used as dynamic reference within the mapping method => inside the returned {SwiperSlide} inside the mapped </li>
-                        </ul>
-                    </li>
-
-                    <li> B] Requirments for the Second inner element { } & its' all contents   :   <br>
-                        <ul>
-                            <li>   </li>                             
-                        </ul>
-                    </li>
-
-                </ol>
-
-
-
-            </h1>
-            <!-- --------------------------------- -->
-               
-            <h1> First Inner parent container {&lt;  Box &gt; } section  =>  inside the  main container element  {&lt;  Container &gt;}  inside the  {Hero.jsx} file [in-dertails ] :  <br>
-                <p> This is the First Sub container and it is the only main [Box] inside the main {&lt;  Container &gt; } of {Hero.jsx} </p>
-                <p> This inner parent contianer should include some formating properties of the  this contianer    </p>
-                <p> This inner parent contianer represent both of  [Slider of Sliders] + [Slides contents ] => as (2) children elements :  <br>
-                    <ol>
-                        <li> 1- {Swiper} -> represent the (left side) of sliding sliders , which is the imported element from the imported library {swiper} , and contians the following children  : <br>
-                            <ol> 
-                                <li> Some controling properties of sliding tool inside the Swiper , as the following  :  <br>
+                            <li> 1- Project files arrangment : by seperating the projects files into (2) main folders :     <br>
+                                <li>  [ fontend] folder  => will contian the UI Desinging files [the previous React created files ]  </li>  
+                                <li>  [ backend ] folder => will contain the [strapi] files (which will be created in this lesson and later) including :  <br>
                                     <ol> 
-                                        <li> loop = {true}  => to make the Slider is looping  endlessly     </li>    
-                                        <li> pagination = { { dynamicBullets: true } } => to make the pagination bullets is displayed   </li>    
-                                        <li> modules = {[Pagination]} => to call the pagination style      </li>    
-                                        <li> className = "mySwiper" => to be used to call the assinged css properties in css file of hte swiper library   </li>    
-                                    </ol>
-                                </li>    
-                                                                     
-                                <li> Displaying the sliders as  Mapping on a defined array of objects about Dynamic data of returned  {&lt;  SwiperSlide &gt;  } element [according to the array Elemets count]  </li> 
-                                <li> This Element will include the folowing  :   <br>
+                                        <li> CMS system   </li>
+                                        <li> Server fies   </li>
+                                        <li> database shcema   </li>
+                                        <li> RTK Query liabrary   </li>
+                                    </ol>         
+                                </li>  
+                            </li>
+
+                            <li> 2- Downloading and install the [NVM] library : <br>
+                                <p> This is an overriding runtime of [node.js] to  provide a conrtrol [install, use, overriding ] system on all nodesjs available versions, and choose the applicalable versions [LTS versions : v14 . v16 . v18] with the [Strapi]  </p>
+                                <p> Installing and setup this version using the next steps : <br>
                                     <ol> 
-                                        <li> Mapping through defined vairlable of the data content of each slider , and assingn eahc data insidieet it's position as a dynamic return inside the  {SwiperSlide} conpoinket and it's children  </li>
-                                        <li> The main and only child from the maping reuturn  is {SwiperSlide} , and it will has the key value (the dynamic value of the mapped varialbe )  & and will include (2) main children as  the following :  <br>
+                                        <li> Install the downloaded [NVM] source on pc , then restart the pc    </li>
+                                        <li> open the project [backend] folder => [cmd prompt] on the vs code     </li>
+                                        <li> use the following commands - in order  : <br>
                                             <ul> 
-                                                <li> {img } => which will display the image of each slider , with using the dymaic value of the imaged source  form the mapped vairable </li>
-                                                <li> {Box}  => which will be as a Sub contianer of each slider details  , and will include the following :   <br>
-                                                    <ol>
-                                                        <li> conditional formating properties {sx}    </li> 
-                                                        <li> will contain the next (5) inner children :  <br> 
-                                                            <ul>
-                                                                <li> 1- Typography -> simple text    </li>                                                                
-
-                                                                <li> 2- Typography -> dynamic text {item.text} + sx css formating properties      </li>                                                                
-                                                                
-                                                                <li> 3- Stack  ->  Gourp of typography elements of some of texts inside each slider            </li> 
+                                                <li> Display the current list of installed Nodes JS versions , using the next code  : <br>    
+                                                    <code> 
+                                                        <span class="one"></span> nvm ls  <br>
+                                                    </code>    
+                                                </li>  <br>
+                                                
+                                                <li> Install the desired LTS version of nodejs that matching with the {Strapi} => {18.16.0}     : <br>  
+                                                    <code> 
+                                                        <span class="one"></span> nvm install  18.16.0    <br>
+                                                    </code>       
+                                                </li> <br>
  
-                                                                <li> 4- Typography ->  simple text + xs css formating properties      </li>                                                                
-
-                                                                <li> 5- Button  ->  a button with some sx formating properties and effects </li>                                                                
-
-                                                            </ul> 
-                                                        </li> 
-                                                    </ol>                                                
-                                                </li>
+                                                <li> Assign the desired installed  LTS version of nodejs that matching with the {Strapi} to bve used as overriding  =>   <br>  
+                                                    <code> 
+                                                        <span class="one"></span> nvm use 18.16.0    <br>
+                                                    </code>       
+                                                </li> <br>
+  
                                             </ul>
                                         </li>
+                                    </ol>                            
+                                </p>
+                            </li> <br> 
 
-                                        <li> </li>
-                                    </ol>
-                                </li> 
-                            </ol>
-                        </li>
+                            <li> 3-  Downloading and install the [Strapi] application  :     <br>
+                                <p> After installing the compatable version of the Node, we will install the {strapi }  application it self in the current directory of [backend] , by using the next code + it's entries  :  <br>  
+                                   <code>
+                                        <span class="one"></span>  npx create-stapi-app@latest <br>  
+                                          <span class="two"></span>  project name =>     [ ./ ] to save the strapi  projectin current  folder [backend]   <br>  
+                                          <span class="two"></span>  Installation type  =>     [   |  ] to save the strapi  projectin current  folder [backend]   <br>  
+                                            <span class="three"></span>  [Quick start]  => we select it [for now as we are starter]    <br>  
+                                            <span class="three"></span>  [Custom (manual settings) ]  => we will select it later  [ when we bet ready for uploading the project files ]   <br>  
+                                    </code>    
+                                </p>
+                            </li>
+                        </ul>     
+                    </li>
+                  
+                    <li> B] Run the installed application [strapi] server    :  <br>
+                        <p>  After the Strapi files has been installed and setup successfully on our prjoect files [inside the backend dirctory] , we gonna run/operate the [strapi] server up by using the following code :  <br>
+                             <code>
+                                <span class="one"></span>   npm  run develop  => [this code will run the strapi server , and generate a strapi sever port to open the  account of the strapi , and open it automatically ]  <br>  
+                                <span class="one"></span>   npm  run  dev  => [this code will run the created UI react design  of the project   , and generate a react server port to open the  account of the strapi , and open it by click on it ]  <br>                              
+                            </code>    
+                        </p> 
+                    </li>
 
-                        <li> 2- {Box} -> represent the (right side) of Banners images, which is a Sub container of it's children  of each banner wraped by another a sub container , with the following properties :   <br> 
-                            <li> This Sub container [Box] include the following contents : </li>
+                    <li> C]  Open the generated link of [strapi] server :  <br>
+                        <p>  After running the Strapi server, we gonna open the generated link of [strapi] server , in order to accesss the Registration Strapi  UI ,   to create a new account in the Strapi , using the email </p> 
+                        <p>   After creating a new account on the {Strapi} server => we will get access automatically into to the Strapi Dash board ,to control our [CMS] of our project  </p> 
+                    </li>  
+                
+                
+                    <li> D] Getting our free main API Link from Strapi :  <br>
+                        <p>  To obtain the [API Link]  is the main purpose of using [CMS] of Strapi of any other servers , which is e  gate of controling the project data [get/obtain & send/store] </p> 
+                        <p>  There are (3) main steps  To obtqain the [API Link] on the Strepi :  <br>
                             <ol> 
-                                <li> Some sx of css formating properties   </li>
-                                <li> Including (2) Sub contains of {Box} one for each banner ->   including the following elements [of inner contents of each Banner] , as following : <br>
+                                <li> 1- Build the {Content Structure} of our project data , which represent the [database] of our project , using next procedurss    : <br> 
                                     <ul> 
-                                        <li> {img} => which is the banner's Image  </li>
-                                        <li> { Stack } => which is a Sub Container of it's inner children, and has some inner sx css properties & the following children components  :  <br>
-                                            <ol> 
-                                                <li> 1- {Typography} => simple text with inner css properties </li> 
-                                                <li> 2- {Typography} => simple text with inner css properties </li> 
-                                                <li> 3- {Link} => Hyperlink with css properties imported icon from '@mui/icons-material/ArrowForward'   </li>                                         
-                                            </ol>                                                
+                                        <li> plan our project main data collection Name & main fields datatypes :   <br> 
+                                            <p> Our project main [data collection] Name =>  {Product} : [must be in single form -Not plural - ] </p>       
+                                            <p> Our project main {Product} [fields datatypes] =>   <br>
+                                                <ol> 
+                                                    <li>  [Product Title ] =>  short text / required        </li>
+                                                    <li>  [Product Description ] => long text / required      </li>
+                                                    <li>  [Product Price ] => Decimal number  / required      </li>
+                                                    <li>  [Product Image ] =>  Media  / required (single OR multiple) </li>
+                                                    <li>  [Product Rating ] =>   Decimal number   / required </li>
+                                                    <li>  [Product Category ] =>  Enumeration   / required  ( men OR women ) </li>
+                                                    <li>  [Save] </li>
+                                                </ol>     
+                                            </p>       
                                         </li>
-                                    </ul>                                    
+
+                                        
+                                    </ul>    
+                                </li>  <br>
+                                
+                                <li>  2- Creating/Adding data Entries of each row [product] , an following steps : <br>
+                                    <ol>
+                                        <li> [Content Manager] => select {Product} =>  [+ create new entry ]     </li>
+                                        <li> filling all data of product [as assinged data structure] => and then [save] & [publish]  </li>  
+                                        <li> After [publish] the saved entry will be saved and published on the database [data collection]  </li>  
+                                        <li> After [save] all {Content Structure} of created data collection & publising the first entry of data => The API link is able to be obtained , by the next step      </li>
+                                    </ol>     
                                 </li>
-                            </ol>                                     
-                        </li>
-                    </ol>
-                </p>   
+                                
+                                <li> 3- Getting the generated API link from  : <br> 
+                                    <p> {settings -> Edit role => Users & Permissions Plugin => Public -> Permissions -> Product -> [find ] : this will generate the [Api url link]  }   </p>
+                                    <p>  The generated  [Api url link] => '  localhost:1337 / api/products   '  -> by using this url => you will get access to all your data of [Product]   </p>
+                                    <p>  Our generated  [Api url link] =>  can be accessed after logging in to our [Strapi] account server       </p>
+                                </li>
+                                
+                            </ol>                            
+                        </p> 
+                    </li>  
+                
+                    <!-- im here >>>>>>>>>>>>>>>>>>>>>>>> -->
+                    <li> E] Getting our free Image API Link from Strapi  : <br>
+                        <p>   </p>
+
+
+                    </li>
+
+                
+                
+                </ul>    
+                
+                
+
             </h1> <br>
-        <!-- --------------------------------- -->
-        
-            <h1> [Second parent container] : [IconSection] component {IconSection.jsx} => imported component from outside this file {IconSection.jsx}  , and including [2] defined functional components in the same file  [in-dertails ] :  <br>
-                <p> This is the Second sub container [called imported  component] -> from {IconSection.jsx} inside the main {&lt;  Container &gt; } of {Hero.jsx} </p>
-                <p> Represent the [Bottom Icons bar] under the upper Hero section  => and include  (2) children elements :  <br>   :  <br> 
-                    <ol>
-                        <li> First defined main functional component { IconSection() } ->       : <br>
-                            <ol> 
-                                <li> Represent the main functional Contianer of all called Icon box  , from the below defined {MyBox()} single dynamic icon    </li>  
-                                <li> Inside this functional Contianer , each called Icon box {MyBox} , will be assigned it's details of Icon content [several times wiht diferent contents each time] , by the values of [ imported iconic element from MUI ]   </li>    
-                                <li> This functional component will include (1) nested sub container inside the main container , for both outer and inner formating frames's properites ->  for the [icons bar]  , as following : <br>
-                                    <ul>
-                                        <li> The main [parent contianer] {&lt;  Container &gt; } , will include the  following : <br>
-                                            <ol> 
-                                                <li> This parent container is for the [Outer] frame with conditional formating using defined theme color </li>
-                                                <li> This parent container will include (1) neseted [child container] {&lt;  Stack &gt; } {Stack} with inner following children component  : <br> 
-                                                    <ul>
-                                                        <li> will call the defined component below , with assigning the sent props with each called icon element [{MyBox}]      </li>
-                                                        <li> Each icon element [{MyBox}] has the following properties  : <br>
-                                                            <ol> 
-                                                                <li> (3) props {icon, title, subTitle} to be recieved from it's used upper component {IconSection} </li>
-                                                                <li> (1) defined variable of [theme = useTheme();] to be used in asingin a dynamic colors </li>
-                                                                <li> (1) main parent container , inlcuding the following  : <br>
-                                                                    <ol>  
-                                                                        <li> Calling the sent dynamic imported  icon as a prop   </li>
-                                                                        <li> (1) Sub containers {Box} ->  which will contain all other each icon's details contents (2) , as following :   <br>
-                                                                            <ul> 
-                                                                                <li> {Typography} ->  The dynamic value of {title} </li>
-                                                                                <li> {Typography} ->  The dynamic value of {subTitle} </li>
-                                                                            </ul>
-                                                                        </li>
-                                                                    </ol>
-                                                                </li>
-                                                            </ol>                                                    
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ol>                                       
-                                        </li>
-                                    </ul>
-                                </li>    
-                            </ol>
-                        </li>
-                    </ol>    
-                </p> 
-             </h1>
+            <!-- ------------------------------------------ -->
+
+
+
+            <h1> Practical steps of installing and setup the {Strapi} :   <br> 
+                <ul> 
+                    <li>   </li>
+                    <li>   </li>
+                    <li>   </li>         
+                </ul>                
+            </h1> <br>
+            <!-- ------------------------------------------ -->
+
+
+
+
+
         <!-- ------------------------------------------ -->
-        <!-- ------------------------------------------ -->
-  
-        <!-- ---------------------------------------- -->
-             
+               
             <h1> vip notes : <br> 
                 <ul> 
                     <li> General  notes   : <br>
                         <ol>  
-                             <li> We can use the {useMediaQuery} within the conditinal assingign of a certain css property . whether inside as inner css of {sx} OR seperated attribute property of an element [specially in cases of  : <br>
-                                <ul> 
-                                    <li> Controling the Media Query different scales of screens   </li> 
-                                    <li> Controling the [Dark/Light] Modes within a spcefic or  general elements      </li> 
-                                </ul>
-                            </li> 
-
-                             <li> We can import an functional component that using antoher imported functional component's props inside it defined in it's same file  </li>                               
-                             
-                             <li> It is recomended and commmon to wrap group of elements to control thier formarting prpoeties  easily </li> 
+                         
                         </ol>
                     </li>
                     <li>   </li> 
