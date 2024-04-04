@@ -6,7 +6,7 @@ import { KeyboardArrowUp } from '@mui/icons-material';
 
  const ScrollToTop = () => {
   return (
-    <Zoom in = { useScrollTrigger({threshold : 100}) } > 
+    <Zoom in = { useScrollTrigger({threshold : 200}) } > 
         <Fab 
           onClick = {
             () => {
@@ -18,7 +18,7 @@ import { KeyboardArrowUp } from '@mui/icons-material';
            color="primary" 
            aria-label="add" 
         >
-             <KeyboardArrowUp fontSize="medium"  />
+          <KeyboardArrowUp fontSize="medium"  />
         </Fab>
     </Zoom>
   )

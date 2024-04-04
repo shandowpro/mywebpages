@@ -51,11 +51,16 @@ const Main = () => {
     setOpen(false);
   };
 
-  // This state used to call the redux RTK toolkit query :
+  // This state used to call the redux RTK toolkit query  , with (3) parameters cases [data: which is the returned data from the assinged full api] & [error: the error message will be displayed in case of none existed data] & [isLoading: case of loading data] :
     // the inner par inside the hook is value of api url after the baseUrl :   
   const { data, error, isLoading } = useGetproductByNameQuery('products?populate=*')
 
+  // Printing testing [console log] of the obtained data [data.data] according to the assinged prop sub url  :  
+// console.log(data.data) ; 
 
+
+// coniditional return of funcational component [incase of therr is a data retunred  from the  Strapi server] :
+if(data) {
   return (
     <Container sx={{ mt: 9, py: 3 }}>
       <Stack
@@ -121,7 +126,7 @@ const Main = () => {
         flexWrap={"wrap"}
         justifyContent={"space-between"}
       >
-        {["aa", "bb", "cc", "dd", "ee", "ff"].map((item) => {
+        {data.data.map((item) => {          
           return (
             <Card
               key={item}
@@ -138,8 +143,9 @@ const Main = () => {
             >
               <CardMedia
                 sx={{ height: 277 }}
-                image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
-                title="green iguana"
+                // @ts-ignore
+                image={`${import.meta.env.VITE_BASE_URL}${item.attributes.productImg.data[0].attributes.url}`}
+                title={item.attributes.productTitle}
               />
 
               <CardContent>
@@ -149,16 +155,16 @@ const Main = () => {
                   alignItems={"center"}
                 >
                   <Typography gutterBottom variant="h6" component="div">
-                    T-Shirt
+                    {item.attributes.productTitle}
                   </Typography>
 
                   <Typography variant="subtitle1" component="p">
-                    12.99
+                    ${item.attributes.productPrice}
                   </Typography>
                 </Stack>
 
                 <Typography variant="body2" color="text.secondary">
-                  details details details details details
+                   {item.attributes.productDescription}
                 </Typography>
               </CardContent>
 
@@ -178,7 +184,7 @@ const Main = () => {
                 <Rating
                   name="read-only"
                   precision={0.5}
-                  value={4.5}
+                  value={item.attributes.productRating}
                   readOnly
                   size="medium"
                 />
@@ -186,6 +192,7 @@ const Main = () => {
             </Card>
           );
         })}
+         
       </Stack>
 
       <Dialog
@@ -219,6 +226,9 @@ const Main = () => {
       </Dialog>
     </Container>
   );
+}
+  
+ 
 };
 
 export default Main;

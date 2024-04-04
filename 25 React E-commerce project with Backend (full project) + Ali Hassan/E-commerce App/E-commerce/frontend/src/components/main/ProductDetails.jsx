@@ -43,8 +43,7 @@ const ProductDetails = () => {
               <img
                 key={item}
                 src={item}
-                style={{ borderRadius: 3 }}
-                width={90}
+                style={{ borderRadius: 3 }}                 
                 width={100}
                 alt=""
               />
