@@ -1293,7 +1293,8 @@
                 <ol type="A">
                     <li> Main points of this lesson , will include the following steps and points  : <br>
                         <ol> 
-                             <li> </li>
+                             <li> main concept of connecting between frontend & backend by using {RTK Query} redux tool </li>
+                             <li> main practical steps of connecting between frontend & backend by using {RTK Query} redux tool </li>
                         </ol>
                      </li> <br> <br>
                 </ol>
@@ -1307,17 +1308,181 @@
                 <h3> 12 Connect between frontend and backend by RTK Query: </h3>
             </header>
 
-            <h1>    :   <br> 
+            <h1> Main concept of connecting between frontend & backend by using {RTK Query} Redux tool   =>     <br> 
                 <ol> 
-                     <li> </li>
+                    <li> the library {RTK Query} => refers to [Redux tool kit] and  it is one of the Redux inner libraries , which is related for  the connecting between the frontend and backend , using the  system of redux   </li>
+                    <li> This library will be added inside the frontend directory   </li>                   
                 </ol>
+            </h1> 
+            <br> <hr> <br>   
+ 
+
+
+            <h1> Main practical steps of connecting between frontend & backend by using {RTK Query} redux tool   =>     <br> 
+                <p> To install, setup and use the {RTK query}  Redux library , by follwing the next steps : <br>
+                    <ul>                
+                        <li> a- Instaling and setup the libray {RTK Query} from the official website of the redux -> [https://redux-toolkit.js.org/toturials/rtk-query] , using the next npm command   : <br>
+                            <code> 
+                                npm install @reduxjs/toolkit react-redux    <br>  
+                            </code>
+                        </li>  <br>
+                        
+                        <li> b- Following the steps and procedures [in order] according to  the official website of setting up the [redux RTK query] on your project  , as following steps : <br> 
+                            <ol> 
+                                <li> 1-  inside the [src/Redux/product.js] => Creating the main {product.js} file  [by replacing the default name of  0'pokemon'  by  'product'  ]  -> which is the main functionality of the main {RTK query} , and represent the [Connection Endpoints] of  between the fontend and backend , as the next sript : 
+                                    <code> 
+                                        // 1- Need to use the React-specific entry point to import createApi :  <br>
+                                        <span class="one"></span>  import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'    <br> <br>
+
+                                        // 2- Define a service using a base URL and expected endpoints  :   <br>
+                                        <span class="one"></span> export const productApi = createApi({     <br>
+                                            <span class="two"></span> reducerPath: 'productApi', <br>
+
+                                            <span class="two"></span> // Editing the {baseUrl} property name's value by our project Base url [provided by Strapi] :    <br>
+                                            <span class="two"></span> baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:1337/api' }),  <br>
+                                            
+                                            <span class="two"></span> endpoints: (builder) => ({ <br>
+                                                <span class="three"></span> getproductByName: builder.query({ <br>
+                                                    <span class="four"></span>  // Assing the query of the sub query url as variable  [to be flexible to  used with incomming property value ]  : <br>
+                                                    <span class="four"></span> query: (name) => `${name}`, <br>
+                                                <span class="three"></span>   }), <br>
+                                            <span class="two"></span>   }),  <br>
+                                        <span class="one"></span>  })  <br> <br>
+
+
+                                        // 3- Export hooks for usage in functional components, which are auto-generated based on the defined endpoints :  <br>
+                                       <span class="one"></span>  export const { useGetproductByNameQuery } = productApi    <br>    
+                                    </code>
+                                </li> <br> <br> 
+
+                                <li> 2-  inside the [src/Redux/store.js] => Creating the main {store} file of redux system : <br>
+                                    <code> 
+                                        // 1- Importing section  : <br>
+                                        <span class="one"></span>   import { configureStore } from '@reduxjs/toolkit' <br>
+                                            <span class="two"></span>  // Or from '@reduxjs/toolkit/query/react' <br> <br>
+ 
+                                        <span class="one"></span>  import { setupListeners } from '@reduxjs/toolkit/query'  <br>
+                                        <span class="one"></span>  import { productApi } from "./product"  <br>
+
+
+                                        // 2- Define the store functional variable  : <br>
+                                        <span class="one"></span>  export const store = configureStore({  <br>
+    
+                                            <span class="two"></span> // Add the generated reducer as a specific top-level slice :   <br>
+                                            <span class="two"></span>  reducer: {  <br>
+                                                <span class="three"></span> [productApi.reducerPath]: productApi.reducer,  <br>
+                                            <span class="two"></span>  },  <br> <br> 
+                                            
+                                            <span class="two"></span>  // Adding the api middleware enables caching, invalidation, polling,  and other useful features of `rtk-query`  : <br>
+                                            <span class="two"></span>   middleware: (getDefaultMiddleware) =>  <br>
+                                                <span class="three"></span>    getDefaultMiddleware().concat(productApi.middleware),   <br>
+                                        <span class="one"></span> }) <br>  <br>
+ 
+                                        <span class="one"></span> // optional, but required for refetchOnFocus/refetchOnReconnect behaviors
+                                        // see `setupListeners` docs - takes an optional callback as the 2nd arg for customization : <br>
+                                        <span class="one"></span> setupListeners(store.dispatch)  <br>
+                                    </code>
+                                    <br>                                    
+                                </li>  <br> <br>
+                                
+                                <li>  3- inside the {src/main.js} [the main/index file of react project file] => Required importings and wrapping the main component of the {&lt; App &gt; }  :  <br>
+                                    <code>
+                                        // a- Importing the required [Redux RTK query] library's classes and defined components , as following :  <br> 
+                                        <span class="one"></span> { Provider } from 'react-redux' <br>
+                                        <span class="one"></span> import { store } from './Redux/store' <br>  <br>
+
+                                        // b-  Wrapping the parent element {&lt; App / &gt; }  by   {  &lt;  Provider store={store} &gt; } , to activate the RTk Query system  , as following   <br>
+                                        <span class="one"></span> ReactDOM.createRoot(document.getElementById("root")).render( <br>
+                                            <span class="two"></span> &lt; React.StrictMode &gt;   <br>
+                                                <span class="three"></span> &lt;  Provider store={store}   &gt;   <br>
+                                                    <span class="four "></span> &lt;  App /     &gt;   <br>
+                                                <span class="three"></span> &lt;  / Provider  &gt;   <br>
+                                            <span class="two"></span> &lt;   / React.StrictMode  &gt;   <br>
+                                        <span class="one"></span> ); <br>                                      
+                                    </code>    
+                                </li> <br> <hr> <br>
+                              
+                                <li> 4- inside the {src/components/main/Main.js} [the user of the RTK Query library] :  <br>
+                                    <p> A] => Define the main [RTK query] varialble to handler  , and it's requirments :   </p> 
+                                    <code>
+                                        // a-  Define the [RTK query] varialble to handle the api rendering each  status[ data, isLoading ,error]  [ with  using  partial custom api   ] , as following :  <br> 
+                                        <span class="one"></span>   const  {data , isLoading , error} =   useGetproductByNameQuery( <br> 
+                                            <span class="two"></span> "products?populate=*" <br>
+                                        <span class="one"></span>  ); <br> <br>
+ 
+                                        // b-  Conditional return of functional component [incase of each of retunred from the Strapi server props {data, isLoading , error} ]  , as following :  <br> 
+                                        <span class="one"></span>   // 1- Conditional return of functional component in case of [data : the data is obtained from the database ]  :   <br> 
+                                            <span class="two"></span>   if (data) {  <br>
+                                               <span class="three"></span> // Printing testing [console log] of the obtained data [data.data] [in case of the data is obtained] according to the assinged prop sub url  : <br>
+                                               <span class="three"></span> console.log(data.data) ;  <br> <br>
+
+                                               <span class="three"></span> // Display the Return  of the functional component  incase the returned value of prop of used RTk is [data] : <br>
+                                               <span class="three"></span>  return ( <br>
+                                                    <span class="four"></span>  &lt;  Container  &gt;   <br>
+                                                    <span class="four"></span>  &lt;  /Container  &gt;   <br>
+                                                <span class="three"></span> )   <br> 
+                                            <span class="two"></span> } <br> <br>
+ 
+                                        
+                                        <span class="one"></span>   // 2- Conditional return of functional component in case of [isLoading : the data is loading now data from the database ]  :   <br> 
+                                            <span class="two"></span>   if ( isLoading ) {  <br>
+                                               <span class="three"></span> // Display the a message about the current status of getting data from the database  [incase the returned value of prop of used RTk is [data] ] : <br>
+                                               <span class="three"></span>  return ( <br>
+                                                    <span class="four"></span> &lt; Typography variant="h6" &gt; LOADING ........ &lt; /Typography &gt;  ; 
+                                                <span class="three"></span> )   <br> 
+                                            <span class="two"></span> } <br> <br>
+  
+                                        <span class="one"></span>   // 3- Conditional return of functional component in case of [error : the data is NOT obtained successfly   from  the database ]  :   <br> 
+                                            <span class="two"></span>   if ( error ) {  <br>
+                                                <span class="three"></span>  return ( <br>
+                                                    <span class="four"></span>   &lt;  Typography variant="h6" &gt;   <br>
+                                                        <span class="five"></span> { <br>
+                                                            <span class="six"></span> // @ts-ignore <br>
+                                                            <span class="six"></span> error.message <br>
+                                                        <span class="five"></span> } <br>
+                                                    <span class="four"></span>   &lt;  /Typography  &gt;   <br> 
+                                                <span class="three"></span> );<br> 
+                                            <span class="two"></span> } : <br>  <br> 
+                                    </code>  <br>  <hr> <br>    
+
+
+                                    <p> B] Dynamic Filtering display of products [according to clicked Filtering buttons ] : </p> 
+                                    <code>
+                                        // 1-  Define (3) variables of each custom api [all products & menProducts & women products] , as following :  <br> 
+                                        <span class="one"></span>  //  Define the public  api [of all products] [no ilteres asssinged ] :  <br> 
+                                        <span class="one"></span>  const allProductsAPI = "products?populate=*" ;  <br> 
+                                        
+                                        <span class="one"></span>  //  Define the custom api  {of [category] of [men] only} :   <br> 
+                                        <span class="one"></span>  const menCategoryAPI = "products?populate=*&filters[category][$eq]=men" ;  <br> <br>
+                                        
+                                        <span class="one"></span>  //  Define the custom api  {of [category] of [women] only} :   <br> 
+                                        <span class="one"></span>  const womenCategoryAPI = "products?populate=*&filters[category][$eq]=women" ;   <br> <hr>   <br> 
+
+                                        // 2-  Define a state variable to store the value of  display one of defined variables , with initial value of [allProductsAPI] :   <br>
+                                        <span class="one"></span> const [myData , setmyData] = useState(allProductsAPI) ; <br> 
+
+
+
+                                    
+                                    </code>  <br>  <hr> <br>    
+
+
+
+
+
+                                </li> 
+                            </ol>    
+                        </li>   <br> <br>
+
+ 
+
+                    </ul>
+                </p>                            
             </h1>
+            <br> <hr> <br>   
  
             <!-- --------------------------------------------------- -->
-            
-            
-            
-            
+             
             <!-- --------------------------------------------------- -->
             <h1> vip notes : <br> 
                 <ul> 
@@ -1444,8 +1609,19 @@
                            
                          <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/jsconfig.json">  
                              <button id=btn class="btn0" onclick="display()">  ReactJS  Source code of JS custom  configuration file [jsconfig.json] file </button>
+                         </a> <br> <hr> <hr> <br>
+                           
+                         
+                     <h4>  (4) Project backend files of all downloaded and setup libraries of  main React project  :  </h4>     
+                        <h5> (a)  RTK Query files [inside the  src / Redux ]   :     </h5>
+                         <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/Redux/product.js">  
+                             <button id=btn class="btn0" onclick="display()">  ReactJS  Source code of main RTk Query () system file in the  [product.js] file </button>
                          </a> <br> <hr> <br> 
                            
+                         <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../E-commerce App/E-commerce/frontend/src/Redux/store.js">  
+                             <button id=btn class="btn0" onclick="display()">  ReactJS  Source code of main RTk Query (store) system file in the  [store.js] file </button>
+                         </a> <br> <hr> <br> 
+                             
                  </code>
              </ol>
              <br> <hr>
