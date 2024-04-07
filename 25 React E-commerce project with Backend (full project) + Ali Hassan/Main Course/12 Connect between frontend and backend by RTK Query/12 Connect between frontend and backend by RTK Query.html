@@ -1443,39 +1443,44 @@
                                                     <span class="four"></span>   &lt;  /Typography  &gt;   <br> 
                                                 <span class="three"></span> );<br> 
                                             <span class="two"></span> } : <br>  <br> 
-                                    </code>  <br>  <hr> <br>    
+                                    </code>  <br> <hr> <br>    
 
 
-                                    <p> B] Dynamic Filtering display of products [according to clicked Filtering buttons ] : </p> 
+                                    <p> B] Dynamic Filtering of displayed products [according to clicked Filtering buttons ] : </p> 
                                     <code>
                                         // 1-  Define (3) variables of each custom api [all products & menProducts & women products] , as following :  <br> 
                                         <span class="one"></span>  //  Define the public  api [of all products] [no ilteres asssinged ] :  <br> 
                                         <span class="one"></span>  const allProductsAPI = "products?populate=*" ;  <br> 
                                         
-                                        <span class="one"></span>  //  Define the custom api  {of [category] of [men] only} :   <br> 
+                                        <span class="one"></span>  // Define the custom api  {of [category] of [men] only} :   <br> 
                                         <span class="one"></span>  const menCategoryAPI = "products?populate=*&filters[category][$eq]=men" ;  <br> <br>
                                         
                                         <span class="one"></span>  //  Define the custom api  {of [category] of [women] only} :   <br> 
                                         <span class="one"></span>  const womenCategoryAPI = "products?populate=*&filters[category][$eq]=women" ;   <br> <hr>   <br> 
 
                                         // 2-  Define a state variable to store the value of  display one of defined variables , with initial value of [allProductsAPI] :   <br>
-                                        <span class="one"></span> const [myData , setmyData] = useState(allProductsAPI) ; <br> 
+                                        <span class="one"></span> const [myData , setmyData] = useState(allProductsAPI) ; <br>  <br>  
 
-
-
-                                    
+                                        // 3-  Execute the function of clicked buttons -> upon the clicked button's incomming value as a prop value of {setmyData} :  <br>
+                                        <span class="one"></span> const handleAlignment = (event, newValue) => { <br>
+                                             <span class="two"></span> setmyData(newValue) ; <br>
+                                        <span class="one"></span> }; <br> <hr> <br>
+                                        
+                                        // 4-  Assigning the defined custom api public state variable  [inside the 'value' attriubte] of  the value of the [ToggleButtonGroup]'s element [ to be as the (API reference) of the button Group that using it  ]  : <br>
+                                        <span class="one"></span> &lt;  ToggleButtonGroup   <br>
+                                            <span class="two"></span>  value={myData} <br>                                       
+                                            <span class="two"></span>  onChange={handleAlignment} <br>                                       
+                                        <span class="one"></span>  &gt;  <br> <hr> <br>
+                                   
+                                        // 5-  Assigning the defined custom api variable [inside the 'value' attriubte] of  the value of the ToggleButton's element [ by using the defined state of  both  "setAlignment" & "setmyData" ]  : <br>
+                                        <span class="one"></span> &lt; ToggleButton  <br>
+                                            <span class="two"></span> value= {allProductsAPI} <br>
+                                        <span class="one"></span> &gt;  <br> <hr> <br>
+                                   
                                     </code>  <br>  <hr> <br>    
-
-
-
-
-
                                 </li> 
                             </ol>    
                         </li>   <br> <br>
-
- 
-
                     </ul>
                 </p>                            
             </h1>

@@ -30,51 +30,51 @@ import ProductDetails from "./ProductDetails";
 import { useGetproductByNameQuery } from "../../Redux/product";
 
 const Main = () => {
-  const [alignment, setAlignment] = useState("left");
-
-  // Execute the function of clicked buttons -> upon the clicked button's value  :
-  const handleAlignment = (event, newValue) => {
-    setAlignment(newValue);
-    setmyData(newValue);
-  };
-
+  // const [alignment, setAlignment] = useState("left");
+  
   // Define the variable of theme to be used inside the template :    
-  const theme = useTheme();
+   const theme = useTheme();
+  //  ---------------------
 
   // Controling the [Dialog] [open , close] functions  :
-  const [open, setOpen] = useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
+    const [open, setOpen] = useState(false);
+  
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+    
+    const handleClose = () => {
+      setOpen(false);
+    };
+  // --------------------- 
+      
   // B] Dynamic Filtering display of products [according to clicked Filtering buttons ] :  
-    //  1-  Define (3) variables of each custom  api [all products & menProducts & women products] :
+    //  B] / 1- Define (3) variables of each custom  api [all products & menProducts & women products] :
     const allProductsAPI = "products?populate=*" ;
     const menCategoryAPI = "products?populate=*&filters[category][$eq]=men" ;
     const womenCategoryAPI = "products?populate=*&filters[category][$eq]=women" ;
      
  
-    // 2- Define a state variable to store the value of  display one of  defined variables , with initial value of [allProductsAPI] :    
+    // B] / 2- Define a state variable to store the value of  display one of  defined variables , with initial value of [allProductsAPI] :    
     const [myData , setmyData] = useState(allProductsAPI) ;
- 
-
-  // A] Define the object handler object of [RTK query] The inner par inside the hook ( the defined state variable ) is value of api url after the baseUrl  : 
+  
+  // A] Define the object handler object of [RTK query] The inner par inside the hook ( the defined state variable ) is value of api url after the baseUrl : 
     // This state used to call the redux RTK toolkit query  , with (3) parameters cases :
       // 1- [data: which is the returned data from the assinged customized api prop ]
       // 2- [error: the error message will be displayed in case of none existed data]
       // 3- [isLoading: case of loading data]
-    const { data, error, isLoading } = useGetproductByNameQuery(myData);
- 
-
-  // C]  Conditional return of functional component [incase of  each of retunred from the Strapi server props {data, isLoading , error} ] :
+      const { data, error, isLoading } = useGetproductByNameQuery(myData);
+  
+      // setAlignment(newValue);
+    // B]/ 3- Execute the function of clicked buttons -> upon the clicked button's incomming value as a prop value of both {setAlignment}  & {setmyData}  :
+    const handleAlignment = (event, newValue) => {
+      setmyData(newValue);
+    };
+  
+  // C] Conditional return of functional component [incase of each retunred case from the Strapi server props {data, isLoading , error} ] :
     // 1- Conditional return of functional component in case of [data : the data is obtained from the database ] :
     if (data) {
-      // Printing testing [console log] of the obtained data [data.data] according to the assinged prop sub url  :
+      // Printing testing [console log] of the obtained data [data.data] according to the assinged prop sub url :
       console.log(data.data) ;
       return (
         <Container sx={{ mt: 9, py: 3 }}>
@@ -95,7 +95,7 @@ const Main = () => {
 
             <ToggleButtonGroup
               color="error"
-              value={alignment}
+              value={myData}
               exclusive
               onChange={handleAlignment}
               aria-label="text alignment"
@@ -146,8 +146,7 @@ const Main = () => {
                 <Card
                   key={item}
                   sx={{
-                    minWidth: 350,
-                    maxWidth: 400,
+                    width: 350, 
                     mt: 6,
                     ":hover .MuiCardMedia-root": {
                       scale: "1.1",
