@@ -146,7 +146,7 @@ const Main = () => {
                 <Card
                   key={item}
                   sx={{
-                    width: 350, 
+                    width: 333, 
                     mt: 6,
                     ":hover .MuiCardMedia-root": {
                       scale: "1.1",
@@ -156,9 +156,9 @@ const Main = () => {
                   }}
                 >
                   <CardMedia
-                    sx={{ height: 277 }}
+                    sx={{ height: 300 }}
                     // @ts-ignore
-                    image={`${import.meta.env.VITE_BASE_URL}${
+                    image={`${
                       item.attributes.productImg.data[0].attributes.url
                     }`}
                     title={item.attributes.productTitle}
