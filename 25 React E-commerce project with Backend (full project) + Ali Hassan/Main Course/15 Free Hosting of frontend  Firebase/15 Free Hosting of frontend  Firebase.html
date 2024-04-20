@@ -1318,15 +1318,155 @@
   
             <br> <hr> <br>                              
  
-            <h1>   Main steps of the Hosting the frontend project files on the free hosting service provider [firebase]  :   <br>
-                <p> To upload our project's frontend files , we3 need to folllow the next steps   as following  :      <br>
+            <h1> Main steps of the Uploading frontend Hosting the frontend project files on the free hosting service provider [firebase]  :   <br>
+                <p> after we persue preperation step -> To upload our project's frontend files , we need to folllow the next steps as following : <br>
                     <ol>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                    <ol> 
+                        <li> A] Use the build code on frontend [cmd] to make the Vite create the [dist] folder inside the [frontned] directory , as the next : <br>
+                            <code>
+                                <span  class=one></span> { npm run build }    <br>   
+                            </code> <br>    
+                            <p> This new  created folder [dist] inside the [frontend/dist] will hold all project's frontend Hostying files later [regardless of the type of hosting service provider ] </p> 
+                            <p> The previous command should be implemented before any project deploy command </p> 
+                        </li> <br>
+                        
+                        <li> B] Create a new account on the [firebase] Host provider , by using the following steps : <br>
+                            <ul> 
+                                <li> Directing to firebase website main website ['firebase.google.com']   </li>
+                                <li> Create new email by using gmail -> [go to console] button -> [Add project]      </li>
+                                <li> Filling the new project information , as following :  <br>
+                                    <ol>
+                                        <li> Project name : 'ecommerce' => [continue]    </li>
+                                        <li> un-select : enable google analysing for this project (-)       </li>
+                                        <li>  Create project  => [continue]        </li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </li> <br> <br>
 
+                        <li> C] Get started and setting up the firebase hosting on our project's frontend files , by following steps : <br>
+                            <p> after logging-in into the Firebase account -> click on the [ Get started ] button  , and follow the  next steps : <br>
+                                <ul> 
+                                    <li> 1-  Install [Firebase CLI] inside the [frontend] directory , insde the cmd , by using  next commond : <br>
+                                        <code> 
+                                            <span class="one"> </span> {npm install -g firebase-tools  }  <br>
+                                        </code>
+                                        <p>  This command will download firebase files & classses inside the project [frontend/src & frontend/dist]      </p>
+                                    </li> <br>
+
+                                    <li> 2- Get Login into [Firebase main interface admin] , by using next command inside the [frontend] vai [cmd]  : <br>
+                                        <code> 
+                                            <span class="one"> </span> {firebase login }  <br>
+                                        </code>
+                                        <p>  This command will login your accont on firebase  </p>
+                                    </li> <br>
+                                    
+                                    <li> 3- Initialize our project  on [Firebase sever] , by using next command inside the [frontend] vai [cmd]  : <br>
+                                        <code> 
+                                            <span class="one"> </span> {firebase init } => (y)  <br>
+                                        </code>
+                                        
+                                        <p>  This command will login your account on firebase's control panel ,
+                                                and adding some files of firebase inside the [frontend/src] , 
+                                                and start main server dialog to get more inforamtion about your account on firebase , as following : <br>
+                                            <code>     
+                                                <span class="one"> </span> Select Hosting service type =>  select ( by arrow , space and enter)   [configurre files for Firebase hosting and (optionally) setup github action deploy ]   :  <br>
+                                                <span class="one"> </span> Selecting option  => [use and Existintg project] -> (means to select the default root dirctory :  by selecting from the created project 'ecommerce' )  <br>
+                                                <span class="one"> </span> What do you want to use as public Directory =>  ['dist'] => (deu to this folder has all hosting files )  <br>
+                                                <span class="one"> </span> Configure as single-webpage-app  =>  (y)  => (due to we are using react)  <br>
+                                                <span class="one"> </span> Setup autotmatic buildup and deploy using  github =>  (no)   <br>
+                                                <span class="one"> </span> Overwrite the file [dist/index.html]  =>  (no)   <br>
+                                            </code>                                                
+                                        </p>
+                                    </li> <br>
+
+
+
+                                </ul>                                        
+                                
+                            
+                            </p> 
+                            
+                        </li> <br> <br>
+                                                        
+                        <li> D] Previewing & Testing our project frontend files before uploading or deployjng , by using the  following steps :  <br>
+                            <p>  This step will save a lot of effort and time in order to discover any (bugs or Errors) in the frontend files scripts and fix it before uploading files into  dist  nad then firebase host , which can be implemented by the next steps  : <br>
+                                <ul> 
+                                    <li> run the command of testing firebase server by next code (inside the [frontend] folder ) : <br> 
+                                        <code> 
+                                            <span class=one></span> { npm run serve } => this will genererate testing custom url link on [firebase localhost server , on port : 5000 ]    <br>
+                                        </code>
+                                    </li>
+                                </ul>
+                            </p>                            
+                        </li> <br> <br>
+                        
+                        <li> E] Discovering Errors , Bugs and problems inside frontend files scripts , and starting fixing them ,  as following  : <br>
+                            <ol> 
+                                <li> First Problem :   <br>
+                                    <ul>
+                                        <li> Non displayed images urls inside {hero} {products} sections within [Main.jsx] file  , due to unaccessble src of images  [firebase  hosting server is not reading the 'images' folder inside the [frontend]   ] </li> 
+                                        <li> Fix/solve : <br> 
+                                            <ol> 
+                                                <li> Moving [images] folder from the inside the [src]  folder  into => [public] folder (due to the hosting is reading from the public ) </li>
+ 
+                                                <li>  Editing images src url [by replacing the 'src' the  './'  (due the  [firsebase server] is reading from  [public]  directly )   ] ,  after changing  the [images] folder , to be matched with the new directory [frontend/public] , as following : <br>
+                                                    <ul>  
+                                                        <li>  [components/hero/Hero.jsx] file  =>    <br>
+                                                            // 1- inside the functional component & before the return inside the variable of [mySlider()]  :   <br>
+                                                            <code> 
+                                                                <span class="one"></span>  const mySlider = [   <br> 
+                                                                    <span class="two"></span> // first hero slide element :     <br>  
+                                                                    <span class="two"></span>  { text: 'MEN' , <br>  
+                                                                    <span class="two"></span>  link: './images/bannner-15.jpg' } ,   <br>  <br>
+                                                                
+                                                                    <span class="two"></span>  // second hero slide element : <br>  
+                                                                    <span class="two"></span>  { text: 'WOMEN' , <br>  
+                                                                    <span class="two"></span>  link: './images/bannner-25.jpg' }    <br> 
+                                                                <span class="one"></span>    ]   <br> 
+                                                            </code> <br>  
+
+                                                            // 2- inside the functional component & after the return inside the [Box] element : <br>
+                                                            <code> 
+                                                                <span class="one"></span>  &lt; img src="./images/..... .jpg"  &gt;   <br> 
+                                                            </code> <br>     
+                                                        </li>  <br> 
+                                                    </ul>
+                                                </li> <br>      
+
+                                                <li> Run the next command cmd [inside frontend folder ] (to save any chaneges of frontend files inside the dist )  =>    <br>
+                                                    <code> 
+                                                       <span class=one> </span>  { npm run build } <br> 
+                                                    </code>                                                
+                                                </li> <br>
+
+                                                <li> Test and preview frontend sever via [generated link of port:5000] =>    <br>
+                                                    <code> 
+                                                       <span class=one> </span>  { firebase serve } <br> 
+                                                    </code>                                                
+                                                </li> <br>
+
+                                            </ol>                   
+
+                                        </li>  
+                                    </ul>
+                                </li> <br>
+                            </ol>
+                          
+                        </li>
+
+                        <li> F] Deploying the frontend files after [which is saved inside the  [dist] folder ] by using the next CMD command (inside the frontend main root ) :   <br> 
+                            <code> 
+                                <span class="one" ></span>  { firebase deploy } =>  [This will generate a url  link of a real firebase server to direct into the our website ]    <br>   
+                            </code> <br>
+                            
+                            <p> The previous generated url link of a real firebase server => is also existed inside the main firebase account -> hosting => domain : [2  basic urls]   :   <br>  
+                                <ol>
+                                    <li>  ['ecommerce-..... .web.app] </li>  
+                                    <li>  ['ecommerce-..... .firebaseapp.com] </li>  
+                                </ol>
+                            </p>
+                        </li>
+                    <ol> 
                 </p>
             </h1> <br>
   
@@ -1338,10 +1478,10 @@
                 <ul> 
                     <li> General  notes   : <br>
                         <ol>  
-                            <li>         </li>
-                             
+                            <li> Using the real firebase URL link take abit while for the first time </li>
                         </ol>
                     </li>
+                    
                     <li>   </li> 
                 </ul>
             </h1>
