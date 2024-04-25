@@ -1,20 +1,61 @@
+/*  Importing the font type and weight of [Roboto]   */
+@import url('https://fonts.googleais.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+html {  
+  font-family: 'Roboto' , sans-serif ; 
+  box-sizing : border-box  ;
+}
+
+*, *:before, *:after  {
+  box-sizing : inherit ;
+}
+ 
+* {
+  margin:0; 
+  padding :0;
+}
 
 /* Defining the Root css variable :   */
  :root{
-   --primary: #000 
+   --primary: #000;  
+   --primaryColor: #000 ;
+   --secondary : rgb(24 24 27) ;  
+   --border: rgba(63, 63 , 70 , 0.4);   
   }
 
   
 /* Assigning the defined root wihtin the background color [with the basic value] to  [body] element : */
 body {
   background-color: var(--primary) ; 
+  color: var(--primaryColor) ;
 }
 
 
 /* Re-Assiging the defined root within the  background color [with custom value] to [custom class] element : */
 .light {
   --primary : #fff ; 
+  --primaryColor : #000 ;
 }
+
+/* ----------------------------------- */
+
+/*  Formating the main  contnainer element [htm]  :  */
+.container  {
+    border : 2px solid var(--border);
+    width: 80% ;
+    margin-left:  auto ; 
+    margin-right:  auto ; 
+    background-color: var(--secondary) ; 
+  }
+
+/* ------------ */
+
+.divider {
+    border-bottom: 1px solid var(--border); 
+    margin: 3rem 0 ;    
+}
+
+
 
 
 
