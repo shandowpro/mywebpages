@@ -33,6 +33,7 @@ function App() {
       <div className='divider'  />
       
       <Footer />
+      <div className='divider'  />
 
     </div>
     

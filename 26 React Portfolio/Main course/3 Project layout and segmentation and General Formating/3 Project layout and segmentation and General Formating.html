@@ -1293,20 +1293,26 @@
                 <ol type="A">
                     <li> Main points of this lesson , will include the following steps and points  : <br>
                         <ol> 
-                             <li> Main Layout and segmentation and project files structure of the [project design] </li>
-                             <li> Practical steps of project General formating :  <br>
+                             <li> A] Main Layout and segmentation and project files structure of the [project design] 
                                 <ul> 
-                                    <li> Establishing main components files & it's  formatings files  </li> 
-                                    <li> General project formating : <br>
+                                    <li> 1- Planning and layout of project design's main components  </li>
+                                    <li> 2- Project files structure   </li>
+                                </ul>
+                             </li>  <br>
+                             <li> B] Practical steps of project General formating :  <br>
+                                <ul> 
+                                    <li> 1- Establishing main components files & it's  formatings files  </li> 
+                                    <li> 2- General project formating : <br>
                                         <ol>
-                                           <li> Adjusting project google Font [Roboto] </li> 
+                                           <li> Adding project google Font [Roboto] </li> 
                                            <li> Adjusting General of Container Element & fixing some issues   </li> 
                                         </ol> 
                                     </li> 
                                 </ul>
                             </li>
                         </ol>
-                     </li> <br> <br>
+                     </li>
+                    <br> <br>
                 </ol>
             </article>
         </Section>
@@ -1359,98 +1365,223 @@
                         </li> <br> 
                     </ol> <br>
 
-
-                    <p> 2]  Project fires structure  :  </p>
-                        <ol> 
-                            <li>  </li>
-
-                            
-                        </ol>
-                        
-            <hr> <br>  <br>            
-             
-              
-
-            <h1> B] Main Layout and segmentation and project files structure of the [project design ]  , as following  :  </h1> <br>
-                <p> Planning  and layout of project design's main components , as following : <p>
-                    <ol>  
-                        <li> 1- {Header} :  the top component in the web page/document , which is including : <br>
+                <p> 2] Project files structure  :  </p>
+                    <ol> 
+                        <li> [portfolio] => main project directory {root} : <br>
                             <ul> 
-                                <li> Main website [Menu Item] </li>
-                                <li> Dark/Light mode buttons [to switch between light and dark modes ]  </li>
-                                <li> Shortcut website [Menu Item] {to be displayed in small screens only}  </li>
-                            </ul>
+                                <li>  [src] : <br> 
+                                    <ul> 
+                                        <li> [components] :  <br>
+                                            <ul>
+                                                <li> [1-header] :  <br> 
+                                                    <ol> 
+                                                        <li>  {Header.jsx}  </li>
+                                                        <li>  {header.css}  </li>
+                                                    </ol>                                                
+                                                </li>  <br>
+
+                                                <li> [2-hero] :  <br> 
+                                                    <ol> 
+                                                        <li>  {Hero.jsx}  </li>
+                                                        <li>  {hero.css}  </li>
+                                                    </ol>                                                
+                                                </li> <br> 
+
+                                                <li> [3-main] :  <br> 
+                                                    <ol> 
+                                                        <li>  {Main.jsx}  </li>
+                                                        <li>  {main.css}  </li>
+                                                    </ol>                                                
+                                                </li> <br>
+                                                
+                                                <li> [4-contact] :  <br> 
+                                                    <ol> 
+                                                        <li>  {Contact.jsx}  </li>
+                                                        <li>  {contact.css}  </li>
+                                                    </ol>                                                
+                                                </li> <br>
+
+                                                <li> [5-footer] :  <br> 
+                                                    <ol> 
+                                                        <li>  {Footer.jsx}  </li>
+                                                        <li>  {footer.css}  </li>
+                                                    </ol>                                                
+                                                </li> <br>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li>  {main.jsx} : the major assembling file of react system     </li>
+                                        <li>  {App.jsx} : the main file in the react project , which import and include all other files and components    </li>
+                                        <li>  {index.css} : the general  css fomrating file shared in all other proejct files  </li>
+                                    </ul>
+                                </li> <br>
+
+                                <li>  [public] => contains the public shared icons and images : <br>
+                                    <ul>
+                                        <li> {me.jpg} : the title iconic image of the profile  </li> 
+                                    </ul>
+                                </li> <br>
+
+                                <li> {.eslintrc.cjs} =>  the eslint rules file , which include all  project allownace and prohibites syntax rules    </li> <br>
+                                <li> {.gitignore} =>  the gitub rules  file , which include all files list to be ignored wshile pushing the project files into the server    </li> <br>
+                                <li> {package.json} =>  the libraries file that been installed and used inside the project   </li> <br>
+                                <li> {vite.config.js} =>  the file include the  React-vite framework of project </li> <br>  
+                            </ul> 
+                        </li>
+                    </ol>
+                    <br> <br> <hr> <br> <hr> <br> 
+            <!-- ---------------------------------- -->
+             
+            <h1> B] Practical steps of project General formating , as following  :  </h1> <br>
+                <p> 1] Establishing main components files & it's  formatings files , as following : <p>
+                    <ol>  
+                        <li> 1- {Header} component  , which require The (2) files : <br>
+                            <ul> 
+                                <li>  {Header.jsx} => the main JSX functional component </li>
+                                <li>  {header.css} => the css file for the [Header] component  , to be imported wihtin the {Header.jsx}    </li>
+                            </ul> 
                         </li> <br> 
-                       
+                        
                         <li> 2- {Hero} : the component just after the header , which is including : <br>
                             <ul> 
-                                <li> Images [personal and  animated icon ]  </li>
-                                <li> Titles of mine    </li>
-                                <li> Social icons of mine </li>
+                                <li>  {Hero.jsx} => the main JSX functional component </li>
+                                <li>  {hero.css} => the  css file for the [Hero] component  , to be imported wihtin the {Hero.jsx}    </li>
                             </ul>
                         </li> <br> 
-
+                        
                         <li> 3- {Main} : the component after Hero section , which is including : <br>
                             <ul> 
-                                <li> Filtering categories Left side section </li>
-                                <li> Portfolio projects Cards Right side  section [animated] [each card represent a project ] </li>
+                                <li>  {Main.jsx} => the main JSX functional component </li>
+                                <li>  {main.css} => the  css file for the [Main] component  , to be imported wihtin the {Main.jsx}    </li>
                             </ul>
                         </li> <br>
                         
                         <li> 4- {Contact US } : the component after Main section , which is including : <br>
                             <ul> 
-                                <li> A contacting Form to be submited and sent to me form a client or visitor via my [G-mail] </li>
-                                <li> Has a side animated section </li>
+                                <li>  {Contact.jsx} => the main JSX functional component </li>
+                                <li>  {contact.css} => the  css file for the [Contact] component  , to be imported wihtin the {Contact.jsx}    </li>
                             </ul>
                         </li> <br>
                         
                         <li> 5- {Footer} : the last component section in the  web document , which is including : <br>
                             <ul> 
-                                <li> My Social media links </li>
-                                <li> My copyright and trademark </li>
+                                <li>  {Footer.jsx} => the main JSX functional component </li>
+                                <li>  {footer.css} => the  css file for the [Footer] component  , to be imported wihtin the {Footer.jsx}    </li>
                             </ul>
                         </li> <br>
                         
                     </ol>
-            <hr> <br>  <br>            
+                <br> <br> <hr> <br>
+
+                <p> 2] General project formating : <br>
+                    <ol>
+                        <li> a] Adding project google Font [Roboto] :<br>
+                            <p> To add a [font] into  the website , there are (2) main methods :  <br>
+                                <ol>
+                                    <li> by add [Font HTML script ] into the  [index.html] file  </li>
+                                    <li> by add [Font import code]  into  css file [index.css] , which is used/improted  by [main.jsx] file of th project      </li>        
+                                </ol>                   
+                            </p> 
+                            <p> It is reqiuring also to add font-family into the css file [index.css] </p>
+                        </li> <br> 
+
+                        <li>  b] Define some [CSS variables] inside the [index.css]  :    <br>  
+                            <p> [Css variables] => are very usful to be usded as variable values of  ceratin  css properties , which are very handy in creating some features , such as :
+                               <ol> 
+                                    <li>  [Dark/Light] modes tool  </li>
+                                    <li>  Storing initial values of certain css properties , to used as hte default value , and with differnt values later with in css properties for elements or classes </li>
+                               </ol> 
+                            </p> <br>
+  
+                            <p>  To define [CSS variables] inside CSS file [index.css -> inside {:root} class ] , as folloowing  :  <br>
+                                <code>
+                                    // Define the main [:root] : <br>
+                                    <span class="one"></span>   :root {  <br>
+                                        <span class="two"></span>  --primary : #000 ;   <br>
+                                        <span class="two"></span>  --secondary :  rgb(24 , 24 , 63 ) ; <br>
+                                        <span class="two"></span>  --border :  rgba(63 , 63, 63 , .4)  ;   <br>
+                                    <span class="one"></span> }  <br> <br>
+                                </code> <br>
+                            </p>
+                        </li>  <br>  
+                        
+                        <li> c] Adjusting General of Container Element & fixing some issues :  <br> 
+                            <ol> 
+                                 <li> 1- Fixing the oversizing problem of main container for the main web document  , by following procedures  :  <br>
+                                    <p>  Adding the next css properties  to the [HTML] container & [*] => inside the [index.css] :    </p>
+                                    <code>
+                                        <span class="one"></span>   html {  <br>
+                                            <span class="two"></span>   box-sizinig: border-box ;   <br>
+                                        <span class="one"></span> }  <br> <br>
+                                         
+                                        <span class="one"></span>   * , *:before , *:after {  <br>
+                                            <span class="two"></span>   box-sizinig:   inherit ;     <br>
+                                        <span class="one"></span> }  <br>
+                                        
+                                    </code> <br>
+                                </li> <br>  <br>
+                                
+                                <li> 2- Fixing the marigns of the all elements inside  web document  , by following procedures  :  <br>
+                                    <p>  Adding the next css properties to the [*]  => inside the [index.css] :    </p>
+                                    <code>
+                                        <span class="one"></span>   *  {  <br>
+                                            <span class="two"></span>   margin : 0 ;     <br>
+                                            <span class="two"></span>   padding  : 0 ;     <br>
+                                        <span class="one"></span> }  <br>
+                                    </code> <br>
+                                </li> <br>  <br>
+                                 
+                                <li> 3- Modify the [body] css properties background color ,  by following procedures  :  <br>
+                                    <p>  Adding background color css properties  => [to assinged by the defined css var - with new custom value] => inside the [index.css] :    </p>
+                                    <code>
+                                        <span class="one"></span>   body   {  <br>
+                                            <span class="two"></span>  background-color: var(--primary) ;      <br>
+                                            <span class="two"></span>  color: var(--primaryColor) ;     <br>
+                                        <span class="one"></span> }  <br>
+                                    </code> <br>
+                                </li>  <br>  <br>
+                                 
+                                <li> 4- Modify the [light] class using [Defined Css Var] ,  by following procedures  :  <br>
+                                    <p>  Re-assinging  css properties [background color & font color]  => [to assinged by the defined css var - with new custom value ] => inside the [index.css] :    </p>
+                                    <code>
+                                        <span class="one"></span> .light {  <br>
+                                            <span class="two"></span>  --primary : #fff ;        <br>
+                                            <span class="two"></span>  --primaryColor : #000 ;     <br>
+                                        <span class="one"></span> }  <br>
+                                    </code> <br>
+                                </li> <br>  <br>
+                                 
+
+                                <li> 5- Adding [.contianer] class , with some css properites , by following procedures  :  <br>
+                                    <p>  This class to be added into the main [div] inside the {App.jsx} . and will be has certain css properties (with using defined [css var - main basic value ]) inside the [index.css] :    </p>
+                                    <code>
+                                        <span class="one"></span>   .container  {  <br>
+                                            <span class="two"></span>  border : 2px solid var(--border) ;  <br>
+                                            <span class="two"></span>  width  : 80% ;  <br>
+                                            <span class="two"></span>  margin-left  : auto ;  <br>
+                                            <span class="two"></span>  margin-right : auto ;  <br>
+                                            <span class="two"></span>  background-color :  var(--secondary)  ;  <br>
+                                        <span class="one"></span> }  <br>
+                                    </code> 
+                                </li>  <br>  <br>
+                                 
+                                <li> 6- Adding [.divider] class , with some css properites , by following procedures  :  <br>
+                                    <p> This class to be added as a seperator between the all component inside the {App.jsx} , and will has css properites [using defined css var - with basic value ] inside the [index.css] :    </p>
+                                    <code>
+                                        <span class="one"></span>   .divider {  <br>
+                                            <span class="two"></span>  border-bottom : 1px solid var(--border) ; => [to make the border slim as possible ,by making it with only side ]  <br>
+                                            <span class="two"></span>  margin  :  3rem 0 ;  => [to make top and bottom margin with dispatce and the right and left is 0 to be with full width of all screen  ] <br> 
+                                        <span class="one"></span> }  <br>
+                                    </code> <br>
+                                </li>
+                            </ol>
+                        </li> 
+                    </ol> 
+                </p>
+                <br> <br> <hr> <br>    
+            <!-- ---------------------------------------- -->
+ 
              
-              
-
-
-
-            <h1> C] Practical steps of using [CSS variables] method to create the [Dark / Light] , as following steps : </h1> <br>
-                <ol>
-                    <li> Define the main [CSS variable] inside  {index.css}   : <br> 
-                        <code>
-                            <span class="one"></span> // 1- Defining the Root css variable :  <br>
-                            <span class="one"></span>  :root {  <br>
-                                <span class="two"></span> --primary: #000   <br>
-                            <span class="one"></span> } <br> <br>
-                            
-
-                            <span class="one"></span> // 2- Assigning the defined root wihtin the background color [with the basic value] to  [body] element :  <br>
-                            <span class="one"></span> body  {  <br>
-                                <span class="two"></span> background-color: var(--primary) ;   <br>
-                            <span class="one"></span> } <br> <br>
-  
-
-                            <span class="one"></span> // 3-  Re-Assiging the defined root within the  background color [with custom value] to [custom class] element : : <br>                          
-                            <span class="one"></span> .light  {  <br>
-                                <span class="two"></span> --primary :  #fff  ;   <br>
-                            <span class="one"></span> } <br> <br>
-  
-                        </code>
-                    </li> <br>
-
-                    <li>  Using the class name inside the [body] elment inside [inside.html]  , by vlaue of defined class name inside the [index.css] , as following : <br>
-                        <code>
-                            <span class="one"></span> // Assigning the {body} element classname with ['light'] to apply the Light mode as the inital value of body background color  :  <br>
-                            <span class="one"></span>  &lt;  body class='light' &gt;   <br>  
-                        </code> 
-                    </li>  <br>
-                </ol>                     
-              <br> <hr> <br>
-            </h1>  <br> <hr> <br>
             <!-- ------------------------------------------ -->
  
 
@@ -1618,7 +1749,13 @@
                 <h3> [3 Project layout and segmentation and General Formating] Importance & Benefits : </h3>
             </header>
             <ul>
-
+                <li> There are (2) metods to pickup  color from  any design  , as following : <br>
+                    <ol>
+                        <li> Adding browser exension {Smart Color Picker} to my browser addons   </li> 
+                        <li> Using {DevTool} by inspector on any location  that include any background color > and reach it's css property of [background-color]   </li> 
+                        <li> You can the element in JSx as self closing element even it is not [in case this element as NO content ]  </li> 
+                    </ol>
+                </li>
             </ul>
         </section>
 
