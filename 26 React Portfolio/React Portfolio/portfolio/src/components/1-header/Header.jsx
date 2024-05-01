@@ -43,7 +43,7 @@ const Header = () => {
       </nav>
 
       <button className="mode flex"> 
-        <span className ="icon-moon-o"></span> 
+        <span className ="icon-moon-o" /> 
       </button>
 
       {showModal && (
@@ -54,9 +54,8 @@ const Header = () => {
                 onClick={() => {
                   setshowModal(false);
                 }}
-                className="icon-clear"
+                className="icon-close"
               />
-              
             </li>
 
             <li>
@@ -78,6 +77,7 @@ const Header = () => {
             <li>
               <a href=""> Uses </a>
             </li>
+
           </ul>
         </div>
       )}
