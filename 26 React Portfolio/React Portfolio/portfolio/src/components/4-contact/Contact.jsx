@@ -37,6 +37,7 @@ const Contact = () => {
 
         <div className="animation"> Animation </div>
       </div>
+      
     </section>
   );
 };

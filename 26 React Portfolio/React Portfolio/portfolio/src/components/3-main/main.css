@@ -22,20 +22,22 @@
  }
 
  main.flex {
-     gap        : 2.5rem;
+     gap        : 2rem;
      align-items: start;
- }
-
-
+     justify-content: space-between;
+    }
+    
+    
 
  /* =========================
    2.  Left section => buttons 
   =========================
 */
 
- main section.left-section.flex {
-     flex-direction: column;
-     gap           : 10px;
+main section.left-section.flex {
+    flex-direction: column;
+    gap           : 10px;
+    margin-left: -25px;
  }
 
  main section.left-section.flex button {
@@ -55,10 +57,10 @@
  }
 
  main section.left-section.flex button.active {
-     letter-spacing: .6px;
-     opacity       : 1;
-     font-weight   : bold;
-     padding       : .85rem 0;
+     letter-spacing: .6px ;
+     opacity       : 1 ;
+     font-weight   : bold ;
+     padding       : .85rem 0 ;
      border        : 1px solid var(--blue);
  }
 
@@ -170,4 +172,12 @@
 
      }
 
+ }
+
+
+ @media (min-width:1890px) {
+    main.flex {
+        gap: 10rem;
+        justify-content: center;
+    }
  }

@@ -7,25 +7,26 @@ const Main = () => {
   return (
     <main className="flex">
       <section className="  flex left-section">
-        <button className="active">All Projects</button>
+        <button >All Projects</button>
 
-        <button>HTML & CSS</button>
+        <button className={true? "active" : null }  >HTML & CSS</button>
 
         <button>JavaScript</button>
 
         <button>React & MIU</button>
 
         <button>Node & Express</button>
-      </section>
+      </section>  
+      
 
       <section className="  flex right-section">
         
          {["aa", "bb", "cc"  , 1 , 3  ].map((item) => {
           return (
             <article key={item}  className="card">
-              <img width={260} src="./1.jpg" alt="project Image" />
+              <img width={230} src="./1.jpg" alt="project Image" />
 
-              <div style={{ width: "260px" }} className=" box">
+              <div style={{ width: "230px" }} className=" box">
                 <h1 className="title"> Landing page 1 </h1>
                 <p className="sub-title">
                   Project Card details Project Card details Project Card details

@@ -18,7 +18,7 @@ function App() {
 
   return (
       
-    <div className = 'container' > 
+    <div className = 'container' id="up" > 
        
       <Header/>
       
@@ -32,7 +32,12 @@ function App() {
       <div className='divider'  />
       
       <Footer />
-      <div className='divider'  />
+      
+      <a href='#up'>
+      
+        <button  className='icon-keyboard_arrow_up scroll2Top'> </button>
+      
+      </a>  
 
     </div>
     
