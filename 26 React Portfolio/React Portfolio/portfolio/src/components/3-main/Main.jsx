@@ -1,37 +1,192 @@
 // Third component [Main] :
 
+// import { useState } from "react";
 import "./main.css";
-// import { React } from 'react';
+
+import { useState } from "react";
+
+// Define array of All projects , to use it with mapping inside th displayed cards :
+const projects = [
+  {
+    id: "1",
+    projectTitle: "React MUI Project",
+    projectSubTitle: "Project created by using React framework ",
+    imgPath: "/1.jpg",
+    category: "React & MUI",
+    link: "",
+  },
+  {
+    id: "2",
+    projectTitle: "React MUI Project",
+    projectSubTitle: "Project created by using React framework ",
+    imgPath: "/1.jpg",
+    category: "React & MUI",
+    link: "",
+  },
+  {
+    id: "3",
+    projectTitle: "React MUI Project",
+    projectSubTitle: "Project created by using React framework ",
+    imgPath: "/1.jpg",
+    category: "React & MUI",
+    link: "",
+  },
+  {
+    id: "4",
+    projectTitle: "HTML CSS Project",
+    projectSubTitle: "Project created by using HTML CSS ",
+    imgPath: "/1.jpg",
+    category: "HTML & CSS",
+    link: "",
+  },
+  {
+    id: "5",
+    projectTitle: "HTML CSS Project",
+    projectSubTitle: "Project created by using HTML CSS ",
+    imgPath: "/1.jpg",
+    category: "HTML & CSS",
+    link: "",
+  },
+  {
+    id: "6",
+    projectTitle: "HTML CSS Project",
+    projectSubTitle: "Project created by using HTML CSS ",
+    imgPath: "/1.jpg",
+    category: "HTML & CSS",
+    link: "",
+  },
+  {
+    id: "7",
+    projectTitle: "JavaScript Project",
+    projectSubTitle: "Project created by using JavaScript ",
+    imgPath: "/1.jpg",
+    category: "JavaScript",
+    link: "",
+  },
+  {
+    id: "8",
+    projectTitle: "JavaScript Project",
+    projectSubTitle: "Project created by using JavaScript ",
+    imgPath: "/1.jpg",
+    category: "JavaScript",
+    link: "",
+  },
+  {
+    id: "9",
+    projectTitle: "JavaScript Project",
+    projectSubTitle: "Project created by using JavaScript ",
+    imgPath: "/1.jpg",
+    category: "JavaScript",
+    link: "",
+  },
+  {
+    id: "10",
+    projectTitle: "NextJS Project",
+    projectSubTitle: "Project created by using NextJS framework ",
+    imgPath: "/1.jpg",
+    category: "NextJS",
+    link: "",
+  },
+  {
+    id: "11",
+    projectTitle: "NextJS Project",
+    projectSubTitle: "Project created by using NextJS framework ",
+    imgPath: "/1.jpg",
+    category: "NextJS",
+    link: "",
+  },
+  {
+    id: "12",
+    projectTitle: "NextJS Project",
+    projectSubTitle: "Project created by using NextJS framework ",
+    imgPath: "/1.jpg",
+    category: "NextJS",
+    link: "",
+  },
+];
 
 const Main = () => {
+  // Define a [useState] as a toggling value of class name of each  button usign it as return of backup function :
+  const [currentActive, setCurrentActive] = useState("all");
+
+  // Define a [useState] of the value of full array , to be used as switching array of clicked category :
+  const [arr, setArr] = useState(projects);
+
   return (
     <main className="flex">
       <section className="  flex left-section">
-        <button >All Projects</button>
+        <button
+          onClick={() => {
+            setCurrentActive("all");
+            setArr(projects);
+          }}
+          className={currentActive === "all" ? "active" : null}
+        >
+          All Projects
+        </button>
 
-        <button className={true? "active" : null }  >HTML & CSS</button>
+        <button
+          onClick={() => {
+            setCurrentActive("HTML & CSS");
+            const newArr = projects.filter((item) => {
+              return  item.category === 'HTML & CSS'
+            })
+            setArr(newArr);
+          }}
+          className={currentActive === "HTML & CSS" ? "active" : null}
+        >
+          HTML & CSS
+        </button>
 
-        <button>JavaScript</button>
+        <button
+          onClick={() => {
+            setCurrentActive("JavaScript");
+            const newArr = projects.filter((item) => {
+              return  item.category === 'JavaScript'
+            })
+            setArr(newArr);
+          }}
+          className={currentActive === "JavaScript" ? "active" : null}
+        >
+          JavaScript
+        </button>
 
-        <button>React & MIU</button>
+        <button
+          onClick={() => {
+            setCurrentActive("React & MUI");
+            const newArr = projects.filter((item) => {
+              return  item.category === 'React & MUI'
+            })
+            setArr(newArr);
+          }}
+          className={currentActive === "React & MUI" ? "active" : null}
+        >
+          React & MIU
+        </button>
 
-        <button>Node & Express</button>
-      </section>  
-      
+        <button
+          onClick={() => {
+            setCurrentActive("NextJS");
+            const newArr = projects.filter((item) => {
+              return  item.category === 'NextJS'
+            })
+            setArr(newArr);
+          }}
+          className={currentActive === "NextJS" ? "active" : null}
+        >
+          NextJS
+        </button>
+      </section>
 
       <section className="  flex right-section">
-        
-         {["aa", "bb", "cc"  , 1 , 3  ].map((item) => {
+        {arr.map((item) => {
           return (
-            <article key={item}  className="card">
-              <img width={230} src="./1.jpg" alt="project Image" />
+            <article key={item.id} className="card">
+              <img width={230} src={item.imgPath} alt="project Image" />
 
               <div style={{ width: "230px" }} className=" box">
-                <h1 className="title"> Landing page 1 </h1>
-                <p className="sub-title">
-                  Project Card details Project Card details Project Card details
-                  Project Card details
-                </p>
+                <h1 className="title"> {item.projectTitle} </h1>
+                <p className="sub-title">{item.projectSubTitle}</p>
 
                 <div className="flex icons ">
                   <div style={{ gap: "11px" }} className="flex">
