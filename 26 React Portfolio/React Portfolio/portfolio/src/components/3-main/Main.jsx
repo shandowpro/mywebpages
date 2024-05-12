@@ -9,58 +9,58 @@ import { useState } from "react";
 const projects = [
   {
     id: "1",
-    projectTitle: "React MUI Project",
+    projectTitle: "React & Bootstrap Project",
     projectSubTitle: "Project created by using React framework ",
     imgPath: "/1.jpg",
-    category: "React & MUI",
+    category: ["React", "Bootstrap"],
     link: "",
   },
   {
     id: "2",
-    projectTitle: "React MUI Project",
+    projectTitle: "React & Bootstrap Project",
     projectSubTitle: "Project created by using React framework ",
     imgPath: "/1.jpg",
-    category: "React & MUI",
+    category: ["React", "Bootstrap"],
     link: "",
   },
   {
     id: "3",
-    projectTitle: "React MUI Project",
+    projectTitle: "React & Bootstrap Project",
     projectSubTitle: "Project created by using React framework ",
     imgPath: "/1.jpg",
-    category: "React & MUI",
+    category: ["React", "Bootstrap"],
     link: "",
   },
   {
     id: "4",
-    projectTitle: "HTML CSS Project",
-    projectSubTitle: "Project created by using HTML CSS ",
+    projectTitle: "React & MUI Project",
+    projectSubTitle: "Project created by using React framework ",
     imgPath: "/1.jpg",
-    category: "HTML & CSS",
+    category: ["React", "MUI"],
     link: "",
   },
   {
     id: "5",
-    projectTitle: "HTML CSS Project",
+    projectTitle: "HTML & CSS Project",
     projectSubTitle: "Project created by using HTML CSS ",
     imgPath: "/1.jpg",
-    category: "HTML & CSS",
+    category: ["HTML & CSS"],
     link: "",
   },
   {
     id: "6",
-    projectTitle: "HTML CSS Project",
+    projectTitle: "HTML & CSS Project",
     projectSubTitle: "Project created by using HTML CSS ",
     imgPath: "/1.jpg",
-    category: "HTML & CSS",
+    category: ["HTML & CSS"],
     link: "",
   },
   {
     id: "7",
-    projectTitle: "JavaScript Project",
-    projectSubTitle: "Project created by using JavaScript ",
+    projectTitle: "HTML & CSS Project",
+    projectSubTitle: "Project created by using HTML CSS ",
     imgPath: "/1.jpg",
-    category: "JavaScript",
+    category: ["HTML & CSS"],
     link: "",
   },
   {
@@ -68,7 +68,7 @@ const projects = [
     projectTitle: "JavaScript Project",
     projectSubTitle: "Project created by using JavaScript ",
     imgPath: "/1.jpg",
-    category: "JavaScript",
+    category: ["JavaScript"],
     link: "",
   },
   {
@@ -76,15 +76,15 @@ const projects = [
     projectTitle: "JavaScript Project",
     projectSubTitle: "Project created by using JavaScript ",
     imgPath: "/1.jpg",
-    category: "JavaScript",
+    category: ["JavaScript"],
     link: "",
   },
   {
     id: "10",
-    projectTitle: "NextJS Project",
-    projectSubTitle: "Project created by using NextJS framework ",
+    projectTitle: "JavaScript Project",
+    projectSubTitle: "Project created by using JavaScript ",
     imgPath: "/1.jpg",
-    category: "NextJS",
+    category: ["JavaScript"],
     link: "",
   },
   {
@@ -92,7 +92,7 @@ const projects = [
     projectTitle: "NextJS Project",
     projectSubTitle: "Project created by using NextJS framework ",
     imgPath: "/1.jpg",
-    category: "NextJS",
+    category: ["NextJS"],
     link: "",
   },
   {
@@ -100,7 +100,15 @@ const projects = [
     projectTitle: "NextJS Project",
     projectSubTitle: "Project created by using NextJS framework ",
     imgPath: "/1.jpg",
-    category: "NextJS",
+    category: ["NextJS"],
+    link: "",
+  },
+  {
+    id: "13",
+    projectTitle: "NextJS Project",
+    projectSubTitle: "Project created by using NextJS framework ",
+    imgPath: "/1.jpg",
+    category: ["NextJS"],
     link: "",
   },
 ];
@@ -109,8 +117,38 @@ const Main = () => {
   // Define a [useState] as a toggling value of class name of each  button usign it as return of backup function :
   const [currentActive, setCurrentActive] = useState("all");
 
+ 
   // Define a [useState] of the value of full array , to be used as switching array of clicked category :
   const [arr, setArr] = useState(projects);
+
+ 
+  // Creating Re-usable function[using integrated filter methods] to be called  inside all buttons [onclick] , with using parmanter of [category button value ]    :
+  const handleClick  = (buttonCategory) => {
+    setCurrentActive(buttonCategory);
+
+    const newArr = projects.filter((item) => {
+      const newsubArr = item.category.filter((subItem) => {
+        return subItem === buttonCategory;
+      });
+        return newsubArr[0] === buttonCategory ;
+    });
+    setArr(newArr);
+  }
+
+
+  // Creating Re-usable function  [using integrated filter & find method] to be called  inside all buttons [onclick] , with using parmanter of [category button value ]  :
+  const handleClickFind  = (buttonCategory) => {
+    setCurrentActive(buttonCategory);
+
+    const newArr = projects.filter((item) => {
+      const newsubArr = item.category.find((subItem) => {
+        return subItem === buttonCategory;
+      });
+        return newsubArr === buttonCategory ;
+    });
+    setArr(newArr);
+  }
+  
 
   return (
     <main className="flex">
@@ -127,11 +165,7 @@ const Main = () => {
 
         <button
           onClick={() => {
-            setCurrentActive("HTML & CSS");
-            const newArr = projects.filter((item) => {
-              return  item.category === 'HTML & CSS'
-            })
-            setArr(newArr);
+            handleClick('HTML & CSS');
           }}
           className={currentActive === "HTML & CSS" ? "active" : null}
         >
@@ -140,11 +174,7 @@ const Main = () => {
 
         <button
           onClick={() => {
-            setCurrentActive("JavaScript");
-            const newArr = projects.filter((item) => {
-              return  item.category === 'JavaScript'
-            })
-            setArr(newArr);
+            handleClick('JavaScript') ; 
           }}
           className={currentActive === "JavaScript" ? "active" : null}
         >
@@ -153,24 +183,16 @@ const Main = () => {
 
         <button
           onClick={() => {
-            setCurrentActive("React & MUI");
-            const newArr = projects.filter((item) => {
-              return  item.category === 'React & MUI'
-            })
-            setArr(newArr);
+            handleClick('React') ;             
           }}
-          className={currentActive === "React & MUI" ? "active" : null}
+          className={currentActive === "React" ? "active" : null}
         >
-          React & MIU
+          React
         </button>
 
         <button
           onClick={() => {
-            setCurrentActive("NextJS");
-            const newArr = projects.filter((item) => {
-              return  item.category === 'NextJS'
-            })
-            setArr(newArr);
+            handleClickFind("NextJS") ; 
           }}
           className={currentActive === "NextJS" ? "active" : null}
         >
