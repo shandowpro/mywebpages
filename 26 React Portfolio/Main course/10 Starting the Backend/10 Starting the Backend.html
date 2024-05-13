@@ -1294,11 +1294,13 @@
                 <ol type="A">
                     <li> Main points of this lesson , will include programing the following steps and points  : <br>
                         <ol> 
-                             <li> A] Programing [Srcoll To Top]  button [ Scroll to the to of the by clicking + Hide and displayed by certain height   ]     </li> 
-                             <li> B] Programing [displaying projects by side Categories filers] buttons    </li> 
-                             <li> C] Programing [Dark/Light] modes toggling button   </li> 
-                             <li> D] Programing [Contact us Form]  connecting channel via g-mail   </li> 
-                             <li> E] Programing [ Animations ] within the project    </li> 
+                             <li> A] Programing [Srcoll To Top]  button [ Scroll to the to of the by clicking + Hide and displayed by certain height ] </li> 
+                             <li> B] Programing [displaying filtred  projects by side Categories buttons]     </li> 
+                             <li> C] Downloading images of the project cards + Addition CSS Formating    </li> 
+                             
+                             <li> D] Programing [Dark/Light] modes toggling button -> [next lesson ]    </li> 
+                             <li> E] Programing [ Animations ] within the project -> [next lesson ]    </li> 
+                             <li> F] Programing [Contact us Form]  connecting channel via g-mail -> [next lesson ]   </li> 
                         </ol>
                      </li>
                     <br> <br>
@@ -1315,7 +1317,7 @@
  
             <h1>  A] Programing [Srcoll To Top]  button [ Scroll to the to of the by clicking + Hide and displayed by certain height] , as following  :    <br>
             
-                <p> Programing the [Srcoll To Top] button to scroll to the top of website can be done  by (2)  methods : <br>
+                <p> Programing the [Srcoll To Top] button to process the [scroll to the top]  of website can be done  by (2)  methods : <br>
                       <ol> 
                             <li> [HTML] & [CSS] method  =>   will be used in this project , and this method include the next steps : <br>
                                  <p> Wrapping the [Scroll To Top] button by [Html link] element  with 'href' attribute  of  main container of the top header ,  to be hypernated to this top element  by clicking on     </p>         
@@ -1324,15 +1326,71 @@
                             
                             <li> [JS] method  => Will Not  be used in this project   </li> 
                       </ol>    
+                </p> <br>
+
+                <p> programing [Back To Top] button to be displayed only by starting scrolling event at a certain height , by following steps : <br>
+                    <ol>   
+                       <li> Storing the useState of the boolean initial value of the [false] to be used inside inner style of the [back to top] button </li> 
+                       <li> use {useEffect} hook to conditional assign of the defined boolean useState variable by using to certain height [window.scrollY]  </li> 
+                       <li> By reaching to asssigned height => the inside inner style of the [back to top] button of {opacity} should be  changed to the assigned  value and within the assigned transition period value </li>  
+                    </ol>
                 </p>
                 
             </h1>   
              <br> <hr> <br>  <br> 
             <!-- ---------------------------------- -->
              
-            <h1>  B] Programing [Dark/Light] modes toggling button , as following  :   <br>
-                <p>    as following  : <br>  
+            <h1>  B] Programing [displaying filtred projects by side Categories buttons] , as following  :   <br>
+                <p> This function will include the following tasks : <br>  
+                    <ol type="1">
+                         <li> 1- Automization Toggling 'active' class acording to the clicked button inside the  [left side of Categories ] : <br>
+                            <p> This task can be done by the next steps  : <br>
+                                <ul>
+                                    <li> using {useState} hook to store & re-Set the value of each filtering button's class </li>
+                                    <li> using inline conditional status to assign the class value within the [onClick] event of each button  </li>
+                                </ul>
+                            </p>
+                        </li> <br> <br>
+                         
+                        <li> 2- Automization Toggling Displaying [projects cards] inside the Right side, according to the clicked button of categrires buttons value side the left side panel {upon Single/Multiple  cateory(s) value(s) fileration  } 
+                            <p> This task can be done by the next steps  : <br>
+                                <ul>
+                                    <li> using {useState} hook to store & Re-Set  the value of Full Array projects , to be Re-Set by each filtered array of each button usig integrated methods of one of following mix :  <br>
+                                        <ol> 
+                                            <li> a- Using integrated mix between {filter()} & {filter()}  methods => [dealing with (array) and then (array)  ] :   <br>
+                                                <p> First  [filter()] method only [ Incase of single Filteration filter] => to filter the main array of full projects according to the each item's category property =>  return array </p>
+                                                <p> Second [filter()] method after the first method  [ Incase of multiple  Filteration filters ] => to filter the filtered main array's  inner filter  array  [inner category array]   of full projects according to the each item's category property =>  return array </p>
+                                            </li>   <br>  
                                             
+                                            <li> b- Using integrated mix between {filter()} & {find()}  methods  => [dealing with (array) and then (single value) ]   :   <br>
+                                                <p> First  [filter()] method only [ Incase of single Filteration filter] => to filter the main array of full projects according to the each item's category property =>  return array   </p>
+                                                <p> Second [find()] method after the first method [Incase of multiple Filteration filters ] => to filter the filtered main array's  inner filter  array  [inner category array]   of full projects according to the each item's category property =>  return single value  </p>    
+                                            </li>
+                                        </ol>
+                                    </li>                         
+                                </ul>
+                            </p>                            
+                        </li>  <br> <br>
+                        
+                         
+                        <li> Enhancing scripts code of all categorires buttons [ by using the {re-usable function of filteration process} and call it inside each button ]  :  <br>
+                            <p> This is about defining one function and re-use it inside each category button's [onClick event] , which will include the following :  <br>
+                                <ol>
+                                    <li> One of the [Filteration mix] as following :   <br>
+                                        <ul>
+                                            <li> first mix of filterization [ filter() & filter() ]   </li>
+                                            <li> second mix of filterization [ filter() & find() ]   </li>
+                                        </ul>                                    
+                                    </li>  <br>
+                                    <li> Paramter of the value of assigned [category button value] to be used inside of any used filteration method  </li>                                    
+                                </ol>                                                            
+                            </p>
+                        </li> <br>  <br>
+                        
+                        <li> Storing the full projects inside a seperated file [   ]      </li> 
+
+
+                    </ol>                       
                 </p>
             </h1>     
             <br> <br> <hr> <br>    
@@ -1340,40 +1398,23 @@
             <!-- ------------------------------------------ -->
  
              
-            <h1>  C] Programing [Dark/Light] modes toggling button , as following  :   <br>
-                <p>    as following  : <br>  
-                                            
+            <h1> C] Downloading images of the project cards + Addition CSS Formating , as following  :   <br>
+                <p>  Downloading images of the project cards  + Addition CSS Formating : <br>
+                            
+                    <p> 1-  Downloading images of the project cards =>  from the online source ['course 4 arabs/ ali dev / project portfolio / images github'] => [ save inside the  public/ images/ ... ] </p>
+                    
+                    <p> 2-  Addition CSS Formating , as following  :  
+                        <ol> 
+                            <li> Capitalize of project Name title  </li>
+                            <li> Adding animation for the displayed  projects cards </li>                                                                                    
+                        </ol>                  
+                    </p>                           
                 </p>
             </h1>     
             <br> <br> <hr> <br>    
             <!-- ---------------------------------------- --> 
             <!-- ------------------------------------------ -->
- 
-            
-            <h1> D] Programing [Contact us Form]  connecting channel via g-mail   , as following  :   <br>
-                <p>    as following  : <br>  
-                                            
-                </p>
-            </h1>     
-            <br> <br> <hr> <br>    
-            <!-- ---------------------------------------- --> 
-            <!-- ------------------------------------------ -->
- 
-
-            <h1>  E] Programing [ Animations ] within the project  , as following  :   <br>
-                <p>    as following  : <br>  
-                                            
-                </p>
-            </h1>     
-            <br> <br> <hr> <br>    
-            <!-- ---------------------------------------- --> 
-            <!-- ------------------------------------------ -->
- 
-
-
-
-
-
+  
              <h3> ReactJS [portfolio] project files of this lesson untill now , as following : </h3> <br>
 
              <ol class="codes">

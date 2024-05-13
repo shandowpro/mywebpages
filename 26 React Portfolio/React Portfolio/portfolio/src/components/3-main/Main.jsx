@@ -1,128 +1,23 @@
 // Third component [Main] :
 
-// import { useState } from "react";
 import "./main.css";
 
 import { useState } from "react";
+import { projects } from "./myprojects";
 
-// Define array of All projects , to use it with mapping inside th displayed cards :
-const projects = [
-  {
-    id: "1",
-    projectTitle: "React & Bootstrap Project",
-    projectSubTitle: "Project created by using React framework ",
-    imgPath: "/1.jpg",
-    category: ["React", "Bootstrap"],
-    link: "",
-  },
-  {
-    id: "2",
-    projectTitle: "React & Bootstrap Project",
-    projectSubTitle: "Project created by using React framework ",
-    imgPath: "/1.jpg",
-    category: ["React", "Bootstrap"],
-    link: "",
-  },
-  {
-    id: "3",
-    projectTitle: "React & Bootstrap Project",
-    projectSubTitle: "Project created by using React framework ",
-    imgPath: "/1.jpg",
-    category: ["React", "Bootstrap"],
-    link: "",
-  },
-  {
-    id: "4",
-    projectTitle: "React & MUI Project",
-    projectSubTitle: "Project created by using React framework ",
-    imgPath: "/1.jpg",
-    category: ["React", "MUI"],
-    link: "",
-  },
-  {
-    id: "5",
-    projectTitle: "HTML & CSS Project",
-    projectSubTitle: "Project created by using HTML CSS ",
-    imgPath: "/1.jpg",
-    category: ["HTML & CSS"],
-    link: "",
-  },
-  {
-    id: "6",
-    projectTitle: "HTML & CSS Project",
-    projectSubTitle: "Project created by using HTML CSS ",
-    imgPath: "/1.jpg",
-    category: ["HTML & CSS"],
-    link: "",
-  },
-  {
-    id: "7",
-    projectTitle: "HTML & CSS Project",
-    projectSubTitle: "Project created by using HTML CSS ",
-    imgPath: "/1.jpg",
-    category: ["HTML & CSS"],
-    link: "",
-  },
-  {
-    id: "8",
-    projectTitle: "JavaScript Project",
-    projectSubTitle: "Project created by using JavaScript ",
-    imgPath: "/1.jpg",
-    category: ["JavaScript"],
-    link: "",
-  },
-  {
-    id: "9",
-    projectTitle: "JavaScript Project",
-    projectSubTitle: "Project created by using JavaScript ",
-    imgPath: "/1.jpg",
-    category: ["JavaScript"],
-    link: "",
-  },
-  {
-    id: "10",
-    projectTitle: "JavaScript Project",
-    projectSubTitle: "Project created by using JavaScript ",
-    imgPath: "/1.jpg",
-    category: ["JavaScript"],
-    link: "",
-  },
-  {
-    id: "11",
-    projectTitle: "NextJS Project",
-    projectSubTitle: "Project created by using NextJS framework ",
-    imgPath: "/1.jpg",
-    category: ["NextJS"],
-    link: "",
-  },
-  {
-    id: "12",
-    projectTitle: "NextJS Project",
-    projectSubTitle: "Project created by using NextJS framework ",
-    imgPath: "/1.jpg",
-    category: ["NextJS"],
-    link: "",
-  },
-  {
-    id: "13",
-    projectTitle: "NextJS Project",
-    projectSubTitle: "Project created by using NextJS framework ",
-    imgPath: "/1.jpg",
-    category: ["NextJS"],
-    link: "",
-  },
-];
+// Import the Define array of All projects , to use it with mapping inside th displayed cards :
+
 
 const Main = () => {
-  // Define a [useState] as a toggling value of class name of each  button usign it as return of backup function :
+  // Define a useState variable as a [ toggling value of {class name} ] of each  button using it as return of backup function :
   const [currentActive, setCurrentActive] = useState("all");
 
  
-  // Define a [useState] of the value of full array , to be used as switching array of clicked category :
+  // Define a useState variable to store the value of [Full projects array] , to be used as switching & re-Set array of clicked category , inside each button :
   const [arr, setArr] = useState(projects);
 
  
-  // Creating Re-usable function[using integrated filter methods] to be called  inside all buttons [onclick] , with using parmanter of [category button value ]    :
+  // Creating Re-usable function [using integrated filter methods] to be called  inside all buttons [onclick] , with using parmanter of [category button value]    :
   const handleClick  = (buttonCategory) => {
     setCurrentActive(buttonCategory);
 
@@ -136,7 +31,7 @@ const Main = () => {
   }
 
 
-  // Creating Re-usable function  [using integrated filter & find method] to be called  inside all buttons [onclick] , with using parmanter of [category button value ]  :
+  // Creating Re-usable function  [using integrated filter & find methods] to be called  inside all buttons [onclick] , with using parmanter of [category button value ]  :
   const handleClickFind  = (buttonCategory) => {
     setCurrentActive(buttonCategory);
 
