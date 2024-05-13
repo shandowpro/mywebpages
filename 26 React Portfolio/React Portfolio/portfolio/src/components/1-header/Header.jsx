@@ -1,25 +1,38 @@
 // First component [Header] :
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./header.css";
 
-// <div/>
 const Header = () => {
-  //  defiend a useState variable of storing the value of show modal status :
+  //  Defiend a useState variable of storing the value of show modal status :
   const [showModal, setshowModal] = useState(false);
+
+  // Define a [useState] to store the toggling classes values of [light / dark] which will be automaticly assigned inside the body class values [with using dymnaic inital value from  the {Local storage value} to reserve the last stored value of localstorage ] {with using substitution value for first time website visitor} :
+  const [theme, setTheme] = useState(
+    localStorage.getItem("currentMode") ?? "dark"
+  );
+
+  // Define a [useEffect] to Reset the toggling {body}'s classes values of [light / dark] , by using the [HTML Dom]  :
+  useEffect(() => {
+    if (theme === "light") {
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
+    } else {
+      document.body.classList.remove("light");
+      document.body.classList.add("dark");
+    }
+  }, [theme]);
 
   return (
     <header className="flex">
-  
-      <button 
-        className="menu icon-menu" 
+      <button
         onClick={() => setshowModal(true)}
-      > 
-      </button>
+        className="menu icon-menu"
+      ></button>
 
       <div />
 
       <nav>
-        <ul className="flex"> 
+        <ul className="flex">
           <li>
             <a href=""> About </a>
           </li>
@@ -42,8 +55,24 @@ const Header = () => {
         </ul>
       </nav>
 
-      <button className="mode flex"> 
-        <span className ="icon-moon-o" /> 
+      <button
+        onClick={() => {
+          // 1- Sending/Storing the mode/theme value into the [local stroage] :
+          localStorage.setItem(
+            "currentMode",
+            theme === "dark" ? "light" : "dark"
+          );
+
+          // 2- Get the stored value mode/theme from the [local stroage] & and set it inside the defined [theme useState variable]    :
+          setTheme(localStorage.getItem("currentMode"));
+        }}
+        className="mode flex"
+      >
+        { theme === 'dark' ? (
+          <span className="icon-moon-o" />
+        ) : (
+          <span className="icon-sun" />
+        )}
       </button>
 
       {showModal && (
@@ -77,11 +106,9 @@ const Header = () => {
             <li>
               <a href=""> Uses </a>
             </li>
-
           </ul>
         </div>
       )}
-
     </header>
   );
 };

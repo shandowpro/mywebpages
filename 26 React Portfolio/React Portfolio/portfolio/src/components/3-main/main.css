@@ -22,22 +22,22 @@
  }
 
  main.flex {
-     gap        : 2rem;
-     align-items: start;
+     gap            : 2rem;
+     align-items    : start;
      justify-content: space-between;
-    }
-    
-    
+ }
+
+
 
  /* =========================
    2.  Left section => buttons 
   =========================
 */
 
-main section.left-section.flex {
-    flex-direction: column;
-    gap           : 10px;
-    margin-left: -25px;
+ main section.left-section.flex {
+     flex-direction: column;
+     gap           : 10px;
+     margin-left   : -25px;
  }
 
  main section.left-section.flex button {
@@ -57,13 +57,16 @@ main section.left-section.flex {
  }
 
  main section.left-section.flex button.active {
-     letter-spacing: .6px ;
-     opacity       : 1 ;
-     font-weight   : bold ;
-     padding       : .85rem 0 ;
+     letter-spacing: .6px;
+     opacity       : 1;
+     font-weight   : bold;
+     padding       : .85rem 0;
      border        : 1px solid var(--blue);
  }
 
+ .light main section.left-section.flex button.active {
+     border: 1px solid #000;
+ }
 
 
 
@@ -75,7 +78,7 @@ main section.left-section.flex {
 
  main section.right-section.flex {
      flex-wrap      : wrap;
-     flex-grow: 1 ;
+     flex-grow      : 1;
      justify-content: center;
 
      /* gap = column-gap + row-gap   */
@@ -86,14 +89,20 @@ main section.left-section.flex {
 
  .card {
      border       : 1px solid rgba(93, 188, 252, 0.3);
+     box-shadow: -3px 3px 3px rgba(0,  0, 0 , 0.16)  , 3px 3px 3px rgba(0,  0, 0 , 0.16);
      transition   : all .3s;
      border-radius: 5px;
      background-image: linear-gradient(rgba(255, 255, 255, .05),
              rgba(255, 255, 255, .05));
  }
 
+ .light .card , .light .card:hover  {
+     border: none;
+ }
+
  .card:hover {
      border: 1px solid var(--blue);
+     background-color :  rgba( 39 , 39 , 42 , 0.1 ) ;
      rotate: 1deg;
      scale : 1.01;
      cursor: pointer;
@@ -108,9 +117,9 @@ main section.left-section.flex {
  }
 
  .card .box .title {
-     color: var(--title);
-     text-transform: capitalize ;
-     text-align :  center ;
+     color         : var(--title);
+     text-transform: capitalize;
+     text-align    : center;
  }
 
  .card .box .sub-title {
@@ -179,8 +188,8 @@ main section.left-section.flex {
 
 
  @media (min-width:1890px) {
-    main.flex {
-        gap: 10rem;
-        justify-content: center;
-    }
+     main.flex {
+         gap            : 10rem;
+         justify-content: center;
+     }
  }
