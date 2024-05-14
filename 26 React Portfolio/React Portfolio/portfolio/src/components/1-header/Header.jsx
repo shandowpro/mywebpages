@@ -1,17 +1,24 @@
+
 // First component [Header] :
+
 import { useEffect, useState } from "react";
 import "./header.css";
 
 const Header = () => {
-  //  Defiend a useState variable of storing the value of show modal status :
+ 
+  // A]  [Shortcut menu]  Controling : 
+  //  Defined a useState variable of storing the [boolean value] of show modal status for [ the displaing shortcut menu icon  ] :
   const [showModal, setshowModal] = useState(false);
 
-  // Define a [useState] to store the toggling classes values of [light / dark] which will be automaticly assigned inside the body class values [with using dymnaic inital value from  the {Local storage value} to reserve the last stored value of localstorage ] {with using substitution value for first time website visitor} :
+
+  // B]  [light/dark] Modees  Controling :  
+    // 1-  Define a [useState] varialbe  to store the toggling classes values of [light/dark] which will be automaticly assigned inside the body class values [with using dymnaic inital value 
+      // from the {Local storage value} to reserve the last stored value of localstorage ] {with using substitution value for first time website visitor => by assigning the initial value of the useState with the local storage value } :
   const [theme, setTheme] = useState(
     localStorage.getItem("currentMode") ?? "dark"
   );
 
-  // Define a [useEffect] to Reset the toggling {body}'s classes values of [light / dark] , by using the [HTML Dom]  :
+   // 2- Define a [useEffect] function  with conditional Reset the toggling {body}'s classes values of [light / dark] , by using the [HTML Dom] , accordigng to the retured value of [local storage] form the  browser  :
   useEffect(() => {
     if (theme === "light") {
       document.body.classList.remove("dark");
@@ -56,19 +63,24 @@ const Header = () => {
       </nav>
 
       <button
+      // B] / 3- Assigning the proceess of sending the Conditional value to be stored inside local Storage to be used by [body class]  & Get it after to be assgined inside the defined [{theme} useState variable] as the last value of the current mode [to be sued in the next switch by this button onClick() ]   :
         onClick={() => {
-          // 1- Sending/Storing the mode/theme value into the [local stroage] :
+          
+          //  a- Sending/Storing the stored mode/theme value [conditional value according to the current stored value inside the {theme} useState variable] into the [local storage] , by using {setItem( 'key of value ' ,  'value to be set'   )} method :
           localStorage.setItem(
             "currentMode",
             theme === "dark" ? "light" : "dark"
           );
 
-          // 2- Get the stored value mode/theme from the [local stroage] & and set it inside the defined [theme useState variable]    :
+          // b- Get the last stored value of  (mode/theme ) from the [local stroage : 'currentMode' ] & and set it inside the defined [{theme} useState variable]  :
           setTheme(localStorage.getItem("currentMode"));
         }}
+
         className="mode flex"
       >
-        { theme === 'dark' ? (
+        { 
+          // B] / 4- Conditional set of the class value of [theme button] ,  according to the last stored value inside [{theme} useState variable] :    
+          theme === 'dark' ? (
           <span className="icon-moon-o" />
         ) : (
           <span className="icon-sun" />
