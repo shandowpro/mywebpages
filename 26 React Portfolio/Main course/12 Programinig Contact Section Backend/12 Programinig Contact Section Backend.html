@@ -13,11 +13,11 @@
     <!-- First Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta content="Learning ReactJS Course" description="This is Lesson 12 Programing Contact Section  backend ">
+    <meta content="Learning ReactJS Course" description="This is Lesson 12 Programinig Contact Section Backend ">
 
-    <title> 12 Programing Contact Section  backend </title>
+    <title> 12 Programinig Contact Section Backend </title>
 
-    <link rel="stylesheet" href="12 Programing Contact Section  backend.css" media="all">
+    <link rel="stylesheet" href="12 Programinig Contact Section Backend.css" media="all">
 
     <link rel="stylesheet" href="css/bootstrap.min.css" media="all">
 
@@ -240,7 +240,7 @@
 
     <!-------------------------------------------------------------------------------------------------------->
     <header id="Main" class="Main wow fadeInDown" data-wow-duration="1s">
-        12 Programing Contact Section  backend
+        12 Programinig Contact Section Backend
     </header>
 
     <!-------------------------------------------------------------------------------------------------------->
@@ -278,7 +278,7 @@
                             Hot Links <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#12 Programing Contact Section  backendSection" target="_self" class="12 Programing Contact Section  backendLink"> Lesson 12 Programing Contact Section  backend </a></li>
+                            <li><a href="#12 Programinig Contact Section BackendSection" target="_self" class="12 Programinig Contact Section BackendLink"> Lesson 12 Programinig Contact Section Backend </a></li>
 
                             <li role="separator" class="divider"></li>
 
@@ -328,7 +328,7 @@
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
         <span> Welcome to Fullstack ReactJS  Portfolio WebApp  Course | </span> <br>
-        12 Programing Contact Section  backend
+        12 Programinig Contact Section Backend
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
     <!-- Options Tool box -->
@@ -402,8 +402,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">
-            <h2 class="h1" class="hidden-xs"> About Section =>  Programing the [Contact Us] section's backend  of the project   <span><strong> programing function </strong> </span> </h2>
-            <h3 class="visible-xs"> About Section => This lesson about <strong>   Programing the [Contact Us] section's backend  of the project  </strong>   programing function     </span> </h3>
+            <h2 class="h1" class="hidden-xs"> About Section =>  Programing the [Light/Dark mode]  of the project   <span><strong> programing function </strong> </span> </h2>
+            <h3 class="visible-xs"> About Section => This lesson about <strong>   Programing the [Light/Dark mode]  of the project  </strong>   programing function     </span> </h3>
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing] Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->
         </div>
     </section>
@@ -1283,7 +1283,7 @@
     <div class="Post" id=post>
         <Section id="MainC" class="MainC">
             <header>
-                ReactJS [12 Programing Contact Section  backend] Main Topics : <br>
+                ReactJS [12 Programinig Contact Section Backend] Main Topics : <br>
             </header>
 
             <article>
@@ -1294,8 +1294,8 @@
                 <ol type="A">
                     <li> Main points of this lesson , will include (2) main sections  as folwining    : <br>
                         <ol> 
-                             <li> A]           </li> 
-                             <li> B]   </li> 
+                             <li> A]  Programing section [ Contact.jsx ] file        </li> 
+                             <li> B]  Formating  section [ contact.css ] file        </li> 
                         </ol>
                      </li>
                     <br> <br>
@@ -1307,26 +1307,42 @@
         <!------------------------------------------------------------------------------>
         <section class="JSDOMCon" id="JSDOMCon">
             <header>
-                <h3> 12 Programing Contact Section  backend concept : </h3>
+                <h3> 12 Programinig Contact Section Backend concept : </h3>
             </header>
  
-            <h1>  A]      ,  as following  :    <br>
+            <h1>  A]  Programing section [ Contact.jsx ] file , as following  :    <br>
             
-                <p> Programing the backend of  [contact us] section can be done the following steps : <br>
+                <p> Programing the [Dark Light Modes] can be done the following steps : <br>
                       <ol> 
-                            <li> </li>                             
-                            <li> </li>                             
-                            <li> </li>                             
-                            <li> </li>                             
-                            <li> </li>                             
-                    </ol>    
+                            <li> 1-  Define a {useState :  [theme, setTheme] }  : <br>
+                                <p> This useState variable is used to store the toggling classes values of [light/dark] which will be automaticly assigned inside the body's class values . </p>
+                                <p> The initial value of it  will be dynamic get from the {Local storage value} to reserve the last stored value of localstorage] {with using substitution value for first time website visitor => by assigning the initial value of the useState with the local storage value } </p>  
+                            </li>  <br>
+                            
+                            <li> 2-  Define a [useEffect] function : <br>
+                                <p> It will include conditional Reset of toggling {body}'s classes values of [light / dark] , by using the [HTML Dom] , according to the retured value of [local storage] form the  browser] [which is stored inside the the defined usteState variable ]  </p>  
+                            </li> <br>
+
+                            <li> 3- Inside the toggling theme button {onClick()} event  : <br>
+                                <p> Assigning the proceess of sending the Conditional value to be stored inside local Storage {which will be used later  by [body class]}  & Get it after to be assgined inside the defined [{theme} useState variable] as the last value of the current mode [to be used in the next switch by this button onClick() ] , by flolwing (2) steps  :   <br>
+                                    <ol> 
+                                        <li>  a- Sending/Storing the stored mode/theme value [conditional value according to the current stored value inside the {theme} useState variable] into the [local storage] , by using {setItem( 'key of value ' ,  'value to be set'   )} method   </li>
+                                        <li>  b- Get the last stored value of  (mode/theme ) from the [local stroage : 'currentMode' ] & and set it inside the defined [{theme} useState variable]   </li>
+                                    </ol>    
+                                </p>   <br>
+                            </li> <br> 
+
+                            <li> 4- Inside the toggling theme button {class} attribute   :  <br>
+                                <p> Conditional set of [theme button] icon with the specified class value for each mode [dark mode : 'icon-moon-o' ,  light mode: 'icon-sun'] => according to the last current stored value inside [{theme} useState variable]  </p> 
+                            </li>
+                        </ol>    
                 </p> <br>
             </h1>   
              <br> <hr> <br>  <br> 
             <!-- ---------------------------------- -->
              
-            <h1>    B]  Formating  section [ main.css ] file , as following  :   <br>
-                <p> some justifying formating properties within [ main.css ] file  </p>
+            <h1>    B]  Formating  section [ contact.css ] file , as following  :   <br>
+                <p> some justifying formating properties within [ contact.css ] file  </p>
                   
             </h1>     
             <br> <br> <hr> <br>    
@@ -1496,7 +1512,7 @@
 
         <section class="JSDOMImp" id="JSDOMImp">
             <header>
-                <h3> [12 Programing Contact Section  backend] Importance & Benefits : </h3>
+                <h3> [12 Programinig Contact Section Backend] Importance & Benefits : </h3>
             </header>
             <ul>
                 <li> In this project we will use the simple  JSX React Hooks [useState , useEffect ] & {localstorage} browser HTML DOM inner to assing , get and set the value of the current mode/theme to use the  benifit  of browser local storage memory as a cooking to prevent the lost of data by reloading  </li>
@@ -1507,7 +1523,7 @@
 
         <section class="JSDOMSyntx" id="JSDOMSyntx">
             <header>
-                <h3> [12 Programing Contact Section  backend] Syntax & Methods: </h3>
+                <h3> [12 Programinig Contact Section Backend] Syntax & Methods: </h3>
             </header>
 
             <p> =&gt; Scenario Procedures : </p>
@@ -1518,7 +1534,7 @@
         <!------------------------------------------------------------------------------------------------------>
         <section class="JSDOMPract container" id="JSDOMPract">
             <header>
-                <h3> CMD [12 Programing Contact Section  backend] => {this lesson can be accessed through the github repo [webpages] } </h3>
+                <h3> CMD [12 Programinig Contact Section Backend] => {this lesson can be accessed through the github repo [webpages] } </h3>
             </header>
 
 
@@ -1582,7 +1598,7 @@
     </section>
 
     <script>
-        alert("Welcome to 12 Programing Contact Section  backend");
+        alert("Welcome to 12 Programinig Contact Section Backend");
     </script>
 
     <!-- Resources files -->
