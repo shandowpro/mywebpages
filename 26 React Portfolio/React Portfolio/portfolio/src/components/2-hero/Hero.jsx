@@ -2,7 +2,18 @@
 
 import "./hero.css";
 
+// using lottie files library :
+import Lottie from "lottie-react";
+// @ts-ignore
+import devAnimation from "../../animation/dev.json";
+
+import {useRef} from 'react' ; 
+
+
+
 const Hero = () => {
+  const lottieRef = useRef() ;
+  
   return (
     <section className="hero flex">
       <div className="left-section">
@@ -26,7 +37,19 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="right-section animation"></div>
+      <div className="right-section animation">
+        <Lottie
+          lottieRef={lottieRef}
+          style={{ height: '100%' }}
+          loop={true}
+          onLoadedImages={ () =>  {
+            // @ts-ignore
+            // https://lottiereact.com/
+            lottieRef.current.setSpeed(3) ; 
+          }}
+          animationData={devAnimation}
+        />
+      </div>
     </section>
   );
 };

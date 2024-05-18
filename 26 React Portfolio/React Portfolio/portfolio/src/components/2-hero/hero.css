@@ -80,11 +80,15 @@
 
  /* ================================================= */
 
+
  /* =================================
     2. Right Section => Animation 
    =================================
-*/
-
+ */
+ .animation {
+   width: 50% ; 
+   translate: 70px 0px; 
+ }
 
 
 
@@ -97,5 +101,12 @@
     @media (min-width:1890px) {
         section.hero {
             justify-content: center;
+        }
+    }
+
+
+    @media (max-width:1250px) {
+        section.hero .animation {
+            display: none;
         }
     }

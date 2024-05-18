@@ -3,10 +3,14 @@
 import "./contact.css";
 import { useForm, ValidationError } from "@formspree/react";
 
+import Lottie from "lottie-react";
+// @ts-ignore
+import doneAnimation from "../../animation/done.json";
+// @ts-ignore
+import contactAnimation from "../../animation/messageSent.json";
+
 const Contact = () => {
-
   const [state, handleSubmit] = useForm("xkndeqzg");
-
 
   return (
     <section className="contact-us">
@@ -21,11 +25,17 @@ const Contact = () => {
         new{" "}
       </p>
 
-      <div className="flex">
+      <div style={{ justifyContent: "space-between", gap: '100px' }} className="flex">
         <form onSubmit={handleSubmit} action="" className="">
           <div className="flex">
             <label htmlFor="email"> Email Address : </label>
-            <input type="email" name="email" id="email"  autoComplete="off"  required />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autoComplete="off"
+              required
+            />
             <ValidationError
               prefix="Email"
               field="email"
@@ -45,16 +55,37 @@ const Contact = () => {
           </div>
 
           <button className="submit" type="submit" disabled={state.submitting}>
-             {state.submitting ? 'Submitting' : 'Submit'}
+            {state.submitting ? "Submitting" : "Submit"}
           </button>
 
-          {
-             state.succeeded &&  
-             (<p style={{'color':'red' , 'textAlign': 'center' , 'marginTop' : '1.7rem' , 'fontSize' : '25px'  }}   >Thanks for joining!</p> )
-          }
+          {state.succeeded && (
+            <p
+              className="flex"
+              style={{
+                color: "green",
+                textAlign: "center",
+                marginTop: "1.7rem",
+                fontSize: "25px",
+              }}
+            >
+              <Lottie
+                loop={false}
+                style={{ height: 100 , marginTop: -30 }}
+                animationData={doneAnimation}
+              />
+              Thanks for joining!
+            </p>
+          )}
         </form>
 
-        <div className="animation"> Animation </div>
+        <div className="animation" >
+          <Lottie
+            className="contact-animation"
+            loop={true}
+            style={{ height:300  }}
+            animationData={contactAnimation}
+          />           
+        </div>
       </div>
     </section>
   );
