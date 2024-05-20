@@ -402,8 +402,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">
-            <h2 class="h1" class="hidden-xs"> About Section =>  Programing the [Light/Dark mode]  of the project   <span><strong> programing function </strong> </span> </h2>
-            <h3 class="visible-xs"> About Section => This lesson about <strong>   Programing the [Light/Dark mode]  of the project  </strong>   programing function     </span> </h3>
+            <h2 class="h1" class="hidden-xs"> About Section =>  Programing the [ Contact us section ] of the project  <span><strong>    back end  </strong> </span> </h2>
+            <h3 class="visible-xs"> About Section => This lesson about <strong>   Programing the [ Contact us section ]  of the project  </strong>   back end     </span> </h3>
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing] Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->
         </div>
     </section>
@@ -1287,15 +1287,21 @@
             </header>
 
             <article>
-                <p> &gt; Main Subjects in this lesson will be =>  progrmaionig the dark/light modes, as following : </p>
+                <p> &gt; Main Subjects in this lesson will be =>  progrmaing the  [contact us ] sectoin  , as following : </p>
 
                 <h2> Main Subjects : </h2>
 
                 <ol type="A">
-                    <li> Main points of this lesson , will include (2) main sections  as folwining    : <br>
+                    <li> Main points of this lesson , will include (2) main parts   as folwining    : <br>
                         <ol> 
-                             <li> A]  Programing section [ Contact.jsx ] file        </li> 
-                             <li> B]  Formating  section [ contact.css ] file        </li> 
+                             <li> A]  Programing section [ Contact.jsx ] file : <br>
+                               <ul>
+                                    <li> Main segmentation of Contact] section    </li>
+                                    <li> Main steps and using the [formspree] Fomring service    </li>
+                               </ul>    
+                            </li> <br>
+
+                             <li> B] Formating section [contact.css] file </li> 
                         </ol>
                      </li>
                     <br> <br>
@@ -1309,41 +1315,133 @@
             <header>
                 <h3> 12 Programinig Contact Section Backend concept : </h3>
             </header>
- 
-            <h1>  A]  Programing section [ Contact.jsx ] file , as following  :    <br>
+    
+            <h1>  A] Programing section [ Contact.jsx ] file , as following  :    <br>
             
-                <p> Programing the [Dark Light Modes] can be done the following steps : <br>
-                      <ol> 
-                            <li> 1-  Define a {useState :  [theme, setTheme] }  : <br>
-                                <p> This useState variable is used to store the toggling classes values of [light/dark] which will be automaticly assigned inside the body's class values . </p>
-                                <p> The initial value of it  will be dynamic get from the {Local storage value} to reserve the last stored value of localstorage] {with using substitution value for first time website visitor => by assigning the initial value of the useState with the local storage value } </p>  
-                            </li>  <br>
-                            
-                            <li> 2-  Define a [useEffect] function : <br>
-                                <p> It will include conditional Reset of toggling {body}'s classes values of [light / dark] , by using the [HTML Dom] , according to the retured value of [local storage] form the  browser] [which is stored inside the the defined usteState variable ]  </p>  
-                            </li> <br>
+                <p> 1] Main segmentation of [Contact section] , as the following steps : <br>
+                    <ol> 
+                        <li>  Heading part  :  <br>
+                            <ol> 
+                                <li> Contact section Main title    </li> 
+                                <li> Contact section Sub title      </li> 
+                            </ol>                         
+                        </li> <br>
+                        
+                        <li> Container of both {Form} & {Animation} & Main steps and using the [formspree] Fomring service => with [flex] display style :  <br>  
+                            <ol> 
+                                <li> [Form] :  <br>
+                                    <p> It is about A Form element script copied from the [formspree.io] website documentation   </p> 
+                                    <p> Main Requriments of using the [formspree] library as following :   <br> 
+                                        <ul>   
+                                            <li> 1- Importing the (2) classes from the {formspree/react} library as following : <br>
+                                                <code>
+                                                    <span class='one'></span> import { useForm, ValidationError } from "@formspree/react";   <br>       
+                                                </code>
+                                            </li>  <br> <br> 
+                                            
+                                            <li> 2- Define the [useForm() Hoock]  Contact with [ID] to be used to send the contact us message of the client => [iside the {Contact} functional compoent ]  :  <br>  
+                                                <code>
+                                                    <span class='one'></span> const [state, handleSubmit] = useForm("xkndeqzg");   <br>       
+                                                </code>                                                
+                                            </li> <br>
 
-                            <li> 3- Inside the toggling theme button {onClick()} event  : <br>
-                                <p> Assigning the proceess of sending the Conditional value to be stored inside local Storage {which will be used later  by [body class]}  & Get it after to be assgined inside the defined [{theme} useState variable] as the last value of the current mode [to be used in the next switch by this button onClick() ] , by flolwing (2) steps  :   <br>
-                                    <ol> 
-                                        <li>  a- Sending/Storing the stored mode/theme value [conditional value according to the current stored value inside the {theme} useState variable] into the [local storage] , by using {setItem( 'key of value ' ,  'value to be set'   )} method   </li>
-                                        <li>  b- Get the last stored value of  (mode/theme ) from the [local stroage : 'currentMode' ] & and set it inside the defined [{theme} useState variable]   </li>
+                                            <li> 3- Adding the event [onSubmit] with a value of 'handleSubmit' inside the form , as next code :  <br>  
+                                                <code>
+                                                    <span class='one'></span>  &lt;  form onSubmit={handleSubmit} action="" className="" &gt;      <br>       
+                                                </code>
+                                            </li>  <br>
+
+                                             <li> 4- Adding the [id] and [name] attributes to each [input] inside the Form , with the same value , as next code :  <br>  
+                                                <code>
+                                                    <span class='one'></span>  &lt; input name='value1'  id='value1'  / &gt;      <br>       
+                                                </code>                                                
+                                            </li>  <br>
+
+                                            <li> 5- Adding {ValidationError - self closing tag} after each input field  [input , textarea , ... ] inside the form , with adding 'field' with the same  value used inside it's previous  input field of the [id] and [name] attributes , as next code :  <br>  
+                                                <code>
+                                                    <span class='one'></span>  &lt; ValidationError <br>
+                                                        <span class='two'></span> field ='value1'  <br>
+                                                        <span class='two'></span> prefix="input type as in formspree script doucment "    <br>                                                  
+                                                        <span class='two'></span> // Assing the extracted {errors} from the defiend [state] of the {fromspree} library , as ther value of the 'errors' attribute :  <br>
+                                                        <span class='two'></span> errors={state.errors}  <br>
+                                                    <span class='one'></span>  / &gt;      <br>       
+                                                </code>                                                
+                                            </li>
+
+
+                                        </ul> 
+
+                                    </p>
+                                </li>   <br>  <br>
+
+                                <li> [Animation] : <br>
+                                    
+                                
+                                
+                                </li> 
+                            </ol>                         
+                        </li>
+                    </ol>    
+                </p> <br>
+                    
+                <p> 2] Main notes of using the [formspree] library , as the following steps : <br>
+                    <ol>         
+                        <li> At first must import the library of 'formspree-react'  to access to all it's (2) classes and Hocks to be used insde this component , which they are as following : <br>
+                            <ul>
+                                <li>  [useForm] Hoock => which will be used to define the Hoock variable , which will be used inside the form to activate the following fuctions and extensions : <br>
+                                    <ol>
+                                        <li> {state} main state => will be used to extracted main properties of the cases of  each  ['state.errors'  & 'state.submitting'  & 'state.succeeded' ] ,  with next details : <br>
+                                            <ul> 
+                                               <li> {state.errors} =>  <br>
+                                                  <p> will extract the error action from the [formspree] library , and being written inside the [ValidationError] Element as an attribute's value  "errors={state.errors}"  </p> 
+                                                </li>  <br>
+
+                                                <li> {state.submitting} => <br>  
+                                                     <p> Will extract the submittting action from the [formspree] library , and usually being written inside the [button] Element as an attribute's value "disabled={state.submittting}"  </p>  
+                                                     <p> Can be used as a condtional expressoin to return a certain action incase occuring  subitting action => such  as [changing the value of the button when the Form is being submitting ] </p>  
+                                                 </li> <br>
+
+
+                                                <li> {state.succeeded} => <br>                                                    
+                                                     <p> Will extract the succeeded action from the [formspree] library , and usually being written  after [ Submit button] Element inside the Form to prcess a certain action or diplasy a certain element [such as informative message after seccesssful submit process] ]   </p>  
+                                                     <p> Can be used as an inner condtional expressoin to return a certain action incase occuring succsesful  submitting  action   </p>  
+                                                 </li>
+                                            </ul>
+                                        </li> 
+
+                                        <li> {handleSubmit} setter function => to be used as the value of  {onSubmit()} event inside the [Form] element  </li> 
+                                        <li> {private ID } parameter => to be used by service provider of sending the message of the  client [as confirmation code]   </li> 
                                     </ol>    
-                                </p>   <br>
-                            </li> <br> 
+                                </li> <br> 
 
-                            <li> 4- Inside the toggling theme button {class} attribute   :  <br>
-                                <p> Conditional set of [theme button] icon with the specified class value for each mode [dark mode : 'icon-moon-o' ,  light mode: 'icon-sun'] => according to the last current stored value inside [{theme} useState variable]  </p> 
-                            </li>
-                        </ol>    
+                                <li>  [ValidationError]  Element => will be used after each input element of the Form , with attribute of 'field'  with value as it is in it's previous element's [id] an [name] attriubes   </li>  
+                             
+                            </ul> 
+                        </li> 
+
+                        <li> Each Element inside the form that using the [formspree], must has both attriubtes of [ 'id' & 'name'] with the same values </li> 
+                        <li> The used [Validation Error] element must be placed after each input element within the [Form] , with the following tips : <br>
+                            <ol>
+                                <li> This element must has an attribute of 'field' with the same value of it's previous input's [id] & [name] attributes values </li> 
+                            </ol>
+                        </li>
+                        <li> By adding the autoComplete="off" into the input field it will disable the auto completion of the inserted value inside this input  </li>  
+                    </ol>    
                 </p> <br>
             </h1>   
+
              <br> <hr> <br>  <br> 
             <!-- ---------------------------------- -->
-             
-            <h1>    B]  Formating  section [ contact.css ] file , as following  :   <br>
+            <h1>    B] Formating the contact sectoin wihtin  [ contact.css ] file , as following  :   <br>
                 <p> some justifying formating properties within [ contact.css ] file  </p>
-                  
+                <p> We adjust the [submit button] to be with certain formating when being disabled in [index.css] file  , by using hte 'disabled'  added CSS property to this element  ,as following  :
+                    <code>
+                        <span  class=one> </span>  button:disabled {  => [this is a built-in css property of disabled element ] <br>
+                            <span  class=two> </span> opacity : .5; <br>
+                            <span  class=two> </span> cursor: not-allowed; => [a certain property of cursor] <br>
+                        <span  class=one> </span> } <br>  
+                    </code>    
+                </p>                  
             </h1>     
             <br> <br> <hr> <br>    
             <!-- ---------------------------------------- --> 

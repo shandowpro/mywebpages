@@ -2,16 +2,22 @@
 
 import "./hero.css";
 
-// using lottie files library :
-import Lottie from "lottie-react";
-// @ts-ignore
-import devAnimation from "../../animation/dev.json";
-
-import {useRef} from 'react' ; 
+// A] using [lottie files library] for animation :
+  // A] / 1- Import the main [lottie files library] to be able to used inside this file   :
+  import Lottie from "lottie-react";
+  
+  
+  // A] / 2- Import the certian downloaded [Animation file] form [lottie files library] to be able to used inside this file as an element :
+  // @ts-ignore
+  import devAnimation from "../../animation/dev.json";
+  
+  // A] / 3- Importing    :
+  import {useRef} from 'react' ; 
 
 
 
 const Hero = () => {
+  // A] / 4- Define  an extreacted  variable from the [useRef()] to be used within the advanced property of the [Animation speed ] :
   const lottieRef = useRef() ;
   
   return (
@@ -24,9 +30,8 @@ const Hero = () => {
 
         <h1 className="title"> Fullstack & React Web developer </h1>
         <p className="sub-title">
-          {" "}
           Im Shadi Sayed , a Fullstack web developer and React web developer
-          frontend{" "}
+          frontend
         </p>
 
         <div className="all-icons flex">

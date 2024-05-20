@@ -1,15 +1,24 @@
 // Fourth  component [Contact] :
 
 import "./contact.css";
-import { useForm, ValidationError } from "@formspree/react";
 
-import Lottie from "lottie-react";
-// @ts-ignore
-import doneAnimation from "../../animation/done.json";
-// @ts-ignore
-import contactAnimation from "../../animation/messageSent.json";
+// A]  Requirments of Backend for [Contact Form : using {formspree/react} library  ] :      
+  // A/1 Importing {formspree/react} library for [Contact Form ] :      
+  import { useForm, ValidationError } from "@formspree/react";
+
+
+// B] Requirments of Animation for [Contact Section: using {lottie-react} library ] :      
+  // B/1 Importing Animation library {lottie-react} library for [Contact Section] :      
+  import Lottie from "lottie-react";
+
+  // B/2 Importing the Animations [ downloaded for Contact Section ] :      
+  // @ts-ignore
+  import doneAnimation from "../../animation/done.json";
+  // @ts-ignore
+  import contactAnimation from "../../animation/messageSent.json";
 
 const Contact = () => {
+  // Define the [useForm] Contact with [ID] to be used to send the contact us message of the client   :   
   const [state, handleSubmit] = useForm("xkndeqzg");
 
   return (
@@ -19,16 +28,15 @@ const Contact = () => {
         Contact US
       </h1>
 
-      <p className="sub-title">
-        {" "}
-        Contact us for more information and get notified when I push something
-        new{" "}
+      <p className="sub-title">         
+        Contact us for more information and get notified when I push something new
       </p>
 
       <div style={{ justifyContent: "space-between", gap: '100px' }} className="flex">
         <form onSubmit={handleSubmit} action="" className="">
           <div className="flex">
             <label htmlFor="email"> Email Address : </label>
+            
             <input
               type="email"
               name="email"
