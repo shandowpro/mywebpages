@@ -3,11 +3,14 @@
 import "./main.css";
 
 import { useState } from "react";
+ 
+// Import the Defined  static array of All projects from external file , to use it with mapping inside th displayed cards :
 import { projects } from "./myprojects";
 
-// Import the Define array of All projects , to use it with mapping inside th displayed cards :
+// Import the {framer motion} library to be used inside this file      :
+  import { AnimatePresence , motion} from 'framer-motion' ; 
 
-
+ 
 const Main = () => {
   // Define a useState variable as a [ toggling value of {class name} ] of each  button using it as return of backup function :
   const [currentActive, setCurrentActive] = useState("all");
@@ -96,33 +99,41 @@ const Main = () => {
       </section>
 
       <section className="  flex right-section">
-        {arr.map((item) => {
-          return (
-            <article key={item.id} className="card">
-              <img width={230} src={item.imgPath} alt="project Image" />
+        <AnimatePresence>
+          {arr.map((item) => {
+            return (
+              <motion.article 
+                layout  
+                initial = {{ transform : 'scale(0.4)' }}           
+                animate  = {{ transform : 'scale(1)' }}           
+                transition  = {{ type:'spring' , damping:8 , stiffness : 50    }}
+                exit = {{transform : 'scale(0)' }}           
+                key={item.id} className="card">
+                <motion.img width={230} src={item.imgPath} alt="project Image" />
 
-              <div style={{ width: "230px" }} className=" box">
-                <h1 className="title"> {item.projectTitle} </h1>
-                <p className="sub-title">{item.projectSubTitle}</p>
+                <div style={{ width: "230px" }} className=" box">
+                  <h1 className="title"> {item.projectTitle} </h1>
+                  <p className="sub-title">{item.projectSubTitle}</p>
 
-                <div className="flex icons ">
-                  <div style={{ gap: "11px" }} className="flex">
-                    <div className="icon-link"></div>
-                    <div className="icon-github"></div>
+                  <div className="flex icons ">
+                    <div style={{ gap: "11px" }} className="flex">
+                      <div className="icon-link"></div> 
+                      <div className="icon-github"></div>
+                    </div>
+
+                    <a className="link flex" href="">
+                      More
+                      <span
+                        style={{ alignSelf: "center" }}
+                        className="icon-arrow-right"
+                      ></span>
+                    </a>
                   </div>
-
-                  <a className="link flex" href="">
-                    More
-                    <span
-                      style={{ alignSelf: "center" }}
-                      className="icon-arrow-right"
-                    ></span>
-                  </a>
                 </div>
-              </div>
-            </article>
-          );
-        })}
+              </motion.article>
+            );
+          })}
+        </AnimatePresence>
       </section>
     </main>
   );

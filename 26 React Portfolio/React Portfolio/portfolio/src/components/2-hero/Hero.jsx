@@ -13,7 +13,10 @@ import "./hero.css";
   
   // A] / 3- Importing    :
   import {useRef} from 'react' ; 
-
+  
+  // B] Using the [framer motion] library  :
+    // B] / 1 Using the [framer motion] library  :
+    import {motion} from 'framer-motion' ; 
 
 
 const Hero = () => {
@@ -24,15 +27,42 @@ const Hero = () => {
     <section className="hero flex">
       <div className="left-section">
         <div className="parent-avatar flex">
-          <img src="/me.jpg" className="avatar" alt="" />
+          
+         <motion.img 
+          // B] / 2   using the imported animation from the [framer motion] library , [wiht using 'transform' css property ] :     
+            // initial = {{ scale : 0  }} 
+            initial = {{ transform : 'scale(0)'  }} 
+            
+            // animate = {{ scale : 1  }} 
+            animate = {{ transform : 'scale(1)'  }} 
+            
+            // B] / 3  using the imported animation from the [framer motion] library , [wiht using 'damping' & 'type/spring' & 'stiffness '  css property & framer motion library  ] :     
+            transition = {{ damping :5 , type : 'spring' , stiffness: 100 }} 
+            src="/me.jpg" 
+            className="avatar"
+             alt="" 
+          />
+
           <span className="icon-verified"> </span>
         </div>
 
-        <h1 className="title"> Fullstack & React Web developer </h1>
-        <p className="sub-title">
+        <motion.h1 
+          initial =  {{ scale:0 }}  
+          animate  =  {{scale:1}}  
+          transition =  {{duration : 1}}  
+          className="title"> 
+          Fullstack & React Web developer
+        </motion.h1>
+
+
+        <motion.p 
+          initial = {{scale:0}} 
+          animate = {{scale:1}} 
+          transition = {{ duration: 2}}
+          className="sub-title">
           Im Shadi Sayed , a Fullstack web developer and React web developer
           frontend
-        </p>
+        </motion.p>
 
         <div className="all-icons flex">
           <div className="icon icon-twitter"> </div>

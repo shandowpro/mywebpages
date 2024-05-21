@@ -34,7 +34,8 @@ const Contact = () => {
 
       <div style={{ justifyContent: "space-between", gap: '100px' }} className="flex">
         <form onSubmit={handleSubmit} action="" className="">
-          <div className="flex">
+          <div
+           className="flex">
             <label htmlFor="email"> Email Address : </label>
             
             <input
