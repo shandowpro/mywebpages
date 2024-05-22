@@ -39,6 +39,7 @@ const Main = () => {
     setCurrentActive(buttonCategory);
 
     const newArr = projects.filter((item) => {
+      // @ts-ignore
       const newsubArr = item.category.find((subItem) => {
         return subItem === buttonCategory;
       });
@@ -106,7 +107,7 @@ const Main = () => {
                 layout  
                 initial = {{ transform : 'scale(0.4)' }}           
                 animate  = {{ transform : 'scale(1)' }}           
-                transition  = {{ type:'spring' , damping:8 , stiffness : 50    }}
+                transition  = {{ duration: 1 ,  type:'spring' , damping:8 , stiffness : 50  }}
                 exit = {{transform : 'scale(0)' }}           
                 key={item.id} className="card">
                 <motion.img width={230} src={item.imgPath} alt="project Image" />
