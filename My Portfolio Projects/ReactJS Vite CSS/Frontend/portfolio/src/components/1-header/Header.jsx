@@ -45,17 +45,13 @@ const Header = () => {
           </li>
 
           <li>
-            <a href=""> Articles </a>
-          </li>
-
-          <li>
             <a href=""> Projects </a>
           </li>
 
           <li>
-            <a href=""> Speaking </a>
+            <a href=""> Refs Courses </a>
           </li>
-
+ 
           <li>
             <a href=""> Contact Us </a>
           </li>

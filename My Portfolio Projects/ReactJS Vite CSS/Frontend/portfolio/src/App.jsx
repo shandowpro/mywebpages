@@ -9,6 +9,8 @@ import Header from './components/1-header/Header' ;
 import Hero from './components/2-hero/Hero' ;
 
 import Main from './components/3-main/Main';
+
+import MainRefs from './components/3-main Ref Lessons/MainRefs';
  
 import Contact from './components/4-contact/Contact';
 
@@ -43,6 +45,9 @@ function App() {
       <div className='divider'  />
       
       <Main />
+      <div className='divider'  />
+      
+      <MainRefs />
       <div className='divider'  />
       
       <Contact />
