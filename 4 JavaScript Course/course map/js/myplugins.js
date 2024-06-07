@@ -6,7 +6,7 @@
 // 1) First plus button :
 
 $(document).ready(function () {
-  var c = 53;
+  var c = 65;
   for (i = 1; i <= c; i++) {
     $(".container .row  .button" + i).click(function () {
         for (i = 1; i <= c; i++) {
