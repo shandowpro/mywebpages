@@ -1,21 +1,30 @@
+
+// This is the main file of the all project :  
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import App from './App'
 import './index.css'
 
-const router = createBrowserRouter (
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Root />} >
-    
-
+    <Route path="/" element={<App />}>
+      {/*  <Route path="dashboard" element={<Dashboard />} /> */} 
+      {/* ... etc. */}
+    </Route>
   )
-
 );
 
 
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 );
