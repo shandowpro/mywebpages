@@ -34,7 +34,7 @@ import {
   MapOutlined,
   MenuOutlined, 
 } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom" ;
 // -----------------------------------------------------------------
 
 // B] Define the public variables & functions  :
@@ -176,6 +176,8 @@ const SideBar = ({ open, handleDrawerClose }) => {
 
   // Define Hook  [used for in switching between button of closing and open the SideBar Menu  + Changing color of inner text inside the sidebar ]  :
   const theme = useTheme();
+
+  // Define a Hook [used for set navigating - to the assinged router inside it's parameter [could be a dymaic value & inside a mapping] - routering to a certain event of a certain element ]  :
   const navigate = useNavigate();
 
   return (

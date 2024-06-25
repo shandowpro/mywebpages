@@ -4,12 +4,12 @@
 
 import React from 'react' ;
 
-const Invoices  = () => {
+const Form  = () => {
     return (    
         <div>
-            Invoices  page
+            Form  page
         </div>
     ) ;
 }
 
-export default Invoices  ;
+export default Form ;

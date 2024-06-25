@@ -4,12 +4,12 @@
 
 import React from 'react' ;
 
-const Invoices  = () => {
+const BarChart  = () => {
     return (    
         <div>
-            Invoices  page
+           BarChart  page
         </div>
     ) ;
 }
 
-export default Invoices  ;
+export default BarChart ;

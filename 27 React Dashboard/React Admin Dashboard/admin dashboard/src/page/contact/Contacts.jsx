@@ -5,10 +5,12 @@
 import React from 'react' ;
 
 const Contacts = () => {
-    <div>
-        Contacts page 
+    return (    
+        <div>
+            Contacts page 
 
-    </div>
+        </div>
+    );
 }
 
 export default Contacts ;
