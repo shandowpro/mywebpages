@@ -1,3 +1,4 @@
+
 // The Second part of header {SideBar} :
 
 // A] Importings :
@@ -11,7 +12,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ListItem from "@mui/material/ListItem";
+import ListItem from "@mui/material/ListItem";  
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
@@ -33,6 +34,7 @@ import {
   MapOutlined,
   MenuOutlined, 
 } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 // -----------------------------------------------------------------
 
 // B] Define the public variables & functions  :
@@ -98,36 +100,36 @@ const array1 = [
   {
     text: "Manage Team",
     icon: <PeopleOutlined />,
-    path: "/",
+    path: "/team",
   },
   {
     text: "Contacts Information",
     icon: <ContactsOutlined />,
-    path: "/",
+    path: "/contact",
   },
   {
     text: "Invoices Balances",
     icon: <ReceiptLongOutlined />,
-    path: "/",
+    path: "/invoices",
   },
 ];
 
 const array2 = [
   
   {
-    texts: "Profile Form",
+    text: "Profile Form",
     icon: <PersonOutlined />,
-    path: "/",
+    path: "/form",
   },
   {
     text: "Calendar",
     icon: <CalendarTodayOutlined />,
-    path: "/",
+    path: "/calendar",
   },
   {
     text: "FAQ Page",
     icon: <HelpOutlineOutlined />,
-    path: "/",
+    path: "/faq",
   },
 ];
 
@@ -135,22 +137,22 @@ const array3 = [
   {
     text: "Bar Chart",
     icon: <BarChartOutlined />,
-    path: "/",
+    path: "/bar",
   },
   {
     text: "Pie Chart",
     icon: <PieChartOutlineOutlined  />,
-    path: "/",
+    path: "/pie",
   },
   {
     text: "Line Chart",
     icon: <TimelineOutlined />,
-    path: "/",
+    path: "/line",
   },
   {
     text: "Geography Chart",
     icon: <MapOutlined />,
-    path: "/",
+    path: "/geography",
   },
 ];
 
@@ -174,6 +176,7 @@ const SideBar = ({ open, handleDrawerClose }) => {
 
   // Define Hook  [used for in switching between button of closing and open the SideBar Menu  + Changing color of inner text inside the sidebar ]  :
   const theme = useTheme();
+  const navigate = useNavigate();
 
   return (
     <Drawer variant="permanent" open={open}>
@@ -225,6 +228,9 @@ const SideBar = ({ open, handleDrawerClose }) => {
         {array1.map((item) => (
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
             <ListItemButton
+              onClick ={ () => {
+                navigate(item.path)
+              }}  
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
@@ -255,7 +261,10 @@ const SideBar = ({ open, handleDrawerClose }) => {
         {array2.map((item) => (
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
             <ListItemButton
-              sx={{
+                onClick ={ () => {
+                  navigate(item.path)
+                }}
+                sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
@@ -284,6 +293,9 @@ const SideBar = ({ open, handleDrawerClose }) => {
         {array3.map((item) => (
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
             <ListItemButton
+              onClick ={ () => {
+                navigate(item.path)
+              }}
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
