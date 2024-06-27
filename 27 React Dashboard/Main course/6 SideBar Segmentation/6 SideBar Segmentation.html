@@ -401,8 +401,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">
-            <h2 class="h1" class="hidden-xs"> About Section =>  Creating inner components   <span><strong> of TopBar  component    </strong> </span> </h2>
-            <h3 class="visible-xs"> About Section => This lesson about <strong>   Creating inner components   </strong>  [Search Input || Icon  || Dark/light Mode ]     </span> </h3>
+            <h2 class="h1" class="hidden-xs"> About Section =>  Creating inner components  of <span><strong>  TopBar  component    </strong> </span> </h2>
+            <h3 class="visible-xs"> About Section => This lesson about <strong>   Creating inner components   </strong>  [Search Input || Icon  || Dark/light Mode ]  </span> </h3>
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing] Files and then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->
         </div>
     </section>
@@ -1291,9 +1291,9 @@
                 <h2> Main Subjects : </h2>
 
                 <ol type="A">
-                    <li> Main points of this lesson , Create SideBar's Inner components (3) , as  following  : <br>
+                    <li> Main points of this lesson , Create SideBar's Inner components (3) in  {SideBar.jsx} , as  following  : <br>
                         <ol>          
-                            <li> A] First section : <br>
+                            <li> A] First section [in SideBar.jsx] : <br>
                                 <ol> 
                                     <li> 1- {  Avatar } for user section     </li>
                                     <li> 2- {  Typography } for the user name   </li>
@@ -1301,7 +1301,7 @@
                                 </ol>                                
                             </li>  <br>
 
-                            <li> B] Second & Third & Fourth sections : <br>
+                            <li> B] Second & Third & Fourth sections [in SideBar.jsx]  : <br>
                                 <ol> 
                                     <li> Defined array of the objects for each section [3 arrays] to be used in mapping through (3) items for each array  as following : <br>
                                         <ul>  
@@ -1311,6 +1311,13 @@
                                         </ul>    
                                     </li>                                     
                                 </ol>                                
+                            </li>  <br>
+
+                            <li>  C] Set conditional Display of the SideBar's contents by using [React Routering ] : <br>  
+                                <ol> 
+                                    <li> Procedures In {SideBar.jsx}  </li>
+                                    <li> Procedures In {App.jsx}      </li>
+                                </ol>
                             </li>
                         </ol>
                      </li> <br> <br>
@@ -1371,8 +1378,137 @@
                 </ol>
             <hr> <br>  <hr> <br>            
             <!-- ----------------------------------------------------- -->
+            
+            <h1> C] Set conditional [route]  Display of the SideBar's contents by using [React Routering ]  ,  as following steps :  </h1> <br>
+               <ol>
+                    <li> 1] Procedures In {SideBar.jsx}  : <br>
+                        <p> Assign the path of the each page as a value of each 'path' property insde each array => by folder name of  each inner page        </p>
+                        <p> Importing {useNavigate} from "react-router-dom" library   </p>
+                        <p> Inside the {onClick} event of [ListItemButton] element =>  Using the imported Hook to set a router path Hook function [of paramter value of dynamic value with in maping for each memu item ] </p>
+                    </li>  <br>
+
+                    <li> 2] Procedures In [project files] : <br>
+                        <p> Create new folder of 'page' inside the main 'src' , wihch will include following new folders [one new folder for each inner page router] :  <br>
+                            <ul> 
+                                <li> [dashboard] => include 'Dashboard.jsx' functional  comppnent </li>
+                                <li> [team] => include 'Team.jsx' functional  comppnent </li>
+                                <li> [contact] => include 'Contacts.jsx' functional  comppnent </li>
+                                <li> [invoices] => include 'Invoices.jsx' functional  comppnent </li>
+                                <li> [form] => include 'Form.jsx' functional  comppnent </li>
+                                <li> [calendar] => include 'Calendar.jsx' functional  comppnent </li>
+                                <li> [faq] => include 'Faq.jsx' functional  comppnent </li>
+                                <li> [bar] => include 'Bar.jsx' functional  comppnent </li>
+                                <li> [pie] => include 'Pie.jsx' functional  comppnent </li>
+                                <li> [line] => include 'Line.jsx' functional  comppnent </li>
+                                <li> [geography] => include 'Geography.jsx' functional  comppnent </li>
+                            </ul>    
+                        </p>
+
+                    </li>
+                    
+                    <li>   3] Procedures In {App.jsx} : <br>
+                        <ol> 
+                            <li> Import the  { &lt; Outlet / &gt; }   form  'react-router-dom'  </li> 
+                            <li>  inside tne [Box] main element ->  Assign  { &lt; Outlet / &gt; }  as an imported element from 'react-router-dom'  library => to be an outlet and display the clicked element from the [SideBar] element within the {'Box'} inside the assembling component   </li> 
+                        </ol>
+                    </li>
+
+                    <li>   4] Procedures In {Main.jsx} : <br>
+                        <ol> 
+                            <li> Import each page's component to be used as router inside  the Main.jsx { &lt; Main / &gt; }   form each page path  </li> 
+                            
+                            <li> Create a single router for each page inside the [router]  deifnied public variable by following the next instructions :  <br>
+                                <ul> 
+                                    <li> The general syntax of each Router is as next code  : <br>
+                                        <code> 
+                                            <span  class="one" ></span>    &lt; Route path={path} element={ &lt; Component /  &gt; }  /&gt;   <br>
+                                            <p> The {Route} main element has  (2) major attributes  :  <br>
+                                                <ul>
+                                                    <li>  [ path = {'path'} ] => contain the folder of the inner page as a string value  'small case'  </li>
+                                                    <li>  [ element = {&lt; Component /  &gt; }  ] => contain the defined and imoptred compoent  of the inner page as an  called element   </li>
+                                                </ul>
+                                            </p>
+                                        </code>
+                                    </li> <br>
+
+                                    <li> The main contents of the defined routes inside/wrapped the main 'Route' , as following  : <br>
+                                        <ol> 
+                                            <li> The [default Home] page route of the main page of {App} -> with next attriubutes  :  <br>
+                                                <p>  path    -> = '/'  </p>
+                                                <p>  element -> = {  &lt; App / &gt; }  </p>
+                                            </li> <br>
+                                            
+                                            <li> The [custom Home] page route of a [Dashboard] that path into a the home => {dashboard/Dashboard.jsx} page -> with next attriubutes  :  <br>     
+                                                <p>  index  => an alternative path in to the home  page , means to path into the same home page    </p>
+                                                <p>  element -> = {  &lt; Dashboard  / &gt; }  </p>    
+                                            </li>  <br>
+
+                                            <li> The inner route of a  [Team]  => {team/Team.jsx} page  -> with next attriubutes  :  <br> 
+                                                <p>  path    -> = 'team'  </p>
+                                                <p>  element -> = {  &lt; Team / &gt; }  </p>
+                                            </li> <br>
+                                            
+                                            <li> The inner route of a  [Contact]  => {contact/Contact.jsx} page ->  with next attributes  : <br>
+                                                <p>  path    -> = 'contact'  </p>
+                                                <p>  element -> = {  &lt; Contact  / &gt; }  </p>
+                                            </li>
+                                            
+                                            <li> The inner route of a  [Invoices]  => {invoices/Invoices.jsx} page ->  with next attributes : <br>
+                                                <p>  path    -> = 'invoices'  </p>
+                                                <p>  element -> = {  &lt; Invoices  / &gt; }  </p>
+                                            </li> <br>
+                                            
+                                            <li> The inner route of a  [Form]  => {form/Form.jsx} page -> with next attributs  : <br>
+                                                <p>  path    -> = 'form'  </p>
+                                                <p>  element -> = {  &lt; Form  / &gt; }  </p>
+                                            </li> <br>
+                                            
+                                            <li> The inner route of a  [Calendar]  => {calendar/Calendar.jsx} page -> with next attributes : <br>
+                                                <p>  path    -> = 'calendar'  </p>
+                                                <p>  element -> = {  &lt; Calendar  / &gt; }  </p>
+                                            </li>  <br>
+
+                                            <li> The inner route of a  [Faq]  => {calendar/Calendar.jsx} page -> with next attributes : <br>
+                                                <p>  path    -> = 'faq'  </p>
+                                                <p>  element -> = {  &lt;  Faq  / &gt; }  </p>
+                                            </li>  <br>
+                                            
+                                            <li> The inner route of a  [BarChart]  => {bar/BarChart.jsx} page -> with next attributes : <br>
+                                                <p>  path    -> = 'bar'  </p>
+                                                <p>  element -> = {  &lt;  BarChart  / &gt; }  </p>
+                                            </li>  <br>
+                                            
+                                            <li> The inner route of a  [Pie]  => {pie/Pie.jsx} page -> with next attributes  : <br>
+                                                <p>  path    -> = 'pie'  </p>
+                                                <p>  element -> = {  &lt;  Pie  / &gt; }  </p>
+                                            </li>  <br>
+                                            
+                                            <li> The inner route of a  [Line]  => {line/Line.jsx} page -> with next attributes : <br>
+                                                <p>  path    -> = 'line'  </p>
+                                                <p>  element -> = {  &lt;  Line  / &gt; }  </p>
+                                            </li>  <br>
+                                            
+                                               <li> The inner route of a  [Geography]  => {geography/Geography.jsx} page -> with next attributes : <br>
+                                                <p>  path    -> = 'geography'  </p>
+                                                <p>  element -> = {  &lt;  Geography  / &gt; }  </p>
+                                            </li>  <br>
+                                            
+                                        </ol>
+                                    </li>
+                                     
+                                </ul>
+                            
+                            </li> 
+
+                            <li> Add the main defined variable of {router} - that include all previous defined routes - as the value of [RouterProvider] element that wrapped inside the main function of the {React.StrictMode} </li> 
+                        </ol>
+                    </li>
+
+
+               </ol>
+            <!-- ----------------------------------------------------- -->
              
-            <h1> C]  Adding the {MUI} library into the project files    : </h1> <br>
+            <h1>  [*]   Adding the {MUI} library into the project files    : </h1> <br>
                 <ol> 
                     <li> Install the main {MUI} library files into the project files , by using the  next codes    : <br>
                         <code>
@@ -1387,7 +1523,7 @@
             <br> <hr> <br>
             <!-- ---------------------------------------------------- -->
 
-            <h1> D]  Adding the { React Router Dom } library into the project files    : </h1> <br>
+            <h1> [*]  Adding the { React Router Dom } library into the project files    : </h1> <br>
                 <ol> 
                     <li> Install the main {React-Router-Dom} library files into the project files , by using the  next codes    : <br>
                         <code> 
