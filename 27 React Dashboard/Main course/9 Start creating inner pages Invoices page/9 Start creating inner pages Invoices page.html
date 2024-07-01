@@ -1295,8 +1295,10 @@
                         <ol>          
                             <li> *] Main Requirments  : <br>
                                 <ol> 
-                                    <li>        </li>
-                                    <li>          </li>
+                                    <li> Project System files  </li>
+                                    <li> DataSource used in [DataGrid] </li>
+                                    <li> Importings  </li>
+                                    <li> New Elements used inside the [Invoices]   </li>
                                 </ol>                                
                             </li>  <br>
                         </ol>
@@ -1312,23 +1314,41 @@
                 <h3> 9 Start creating inner pages Invoices page concept : </h3>
             </header>
  
-            <h1>  Main Requirments  => for the [Invoices.jsx] , as following steps :  </h1> <br>
-               <p> The same script from {Team.jsx}  , beside adding new attribute of [ slots = { { } } ] the element as the  next code : <br>
+            <h1> *] Main Requirments  => for the [Invoices.jsx] , as following steps :  </h1> <br>
+                <p> [Invoices.jsx] component the same script of {Contacts.jsx}  , beside adding new attributes [of DataGrid] as following  : <br>
+                    <ol>
+                        <li> [ checkboxSelection ] attribute => represent the check box Column at first of [DataGrid] table  </li>
+                        <li> [ slots = { { } } ] the callback function attribute  => represent the Toolbar at top of [DataGrid]  </li>
+                    </ol>
+                </p>  <br>
+                
+                <p> [DataSoruce] used in the [DataGrid] of  the  Invoices component is imported from external file of isnside the specific folder 'page/invoices' of component  {data.js} as exported (2)   {Rows} & {Columns} defined arrays of objects as dataSource used in [DataGrid] of the {Invoices} component  </p> <br>
+                
+                <p> Importings include new elements from [MUI]  as the same in {Contacts.jsx}  </p> <br>
+                
+                <p>  New Elements used inside the [Invoices] is the [checkboxSelection] attribute (a built in attribute and not requiring a special importing) which represent the [CheckBoxSelection] column at first of the DataGrid table , also we can use the callback function [slots={ { toolbar: GridToolbar } } ] to use the toolbar top menu at this Componoent  </p> <br>
+
+                <p> The Final Script of {Invoices.jsx} component file with  new additions of attriubtes inside the [DataGird] of {Invoices.jsx}  as the next code : <br>
                     <code>
                         // Importings   : <br>
-                        <span  class="one"></span> import { DataGrid , GridToolbar } from "@mui/x-data-grid";  <br>   <br>
-
-
-                        // main return  : <br>
+                        <span  class="one"></span> import { DataGrid , GridToolbar } from "@mui/x-data-grid";  <br> 
+                        <span  class="one"></span>  import {  Box } from "@mui/material";  <br>  
+                        <span  class="one"></span>  import { columns, rows } from "./data"  <br>   <br>
+    
+    
+                        // main component returns  : <br>
                         &lt; Box   sx= { { height: 600 } }   <br>
                          <span  class="one"></span> &lt; DataGrid <br>
+
+                            <span  class="two"></span>  checkboxSelection   <br>
+     
                             <span  class="two"></span> slots= { {  <br>
                                 <span  class="three"></span> toolbar: GridToolbar, <br>
                             <span  class="two"></span> } }  <br> <br> 
                             
                             <span  class="two"></span> rows={rows}  <br>
                             <span  class="two"></span>  columns={columns}  <br>
-                             
+                        <span  class="one"></span> / &gt;  <br>
                     </code>
                 </p>
             <hr> <br>  <hr> <br>            
