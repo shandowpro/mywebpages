@@ -1,4 +1,3 @@
-
 // inner page of  Team  :
 
 import { DataGrid } from "@mui/x-data-grid";
@@ -12,7 +11,6 @@ import {
 } from "@mui/icons-material";
 
 const Team = () => {
-
   // Define the useTheme Hook:
   const theme = useTheme();
 
