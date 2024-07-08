@@ -1,10 +1,10 @@
-// inner page of [Form] :
 
-// @ts-ignore
-// @ts-ignore
-// @ts-ignore
+// inner page of [Form]  :
+
+  
 import React from "react";
 
+// @ts-ignore
 import Box from "@mui/material/Box";
 
 // @ts-ignore
@@ -13,7 +13,8 @@ import TextField from "@mui/material/Textfield";
 import { Alert, Button, MenuItem, Snackbar, Stack } from "@mui/material";
 
 // @ts-ignore
-import { useForm } from "react-hook-form";
+// The main imported hook from the [MUI] library to use the Form element and other  requried variables :     
+import { useForm } from "react-hook-form"  ;
  
 
 // Define a regular expression for validating email  pattern  :
@@ -23,13 +24,17 @@ const regEmail =
 // Define a regular expression for validating phone number  pattern :
 const phoneRegExp = /^(\+)?(\(?\d+\)?)(([\s-]+)?(\d+)){0,}$/g;
 
+// The defined object of data to be used inside the select element {MenuItem} of the Form input field      :       
 const mydata = [
   { value: "Admin", label: "Admin" },
   { value: "Manager", label: "Manager" },
   { value: "User", label: "User" },
 ];
 
+//  The main functional component of [Form ]   : 
 const Form = () => {
+
+  //  Defining some  statuses from the imported [useForm]  :  
   const {
     register,
     handleSubmit,
@@ -37,8 +42,10 @@ const Form = () => {
     formState: { errors },
   } = useForm();
 
+   //  Define a state to be used inside the  Form   :
   const [open, setOpen]  = React.useState(false) ;
 
+  // Define a hanling function of closing  :  
   const handleClose = ( event , reason ) => {
     if (reason === 'clickaway') {
       return;
@@ -46,16 +53,22 @@ const Form = () => {
     setOpen(false) ;
   } ;
 
+
+  // Define handling click function   : 
   const handleClick = () => {
     setOpen(true)      
   } 
 
+
+  //  Define the submit function to be used inside the button [in full project should return a real data via api ]    :  
   const onSubmit = () => {
     console.log("Done");
     handleClick();
   };
 
+   
   return (
+    
     <Box
       component="form"
       onSubmit={handleSubmit(onSubmit)}
@@ -67,7 +80,11 @@ const Form = () => {
       noValidate
       autoComplete="off"
     >
+      
+      
       <Stack direction={"row"} sx={{ gap: 2 }}>
+        
+  
         <TextField
           helperText={
             Boolean(errors.firstName)
@@ -75,12 +92,16 @@ const Form = () => {
               : null
           }
           error={Boolean(errors.firstName)}
-          {...register("firstName", { required: true, minLength: 3 })}
+          {...register("firstName", {
+             required: true, minLength: 3 
+            }
+          )}
           sx={{ flex: 1 }}
           label="First Name"
           variant="filled"
         />
 
+      
         <TextField
           helperText={
             Boolean(errors.lastName)
@@ -88,23 +109,35 @@ const Form = () => {
               : null
           }
           error={Boolean(errors.lastName)}
-          {...register("lastName", { required: true, minLength: 3 })}
+          {...register("lastName", {
+             required: true,
+             minLength: 3 
+            }
+          )}
           sx={{ flex: 1 }}
           label="Last Name"
           variant="filled"
         />
+   
       </Stack>
 
+        
       <TextField
         helperText={
           Boolean(errors.email) ? "Please insert a valid email address " : null
         }
         error={Boolean(errors.email)}
-        {...register("email", { required: true, pattern: regEmail })}
+        {...register("email", {
+           required: true, 
+           pattern: regEmail 
+          }
+        )}
         label="Email"
+ 
         variant="filled"
       />
 
+ 
       <TextField
         helperText={
           Boolean(errors.ContactNumber)
@@ -122,10 +155,13 @@ const Form = () => {
         variant="filled"
       />
 
+ 
       <TextField label="Address 1" variant="filled" />
 
+  
       <TextField label="Address 2" variant="filled" />
 
+   
       <TextField
         id="outlined-select-currency"
         variant="filled"
@@ -141,6 +177,7 @@ const Form = () => {
         ))}
       </TextField>
 
+ 
       <Box sx={{ textAlign: "right" }}>
         <Button
           sx={{ textTransform: "capitalize" }}
@@ -150,6 +187,7 @@ const Form = () => {
           Create new user
         </Button>
 
+ 
         <Snackbar 
            open={open}
            autoHideDuration={3000}
