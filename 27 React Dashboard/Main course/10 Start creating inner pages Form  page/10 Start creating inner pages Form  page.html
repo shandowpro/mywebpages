@@ -1327,22 +1327,152 @@
                             <span  class="two"></span> // Importing The some Form's inner elements from [MUI] :     <br>
                             <span  class="two"></span> import { Alert, Button, MenuItem, Snackbar, Stack } from "@mui/material" ;   <br> <br>
 
-                            <span  class="one"></span> 3-  Importing The main Form Validation system from external library [react-hook-form] :  <br>
-                                <span  class="two"></span> import { useForm } from "react-hook-form"  ;   <br>  <br>  
+                        <span  class="one"></span> 3-  Importing The main Form Validation system from external library [react-hook-form] :  <br>
+                            <span  class="two"></span> import { useForm } from "react-hook-form"  ;   <br> <hr> <br>  <br>
+
+ 
+
+                        // B ] General functions and variables   :   <br>
+                           <span claas ="one" ></span> // 1-  Define a regular expression for validating email  pattern  : <br>  
+                               <span claas ="two" ></span>  const regEmail =   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;  <br>  <br>
+
+                            <span claas ="one" ></span> // 2-  Define a regular expression for validating Contact number   pattern  : <br>  
+                               <span claas ="two" ></span>  const regEmail =   /^(\+)?(\(?\d+\)?)(([\s-]+)?(\d+)){0,}$/g; <br>  
+
+                            <span claas ="one" ></span> // 3- The defined object of data to be used inside the Select element {MenuItem} of the Form input field [each object for one selection  ]  : <br>  
+                               <span claas ="two" ></span>  const mydata =   [ <br>
+                                    <span claas ="three" ></span> { value: "Admin", label: "Admin" }, <br> 
+                                    <span claas ="three" ></span> { value: "Manager", label: "Manager" }, <br>  
+                                    <span claas ="three" ></span> { value: "User", label: "User" }, <br>
+                                <span claas =" two" ></span> ];   <br>  <hr>  <br> <br> 
 
 
+                        // C] Hooks defintions inside the function and before the return  :   <br>
+                        <span  class="one"></span>  1- Defining/extracting  several  states from the imported hook [useForm]  :    <br>
+                            <span  class="two"></span> const { register, handleSubmit, watch ,  formState: { errors }, } = useForm();    <br>  <br>
+                        
+                        <span  class="one"></span>  2-  Define a [open] state to be used inside the Form  :    <br>
+                            <span  class="two"></span> const [open, setOpen]  = React.useState(false) ;   <br>  <br>
+                         
+                        <span  class="one"></span>  3-   Define a handling function of closing  :  <br>
+                            <span  class="two"></span> const handleClose = ( event , reason ) => {       <br>
+                                <span  class="three"></span>   if (reason === 'clickaway') {    <b>  
+                                    <span  class="four"></span> return;  <br>
+                                <span  class="three"></span>    }  <br> 
+                                <span  class="three"></span>    setOpen(false) ;
+                            <span  class="two"></span>   } <br>  <br>
+                         
+                              
+                        <span  class="one"></span>  4- Define handling click function   :   <br>                           
+                            <span  class="two"></span> const handleClick = () => { <br>
+                                <span  class="three"></span> setOpen(true)  <br>
+                            <span  class="two"></span>  } <br>
+  
 
-                                <!-- im  here >>>>>>>>>>>>>>>>>>>>> -->
-                        // main return  : <br>
-                        &lt; Box   sx= { { height: 600 } }   <br>
-                         <span  class="one"></span> &lt; DataGrid <br>
-                            <span  class="two"></span> slots= { {  <br>
-                                <span  class="three"></span> toolbar: GridToolbar, <br>
-                            <span  class="two"></span> } }  <br> <br> 
-                            
-                            <span  class="two"></span> rows={rows}  <br>
-                            <span  class="two"></span>  columns={columns}  <br>
-                             
+                        <span  class="one"></span>  5-  Define the submit function to be used inside the button [in full project should return a real data via api , but now we usea testing printing instead   ]    :   <br> 
+                            <span  class="two"></span>  const onSubmit = () => {  <br>
+                                <span  class="three"></span>   console.log('done testing  ');  <br>
+                                <span  class="three"></span>  handleClick();  <br>
+                            <span  class="two"></span>  } <br> <br>
+  
+
+                        // D] main return of the main function  of [Form] , including the following     : <br>
+                            <span  class="one"></span>  Box  => the main container element of whole function of the [Form] parent element   <br>
+                                <span  class="two"></span>  a] [Attributes] This main parent container element has  properties/attributes  :      <br>
+                                    <span  class="three"></span>  1] onSubmit   => must include the defined submit function to activate the submit  function [handleSubmit(onSubmit)]      <br>
+                                    <span  class="three"></span>  2] noValidate   <br> 
+                                    <span  class="three"></span>  3] autoComplete="off"   => for Form secure    <br>
+                                    
+                                <span  class="two"></span>  b] [Elements]  will contain the following children elements  :      <br>
+                                    <span  class="three"></span>  1]  [Stack] the builtin 'display flex' + custom direction={"row"}   => Child container element for formating purpose , which will inlclude the next elements  :    <br>
+                                         <span  class="four"></span>  a]  [TextField] of  the 'first name' input field  => with following properties    :    <br>
+                                            <span  class="five"></span>  1-  assign  [helperText]  mui method with conditional display  of error message using Boolean builtin method  with calling  ['errors.firstName' : the MUI defined/extracted from the imported useForm()]   <br>
+                                            <span  class="five"></span>  2-  assgin [error] Builtin mui property with conditional display  of error message using Boolean builtin method  with calling ['errors.firstName' : the MUI defined/extracted from the imported useForm()] <br>
+                                            <span  class="five"></span>  3-  destructuring  [...register] defined method the MUI defined/extracted from the imported useForm()]  , which  will include the next properties :     <br>
+                                                <span  class="six "></span>  a-   input field [TextField] element's name 'firstName'  <br>
+                                                <span  class="six "></span>  b-   input field [TextField] element's  properties object as next objecty properties   :    <br>
+                                                    <span  class="seven "></span>   -   input field [TextField]  requirement property [required: true ]  <br>
+                                                    <span  class="seven "></span>   -   input field [TextField] length property [minLength: 3 ]  <br>
+                                            <span  class="five"></span>  4-  assign  [label]  => the displayed name for the user as label input field <br>
+                                            <span  class="five"></span>  5-  assign  [variant]  =>  the formating type of the input field ['filled']    <br> <br>
+                                     
+                                         <span  class="four"></span>  b]  [TextField] of  the 'last name' input field  => with following properties    :    <br>
+                                            <span  class="five"></span>  1-  assign  [helperText]  mui method with conditional display  of error message using Boolean builtin method  with calling  ['errors.lastName' : the MUI defined/extracted from the imported useForm()]   <br>
+                                            <span  class="five"></span>  2-  assgin [error] Builtin mui property with conditional display  of error message using Boolean builtin method  with calling ['errors.lastName' : the MUI defined/extracted from the imported useForm()] <br>
+                                            <span  class="five"></span>  3-  destructuring  [...register] defined method the MUI defined/extracted from the imported useForm()]  , which  will include the next properties :     <br>
+                                                <span  class="six "></span>  a-   input field [TextField] element's name  'lastName' <br>
+                                                <span  class="six "></span>  b-   input field [TextField] element's  properties object as next objecty properties   :    <br>
+                                                    <span  class="seven "></span>   -   input field [TextField]  requirement property [required: true ]  <br>
+                                                    <span  class="seven "></span>   -   input field [TextField]  length property [minLength: 3 ]  <br>
+                                            <span  class="five"></span>  4-  assign  [label]  => the displayed name for the user as label input field <br>
+                                            <span  class="five"></span>  5-  assign  [variant]  =>  the formating type of the input field ['filled']  <br>   <br>
+
+                                            
+                                    <span  class="three"></span>  2]  [email] the Email input field , => with following properties    :     <br>
+                                        <span  class="four"></span>  a-  assign  [helperText]  mui method with conditional display  of error message using Boolean builtin method  with calling  ['errors.email'] : the MUI defined/extracted from the imported useForm()]   <br>
+                                        <span  class="four"></span>  b-  assgin [error] Builtin mui property with conditional display  of error message using Boolean builtin method  with calling ['errors.email']] : the MUI defined/extracted from the imported useForm()] <br>
+                                        <span  class="four"></span>  c-  destructuring  [...register] defined method the MUI defined/extracted from the imported useForm()]  , which  will include the next properties :     <br>
+                                            <span  class="five "></span>  1-   input field [TextField] element's name  'email' <br>
+                                            <span  class="five "></span>  2-   input field [TextField] element's  properties object as next object properties   :    <br>
+                                                <span  class="six"></span>   -   input field [TextField]  requirement property [required: true ]  <br>
+                                                <span  class="six "></span>   -   input field [TextField]  validation reference  property  [ regEmail  : the defined pattern variable by using reglar expresion of emails ]  <br>
+                                        <span  class="four"></span>  d-  assign  [label]  => the displayed name for the user as label input field <br>
+                                        <span  class="four"></span>  e-  assign  [variant]  =>  the formating type of the input field ['filled']  <br>   <br>
+
+                                     
+                                    <span  class="three"></span>  3]  [ContactNumber] the Contact Number input field , => with following properties    :     <br>
+                                        <span  class="four"></span>  a-  assign  [helperText]  mui method with conditional display  of error message using Boolean builtin method  with calling  ['errors.ContactNumber'] : the MUI defined/extracted from the imported useForm()]   <br>
+                                        <span  class="four"></span>  b-  assgin [error] Builtin mui property with conditional display  of error message using Boolean builtin method  with calling ['errors.ContactNumber']] : the MUI defined/extracted from the imported useForm()] <br>
+                                        <span  class="four"></span>  c-  destructuring  [...register] defined method the MUI defined/extracted from the imported useForm()]  , which  will include the next properties :     <br>
+                                            <span  class="five"></span>  1-   input field [TextField] element's name  'ContactNumber' <br>
+                                            <span  class="five "></span>  2-   input field [TextField] element's  properties object as next object properties   :    <br>
+                                                <span  class="six "></span>  -   input field [TextField]  requirement property [required: true ]  <br>
+                                                <span  class="six"></span>   -  input field [TextField]  validation reference  property  [ phoneRegExp  : the defined pattern variable by using reglar expresion of phone  nimber   ]  <br>
+                                                <span  class="six "></span>  -   input field [TextField] minimum characters length   property  [  minLength  :  #number    ]  <br>
+                                                <span  class="six"></span>   -   input field [TextField] maximum  characters length   property  [  maxLength  :  #number    ]  <br>
+                                        <span  class="four"></span>  d-  assign  [label]  => the displayed name for the user as label input field <br>
+                                        <span  class="four"></span>  e-  assign  [variant]  =>  the formating type of the input field ['filled']  <br>   <br>
+
+                                    
+                                    <span  class="three"></span>  4]  [First Address ] input field , => with following properties    :     <br>
+                                        <span  class="four"></span>  a-  [label]  the user  displed name of the input field  =>  'Address 1'     <br>
+                                        <span  class="four"></span>  b-  [variant]  Formtaing type of the input field =>  'filled '     <br> <br>
+                                    
+                                    <span  class="three"></span>  5]  [Second  Address ] input field , => with following properties    :     <br>
+                                        <span  class="four"></span>  a-  [label]  the user  displed name of the input field  =>  'Address 2'     <br>
+                                        <span  class="four"></span>  b-  [variant]  Formtaing type of the input field =>  'filled '     <br>
+                                    
+                                        
+                                    <span  class="three"></span>  6]  [muliple Select] input field , => with following properties    :     <br>
+                                        <span  class="four"></span>  a-  [id] format type of the input field sections options   =>  'outlined-select-currency'     <br>
+                                        <span  class="four"></span>  b-  [select] the type of select  input field / TextField     <br>
+                                        <span  class="four"></span>  c-  [label]  the user label  of the input field =>  'Role'     <br>
+                                        <span  class="four"></span>  d-  [defaultValue] the default option value to be shown to the user for  the input field =>  'User'     <br>
+                                        <span  class="four"></span>  e-  [helperText] hint message  text dipslayed of the input field for the user     <br>
+                                        <span  class="four"></span>  The children elements will be displayed through a mapping method on the defiend public variable  [mydata] to be as options displed inside the select 's option's element 'MenuItem'  as following  : <br>
+                                        <span  class="four"></span>  Each select option's element 'MenuItem' , should has the next attribues   as following  : <br>
+                                            <span  class="five"></span>  1- key={option.value}    <br> 
+                                            <span  class="five"></span>  2- value ={option.value}    <br> 
+                                             
+                                        <span  class="four"></span>  Each select option's element 'MenuItem' , should include the next content as following  : <br>
+                                            <span  class="five"></span>  - {option.label}    <br> 
+                                    
+                                    <span  class="three"></span>  7]  [Box] Child container of the next elements [with right alignment ] ,  with following properties    :     <br>
+                                        <span  class="four"></span>  a-  [ Button] the submit button element of the Form ,  with following  propeties/attriutues     :     <br>
+                                            <span  class="five"></span>  1-  [type]  => the type of the button  ->  'submit'        <br>
+                                            <span  class="five"></span>  2-  [variant]  => the format type of the button  ->  'contained'    <br>
+                                            <span  class="five"></span>   -  [text node of the button ]  <br>
+
+                                        <span  class="four"></span>  b-  [Snackbar] the  progresss bar of the submiting  Form  ,  with following  propeties/attriutues     :     <br>
+                                            <span  class="five"></span>  1-  [open]  =>  calling the defiend hook 'open'         <br>
+                                            <span  class="five"></span>  2-  [autoHideDuration]  the duration of the  displaying  tbe alert message   =>  the value by miilisecond        <br>
+                                            <span  class="five"></span>  3-  [anchorOrigin]  the coordinations of the alert  message =>    as object of dimensions values        <br>
+                                            <span  class="five"></span>   =>  this elmeent will incldue the next child element  [Alert]  , with next propeties/attriutues   :  <br>
+                                                <span  class="six "></span>   - [onClose]  =>  the defined hook  => assigned by the  [handleClose] defined method         <br>
+                                                <span  class="six "></span>   - [severity]  =>  the  format of the alrt message   =>  ['success' : green |  'error' : red | 'info' : blue | 'warning' : orange   ]          <br>
+                                                <span  class="six "></span>   - [sx]  => set by with of 100%          <br>
+                                            <span  class="five"></span>   =>  the  include the [text node]  of alet message text <br>
+    
                     </code>
                 </p>
             <hr> <br>  <hr> <br>            
