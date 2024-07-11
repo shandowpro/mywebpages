@@ -1,9 +1,12 @@
 //  The Calendar inner Page  :
 
+
 // A] Importings :
+import './Calendar.css'
+
 
 // @ts-ignore
-import React  , {useState} from 'react' ;
+import React  , {Fragment, useState} from 'react' ;
 import { formatDate } from "@fullcalendar/core";
 import FullCalendar from "@fullcalendar/react";
 // @ts-ignore
@@ -12,32 +15,23 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";   
 import interactionPlugin from "@fullcalendar/interaction";     
 
-import { Stack } from "@mui/material";
+import { Paper, Stack } from "@mui/material";
 
 
 
 // @ts-ignore
 // import { INITIAL_EVENTS , createEventId  } from "./event-utils ";     
-
-
-
-
-// import { timeGridPlugin } from '@fullcalendar/daygrid';
-//  import { dayGridPlugin } from '@fullcalendar/daygrid';
-// @ts-ignore
-// import { dayGridPlugin } from '@fullcalendar/daygrid';
-
-
+ 
 
 // B] Public definitions of variables and methods   :
  
 
     function renderEventContent(eventInfo) {
         return (
-            <div>
-                <b> {eventInfo.timeText  } </b>
-                <i> {eventInfo.event.title  } </i>
-            </div>
+            <Fragment>
+                <b> {eventInfo.timeText} </b>
+                <i> {eventInfo.event.title} </i>
+            </Fragment>
         ) ;
     } 
 
@@ -57,12 +51,11 @@ import { Stack } from "@mui/material";
  
 
 
-
 // Main functionl componoent :
 const Calendar = () => {
   //  C]  Hooks defintion  :
     const [  weekendsVisible, setweekendsVisible  ] = useState(true);
-    const [  currentEvents, setcurrentEvents  ] = useState([]);
+    const [  currentEvents, setCurrentEvents  ] = useState([]);
   
   
     const handleWeekendsToggle = () => {
@@ -94,7 +87,7 @@ const Calendar = () => {
 
     const handleDateSelect  = (selectInfo) => {
         let title = prompt('Please enter a new title for you event')      
-        let calendarApi = selectInfo.view.Calendar  
+        let calendarApi = selectInfo.view.calendar  
  
         //clear date selections  
         calendarApi.unselect() 
@@ -119,81 +112,48 @@ const Calendar = () => {
     }  
 
     const handleEvents = (events) => {
-        setcurrentEvents(events)
+        setCurrentEvents(events)
     }
   
 
   return (
     <Stack direction={'row'}  >
-      This is the calendar inner page component
-      
-      <div className="demo-app-sidebar">
-        
-        <div className="demo-app-sidebar-section">
-          <h2> Instructions </h2>
-          <ul>
-            <li>
-              Select dates and you will be prompted to create a new event{" "}
-            </li>
-            <li> Drag, Drop and resize events </li>
-            <li> Click on the evenet to delete it from calendar </li>
-          </ul>
-        </div>
-
-        
-        <div className="demo-app-sidebar-section"    >
-          <label>
-            <input 
-                type="checkbox"
-                checked={weekendsVisible}
-                onChange={handleWeekendsToggle}
-            >
-            </input>
-                Toggle Weekends   
-            </label>
-        </div>
-
+     
+      <Paper className="demo-app-sidebar">
         <div   className="demo-app-sidebar-section" >
-            <h2> All Events {   createEventId.length  } </h2> 
+            <h2 style={{  textAlign:'center'  }}  >
+                 All Events {   currentEvents.length  } 
+             </h2> 
 
             <ul>
-            
                 {currentEvents.map(renderSidebarEvent)  }            
             </ul>  
 
         </div>
-
-
-      </div>
+      </Paper>
 
       <div  className='demo-app-main'  > 
         <FullCalendar 
             // @ts-ignore
-            plugins={{ dayGridPlugin  , timeGridPlugin ,  interactionPlugin   }}
+            plugins={ [ dayGridPlugin  , timeGridPlugin ,  interactionPlugin    ]}
             headerToolbar ={{
-                left: 'prev,next today' ,
-                center : 'title' ,
-                right : 'dayGridMonth, timeGridWeek , timerGridDay '
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
             }}
-            initialView="dayGridMonth" 
-            editable={true} 
-            selectable={true} 
-            selectMirror={true} 
-            dayMaxEvents={true} 
-            weekends={weekendsVisible} 
-            initialEvents ={INITIAL_EVENTS } 
-            select={handleDateSelect } 
-            eventContent ={renderEventContent }  // custom  render fuction      
-            eventClick ={handleEventClick }        
-            eventsSet ={handleEvents }     // called after events initialized 
-         
-      
+            initialView='dayGridMonth'
+          editable={true}
+          selectable={true}
+          selectMirror={true}
+          dayMaxEvents={true}
+          weekends={weekendsVisible}
+          initialEvents={INITIAL_EVENTS} // alternatively, use the `events` setting to fetch from a feed
+          select={handleDateSelect}
+          eventContent={renderEventContent} // custom render function
+          eventClick={handleEventClick}
+          eventsSet={handleEvents} // called after events are initialized/added/changed/removed
         />
       </div>
-
-
-
-
 
     </Stack>
   );
