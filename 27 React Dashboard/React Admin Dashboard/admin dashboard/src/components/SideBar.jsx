@@ -1,4 +1,3 @@
-
 // The Second part of header {SideBar} :
 
 // A] Importings :
@@ -12,7 +11,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ListItem from "@mui/material/ListItem";  
+import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
@@ -32,9 +31,10 @@ import {
   ReceiptLongOutlined,
   TimelineOutlined,
   MapOutlined,
-  MenuOutlined, 
+  MenuOutlined,
 } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom" ;
+import { useNavigate } from "react-router-dom";
+import { grey } from "@mui/material/colors";
 // -----------------------------------------------------------------
 
 // B] Define the public variables & functions  :
@@ -115,7 +115,6 @@ const array1 = [
 ];
 
 const array2 = [
-  
   {
     text: "Profile Form",
     icon: <PersonOutlined />,
@@ -141,7 +140,7 @@ const array3 = [
   },
   {
     text: "Pie Chart",
-    icon: <PieChartOutlineOutlined  />,
+    icon: <PieChartOutlineOutlined />,
     path: "/pie",
   },
   {
@@ -173,7 +172,6 @@ const array3 = [
 */
 
 const SideBar = ({ open, handleDrawerClose }) => {
-
   // Define Hook  [used for in switching between button of closing and open the SideBar Menu  + Changing color of inner text inside the sidebar ]  :
   const theme = useTheme();
 
@@ -190,53 +188,62 @@ const SideBar = ({ open, handleDrawerClose }) => {
             <ChevronLeftIcon />
           )}
         </IconButton>
-        </DrawerHeader>
+      </DrawerHeader>
       <Divider />
 
-      <Avatar  
-        sx = {{
-          mx:"auto",
-          width: open?  88 : 44 ,
-          height: open?  88 : 44 ,
-          my: 1 , border: '2px solid grey' ,
-          transition : "0.25s" ,
+      <Avatar
+        sx={{
+          mx: "auto",
+          width: open ? 88 : 44,
+          height: open ? 88 : 44,
+          my: 1,
+          border: "2px solid grey",
+          transition: "0.25s",
         }}
-        alt="Shadi Sayed" 
-        src="me.jpg" 
+        alt="Shadi Sayed"
+        src="me.jpg"
       />
-      
-      <Typography align="center" 
-        sx={{  
-          fontSize: open? 17 : 0 ,
-          transition : "0.25s"
-        }}  
+
+      <Typography
+        align="center"
+        sx={{
+          fontSize: open ? 17 : 0,
+          transition: "0.25s",
+        }}
       >
         Shadi Sayed
       </Typography>
 
-      <Typography align="center"  
-        sx={{  
-          fontSize: open? 15 : 0 ,
-          transition : "0.25s" ,
-          color:theme.palette.info.main  
+      <Typography
+        align="center"
+        sx={{
+          fontSize: open ? 15 : 0,
+          transition: "0.25s",
+          color: theme.palette.info.main,
         }}
       >
         Admin
       </Typography>
-     
+
       <Divider />
 
       <List>
         {array1.map((item) => (
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
             <ListItemButton
-              onClick ={ () => {
-                navigate(item.path)
-              }}  
+              onClick={() => {
+                navigate(item.path);
+              }}
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
+                bgcolor:
+                  location.pathname === item.path
+                    ? theme.palette.mode === "dark"
+                      ? grey[800]
+                      : grey[300]
+                    : null,
               }}
             >
               <ListItemIcon
@@ -263,13 +270,19 @@ const SideBar = ({ open, handleDrawerClose }) => {
         {array2.map((item) => (
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
             <ListItemButton
-                onClick ={ () => {
-                  navigate(item.path)
-                }}
-                sx={{
+              onClick={() => {
+                navigate(item.path);
+              }}
+              sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
+                bgcolor:
+                  location.pathname === item.path
+                    ? theme.palette.mode === "dark"
+                      ? grey[800]
+                      : grey[300]
+                    : null,
               }}
             >
               <ListItemIcon
@@ -295,13 +308,19 @@ const SideBar = ({ open, handleDrawerClose }) => {
         {array3.map((item) => (
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
             <ListItemButton
-              onClick ={ () => {
-                navigate(item.path)
+              onClick={() => {
+                navigate(item.path);
               }}
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
+                bgcolor:
+                  location.pathname === item.path
+                    ? theme.palette.mode === "dark"
+                      ? grey[800]
+                      : grey[300]
+                    : null,
               }}
             >
               <ListItemIcon

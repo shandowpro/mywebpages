@@ -20,6 +20,7 @@ import Invoices from "./page/invoices/Invoices";
 import Form from "./page/form/Form";
 import Calendar from "./page/calendar/Calendar";
 import BarChart from "./page/barChart/BarChart";
+import FAQ from "./page/faq/FAQ";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
       <Route path="invoices"  element={<Invoices />} />
       <Route path="form"  element={<Form />} />
       <Route path="calendar"  element={<Calendar />} />
+      <Route path="faq"  element={<FAQ />} />
       <Route path="barChart"  element={<BarChart />} />
     </Route>
   )

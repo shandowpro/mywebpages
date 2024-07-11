@@ -122,7 +122,7 @@ const Calendar = () => {
       <Paper className="demo-app-sidebar">
         <div   className="demo-app-sidebar-section" >
             <h2 style={{  textAlign:'center'  }}  >
-                 All Events {   currentEvents.length  } 
+                 All Events  {` ( ${currentEvents.length} ) `} 
              </h2> 
 
             <ul>
