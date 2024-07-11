@@ -1,40 +1,48 @@
 
-// inner page of [Form]  :
+// Inner page of [Form]  :
+// A] Importings secton :  
 
-  
-import React from "react";
+  // 1- React main importings : 
+  import React from "react";
 
-// @ts-ignore
-import Box from "@mui/material/Box";
+  // 2-  MUI importings : 
+  // @ts-ignore
+  import Box from "@mui/material/Box";
 
-// @ts-ignore
-import TextField from "@mui/material/Textfield";
+  // @ts-ignore
+  import TextField from "@mui/material/Textfield";
+  import { Alert, Button, MenuItem, Snackbar, Stack } from "@mui/material";
 
-import { Alert, Button, MenuItem, Snackbar, Stack } from "@mui/material";
+  // 3-  Form  react hook  importings : 
+  // The main imported hook from the [MUI] library to use the Form element and other  requried variables :     
+  import { useForm } from "react-hook-form"  ;
+//  -----------------------------------------
 
-// @ts-ignore
-// The main imported hook from the [MUI] library to use the Form element and other  requried variables :     
-import { useForm } from "react-hook-form"  ;
- 
 
-// Define a regular expression for validating email  pattern  :
+// B] General functions and variables  :
+// 1-  Define a regular expression for validating [email]  pattern  :
 const regEmail =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-// Define a regular expression for validating phone number  pattern :
+// 2-  Define a regular expression for validating [phone number] pattern :
 const phoneRegExp = /^(\+)?(\(?\d+\)?)(([\s-]+)?(\d+)){0,}$/g;
 
-// The defined object of data to be used inside the select element {MenuItem} of the Form input field      :       
+// 3-  The defined object of data to be used inside the Select element {MenuItem} of the Form input field      :       
 const mydata = [
   { value: "Admin", label: "Admin" },
   { value: "Manager", label: "Manager" },
   { value: "User", label: "User" },
 ];
+// -----------------------------
 
-//  The main functional component of [Form ]   : 
+ 
+// *] The main functional component of [Form ]   : 
 const Form = () => {
 
-  //  Defining some  statuses from the imported [useForm]  :  
+
+  // C]  Hooks defintions [before  the return ]    :  
+  
+  // 1- Defining/extracting  some states  from the imported hook [useForm]  :  
   const {
     register,
     handleSubmit,
@@ -42,10 +50,10 @@ const Form = () => {
     formState: { errors },
   } = useForm();
 
-   //  Define a state to be used inside the  Form   :
+   // 2- Define a [open] state to be used inside the  Form   :
   const [open, setOpen]  = React.useState(false) ;
 
-  // Define a hanling function of closing  :  
+  // 3-  Define a handling function of closing  :  
   const handleClose = ( event , reason ) => {
     if (reason === 'clickaway') {
       return;
@@ -54,21 +62,21 @@ const Form = () => {
   } ;
 
 
-  // Define handling click function   : 
+  // 4- Define handling click function   : 
   const handleClick = () => {
     setOpen(true)      
   } 
 
 
-  //  Define the submit function to be used inside the button [in full project should return a real data via api ]    :  
+  // 5-  Define the submit function to be used inside the button [in full project should return a real data via api ]    :  
   const onSubmit = () => {
     console.log("Done");
     handleClick();
   };
 
    
-  return (
-    
+  // D] main return of the main function  of [Form]   :   
+  return (    
     <Box
       component="form"
       onSubmit={handleSubmit(onSubmit)}
@@ -80,10 +88,8 @@ const Form = () => {
       noValidate
       autoComplete="off"
     >
-      
-      
+       
       <Stack direction={"row"} sx={{ gap: 2 }}>
-        
   
         <TextField
           helperText={
@@ -92,12 +98,16 @@ const Form = () => {
               : null
           }
           error={Boolean(errors.firstName)}
-          {...register("firstName", {
-             required: true, minLength: 3 
+          
+          {...register(
+            "firstName", 
+            {
+              required: true,
+              minLength: 3 
             }
           )}
           sx={{ flex: 1 }}
-          label="First Name"
+          label= "First Name"
           variant="filled"
         />
 
@@ -171,7 +181,7 @@ const Form = () => {
         helperText="Please Choose your Role "
       >
         {mydata.map((option) => (
-          <MenuItem key={option.value} value={option.value}>
+          <MenuItem key={option.value} value={option.value} >
             {option.label}
           </MenuItem>
         ))}
