@@ -24,7 +24,7 @@ const Hero = () => {
   const lottieRef = useRef() ;
   
   return (
-    <section className="hero flex">
+    <section id='hero' className="hero flex">
       <div className="left-section">
         <div className="parent-avatar flex">
           
@@ -65,10 +65,21 @@ const Hero = () => {
         </motion.p>
 
         <div className="all-icons flex">
-          <div className="icon icon-twitter"> </div>
+          <div className="icon icon-twitter">
+             <a href=""></a>
+          </div>
           <div className="icon icon-instagram"> </div>
           <div className="icon icon-github"> </div>
           <div className="icon icon-linkedin"> </div>
+          
+          <a  
+             className="icon" 
+             style={{ color : 'rgb(161 161 170)' }}
+             target="_blank" 
+             href="https://shindowpro.github.io"> 
+               CV  
+           </a>
+          
         </div>
       </div>
 

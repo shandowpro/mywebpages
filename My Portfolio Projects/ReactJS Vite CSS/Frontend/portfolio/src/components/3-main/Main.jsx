@@ -2,7 +2,7 @@
 
 import "./main.css";
 
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 
 // Import the Defined  static array of All projects from external file , to use it with mapping inside th displayed cards :
 import { projects } from "./myprojects";
@@ -45,8 +45,10 @@ const Main = () => {
   };
 
   return (
-    <>
-      <h1 className="header"> My Portfolio Projects </h1>
+    <Fragment>
+      <h1  id="projects" className="header">
+       My Portfolio Projects 
+      </h1>
       <main className="flex">
         <section className="  flex left-section">
           <button
@@ -86,14 +88,6 @@ const Main = () => {
             React
           </button>
 
-          <button
-            onClick={() => {
-              handleClickFind("NextJS");
-            }}
-            className={currentActive === "NextJS" ? "active" : null}
-          >
-            NextJS
-          </button>
         </section>
 
         <section className="  flex right-section">
@@ -126,13 +120,19 @@ const Main = () => {
 
                     <div className="flex icons ">
                       <div style={{ gap: "11px" }} className="flex">
-                        <div className="icon-link">
-                          <a href={item.link}></a>
-                        </div>
-                        <div className="icon-github"></div>
+                        <a href={item.link} target="_blank" >
+                          <div className="icon-link"></div>
+                        </a>
+
+                        <a href={item.githubLink} target="_blank"> 
+                          <div className="icon-github"></div>
+                        </a>
                       </div>
 
-                      <a className="link flex" href="">
+                      <a
+                        className="link flex"
+                        href={item.link}
+                      >
                         More
                         <span
                           style={{ alignSelf: "center" }}
@@ -147,7 +147,7 @@ const Main = () => {
           </AnimatePresence>
         </section>
       </main>
-    </>
+    </Fragment>
   );
 };
 

@@ -41,19 +41,19 @@ const Header = () => {
       <nav>
         <ul className="flex">
           <li>
-            <a href=""> About </a>
+            <a href="#hero"> About </a>
           </li>
 
           <li>
-            <a href=""> Projects </a>
+            <a href="#projects"> Projects </a>
           </li>
 
           <li>
-            <a href=""> Refs Courses </a>
+            <a href="#refs"> Refs Courses </a>
           </li>
  
           <li>
-            <a href=""> Contact Us </a>
+            <a href="#contact"> Contact </a>
           </li>
         </ul>
       </nav>
@@ -85,7 +85,7 @@ const Header = () => {
 
       {showModal && (
         <div className="fixed">
-          <ul className="modal border">
+          <ul className="modal">
             <li>
               <button
                 onClick={() => {
@@ -96,24 +96,21 @@ const Header = () => {
             </li>
 
             <li>
-              <a href=""> About </a>
+              <a href="#hero" onClick={() => {setshowModal(false);}} > About </a>
             </li>
 
             <li>
-              <a href=""> Articles </a>
+              <a href="#projects"  onClick={() => {setshowModal(false);}} > Projects </a>
             </li>
 
             <li>
-              <a href=""> Projects </a>
+              <a href="#refs" onClick={() => {setshowModal(false);}} > Refs Courses </a>
+            </li>
+  
+            <li>
+              <a href="#contact" onClick={() => {setshowModal(false);}}  > Contact </a>
             </li>
 
-            <li>
-              <a href=""> Speaking </a>
-            </li>
-
-            <li>
-              <a href=""> Uses </a>
-            </li>
           </ul>
         </div>
       )}

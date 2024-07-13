@@ -22,7 +22,7 @@ const Contact = () => {
   const [state, handleSubmit] = useForm("xkndeqzg");
 
   return (
-    <section className="contact-us">
+    <section id='contact' className="contact-us">
       <h1 className="title">
         <span className="icon-envelope"> </span>
         Contact US

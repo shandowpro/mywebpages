@@ -1,8 +1,8 @@
-// Third component [Main] :
+// Third component [Main Refs] :
 
 import "./mainRefs.css";
 
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 // Import the Defined  static array of All projects from external file , to use it with mapping inside th displayed cards :
 import { refs } from "./MyRefs";
@@ -45,8 +45,10 @@ const MainRefs = () => {
   };
 
   return (
-    <>
-      <h1 className="header"> My Technical Lessons Documentary </h1>
+    <Fragment>
+      <h1 id="refs" className="header">
+        My Technical Referencies Courses{" "}
+      </h1>
       <main className="flex">
         <section className="  flex left-section">
           <button
@@ -57,6 +59,15 @@ const MainRefs = () => {
             className={currentActive === "all" ? "active" : null}
           >
             All Refs Courses
+          </button>
+
+          <button
+            onClick={() => {
+              handleClick("HTML5");
+            }}
+            className={currentActive === "HTML5" ? "active" : null}
+          >
+            HTML5
           </button>
 
           <button
@@ -121,9 +132,93 @@ const MainRefs = () => {
           >
             MySQL
           </button>
+
+          <button
+            onClick={() => {
+              handleClickFind("BOM");
+            }}
+            className={currentActive === "BOM" ? "active" : null}
+          >
+            BOM
+          </button>
+
+          <button
+            onClick={() => {
+              handleClickFind("DOM");
+            }}
+            className={currentActive === "DOM" ? "active" : null}
+          >
+            DOM
+          </button>
+
+          <button
+            onClick={() => {
+              handleClickFind("JQuery");
+            }}
+            className={currentActive === "JQuery" ? "active" : null}
+          >
+            JQuery
+          </button>
+
+          <button
+            onClick={() => {
+              handleClickFind("JSOOP");
+            }}
+            className={currentActive === "JSOOP" ? "active" : null}
+          >
+            JSOOP
+          </button>
+
+          <button
+            onClick={() => {
+              handleClickFind("PHP");
+            }}
+            className={currentActive === "PHP" ? "active" : null}
+          >
+            PHP
+          </button>
+
+
+          <button
+            onClick={() => {
+              handleClickFind("PHPOOP");
+            }}
+            className={currentActive === "PHPOOP" ? "active" : null}
+          >
+              PHPOOP
+          </button>
+
+          <button
+            onClick={() => {
+              handleClickFind("CMD");
+            }}
+            className={currentActive === "CMD" ? "active" : null}
+          >
+            CMD
+          </button>
+
+
+          <button
+            onClick={() => {
+              handleClickFind("Github");
+            }}
+            className={currentActive === "Github" ? "active" : null}
+          >
+            Github
+          </button>
+
+          <button
+            onClick={() => {
+              handleClickFind("Bootstrap");
+            }}
+            className={currentActive === "Bootstrap" ? "active" : null}
+          >
+            Bootstrap
+          </button>
+
         </section>
 
-        <section className="  flex right-section">
+        <section className="flex right-section">
           <AnimatePresence>
             {arr.map((item) => {
               return (
@@ -153,17 +248,26 @@ const MainRefs = () => {
 
                     <div className="flex icons ">
                       <div style={{ gap: "11px" }} className="flex">
-                        <div className="icon-link"></div>
-                        <div className="icon-github"></div>
-                      </div>
+                        <a href={item.link} target="_blank">
+                          <div className="icon-link"></div>
+                        </a>
 
-                      <a className="link flex" href="">
+                        <a href={item.githubLink} target="_blank">
+                          <div className="icon-github"></div>
+                        </a>
+                      </div>
+   
+                      <a
+                        className="link flex"
+                        href={item.link}
+                      >
                         More
                         <span
                           style={{ alignSelf: "center" }}
                           className="icon-arrow-right"
                         ></span>
                       </a>
+
                     </div>
                   </div>
                 </motion.article>
@@ -172,7 +276,7 @@ const MainRefs = () => {
           </AnimatePresence>
         </section>
       </main>
-    </>
+    </Fragment>
   );
 };
 
