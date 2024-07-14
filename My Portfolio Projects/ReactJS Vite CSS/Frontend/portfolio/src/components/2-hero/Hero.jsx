@@ -60,8 +60,8 @@ const Hero = () => {
           animate = {{scale:1}} 
           transition = {{ duration: 2}}
           className="sub-title">
-          Im Shadi Sayed , a Fullstack web developer and React web developer
-          frontend
+          Im Shadi Sayed , a Fullstack web developer and Frontend React web developer
+          
         </motion.p>
 
         <div className="all-icons flex">
@@ -76,7 +76,7 @@ const Hero = () => {
              className="icon" 
              style={{ color : 'rgb(161 161 170)' }}
              target="_blank" 
-             href="https://shindowpro.github.io"> 
+             href="https://shandowpro.github.io"> 
                CV  
            </a>
           

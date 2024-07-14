@@ -25,7 +25,7 @@ const Contact = () => {
     <section id='contact' className="contact-us">
       <h1 className="title">
         <span className="icon-envelope"> </span>
-        Contact US
+        Contact Me
       </h1>
 
       <p className="sub-title">         
