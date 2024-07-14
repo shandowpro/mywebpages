@@ -136,22 +136,22 @@ const array3 = [
   {
     text: "Bar Chart",
     icon: <BarChartOutlined />,
-    path: "/bar",
+    path: "/barChart",
   },
   {
     text: "Pie Chart",
     icon: <PieChartOutlineOutlined />,
-    path: "/pie",
+    path: "/pieChart",
   },
   {
     text: "Line Chart",
     icon: <TimelineOutlined />,
-    path: "/line",
+    path: "/lineChart",
   },
   {
     text: "Geography Chart",
     icon: <MapOutlined />,
-    path: "/geography",
+    path: "/geographyChart",
   },
 ];
 

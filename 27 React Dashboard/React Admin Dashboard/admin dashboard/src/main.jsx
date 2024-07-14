@@ -20,6 +20,8 @@ import Invoices from "./page/invoices/Invoices";
 import Form from "./page/form/Form";
 import Calendar from "./page/calendar/Calendar";
 import BarChart from "./page/barChart/BarChart";
+import PieChart from "./page/pieChart/PieChart";
+import LineChart from "./page/lineChart/LineChart";
 import FAQ from "./page/faq/FAQ";
 
 const router = createBrowserRouter(
@@ -33,6 +35,8 @@ const router = createBrowserRouter(
       <Route path="calendar"  element={<Calendar />} />
       <Route path="faq"  element={<FAQ />} />
       <Route path="barChart"  element={<BarChart />} />
+      <Route path="pieChart"  element={<PieChart />} />
+      <Route path="lineChart"  element={<LineChart />} />
     </Route>
   )
 );

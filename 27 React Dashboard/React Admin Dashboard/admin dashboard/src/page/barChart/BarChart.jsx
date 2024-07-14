@@ -1,15 +1,16 @@
 
-// inner page of [Invoices] : 
+// inner page of [Bar chart ] :
 
+import React from "react"; 
+import Bar from "./bar";
+ 
 
-import React from 'react' ;
+const BarChart = () => {
+ 
+  return (
+    <Bar  />     
+ 
+  );
+};
 
-const BarChart  = () => {
-    return (    
-        <div>
-           BarChart  page
-        </div>
-    ) ;
-}
-
-export default BarChart ;
+export default BarChart;
