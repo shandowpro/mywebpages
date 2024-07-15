@@ -151,7 +151,7 @@ const array3 = [
   {
     text: "Geography Chart",
     icon: <MapOutlined />,
-    path: "/geographyChart",
+    path: "/geography",
   },
 ];
 

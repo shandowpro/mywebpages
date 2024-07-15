@@ -22,7 +22,12 @@ import Calendar from "./page/calendar/Calendar";
 import BarChart from "./page/barChart/BarChart";
 import PieChart from "./page/pieChart/PieChart";
 import LineChart from "./page/lineChart/LineChart";
+// import Geographyhy  from './page/geography/Geography';
+ 
 import FAQ from "./page/faq/FAQ";
+import { Geography } from './page/geography/Geography';
+
+// <Route path="geoChart"  element={<LineChart />} />
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,6 +42,7 @@ const router = createBrowserRouter(
       <Route path="barChart"  element={<BarChart />} />
       <Route path="pieChart"  element={<PieChart />} />
       <Route path="lineChart"  element={<LineChart />} />
+      <Route path="geography"  element={<Geography />} />
     </Route>
   )
 );
