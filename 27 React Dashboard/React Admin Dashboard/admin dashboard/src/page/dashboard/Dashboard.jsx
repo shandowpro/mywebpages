@@ -1,6 +1,9 @@
+
 // inner page of [Dashboard] as a assembling inner page    :
+
 // Main segmentation of the inner page [3 rows ] as following :
-// 1- Row1 =>
+// 0- Button  of Download     => This component using an external component [ Card ] with chlidren poperties  
+// 1- Row1 => This component using an external component [ card ] with chlidren popereites  
 // 2- Row2 =>
 // 3- Row3 =>
 

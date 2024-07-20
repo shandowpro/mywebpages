@@ -174,12 +174,12 @@ const data = [
   },
 ];
 
-export const Line = () => {
+export const Line = ( {isDashboard = false }  ) => {
   // Define the [theme] varialbe Hook , to be used inside the chart  of the MUI :
   const theme = useTheme();
 
   return (
-    <Box sx={{ height: "75vh" }}>
+    <Box sx={{ height: isDashboard  ?  '280px' : "75vh", width : isDashboard ? 'auto' : '100%' }}>
       <ResponsiveLine
         data={data}
         curve="catmullRom"
@@ -308,7 +308,7 @@ export const Line = () => {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "Transportation",
+          legend:  isDashboard ? null  : "Transportation",
           legendOffset: 45,
           legendPosition: "middle",
           truncateTickAt: 0,
@@ -317,7 +317,7 @@ export const Line = () => {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "Count",
+          legend: isDashboard ? null : "Count",
           legendOffset: -45,
           legendPosition: "middle",
           truncateTickAt: 0,

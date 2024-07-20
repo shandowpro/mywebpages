@@ -42,7 +42,7 @@ const data = [
   ];
   
 
-const Bar = () => {
+const Bar = ({   isDashboard = false  }) => {
   // Define the [theme] variable Hook , to be used inside the chart  of the MUI :
   const theme = useTheme();
 
