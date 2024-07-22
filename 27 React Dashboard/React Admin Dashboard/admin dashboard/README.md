@@ -1,4 +1,4 @@
-# Admin dashboard React project  using Vite and MUI library and firebase google hosting
+# Admin dashboard React project  using Vite with MUI library and firebase google hosting
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
