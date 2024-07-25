@@ -252,7 +252,7 @@ const MainRefs = () => {
                           <div className="icon-link"></div>
                         </a>
 
-                        <a href={item.githubLink} target="_blank">
+                        <a href={item.githubLink} target="_blank" >
                           <div className="icon-github"></div>
                         </a>
                       </div>
@@ -260,6 +260,7 @@ const MainRefs = () => {
                       <a
                         className="link flex"
                         href={item.link}
+                        target="_blank"
                       >
                         More
                         <span

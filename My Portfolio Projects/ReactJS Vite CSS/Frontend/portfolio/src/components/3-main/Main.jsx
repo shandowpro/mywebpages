@@ -51,6 +51,7 @@ const Main = () => {
       </h1>
       <main className="flex">
         <section className="  flex left-section">
+        
           <button
             onClick={() => {
               setCurrentActive("all");
@@ -59,6 +60,15 @@ const Main = () => {
             className={currentActive === "all" ? "active" : null}
           >
             All Projects
+          </button>
+
+          <button
+            onClick={() => {
+              handleClick("React");
+            }}
+            className={currentActive === "React" ? "active" : null}
+          >
+            React
           </button>
 
           <button
@@ -79,16 +89,10 @@ const Main = () => {
             JavaScript
           </button>
 
-          <button
-            onClick={() => {
-              handleClick("React");
-            }}
-            className={currentActive === "React" ? "active" : null}
-          >
-            React
-          </button>
 
         </section>
+
+
 
         <section className="  flex right-section">
           <AnimatePresence>
@@ -132,6 +136,7 @@ const Main = () => {
                       <a
                         className="link flex"
                         href={item.link}
+                        target="_blank"
                       >
                         More
                         <span

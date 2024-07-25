@@ -25,11 +25,11 @@ const Contact = () => {
     <section id='contact' className="contact-us">
       <h1 className="title">
         <span className="icon-envelope"> </span>
-        Contact Me
+        Contact with Me
       </h1>
 
       <p className="sub-title">         
-        Contact us for more information and get notified when I push something new
+        Contact with for more information and get notified when I push something new
       </p>
 
       <div style={{ justifyContent: "space-between", gap: '100px' }} className="flex">

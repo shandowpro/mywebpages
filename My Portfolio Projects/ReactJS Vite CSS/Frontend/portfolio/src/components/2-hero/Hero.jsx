@@ -65,12 +65,15 @@ const Hero = () => {
         </motion.p>
 
         <div className="all-icons flex">
-          <div className="icon icon-twitter">
-             <a href=""></a>
+          
+          
+          <div className="icon icon-github"> 
+            <a href="https://github.com/shandowpro" target='_blank' ></a>
           </div>
-          <div className="icon icon-instagram"> </div>
-          <div className="icon icon-github"> </div>
-          <div className="icon icon-linkedin"> </div>
+  
+          <div className="icon icon-linkedin"> 
+            <a href="" target='_blank' ></a>          
+          </div>
           
           <a  
              className="icon" 
@@ -101,3 +104,11 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+// <div className="icon icon-twitter">
+//    <a href=""></a>
+// </div>
+
+
+// <div className="icon icon-instagram"> </div>
