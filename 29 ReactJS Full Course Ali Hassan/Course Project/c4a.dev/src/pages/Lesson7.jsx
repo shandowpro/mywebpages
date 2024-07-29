@@ -28,9 +28,7 @@ const Lesson7 = () => {
             </ul>
           </li>
 
-          <li> Copy the HTML elements of 'Head' main Tag - and paste inside the
-            'Head' of 'index.html' of the react project , with following
-            considerations :
+          <li> Copy the HTML elements of 'Head' main Tag - and paste inside the 'Head' of 'index.html' of the react project , with followin considerations :  <br></br>
             <ul>
               <li>               
                 All copied HTML elements must be direct link path  
