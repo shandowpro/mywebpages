@@ -1,8 +1,8 @@
-// The Html inner page :
+// The Html inner page[also including the imported  (Nav)  reusable component ] :  :
 
 import React from 'react'
 
-import  Nav  from "../pages/Nav";
+import  Nav  from "../comps/Nav";
 
 
  const Html = () => {

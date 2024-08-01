@@ -1,12 +1,12 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-// Importing the Reuable components   :         
-import Nav from "./pages/Nav";
-import Lesson4 from "./pages/Lesson4";
-import Lesson56 from "./pages/Lesson56";
-import Lesson7 from "./pages/Lesson7";
-import Lesson8 from "./pages/Lesson8";
+// Importing the Reusable components   :         
+import Nav from "./comps/Nav";
+import Lesson4 from "./comps/Lesson4";
+import Lesson56 from "./comps/Lesson56";
+import Lesson7 from "./comps/Lesson7";
+import Lesson8 from "./comps/Lesson8";
 
  
 function App() {

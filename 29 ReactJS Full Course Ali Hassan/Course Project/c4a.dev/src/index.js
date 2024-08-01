@@ -7,17 +7,17 @@ import "./index.css";
 // Importing 'react router  dom' library elements :
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom"; 
 
-// Import the main page  [App.jsx]  :
+// Import the main page component  [App.jsx]  :
 import App from "./App";
 
-// Importing the inner pages   :
+// Importing the inner pages components  :
 import Home from "./pages/Home";
 import Html from "./pages/Html";
 import Css from "./pages/Css";
 import Javascript  from "./pages/Javascript";
 
 
-// Define the main variable of router , which is  including all other defined inner pages       :
+// Define the general main variable of router , which is  including all other defined inner pages , as object inside a array of objects    :
 const router = createBrowserRouter([
   {
     path: "/",

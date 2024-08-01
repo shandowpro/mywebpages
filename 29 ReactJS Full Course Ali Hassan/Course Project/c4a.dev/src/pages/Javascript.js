@@ -1,8 +1,8 @@
-// The Javscript inner page :
+// The Javscript inner page [also including the imported  (Nav)  reusable component ] : :
 
 import React from 'react'
 
-import  Nav  from "../pages/Nav";
+import  Nav  from "../comps/Nav";
 
  const Javascript = () => {
   return (

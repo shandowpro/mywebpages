@@ -1,7 +1,7 @@
-// The Css inner page :
+// The Css inner page[also including the imported  (Nav)  reusable component ] :  :
 
 import React from 'react'
-import  Nav  from "../pages/Nav";
+import  Nav  from "../comps/Nav";
 
  const Css = () => {
   return (
