@@ -1,7 +1,9 @@
-// Nav Reusable component , including all defined inner pages links  : 
+// Nav Reusable component , including all defined inner pages links  with using special React [Link] & [NavLink] elements       : 
 
 import React from "react";
 
+import {Link , NavLink  } from "react-router-dom";
+ 
 const Nav = () => {
   return (
     <div>
@@ -16,19 +18,19 @@ const Nav = () => {
         }}
       >
         <div>
-          <a href={"/"}> Home page </a>
+          <Link to={"/"}>  c4a.dev </Link>
         </div>
         
         <div>
-          <a href={"/Html"}> HTML page </a>
+          <NavLink to={"/Html"}> HTML page </NavLink>
         </div>
 
         <div>
-          <a href={"/Css"}> CSS page </a>
+          <NavLink to={"/Css"}> CSS page </NavLink>
         </div>
 
         <div>
-          <a href={"/Javascript"}> Javascript page </a>
+          <NavLink to={"/Javascript"}> Javascript page </NavLink>
         </div>
       </header>
     </div>

@@ -5,7 +5,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 // Importing 'react router  dom' library elements :
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom"; 
+import { createBrowserRouter, RouterProvider  } from "react-router-dom"; 
 
 // Import the main page component  [App.jsx]  :
 import App from "./App";
