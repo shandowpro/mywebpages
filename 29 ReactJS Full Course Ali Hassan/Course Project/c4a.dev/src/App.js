@@ -1,13 +1,9 @@
-// import logo from './logo.svg';
-// import './App.css';
-
+// The main assembling component [App] :  
 
 // Importing the Reusable components   :         
 import Nav from "./comps/Nav";
-import Lesson4 from "./comps/Lesson4";
-import Lesson56 from "./comps/Lesson56";
-import Lesson7 from "./comps/Lesson7";
-import Lesson8 from "./comps/Lesson8";
+import Footer from "./comps/Footer";
+import Home  from "./pages/Home";
 
 
 // Importing 'react router  dom' library elements :
@@ -24,28 +20,9 @@ function App() {
   return (
     <div>
 
-      <Nav />
-
-      <Lesson4 />
-      <br></br>
-      <hr></hr>
-      <br></br>
-
-      <Lesson56 />
-      <br></br>
-      <hr></hr>
-      <br></br>
-
-      <Lesson7 />
-      <br></br>
-      <hr></hr>
-      <br></br>
-
-      <Lesson8 />
-      <br></br>
-      <hr></hr>
-      <br></br>
-
+        <Nav />
+        <Home />
+        <Footer  desinger={'Eng Shadi'}    color={'green'} /> 
       
       </div>
     );

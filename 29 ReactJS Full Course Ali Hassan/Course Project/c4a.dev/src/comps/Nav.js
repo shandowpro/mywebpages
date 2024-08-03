@@ -1,9 +1,13 @@
-// Nav Reusable component , including all defined inner pages links  with using special React [Link] & [NavLink] elements       : 
-
+/* Nav Reusable component , including :
+  All defined inner pages links Routes  with using special React [Link] & [NavLink] elements
+*/
 import React from "react";
 
 import {Link , NavLink  } from "react-router-dom";
- 
+
+import './Nav.css' ; 
+
+
 const Nav = () => {
   return (
     <div>
