@@ -236,7 +236,7 @@
 </head>
 
 <body>
-
+   
     <!-------------------------------------------------------------------------------------------------------->
     <header id="Main" class="Main wow fadeInDown" data-wow-duration="1s">
          13 React Full course with projects 9   styling react applications
@@ -401,8 +401,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">
-            <h2 class="h1" class="hidden-xs"> About Section =>  React Components with using  <span><strong> props    </strong> </span> </h2>
-            <h3 class="visible-xs"> About Section => This lesson about <strong>     React Components with using   </strong>  Props  </span> </h3>
+            <h2 class="h1" class="hidden-xs"> About Section =>  How React Components deal with    <span><strong>  CSS files    </strong> </span> </h2>
+            <h3 class="visible-xs"> About Section => This lesson about <strong>  React Components Deal with   </strong>  CSS Files   </span> </h3>
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing] Files ands then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->
         </div>
     </section>
@@ -1293,7 +1293,10 @@
                 <ol type="A">
                     <li> Main points of this lesson ,  Styling  React   applcation ,  as  following steps : <br>
                         <ol>   
-                           <li> A]   </li>
+                           <li> A] Type of CSS files in React  </li>
+                           <li> B] Work mechanism of React components  with Css files </li>
+                           <li> C] Notes about CSS files in React components  </li>
+                           <li> D] Flow chart about React components , React Routes , Css files </li>
                         </ol>
                      </li> <br> <br>
                 </ol>
@@ -1306,142 +1309,66 @@
             <header>
                 <h3>  13 React Full course with projects 9   styling react applications concept : </h3>
             </header> 
-              <h1>  A ] React {Dynamic component } & using props concepts  :  </h1> <br>
-               <p> It is about defining component with parameter(s)/argument(s) sent with it into the component user , to be able to be used as variables inside the script the  calling it    </p> 
+              <h1>  A ]  Type of CSS files in React  :  </h1> <br>
+               <p> There are (2) types using the css files in the React system , as following  :  <br> 
+                <ol> 
+                  <li> Public CSS files  ->  <br>
+                    <p> That existed inside the [public] folder of project files system </p>
+                    <p> To be called properly => must be called inside the {index.html} inside the {Head section : as link tag of rel='stylesheet' & href='file.css'   }          </p>
+                    <p> This type of file not needed to bae called from insdie the component file </p>
+                  </li> <br>
+
+                  <li> Private CSS files  ->  <br>
+                    <p> That existed outside the [public] folder of project files system </p>
+                    <p> To be called properly => Must be called inside the {componenet.js} as an importing  </p>
+                  </li>
+                </ol>
+              </p> 
      
             <hr> <br>  <hr> <br>            
             <!-- ----------------------------------------------------- -->
 
 
-            <h1>  B ] React Component Types and usages  :  </h1> <br>
-            <p>  There are (2) main  components in react  : <br>
+            <h1>  B ] Work mechanism of React components  with Css files  :  </h1> <br>
+            <p>   React Components deal with Css files according to it's type/position [public , private] : <br>
               <ol> 
-                    <li> {Fixed Component} [witout props] ,  wiht following  usages   :  <br>
-                        <p> in fixed components => that  Not inluding a changable data ->  such as Footer or Haeder components     </p>
-                      </li> <br>
-                      
-                      <li>  {Dyanmic Component} [with props] , wit following usages :  <br> 
-                        <p> In Dynamic Components => that inluding a changable data (variables)  to be used inside the caller component  ->  such as Content of Body  component     </p>
-                    </li>
+                    <li> {Public Css file} as  following :  <br>
+                        <p> Due to these types of files located inside [public] folder -> must be loated as html link tag inside the Head section </p>
+                        <p> Will be applied on the  all React Components  files </p>
+                    </li> <br>
+                       
+                    <li> {Private Css file} as  following :  <br>
+                        <p> Due to these types of files located inside the outside [public] folder -> must be called from ins each react component </p>
+                        <p> Supposed to be applied on the specifed React Components file that called it from inside of it , buyt it will abe applied on all React components , due it will be existed as  style inside Head section  of the Html     </p>
+                        <p> Next lesson we will make the seperated css file only of  the allocated react component   </p>
+                    </li> <br>
                   </ol>  
               </p> 
             <hr> <br>  <hr> <br>            
             <!-- ----------------------------------------------------- -->
             
-            <h1>  React component with using props mechanism and steps of using and creating    :  </h1> <br>
-            <p>  The Dynamic Component can be samurized in the following steps  : <br>   
+            <h1> C ]  Notes about CSS files in React components    :  </h1> <br>
                <ol> 
-                   <li> 1- [Inside the Reusble component file ] => Definition/ Creating Stage :  <br>
-                      <p>  Adding the varialbes[props] as functional component parameters/arguments in form of  object of variables </p>
-                  </li>
+                   <li> 1- It is better to use the [pathIntellisense] => which is an VScode extention to make it easier to Autocomlete of the imported  File Name of file path  </li>
 
-                   <li> 2- [Inside the Reusble component file ] =>  Allocate the  variables[props] :  <br>
-                      <p>  by adding the defiend prop(s) inside it's position of the script - inside curly brackets {} -   [ where it must be dispayed by  its value when it being called from the user component ]     </p>
-                  </li>
-
-                   <li> 3-  [Inside the user component file ] =>  Calling or importing  the reusable component  :  <br>
-                      <p> Importing this component file inside the user component - as usual of any defined component - </p>
-                      <p> calling the Importing component inside this user component , wiht assinging the sent  data variables  as  attributes [Attribute name and value ]   </p>
-                  </li>
+                   <li> 2- It is recommended to save the css file Name starting capital letter as well as the component file </li>
+                   
+                   <li> 3- It is recommended to save the [private CSS] file allocated beside it's specifed of component file  </li>
                </ol>
             </p>
           
             <!-- ----------------------------------------------------- -->
         
-            <h1> D] React [Dynamic Component] with using Props syntax  :  </h1> <br>
-               <p>  {Dynamic Component file} :  Define the main [Dynamic Component]  with adding the varialbes of data [props]  : <br>
-                <ul> 
-                  <li> a- [Reusable component file ] =>  Define the functional component and allocate deifned props inside the script    in the  : <br>
-                    <code>  
-                      // 1-  Define the functional component [with only one prop] : <br>
-                        <span class=one></span>  const comp = ({ varProp }) => {    <br> 
-                          <span class=two></span> return (         <br>  
-                              <span class=three></span> &lt; div  &gt;  <br>  
-                              
-                              <span class=four ></span> // assign the {varProp} position :  <br>  
-                              <span class=four ></span> &lt; p &gt; <br>  
-                                <span class=five></span> this is the  {varProp} value  <br>  
-                              <span class=four ></span> &lt; /p &gt; <br>  
-                              
-                            <span class=three></span> &lt; /div  &gt; <br>  
-                          <span class=two></span>  ) ;         <br>   
-                        <span class=one></span>   }  <br>   <hr>    <br>  <br>
-                        <!-- ------------------------------------------------------------ -->
-                            
-                        // 2-  Define the functional component [with several prop]   : <br>
-                        <span class=one></span>  const comp = ({ varProp1 , varProp2 , varProp3 }) => {    <br> 
-                          <span class=two></span> return (         <br>  
-                            <span class=three></span> &lt; div  &gt;  <br>  
-                            
-                              <span class=four ></span> // assign the {varProp1} position :  <br>  
-                              <span class=four ></span> &lt; p &gt; <br>  
-                                <span class=five></span> this is the  {varProp1} value  <br>  
-                              <span class=four ></span> &lt; /p &gt; <br>  <br>  
-                              
-                              <span class=four ></span> // assign the {varProp2} position :  <br>  
-                              <span class=four ></span> &lt; p &gt; <br>  
-                                <span class=five></span> this is the  {varProp2} value  <br>  
-                              <span class=four ></span> &lt; /p &gt; <br>  <br>
-                              
-                              <span class=four ></span> // assign the {varProp3} position :  <br>  
-                              <span class=four ></span> &lt; p &gt; <br>  
-                                <span class=five></span> this is the  {varProp3} value  <br>  
-                              <span class=four ></span> &lt; /p &gt; <br>  
-                              
-                            <span class=three></span> &lt; /div  &gt; <br>  
-                          <span class=two></span>  ) ;         <br>   
-                        <span class=one></span>   }  <br>  
-                      </code>                  
-                  </li>
-                  <br>   <hr>    <br>  <br>
-                    <!-- ------------------------------------------------------- -->
-
-                  <li> b- [Inside the user component file ] =>  Calling or importing the defined  reusable component : <br>
-                    <code>  
-                      //  2- Import the functional component: <br>
-                        <span class=one></span> import comp  from '../comp/comp1';       <br>  <br>
-
-                        // 3- calling the imported component With assigning the  value of sent prop(s)     :  <br>
-                        <span class=one></span>  const userComp = () => {    <br> 
-                          <span class=two></span> return (         <br>  
-                              <span class=three></span> &lt; div  &gt;  <br>  
-                                <span class=three></span> &lt; comp  varProp1 = {'value of the sent prop'}  varProp2 = {'value of the sent prop'}  / &gt;  <br> 
-                            <span class=three></span> &lt; /div  &gt; <br>  
-                          <span class=two></span>  ) ;         <br>   
-                        <span class=one></span>   }  <br>   <hr>    <br>  <br>
-                        <!-- ------------------------------------------------------------ --> 
-                    </code>                  
-                  </li>  
-                </ul>                  
-
-              </p>            
+            <h1> D] Flow chart about React components , React Routes , Css files:  </h1> <br>
+              <ol>  
+                  <li> The defined React [Re-usable component] importing the defined Css files [private CSS file ]  </li>
+                  <li> The defined React [page Router component] importing the defined [Re-usable component - childern components  || App component  - ]   </li>
+                  <li> The main React settings file [{index.js}] importing the defined  [page Router component] to be used in definging the Routes of the whole project insdie the  {route} variable   </li>
+              </ol> 
+  
             <hr> <br>  <hr> <br>            
             <!-- ----------------------------------------------------- -->   
-            <h1>  E] React component examples of props usages  :  </h1> <br>
-              <p> The sent props can be used with any value inside th script of the reusabel component , as follwoing    :  
-                
-                   
-                    <code>
-                      <span class="one"> </span>   const Footer = ({prop1 , prop2}) => {   <br>
-                        <span class="two"> </span>  return (    <br>
-                          <span class="three"> </span>  &lt; div  &gt;  <br>
-                            
-                            <span class="four"> </span> // Direct single texual value inside a text node  of an element fo prop [prop1] :   <br>
-                            <span class="four"> </span>   {prop1} <br>  <br>
-                        
-                            <span class="four"> </span> // Embeded value of a Css property   (as Literal value of  the assigned (prop2)   ) :  <br>   
-                            <span class="four"> </span>  &lt; div  style={ { cssProp = `${prop2}`  } }   &gt;   <br>
-                              <span class="five"> </span>  text node of the element  <br>
-                            <span class="four"> </span>  &lt; /div  &gt;     <br>
-                          
-                          <span class="three"> </span>  &lt; /div  &gt;     <br>
-                        <span class="two"> </span> )  ;   <br>                        
-                      <span class="one"> </span>   }   <br>
-                    </code>
-                </p> 
-            <br>  <hr> <br>
-            <!-- ------------------------------------------ -->
-
+             
              <h3> ReactJS [plugins.js] Functions and scripts file of this lesson as following : </h3> <br>
 
              <ol class="codes">
@@ -1479,10 +1406,9 @@
                       </a> <br> <hr> <br> 
                     <!-- ---------------------- -->
 
-                      <h5> (b)  [ Nav ] Dynamic Component Reusable { Nav.js} :  </h5>
-                      <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../../Course Project/c4a.dev/src/comps/Footer.js">  
-                        <button id=btn class="btn0" onclick="display()">  ReactJS Source code of [ Footer ] Reusable Fixed component with (Several Routes inner pages buttons ]) file JS [Footer.js] file </button>
-                        console.log(button)
+                      <h5> (b)  [ Header ] Dynamic Component Reusable { Header.js} :  </h5>
+                      <a id="btnCont" data-wow-duration="2s" class = "btn wow bounceInRight" target="_blank" href="../../../Course Project/c4a.dev/src/comps/Heeder.js">  
+                        <button id=btn class="btn0" onclick="display()">  ReactJS Source code of [ Heeder ] Reusable Fixed component with (Several Routes inner pages buttons ]) file JS [Header.js] file </button>
                       </a> <br> <hr> <br> 
                     <!-- ---------------------- -->
                      
