@@ -1295,7 +1295,8 @@
                         <ol>   
                            <li>  Dealing with firebase free hosting service after modifying project  files    : <br>
                               <ul> 
-                                  <li> A]   </li>
+                                  <li> A] Main steps of deploying project files into the firebase after doing some modifications    </li>
+                                  <li> B] VIP Note of [RollBack]  feature of deployment  </li>
                               </ul>  
                           </li> 
                          </ol>
@@ -1310,83 +1311,41 @@
             <header>
                 <h3>  17 React Full course with projects Deploying after modifications 101 concept : </h3>
             </header> 
-              <h1>  A] General overview of the Firebase services :  </h1> <br>  
-                <p> It is recommended  to watch the [courese 4 arab: hosting coures ]    </p>
-                <p> The Google  Firebase not provides only the Hosting service , but also several services such as :     </p>
+              <h1>  A]  Main steps of deploying project files into the firebase after doing some modifications   </h1> <br>  
+                <p> to implement a Regular deployment of the perojct files , we have to follow the next steps : </p>
+
                   <ol> 
-                    <li> 1] Authenticaion        </li>
-                    <li> 2] Firebasaae Database    </li>
-                    <li> 3] Realtime Database  </li>
-                    <li> 4] App check   </li>
-                    <li> 5] Extensions      </li>
-                    <li> 6] Storage    </li>
-                    <li> 7] Functions     </li>
-                    <li> 8] Machine learning  </li>
-                    <li> 9] Remote config    </li>
-                    <li> 10] Clouding messaging   </li>
+                    <li> 1]  Build the project recent files into the production stage , by next code : <br>
+                      <code>  {npm run build}    </code>  
+                    </li> <br> 
+
+                    <li> 2]  login into my firebase account , by next code :  <br>
+                      <code>  {firebase login}    </code>  
+                    </li> <br>  
+
+                    <li> 3]  deploy the current project files - after modifications - into teh firebase project hosting   , by next code :  <br>
+                      <code>  {firebase  deploy }    </code>  
+                    </li>
                   </ol>
               </p> 
-     
             <hr> <br>  <hr> <br>            
             <!-- ----------------------------------------------------- -->
   
-            <h1>  B] Main steps of Creating new project on firebase account :  </h1> <br>
-            <p> In to create a new project in your firebase account , you must follow steps  : <br>
+            <h1>  B]  VIP Note of [RollBack]  feature of deployment:  </h1> <br>
+            <p>   The Firebase hosting service provides a feature of [Rollback]  which is about re-obtain the previous deployed version of the project files , which can be done by following mehtod   : <br>
               <ol> 
-                    <li> Create a new account of the your G-email   </li> <br>   
-                    <li> Login into your firebase account =>  [go to console] button    </li> <br>
-                    <li> Starting the production stage by following next steps :  <br>
-                      <ul> 
-                        <li> Start building stage of the project , using the next npm command : <br>
-                           <code>
-                              npm start build  
-                           </code>                          
-                        </li>  <br>
-                          
-                        <li>  Establish the main firebase tool on my current project's files , by using the next command  :   <br>                      
-                          <code>
-                              npm i -g firebase-tools   
-                          </code>                          
-                        </li>  <br> 
-                        
-                        
-                        <li> Loging in your firebase account  :   <br>
-                          <code>
-                               firebase login    
-                          </code>                          
-                        </li> <br>
-
-                        <li> Initialize firebase service files  on the current project files  => will start configurations conversation :    <br>
-                          <code>
-                               firebase init   
-                          </code>            
-                          <p> the configurations conversation as following   :   <br> 
-                            <ol>  
-                              <li> starting configruation process => yes   </li>
-                              <li> Assigning the desired firebase service for this project  => select  (configure files firebase hosting )   </li>
-                              <li> Select the project name => new || (exsited project) </li>
-                              <li> Assinging the production folder => [build]    </li>
-                              <li> Apply on SPA type of project => yes  </li>
-                              <li> Assign the using the github auto create repo  =>  (no)   </li>
-                              <li>   =>  (no)   </li>
-                            </ol> 
-                          </p>
-                                           
-                        </li> <br>
-
-                        <li> Deploying the project files into the firebase account       :   <br>
-                          <code>
-                               firebase deploy   
-                          </code>                          
-                        </li> <br>
- 
-                      </ul>
-                    </li> <br>
-                  </ol>  
-              </p> 
+                  <li> Access the desired project on firebase    </li> <br>                              
+                  <li> Choose the host service from the dashboard side menu     </li> <br>                              
+                  <li> This will display all versions of the project's versions of deployment  </li> <br> 
+                  <li> Choose the version of Rollback -> open the dots side menu  => select Rollback </li> <br> 
+              </ol>  
+            </p> 
             <hr> <br>  <hr> <br>            
+            
             <!-- ----------------------------------------------------- -->
-             
+           <h1> next lesson => will be about a greate feature in firebase hosting service -> [Custom Domain] </h1>
+         
+            <!-- ----------------------------------------------------- -->
              <h3> ReactJS [plugins.js] Functions and scripts file of this lesson as following : </h3> <br>
 
              <ol class="codes">
