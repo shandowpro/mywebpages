@@ -13,6 +13,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
+// importing the pwa plugin [serviceWorkerRegistration]  :
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+
 import {
   createBrowserRouter,
   RouterProvider  , 
@@ -37,6 +40,10 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+// Calling the imported function of the [serviceWorkerRegistration] with extracted fuction of  (register) instead of the (unregister)   :
+serviceWorkerRegistration.register();
+
 // ---------------------------------
 
 // import Home from "./pages/home";
