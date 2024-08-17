@@ -2,8 +2,8 @@
 
 import React   from "react";
 
-// import Lesson56 from "../src/components/Lesson56";
-
+ 
+// importing the  lessons  components 
 import Lesson7 from "./Lesson7";
 import Lesson56 from "./Lesson56";
 
@@ -37,17 +37,4 @@ const Content = () => {
 }
 
 export default Content   ;
-
-// {items.map((item) => (
-  //     <li className="item" id={item.id}>
-  //       <input checked={item.checked} type="checkbox" />
-  
-  //       <label> {item.item} </label>
-  //     </li>
-  //   ))}
-  
-  // {
-  //   items.map((item) => (
-  //     <li className='item'  >   
-  //       <input  type='checkbox'  key={item.id}   /> 
-  //     </li>
+ 
