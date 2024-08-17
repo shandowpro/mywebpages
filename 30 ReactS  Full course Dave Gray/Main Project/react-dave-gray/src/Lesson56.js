@@ -1,8 +1,9 @@
-// Lesson5 & Lesson6  Components :
-
+/* Lesson5 & Lesson6  Components:
+  fuctions and events functions  
+ */
 import React, { useState } from "react";
 
-const Lesson56 = () => {
+const Lesson56 = ( {title , subTitle} ) => {
   // A] Define some hooks :
   // 1- Define a [useState] Hook to change a Texual value :
   const [name, setName] = useState("Shadi");
@@ -60,7 +61,11 @@ const Lesson56 = () => {
 
   return (
     <div  style={{ border:'3px white solid' , width: '100%' , margin:'10px' }} >
-      <header  style={{fontSize:'50px' , width:'80%' , margin: '5px auto' ,  border:'2px blue solid'   }} > This is the lesson5 & lesson6   </header>
+      <header  style={{fontSize:'50px' , width:'80%' , margin: '5px auto' ,  border:'2px blue solid'   }} > 
+        {title}
+        <p> {subTitle} </p>  
+      </header>
+
       <h1> Following is Invoke function : </h1>
       <p style={{ color: "green", backgroundColor: "white" }}>
         {" "}
@@ -118,5 +123,16 @@ const Lesson56 = () => {
     </div>
   );
 };
+
+// Sending default values of the props :         
+Lesson56.defaultProps = {
+  title : "Default value of title prop" , 
+  subTitle : "Default value of subTitle prop"  
+
+}
+
+
+
+
 
 export default Lesson56 ;

@@ -19,9 +19,9 @@ const Footer = () => {
         Footer component 
       
         <p style={ myStyle } > 
-            Copyright by  &copy; {myDate.getFullYear()}     
+            Copyright by  &copy; {myDate.getFullYear()}         
         </p>
-    
+
     </footer>
   )
 }
