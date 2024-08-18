@@ -1,11 +1,13 @@
 /* Content component , including  :
   Importing components :  
     1- {Lesson56} =>  including default props [ Not assigned props]    
-    2- {Lesson7} => 
+    2- {Lesson78} => 
       -- including default props [ Not assigned props]      
       -- including defined array of objects prop [ items  ]      
       -- including defined  (2) functions props [ handleClick + handleDelete]      
-    3- {Lesson9} =>  including default props [ overriding Assigning one prop & and Not assigned the other  ]    
+    3- {Lesson9} =>  including :
+      --default props [ overriding Assigning one prop & and Not assigned the other ] 
+      -- prop to be assinged by defined variable extention       
 */
 
 import React  , {useState} from "react";
@@ -85,7 +87,6 @@ const Content = ( ) => {
         /> 
         
         <Lesson9  title='Lesson9'  subTitle=' Props and Props drilling' count={items.length}  /> 
-        
          
     </main>
   )

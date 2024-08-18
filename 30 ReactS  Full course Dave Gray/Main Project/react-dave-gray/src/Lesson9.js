@@ -1,4 +1,9 @@
-// lesson9 component :
+/*  lesson9 component, include :
+  1 - Sent props : 
+    -- props with simple values => [ title , subTitle ]
+    -- props with dynamic values => [ count : extension of defined variable ]
+
+*/
 
 import React from "react";
 
@@ -14,11 +19,10 @@ const Lesson9 = ( {title , subTitle, count}) => {
         }}
       >
         {title}
-        <p>  {subTitle} </p>
-        
+        <p>  {subTitle} </p>        
       </header>
 
-      <p> The items list count is  {count}  </p>  
+      <p> You have {count} list {count === 1 ? 'item' : 'items' }  </p>  
  
     </main>
   );

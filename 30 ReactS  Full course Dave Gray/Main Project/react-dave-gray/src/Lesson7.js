@@ -1,11 +1,11 @@
-//  lesson7  , lesson8    component  :
+
+//  Lesson7, Lesson8 components  :
 
 import React from "react";
+import ItemsList from "./ItemsList"; 
 
-// importing the icons :
-import { FaTrashAlt } from "react-icons/fa";
 
-const Lesson7 = ({ title, subTitle, items, handleClick, handleDelete }) => {
+const Lesson7 = ({ title, subTitle, items, handleClick , handleDelete }) => {
   
   return (
     <main style={{ border: "3px white solid", width: "100%", margin: "10px" }}>
@@ -22,33 +22,11 @@ const Lesson7 = ({ title, subTitle, items, handleClick, handleDelete }) => {
       </header>
 
       {items.length ? (
-        <ul style={{ listStyle: "none" }}>
-          {items.map((item) => (
-            <li className="item" id={item.id}>
-              <input
-                checked={item.checked}
-                type="checkbox"
-                onChange={() => handleClick(item.id)}
-              />
-              <label
-                style={
-                  item.checked
-                    ? { color: "blue", textDecoration: "line-through" }
-                    : null
-                }
-                onDoubleClick={() => handleClick(item.id)}
-              >
-                {item.item}
-              </label>
-
-              <FaTrashAlt
-                role="button"
-                tabIndex="0"
-                onClick={() => handleDelete(item.id)}
-              />
-            </li>
-          ))}
-        </ul>
+          <ItemsList
+            items={items}
+            handleClick={handleClick}
+            handleDelete={handleDelete}
+          />
       ) : (
         <p style={{ color: "red" }}> Sorry the list is empty </p>
       )}
