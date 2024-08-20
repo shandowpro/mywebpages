@@ -1,12 +1,24 @@
-
-//  Lesson7, Lesson8 components  :
+//  Lesson7, Lesson8 , Lesson 9 components  :
 
 import React from "react";
-import ItemsList from "./ItemsList"; 
+// import { useState } from "react";
+import ItemsList from "./ItemsList";
+import AddItem from "./AddItem";
+import SearchItem from "./SearchItem";
 
-
-const Lesson7 = ({ title, subTitle, items, handleClick , handleDelete }) => {
-  
+const Lesson7 = ({
+  title,
+  subTitle,
+  items,
+  setItems,
+  handleClick,
+  handleDelete,
+  newItem,
+  setNewItem,
+  handleSubmit,
+  search,
+  setSearch,
+}) => {
   return (
     <main style={{ border: "3px white solid", width: "100%", margin: "10px" }}>
       <header
@@ -21,12 +33,24 @@ const Lesson7 = ({ title, subTitle, items, handleClick , handleDelete }) => {
         <p> {subTitle} </p>
       </header>
 
+      <AddItem
+        newItem={newItem}
+        setNewItem={setNewItem}
+        handleSubmit={handleSubmit}
+      />
+
+      <SearchItem search={search} setSearch={setSearch} />
+
       {items.length ? (
-          <ItemsList
-            items={items}
-            handleClick={handleClick}
-            handleDelete={handleDelete}
-          />
+        <ItemsList
+          items={items}
+          setItems={setItems}
+          handleClick={handleClick}
+          handleDelete={handleDelete}
+          handleSubmit={handleSubmit}
+          newItem={newItem}
+          setNewItem={setNewItem}
+        />
       ) : (
         <p style={{ color: "red" }}> Sorry the list is empty </p>
       )}
@@ -36,8 +60,8 @@ const Lesson7 = ({ title, subTitle, items, handleClick , handleDelete }) => {
 
 // Sending default values of props :
 Lesson7.defaultProps = {
-  title: " Lesson7 title default  value ",
-  subTitle: " Lesson7 subTitle default  value ",
+  title: " Lesson7 title",
+  subTitle: " Lesson7 subTitle",
 };
 
 export default Lesson7;

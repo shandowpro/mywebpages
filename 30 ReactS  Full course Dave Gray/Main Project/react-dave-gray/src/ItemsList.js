@@ -4,17 +4,18 @@
   */
 
 import React from "react";
-import LineItem from "./LineItem"; 
+import LineItem from "./LineItem";
+// import AddItem from "./AddItem";
 
-const ItemsList = ({items, handleClick, handleDelete}) => {
+const ItemsList = ({ items, handleClick, handleDelete }) => {
   return (
     <ul style={{ listStyle: "none" }}>
       {items.map((item) => (
-        <LineItem 
-          key={item.id}   
-          item={item}   
-          handleClick={handleClick}   
-          handleDelete={handleDelete}   
+        <LineItem
+          key={item.id}
+          item={item}
+          handleClick={handleClick}
+          handleDelete={handleDelete}
         />
       ))}
     </ul>
