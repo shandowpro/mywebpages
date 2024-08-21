@@ -12,11 +12,11 @@
     <!-- First Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta content="Learning ReactJS Course" description="This is Lesson 9 React JS Forms  Controlled Inputs  Learn ReactJS ">
+    <meta content="Learning ReactJS Course" description="This is Lesson 10 React JS Code Challenge  React Beginner Project ">
 
-    <title> 9 React JS Forms  Controlled Inputs  Learn ReactJS </title>
+    <title> 10 React JS Code Challenge  React Beginner Project </title>
 
-    <link rel="stylesheet" href="9 React JS Forms  Controlled Inputs  Learn ReactJS.css" media="all">
+    <link rel="stylesheet" href="10 React JS Code Challenge  React Beginner Project.css" media="all">
 
     <link rel="stylesheet" href="css/bootstrap.min.css" media="all">
 
@@ -239,7 +239,7 @@
 
     <!-------------------------------------------------------------------------------------------------------->
     <header id="Main" class="Main wow fadeInDown" data-wow-duration="1s">
-        9 React JS Forms  Controlled Inputs  Learn ReactJS  [Dave Gray]   
+        10 React JS Code Challenge  React Beginner Project  [Dave Gray]   
     </header>
 
     <!-------------------------------------------------------------------------------------------------------->
@@ -277,7 +277,7 @@
                             Hot Links <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#9 React JS Forms  Controlled Inputs  Learn ReactJSSection" target="_self" class="9 React JS Forms  Controlled Inputs  Learn ReactJSLink"> Lesson 9 React JS Forms  Controlled Inputs  Learn ReactJS </a></li>
+                            <li><a href="#10 React JS Code Challenge  React Beginner ProjectSection" target="_self" class="10 React JS Code Challenge  React Beginner ProjectLink"> Lesson 10 React JS Code Challenge  React Beginner Project </a></li>
 
                             <li role="separator" class="divider"></li>
 
@@ -327,7 +327,7 @@
     <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
     <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
         <span> Welcome to  ReactJS  full  Course  [Dave Gray]   | </span> <br>
-        9 React JS Forms  Controlled Inputs  Learn ReactJS
+        10 React JS Code Challenge  React Beginner Project
     </main>
     <!-- ---------------------------------------------------------------------------------------------------- -->
     <!-- Options Tool box -->
@@ -401,8 +401,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">
-            <h2 class="h1" class="hidden-xs"> About Section =>  ReactJS Forms <span><strong> controlled Inputs </strong> </span> </h2>
-          <h3 class="visible-xs"> About Section => This lesson about <strong>  ReactJ Forms Controlled Inputs  </strong> </span> </h3>
+            <h2 class="h1" class="hidden-xs"> About Section =>  ReactJS  Course beginner challenge task  <span><strong>  Color changer </strong> </span> </h2>
+          <h3 class="visible-xs"> About Section => This lesson about <stron>   ReactJS  Course beginner challenge task [Color changer]    </strong> </span> </h3>
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing] Files m then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->
         </div>
     </section>
@@ -1282,7 +1282,7 @@
     <div class="Post" id=post>
         <Section id="MainC" class="MainC">
             <header>
-                ReactJS [9 React JS Forms  Controlled Inputs  Learn ReactJS] Main Topics : <br>
+                ReactJS [10 React JS Code Challenge  React Beginner Project] Main Topics : <br>
             </header>
 
             <article>
@@ -1291,12 +1291,10 @@
                 <h2> Main Subjects : </h2>
 
                 <ol type="A">
-                    <li> Main points of this lesson , React [  Form & controlled inputs ] : <br>
+                    <li> Main points of this lesson , React [Form & controlled inputs + using advanced hooks and Controling  functions  ] : <br>
                         <ol>
-                          <li> A] Concept   </li> 
+                          <li> A] Concept about the challenge task [ color chanllanger ]   </li> 
                           <li> B] Syntax    </li> 
-                          <li> C] Examples     </li>  
-                          <li> D] Notes    </li> 
                         </ol>
                      </li> <br> <br>
                 </ol>
@@ -1307,18 +1305,54 @@
         <!------------------------------------------------------------------------------>
         <section class="JSDOMCon" id="JSDOMCon">
             <header>
-                <h3> 9 React JS Forms  Controlled Inputs  Learn ReactJS concept : </h3>
+                <h3> 10 React JS Code Challenge  React Beginner Project concept : </h3>
             </header>
  
-            <h1>  A] Concept of Props & Props driling  in React , as following : </h1> <br>
-              <p> [Props] => are data keynames sent through component [as parameters] to be assinged with it's values when being called m used inside the parnet component as compoenet attributes       </p> 
-              <p> [Props] => are about sending the paramters from the component into the [parent component] 'user component' </p> 
+            <h1>  A] Concept about the challenge task [ color chanllanger ]  applicaton  ,  as following : </h1> <br>
+              <p> The main application concept   => translate the color inserted value [normal value & Hex ] insides the input field and apply it aws the backgrund color of the another element <br>
+              <p> The application file => can be made in a seperated whole react app || in the same app within a comonent file  <br>
+              <p> Main elements of the application :  <br>
+                <ul>
+                    <li> {ColorChanger.js} -> <br>   
+                      <p> The parent component for the both of  application files  { [Input.js] & [Square.js] }     </p>
+                      <p> Functions and variables included  : <br>
+                        <ol> 
+                           <li> [ colorValue, setColorValue ] => State Variable of the current color[by text value] of the displayer Section  </li>
+                           <li> [ hexValue, setHexValue ] =>  State Variable  of the current color[by Hex value] of the displayer section </li>
+                        </ol>  
+                      </p>
+                    </li> <br>
+                    
+                    <li>  {Square.js} => to be exporterd into the parent component {ColorChanger.js} : <br>
+                      <p> include a section color displayer [text + real background color  ]  </p>
+                      <p> [props] transported with function to be called inside the parent component => {colorValue , hexValue ,   isDarkText } inside the both    </p> 
+                    </li> <br>    
+                    
+                    
+                    <li> {Input.js} =>  include  a Form with [Input] : for inserting the color value  + [button]  :  toggle the font color desi;ayer section     :  <br>
+                      <p> include the library  {colorNames} to be used in converting the color into a hex value -> will be used inside the  imput's  {onChange()} attributer <br>
+                      <p>  [Input] element  include the following attributes : <br>
+                        <ol> 
+                            <li> {onChange()} => with anonymous function with both states stetter funcions  (setColorValue) & (setHexValue)   </li>
+                            <li>  autoFocus  </li>
+                            <li>  required  </li>
+                            <li>  value => to set the input value be defualt with  the state variable of the colorValue    </li>                            
+                          </ol>
+                      </p>
+
+                      <p>  [button] element => inlcude on one event function {onClick()}  => of anonymous function of defined state setter function of {setIsDarkText()} as a prop to used insdie the parent component - assigned by oppesitte of the value of state value {isDarkText} -  </p> 
+
+                      <p> [props] transported with function to be called inside the parent component  {ColorChanger.js} => {colorValue , setHexValue , setColorValue , isDarkText , setIsDarkText}  </p> 
+                  </li> 
+                </ul>           
+              </p> 
+                  
               <!-- ----------------------------------------------- -->
-            
-            <h1> B]  Syntax m  Methods Props & Props driling in React :  </h1>  <br>
-              <p> [Props] => can be sent through components  by (3) main methods :   <br>  
+            <!-- im here >>>>>>>>>>>>>>>>>>>>>>>>>> -->
+            <h1> B] Syntax  of [color Changer] application   :  </h1>  <br>
+              <p>  {ColorChanger.js } =>   [ main parnet component ] =>  :   <br>  
                 <ul> 
-                  <li> First method  [using (props)  main class of the parameters with in the child functional component] , as next syntax : 
+                  <li>  : 
                     <code>
                       //  1- The main/child component [sender component] : <br> 
                       <span  class="one"></span>   const  mainCompFunc = ( props ) => { <br>
@@ -1457,37 +1491,7 @@
                
             <hr> <br>  <hr> <br>            
              <!--  --------------------------------------------------------  -->             
-
-             <h1>  C] Examples about Sending Props in React , as following : </h1> <br>   
-                <p>  Sending multiple props through several levels of components , as following   :   <br>
-                    <ol> 
-                      <li> {LineItem.js}  => the lowest level child  component : <br>
-                        <ul> 
-                          <li> Represent the mappped single element [  &gt; li &lt; ]   </li>
-                          <li> Sent props => [item , handleClick , handleDelete ] =>  to be assigned inside the parent component  [ItemsList]  </li>
-                          <li> This component Will be called inside the [ &gt; ul &lt; ] to be mapped </li>
-                        </ul>  
-                      </li>    <br> 
-                      
-                      <li> {ItemsList.js} => the parent user component of the {LineItem} :  <br>  
-                        <ul> 
-                          <li> Represent the list element [  &gt; ul &lt; ] that will include the imported component {LineItem}   </li>
-                          <li> Sent props => [items , handleClick , handleDelete ] => to be assinged inside the parnet component [Leeson7]  </li>
-                          <li> This component Will be called directly  inside the [ Lesson7 ] component  </li>
-                        </ul>  
-                      </li>
-                      
-                      <li> {Lesson7.js} => the parent user component of the  {ItemsList} : <br>
-                         <ul> 
-                           <li> This component  will include main defined functions and variables that will be used inside the main [ul] and mapped  [li] </li>
-                        </ul>  
-                      </li>
-                      
-                      <li> {Content.js} => the parent user component of the  {Lesson7} => to be calling directly the imported child componnet {Lesson7}     </li>
-                    </ol>                  
-                </p> 
-                  
-              <hr> <br>  <hr> <br>            
+             
             <!--  --------------------------------------------------------  -->
              <!--  --------------------------------------------------------  -->
             <h1> D]  VIP Notes   :   </h1>            
@@ -1631,7 +1635,7 @@
 
         <section class="JSDOMImp" id="JSDOMImp">
             <header>
-                <h3> [9 React JS Forms  Controlled Inputs  Learn ReactJS] Importance & Benefits : </h3>
+                <h3> [10 React JS Code Challenge  React Beginner Project] Importance & Benefits : </h3>
             </header>
             <ul>
 
@@ -1642,7 +1646,7 @@
 
         <section class="JSDOMSyntx" id="JSDOMSyntx">
             <header>
-                <h3> [9 React JS Forms  Controlled Inputs  Learn ReactJS] Syntax & Methods: </h3>
+                <h3> [10 React JS Code Challenge  React Beginner Project] Syntax & Methods: </h3>
             </header>
 
             <p> =&gt; Scenario Procedures : </p>
@@ -1653,7 +1657,7 @@
         <!------------------------------------------------------------------------------------------------------>
         <section class="JSDOMPract container" id="JSDOMPract">
             <header>
-                <h3> CMD [9 React JS Forms  Controlled Inputs  Learn ReactJS] => {this lesson can be accessed through the github repo [webpages] } </h3>
+                <h3> CMD [10 React JS Code Challenge  React Beginner Project] => {this lesson can be accessed through the github repo [webpages] } </h3>
             </header>
 
 
@@ -1717,7 +1721,7 @@
     </section>
 
     <script>
-        alert("Welcome to 9 React JS Forms  Controlled Inputs  Learn ReactJS");
+        alert("Welcome to 10 React JS Code Challenge  React Beginner Project");
     </script>
 
     <!-- Resources files -->

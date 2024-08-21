@@ -18,6 +18,7 @@ import React, { useState } from "react";
 import Lesson7 from "./Lesson7";
 import Lesson56 from "./Lesson56";
 import Lesson9 from "./Lesson9";
+import ColorChangerApp from "./ColorChangerApp";
 
 const Content = () => {
   // const count = items.length ;
@@ -123,6 +124,10 @@ const Content = () => {
         subTitle=" Props and Props drilling"
         count={items.length}
       />
+
+
+      <ColorChangerApp />
+      
     </main>
   );
 };
