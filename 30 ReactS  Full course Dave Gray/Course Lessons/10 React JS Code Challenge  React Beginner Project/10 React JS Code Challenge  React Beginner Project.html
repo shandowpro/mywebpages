@@ -1348,147 +1348,148 @@
               </p> 
                   
               <!-- ----------------------------------------------- -->
-            <!-- im here >>>>>>>>>>>>>>>>>>>>>>>>>> -->
+             
             <h1> B] Syntax  of [color Changer] application   :  </h1>  <br>
-              <p>  {ColorChanger.js } =>   [ main parnet component ] =>  :   <br>  
+              <p> Following the syntax of the  applcition syntax :   <br>  
                 <ul> 
-                  <li>  : 
+                  <li>  I] {ColorChanger.js } =>   [ main parent component ] =>  :  <br>
                     <code>
-                      //  1- The main/child component [sender component] : <br> 
-                      <span  class="one"></span>   const  mainCompFunc = ( props ) => { <br>
+                      //  a- Importing the children components  : <br> 
+                        <span  class="one"></span>  import React, { useState } from "react";  <br>
+                        <span  class="one"></span> import Input from "./Input";     <br>
+                        <span  class="one"></span> import Square from "./Square";  <br>   <br> 
+
+
+                      // b- main  functional component : <br> 
+                        <span  class="one"></span>   const  ColorChangerApp = () => { <br>
+                          
+                          <span  class="one"></span> // c- Define Public functions and variables to be using inside this component : <br>
+                        
+                          <span  class="two"></span> // 1- State Variable of the current color[by text value] of the displayer Section  [to be assinged by value (of input target value )  inside the input component -  using its setter function of onClick  event of the input element -  ]  :  <br>  
+                          <span  class="two"></span> const [colorValue, setColorValue] = useState("Empty Value");  <br>
+                        
+                          <span  class="two"></span> // 2- State Variable  of the current color[by Hex value] [to be assinged by value (of input target value (with converting into a hex value  ) )  inside the input component -  using its setter function of onClick  event of the input element -  ]     : <br> 
+                          <span  class="two"></span> const [hexValue, setHexValue] = useState("Empty Value"); <br>
+                          
+
+                          <span  class="two"></span> // 3- State Variable of the text color inside the section [as boolean] -> [to be used inside the  {Sqaure} as a conditional returned value  of the color style property  - with  white and black color - ] :  <br>  
+                          <span  class="two"></span> const [isDarkText, setIsDarkText] = useState(true);    <br>
+                          
+                        
+                        <span  class="two"></span> c- Define the main functional  {ColorChnager.js}  :     <br>  
                         <span  class="two"></span>   return (  <br>  
 
-                            <span  class="three"></span>   &lt; main  &gt;   <br>
-                              <span  class="four"></span>   &lt;  element  <br>  
-                                <span  class="five"></span>   attribute =  { props.propName2 }   <br>                        
-                                 <span  class="five"></span>   eventFunction  =  { props.propName3 }   <br>                        
-                              <span  class="four"></span>  &gt;    <br>
-                                <span  class="five"></span>    { props.propName1 }   <br>                        
-                              <span  class="four"></span>   &lt;/element   &gt;   <br> <br>
-                            <span  class="three"></span>   &lt; /main  &gt;   <br> 
-                          <span  class="two"></span> )   <br>
+                          <span  class="three"></span>   &lt; div  className="ColorDisplayer"   &gt;   <br>
+                            <span  class="four"></span>   // Calling the First component  {Square} :     <br>  
+                            <span  class="four"></span>   &lt;  Square  <br>  
+                              <span  class="five"></span>   // assigning the recieved props wihtin this component {Square} : <br>  
+                              <span  class="five"></span> colorValue = {colorValue}  <br>
+                              <span  class="five"></span> hexValue = {hexValue} <br>
+                              <span  class="five"></span> isDarkText = {isDarkText}   <br> 
+                            <span  class="four"></span>    / &gt;   <br> <br>
+
+
+                            <span  class="four"></span>   // Calling the Second component  {Input} :     <br>  
+                            <span  class="four"></span>   &lt; Input  <br>  
+                              <span  class="five"></span>   // assigning the recieved props wihtin this component {Input} : <br>  
+                              <span  class="five"></span>  colorValue={colorValue}   <br>
+                              <span  class="five"></span>  setColorValue={setColorValue}   <br>
+                              <span  class="five"></span>  hexValue={hexValue}  <br>
+                              <span  class="five"></span>  setHexValue={setHexValue}    <br>
+                              <span  class="five"></span>  isDarkText={isDarkText}  <br>
+                              <span  class="five"></span>  setIsDarkText={setIsDarkText}   <br> 
+                            <span  class="four"></span>    / &gt;   <br> <br>
+                          <span  class="three"></span>   &lt; /div  &gt;   <br> 
+                        <span  class="two"></span> )   <br>
                       <span  class="one"></span> }      <br>    <br> 
-                      <span  class="one"></span>  export default mainCompFunc ;      <br>  <hr>  <br> 
+                      
+                      <span  class="one"></span>   export default ColorChangerApp;  <br>  <hr>  <br> 
+                    </li>  <br> <hr> <br> <br>    
+                    <!-- -------------------------------------------------------- -->
 
-                      
-                      //  2- The user  component [receiver  component] : <br>
-                      <span  class="one"></span>  import mainCompFunc from './mainCompFunc'  ;     <br><br>
-                      
-                      <span  class="one"></span>   const userCompFunc = () => { <br>    
-                          <span  class="two"></span> // Define a variable to be assinged as one of the imported component's  props :  <br>
-                          <span  class="two"></span>    const varName  = 'value ' ;  <br>  <br>
+
+                  <li>  II] {Square.js} => [The First child  component ] =>  :  <br>
+                    <code>
+                      //  a- Importing the children components  : <br> 
+                        <span  class="one"></span>  import React from "react";  <br> <br>  
+ 
+
+                      // b- Main functional component  {Square} : <br> 
+                        <span  class="one"></span>    const Square = ({ colorValue , hexValue , isDarkText  }) => {  <br>
                           
-                          <span  class="two"></span> // Define a fuction  to be assinged as one of the imported component's  props :  <br>
-                          <span  class="two"></span>    const funcName  = () => {  // codes}  <br> <br>
+                          <span  class="two"></span>   return (  <br>  
 
-                          <span  class="two"></span>    return (  <br>
-                            <span  class="three"></span>   &lt; main  &gt;  <br>
+                            <span  class="three"></span>   &lt; section  <br>
+                              <span  class="four"></span> className= 'square'   <br>  
+                              <span  class="four"></span> style={ {  <br>
+                                <span class="five"></span> backgroundColor: colorValue || hexValue  , <br>  
+                                <span  class="five"></span> color:  isDarkText ? "#000" :  "#fff"   <br>  
+                              <span  class="four"></span> } }  <br>  
+                            <span  class="three"></span>   &gt;   <br>   <br>
                             
-                              <span  class="four"></span>  // Calling the child component with assinging it's sent  props : <br> 
-                              <span  class="four"></span>   &lt;  mainCompFunc <br> 
-                                <span  class="five"></span>  propName1='simple value'    <br>
-                                <span  class="five"></span>  propName2={varName} <br>
-                                <span  class="five"></span>  propName3={funcName} <br> 
-                              <span  class="four"></span>     /&gt;  <br>
+
+                              <span  class="four"></span>  //  Assing the prop of  colorValue if it is existed        <br> 
+                              <span  class="four"></span>   &lt; p &gt;   {colorValue ?  colorValue : 'empty value'}    &lt; /p &gt;   <br> 
+                              
+                              <span  class="four"></span>  //  Assing the prop of  hexValue if it is existed        <br> 
+                              <span  class="four"></span>   &lt; p &gt;   {hexValue ?  hexValue : null    }    &lt; /p &gt;   <br> <br> 
+                            
+                          <span  class="three"></span>   &lt; /section &gt;   <br> 
+                          <span  class="two"></span> )   <br>
+                        <span  class="one"></span> }      <br>    <br> 
+                      
+                      <span  class="one"></span>   export default ColorChangerApp;  <br>  <hr>  <br> 
+                    </li>   <br>   <hr>  <br>   <br> 
+                    <!-- -------------------------------------------------------- -->                
+ 
+                  <li>  III] {Input.js} => [The Second  child  component ] =>  :  <br>
+                    <code>
+                      //  a- Importing the children components  : <br> 
+                        <span  class="one"></span>  import React from "react"; <br>  
+                        <span  class="one"></span>   import colorNames from "colornames"; => [to be used to convert the  color value]  <br> <br>  
+ 
+
+                      // b- Main functional component  { Input } : <br> 
+                        <span  class="one"></span>    const Input  = ({  colorValue, setColorValue, setHexValue , isDarkText , setIsDarkText  }) => {  <br>
+                          
+                          <span  class="two"></span>   return (  <br>  
+
+                            <span  class="three"></span>   &lt; form onSubmit={(e) =>  e.preventDefault()  }    <br>
+                             
+                              <span  class="four"></span>   &lt; label &gt; Add color  &lt; /label &gt;   <br> 
+                              
+                              <span  class="four"></span>   &lt; input     <br>
+                                <span  class="five"></span>  value = {colorValue}  =>   [assign the value prop of the [colorValue]  ]     <br>
                                 
-                            <span  class="three"></span>   &lt; /main  &gt;   <br>
+                                <span  class="five"></span>   // Assign (2) setter functions of both [colorValue ,  hexValue] props - by the value of this input element   -   <br>
+                                <span  class="five"></span>  onChange={ ( e ) => { <br>
+                                  <span  class="six"></span>  setColorValue(e.target.value);   =>  [ here where the  {setColorValue} prop is being set]  <br> 
+                                  <span  class="six"></span>  setHexValue(colorNames(e.target.value)); =>  [ here where the  {setColorValue} prop is being set by this inpout element after converting into a hex typd ]    <br> 
+                                <span  class="five"></span> } }  <br>
+                                <span  class="five"></span> autoFocus  <br> 
+                                <span  class="five"></span> required  <br>
+                                <span  class="five"></span> type="text"  <br>
+                                <span  class="five"></span> placeholder="Add Color name" <br> 
+                              <span  class="four"></span> /&gt;   <br> 
+
+                              
+                              <span  class="four"></span>  // the toggling button by using the onClick event with prop {setIsDarkText} by switching  set the value of the main prop with opposoite value :   <br>
+                              <span  class="four"></span>   &lt; button   <br>
+                                <span  class="five "></span> type='button'  <br>
+                                <span  class="five"></span>  onClick = {() =>  setIsDarkText(!isDarkText) }  <br> 
+                              <span  class="four"></span> &gt;  <br>   
+                                <span  class="five"></span> click to toggle text color  <br>
+                              <span  class="four"></span>   &lt;/ button &gt;  <br>
+
+                          <span  class="three"></span>   &lt; /form  &gt;   <br> 
                           <span  class="two"></span> )   <br>
-
-                        <span  class="one"></span> }      <br>  
-                    </code>   
-                  </li>  <br> <br> <br>
-
-                   
-                  <li> Second method  [using destructured object of (props) inside the  parameters with in the child functional component] , as next syntax : 
-                    <code>
-                      //  1- The  main/child   component [sender component] : <br> 
-                      <span  class="one"></span>   const  mainCompFunc = (  {propName1 , propName2 , propName3 } ) => { <br>
-                        <span  class="two"></span>   return (  <br>  
-
-                            <span  class="three"></span>   &lt; main  &gt;   <br>
-                              <span  class="four"></span>   &lt;  element  <br>  
-                                <span  class="five"></span>   attribute =  { propName2 }   <br>
-                                 <span  class="five"></span>   eventFunction  =  { propName3 }   <br>
-                              <span  class="four"></span>  &gt;    <br>
-                                <span  class="five"></span>    {  propName1 }   <br>                        
-                              <span  class="four"></span>   &lt;/element   &gt;   <br> <br>
-                            <span  class="three"></span>   &lt; /main  &gt;   <br> 
-                          <span  class="two"></span> )   <br>
-                      <span  class="one"></span> }      <br>    <br> 
-                      <span  class="one"></span>  export default mainCompFunc ;      <br>  <hr>  <br> 
-
+                        <span  class="one"></span> }      <br>    <br> 
                       
-                      //  2- The user  component [receiver  component ]  -> { the same as the first methof } : <br>
-                      <span  class="one"></span>  import mainCompFunc from './mainCompFunc'  ;     <br><br>
-                      
-                      <span  class="one"></span>   const userCompFunc = () => { <br>    
-                          <span  class="two"></span> // Define a variable to be assinged as one of the imported component's  props :  <br>
-                          <span  class="two"></span>    const varName  = 'value ' ;  <br>  <br>
-                          
-                          <span  class="two"></span> // Define a fuction  to be assinged as one of the imported component's  props :  <br>
-                          <span  class="two"></span>    const funcName  = () => {  // codes}  <br> <br>
-
-                          <span  class="two"></span>    return (  <br>
-                            <span  class="three"></span>   &lt; main  &gt;  <br>
-                            
-                              <span  class="four"></span>  // Calling the child component with assinging it's sent  props : <br> 
-                              <span  class="four"></span>   &lt;  mainCompFunc <br> 
-                                <span  class="five"></span>  propName1='simple value'    <br>
-                                <span  class="five"></span>  propName2={varName} <br>
-                                <span  class="five"></span>  propName3={funcName} <br> 
-                              <span  class="four"></span>     /&gt;  <br>
-                            <span  class="three"></span>   &lt; /main  &gt;   <br>
-                          <span  class="two"></span> )   <br>  
-                        <span  class="one"></span> }      <br>  
-                    </code>   
-                  </li>  <br>  <hr> <br>   
-       
-                  <li>  Third method [sending a default values of the props - with & without overriding   - ]  <br>
-                    <code>
-                      //  1- The main/child  component [sender component] : <br> 
-                      <span  class="one"></span>   const  mainCompFunc = (  {propName1 , propName2 , propName3 } ) => { <br>
-                        <span  class="two"></span>   return (  <br>  
-
-                            <span  class="three"></span>   &lt; main  &gt;   <br>
-                              <span  class="four"></span>   &lt;  element  <br>  
-                                <span  class="five"></span>   attribute =  { propName2 }   <br>
-                                 <span  class="five"></span>   eventFunction  =  { propName3 }   <br>
-                              <span  class="four"></span>  &gt;    <br>
-                                <span  class="five"></span>    {  propName1 }   <br>                        
-                              <span  class="four"></span>   &lt;/element   &gt;   <br> <br>
-                            <span  class="three"></span>   &lt; /main  &gt;   <br> 
-                          <span  class="two"></span> )   <br>
-                      <span  class="one"></span> }      <br>    <br> 
-                    
-                      // Assigning default values  the props of this component  : <br>
-                      <span  class="one"></span> mainCompFunc.dafaultProps = {    <br>
-                        <span  class="two "></span>  propName1 : 'value1' ,     <br>
-                        <span  class="two "></span>  propName2 : 'value2' ,     <br>
-                        <span  class="two "></span>  propName3 : 'value3' ,     <br>
-                      <span  class="one"></span> }             <br>  <br>
-                      <span  class="one"></span>  export default mainCompFunc ;      <br>  <hr>  <br> 
-
-
-                      //  2- The user  component [receiver  component ]  -> { with overriding : ( propName2 , propName3 ) , and use the default value of  (propName1) props   } : <br>
-                      <span  class="one"></span>  import mainCompFunc from './mainCompFunc'  ;     <br><br>
-                      
-                      <span  class="one"></span>   const userCompFunc = () => { <br>    
-                           
-                          <span  class="two"></span>    return (  <br>
-                            <span  class="three"></span>   &lt; main  &gt;  <br>
-                            
-                              <span  class="four"></span>  // Calling the child component with assinging it's sent  props : <br> 
-                              <span  class="four"></span>   &lt;  mainCompFunc <br>                                  
-                                <span  class="five"></span>  propName2={'new value' } <br>
-                                <span  class="five"></span>  propName3={'new value  '} <br> 
-                              <span  class="four"></span>     /&gt;  <br>
-                            <span  class="three"></span>   &lt; /main  &gt;   <br>
-                          <span  class="two"></span> )   <br>  
-                        <span  class="one"></span> }      <br>  
+                      <span  class="one"></span>   export default Input ;  <br>  <hr>  <br> 
+                      <!-- -------------------------------------------------------- -->
                   </li>  
                 </ul>
               </p> 
-               
             <hr> <br>  <hr> <br>            
              <!--  --------------------------------------------------------  -->             
              
@@ -1496,9 +1497,7 @@
              <!--  --------------------------------------------------------  -->
             <h1> D]  VIP Notes   :   </h1>            
                 <ol>    
-                    <li> The sent props can be asssiged by [simple value , defined variable , defined function ]  wheich are inside  it's  parent component </li>
-                    <li> The sent props can be  send  several  times through  moving between component  </li>
-                    <li> The Default props values can be used as it is wihtin the  is  parents  component OR being overrided   </li>
+                    <li> The  main concept of using props inside this application in assigned the values of color values is to assign its values inside te children components  and send these props within functional  components to be defined in the parent component as state variables  </li>
                 </ol> 
  
             <!--  --------------------------------------------------------  -->

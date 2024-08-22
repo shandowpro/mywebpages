@@ -1,5 +1,5 @@
 
-/* [Square] First element of  the Color Changer app  , inclufmh : 
+/* [Square] First element of  the Color Changer app  , including  : 
    -- assigning the value of both [colorValue] prop  , [hexValue] prop inside the backgroundColor style value of section  displayer  
    -- assigning the value of both [colorValue] prop , [hexValue] prop as text inside the  inner both paragraph values inside  section  displayer  
    -- assigning the value of  defined [ isDarkText] state prop boolean value  inside the color property    
