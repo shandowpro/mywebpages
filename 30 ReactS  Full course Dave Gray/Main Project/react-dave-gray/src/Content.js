@@ -7,41 +7,52 @@
       -- including defined  (2) functions props [ handleClick + handleDelete]      
 
 
-    3- {Lesson9} =>  including :
+    3- {Lesson9}  including =>   :
       --default props [ overriding Assigning one prop & and Not assigned the other ] 
       -- prop to be assinged by defined variable extention       
+
+    4-  {ColorChangerApp} including   => 
+      -- inner children components [Square , Input ]
+
+
 */
 
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 
-// importing the  lessons components :
+// Importing the  lessons components :
 import Lesson7 from "./Lesson7";
 import Lesson56 from "./Lesson56";
 import Lesson9 from "./Lesson9";
 import ColorChangerApp from "./ColorChangerApp";
 
 const Content = () => {
-  // const count = items.length ;
-
-  // a- Define state of the main list items to be used as main [datasource]  as a dynamic data from the localStorage (instead of using static array ) :
+   
+  // a- Define state of the main list items to be used as main [datasource] OR an empty array {when teh localstorage array is being deleted by the user or for the firt visitor   }  as a dynamic data from the localStorage (instead of using static array ) :
   const [items, setItems] = useState(
-    JSON.parse(localStorage.getItem("shoppinglist"))
+    JSON.parse(localStorage.getItem("shoppinglist")) || []
   );
 
-  // define a state variable for  search fuctionality  :
+  // b- Define useEffect function to be used in executing codes for the first only of [(saving for the first time) the defined state [items] after being changed into the  local storage ] according to the dependency  of {items}  ->   : 
+  useEffect(()=> {
+    // Adding the new value of the [items] list into the local storage of browser each time the itmes is being  changed :
+    localStorage.setItem("shoppinglist", JSON.stringify(items));
+  } , [items] )
+//  ---------------------------------------
+
+  // c- Define a state variable for  search fuctionality  :
   const [search, setSearch] = useState("");
   // -------------------------------------------
 
-  // d-  Define a state variable to be used for storing the new item as paramter of  [identical pattern of each function -  which will be used with both of [handleClick] & [handleDelete]     -] :
+  // d-  Define a state variable to be used for storing the new item as paramter inside each functions [  [handleClick] & [handleDelete]   -] :
   const [newItem, setNewItem] = useState("");
   // ------------------------------------------------------------------
 
   // Define a identical pattern of each function to be used inside both   [handleClick , deleteClick]  :
-  const setAndSaveItems = (newItems) => {
+  // const setAndSaveItems = (newItems) => {
     // Setting the value of the paramter inside the dataSource state  itemslist  array using its setter function :
-    setItems(newItems);
-    localStorage.setItem("shoppinglist", JSON.stringify(newItems));
-  };
+    // setItems(newItems);
+    // localStorage.setItem("shoppinglist", JSON.stringify(newItems));
+  // };
 
   // b- [Switching Clicking of item list ] =>  Define Handling click function to handle the clicked input [more dynamically] :
   const handleClick = (id) => {
@@ -50,8 +61,9 @@ const Content = () => {
       item.id === id ? { ...item, checked: !item.checked } : item
     );
 
-    // calling idetcial function by using the (listItems) parameter  :
-    setAndSaveItems(listItems);
+    // Adding the new value of the  [list items] into the defined  state of [items] after being updated (change checked property after checking an input ) : 
+    setItems(listItems);
+     
   };
   // ------------------------------------------------------------
 
@@ -60,8 +72,11 @@ const Content = () => {
     // 1- Creating a new array of item - of non selected items - to be stored as new array of  items :
     const listItems = items.filter((item) => item.id !== id);
 
+    // Adding the new value of the  [list items] into the defined state of [items] after being updated ( remove an input form the list  ) : 
+    setItems(listItems);
+
     // calling idetcial function by using the (listItems) parameter  :
-    setAndSaveItems(listItems);
+    // setAndSaveItems(listItems);
   };
   // ----------------------------------------------------------------
 
@@ -76,8 +91,10 @@ const Content = () => {
     // Define a temprory array of Adding the previous defind new item element [myNewItem] , to the current array (with spreaing  opperator) state of [itemslist] :
     const listItems = [...items, myNewItem];
 
+    setItems(listItems);
+
     //  Calling the identical function for using it's identical procedures by using its  parameter of by [listItems] :
-    setAndSaveItems(listItems);
+    // setAndSaveItems(listItems);
   };
   //    ---------------------------------------
 
