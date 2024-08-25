@@ -401,8 +401,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">
-            <h2 class="h1" class="hidden-xs"> About Section =>  ReactJS   <span><strong> {JSON Server Rest API} & {React Dev Server}   </strong> </span> </h2>
-          <h3 class="visible-xs"> About Section => This lesson about <stron>   ReactJS  {JSON Server Rest API} & {React Dev Server}  </strong> </span> </h3>
+          <h2 class="h1" class="hidden-xs"> About Section =>  ReactJS main steps of  <span><strong>   fetching data from  {JSON Server Rest API}     </strong> </span> </h2>
+          <h3 class="visible-xs"> About Section => This lesson about <stron>  Methods and main steps of Fetching data from diven API wihthin ReactJS  </strong> </span> </h3>
             <!-- <p class="lead"> This lesson is commands to handle Stashing-UnStashing] Files m then Pushing to Remote Repo Account by <span> <strong>  {CMD} </strong> </span> </p> -->
         </div>
     </section>
@@ -1293,15 +1293,11 @@
                 <ol type="A">
                     <li> Main points of this lesson , React [ {JSON Server Rest API} & {React Dev Server}   ] : <br>
                         <ol>
-                          <li> A] Concept of both  : <br>
-                            <ul> 
-                              <li> {JSON Server Rest API} </li>
-                              <li> {React Dev Server} => [next lesson]   </li>
-                            </ul> 
-                          </li> <br>
+                           
+                          <li> A] Fetching data from {JSON Server API} concept   </li>                               
+                         
+                          <li> B] Practical steps and syntax and method of Fetching data from given {JSON Server API}   </li> 
 
-                          <li> B] Main steps and syntax  of setting up the {JSON Server Rest API} wihtin our project </li> 
-                          
                           <li> C] VIP Notes   </li> 
                            
                         </ol>
@@ -1317,64 +1313,107 @@
                 <h3> 13 Fetch Data from API in React JS  Learn ReactJS concept : </h3>
             </header>
  
-            <h1>   A] Concept of {JSON sever Rest API },  as following : </h1> <br>
-              <p> It is a fast building API server Backend endpoints [supported by {npmjs.org}   ] for our project frontend  , by using NPM online server beside the localhost of npm        </p>
-              <p> This online server will be worked wiht the fortend project using npm json server library with the generated sever accorrding to the assigned port number and database json file  </p>     
+            <h1>   A] Concept of  Fetching data from {JSON Server API}  as following : </h1> <br>
+              <p> It is about using fetch method to deal wiht the given API [that been defifend from the exected  JSON Server withtin npx  command     ]     </p>
+              <p> In order to use {fetch()} wiht react application => it recommended to be insde the {useEffect} hook </p>     
+              <p>  Also it is recommended to create state to handle with each of respnoding statues probabilites  , as following  : <br> 
+                <ul> 
+                    <li>  Obtaining/Retreiving data from providied API      </li>
+                    <li>  Error of not recieved any data from the api with the type and syntax  of Error       </li>
+                    <li>  Loading data status => [thi is too fast in the [Rest API] => but we simulate display for the user => {by using SetTimeout()  }   </li>
+                    <li>  Hanlding the display of each status within the script of the  component return  </li>
+                </ul>    
+              </p>     
               <!-- ----------------------------------------------- -->
              
-            <h1> Main steps of setting up the {JSON Server Rest API}  wihtin our project , as following   :  </h1>  <br>
+            <h1> B] Practical steps and syntax and method of Fetching data from given {JSON Server API}  , as following   :  </h1>  <br>
                 <ul> 
-                  <li> 1- Install the {npm json server} library oni our main [node modules] , using the next command   :  <br>
+                  <li> 1-  Define a variable (recommended its name to be in capital letter & it's value by the used to defeind the [json server with in the npx] )   of the [API url] to be used for  dealing with [fetch()] method later   =>     :  <br>
                     <code>
-                      //  Inside the main rootr directory of the project : <br> 
-                        <span  class="one"></span> {  npm i json-server }     <br>
+                      <span  class="one"></span>  const API_URL = "http://localhost:3500/items";  <br> 
                   </li>  <br> <hr> <br> <br>    
                     <!-- -------------------------------------------------------- -->
   
-                  <li> 2-  Create the [data] folder inside the main [project Root]  which will hold the database json file of ['db.json']  , as next syntax  :    <br>
+                  <li> 2-  Modify the defined {[items , setItems] state  initial value by  {empty array[]}   'instead of  assing the stored vairable from the  local storage of the browser ' }  , as next syntax  :    <br>
+                    <span  class="one"></span>  const [items, setItems] = useState([]); <br> <hr> <br> <br>    
+                  <!-- -------------------------------------------------------- -->
+    
+                  <li> 3-  Define a new state for handling api responding errors [by custom display for the user  ] with  initial value by 'null'  , as next syntax  :    <br>
+                    <span  class="one"></span>   const [fetchError, setFetchError] = useState(null); <br> <hr> <br> <br>    
+                  <!-- -------------------------------------------------------- -->
+    
+                  <li> 4-  Define a new state for handling  isloading status with  initial boolean value by 'true' , as next syntax  :    <br>
+                    <span  class="one"></span>    const [isLoading, setIsLoading] = useState(true);  <br> <hr> <br> <br>    
+                  <!-- -------------------------------------------------------- -->
+     
+                  <li> 5-  Modify the defined {useEFfect()} to be executed for only the first time of the page loading +  define a function of fetching api  + call it inside  , as next syntax  :    <br>
                     
-                    <span  class="one"></span> {       <br>
-                      <span  class="two"></span>  "objName" : [ <br>  
-                        <span  class="three"></span> {   <br> 
-                          <span  class="four"></span> "propName" : number,   <br> 
-                          <span  class="four"></span> "propName" : true,   <br> 
-                          <span  class="four"></span> "propName" : false,   <br> 
-                          <span  class="four"></span> "propName" : 'String value '    <br> 
-                        <span  class="three"></span> } , <br>
-
-                        <span  class="three"></span> {   <br> 
-                          <span  class="four"></span> "propName" : number,   <br> 
-                          <span  class="four"></span> "propName" : true,   <br> 
-                          <span  class="four"></span> "propName" : false,   <br> 
-                          <span  class="four"></span> "propName" : 'String value '    <br> 
-                        <span  class="three"></span> } , <br>  
-  
-                        <span  class="three"></span> {   <br> 
-                          <span  class="four"></span> "propName" : number,   <br> 
-                          <span  class="four"></span> "propName" : true,   <br> 
-                          <span  class="four"></span> "propName" : false,   <br> 
-                          <span  class="four"></span> "propName" : 'String value '    <br> 
-                        <span  class="three"></span> }     <br>  
+                    <span  class="one"></span>  useEffect( () => {
                       
-                      <span  class="two"></span> ]   <br> 
-                    <span  class="one"></span>   }     <br>
+                      <span  class="two"></span> // 1- Define a fuction of fetching for data from given api => [to be used only for the first load ]   :   <br> 
+                      <span  class="two"></span> const fetchItems = async () => {  <br> 
+                           
+                        <span  class="three"></span> try { <br>
+                          <span  class="four"></span> // 1- Define a variable of awaited fetching from the assinged given [ API_URL] :  <br> 
+                          <span  class="four"></span>  const response = await fetch(API_URL);   <br>  <br>
                   
+                          <span  class="four"></span> // 2- Checking if there are an error of fetching response [error of not getting data] -> before the reciving data inside the [listItems]  => this code will be executed not the [catch error] :
+                          <span  class="four"></span> if (!response.ok) throw Error("Did not receive expected data "); <br> <br> 
+                  
+                          <span  class="four"></span> // Define a variable of the responsed data after converting into  a json format :  <br> 
+                          <span  class="four"></span> const listItems = await response.json(); <br> <br>
+                  
+                          <span  class="four"></span> // Setting the obtained json data into the defiend state variable [usgin the setter function ] : <br> 
+                          <span  class="four"></span> setItems(listItems);  <br>    <br> 
+                  
+                          <span  class="four"></span> // Handling the custom error message using the defined error state [setFetchError()] to set 'null' value instead of the Current  obtained :  <br> 
+                          <span  class="four"></span> setFetchError(null);  <br>  <br>
+   
+                        <span  class="three"></span> } catch (err) {
+                          <span  class="four"></span>  //  Printing the error message (using defined state of {fetchError}   setter fuction)  [this error will not be displayed unless there is  NO data response from api and then  there is  an error to catched  : <br>
+                          <span  class="four"></span> setFetchError(err.message);  <br>
+                      <span  class="three"></span> } finally {  <br> 
+                        <span  class="four"></span> setIsLoading(false);   <br>                       
+                      <span  class="three"></span>  } <br>  
+                    <span  class="two"></span>  } <br>   <br>
+                    
+                    
+                    <span  class="two"></span>  // Call the defined previous function of [fetchItems()] directly =>  to be called inside the {useEffect} hook => calling the async [fetchItmes] insde the {setTimer()}  to simulate the slow 'wiht 3s'  loading api and show the loading message :   <br>                       
+                    <span  class="two"></span>  setTimeout(() => { <br>  
+                      <span  class="three"></span>    (async () => await fetchItems())();    <br> 
+                    <span  class="two"></span>  }, 3000); <br> 
+
+                  <span  class="one"></span> } )  <br>
+                       
                   </li>  <br> <hr> <br> <br>    
                     <!-- -------------------------------------------------------- -->
   
-                  <li> 3- Intiate the json Server running command wihtin the main root [using the npx to deal directly wiht the JSON server ]    :  <br>
+                  <li> 6- modify the return() of the main parent component of this conponent  with Conditional Rendering to [dispaoy a,lll status of api responding ]   :  <br>
                     <code>
-                      //  use the executive command wiht  assigning the desired [port number] + desired [watch file path -  of the defined database json file  -]   : <br>
-                      <span  class="one"></span> {  npx i json-server -p 3500  -w data/db.json }     <br>
-                        <span  class="two"></span>   [-p] : port number <br>   
-                        <span  class="two"></span>   [-w] :  database json file  path  <br>    
+                       
+                      <span  class="one"></span>  return (    <br>  
+                        <span  class="two"></span>   &lt; main &gt;     <br>  
+                          <span  class="three"></span>   &lt; h1 &gt; Content Component   &lt; /h1 &gt;  <br>  
+                          
+                          <span  class="three"></span>   &lt; component1 /&gt;   <br>   <br>
+
+                          <span  class="three"></span>  // This is a Direct conditional Rendering  :  <br> 
+                          <span  class="three"></span> // 1- direct condition of defined state {fetchError: if it has a value : which means there is an error } ] <br>
+                          <span  class="three"></span> { fetchError ? ( <br> 
+                            <span  class="four"></span>  &lt; p style = { { color: "red"  } } &gt;  {`Lesson789: Error: ${fetchError}`} &lt; /p &gt;   <br> 
+                          <span  class="three"></span> // if the previous condtion is not true check this condition [of the thee is a  value of definfed state isLoading ] :    <br> 
+                          <span  class="three"></span> ) :  isLoading ? (  <br> 
+                            <span  class="four"></span> &lt; p style = { { color: "green", fontSize: "30px"  } } &gt;  Loading data...  &lt; /p &gt;   <br>
+                          <span  class="three"></span> ) : (   <br> 
+                            <span  class="four "></span>  // if previous condition is not a true -> execute the next of {render the component2} imported conmpont  :  <br>  
+                            <span  class="four "></span>   &lt; component2 /&gt;   <br>  
+                          <span  class="three"></span> )}    <br> 
+                            
+                        <span  class="two"></span>   &lt; /main &gt;     <br>  
+                      <span  class="one"></span>  );   <br>
+                         
                     </li>  <br> <hr> <br> <br>    
-                    <!-- -------------------------------------------------------- -->
-  
-                  <li> 4- Testing running the generated link of API :  <br>
-                    <code>
-                      //  By passing it inside the new Tag of browser  : <br>
-                  </li>  <br> <hr> <br> <br>    
+    
                   <!-- -------------------------------------------------------- -->    
                   <!-- -------------------------------------------------------- -->   
                 </ul>
