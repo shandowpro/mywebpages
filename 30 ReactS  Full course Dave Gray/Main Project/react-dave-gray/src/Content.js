@@ -25,6 +25,8 @@ import Lesson56 from "./Lesson56";
 import Lesson9 from "./Lesson9";
 import ColorChangerApp from "./ColorChangerApp";
 
+import apiRequest from "./apiRequest";
+
 const Content = () => {
   //  Define a varible of the [API url] to deal with it using [fetch()]  :
   const API_URL = "http://localhost:3500/items";
@@ -37,7 +39,7 @@ const Content = () => {
   const [fetchError, setFetchError] = useState(null);
 
   // c- Define a new state variable of isLoading message  :
-  const [isLoading , setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   // d- Define a state variable for  search fuctionality  :
   const [search, setSearch] = useState("");
@@ -47,7 +49,7 @@ const Content = () => {
   const [newItem, setNewItem] = useState("");
   // ------------------------------------------------------------------
 
-  // b- Define useEffect function to be used in executing codes for the first loading only []  ->   :
+  // b- Define useEffect function to be used in executing codes for the first loading only [] + adding the fetching function inside    ->   :
   useEffect(() => {
     // Define a fuction of fetching for data from given api => [to be used only for the first load ]   :
     const fetchItems = async () => {
@@ -64,83 +66,117 @@ const Content = () => {
         // Setting the obtained json data into the defiend state variable [usgin the setter function ]    :
         setItems(listItems);
 
-        // test printing of the obtainwed data from api json server  :
-        // console.log(listItems);
-
         // Handling the custom error message using the defined error state [setFetchError()] to set 'null' value instead of the Current  obtained :
         setFetchError(null);
       } catch (err) {
-        //  Printing the error stack [this error will not be dispalehed due to not reached the defined response of data ] :
+        //  Printing the error message  [this error will not be displayed unless there is  NO data response from api and then  there is  an error to catched  :
         // console.log(err.stack) ;
         setFetchError(err.message);
       } finally {
-        setIsLoading(false) ;
-      } 
+        setIsLoading(false);
+      }
     };
 
     // Call the defined previous function of [fetchItems()] directly =>  to be called inside the {useEffect} hook => calling the async [fetchItmes] insde the {setTimer()}  to simulate the slow  loading api and show the loading message :
-    setTimeout(()=> {
+    setTimeout(() => {
       (async () => await fetchItems())();
-    }, 3000 )
-
+    }, 3000);
   }, []);
-
-  // b- Define useEffect function to be used in executing codes for the first only of [(saving for the first time) the defined state [items] after being changed into the  local storage ] according to the dependency  of {items}  ->   :
-  // useEffect(()=> {
-  //   // Adding the new value of the [items] list into the local storage of browser each time the itmes is being  changed :
-  //   localStorage.setItem("shoppinglist", JSON.stringify(items));
-  // } , [items] )
-
   //  ---------------------------------------
 
-
-  // Define a identical pattern of each function to be used inside both   [handleClick , deleteClick]  :
-  // const setAndSaveItems = (newItems) => {
-  // Setting the value of the paramter inside the dataSource state  itemslist  array using its setter function :
-  // setItems(newItems);
-  // localStorage.setItem("shoppinglist", JSON.stringify(newItems));
-  // };
-
   // b- [Switching Clicking of item list ] =>  Define Handling click function to handle the clicked input [more dynamically] :
-  const handleClick = (id) => {
+  const handleClick =  async (id) => {
+    
     // 1- Define a variable  (of the  mapped items) form the given array after modifying the checked state :
     const listItems = items.map((item) =>
       item.id === id ? { ...item, checked: !item.checked } : item
     );
-
+    
     // Adding the new value of the  [list items] into the defined  state of [items] after being updated (change checked property after checking an input ) :
     setItems(listItems);
+    
+    //  Define the new item inside a new varialbe :
+    const myItem = items.filter((item) => item.id === id);
+    
+    //  Define an object of  options  of hanlding {updating/patching} crud opertation  [changing  one of item property  ] the list item using  :
+    const updateOptions = {
+      method: "PATCH",
+      heaedrs: {
+        "Content-Type": "application/json",
+      },
+      // assign the updating value of a certain item as one of array with a specific property :
+      body: JSON.stringify({ checked : myItem[0].checked }),
+    };
+
+    // Define a variable of updating item property : 
+    const reqUrl =  `${API_URL}/${id}` ;
+
+    // Define a varalbe  of using       :
+    const result = await apiRequest( reqUrl , updateOptions) ;
+
+    // Define a variable of result that using both of {reqUrl} {apiRequest} with defined : 
+     if(result) setFetchError(result);    ;
+
   };
   // ------------------------------------------------------------
 
   // c- [Deletion funtion of the items inside items list ] => Define the function of deleting the item from the list   :
-  const handleDelete = (id) => {
+  const handleDelete =  async  (id) => {
     // 1- Creating a new array of item - of non selected items - to be stored as new array of  items :
     const listItems = items.filter((item) => item.id !== id);
 
     // Adding the new value of the  [list items] into the defined state of [items] after being updated ( remove an input form the list  ) :
     setItems(listItems);
 
-    // calling idetcial function by using the (listItems) parameter  :
-    // setAndSaveItems(listItems);
+  // Define a varilabe of getting the new item to be deleted : 
+    const reqUrl = `${API_URL}/${id}`  ;
+
+  // Define the  object of  deletion CRUD operation  : 
+    const deleteOptions  = {
+      method  : 'DELETE'
+    } 
+
+  // Define a result variable of deleteion operation curd opertaion  :
+    const result =  await apiRequest(reqUrl  , deleteOptions) ;
+
+  // Checking if there is a value of variable of deletion operation curd opertaion  :
+    if(result) setFetchError(result) ;
+
   };
   // ----------------------------------------------------------------
 
   // Define a function of adding the new item id to modified items list object accroding to it :
-  const addItem = (item) => {
+  const addItem = async (item) => {
+    
     // Getting the new item id with increament (or by  (1) if the list is  emtpy ) [according to index , after checking of the existance of the main items] :
-    const id = items.length ? items[items.length - 1].id + 1 : 1;
+    // const id = items.length ? items[items.length - 1].id + 1 : 1;
+    const id  = items.length ? items[items.length - 1].id + 1  : 1;
+    // const id  = (id0); 
+    
+    // const id = items.length ? toString(parseInt(items[items.length - 1].id) + 1) : 1;
 
-    // Define a temporory variable of the new item , and set it's parameters values :
-    const myNewItem = { id, checked: false, item };
+    // Define a variable of the new single  item , to set it's as  parameters value of body's stringify parmater of the object  postOptions ]   :
+    const myNewItem = { id  , checked: false, item };
 
     // Define a temprory array of Adding the previous defind new item element [myNewItem] , to the current array (with spreaing  opperator) state of [itemslist] :
     const listItems = [...items, myNewItem];
 
     setItems(listItems);
 
-    //  Calling the identical function for using it's identical procedures by using its  parameter of by [listItems] :
-    // setAndSaveItems(listItems);
+    // Define a object of main parameters requried for handling [posting/updating] crud operation -> [ Sending data to the api datahase    ] :
+    const postOptions = {
+      method: "POST",
+      heaedrs: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(myNewItem),
+    };
+
+    // Define a varaible result that using both [api url] &  [postOptions] defiend paramters :
+    const result = await apiRequest(API_URL, postOptions);
+
+    // Checking if the result is returned by a data front the asssinged api url , and then assign its value inside the fetchError setter  function -> whcih will display inside the JSX element :
+    if (result) setFetchError(result);
   };
   //    ---------------------------------------
 
@@ -159,33 +195,34 @@ const Content = () => {
     setNewItem("");
   };
   //   -------------------------------------------
-  
+
   return (
     <main className="App-header" style={{ margin: "10px" }}>
-    <h1> Content Component </h1>
+      <h1> Content Component </h1>
+
       <Lesson56 />
-      { 
-        fetchError ? (
-          <p style={{ color:"red"}}> {`Lesson789: Error: ${fetchError}` } </p>
-        ) : ( isLoading ? ( <p style={{ color:"green" , fontSize:'30px' }}  > Loading data...  </p> ) : (
-          <Lesson7
-            title="Listing and keys"
-            subTitle="Listing and keys"
-            items={items.filter((item) =>
-              item.item.toLowerCase().includes(search.toLowerCase())
-            )}
-            newItem={newItem}
-            setItems={setItems}
-            setNewItem={setNewItem}
-            handleClick={handleClick}
-            handleDelete={handleDelete}
-            handleSubmit={handleSubmit}
-            search={search}
-            setSearch={setSearch}
-          />
-          )
-        )   
-      } 
+
+      {fetchError ? (
+        <p style={{ color: "red" }}> {`Lesson789: Error: ${fetchError}`} </p>
+      ) : isLoading ? (
+        <p style={{ color: "green", fontSize: "30px" }}> Loading data... </p>
+      ) : (
+        <Lesson7
+          title="Listing and keys"
+          subTitle="Listing and keys"
+          items={items.filter((item) =>
+            item.item.toLowerCase().includes(search.toLowerCase())
+          )}
+          newItem={newItem}
+          setItems={setItems}
+          setNewItem={setNewItem}
+          handleClick={handleClick}
+          handleDelete={handleDelete}
+          handleSubmit={handleSubmit}
+          search={search}
+          setSearch={setSearch}
+        />
+      )}
 
       <Lesson9
         title="Lesson9"
