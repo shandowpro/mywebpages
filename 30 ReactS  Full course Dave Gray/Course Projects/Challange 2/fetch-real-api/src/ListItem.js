@@ -1,5 +1,5 @@
 /* The Single Item to be used as mapping through the selected category from the api url :
-    this represent the single item data container to json stringfied data recieved from the  prop  [item] that will be assinged within the List parent component
+    this represent the single item data container to json stringified data recieved from the  prop  [item] that will be assinged within the List parent component
     
 */
 
