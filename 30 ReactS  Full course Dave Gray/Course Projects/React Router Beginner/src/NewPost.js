@@ -1,4 +1,10 @@
 
+/*  creating new post coimopnet      :    
+
+
+
+
+*/
 
 import React from 'react'
 
