@@ -1,10 +1,12 @@
 
+// [ orientation map ]  :  {App} <- {Footer}     
 
- 
 import React from 'react'
 
 const Footer = () => {
-    const today = new Date();
+
+  //  Define a exracted current date usnig object date   :
+  const today = new Date();
   
   return (
     <footer className='Footer' >

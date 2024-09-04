@@ -1,4 +1,9 @@
 
+// [orientation map ] :   {App} <- {About}   
+
+// the [About] component -> [no props] :
+
+
 import React from 'react' ;
 
 const About = () => {

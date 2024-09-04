@@ -1,11 +1,12 @@
 
-/* The in-detailed dynamic Single post component , including  : 
-  
+// [orientation map] :   {App} <- {PostPage}   
+
+/* The in-detailed dynamic Single post component , including  :   
   -  [props] :  
     -- {posts} => the single post git from the datasource 
     -- {handleDelete} => the function responsible for deleting the post 
 
-  - [return] : Conditional rendering of the filtered single detailed Item [post] into the main script of the functional component + including [deletion button] for this post 
+  - [return] : Conditional rendering of the filtered single detailed Item [post -> according to defined id of this inner router page ] into the main script of the functional component + including [deletion button] for this post 
                OR displaying custom Error message with link into the main home page -> using the defined [Link] react hook   
 
 */

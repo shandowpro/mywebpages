@@ -1,5 +1,42 @@
 
-//  The main app component to represent the main home page of the app :     
+/*  Main orientation Map  =>    
+    a- [with props]:
+      {App} <- {Home} <- {Feed} <- {Post}      
+      {App} <- {PostPage} 
+      {App} <- {Header} 
+      {App} <- {Nav} 
+      {App} <- {NewPost} 
+      
+    b- [without props]:
+      {App} <- {About}       
+      {App} <- {Missing} 
+      {App} <- {Footer} 
+
+*/
+
+/*  The main [App] component to represent the main home page of the app :     
+  a-  main functions : 
+    1 --   display all current array of items [posts]              
+    2 --   live Searching       
+    3 --   Adding new post => with a sperate inner page route          
+    4 --   display specific detailed post  + delete button =>  in a seprated inner route page                
+
+   b-  main imported components   : 
+    1 -- main Fixed components : 
+        --- {Header} =>  header component   
+        --- {Nav}    => nav component  
+        --- {Footer} => footer component    
+    
+    
+    2 -- main routers components    
+       --- {Home}     -> the main Router page  
+       --- {Nav}      -> the nav router page      
+       --- {About}    -> the aboput router page 
+       --- {NewPost}  -> the new post adding Router page
+       --- {PostPage} -> the detailed post Router page
+       --- {Missing}  ->   the 404 Error  Router page
+      
+*/
 
 // Importing the reqiurd hooks :
 import { useState, useEffect } from 'react';
@@ -80,7 +117,7 @@ function App() {
   const [postBody, setPostBody] = useState('');
 
 
-  // Define a function to handle submit of [NewPost] component  -> of adding new post  : 
+  // Define a function to handle submit of [NewPost] component  -> of creating and adding new post  : 
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -108,7 +145,6 @@ function App() {
   };
 
 
-
   // Define a function  of the handling post deletion operation  :
   const handleDelete = (id) => {
     // Define a list of posts that including  all items except the current filtered post - according to the current item by id  :  
@@ -120,7 +156,6 @@ function App() {
     // use the defined useHistory hook variable to route into a certain route  [home page]  :
     history.push('/');
   }
-
 
   return (
     <div className="App">
@@ -145,6 +180,7 @@ function App() {
           />
         </Route>
 
+        {/*  Define a dynamic Route of inner sub of 'post' route  :  */}
         <Route path="/post/:id"  >
           <PostPage posts={posts} handleDelete={handleDelete} />
         </Route>

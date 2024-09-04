@@ -1,6 +1,16 @@
 
+// [orientation map ] : {App} <- {NewPost} 
+
+
 /*  Creating [New Post] component , including  :    
-  -     
+  - [return] :  Form of inserting post data through a controlled inputs , with using sent props + hanldikng submit function + submit button           
+  - [props] :   
+    -- [setPostTitle] -> setting the state [postTitle] by current  [postTitle input] value witin it's  onChange event function
+    -- [postTitle]    -> setting the {postTitle input} 'value' attribute with this value -after being assinged with onChange function            
+    -- [setPostBody]  -> setting the state [postBody] by current  [postBody input] value witin it's  onChange event 
+    -- [postBody]     -> setting the {postBody input} 'value' attribute with this value -after being assinged with onChange event function            
+    -- [handleSubmit] -> used diredctly as reference of the  oniSubmit() of the form , which wil include prevent default + all other defnitions of variables + functions requried to create and add new post      
+
 */
 
 import React from 'react'
@@ -24,7 +34,7 @@ const NewPost = ({ postTitle, setPostTitle, postBody, setPostBody, handleSubmit 
           required
         />
 
-        <label htmlFor='postBody' >
+    -    <label htmlFor='postBody' >
           Body:
         </label>
 

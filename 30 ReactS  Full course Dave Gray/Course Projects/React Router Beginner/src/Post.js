@@ -1,9 +1,11 @@
 
+//  [orientation map]  :  {App} <- {Home} <- {Feed} <- {Post}      
 
 /* The public Single Post display inner router component , including   : 
-  - [return] => general display of [Each Post]               
-  - 
-  - 
+  - [return] => 
+    --  general display of [Each Post]
+    --  in detailed data properties wihtin [links] routering hook      
+    --   conditional rendering of post body propetry with eci;opse  format   -> according to the current number of letters       
 
 */
  
@@ -28,7 +30,7 @@ const Post = ({ post }) => {
         </p>
       </Link>
 
-      {/*  Rendering the post body after slicing it when its length is graeter than 25 letters  */}
+      {/*  Rendering the post body after slicing it when its length is graeter than 25 letters  [ as ecilipse data in the  main home page ]  */}
       <p className='postBody' >
         {
           (post.body).length <= 20 ?

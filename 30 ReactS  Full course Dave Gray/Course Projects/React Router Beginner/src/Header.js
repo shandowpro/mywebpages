@@ -1,12 +1,9 @@
 
-/* The [Header] fixed component will include : 
-  - [props] => {title} to be assigned inside the [App] main component        
-   
-  - [return] =>
-    
-    
+// [main orientation map ] : {App} <- {Header}
 
-    
+/* The [Header] fixed component will include : 
+  - [props] => {title} to be assigned inside the [App] main component         
+  - [return] => dynamic value of  the title        
 */
 
 

@@ -1,4 +1,6 @@
 
+// [orientation map] :   {App} <- {Home}
+
 /* This is the main home page component , including   :  
   - [props] => 
     -- {posts} : the defined datasource variable in the {App} element  
