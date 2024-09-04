@@ -1471,6 +1471,13 @@
                           <li> {responseVar.json()}  =>  to convert the comming data from the database of the given api -> to be able for reading inside a variable </li>
                           <li> {Object.entries(item).map( ([key, value]) )} => to deal with single incomming data entry item as an  object and  destruct it into  [key] and [value] as the object proeprties   </li>
                           <li> {JSON.stringify(value)} => used to convert the value property of  incomming json single entry data format into string format to be able for  display        </li> 
+                          <li>  main path optinos can be uesd as   value of [path]  attribute of the  [Route] , as following  :  <br>  
+                            <ol> 
+                               <li> '/'  -> represent the  [Home page]  => will rourt to the main page   </li>  
+                               <li> '*'  -> represent the  [Error page] => will rout to error page of [404] when user using undefined route value    </li>  
+                               <li> '/routeName'  -> represent the specific route name of a certain [page] =>  will rout to the assinged route  comopkjet           </li>                          
+                            </ol> 
+                          </li> 
                       </ol>  
                     </li>  
                 </ol> 

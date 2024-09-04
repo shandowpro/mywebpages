@@ -1292,7 +1292,7 @@
                 <ol type="A">
                     <li> Main points of this lesson , the [part 2] of creating react routering project  : <br>
                         <ol>
-                          <li> A] Main concept of the both of [Links] & [Hooks] & [url requests         </li>
+                          <li> A] Main concept of the both of [Links] & [Hooks] & [ useParams()]  & [ useHistory()]        </li>
                           
                           <li> B] Practical steps and syntax of project  </li> 
 
@@ -1311,19 +1311,125 @@
                 <h3> 17 React Router Hooks and Links  React JS Beginner Project concept : </h3>
             </header>
  
-            <h1>  A]  Main concept of the both of [Links] & [Hooks]  & [url requests]   : </h1> <br>
-              <p>      :<br>  
+            <h1>  A]  Main concept of the both of [ Links ] & [ useParams() ]  & [ useHistory() ]  &  [ Route ] & [ Browser ]  & [ Switch ] &  [Router] & [BrowserRouter]  : </h1> <br>
+              <p> [1] All are react hooks imported from the [react router dom]  , with following properties       : <br>  
+
                 <ol>  
-                  <li>     </li>
+                   <li> [ Route ] & [ Router ] & [ BrowserRouter ]  =>  Required  hooks of the 'react router dom' library to set the routering mauin setting with the [index.js] =>  (as in the previous lesson )   </li>
+                   
+                   <li> [ Switch ] & [ Route ]  => hooks of the 'react router dom' library , required to assign routers to be used any whrere in the s project -> and being deifned in the {App.js}  - according to current version used of 'react router dom'    -   , with next details : <br>
+                    <ul> 
+                      <li> 1- [ Switch ]  ->  the main parent wrapper element of any defined route inside any component file  </li>
+                      <li> 2- [ Route ]   ->  the single Route inside the parent [Switch] wrapping desired component file , which will included by one of the following (2) methods :   <br>
+                        <ol>  
+                           <li> The desired Route Component Inside the parent Route itself -> [recommended to use when the routering  component has prop(s) ]   =>   as the next code :   <br>
+                            <code>  
+                              <span class="one" ></span> &lt; Switch &gt;     <br>  
+                                <span class="two" ></span> &lt; Route path="/path"    &gt;     <br>  
+                                  <span class="three" ></span> &lt; Comp   prop1={prop1}   prop2={prop2}   prop3={prop3}    /&gt;     <br>  
+                                <span class="two" ></span> &lt; /Route  &gt;     <br>  
+                              <span class="one" ></span> &lt;/Switch &gt;     <br>    
+                            </code>
+                          </li>   <br>   <br> 
+                          
+                          <li> The desired Route Component as a value of 'component' attribute of the parent Route  -> [recommended to use when the routering component has NOT  any  prop(s) ]  =>        <br>
+                            <code>  
+                              <span class="one" ></span> &lt; Switch &gt;     <br>  
+                                <span class="two" ></span> &lt; Route path="/path"  component='Comp'  /&gt;  <br>  
+                              <span class="one" ></span> &lt;/Switch &gt;     <br>    
+                            </code>
+                          </li>  <br>  <br> 
+                          
+                          
+                          <li> Main attributes required for the [Route] parent Element  , as following : <br> 
+                             <ol> 
+                                <li> [ exact ] : required for rouetering pages that included Sub routers [dynamic routers] or dealing with array of datasource </li>
+                                <li> [ path ]  : Here where we assign the path value  'small letter' of this route to be used for routering into this component , and it can be assinged with one of next type of values : <br>  
+                                  <ul>    
+                                    <li>  '/' => to assign this router to navigte to the main home page  -> incase of using '/'  in path after main domain Or non    </li>
+                                    <li>  '*' => to assign this router to navigate to  the assigned page -> incase of using any of none defeind routes pathes => [usually used to assign the error page '404' ]  </li>
+                                    <li>  '/pathname'  => to assign this route to navigate to the assgined page ->  incase of using this path after amin domain   </li>
+                                  </ul>  
+                                </li>
+                            </ol>  
+                          </li> 
+                        </ol>
+                      </li>
+                    </ul> 
+                  </li>  <br> <hr>  <br>  
+
+
+                   <li> 3- [ Link ]  => it is a hook imported from {react router dom}  used to create an inner routering link {SPA} wihtout using the server  , asn can  be used the following  method :  <br>
+                      <p> First it must be imported from [react-router-dom]  inside the component to be used wihtin it  , as one of it's hooks  </p>
+                      <p> Second to calling it as  an element inside the script of functional component , as following  :   <br>  
+                        <ol> 
+                          <li> 1- Inside one of list item 'li' or any other element  'p' , 'h1' =>  <br>  
+                            <code>
+                               <span class="one"></span>   &lt;li&gt; <br>  
+                                <span class="two"></span>   &lt;Link  to='pathname'  &gt; <br>  
+                                  <span class="three"></span>    link text  <br>  
+                                <span class="two"></span>   &lt;/Link&gt; <br>  
+                               <span class="one"></span>   &lt;/li&gt; <br>  <br>   
+                          
+                               <span class="one"></span>   &lt;p&gt; <br>  
+                                <span class="two"></span>   &lt;Link  to='pathname'  &gt; <br>  
+                                  <span class="three"></span>    link text  <br>  
+                                <span class="two"></span>   &lt;/Link&gt; <br>  
+                               <span class="one"></span>   &lt;/p&gt; <br>  
+                            </code>   
+                          </li>   <br>   <br>   
+
+                          <li> 2- Stand alone inside the script of functional component :      <br>
+                            <code>                              
+                               <span class="two"></span>   &lt;Link  to='pathname'  &gt; <br>  
+                                 <span class="three"></span>    link text  <br>  
+                               <span class="two"></span>   &lt;/Link&gt; <br>  
+                           </code>   
+                          </li>
+                        </ol>  
+                      </p>
+                   </li> <br> <br> 
+                   
+                   <li>  [ useParams() ] => react hook used to define the {id} object of this component [inside it's functional component] as a sub [dynamic route] => to be used for accessing the required item of imported array of  [data source] according matching of item's id and this value of [id]  , and can be defiend as next code :   <br> 
+                      <code>
+                        <span call="one"></span>  const {id} = useParams() ;    <br> 
+                      </code>
+                   </li>  <br> <br>  
+
+
+                   <li>  [ useHistory() ] => react hook imported from 'react-router-dom' used to define and execute an immediate navigation action into a certain path    , as next code :   <br> 
+                      <code>
+                        // Define an extracted variable from  {useHistory} hook :  <br>
+                        <span call="one"></span>  const  HistoryVarName  = useHistory();    <br> <br>
+                        
+                        // Use the Defined variable of useHistory to execute an immediatly  navigation to a certain path , by using [push()] extension , next code :  <br>
+                        <span call="one"></span>  HistoryVarName.push('/') ;     <br> <br>
+                        
+                      </code>
+                   </li>  <br> <br>                   
                 </ol>
+              </p>
+              <br> <hr> <br>
+
+              <p> [2] The main [components and props orientations Map] of this application project :  <br> 
+                 <ol> 
+                  <li> {App} &lt;--({ posts })--{Home}  &nbsp;&nbsp;  &lt;--({ posts })--{Feed}  &nbsp;&nbsp;  &lt;--({ post })--{Post}    </li>
+                  <li> {App} &lt;--({ posts, handleDelete })--{PostPage}                                          </li>
+                  <li> {App} &lt;--({ title })--{Header}                                                          </li>
+                  <li> {App} &lt;--({ search , setSearch })--{Nav}                                                </li>
+                  <li> {App} &lt;--({ })--{About}                                                                 </li>
+                  <li> {App} &lt;--({ })--{Missing}                                                               </li>
+                  <li> {App} &lt;--({ })--{NewPost}                                                               </li>
+                  <li> {App} &lt;--({ })--{Footer}                                                                </li>
+                </ol>  
               </p>  
-              
-  
-  
-              <h1> B] Practical steps and syntax and method of creating the project with [react routering dom] library       :  </h1>  <br>
+              <br> <hr> <br>
+        <!-- -------------------------------------------------------------- -->
+         
+              <h1> B] Practical steps and syntax and method of creating the project files and components   :  </h1>  <br>
                 <p> After project installation using npx , we have to execute the  following steps  :   <br>
                 <ul> 
-                  <li> a-   Installing the  react router dom library using  the next code :   <br>                       
+                  <li> a-  Installing the  react router dom library using  the next code :   <br>                       
                       <code> 
                           <span  class = one> </span>  npm i react-router-dom -S  => this will install  main s library version , but to install the [v: 5.2.0]  we can edirt manulaly  and re-install the npm     <br> 
                       </code>

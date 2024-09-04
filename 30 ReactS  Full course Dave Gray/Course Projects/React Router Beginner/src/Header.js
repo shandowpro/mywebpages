@@ -1,6 +1,12 @@
 
-/* The header fixed componinet will incliude : 
-   --    
+/* The [Header] fixed component will include : 
+  - [props] => {title} to be assigned inside the [App] main component        
+   
+  - [return] =>
+    
+    
+
+    
 */
 
 
