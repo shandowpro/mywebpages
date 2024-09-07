@@ -3,9 +3,9 @@
 
 /* The public Single Post display inner router component , including   : 
   - [return] => 
-    --  general display of [Each Post]
-    --  in detailed data properties wihtin [links] routering hook      
-    --   conditional rendering of post body propetry with eci;opse  format   -> according to the current number of letters       
+    --  general display of [Each Post] -> to be called inside the {Feed} parent component within mapping  
+    --  calling current post in-detailed data properties wihtin [links] routering hook      
+    --  conditional rendering of post body propetry with ecylipse  format   -> according to the current number of letters       
 
 */
  

@@ -54,7 +54,7 @@ import NewPost from './NewPost';    // the new post adding Router page
 import PostPage from './PostPage';  // the detailed post Router page  
 import Missing from './Missing';    // the 404 Error  Router page  
 
-// importing the required classses and hooks for the routering  : 
+// importing the required classes and hooks for the routering  : 
 import { Route, Switch, useHistory } from 'react-router-dom';
 
 // importing the required classes from [date-fns] library  : 
@@ -63,8 +63,7 @@ import { format } from 'date-fns';
 
 function App() {
 
-
-  //  Define a variable of some post data source array of objects => to hold [ object of data  ]     :
+  // 1- Define a variable of some post data source array of objects => to hold [ object of data  ]     :
   const [posts, setPosts] = useState([
     {
       id: 1,
@@ -87,37 +86,42 @@ function App() {
   ]);
 
 
-  //  Define a function  of the [search] state   :
+
+  // 2- Defining required states for creating a new post [title] and [body]   :
+  const [postTitle, setPostTitle] = useState('');
+  const [postBody, setPostBody] = useState('');
+
+
+  // 3- Define a  state  of the [search] => to be use as the [search input] inside the  [Nav]   :
   const [search, setSearch] = useState('');
 
-  // Define a  state  of [Search result] as an empty array  :
+
+  // 4-  Define a  state  of [Search result] as an empty array  => to  bve used inside the useEffect of hanlding the searching   :
   const [searchResults, setSearchResults] = useState([]);
 
-  // Define a  state  of useHistory   :
+
+  // 5- Define a state of useHistory   :
   const history = useHistory();
 
-  // Define the [useEffect()] requried for seraching operation =>  Rerendering the page by changing of [posts state]  OR  [search state]    :
+  
+  // 6- Define the [useEffect()] requried for seraching operation =>  Rerendering the page by changing of [posts state]  OR  [search state]    :
   useEffect(() => {
-    // Define a variable of filtered posts according to the inserted value in the search box with including both of lowercase and uppercase text : 
+    
+    // a- Define a variable of filtered posts according to the inserted value in the search box with including both of lowercase and uppercase text : 
     const filteredResults = posts.filter(post =>
       ((post.title).toLowerCase()).includes(search.toLowerCase())
       || ((post.body).toUpperCase()).includes(search.toUpperCase())
       || ((post.dateTime)).includes(search)
     );
 
-    // setting the [searchResults] state by the value of the of the filtered resultes :  
+    // b- setting the [searchResults] state by the value of the of the filtered resultes [reversed for descending  display  ]  => to be set inside the [Home] as a value  of the [posts] prop       :  
     setSearchResults(filteredResults.reverse());
 
   }, [posts, search])
 
+  
 
-
-  // Defining  required states for creating a new post  :
-  const [postTitle, setPostTitle] = useState('');
-  const [postBody, setPostBody] = useState('');
-
-
-  // Define a function to handle submit of [NewPost] component  -> of creating and adding new post  : 
+  // Define a function to handle submit of [NewPost] component  -> of creating and adding new post - with  parmanter to be used inside the form of [NewPost]  : 
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -145,7 +149,7 @@ function App() {
   };
 
 
-  // Define a function  of the handling post deletion operation  :
+  // Define a function  of the handling post deletion operation  - wiht id parameter to be used inside  the user component   :
   const handleDelete = (id) => {
     // Define a list of posts that including  all items except the current filtered post - according to the current item by id  :  
     const postList = posts.filter(post => post.id !== id);
@@ -167,6 +171,7 @@ function App() {
       {/*  Defining the main routers of the appliction */}
       <Switch>
         <Route exact path="/"  >
+        {/* setting the [searchResults] as  the value of [posts] prop instead of  the [posts] to activate  the search data        */}
           <Home posts={searchResults} />
         </Route>
 

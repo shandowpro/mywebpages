@@ -1,5 +1,5 @@
 
-// [orientation map] :   {App} <- {Home}
+// [orientation map] :   {App} <- {Home}  <- {Feed} <- {Post}        
 
 /* This is the main home page component , including   :  
   - [props] => 
