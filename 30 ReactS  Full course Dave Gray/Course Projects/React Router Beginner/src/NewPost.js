@@ -34,7 +34,7 @@ const NewPost = ({ postTitle, setPostTitle, postBody, setPostBody, handleSubmit 
           required
         />
 
-    -    <label htmlFor='postBody' >
+        <label htmlFor='postBody' >
           Body:
         </label>
 
@@ -51,8 +51,7 @@ const NewPost = ({ postTitle, setPostTitle, postBody, setPostBody, handleSubmit 
         </button>
 
       </form>
-
- 
+  
     </main>
   )
 }
