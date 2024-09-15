@@ -126,7 +126,7 @@ body {
   cursor: pointer;
 }
 
-.Home, .NewPost, .PostPage, .About, .Missing {
+.Home, .NewPost, .PostPage, .About,  .EditPost  ,  .Missing   {
   width: 100%;
   flex-grow: 1;
   padding: 1rem;
@@ -207,6 +207,7 @@ body {
 
 .PostPage button {
   height: 48px;
+  width: 48px ;
   min-width: 48px;
   border-radius: 0.25rem;
   padding: 0.5rem;
@@ -216,12 +217,27 @@ body {
   cursor: pointer;
 }
 
+.deleteButton:hover , .editButton:hover   { 
+  color : #fff;
+  font-size:   15px  ;
+ }
+
 .deleteButton { 
   background-color: red;
+  width: 100px ;
+  height: 48px;
+  margin-left:  5px ; 
+  transition : all ease-in-out .5s ;
+  border-radius : 3px  ;
 }
 
 .editButton { 
+  width: 100px ;
+  height: 48px;
+  margin-right: 5px ; 
   background-color: #333;
+  border-radius : 3px  ;
+  transition : all ease-in-out .5s ;
 }
 
 

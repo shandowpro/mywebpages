@@ -68,7 +68,7 @@ import { format } from 'date-fns';
 
 function App() {
 
-  // 1- Define a variable of some post data source array of objects => to hold [ object of data  ]     :
+  // 1- Define a variable of empty array of objects -> to be obtianed from the assigned  [api] and [db.json] datasource   :
   const [posts, setPosts] = useState([
     // {
     //   id: 1,
@@ -115,25 +115,25 @@ function App() {
   const history = useHistory();
 
 
-  // 7- define a useEffect to implement the crud operations of responding and reqading from api  according to the [axios]   :     
+  // [First crud operation] : {Fetching data}  =>
+  // 7-  Define a useEffect to implement the crud operations of responding and reading from api  according to the [axios] :     
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        // define the variable of the response to the imported [api] from path [posts]  after the baseURL  :
+        // 1- Define the variable of the response to the imported [api] from path [posts] as sub api path  after the baseURL of the defind  [api]  :
         const response = await api.get('/posts');
 
-        // assigned the response variable value inside the [posts] status      :
+        // 2- Assigned the response variable value inside the [posts] status , by using direclty  the defined respnose's extracted [data] :
         setPosts(response.data);
 
       } catch (err) {
-
-        // print  the builtin error  output that handled by axios  [with usign axios handling options ]  :
+        // print  the builtin error  output that handled by axios  [with using axios handling options ] -after checking of its  existanace   :
         if (err.response) {
           console.log(err.response.data)
           console.log(err.response.status)
           console.log(err.response.header)
         } else {
-          // print a custom  error message incase there is no handled output displayed         :  
+          // print a custom error message incase there is no handled output displayed :  
           console.log(err.message)
         }
       }
@@ -144,7 +144,10 @@ function App() {
   }, [])
   // -----------------------------------------------
 
-  // 9- Define the [useEffect()] requried for seraching operation =>  Rerendering the page by changing of [posts state]  OR  [search state]    :
+
+
+  // [not a crud operation -not using api  , just an ordinary function ] =>
+  // 9- {searching operation} : Define the [useEffect()] requried for seraching operation =>  Rerendering the page by changing of [posts state]  OR  [search state]    :
   useEffect(() => {
 
     // a- Define a variable of filtered posts according to the inserted value in the search box with including both of lowercase and uppercase text : 
@@ -161,94 +164,98 @@ function App() {
   // ---------------------------------------------------------
 
 
+  //  [Second crud operation] : {posting new data item into the assigned database throug the  assigned api}  =>
   // 7- Define a function to handle submit of [NewPost] component  -> of creating and adding new post - with  parameter to be used inside the form of [NewPost]  : 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // 1- {[id] property} :    Get and Define the last [id] value of the current post [if there is a posts array is defined (has length) ] => to be used to get the current post : 
+    // a- {[id] property} :    Get and Define the last [id] value of the current post [if there is a posts array is defined (has length) ] => to be used to get the current post : 
     const id = posts.length ? posts[posts.length - 1].id + 1 : 1;    // => getting the id value of the last item in the {posts} array & add 1 to use it for adding a new item 
 
-    // 2- {[dateTime] property} Define  a variable of date : 
+    // b- {[dateTime] property} Define  a variable of date : 
     const dateTime = format(new Date(), 'MMMM dd , yyyy pp');
 
-    // *] Define a variable of full new post object [with assigning  both of  [title] & [body] with defined status ]  : 
+    // c] Define a variable of full new post object [with assigning  both of  [title] & [body] with defined status ]  : 
     const newPost = { id, title: postTitle, dateTime, body: postBody };
 
-    // wrapping the adding new post inside the [try/catch] to  output any detect error before submiting teh new post  : 
+    //  d] wrapping the adding new post inside the [try/catch] to  output any detect error before submiting teh new post  : 
     try {
-      // Define the response varialbe to conect and add the new item [post] into defiend [api] and jspn server :
+      // 1- Define the response varialbe to conect and add the new item [post] into defiend [api] and jspn server :
       const response = await api.post('/posts', newPost);
 
-
-      //  Define a variable of All post array after adding the new post[came from the api by using the defined variable of {response.data} after has got the posted value from the api ]    : 
+      // 2- Define a variable of All post array after adding the new post[came from the api by using the defined variable of {response.data} after has got the posted value from the api ]    : 
       const allPosts = [...posts, response.data];
 
-      //  Adding the new variable of all posts into the [posts] state using its setter fucntion: 
+      // 3- Adding the new variable of all posts into the [posts] state using its setter fucntion  : 
       setPosts(allPosts);
 
-      //  Setting the [postTitle]  & [postBody] states into an empty values after adding the new post : 
+      // 4- Setting the [postTitle]  & [postBody] states into an empty values after adding the new post : 
       setPostTitle('');
       setPostBody('');
 
-      // use the defined useHistory hook variable to route into a certain route  [home page]  :
+      // 5- use the defined useHistory hook variable to route into a certain route  [home page]  :
       history.push('/');
 
+
+      // 6- Catching the returned and printing it using the default method using custom message  :
     } catch (err) {
       console.log(`Error : ${err.message} `);
     }
 
-
   };
   // -----------------------------------------------------
 
-  // 8- Define a function  of the handling post [deletion operation]  - with id parameter to be used inside  the user component   :
+  //  [Third crud operation] : {Deleting a certain post [id] from the api datasoure assigned by api }  =>
+  // 8- Define a function  of the handling post [deletion operation]  - with id parameter to be  gotten from inside the user component   :
   const handleDelete = async (id) => {
-    try {
 
-      // awaiting the delete operation from [api] - from the full path of baseURL + id of hte current element post -   : 
+    try {
+      // a- Awaiting the delete crud operation directly from [api] - from the full path of baseURL + id of the current element post - [no need ot define  a varialbe ]   : 
       await api.delete(`/posts/${id}`);
 
-      // Define a list of posts that including  all items except the current filtered post - according to the current item by id  :  
+      // b- Define a new list of posts (after excepting the deleted item ) that including  all items except the current filtered deleted  post - according to the current item by id  :  
       const postList = posts.filter(post => post.id !== id);
 
-      // Setting the new post filtered list inside the post state [which will be displayed in the main home page]  :
+      // c- Setting the new post filtered list inside the post state [which will be displayed in the main home page]  :
       setPosts(postList);
 
-      // use the defined useHistory hook variable to route into a certain route  [home page]  :
+      // d- use the defined useHistory hook variable to route into a certain route  [home page]  :
       history.push('/');
 
+      // e- catching the returned errror  by using  the custom erorr message :
     } catch (err) {
       console.log(err.message);
     }
   }
   // --------------------------------------
 
-  // 9- creating the [Editing crud operation] according to [axios] => this fucntion will be used wihtin the [editPost] component  :
+  // Fourth CRUD operation  : {Modify/Edit full data item object } [not need to be inside a useEffect - because it will be executed only  when inside the [editPost] component by form submiting     ]  =>
+  // 9- creating the [Editing crud operation] according to [axios] => this function will be used wihtin the [editPost] component  :
   const handleEdit = async (id) => {
 
-    // 1- {[dateTime] property} Define  a variable of date => [as a default modified value   : 
+    // 1- {[dateTime] property} Define  a variable of date => [as a one of the modified item object's property]  with custom format pattern : 
     const dateTime = format(new Date(), 'MMMM dd , yyyy pp');
 
-    // *] Define a variable of full updated  post object after being updated/editing  [with assigning  both of  [title] & [body] with defined status ]  : 
+    // 2- Define a variable of full updated item post object after being updated/editing [with assigning  both of  [title] & [body] with defined status ]  : 
     const updatedPost = { id, title: editTitle, dateTime, body: editBody };
 
     try {
-      // Define a response varialbe of getting the updated full object , to send the edited values into the assiogned paratmers of the {put} method :
+      // 3- Define a response variable of getting the updated full object curd operartion , to send the edited values into the assiogned paratmers of the {put} method :
       const response = await api.put(`/posts/${id}`, updatedPost);  // => we here used the {put} method due to we will send a full edited object into the api , but  incase of editing single property of the item -> we must use the {patch}     
 
-      // assign the new updated object values into api datasource [posts] , but with using mapping - because we will not add the old data of the posts  - : 
-      setPosts(posts.map( post  =>
+      // 4- Assign/replace the updated item object value into api datasource [posts] , by using mapping - because we will not add the old data of the posts - : 
+      setPosts(posts.map(post =>
         post.id === id ? { ...response.data } : post
       ));
 
-      // Setting empty values of both [post body] & [post title] after  :
+      // 5- Setting empty values of both [post body] & [post title] after  :
       setEditBody('');
       setEditTitle('');
 
-      // directing to the home page after implemeting the    :
-       history.push('/'); 
+      // 6- directing to the home page after implementing the modifying/editing crud orepration :
+      history.push('/');
 
-
+    // 7-  custom catching  of the returend error      :
     } catch (err) {
       console.log(`Error : ${err.message}`);
     }
@@ -284,7 +291,7 @@ function App() {
 
 
         {/*  Define the  Edit route of the  [EditPost] page    */}
-        <Route   path="/edit/:id"  >
+        <Route path="/edit/:id"  >
           <EditPost
             posts={posts}
             handleEdit={handleEdit}
