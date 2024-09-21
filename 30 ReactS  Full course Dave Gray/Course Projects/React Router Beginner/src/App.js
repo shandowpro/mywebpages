@@ -40,6 +40,13 @@
 // Importing the reqiurd hooks :
 import { useState, useEffect } from 'react';
 
+// Importing the required defined custom hooks :
+import useWindowSize from './hooks/useWindowSize';
+
+// Importing the required defined custom hooks :
+import useAxiosFetch from './hooks/useAxiosFetch';
+
+
 // Importing the main Fixed components : 
 import Header from './Header';
 import Nav from './Nav';
@@ -67,6 +74,13 @@ import { format } from 'date-fns';
 
 
 function App() {
+
+  // Define a variable of detructured object of {width} to be used and called  passed prop to the {width} :
+  const { width } = useWindowSize();
+  
+  // Define a variable of detructured object of all exported states props  { data,fetchError,isLoading} coming from  the {useAxiosFetch} custom hook ,with assging the baseURl instead of the using the one deinfeid inside  the  [posts.js ]      :
+  const { data  , fetchError , isLoading  } = useWindowSize('http://localhost:3500/posts');
+  
 
   // 1- Define a variable of empty array of objects -> to be obtianed from the assigned  [api] and [db.json] datasource   :
   const [posts, setPosts] = useState([
@@ -115,38 +129,44 @@ function App() {
   const history = useHistory();
 
 
-  // [First crud operation] : {Fetching data}  =>
+  // [First crud operation] : {Fetching data} using direct fetching method (not used )  =>
   // 7-  Define a useEffect to implement the crud operations of responding and reading from api  according to the [axios] :     
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        // 1- Define the variable of the response to the imported [api] from path [posts] as sub api path  after the baseURL of the defind  [api]  :
-        const response = await api.get('/posts');
+  // useEffect(() => {
+  //   const fetchPosts = async () => {
+  //     try {
+  //       // 1- Define the variable of the response to the imported [api] from path [posts] as sub api path  after the baseURL of the defind  [api]  :
+  //       const response = await api.get('/posts');
 
-        // 2- Assigned the response variable value inside the [posts] status , by using direclty  the defined respnose's extracted [data] :
-        setPosts(response.data);
+  //       // 2- Assigned the response variable value inside the [posts] status , by using direclty  the defined respnose's extracted [data] :
+  //       setPosts(response.data);
 
-      } catch (err) {
-        // print  the builtin error  output that handled by axios  [with using axios handling options ] -after checking of its  existanace   :
-        if (err.response) {
-          console.log(err.response.data)
-          console.log(err.response.status)
-          console.log(err.response.header)
-        } else {
-          // print a custom error message incase there is no handled output displayed :  
-          console.log(err.message)
-        }
-      }
-    }
-    // execuiting the  defined  {fetchPosts} fuction inside the useEffect    :
-    fetchPosts();
+  //     } catch (err) {
+  //       // print  the builtin error  output that handled by axios  [with using axios handling options ] -after checking of its  existanace   :
+  //       if (err.response) {
+  //         console.log(err.response.data)
+  //         console.log(err.response.status)
+  //         console.log(err.response.header)
+  //       } else {
+  //         // print a custom error message incase there is no handled output displayed :  
+  //         console.log(err.message)
+  //       }
+  //     }
+  //   }
+  //   // execuiting the  defined  {fetchPosts} fuction inside the useEffect    :
+  //   fetchPosts();
 
-  }, [])
+  // }, [])
   // -----------------------------------------------
+  
 
 
+  // [First crud operation] : {Fetching data} using custom hook {useAxiosFetch} fetching method (will be used )  =>
+   useEffect(()=> {
+        setPosts(data)    
+   } , [data])
+   // -----------------------------------------------
 
-  // [not a crud operation -not using api  , just an ordinary function ] =>
+  // [not a crud operation - not using api  , just an ordinary function ] =>
   // 9- {searching operation} : Define the [useEffect()] requried for seraching operation =>  Rerendering the page by changing of [posts state]  OR  [search state]    :
   useEffect(() => {
 
@@ -255,7 +275,7 @@ function App() {
       // 6- directing to the home page after implementing the modifying/editing crud orepration :
       history.push('/');
 
-    // 7-  custom catching  of the returend error      :
+      // 7-  custom catching  of the returend error      :
     } catch (err) {
       console.log(`Error : ${err.message}`);
     }
@@ -265,15 +285,26 @@ function App() {
   return (
     <div className="App">
 
-      <Header title={'React js blog app '} />
+      <Header 
+        title={'React js blog app '} 
+        width = {width}  
+      />
 
       <Nav search={search} setSearch={setSearch} />
 
       {/*  Defining the main routers of the appliction */}
       <Switch>
         <Route exact path="/"  >
-          {/* setting the [searchResults] as  the value of [posts] prop instead of  the [posts] to activate  the search data        */}
-          <Home posts={searchResults} />
+          {/* adding th next props :
+            1- setting the [searchResults] as  the value of [posts] prop , instead of the [posts] to activate  the search data
+            2- setting the destructured varaible  [fetchError] - that comming from the custom hook -  as the value of [fetchError] prop  
+            3- setting the destructured varaible  [isLoading] - that comming from the custom hook -  as the value of [isLoading] prop  
+          */}
+          <Home 
+             posts={searchResults}
+             fetchError = {fetchError} 
+             isLoading = {isLoading} 
+          />
         </Route>
 
 
@@ -313,6 +344,8 @@ function App() {
 
         {/*  Creating a Router for the component   */}
         <Route path="*" component={Missing} />
+
+
       </Switch>
 
 
