@@ -23,7 +23,7 @@ const useAxiosFetch = (dataUrl) => {
     const [fetchError , setFetchError ] = useState(null) ;
 
     // (c) state of is loading state :
-    const [isLoading   , setIsLoading ]  =  useState(false);
+    const [isLoading , setIsLoading ]  =  useState(false);
 
  
   // b/2]  Define the main useEffect function :
@@ -34,7 +34,7 @@ const useAxiosFetch = (dataUrl) => {
     // b/2/2]  Define a variable of api token source after cancellation current value :
     const  source =  axios.CancelToken.source();       
  
-    //  b/2/3]  Define the main function of fetching data form the api , asccordin   to the gotten parameter of the main custopm hook function   : 
+    //  b/2/3]  Define the inner function of [fetching data] form the api , asccording to the gotten parameter of the main custom hook function : 
     const fetchData = async  (url) => {
   
       //   Assign the {isLoading} state by the [true] value (to activate  this state as the current state  )   :    
@@ -53,9 +53,10 @@ const useAxiosFetch = (dataUrl) => {
         }
 
       } catch(err) {
+
         // using the condition check to getting steps of the catching  error   :  
          if (isMounted) {
-           // (a)    Assign value of the [fetchError] state  in case of  catching error : 
+           // (a) Assign value of the [fetchError] state  in case of  catching error : 
              setFetchError(err.message) ;
            
            // (b) Setting the value of  [data] state  by empty array  : 
@@ -64,34 +65,35 @@ const useAxiosFetch = (dataUrl) => {
 
       }  finally {
           //  [after fetching] Resetting the [inLoading] by  the 'false' again - witin (2  seconds for testing ) - with condintal rendering of the  [inMounted]  :
-          isMounted && isLoading(false);
+          // isMounted && isLoading(false);
+          isMounted &&
+            setTimeout(()=>{
+              setIsLoading(false);
+            } , 1500 );
       }
   
     }   
 
-    //  b/2/3] calling the upper defined fetching  function of {fetchData}  with assgning the main recieved parameter of the main custom hook {dataUrl} to  pass it thorugh   :   
+    //  b/2/3] calling the upper defined function {fetchData} of fetching data  with assgning the main recieved parameter of the main custom hook {dataUrl} to  pass it thorugh   :   
     fetchData(dataUrl) ; 
     
     
-    //  b/2/4]  cancelling the  token api using  a clean up  function :   
-    const cleanUp = () => {
-      
-    // ReSetting the check variable by 'false'    :
-    const isMounted = false  ;    
-      
-    // Cancelling the source token : 
-    source.cancel() ;
- 
-  }
+    //  b/2/4] define  cancelling the  token api using  a clean up  function :   
+    const cleanUp = () => {  
+      // 1- ReSetting the check variable by 'false'    :
+      isMounted = false  ;    
+        
+      // 2- Cancelling the variable [source] token : 
+      source.cancel() ;
+    }
 
-   // Returning the upper defined clean up fuction {cleanUp} inside  the  useEffect call back  function    :
-    cleanUp() ;  
+   // Returning the upper defined clean up fuction {cleanUp} inside  the  useEffect call back function :
+    return cleanUp ;  
 
   } , [dataUrl]) 
     
-  //  Main return of  custom hook function as {object  of all defined states } : 
-   return  {  data  , fetchError , isLoading }
-
+  //  Main return of custom hook function as {object  of all defined states } : 
+   return  { data , fetchError , isLoading }
 }
 
 

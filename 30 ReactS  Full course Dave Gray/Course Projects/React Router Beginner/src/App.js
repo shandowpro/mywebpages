@@ -78,8 +78,8 @@ function App() {
   // Define a variable of detructured object of {width} to be used and called  passed prop to the {width} :
   const { width } = useWindowSize();
   
-  // Define a variable of detructured object of all exported states props  { data,fetchError,isLoading} coming from  the {useAxiosFetch} custom hook ,with assging the baseURl instead of the using the one deinfeid inside  the  [posts.js ]      :
-  const { data  , fetchError , isLoading  } = useWindowSize('http://localhost:3500/posts');
+  // Define a variable of destructured object of all exported states props  { data,fetchError,isLoading} coming from  the {useAxiosFetch} custom hook ,with assging the baseURl instead of the using the one deinfeid inside  the  [posts.js ]  :
+  const { data  , fetchError , isLoading  } =  useAxiosFetch('http://localhost:3500/posts');
   
 
   // 1- Define a variable of empty array of objects -> to be obtianed from the assigned  [api] and [db.json] datasource   :

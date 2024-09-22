@@ -9,13 +9,11 @@
 
   - [return] => conditional element according the  value of the  width prop dynamic value of  the title        
 */
-
-
+ 
 
 import React from 'react';
 import { FaLaptop, FaTabletAlt, FaMobileAlt } from 'react-icons/fa';
-
-
+ 
 
 const Header = ({ title, width }) => {
   return (

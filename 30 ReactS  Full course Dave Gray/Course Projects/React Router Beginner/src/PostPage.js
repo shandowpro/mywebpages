@@ -14,7 +14,7 @@
 
 import React, { Fragment } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import  EditPost from './EditPost';
+// import  EditPost from './EditPost';
 
 const PostPage = ({ posts, handleDelete }) => {
 
