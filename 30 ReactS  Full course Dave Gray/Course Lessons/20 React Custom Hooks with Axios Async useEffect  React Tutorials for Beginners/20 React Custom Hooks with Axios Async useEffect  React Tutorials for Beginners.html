@@ -1,4 +1,4 @@
-
+ 
 <!DOCTYPE html>
 
 <html>
@@ -1298,7 +1298,7 @@
                            
                           <li> C] Practical steps and syntax of [Custom Hooks] with  real (2) applications  [useWindowSize] & [userAxisoFetch]      </li> 
 
-                          <li> D] VIP Notes &  furthter    online references  </li> 
+                          <li> D] VIP Notes & furthter online references  </li> 
                            
                         </ol>
                      </li> <br> <br>
@@ -1357,87 +1357,145 @@
  
         <!-- -------------------------------------------------------------- -->
          
-              <h1> B]  Main  syntax of the mechanism steps   of react [Custom Hooks]  with  each of {axios , async , useEffect , useState }  :  </h1>  <br>
+              <h1> B]  Public syntax and steps of the mechanism of react [Custom Hooks]  with using  each of {axios , async , useEffect , useState }  :  </h1>  <br>
                  <ol> 
                   <li> First => Create the main file of the custom hook -> recommended to be inside [src/hooks/customHook.js]    </li>
-                  <li> Second =>  Inside the [Custom Hook] file => extablish the main custom hook function  as following : <br>  
+                  <li> Second =>  Inside the [CustomHook.js] Custom Hook file => extablish the main custom hook function  as following : <br>  
                     <ul>
-                        <li> 1]  Importing  section => importing the required calsses or other builtin react hooks => such as  { useState , useEffect , Axios } which will be used inside the current custom hook fuction definions and  return  </li>
+                        <li> 1]  Importing  section => importing the required classes or other builtin react hooks => such as  { useState , useEffect , Axios } which will be used inside the current custom hook fuction definitions and return  </li>
                         
-                        <li> 2]  Inside of the [custom hook] Defined function [could include parameters]  : <br> 
+                        <li> 2]  Inside of the [customHook()] Defined functional hook [could include parameters]  : <br> 
                             <ol>     
-                              <li> a] First inner section [before {useEffect} ] => may include several varialbes definition [states] to be used inside the  useEffect fuction </li> 
+                              <li> a] First inner section [before {useEffect} ] => may include several varialbes definition [states] to be used inside the  useEffect function </li> 
                               <li> b] Second inner section [inside {useEffect} ]  =>  can include certain steps or procedues as following  :     <br>
                                 <ul>     
                                   <li> Can include several react states  variables defintions </li>
                                   <li> Can include normal inner function that using upper defined variables  =>  could include :    <br>
                                       <ol> 
-                                        <li> This function can has parmerter(s)   </li>
-                                        <li> This function can use the prevoius defined states and other functions as bulding a certain steps of procedures  </li>
-                                        <li> This function could include a certain procedure of [cleaning up seperated  fuction or this function man return ]  the  upper  setting values , to be ready for another calling of this custom hook </li>
-                                        <li> This function Must has a  return of as certain value or defined state after being assgined hanlded  </li>
+                                        <li> This inner function may be defined  as (async)    </li>
+                                        <li> This inner function can have parmerter(s)   </li>
+                                        <li> This inner function may inclue a syntax of {try-catch-finally}  -> to manage  procedures with it </li>
+                                        <li> This inner function can use the previous defined states and other functions as bulding a certain steps of procedures  </li>
+                                        <li> This inner function could include a certain procedure of [cleaning up seperated  function or this function's return ] the upper setting values , to be ready for another calling of this custom hook </li>
+                                        <li> This inner function Must have a return of as certain value or defined state after being assgined hanlded  </li>
+                                        <li> After defining this inner function =>  Must being called  (inside the useEfect) to be executed while executing the useEffect    </li>
+                                        <li> While calling this inner function can use one of upper defined state(s) as it's parameter    </li>
                                       </ol>
                                   </li>
-                                  <li>  useEffect dependencies => without || with one ||  many dependencies     </li>
+  
+                                  <li> [useEffect dependencies] => without || with one || with many dependencies     </li>
                                 </ul>                                
                               </li>   <br>
                               
                               <li> c] After the [useEffect] & inside the main custom hook function :   <br> 
-                                  <p>  almost include the return main custom hook function   => [could be a single || object of several variables values  defined statue value after being handleed within upper ]   </p>
+                                  <p> almost include the return of main custom hook function , which can be as following  => <br>  
+                                     <ol> 
+                                        <li> could be a single value   </li>
+                                        <li> could be as object of several variables values  defined statue value after being handleed within upper   </li>
+                                     </ol>
+                                  </p>
                               </li>
                             </ol>                         
                         </li>  <br>
-                        <li> 3] Exporting the main custom Hook function       </li>
+
+                        <li> 3] Exporting the main custom Hook function </li>
                     </ul>                
                   </li>  <br> <hr>
 
-                  <li>  Applying and using  the defined Custom Hook   inside the  user  component , wiht follwing steps  :   <br> 
+                  <li> Third => Applying and using the defined Custom Hook inside the user component , with following steps  :   <br> 
                       <ol> 
-                          <li> 1- importing the defined custom hook inside the user component => before the functional component  , as next code :  <br>
+                          <li> 1- [importing section] :  importing the defined [custom hook file] inside the user component => before the functional component  , as next code :  <br>
                             <code> 
-                                <span class="one"></span> import  useCustomHook from  './hooks/useCutomHook' ;   <br> 
+                                <span class="one"></span> import  useCustomHook from  './hooks/useCustomHook' ;   <br> 
                             </code>  
-                          </li>
+                          </li> <br><br> 
                           
-                          <li> 2-  Define a destrucured object assigned by  the  imported custom hook  =>  inside the functional component , as next code :  <br>
+                          <li> 2- [ inside the main user functional component and before the return  ] :  Define a destrucured object  as  exteacted value from imported custom hook =>  inside the functional component , as next code :  <br>
                             <code> 
-                                <span class="one"></span> const  { varName } =  useCutomHook() ; =>  [ define  a single destrucuterd  object with NO parameter ] <br> 
-                                <span class="one"></span> const  {varName } =  useCutomHook( VarState) ; => [  define  a single destrucuterd  object with  asisinged  parameter with valee of  defined            ]   <br> 
+                                <span class="one"></span> const  {varName } =  useCutomHook() ; =>  [ define a single destrucuterd object with NO parameter ] <br> 
+                                <span class="one"></span> const  {varName } =  useCutomHook( VarState) ; => [  define  a single destrucuterd  object with  assigned parameter with value of defined ]   <br> 
                                 <span class="one"></span> const  {varName1 , varName2 , varName3 }  =  useCutomHook() ;  => [ define  several destrucuterd  object with NO parameters ]   <br> 
-                            </code>  
-                          </li>
-                      </ol>
-                    
-                    
-                  
+                            </code>    <br> 
+                          </li> <br><br> 
+                          
+                          <li> 3- [ inside the main  user functional component  & before the return   ] : in some cases we can Define a useEffect including one or more of desturcted variable to us it as a vlue of some defined state in this user component ,   from ht imported custom hook inside it  :  <br>
+                            <code> 
+                                <span class="one"></span> useEffect(() => {      <br>
+                                  <span class="two"></span>   setState(destrcutedVar)  ;   <br> 
+                                <span class="one"></span> })  <br> 
+                            </code>    <br> 
+                          </li>   <br><br> 
+
+                          <li> 4- [ inside the main user functional component &  inside the return ] :  passsing through some or all  into antoher difned called component  :  <br>
+                            <code> 
+                              <span class="one"></span>  &lt; Comp   <br>
+                                <span class="two"></span> prop1 = {destrcutedVar1} <br>
+                                <span class="two"></span> prop2 = {destrcutedVar2}  <br>
+                              <span class="one"></span>  / &gt;   <br>
+                            </code>    <br> 
+                          </li>   <br><br> 
+
+                          <li> 5- [ inside the  component that recieving the passed through the desructured props ]  :  <br>
+                            <code> 
+                              <span class="one"></span>   const Comp  = ({prop1 , prop2) => {}      <br>
+                            </code>    <br> 
+                          </li>   <br><br>
+                      </ol>                  
                   </li>
-
-
-                  <li></li>
-                  <li></li>
-
-
-
-
-
-                 </ol>              
+  
+                </ol>              
               
                 <br>   <hr> <br>
         <!-- ------------------------------------------------------------- -->
-              <h1> B]  Main  syntax of the mechanism steps   of react [Custom Hooks]  with  each of {axios , async , useEffect }  :  </h1>  <br>
+              <h1> B]  Main syntax of the mechanism steps  of react Custom Hooks {useWindowSize}  & {useAxiosFetch} with each of {axios , async , useEffect }  :  </h1>  <br>
                   <ol> 
                       <li> I]   First custom hook  {useWindowSize} :  <br>
-                        
+                        <ul>
+                            <li> a) The main purpose of using  this custom hook :   <br>
+                              <p> displaying a responsive icon [mobile , tablet , laptop ] of the current window width , according to the width change   </p>
+                            </li>  <br> 
+
+                            <li> b) main requirments :   <br> 
+                              <ol>
+                                <li> 1- used inside  [main custom hook : {useWindowSize.js} ]  :  <br>
+                                  <ul> 
+                                    <li> {useEffect , useState}  => to be used ot define different variables and useEffect    </li>
+                                    <li> {window.addEventListener}  => to  add the 'reize' event to the window object DOM  +  deifend handle function of changing size as a parameter    </li>
+                                    <li> {window.removeEventListener}  => to  remove the 'reize' event from the window object DOM  +  deifend handle function of changing size as a parameter => as return of main useEffect csallback function </li>
+                                    <li>  main return of the custom hook function  =>  the width  state value [windowSize] to be used inside the useer component {App.js}  -> {Header.js}   </li>
+                                  </ul>                      
+                                </li>    
+      
+                                <li> 2-  used inside [user component : {Header.js} ]  :  <br>
+                                  <ul> 
+                                    <li> {react-icons} library => to be used to call the responsive width icon {FaLaptop, FaTabletAlt, FaMobileAlt}     </li>
+                                  </ul>                      
+                                </li>
+      
+                              </ol> 
+                            
+                            </li>   <br>
+     
+ 
+                        </ul>
                       
                       
                       </li>   <br>
 
-                      <li> II]  Second  custom hook  {useAxiosFetch}     </li> 
+                      <!-- ------------------------------------------------- -->
+
+
+                      <li> II]  Second  custom hook  {useAxiosFetch}  :   <br>
+                        
+                      
+                      
+                      
+                      
+                      
+                      </li> 
                        
                   </ul>
 
-              
-              
               <hr> <br>  <hr> <br>            
               <!--  --------------------------------------------------------  -->             
               <!-- -------------------------------------------------------- -->   
@@ -1445,42 +1503,13 @@
    
   
              <h1> C]   VIP Notes & online references :   </h1>            
-
-                <ul>
-                  <li> { axios }  =>   this  library is  being imported JUST ONLY FOR ONE time in api define file  [api/post.js] , to be used to create the axios   </li>
-                  <li> Type of api extracted methods to be uesd in Crud opertaions  =>   this  library is  being imported JUST ONLY FOR ONE time in api define file  [api/post.js] , to be used to create the axios  <br> 
-                    <ol> 
-                    <li> 1- [Fetching/Reading Data] from the given api  using {.get('api file path')} -> <br>
-                        <code>
-                            const response = await api.get('/posts');  =>  [the sub domain path of the assigned api file 'posts'  ]
-                        </code> 
-                      </li> <br>
- 
-                      <li> 2- [Post/Add new Data item] into the given api  using { .post('api file path' , variable full object of new item ) }  -> <br>
-                        <code>
-                            const response = await api.post('/posts', newPost);   => [ post/add the new defined object item {newPost} in to the assigned path {'/posts'} ]
-                        </code> 
-                      </li> <br>
- 
-                      <li> 3- [Delete/Remove a full item object ] from the given api , using { api.put('api file path with dynamic item id' , variable full object of modified item ) }  -> <br>
-                        <code>                             
-                          await api.delete(`/posts/${id}`); =>   [deleting the certain item of obtained {id} , by using full path of the api with this  id a a dynamic sub domain       ]
-                        </code>  
-                      </li> <br>
-    
-                      <li> 4- [Modify/Edit a full item object ] from the given api , using { api.put('api file path with dynamic item id' , variable full object of modified  item ) }  -> <br>
-                        <code>                             
-                            const response = await api.put(`/posts/${id}`, updatedPost);  // => we here used the {put} method due to we will send a full edited object into the api , but  incase of editing single property of the item -> we must use the {patch}     
-                        </code> 
-                      </li> <br>
- 
- 
-                    </ol>    
-                  
-                  </li>                   
-                   
-                </ul>
- 
+                <p>  The next links are public references for the both React hooks and custom hooks :  <br>
+                  <ul>
+                    <li> {  nikgraf.github.io/react-hooks }  => this website  provides differtent collection of   the  react hooks concept and syntax </li>
+                    <li> {   npmjs.com/package/react-use }  =>  another website  provides differtent collection of   the  react hooks concept and syntax </li>
+                  </ul>
+                </p> 
+                      
             <!--  --------------------------------------------------------  -->
 
             <h3> ReactJS [react-dave-gray] project files of this lesson as following : </h3> <br>
