@@ -120,7 +120,7 @@ function App() {
   // 4- Define a  state  of the [search] => to be use as the [search input] inside the  [Nav]   :
   const [search, setSearch] = useState('');
 
-
+  
   // 5-  Define a  state  of [Search result] as an empty array  => to  bve used inside the useEffect of hanlding the searching   :
   const [searchResults, setSearchResults] = useState([]);
 
@@ -158,6 +158,7 @@ function App() {
   // }, [])
   // -----------------------------------------------
   
+
 
 
   // [First crud operation] : {Fetching data} using custom hook {useAxiosFetch} fetching method (will be used )  =>
@@ -297,13 +298,13 @@ function App() {
         <Route exact path="/"  >
           {/* adding th next props :
             1- setting the [searchResults] as  the value of [posts] prop , instead of the [posts] to activate  the search data
-            2- setting the destructured varaible  [fetchError] - that comming from the custom hook -  as the value of [fetchError] prop  
-            3- setting the destructured varaible  [isLoading] - that comming from the custom hook -  as the value of [isLoading] prop  
+            2- setting the [fetchError] prop of the Home component =>  by  [fetchError] of destructured variable that comming from the custom hook {useAxiosFetch}
+            3- setting the [isLoading] prop of the Home component =>  by  [isLoading] of destructured variable that comming from the custom hook {useAxiosFetch}
           */}
-          <Home 
-             posts={searchResults}
-             fetchError = {fetchError} 
-             isLoading = {isLoading} 
+          <Home              
+              posts = {searchResults}   // this for acivating the live searching results as the displayed data [posts] => on the main Home page  
+              fetchError = {fetchError} 
+              isLoading = {isLoading} 
           />
         </Route>
 

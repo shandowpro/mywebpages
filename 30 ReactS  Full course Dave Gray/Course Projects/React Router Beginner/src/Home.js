@@ -30,7 +30,7 @@ const Home = ({ posts , fetchError , isLoading }) => {
       {/*  displying the fetched data [posts]  returned from the api  by conditional rendering    */} 
       {!isLoading && !fetchError && ( 
            posts.length ? <Feed posts={posts} /> :
-           <p style={{ color: 'red', marginTop: '2rem' }} > No Posts  avaialable  </p>
+            <p style={{ color: 'red', marginTop: '2rem' }} > No Posts  avaialable  </p>
         )
       }
     </main>
@@ -38,3 +38,7 @@ const Home = ({ posts , fetchError , isLoading }) => {
 }
 
 export default Home;
+
+
+
+
