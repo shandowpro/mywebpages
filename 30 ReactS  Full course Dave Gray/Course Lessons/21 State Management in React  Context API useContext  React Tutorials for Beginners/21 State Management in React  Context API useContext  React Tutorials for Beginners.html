@@ -1289,15 +1289,15 @@
                 <p> &gt; Main Subjects in this lesson contain the  following : </p>
  
                 <ol type="A">
-                    <li> Main points of this lesson , new method to manage States in the react {part 1} [using default built-in methods] : <br>
+                    <li> Main points of this lesson , new method to manage States in the react {part 1} [using default built-in methods : {Context Api}   & {useContext}] : <br>
                          <ol>
-                          <li> A] Main concept ...............      </li>
+                          <li> A] Main [concept ,  benefites , requrimments  ] of using   {Context Api}   & {useContext}  to mangqae project states </li>
                           
-                          <li> B] Main syntax of the    </li>
+                          <li> B] Main public steps syntax of the using {Context Api} & {useContext} method   </li>
                            
-                          <li> C] Practical steps and syntax of        </li> 
+                          <li> C] Practical steps about using {Context Api} & {useContext}  to manage state of current project {react-router} application   [react blog]  , by Re-factoring the whole appoclication  </li> 
 
-                          <li> D] VIP Notes    </li> 
+                          <li> D] VIP Notes about {Context Api} & {useContext} method   </li> 
                            
                         </ol>
                      </li> <br> <br>
@@ -1311,18 +1311,188 @@
             <header>
                 <h3> 21 State Management in React  Context API useContext  React Tutorials for Beginners concept : </h3>
             </header>
+            
+            <h1>  A] Main concept and benefites of using   {Context Api}   & {useContext}  to mangqae project states   </h1> <br>
+               <p> 1] [context api] is  about advanced tool to  manage the aplication defined state [useState , useEffect , custom hook ]  in all files . to be deifeed in just one file {DataContext.js} an being called from it [inside the DataContext Provider function  ] , using the [useContext()] built-in react hook   </p>
+
+              <p> 2] main features of using the {context api} tool :   <be>
+                <ol>
+                  <li> Due to the [prop drilling] about passing through the props into multiple levels of components     </li>  
+                </ol>                
+              </p>
+                
+              <p> 3] Main requiremnts of using  the   [context] methods : <br>
+                <ol>
+                  <li> a- inside {DataContext.js} file   : Define a new file inside the a new  folder  of the 'src' folder {src/context/DataContext.js}  : <br>
+                      <p> This file will including all props defintions statements + states names defined of all project that including the next : </p>  
+        
+                      <ul> 
+                        <li> 1- Importing  of {createContext} built-in class from the  'react' to be used in define a [DataContext] main varialbe , as next code   : <br>
+                          <code>
+                              <span class=one> </span> import { createContext } from 'react'; <br>
+                          </code>
+                        </li>    <br>
+                        
+                        <li> 2- Define {DataContext} state variabe defined as extracted value of the imported  {createContext} , with initial value of empty object  ({})  :  <br>
+                          <code> 
+                            <span class=one> </span> const DataContext = createContext({});  <br>
+                          </code>     <br>
+                        </li>   <br> 
+  
+
+                        <li>  3- {DataProvider} provider function =>  that include : <br>  
+                          <p> destructed parameters {children} to be called inside this  function           </p>  
+                          <p> all defintion statements of all states in the all project =>   [inside the DataProvider() function and before  the return ]  </p>  
+                          <p> all states props and functions names defined within the upper statements =>  [ inside the DataProvider() function and inside the return ] </p>  
+                          <p> the whole syntax of the function of  {DataProvider() } as next code   :  <br>
+                              <code> 
+                                <span class="one" ></span>  export const DataProvider = ({ children }) => {   <br> 
+                                  <span class="two" ></span> // Here to put all  state definitoins [before the return ] ... :   <br> <br>  
+                                  <span class="two" ></span>   state1 define statement     <br>    
+                                  <span class="two" ></span>   state2 define statement     <br>   
+                                  <span class="two" ></span>   state3 define statement     <br>  <br> 
+                                
+                              
+                                  <span class="two" ></span> return (    <br> 
+                                    <span class="three" ></span>  // Return the main [DataContext] with [Provider] extention ( inlcuding a value attrihute of all states names )  :   <br>  <br> 
+                                  
+                                    <span class="three" ></span>  &lt; DataContext.Provider   <br>
+                                      <span class="four" ></span> value= { { <br>    
+                                        <span class="five" ></span> // Here to put  all defined state varaibles, functions , cutoms hooks ... :    <br>
+                                        <span class="five" ></span>   stateName1      <br>    
+                                        <span class="five" ></span>   stateName2     <br>   
+                                        <span class="five" ></span>   stateName3     <br>  <br> 
+                                      
+                                      <span class="four" ></span> } }  &gt; <br> 
+                                      
+                                      <span class="four" ></span>   {children} <br> 
+                                  
+                                    <span class="three" ></span> &lt; /DataContext.Provider &gt;    <br>  
+                                
+                                  <span class="two" ></span> ) <br>
+                              
+                                <span class="one" ></span>  } <br>
+                                  
+                              </code>
+                           
+                          </p>
+                        </li>
+                        
+                        <li> </li>
+
+                      </ul>
+                  
+                  
+                  </li>  <br>  
  
-            <h1>  A]  Main concept , Rules or properties  , usages  and   mechanism of react [Custom Hooks]  beside  each of {axios , async , useEffect } : </h1> <br>
-             
+                    <li> b- inside the main [App.js] file  :   <br> 
+                        <p>  There are some configurations steps to aqiure the [DataContext] and [DataProvider] function  inside all other files in the project , as following : <br> 
+                          <ul>   
+                            <li> 1- Import the  {DataProvider()} function to be used in wrapping all returned components and Routes inside the  App function return , as following  : <br>
+                              <code>
+                                <span  class=one ></span>   import { DataProvider } from './context/DataContext'   <br>  
+                              </code>  <br>  
+                            </li>   <br>
+                             
+
+                            <li> 2- Using the imported {DataProvider} that represent the [Data Provider function ion the {DataContext.js} file] => to wrap all returned called components and routes inside the return() , and  starting with the main container element  , as following  : <br>
+                              <code>
+
+                                // This the main container element of all other elements and routes inside the App function <br>
+                                <span  class=one ></span> &lt; div className="App"> <br>
+                                  <span  class=two ></span>  &lt; DataProvider &gt; <br>
+                                    <span  class=three ></span>  &lt; Header &gt; &lt; /Header &gt; <br>
+                                    <span  class=three ></span>  &lt; Nav &gt; &lt; /Nav &gt; <br> <br>
+                                    
+                                    <span  class=three></span>  &lt;  Switch &gt; <br>
+                                      <span  class=four></span>  &lt;  Route exact path="/"   &gt; <br> 
+                                        <span  class=five></span>  &lt;  Home /&gt; <br>  
+                                      <span  class=four></span>  &lt;  /Route &gt; <br>   <br>
+
+                                      <span  class=four></span>  &lt;  Route   exact path="/post"  &gt; <br> 
+                                        <span  class=five></span>  &lt;  NewPost /&gt; <br>  
+                                      <span  class=four></span>  &lt;  /Route &gt; <br>   <br>
 
 
+                                      <span  class=four></span>  &lt;  Route    path="/edit/:id"  &gt; <br> 
+                                        <span  class=five></span>  &lt;  EditPost /&gt; <br>  
+                                      <span  class=four></span>  &lt;  /Route &gt; <br>   <br>
 
+                                      <span  class=four></span>  &lt;  Route    path="/edit/:id"  &gt; <br> 
+                                        <span  class=five></span>  &lt;   PostPage /&gt; <br>  
+                                      <span  class=four></span>  &lt;  /Route &gt; <br>   <br>
+                                                                            
+                                      <span  class=four></span>  &lt;  Route   path="/about" component={About}    &gt; <br> 
+                                      
+                                      <span  class=four></span>  &lt;  Route    path="*" component={Missing}    &gt; <br> 
+
+                                    <span  class=three></span>  &lt;/ Switch &gt; <br>
+                                                                         
+                                    <span  class=three></span>  &lt;/Footer &gt; <br>
+ 
+                                  <span  class=two ></span>  &lt;/DataProvider &gt; <br>
+ 
+                                <span  class=one ></span>  &lt; /div &gt;  <br>  
+
+                              </code>  <br>  
+                            </li>   <br>
+
+                            
+                            <li> 3- Moving  all required imports to the define all states to be used wihtin the [DataContext.js] file , inlcuding the next imoportings :    <br>
+                              <ol>
+                                <li> a) [useState, useEffect] from 'react' -> to be used to define  all  moved  states varialbes and functions        </li>
+                                <li> b) [useHistory] form 'react-router-dom'  ->     </li>
+                                <li> c) [api] from the file contains the defined dataBase </li>
+                                <li> d) [format] from  'date-fns'    </li>
+                                <li> e) [useWindowSize] & [useAxiosFetch] -> the defined custom hooks from it's paths  </li>
+                              </ol>
+                            </li>    <br>  
+                            
+                            
+                            <li> 4- moving all states defintions statments  to be managed by [context] method , into the [DataContext.js] inside {DataProvider} function and before the return() , includign the  next states :  <br> 
+                              <li> a) All states variables  =>  <br>
+                                 <ul> 
+                                   <li> const [posts, setPosts] = useState([])   </li>
+                                   <li> const [postTitle, setPostTitle] = useState(''); </li>
+                                   <li> const [postBody, setPostBody] = useState(''); </li>
+                                   <li> const [editTitle, setEditTitle] = useState('');  </li>
+                                   <li> const [editBody, setEditBody] = useState(''); </li>
+                                   <li> const [search, setSearch] = useState(''); </li>
+                                   <li> const [searchResults, setSearchResults] = useState([]);  </li>
+                                   <li> const history = useHistory();  </li>
+                                   <li> const { width } = useWindowSize(); </li>
+                                   <li> const { data, fetchError, isLoading } = useAxiosFetch('http://localhost:3500/posts');    </li>
+                                 </ul>                              
+                              </li> <br>  
+                              
+                              <li> b) All useEffect functions   =>  <br>
+                                <ul> 
+                                  <li> useEffect function of =>  [First crud operation] : {Fetching data} using custom hook {useAxiosFetch} fetching method (will be used )     </li>
+                                  <li> useEffect function of =>  [searching operation ] :  {searching operation} : Define the [useEffect()] requried for seraching operation =>  Rerendering the page by changing of [posts state]  OR  [search state]   </li>
+                                  <li> useEffect function of =>  [Second crud operation :  {posting new data item into the assigned database throug the  assigned api}   </li>
+                                  <li> useEffect function of =>  [Third crud operation] : {Deleting a certain post [id] from the api datasoure assigned by api }    </li>
+                                  <li> useEffect function of =>  [Fourth CRUD operation] :  {Modify/Edit full data item object } [not need to be inside a useEffect - because it will be executed only  when inside the [editPost] component by form submiting </li>
+                                </ul>                             
+                              </li>
+ 
+
+                          </ul> 
+                        </p>    
+                      
+
+                    </li> 
+
+                </ol>               
+            
+              
+              
+              </p>
 
             <br> <hr> <br>
  
         <!-- -------------------------------------------------------------- -->
          
-              <h1> B]  Public syntax and steps of the mechanism of react [Custom Hooks]  with using  each of {axios , async , useEffect , useState }  :  </h1>  <br>
+              <h1> B]   Main public steps syntax of the using {Context Api} & {useContext} method   :  </h1>  <br>
                  <ol> 
                   <li> First => Create the main file of the custom hook -> recommended to be inside [src/hooks/customHook.js]    </li>
                   <li> Second =>  Inside the [CustomHook.js] Custom Hook file => extablish the main custom hook function  as following : <br>  
@@ -1412,7 +1582,7 @@
               
                 <br>   <hr> <br>
         <!-- ------------------------------------------------------------- -->
-              <h1> B]  Main syntax of the mechanism steps  of react Custom Hooks {useWindowSize}  & {useAxiosFetch} with each of {axios , async , useEffect }  :  </h1>  <br>
+              <h1> B]  Practical steps about using {Context Api} & {useContext}  to manage state of current project {react-router} application   [react blog]  , by Re-factoring the whole appoclication  :  </h1>  <br>
                   <ol> 
                       <li> I] First custom hook  {useWindowSize} :  <br>
                         <ul>
@@ -1445,243 +1615,7 @@
                       </li>   <br>
 
                       <!-- ------------------------------------------------- -->
-
-                      <li>  II]  Second  custom hook  {useAxiosFetch}  :   <br>
-                        <ul>
-                            <li> (a) The main purpose of using  this custom hook :   <br>
-                              <p>  Handling fetching data from given api using [axios] library - instead of using the default method  in the [App.js] - , as following steps   :   </p>
-                            </li>
-
-
-                            <li> (b)  The main steps of fetching process using the custon hook method {useAxiosFetch}  :   <br> 
-                                  <ol>  
-                                      <li> [1] Define  the main custom hook inside the {useAxiosFetch} file  , with next steps : <br>
-                                        <ol>
-                                            <li> a) Recieving the parameter (dataUrl) by this main custom hook function , when  calling it inside the [App.js] wihtin the extrtaction , as the api url </li>
-                                            
-                                            <li> b) Define the main api probable repsonding statues [3 main variables states] of fetching , as following : <br>   
-                                              <ol> 
-                                                <li> [data , setData]              => state of returning data from the  given api => initial value : set by empty array []     </li>         
-                                                <li> [fetchError , setFetchError ] => state of returning error  from the  given api => initial value : set by 'null'  value    </li>
-                                                <li> [isLoading   , setIsLoading ] => state of while loading  data from the given api => initial value : set by false   </li>
-                                            </li>
-                                            
-                                            <li> c) Define the main useEffect function => for handling  the whole fetching steps and procedures , that including  the next steps  : <br>
-                                              <ol> 
-                                                <li> 1- Define a checking variable [based on the true] {const isMounted = true;}  => as sign of the rendering (entering the useEffect) > to be used as conditional  checking  </li>
-                                                
-                                                <li> 2- Define a variable of API token source after cancellation current value  => that will hold the api token using the [axios library] and wil be using later to set  the value  of api token from the  assinged url           </li>
-                                                
-                                                <li> 3- Define the inner (async) function of handling [fetching data] operation from the api (as  its parameter ) , according to the gotten parameter of the main custom hook function , usgin the [try-catch-finally] method , wiht next properites  : <br>   
-                                                  <ul>
-                                                    <li> Assign the {isLoading} state [as one of data fetching status] by the (true) value (to activate this status as loading data as starter steps  ) -> { setIsLoading(true) }   </li> 
-                                                    <li>  a- try{} section :  <br>
-                                                      <p> this is about connecting to the api and getting data  {statue of returning data} , and including the next setps  ;  </p>
-                                                      <ol> 
-                                                        <li> (a) Define a [response] of fetched data from given api (url : first parameter ) as a reicevned paramter form the main cutsom hook function , that has the next properties : <bf>
-                                                          <ul>
-                                                            <li> using  [await]  -> to wait for this function of getting data from the assinged api using axios get method      </li>
-                                                            <li> using [axios] -> {get} method with (2) parameters : <br>   
-                                                                <ol> 
-                                                                  <li> first parameter ->  single parameter of   (url) : the parameter of this inner function {fetchData} function         </li>
-                                                                  <li> second parameter -> object  parameter of  { assigning 'cancelToken' by  'token' fo the defined 'source'  }    </li>
-                                                                </ol>  
-                                                              </li>
-                                                          </ul> 
-                                                        </li> <br>
-        
-        
-                                                        <li> (b) assign the value of the [data] state  with conditional state of [isMounted] is 'true'  , including (2) steps  : <br> 
-                                                            <ol>   
-                                                              <li> setting the gotten data [response.data] inside the defined [data] state using it's setter function [setData]    </li>  
-                                                              <li> setting the [FetchError] state by null - incase of getting data form the api  </li>                                                    
-                                                            </ol>
-                                                        </li>
-                                                      </ol>
-                                                    </li> 
-        
-                                                    <li> b- catch(err){}   section  :   <br>
-                                                      <p> using the condition check to start getting into steps of the catching error , which is including :  <br>
-                                                        <ol> 
-                                                          <li> (a) Assign value of the [fetchError] state  in case of  catching error => { setFetchError(err.message); } </li>
-                                                          <li> (b) Setting the value of  [data] state  by empty array due we here are in the [catching error status]  => { setData([]); } </li>
-                                                        </ol>                                            
-                                                      <p> 
-                                                    </li> 
-        
-                                                    <li> c- finally{} section : <br> 
-                                                      <p> This step is a must to be executed in any case of fetching , and it including following step  :  <br>
-                                                          <p>[after fetching] Resetting the [inLoading] by  the 'false' again(whether any of the statues acheived ) - witin (2  seconds for testing ) - with condintal rendering of the  [inMounted] :  
-                                                            <span class=one > </span> isMounted && isLoading(false);  // in case of direct action 
-                                                            <span class=one > </span>  isMounted && setTimeout(() => { setIsLoading(false); } , 1500);  // in case of timed action  
-                                                          </p>
-                                                      </p>
-                                                    </li>
-                                                  </ul>  
-                                                </li>
-        
-                                                <li> 4- Calling the upper defined function {fetchData} of fetching data with passing through the main recieved parameter of the main custom hook {dataUrl} to pass it through as the inner fuciogn parameter (url) </li>
-        
-                                                <li> 5- Define cancelling the  token api using  a clean up function , to implement the steps of cancellation after finishing  fetching steps , as following : <br> 
-                                                  <ol>
-                                                    <li> Closing the checking variable {isMounted} after finishing all steps of fetching operation , by direct assign of its value =>  { isMounted = false;}     </li>
-                                                    <li> Cancelling the defined variable [source] token => { source.cancel(); }  </li>
-                                                  </ol>  
-                                                </li>
-        
-                                                 <li> 6- Returning the upper defined clean up fuction {cleanUp} inside  the useEffect call back function as it's main return  => {return cleanUp;}  </li>
-                                                 
-                                                 <li> 7- Assign the recieved parameter {dataUrl} as useEffect dependency   => to implemnte this useEffect every time the {dataUrl}  is being changed </li>
-         
-                                              </ol>                                                                     
-                                            </li>
-                                            
-        
-        
-                                            <li> d) {custom hook return} Main return of custom hook function as {object  of all defined status states of data fetching operaion } , as next code :  <br>
-                                              <code>
-                                                <span class="one"> </span> // this object will be3 used as destructured  object of all [defined status states of data fetching operaion] insiie hte use4r component {App.js}  <br>
-                                                <span class="one"></span>   return { data, fetchError, isLoading }  <br>
-                                              </code>
-                                            </li>
-                                        </ol> 
-                                      </li> <br>  <br>
-                                      
-                                      
-                                      <li>  [2] Call and Use the custom hook inside the main user Component [App.js] , with followling steps  : <br>
-                                        <ol>
-                                          <li> a- Inside the [importing section] -> Importing the required defined custom hooks {useAxiosFetch} file as following   : <br>
-                                              <code>  
-                                                <span class=one > </span> import useAxiosFetch from './hooks/useAxiosFetch';  <br>  
-                                              </code>                                           
-                                          </li> <br>     
  
-                                          <li>  b- Inside the [App.js] & before the return -> <br>
-                                              <ul>    
-                                                  <li>  1-  Define an object variable of destructured object of all returned and exported states props of custom hook { data,fetchError,isLoading} coming from  the {useAxiosFetch} custom hook , with assigning the it's parameter (baseURl : by the base url link ) => [[to be used as instead of [base Url] property inside the axios function defintion in the inside the  [posts.js] file within the old method fetching with api ]] , as following  :  <br>  
-                                                    <code> 
-                                                      <span class=one > </span>  const { data  , fetchError , isLoading  } =  useAxiosFetch('http://localhost:3500/posts'); <br>
-                                                    </code>    
-                                                  </li>   <br>
-                                              
-                                                  <li> 2- Modify the [First crud operation {Fetching data}] by => Assign the defined state of [post] by the imported destructured object {data} using the setPosts()  within a new useEffect call back function instead of old useEffect (must be delete from the App.js)   + add the  {data} as useEffect function dependency  =>  as next code  :  <br> 
-                                                      <code> 
-                                                          <span  class="one"></span>   useEffect(()=> { <br>
-                                                            <span  class="two"></span> setPosts(data)   <br>  
-                                                          <span  class="one"></span> } , [data]) <br>
-                                                      </code>
-                                                  </li>  <br>
-                                              </ul>  
-                                          </li> <br>
-                                           
-                                          <li> c- Inside the [App.js] & inside the return()  :    <br>
-                                              <p> Assign both of {fetchError} & {isLoading} variables props of Home component (inside the defined route  ) =>  by [fetchError] & [isLoading] of destructured variable that comming from the custom hook {useAxiosFetch} , as following   : <br>  
-                                                <code>
-                                                  <span class-="one" ></span>  &lt; Route exact path="/"   &gt;  <br>
-                                                    <span class-="two" ></span> &lt; Home <br>
-                                                        <span class-="three" ></span>  posts = {searchResults}   // this for activating the live searching results as the displayed data [posts] => on the main Home page <br>    
-                                                        <span class-="three" ></span> fetchError = {fetchError}  <br>  
-                                                        <span class-="three" ></span> isLoading = {isLoading} <br>
-                                                    <span class-="two" ></span> /&gt;   <br> 
-                                                  <span class-="one" ></span> &lt; /Route &gt;  <br>
-                                                </code>
-                                              </p>
-                                          </li>  
-                                        </ol>
-                                      </li>  <br>  <br>  
-
- 
-                                      <li>  III]  Modifying the component {Home.js} that using the assigned [fetchError] & [isloading] , by using the next  steps :   <br> 
-                                          <code>
-                                              <span class=one> </span> 1-adding the new assigned props in the destructed object of children porps : <br>              
-                                              <span class=one> </span>  const Home = ({ posts , fetchError , isLoading }) => {  <br> <br>               
-                                                
-                                                <span class=two> </span>  return ( <br> 
-                                                 
-                                                  <span class=three> </span> &lt; main className='Home' &gt;     <br> 
-                                                    <span class=four> </span> 2- {/* displying  the [isLoading]  state by conditional rendering */}  <br>
-                                                    <span class=four> </span> {isLoading &&  <br>
-                                                      <span class=five> </span> &lt; p className='stateMsg'&gt; Data is Loading .... &lt;/p&gt; <br>  
-                                                    <span class=four> </span> }  <br> <br>
-                                                  
-                                                    <span class=four> </span> {/* displying  the [fetchError]  state by conditional rendering */}   <br>  
-                                                    <span class=four> </span>  { !isLoading && fetchError &&  <br>
-                                                      <span class=five> </span>  &lt; p className='stateMsg' style ={{color: 'red' }}  &gt;  {fetchError} &lt; /p &gt;
-                                                    <span class=four> </span> }  <br>  <br>  
-                                                    
-                                                    <span class=four> </span> {/*  displying the fetched data [posts]  returned from the api  by conditional rendering  */}  <br> 
-                                                    <span class=four> </span> {!isLoading && !fetchError && (   <br>
-                                                      <span class=five> </span> posts.length ? &lt; Feed posts={posts} /&gt; : <br>
-                                                        <span class=six> </span> &lt; p style={{ color: 'red', marginTop: '2rem' }} &gt; No Posts  avaialable  &lt; /p &gt;     <br>
-                                                      <span class=five> </span> )  <br> 
-                                                    <span class=four> </span> }  <br>
-                                                  <span class=three> </span> &lt;/main &gt; <br> 
-                                                
-                                                <span class=two> </span>   )      <br>               
-                                              <span class=one> </span>  }    <br>  <br> 
-                                                
-                                            
-                                              <span class=one> </span>  export default Home;  <br> 
-                                        </code>
-                                      
-                                      </li>
-                                  </ol>                               
-                              </p>
-                            </li>  <br> 
- 
-                            <li> b) main requirments :   <br> 
-                              <ol>
-                                <li> 1- used inside  [main custom hook : {useWindowSize.js} ]  :  <br>
-                                  <ul> 
-                                    <li> {useEffect , useState}  => to be used ot define different variables and useEffect    </li>
-                                    <li> {axios} library  => to  be used in the next tasks  : <br>          
-                                      <ol>
-                                          <li> define the {source} variable as  an extracted from axios.CancelToken.source();     </li>    
-                                          <li> define the  {response} as extracted {get(assign the both of the  (url)  & assign the (cancelToken : source.token)  )} method from the [axios] </li>    
-                                      </ol>                              
-                                    </li>
-
-                                    <li> {async-await} method with {fetchData : async} defined inner function => for handling diffrent defined state action of all statues [data , fetchError , isLoading] </li>
-                                    
-                                    <li> {try,catch,finally} inside the previous function of {fetchData}  => to handle all of probable state of the fetching process operation with given [api]     </li>
-                                    
-                                    <li> {isMounted} the assumed defined variable => for conditional checking in each of next procedures   :  <br> 
-                                        <ol> 
-                                            <li> {try}    : [incase of successful data obtained] => handling the fetching data from the given api and source  :  <br>
-                                              <ol>
-                                                <li> defined [response] variable  with using -await-  of the main process of fetching data according the from the given api and source       </li>
-                                                <li> setting the retreived fetched data (response.data) into the [setData] defined state - after checking of the {isMounted is true}     </li>
-                                              </ol>
-                                            </li>
-                                            <li> {catch}  : [handling the catched error]         => handling the catched error  - after  checking of the {isMounted is true}    </li>
-                                            <li> {finally}: [final procedure whether each of previous action happned] => settint  the [isLoading] with false value  -  after checking of the {isMounted is true}  </li>
-                                        </ol>
-                                      </li>
-                                    
-                                      <li> {cleanUp} : defined  customized function of cancellation step procedure after finilizing all fetch steps </li>
-                                    
-                                      <li> return of the [useEffect()] function =>  returning previous defined function cancellation {cleanUp()} </li>
-
-                                      <li> main return of the custom hook function => of {object of all defined states represneting the all probable fetching resluts }       </li>
-                                  </ul>                      
-                                </li>  <br>       
-      
-                                <li> 2-  used inside [user component : {Home.js} ]  :  <br>
-                                  <ul> 
-                                    <li> Adding all defined props and exported of the custom hook here inside this component children props {posts , fetchError , isLoading} to be recieved through this component when used in the [App.js]  </li>
-                                    <li> Nested Condetional displaying of each sent prop [posts , fetchError , isLoading] </li>
-                                  </ul>                      
-                                </li>
-      
-                              </ol> 
-                            
-                            </li>   <br>
-                        </ul>
-                       
-                      </li>   <br>
-
-                      <!-- ------------------------------------------------- -->
-
  
                   </ul>
 
@@ -1692,10 +1626,9 @@
    
   
              <h1> C]   VIP Notes & online references :   </h1>            
-                <p>  The next links are public references for the both React hooks and custom hooks :  <br>
+                <p>   The next links are public references for the both React hooks and custom hooks :  <br>
                   <ul>
-                    <li> {  nikgraf.github.io/react-hooks }  => this website  provides differtent collection of   the  react hooks concept and syntax </li>
-                    <li> {   npmjs.com/package/react-use }  =>  another website  provides differtent collection of   the  react hooks concept and syntax </li>
+                  
                   </ul>
                 </p> 
                       
