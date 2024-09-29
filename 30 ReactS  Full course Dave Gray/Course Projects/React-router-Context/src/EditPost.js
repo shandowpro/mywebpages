@@ -4,10 +4,18 @@
 import React, { Fragment, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
+// importing requrired hook to use the DataContext :
+import {useContext} from 'react' ;
+  
+// importing the DataContext file to be used in this component :
+  import  DataContext  from './context/DataContext';
+  
+
 // Define the main component  functions wth sending the porps to be recived in [App.js]  : 
-const EditPost = ({
-  posts, handleEdit, editTitle, setEditTitle, editBody, setEditBody
-}) => {
+const EditPost = () => {
+
+  //  Define the main object of props to be imported from the context :  
+  const {posts, handleEdit, editTitle, setEditTitle, editBody, setEditBody} = useContext(DataContext) ;
 
   //  Define object  the dynmaic [Router id] of this item , using the  imported  useParams() hook :
   const { id } = useParams();

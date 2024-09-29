@@ -1291,13 +1291,13 @@
                 <ol type="A">
                     <li> Main points of this lesson , new method to manage States in the react {part 1} [using default built-in methods : {Context Api}   & {useContext}] : <br>
                          <ol>
-                          <li> A] Main [concept ,  benefites , requrimments  ] of using   {Context Api}   & {useContext}  to mangqae project states </li>
+                          <li> A] Main [concept , benefites , requirements ] of using {Context Api} & {useContext}  to manage project states </li>
                           
-                          <li> B] Main public steps syntax of the using {Context Api} & {useContext} method   </li>
+                          <li> B] Main public steps syntax to the use {Context Api} & {useContext} method   </li>
                            
-                          <li> C] Practical steps about using {Context Api} & {useContext}  to manage state of current project {react-router} application   [react blog]  , by Re-factoring the whole appoclication  </li> 
+                          <li> C] Practical steps about using {Context Api} & {useContext} to manage state of current project {react-router[react blog]} application  , by [[Re-factoring]] the whole application  </li> 
 
-                          <li> D] VIP Notes about {Context Api} & {useContext} method   </li> 
+                          <li> D] VIP Notes about {Context Api} & {useContext} method  </li> 
                            
                         </ol>
                      </li> <br> <br>
@@ -1312,37 +1312,44 @@
                 <h3> 21 State Management in React  Context API useContext  React Tutorials for Beginners concept : </h3>
             </header>
             
-            <h1>  A] Main concept and benefites of using   {Context Api}   & {useContext}  to mangqae project states   </h1> <br>
-               <p> 1] [context api] is  about advanced tool to  manage the aplication defined state [useState , useEffect , custom hook ]  in all files . to be deifeed in just one file {DataContext.js} an being called from it [inside the DataContext Provider function  ] , using the [useContext()] built-in react hook   </p>
+            <h1>  A]  Main [concept , benefites , requirements ] of using {Context Api} & {useContext}  to manage project states  </h1> <br>
+              <p> 1] [context] concept =>  is about advanced tool to  manage the application defined state [useState , useEffect , custom hook] in all files to be defined in just one file {DataContext.js} an being called from it [ through  the DataContext Provider function] ,
+                 using the [useContext()] built-in react hook in the component using this context method to cal hte prop s instead of using defualt prop driling method    </p>    <br> 
 
-              <p> 2] main features of using the {context api} tool :   <be>
+              <p> 2] main features of using the {context api} method to call the props through components  :   <br>
                 <ol>
-                  <li> Due to the [prop drilling] about passing through the props into multiple levels of components     </li>  
+                  <li> Better alternative method instead of using [prop drilling]  , specially when  passing the props through multiple levels of components  </li>  
+                  <li> Cleaner syntax of props definitions statements and importings inside the component file  , specially the  main  assembling component {App.js}        </li>  
+                  <li> Simple required  steps to using context method    </li>  
+                  <li> Easy way to call the Add/assign the props of each component wihtin the DataContext provider function    </li>  
+                  <li> Easy way to define and call the assigned component's props within the DataContext provider function , from inside it's component   </li>  
                 </ol>                
-              </p>
+              </p>  <br> 
                 
-              <p> 3] Main requiremnts of using  the   [context] methods : <br>
+              <p> 3] Main requirements of using the [context] methods : <br>
                 <ol>
-                  <li> a- inside {DataContext.js} file   : Define a new file inside the a new  folder  of the 'src' folder {src/context/DataContext.js}  : <br>
-                      <p> This file will including all props defintions statements + states names defined of all project that including the next : </p>  
-        
-                      <ul> 
-                        <li> 1- Importing  of {createContext} built-in class from the  'react' to be used in define a [DataContext] main varialbe , as next code   : <br>
-                          <code>
-                              <span class=one> </span> import { createContext } from 'react'; <br>
-                          </code>
-                        </li>    <br>
-                        
-                        <li> 2- Define {DataContext} state variabe defined as extracted value of the imported  {createContext} , with initial value of empty object  ({})  :  <br>
+                  <li> (a) inside {DataContext.js} file => Define a new file inside the a new folder of the 'src' folder {src/context/DataContext.js} :<br>
+                      <p> This file will include  : <br>
+                        <li> (1) Importings : <br>
+                          <ol>
+                            <li> a- Importing  of {createContext} built-in class from the  'react' to be used in define a [DataContext] main varialbe , as next code   : <br>
+                                <code>
+                                    <span class=one> </span> import { createContext } from 'react'; <br>
+                                </code>
+                              </li>  <br>
+                            <li> b- Importing all requirements of all props defined , [copied from all it's component file ]    </li>
+                          </ol>
+                        </li> <br> 
+                                
+                        <li> (2) Define {DataContext} state variable defined as extracted value of the imported  {createContext} , with initial value of empty object  ({})  :  <br>
                           <code> 
                             <span class=one> </span> const DataContext = createContext({});  <br>
                           </code>     <br>
                         </li>   <br> 
-  
 
-                        <li>  3- {DataProvider} provider function =>  that include : <br>  
-                          <p> destructed parameters {children} to be called inside this  function           </p>  
-                          <p> all defintion statements of all states in the all project =>   [inside the DataProvider() function and before  the return ]  </p>  
+                        <li>  (3) Define   {DataProvider} function =>  that include : <br>  
+                          <p> accumulated destructed parameter {children} to be called inside this function  </p>  
+                          <p> all defintion statements of all states in the all project =>  [inside the DataProvider() function and before the return]  </p>  
                           <p> all states props and functions names defined within the upper statements =>  [ inside the DataProvider() function and inside the return ] </p>  
                           <p> the whole syntax of the function of  {DataProvider() } as next code   :  <br>
                               <code> 
@@ -1358,10 +1365,13 @@
                                   
                                     <span class="three" ></span>  &lt; DataContext.Provider   <br>
                                       <span class="four" ></span> value= { { <br>    
-                                        <span class="five" ></span> // Here to put  all defined state varaibles, functions , cutoms hooks ... :    <br>
-                                        <span class="five" ></span>   stateName1      <br>    
-                                        <span class="five" ></span>   stateName2     <br>   
-                                        <span class="five" ></span>   stateName3     <br>  <br> 
+                                        <span class="five" ></span> // Here to put  all defined state varaibles, functions , cutoms hooks  of all copnets usign the context method  :    <br>
+                                        <span class="five" ></span>   // props of component 1 :  <br>    
+                                        <span class="five" ></span>   stateName1 , stateName2 , stateName3 ,    <br>    
+                                        <span class="five" ></span>   // props of component 2 : <br>    
+                                        <span class="five" ></span>    stateName4 , stateName5 , stateName6 ,  <br>   
+                                        <span class="five" ></span>   // props of component 3 : <br>    
+                                        <span class="five" ></span>  stateName7 , stateName8 , stateName9       <br>  <br> 
                                       
                                       <span class="four" ></span> } }  &gt; <br> 
                                       
@@ -1374,263 +1384,250 @@
                                 <span class="one" ></span>  } <br>
                                   
                               </code>
-                           
                           </p>
-                        </li>
+                        </li>    
+                      </p>              
+                  </li>  
+                  
+                  <li> (b) inside the main assembling component  [App.js] file  :   <br> 
+                    <p>  There are some configurations steps to aqiure the [DataContext] and [DataProvider] function  inside all other files in the project , as following : <br> 
+                      <ul>   
+                        <li> 1- Import the  {DataProvider()} function to be used in wrapping all returned components and Routes inside the  App function return , as following  : <br>
+                          <code>
+                            <span  class=one ></span>   import { DataProvider } from './context/DataContext'   <br>  
+                          </code>  <br>  
+                        </li>   <br>
+                          
+  
+                        <li> 2- Using the imported {DataProvider} that represent the [Data Provider function ion the {DataContext.js} file] =>
+                           to wrap all returned called components and routes inside the return() of {App()}  , and  starting after  the main container element , as following  : <br>
+                          <code>
+  
+                            // This the main container element of all other elements and routes inside the App function <br>
+                            <span  class=one ></span> &lt; div className="App"> <br>
+                              <span  class=two ></span>  &lt; DataProvider &gt; <br>
+                                <span  class=three ></span>  &lt; Header &gt; &lt; /Header &gt; <br>
+                                <span  class=three ></span>  &lt; Nav &gt; &lt; /Nav &gt; <br> <br>
+                                
+                                <span  class=three></span>  &lt;  Switch &gt; <br>
+                                  <span  class=four></span>  &lt;  Route exact path="/"   &gt; <br> 
+                                    <span  class=five></span>  &lt;  Home /&gt; <br>  
+                                  <span  class=four></span>  &lt;  /Route &gt; <br>   <br>
+  
+                                  <span  class=four></span>  &lt;  Route   exact path="/post"  &gt; <br> 
+                                    <span  class=five></span>  &lt;  NewPost /&gt; <br>  
+                                  <span  class=four></span>  &lt;  /Route &gt; <br>   <br>
+  
+  
+                                  <span  class=four></span>  &lt;  Route    path="/edit/:id"  &gt; <br> 
+                                    <span  class=five></span>  &lt;  EditPost /&gt; <br>  
+                                  <span  class=four></span>  &lt;  /Route &gt; <br>   <br>
+  
+                                  <span  class=four></span>  &lt;  Route    path="/edit/:id"  &gt; <br> 
+                                    <span  class=five></span>  &lt;   PostPage /&gt; <br>  
+                                  <span  class=four></span>  &lt;  /Route &gt; <br>   <br>
+                                                                        
+                                  <span  class=four></span>  &lt;  Route   path="/about" component={About}    &gt; <br> 
+                                  
+                                  <span  class=four></span>  &lt;  Route    path="*" component={Missing}    &gt; <br> 
+  
+                                <span  class=three></span>  &lt;/ Switch &gt; <br>
+                                                                      
+                                <span  class=three></span>  &lt;/Footer &gt; <br>
+  
+                              <span  class=two ></span>  &lt;/DataProvider &gt; <br>
+  
+                            <span  class=one ></span>  &lt; /div &gt;  <br>  
+  
+                          </code>  <br>  
+                        </li>   <br>
+  
                         
-                        <li> </li>
-
-                      </ul>
-                  
-                  
-                  </li>  <br>  
- 
-                    <li> b- inside the main [App.js] file  :   <br> 
-                        <p>  There are some configurations steps to aqiure the [DataContext] and [DataProvider] function  inside all other files in the project , as following : <br> 
-                          <ul>   
-                            <li> 1- Import the  {DataProvider()} function to be used in wrapping all returned components and Routes inside the  App function return , as following  : <br>
-                              <code>
-                                <span  class=one ></span>   import { DataProvider } from './context/DataContext'   <br>  
-                              </code>  <br>  
-                            </li>   <br>
-                             
-
-                            <li> 2- Using the imported {DataProvider} that represent the [Data Provider function ion the {DataContext.js} file] => to wrap all returned called components and routes inside the return() , and  starting with the main container element  , as following  : <br>
-                              <code>
-
-                                // This the main container element of all other elements and routes inside the App function <br>
-                                <span  class=one ></span> &lt; div className="App"> <br>
-                                  <span  class=two ></span>  &lt; DataProvider &gt; <br>
-                                    <span  class=three ></span>  &lt; Header &gt; &lt; /Header &gt; <br>
-                                    <span  class=three ></span>  &lt; Nav &gt; &lt; /Nav &gt; <br> <br>
-                                    
-                                    <span  class=three></span>  &lt;  Switch &gt; <br>
-                                      <span  class=four></span>  &lt;  Route exact path="/"   &gt; <br> 
-                                        <span  class=five></span>  &lt;  Home /&gt; <br>  
-                                      <span  class=four></span>  &lt;  /Route &gt; <br>   <br>
-
-                                      <span  class=four></span>  &lt;  Route   exact path="/post"  &gt; <br> 
-                                        <span  class=five></span>  &lt;  NewPost /&gt; <br>  
-                                      <span  class=four></span>  &lt;  /Route &gt; <br>   <br>
-
-
-                                      <span  class=four></span>  &lt;  Route    path="/edit/:id"  &gt; <br> 
-                                        <span  class=five></span>  &lt;  EditPost /&gt; <br>  
-                                      <span  class=four></span>  &lt;  /Route &gt; <br>   <br>
-
-                                      <span  class=four></span>  &lt;  Route    path="/edit/:id"  &gt; <br> 
-                                        <span  class=five></span>  &lt;   PostPage /&gt; <br>  
-                                      <span  class=four></span>  &lt;  /Route &gt; <br>   <br>
-                                                                            
-                                      <span  class=four></span>  &lt;  Route   path="/about" component={About}    &gt; <br> 
-                                      
-                                      <span  class=four></span>  &lt;  Route    path="*" component={Missing}    &gt; <br> 
-
-                                    <span  class=three></span>  &lt;/ Switch &gt; <br>
-                                                                         
-                                    <span  class=three></span>  &lt;/Footer &gt; <br>
- 
-                                  <span  class=two ></span>  &lt;/DataProvider &gt; <br>
- 
-                                <span  class=one ></span>  &lt; /div &gt;  <br>  
-
-                              </code>  <br>  
-                            </li>   <br>
-
-                            
-                            <li> 3- Moving  all required imports to the define all states to be used wihtin the [DataContext.js] file , inlcuding the next imoportings :    <br>
-                              <ol>
-                                <li> a) [useState, useEffect] from 'react' -> to be used to define  all  moved  states varialbes and functions        </li>
-                                <li> b) [useHistory] form 'react-router-dom'  ->     </li>
-                                <li> c) [api] from the file contains the defined dataBase </li>
-                                <li> d) [format] from  'date-fns'    </li>
-                                <li> e) [useWindowSize] & [useAxiosFetch] -> the defined custom hooks from it's paths  </li>
-                              </ol>
-                            </li>    <br>  
-                            
-                            
-                            <li> 4- moving all states defintions statments  to be managed by [context] method , into the [DataContext.js] inside {DataProvider} function and before the return() , includign the  next states :  <br> 
-                              <li> a) All states variables  =>  <br>
-                                 <ul> 
-                                   <li> const [posts, setPosts] = useState([])   </li>
-                                   <li> const [postTitle, setPostTitle] = useState(''); </li>
-                                   <li> const [postBody, setPostBody] = useState(''); </li>
-                                   <li> const [editTitle, setEditTitle] = useState('');  </li>
-                                   <li> const [editBody, setEditBody] = useState(''); </li>
-                                   <li> const [search, setSearch] = useState(''); </li>
-                                   <li> const [searchResults, setSearchResults] = useState([]);  </li>
-                                   <li> const history = useHistory();  </li>
-                                   <li> const { width } = useWindowSize(); </li>
-                                   <li> const { data, fetchError, isLoading } = useAxiosFetch('http://localhost:3500/posts');    </li>
-                                 </ul>                              
-                              </li> <br>  
-                              
-                              <li> b) All useEffect functions   =>  <br>
-                                <ul> 
-                                  <li> useEffect function of =>  [First crud operation] : {Fetching data} using custom hook {useAxiosFetch} fetching method (will be used )     </li>
-                                  <li> useEffect function of =>  [searching operation ] :  {searching operation} : Define the [useEffect()] requried for seraching operation =>  Rerendering the page by changing of [posts state]  OR  [search state]   </li>
-                                  <li> useEffect function of =>  [Second crud operation :  {posting new data item into the assigned database throug the  assigned api}   </li>
-                                  <li> useEffect function of =>  [Third crud operation] : {Deleting a certain post [id] from the api datasoure assigned by api }    </li>
-                                  <li> useEffect function of =>  [Fourth CRUD operation] :  {Modify/Edit full data item object } [not need to be inside a useEffect - because it will be executed only  when inside the [editPost] component by form submiting </li>
-                                </ul>                             
-                              </li>
- 
-
-                          </ul> 
-                        </p>    
+                        <li> 3- Moving all required imports to the define all states to be used wihtin the [DataContext.js] file , inlcuding the next imoportings :    <br>
+                          <ol>
+                            <li> a) [useState, useEffect] from 'react' -> to be used to define  all  moved  states varialbes and functions        </li>
+                            <li> b) [useHistory] form 'react-router-dom'  ->     </li>
+                            <li> c) [api] from the file contains the defined dataBase </li>
+                            <li> d) [format] from  'date-fns'    </li>
+                            <li> e) [useWindowSize] & [useAxiosFetch] -> the defined custom hooks from it's paths  </li>
+                          </ol>
+                        </li>    <br>  
+                        
+                        
+                        <li> 4- moving all states defintions statments  to be managed by [context] method , into the [DataContext.js] inside {DataProvider} function and before the return() , includign the  next states :  <br> 
+                          <li> a) All states variables  =>  <br>
+                              <ul> 
+                                <li> const [posts, setPosts] = useState([])   </li>
+                                <li> const [postTitle, setPostTitle] = useState(''); </li>
+                                <li> const [postBody, setPostBody] = useState(''); </li>
+                                <li> const [editTitle, setEditTitle] = useState('');  </li>
+                                <li> const [editBody, setEditBody] = useState(''); </li>
+                                <li> const [search, setSearch] = useState(''); </li>
+                                <li> const [searchResults, setSearchResults] = useState([]);  </li>
+                                <li> const history = useHistory();  </li>
+                                <li> const { width } = useWindowSize(); </li>
+                                <li> const { data, fetchError, isLoading } = useAxiosFetch('http://localhost:3500/posts');    </li>
+                              </ul>                              
+                          </li> <br>  
+                          
+                          <li> b) All useEffect functions   =>  <br>
+                            <ul> 
+                              <li> useEffect function of =>  [First crud operation] : {Fetching data} using custom hook {useAxiosFetch} fetching method (will be used )     </li>
+                              <li> useEffect function of =>  [searching operation ] :  {searching operation} : Define the [useEffect()] requried for seraching operation =>  Rerendering the page by changing of [posts state]  OR  [search state]   </li>
+                              <li> useEffect function of =>  [Second crud operation :  {posting new data item into the assigned database throug the  assigned api}   </li>
+                              <li> useEffect function of =>  [Third crud operation] : {Deleting a certain post [id] from the api datasoure assigned by api }    </li>
+                              <li> useEffect function of =>  [Fourth CRUD operation] :  {Modify/Edit full data item object } [not need to be inside a useEffect - because it will be executed only  when inside the [editPost] component by form submiting </li>
+                            </ul>                             
+                          </li>
+  
+  
+                      </ul> 
+                    </p>    
+                    
+                  </li>    <br>
+                    
+                    
+                  <li> (c) inside {user component}  file [that using the context method  to call it' props ] :  <br>
                       
+                    <p> Require the next confiturations steps  : <br>
+                      <ol> 
+                        <li> (1) Importings :   <br>
+                          <ul> 
+                            <li> a- import the main file that including all defined and assigned props] {DataContext.js} hook => <br>
+                               <code>
+                                <span class="one"> </span>   import  DataContext  from './hooks/DataContext' ;   <br>
+                              </code>
+                            </li>  <br>  
 
-                    </li> 
+                            <li> b- import the {useContext} hook => to be used to defined each of props of this component  :  <br>
+                              <code>
+                                <span class="one"> </span>   import {useContext} from 'react' ;   <br>
+                              </code>
+                           </li>
+                          </ul>
+                        </li>   <br> 
 
-                </ol>               
-            
-              
-              
+                        
+                        <li> (2) functional component's  parameters :  <br>     
+                          <p> Remove all destructed props from inside the main paramters [that will be called using the context method ] </p>
+                        </li> 
+                        
+                        <li> (3) Define an object of all this component props to be called from imported DataContext file [define all props in one object] -> [inside the main funcitonal component & before the return ] :   <br>     
+                          <span class="one"> </span>  const {propName1 , propName2 , propName3}  = useContext(DataContext)   <br> 
+                        </li> 
+                         
+                      </ol>
+                    </p>
+                    
+                  </li>
+                
+                </ol> <br>  
               </p>
-
+ 
             <br> <hr> <br>
  
         <!-- -------------------------------------------------------------- -->
          
-              <h1> B]   Main public steps syntax of the using {Context Api} & {useContext} method   :  </h1>  <br>
-                 <ol> 
-                  <li> First => Create the main file of the custom hook -> recommended to be inside [src/hooks/customHook.js]    </li>
-                  <li> Second =>  Inside the [CustomHook.js] Custom Hook file => extablish the main custom hook function  as following : <br>  
-                    <ul>
-                        <li> 1]  Importing  section => importing the required classes or other builtin react hooks => such as  { useState , useEffect , Axios } which will be used inside the current custom hook fuction definitions and return  </li>
-                        
-                        <li> 2]  Inside of the [customHook()] Defined functional hook [could include parameters]  : <br> 
-                            <ol>     
-                              <li> a] First inner section [before {useEffect} ] => may include several varialbes definition [states] to be used inside the  useEffect function </li> 
-                              <li> b] Second inner section [inside {useEffect} ]  =>  can include certain steps or procedues as following  :     <br>
-                                <ul>     
-                                  <li> Can include several react states  variables defintions </li>
-                                  <li> Can include normal inner function that using upper defined variables  =>  could include :    <br>
-                                      <ol> 
-                                        <li> This inner function may be defined  as (async)    </li>
-                                        <li> This inner function can have parmerter(s)   </li>
-                                        <li> This inner function may inclue a syntax of {try-catch-finally}  -> to manage  procedures with it </li>
-                                        <li> This inner function can use the previous defined states and other functions as bulding a certain steps of procedures  </li>
-                                        <li> This inner function could include a certain procedure of [cleaning up seperated  function or this function's return ] the upper setting values , to be ready for another calling of this custom hook </li>
-                                        <li> This inner function Must have a return of as certain value or defined state after being assgined hanlded  </li>
-                                        <li> After defining this inner function =>  Must being called  (inside the useEfect) to be executed while executing the useEffect    </li>
-                                        <li> While calling this inner function can use one of upper defined state(s) as it's parameter    </li>
-                                      </ol>
-                                  </li>
-  
-                                  <li> [useEffect dependencies] => without || with one || with many dependencies     </li>
-                                </ul>                                
-                              </li>   <br>
-                              
-                              <li> c] After the [useEffect] & inside the main custom hook function :   <br> 
-                                  <p> almost include the return of main custom hook function , which can be as following  => <br>  
-                                     <ol> 
-                                        <li> could be a single value   </li>
-                                        <li> could be as object of several variables values  defined statue value after being handleed within upper   </li>
-                                     </ol>
-                                  </p>
-                              </li>
-                            </ol>                         
-                        </li>  <br>
-
-                        <li> 3] Exporting the main custom Hook function </li>
-                    </ul>                
-                  </li>  <br> <hr>
-
-                  <li> Third => Applying and using the defined Custom Hook inside the user component , with following steps  :   <br> 
-                      <ol> 
-                          <li> 1- [importing section] :  importing the defined [custom hook file] inside the user component => before the functional component  , as next code :  <br>
-                            <code> 
-                                <span class="one"></span> import  useCustomHook from  './hooks/useCustomHook' ;   <br> 
-                            </code>  
-                          </li> <br><br> 
-                          
-                          <li> 2- [ inside the main user functional component and before the return  ] :  Define a destrucured object  as  exteacted value from imported custom hook =>  inside the functional component , as next code :  <br>
-                            <code> 
-                                <span class="one"></span> const  {varName } =  useCutomHook() ; =>  [ define a single destrucuterd object with NO parameter ] <br> 
-                                <span class="one"></span> const  {varName } =  useCutomHook( VarState) ; => [  define  a single destrucuterd  object with  assigned parameter with value of defined ]   <br> 
-                                <span class="one"></span> const  {varName1 , varName2 , varName3 }  =  useCutomHook() ;  => [ define  several destrucuterd  object with NO parameters ]   <br> 
-                            </code>    <br> 
-                          </li> <br><br> 
-                          
-                          <li> 3- [ inside the main  user functional component  & before the return   ] : in some cases we can Define a useEffect including one or more of desturcted variable to us it as a vlue of some defined state in this user component ,   from ht imported custom hook inside it  :  <br>
-                            <code> 
-                                <span class="one"></span> useEffect(() => {      <br>
-                                  <span class="two"></span>   setState(destrcutedVar)  ;   <br> 
-                                <span class="one"></span> })  <br> 
-                            </code>    <br> 
-                          </li>   <br><br> 
-
-                          <li> 4- [ inside the main user functional component &  inside the return ] :  passsing through some or all  into antoher difned called component  :  <br>
-                            <code> 
-                              <span class="one"></span>  &lt; Comp   <br>
-                                <span class="two"></span> prop1 = {destrcutedVar1} <br>
-                                <span class="two"></span> prop2 = {destrcutedVar2}  <br>
-                              <span class="one"></span>  / &gt;   <br>
-                            </code>    <br> 
-                          </li>   <br><br> 
-
-                          <li> 5- [ inside the  component that recieving the passed through the desructured props ]  :  <br>
-                            <code> 
-                              <span class="one"></span>   const Comp  = ({prop1 , prop2) => {}      <br>
-                            </code>    <br> 
-                          </li>   <br><br>
-                      </ol>                  
-                  </li>
-  
-                </ol>              
-              
-                <br>   <hr> <br>
-        <!-- ------------------------------------------------------------- -->
-              <h1> B]  Practical steps about using {Context Api} & {useContext}  to manage state of current project {react-router} application   [react blog]  , by Re-factoring the whole appoclication  :  </h1>  <br>
-                  <ol> 
-                      <li> I] First custom hook  {useWindowSize} :  <br>
-                        <ul>
-                            <li> (a) The main purpose of using  this custom hook :   <br>
-                              <p> displaying a responsive icon [mobile , tablet , laptop ] of the current window width , according to the width change   </p>
-                            </li>  <br> 
-
-                            <li> (b) main requirments :   <br> 
-                              <ol>
-                                <li> 1- used inside  [main custom hook : {useWindowSize.js} ]  :  <br>
-                                  <ul> 
-                                    <li> {useEffect , useState}  => to be used ot define different variables and useEffect    </li>
-                                    <li> {window.addEventListener}  => to  add the 'reize' event to the window object DOM  +  deifend handle function of changing size as a parameter    </li>
-                                    <li> {window.removeEventListener}  => to  remove the 'reize' event from the window object DOM  +  deifend handle function of changing size as a parameter => as return of main useEffect csallback function </li>
-                                    <li>  main return of the custom hook function  =>  the width  state value [windowSize] to be used inside the useer component {App.js}  -> {Header.js}   </li>
-                                  </ul>                      
-                                </li>    
-      
-                                <li> 2-  used inside [user component : {Header.js} ]  :  <br>
-                                  <ul> 
-                                    <li> {react-icons} library => to be used for cointediaonal  call the responsive width icon {FaLaptop, FaTabletAlt, FaMobileAlt}     </li>
-                                  </ul>                      
-                                </li>
-      
-                              </ol> 
-                            
-                            </li>   <br>
-                        </ul>
-                       
-                      </li>   <br>
-
-                      <!-- ------------------------------------------------- -->
- 
- 
-                  </ul>
-
-              <hr> <br>  <hr> <br>            
-              <!--  --------------------------------------------------------  -->             
-              <!-- -------------------------------------------------------- -->   
-             <!--  --------------------------------------------------------  -->
-   
-  
-             <h1> C]   VIP Notes & online references :   </h1>            
-                <p>   The next links are public references for the both React hooks and custom hooks :  <br>
+            <h1> B]  Main public steps syntax to  use {Context Api} & {useContext} method   :  </h1>  <br>
+                <ol> 
+                <li> First => Create the main file of the custom hook -> recommended to be inside [src/hooks/customHook.js]    </li>
+                <li> Second =>  Inside the [CustomHook.js] Custom Hook file => extablish the main custom hook function  as following : <br>  
                   <ul>
-                  
-                  </ul>
-                </p> 
+                      <li> 1]  Importing  section => importing the required classes or other builtin react hooks => such as  { useState , useEffect , Axios } which will be used inside the current custom hook fuction definitions and return  </li>
+                      
+                      <li> 2]  Inside of the [customHook()] Defined functional hook [could include parameters]  : <br> 
+                          <ol>     
+                            <li> a] First inner section [before {useEffect} ] => may include several varialbes definition [states] to be used inside the  useEffect function </li> 
+                            <li> b] Second inner section [inside {useEffect} ]  =>  can include certain steps or procedues as following  :     <br>
+                              <ul>     
+                                <li> Can include several react states  variables defintions </li>
+                                <li> Can include normal inner function that using upper defined variables  =>  could include :    <br>
+                                    <ol> 
+                                      <li> This inner function may be defined  as (async)    </li>
+                                      <li> This inner function can have parmerter(s)   </li>
+                                      <li> This inner function may inclue a syntax of {try-catch-finally}  -> to manage  procedures with it </li>
+                                      <li> This inner function can use the previous defined states and other functions as bulding a certain steps of procedures  </li>
+                                      <li> This inner function could include a certain procedure of [cleaning up seperated  function or this function's return ] the upper setting values , to be ready for another calling of this custom hook </li>
+                                      <li> This inner function Must have a return of as certain value or defined state after being assgined hanlded  </li>
+                                      <li> After defining this inner function =>  Must being called  (inside the useEfect) to be executed while executing the useEffect    </li>
+                                      <li> While calling this inner function can use one of upper defined state(s) as it's parameter    </li>
+                                    </ol>
+                                </li>
+
+                                <li> [useEffect dependencies] => without || with one || with many dependencies     </li>
+                              </ul>                                
+                            </li>   <br>
+                            
+                            <li> c] After the [useEffect] & inside the main custom hook function :   <br> 
+                                <p> almost include the return of main custom hook function , which can be as following  => <br>  
+                                    <ol> 
+                                      <li> could be a single value   </li>
+                                      <li> could be as object of several variables values  defined statue value after being handleed within upper   </li>
+                                    </ol>
+                                </p>
+                            </li>
+                          </ol>                         
+                      </li>  <br>
+
+                      <li> 3] Exporting the main custom Hook function </li>
+                  </ul>                
+                </li>  <br> <hr>
+
+                <li> Third => Applying and using the defined Custom Hook inside the user component , with following steps  :   <br> 
+                    <ol> 
+                        <li> 1- [importing section] :  importing the defined [custom hook file] inside the user component => before the functional component  , as next code :  <br>
+                          <code> 
+                              <span class="one"></span> import  useCustomHook from  './hooks/useCustomHook' ;   <br> 
+                          </code>  
+                        </li> <br><br> 
+                        
+                        <li> 2- [ inside the main user functional component and before the return  ] :  Define a destrucured object  as  exteacted value from imported custom hook =>  inside the functional component , as next code :  <br>
+                          <code> 
+                              <span class="one"></span> const  {varName } =  useCutomHook() ; =>  [ define a single destrucuterd object with NO parameter ] <br> 
+                              <span class="one"></span> const  {varName } =  useCutomHook( VarState) ; => [  define  a single destrucuterd  object with  assigned parameter with value of defined ]   <br> 
+                              <span class="one"></span> const  {varName1 , varName2 , varName3 }  =  useCutomHook() ;  => [ define  several destrucuterd  object with NO parameters ]   <br> 
+                          </code>    <br> 
+                        </li> <br><br> 
+                        
+                        <li> 3- [ inside the main  user functional component  & before the return   ] : in some cases we can Define a useEffect including one or more of desturcted variable to us it as a vlue of some defined state in this user component ,   from ht imported custom hook inside it  :  <br>
+                          <code> 
+                              <span class="one"></span> useEffect(() => {      <br>
+                                <span class="two"></span>   setState(destrcutedVar)  ;   <br> 
+                              <span class="one"></span> })  <br> 
+                          </code>    <br> 
+                        </li>   <br><br> 
+
+                        <li> 4- [ inside the main user functional component &  inside the return ] :  passsing through some or all  into antoher difned called component  :  <br>
+                          <code> 
+                            <span class="one"></span>  &lt; Comp   <br>
+                              <span class="two"></span> prop1 = {destrcutedVar1} <br>
+                              <span class="two"></span> prop2 = {destrcutedVar2}  <br>
+                            <span class="one"></span>  / &gt;   <br>
+                          </code>    <br> 
+                        </li>   <br><br> 
+
+                        <li> 5- [ inside the  component that recieving the passed through the desructured props ]  :  <br>
+                          <code> 
+                            <span class="one"></span>   const Comp  = ({prop1 , prop2) => {}      <br>
+                          </code>    <br> 
+                        </li>   <br><br>
+                    </ol>                  
+                </li>
+
+              </ol>              
+            <br>   <hr> <br>
+        <!-- ------------------------------------------------------------- -->
+            <h1> C]  Practical steps about using {Context Api} & {useContext} to manage state of current project {react-router[react blog]} application  , by [[Re-factoring]] the whole application    :  </h1>  <br>
+              <p>  as the in the  project files .....     </p>
+            <hr> <br>  <hr> <br>            
+              
+         <!--  --------------------------------------------------------  -->
+   
+             <h1> D]  VIP Notes  about using [context] method   :   </h1>              
+                <ul>
+                  <li> Inside the main folder of [hooks]  => it might be include several files of  {dataContext} of the same project  </li>
+                  <li> In the main {App.js} => we may not to wrap the imported  {DataProvider} function over the components that not call it's props via the context method] </li>
+                </ul>
                       
             <!--  --------------------------------------------------------  -->
 

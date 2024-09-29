@@ -14,7 +14,16 @@ import React from 'react'
 
 import Feed from './Feed'
 
-const Home = ({ posts , fetchError , isLoading }) => {
+
+// importing the main required hook and file  for using [context state management method] :  
+import {useContext} from 'react' ;
+import DataContext  from './context/DataContext' ;
+
+ 
+
+const Home = () => {
+  const { searchResults , fetchError , isLoading } = useContext(DataContext); 
+ 
   return (
     <main className='Home' >
        {/* displying  the [isLoading]  state by conditional rendering */} 
@@ -29,7 +38,7 @@ const Home = ({ posts , fetchError , isLoading }) => {
       
       {/*  displying the fetched data [posts]  returned from the api  by conditional rendering    */} 
       {!isLoading && !fetchError && ( 
-           posts.length ? <Feed posts={posts} /> :
+          searchResults.length ? <Feed posts={searchResults} /> :
             <p style={{ color: 'red', marginTop: '2rem' }} > No Posts  avaialable  </p>
         )
       }

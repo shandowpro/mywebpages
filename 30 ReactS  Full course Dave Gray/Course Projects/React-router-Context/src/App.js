@@ -38,7 +38,7 @@
 */
 
 // Importing the reqiured hooks :
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 // Importing the main Fixed components : 
 import Header from './Header';
@@ -56,82 +56,85 @@ import Missing from './Missing';    // the 404 Error  Router page
 
 
 
-// importing the DataProvider  of all the defiend state => to be use it to wrap all App function's called components and routers :    
+// importing the {DataProvider } function [the provider function of  all assinged props inside] => to use it to wrap all App function's called components and routers : 
 import { DataProvider } from './context/DataContext'
 
  
 // importing the required classes and hooks for the routering  : 
-import { Route, Switch, useHistory } from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
+
+// importing {useHistory} to use it in redircting wihtin a cetain position : 
+// import { useHistory } from 'react-router-dom';
 
 
 // import the defined api by axios [api: as custom name] from the api difinition file    : 
-import api from './api/posts';
+// import api from './api/posts';
 
 
 // importing the required classes from [date-fns] library  : 
-import { format } from 'date-fns';
+// import { format } from 'date-fns';
 
 // Importing the required defined custom hooks :
-import useWindowSize from './hooks/useWindowSize';
+// import useWindowSize from './hooks/useWindowSize';
 
 // Importing the required defined custom hooks :
-import useAxiosFetch from './hooks/useAxiosFetch';
+// import useAxiosFetch from './hooks/useAxiosFetch';
  
 
 function App() {
 
   // Define a variable of detructured object of {width} to be used and called  passed prop to the {width} :
-  const { width } = useWindowSize();
+  // const { width } = useWindowSize();
 
   // Define a variable of destructured object of all exported states props  { data,fetchError,isLoading} coming from  the {useAxiosFetch} custom hook ,with assging the baseURl instead of the using the one deinfeid inside  the  [posts.js ]  :
-  const { data, fetchError, isLoading } = useAxiosFetch('http://localhost:3500/posts');
+  // const { data, fetchError, isLoading } = useAxiosFetch('http://localhost:3500/posts');
 
 
   // 1- Define a variable of empty array of objects -> to be obtianed from the assigned  [api] and [db.json] datasource   :
-  const [posts, setPosts] = useState([
-    // {
-    //   id: 1,
-    //   title:
-    //    'First Post',
-    //   dateTime: '2/1/2020',
-    //   body: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
-    // },
-    // {
-    //   id: 2,
-    //   title: 'Second Post',
-    //   dateTime: '20/10/2021',
-    //   body: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
-    // },
-    // {
-    //   id: 3,
-    //   title: 'Third Post',
-    //   dateTime: '2/12/2022',
-    //   body: 'ccccccccccccccccccccccc'
-    // }
-  ]);
+  // const [posts, setPosts] = useState([
+  //   // {
+  //   //   id: 1,
+  //   //   title:
+  //   //    'First Post',
+  //   //   dateTime: '2/1/2020',
+  //   //   body: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+  //   // },
+  //   // {
+  //   //   id: 2,
+  //   //   title: 'Second Post',
+  //   //   dateTime: '20/10/2021',
+  //   //   body: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+  //   // },
+  //   // {
+  //   //   id: 3,
+  //   //   title: 'Third Post',
+  //   //   dateTime: '2/12/2022',
+  //   //   body: 'ccccccccccccccccccccccc'
+  //   // }
+  // ]);
 
 
   // 2- Defining required states for [add/creating a new post] [title] and [body]   :
-  const [postTitle, setPostTitle] = useState('');
-  const [postBody, setPostBody] = useState('');
+  // const [postTitle, setPostTitle] = useState('');
+  // const [postBody, setPostBody] = useState('');
 
 
   // 3- Defining required states for [ modify/edit an existed post] [title] and [body]   :
-  const [editTitle, setEditTitle] = useState('');
-  const [editBody, setEditBody] = useState('');
+  // const [editTitle, setEditTitle] = useState('');
+  // const [editBody, setEditBody] = useState('');
 
 
 
   // 4- Define a state of the [search] => to be use as the [search input] inside the  [Nav]   :
-  const [search, setSearch] = useState('');
+  // const [search, setSearch] = useState('');
 
 
   // 5-  Define a state of [Search result] as an empty array  => to  bve used inside the useEffect of hanlding the searching :
-  const [searchResults, setSearchResults] = useState([]);
+  // const [searchResults, setSearchResults] = useState([]);
 
 
   // 6- Define a state of useHistory   :
-  const history = useHistory();
+  // const history = useHistory();
 
 
   // [First crud operation] : {Fetching data} using direct fetching method (not used )  =>
@@ -165,128 +168,126 @@ function App() {
   // -----------------------------------------------
 
 
-
-
   // [First crud operation] : {Fetching data} using custom hook {useAxiosFetch} fetching method (will be used )  =>
-  useEffect(() => {
-    setPosts(data)
-  }, [data])
+  // useEffect(() => {
+  //   setPosts(data)
+  // }, [data])
   // -----------------------------------------------
 
   // [not a crud operation - not using api  , just an ordinary function ] =>
   // 9- {searching operation} : Define the [useEffect()] requried for seraching operation =>  Rerendering the page by changing of [posts state]  OR  [search state]    :
-  useEffect(() => {
+  // useEffect(() => {
 
-    // a- Define a variable of filtered posts according to the inserted value in the search box with including both of lowercase and uppercase text : 
-    const filteredResults = posts.filter(post =>
-      ((post.title).toLowerCase()).includes(search.toLowerCase())
-      || ((post.body).toUpperCase()).includes(search.toUpperCase())
-      || ((post.dateTime)).includes(search)
-    );
+  //   // a- Define a variable of filtered posts according to the inserted value in the search box with including both of lowercase and uppercase text : 
+  //   const filteredResults = posts.filter(post =>
+  //     ((post.title).toLowerCase()).includes(search.toLowerCase())
+  //     || ((post.body).toUpperCase()).includes(search.toUpperCase())
+  //     || ((post.dateTime)).includes(search)
+  //   );
 
-    // b- setting the [searchResults] state by the value of the of the filtered resultes [reversed for descending  display  ]  => to be set inside the [Home] as a value  of the [posts] prop       :  
-    setSearchResults(filteredResults.reverse());
+  //   // b- setting the [searchResults] state by the value of the of the filtered resultes [reversed for descending  display  ]  => to be set inside the [Home] as a value  of the [posts] prop       :  
+  //   setSearchResults(filteredResults.reverse());
 
-  }, [posts, search])
-  // ---------------------------------------------------------
+  // }, [posts, search])
+  // // ---------------------------------------------------------
 
 
   //  [Second crud operation] : {posting new data item into the assigned database throug the  assigned api}  =>
   // 7- Define a function to handle submit of [NewPost] component  -> of creating and adding new post - with  parameter to be used inside the form of [NewPost]  : 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    // a- {[id] property} :    Get and Define the last [id] value of the current post [if there is a posts array is defined (has length) ] => to be used to get the current post : 
-    const id = posts.length ? posts[posts.length - 1].id + 1 : 1;    // => getting the id value of the last item in the {posts} array & add 1 to use it for adding a new item 
+  //   // a- {[id] property} :    Get and Define the last [id] value of the current post [if there is a posts array is defined (has length) ] => to be used to get the current post : 
+  //   const id = posts.length ? posts[posts.length - 1].id + 1 : 1;    // => getting the id value of the last item in the {posts} array & add 1 to use it for adding a new item 
 
-    // b- {[dateTime] property} Define  a variable of date : 
-    const dateTime = format(new Date(), 'MMMM dd , yyyy pp');
+  //   // b- {[dateTime] property} Define  a variable of date : 
+  //   const dateTime = format(new Date(), 'MMMM dd , yyyy pp');
 
-    // c] Define a variable of full new post object [with assigning  both of  [title] & [body] with defined status ]  : 
-    const newPost = { id, title: postTitle, dateTime, body: postBody };
+  //   // c] Define a variable of full new post object [with assigning  both of  [title] & [body] with defined status ]  : 
+  //   const newPost = { id, title: postTitle, dateTime, body: postBody };
 
-    //  d] wrapping the adding new post inside the [try/catch] to  output any detect error before submiting teh new post  : 
-    try {
-      // 1- Define the response varialbe to conect and add the new item [post] into defiend [api] and jspn server :
-      const response = await api.post('/posts', newPost);
+  //   //  d] wrapping the adding new post inside the [try/catch] to  output any detect error before submiting teh new post  : 
+  //   try {
+  //     // 1- Define the response varialbe to conect and add the new item [post] into defiend [api] and jspn server :
+  //     const response = await api.post('/posts', newPost);
 
-      // 2- Define a variable of All post array after adding the new post[came from the api by using the defined variable of {response.data} after has got the posted value from the api ]    : 
-      const allPosts = [...posts, response.data];
+  //     // 2- Define a variable of All post array after adding the new post[came from the api by using the defined variable of {response.data} after has got the posted value from the api ]    : 
+  //     const allPosts = [...posts, response.data];
 
-      // 3- Adding the new variable of all posts into the [posts] state using its setter fucntion  : 
-      setPosts(allPosts);
+  //     // 3- Adding the new variable of all posts into the [posts] state using its setter fucntion  : 
+  //     setPosts(allPosts);
 
-      // 4- Setting the [postTitle]  & [postBody] states into an empty values after adding the new post : 
-      setPostTitle('');
-      setPostBody('');
+  //     // 4- Setting the [postTitle]  & [postBody] states into an empty values after adding the new post : 
+  //     setPostTitle('');
+  //     setPostBody('');
 
-      // 5- use the defined useHistory hook variable to route into a certain route  [home page]  :
-      history.push('/');
+  //     // 5- use the defined useHistory hook variable to route into a certain route  [home page]  :
+  //     history.push('/');
 
 
-      // 6- Catching the returned and printing it using the default method using custom message  :
-    } catch (err) {
-      console.log(`Error : ${err.message} `);
-    }
+  //     // 6- Catching the returned and printing it using the default method using custom message  :
+  //   } catch (err) {
+  //     console.log(`Error : ${err.message} `);
+  //   }
 
-  };
+  // };
   // -----------------------------------------------------
 
   //  [Third crud operation] : {Deleting a certain post [id] from the api datasoure assigned by api }  =>
   // 8- Define a function  of the handling post [deletion operation]  - with id parameter to be  gotten from inside the user component   :
-  const handleDelete = async (id) => {
+  // const handleDelete = async (id) => {
 
-    try {
-      // a- Awaiting the delete crud operation directly from [api] - from the full path of baseURL + id of the current element post - [no need ot define  a varialbe ]   : 
-      await api.delete(`/posts/${id}`);
+  //   try {
+  //     // a- Awaiting the delete crud operation directly from [api] - from the full path of baseURL + id of the current element post - [no need ot define  a varialbe ]   : 
+  //     await api.delete(`/posts/${id}`);
 
-      // b- Define a new list of posts (after excepting the deleted item ) that including  all items except the current filtered deleted  post - according to the current item by id  :  
-      const postList = posts.filter(post => post.id !== id);
+  //     // b- Define a new list of posts (after excepting the deleted item ) that including  all items except the current filtered deleted  post - according to the current item by id  :  
+  //     const postList = posts.filter(post => post.id !== id);
 
-      // c- Setting the new post filtered list inside the post state [which will be displayed in the main home page]  :
-      setPosts(postList);
+  //     // c- Setting the new post filtered list inside the post state [which will be displayed in the main home page]  :
+  //     setPosts(postList);
 
-      // d- use the defined useHistory hook variable to route into a certain route  [home page]  :
-      history.push('/');
+  //     // d- use the defined useHistory hook variable to route into a certain route  [home page]  :
+  //     history.push('/');
 
-      // e- catching the returned errror  by using  the custom erorr message :
-    } catch (err) {
-      console.log(err.message);
-    }
-  }
+  //     // e- catching the returned errror  by using  the custom erorr message :
+  //   } catch (err) {
+  //     console.log(err.message);
+  //   }
+  // }
   // --------------------------------------
 
   // Fourth CRUD operation  : {Modify/Edit full data item object } [not need to be inside a useEffect - because it will be executed only  when inside the [editPost] component by form submiting     ]  =>
   // 9- creating the [Editing crud operation] according to [axios] => this function will be used wihtin the [editPost] component  :
-  const handleEdit = async (id) => {
+  // const handleEdit = async (id) => {
 
-    // 1- {[dateTime] property} Define  a variable of date => [as a one of the modified item object's property]  with custom format pattern : 
-    const dateTime = format(new Date(), 'MMMM dd , yyyy pp');
+  //   // 1- {[dateTime] property} Define  a variable of date => [as a one of the modified item object's property]  with custom format pattern : 
+  //   const dateTime = format(new Date(), 'MMMM dd , yyyy pp');
 
-    // 2- Define a variable of full updated item post object after being updated/editing [with assigning  both of  [title] & [body] with defined status ]  : 
-    const updatedPost = { id, title: editTitle, dateTime, body: editBody };
+  //   // 2- Define a variable of full updated item post object after being updated/editing [with assigning  both of  [title] & [body] with defined status ]  : 
+  //   const updatedPost = { id, title: editTitle, dateTime, body: editBody };
 
-    try {
-      // 3- Define a response variable of getting the updated full object curd operartion , to send the edited values into the assiogned paratmers of the {put} method :
-      const response = await api.put(`/posts/${id}`, updatedPost);  // => we here used the {put} method due to we will send a full edited object into the api , but  incase of editing single property of the item -> we must use the {patch}     
+  //   try {
+  //     // 3- Define a response variable of getting the updated full object curd operartion , to send the edited values into the assiogned paratmers of the {put} method :
+  //     const response = await api.put(`/posts/${id}`, updatedPost);  // => we here used the {put} method due to we will send a full edited object into the api , but  incase of editing single property of the item -> we must use the {patch}     
 
-      // 4- Assign/replace the updated item object value into api datasource [posts] , by using mapping - because we will not add the old data of the posts - : 
-      setPosts(posts.map(post =>
-        post.id === id ? { ...response.data } : post
-      ));
+  //     // 4- Assign/replace the updated item object value into api datasource [posts] , by using mapping - because we will not add the old data of the posts - : 
+  //     setPosts(posts.map(post =>
+  //       post.id === id ? { ...response.data } : post
+  //     ));
 
-      // 5- Setting empty values of both [post body] & [post title] after  :
-      setEditBody('');
-      setEditTitle('');
+  //     // 5- Setting empty values of both [post body] & [post title] after  :
+  //     setEditBody('');
+  //     setEditTitle('');
 
-      // 6- directing to the home page after implementing the modifying/editing crud orepration :
-      history.push('/');
+  //     // 6- directing to the home page after implementing the modifying/editing crud orepration :
+  //     history.push('/');
 
-      // 7-  custom catching  of the returend error      :
-    } catch (err) {
-      console.log(`Error : ${err.message}`);
-    }
-  }
+  //     // 7-  custom catching  of the returend error      :
+  //   } catch (err) {
+  //     console.log(`Error : ${err.message}`);
+  //   }
+  // }
   // ---------------------------------------
 
   return (
@@ -294,58 +295,34 @@ function App() {
       <DataProvider>
 
         <Header
-          title={'React js blog app '}
+          title={'React js blog app '}  // we will not gonna use the context method with this prop 
           // width={width}
         />
 
-        <Nav search={search} setSearch={setSearch} />
+        <Nav 
+          // search={search} 
+          // setSearch={setSearch}
+        />
 
         {/*  Defining the main routers of the appliction */}
         <Switch>
-          <Route exact path="/"  >
-            {/* adding th next props :
-              1- setting the [searchResults] as  the value of [posts] prop , instead of the [posts] to activate  the search data
-              2- setting the [fetchError] prop of the Home component =>  by  [fetchError] of destructured variable that comming from the custom hook {useAxiosFetch}
-              3- setting the [isLoading] prop of the Home component =>  by  [isLoading] of destructured variable that comming from the custom hook {useAxiosFetch}
-            */}
-            <Home
-              posts={searchResults}   // this for acivating the live searching results as the displayed data [posts] => on the main Home page  
-              fetchError={fetchError}
-              isLoading={isLoading}
-            />
-          </Route>
-
+          {/* adding th next props [will be called according to context method ] :
+            1- setting the [searchResults] as  the value of [posts] prop , instead of the [posts] to activate  the search data
+            2- setting the [fetchError] prop of the Home component =>  by  [fetchError] of destructured variable that comming from the custom hook {useAxiosFetch}
+            3- setting the [isLoading] prop of the Home component =>  by  [isLoading] of destructured variable that comming from the custom hook {useAxiosFetch}
+            */}           
+          <Route exact path="/" component={Home}/>
 
           {/*  Define the  Posting  Route [NewPost] page     */}
-          <Route exact path="/post"  >
-            <NewPost
-              handleSubmit={handleSubmit}
-              postTitle={postTitle}
-              setPostTitle={setPostTitle}
-              postBody={postBody}
-              setPostBody={setPostBody}
-            />
-          </Route>
-
-
+          <Route exact path="/post" component={NewPost}  />
+   
 
           {/*  Define the  Edit route of the  [EditPost] page    */}
-          <Route path="/edit/:id"  >
-            <EditPost
-              posts={posts}
-              handleEdit={handleEdit}
-              editTitle={editTitle}
-              setEditTitle={setEditTitle}
-              editBody={editBody}
-              setEditBody={setEditBody}
-            />
-          </Route>
-
-
+          <Route path="/edit/:id"   component = {EditPost}   />
+        
+        
           {/*  Define a dynamic Route of inner sub of 'post' route  :  */}
-          <Route path="/post/:id"  >
-            <PostPage posts={posts} handleDelete={handleDelete} />
-          </Route>
+          <Route path="/post/:id"  component = {PostPage}  />
 
           {/*  Creating a Router for the component   */}
           <Route path="/about" component={About} />

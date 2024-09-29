@@ -19,11 +19,20 @@
 import React from 'react';
 
 
-// Impornting the link class from the  react router  library :   
+// Importing the link class from the  react router  library :   
 import { Link } from 'react-router-dom';
 
+// importing requrired hook to use the DataContext :
+  import {useContext} from 'react' ;
+  
+// importing the DataContext file to be used in this component :
+  import  DataContext  from './context/DataContext';
 
-const Nav = ({ search, setSearch }) => {
+ 
+const Nav = () => {
+  const {search, setSearch} = useContext(DataContext); 
+
+
   return (
     <nav className='Nav' >
 

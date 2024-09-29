@@ -35,6 +35,11 @@ const DataContext = createContext({});
 export const DataProvider = ({ children }) => {
   // Here to put all state definitions ... :
 
+  // 00 - Define a variable of destructured object of all exported states props  { data,fetchError,isLoading} coming from  the {useAxiosFetch} custom hook ,with assging the baseURl instead of the using the one deinfeid inside  the  [posts.js ]  :
+   const { data, fetchError, isLoading } = useAxiosFetch('http://localhost:3500/posts');
+
+
+
   // 1- Define a variable of empty array of objects -> to be obtianed from the assigned  [api] and [db.json] datasource   :
   const [posts, setPosts] = useState([
     // {
@@ -207,18 +212,19 @@ export const DataProvider = ({ children }) => {
  
   // 12- Define a variable of detructured object of {width} to be used and called  passed prop to the {width} :
   const { width } = useWindowSize();
-
-
-  // 13- Define a variable of destructured object of all exported states props  { data,fetchError,isLoading} coming from  the {useAxiosFetch} custom hook ,with assging the baseURl instead of the using the one deinfeid inside  the  [posts.js ]  :
-  const { data, fetchError, isLoading } = useAxiosFetch('http://localhost:3500/posts');
-
+ 
   
   return (
     
     // Third section : Return the main [DataContext] with [Provider] extention , inlcudinng all desired and defined states to be provdied by this  fucmtion      :
     <DataContext.Provider value={{
-      // Here to put  all upper defined states variables, functions , custom hooks => to be managed by context method      :
-        width
+      // Here to put all upper defined states variables, functions , custom hooks => to be managed by context method [instead of using the default method of th0e/ prop drilling ] :
+        width, // -> for the {Header} component         
+        search, setSearch,  // -> for the {Nav} component 
+        searchResults, fetchError, isLoading,  // -> for the {Home} component 
+        postTitle, setPostTitle, postBody, setPostBody, handleSubmit ,  // -> for the {NewPost} component  
+        posts, handleEdit, editTitle, setEditTitle, editBody, setEditBody,  // -> for the {EditPost}  component
+        handleDelete  // -> for the {PostPage}  component   
 
     }} >
       {children}

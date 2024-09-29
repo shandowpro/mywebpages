@@ -13,9 +13,20 @@
 
 */
 
-import React from 'react'
+import React from 'react' ; 
 
-const NewPost = ({ postTitle, setPostTitle, postBody, setPostBody, handleSubmit }) => {
+// importing requrired hook to use the DataContext :
+  import {useContext} from 'react' ;
+  
+// importing the DataContext file to be used in this component :
+  import  DataContext  from './context/DataContext';
+  
+
+const NewPost = () => {
+
+  // Define the main object of using props to be called from imported DataContext  file  :
+  const { postTitle, setPostTitle, postBody, setPostBody, handleSubmit} = useContext(DataContext);   
+  
   return (
     <main className='NewPost' >
       <h2> New Post </h2>

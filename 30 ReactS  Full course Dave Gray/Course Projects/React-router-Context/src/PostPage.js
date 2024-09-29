@@ -11,18 +11,31 @@
 
 */
 
+// a- public importings    : 
+  import React, { Fragment } from 'react';
+  import { Link, useParams } from 'react-router-dom';
 
-import React, { Fragment } from 'react';
-import { Link, useParams } from 'react-router-dom';
-// import  EditPost from './EditPost';
+// b-  importing the DataContext file to be used in this component :
+  import  DataContext  from './context/DataContext';
 
-const PostPage = ({ posts, handleDelete }) => {
+
+// importing requrired hook to use the imported DataContext flie :
+  import {useContext} from 'react' ;
+
+//----------------------------------------------------------------- 
+
+
+const PostPage = () => {
+
+  // Define the main object of using props to be called from imported DataContext file [define all props in one object] :
+    const { posts, handleDelete} = useContext(DataContext);   
+      
 
   // Define dynamic parameter for [id] as sub router for this inner page Router  :
-  const { id } = useParams();
+    const { id } = useParams();
 
   // Define the [Single Post object  value] item from [posts] array datasource -> according to defined [{id} sub router]  + and filtering [Posts] array datasource :
-  const post = posts.find(post => (post.id).toString() === id);    // Assign the element [post] in the main array of the posts  that fulfill the condition of [if this post string id is equall to the defined id of Sub router using the useParams()  ] 
+    const post = posts.find(post => (post.id).toString() === id);    // Assign the element [post] in the main array of the posts  that fulfill the condition of [if this post string id is equall to the defined id of Sub router using the useParams()  ] 
 
 
   return (
