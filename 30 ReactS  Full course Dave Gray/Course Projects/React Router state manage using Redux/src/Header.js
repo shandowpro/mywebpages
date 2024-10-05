@@ -13,17 +13,15 @@
 
 import React from 'react';
 import { FaLaptop, FaTabletAlt, FaMobileAlt } from 'react-icons/fa';
+ 
 
-// import the {useContext} hook to allow access to the defined {DataContext.js} file   : 
-import { useContext } from 'react';
-
-// import the {DataContext} variable from  it's  file: 
-import  DataContext  from './context/DataContext';
+// import the {useWindowSize} custonm hook file to be used to define  the [width]      : 
+import  useWindowSize  from './hooks/useWindowSize';
 
 
 const Header = ({ title }) => {
   // Define the prop as extreacted value  of the improted }{useContext} hook :
-  const {width} = useContext(DataContext);
+  const {width} =  useWindowSize();
 
   return (
     <header className="Header"   >

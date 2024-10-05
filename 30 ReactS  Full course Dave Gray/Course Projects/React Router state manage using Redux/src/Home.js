@@ -8,22 +8,28 @@
     -- {isLoading} : the state of loading data form the api while fetching   
 
   - [returns] => return conditional rendering according to the existed elements in the assinged {posts} prop , to display the imported {Feed} component or error text 
+ 
+  - [ States mangament method]  =>  [Redux Easy-peasy]  
+  
 */
 
+// A] [Importings] section   :
+// 1] Public importings : 
 import React from 'react'
-
 import Feed from './Feed'
+// import { useLayoutEffect } from 'react'
 
-
-// importing the main required hook and file  for using [context state management method] :  
-import {useContext} from 'react' ;
-import DataContext  from './context/DataContext' ;
+// 2] import the required importings for using [Store] method : 
+import {useStoreState } from 'easy-peasy' ;   
 
  
-
-const Home = () => {
-  const { searchResults , fetchError , isLoading } = useContext(DataContext); 
+// Define the   main functioonal componnt , with  Add [fetchError] & [isLoading] props to be used according to the default props method  :      
+const Home = ({ isLoading ,  fetchError }) => {
+  
+  // Define and pull [searchResults] from the [store] file :  
+  const  searchResults   = useStoreState( (state) => state.searchResults ); 
  
+
   return (
     <main className='Home' >
        {/* displying  the [isLoading]  state by conditional rendering */} 

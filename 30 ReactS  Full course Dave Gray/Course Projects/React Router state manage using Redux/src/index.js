@@ -1,5 +1,5 @@
 
-// The main configuratons file , using {react Router dom} [v:5.2.0] settings  syntax   :   
+// The main configuratons file , using {react Router dom} [v:5.2.0] settings syntax + using the redux [easy-peasy] statements method    :   
 
 import React from 'react';
 import ReactDOM from 'react-dom';

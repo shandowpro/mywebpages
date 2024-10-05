@@ -13,48 +13,34 @@
       --- [New Post] => to navigate  into the creating new post page 
       --- [About] => to navigate  into the about page 
 
+  - [States managements method] ->  [easy-peasy]               
  */
 
-import React from 'react';
-
+   
+// Import the required importings for using the {redux-easy-peasy}   : 
+  import  {  useEffect}  from 'react' ;
+  
 
 // Importing the link class from the  react router  library :   
   import { Link } from 'react-router-dom';
 
-
-// [remove when usnig the {redux-easy-peasy} method]  importing requrired hook to use the DataContext :
-  // import {useContext} from 'react' ;
-  
-// [remove when usnig the {redux-easy-peasy} method] importing the DataContext file to be used in this component :
-  // import  DataContext  from './context/DataContext';
-
-
-// Import the required importings for using the {redux-easy-peasy}   : 
-  import  { useEffect}  from 'react' ;
-  
-
-
-/* the required imporotings from the [easy-peasy] to apply the redux state management        : 
+/* the required importings from the [easy-peasy] to apply the redux state management        : 
   - [useStoreActions] => to pull store defined actions methods  
   - [useStoreState]   => to pull store defined states           
 */
- import  { useStoreActions , useStoreState  }  from 'easy-peasy' ;
-
+   import  { useStoreActions , useStoreState  }  from 'easy-peasy' ;
+ 
  
 const Nav = () => {
-  
-  // Define both of {search, setSearch} accordging to the [context] :   
-  // const {search, setSearch} = useContext(DataContext); 
-  
-  // Define both of {posts , search} states &  {setSearch , setSearchResult} actions according to the [redux easy-peasy] :   
+   
+  // Define both of {posts , search} states & {setSearch , setSearchResult} actions according to the [redux easy-peasy] method   :   
     const  posts  =  useStoreState( (state) =>  state.posts ) ;
     const  search  =  useStoreState( (state) =>  state.search ) ;
     const  setSearch  =  useStoreActions( (actions) =>  actions.setSearch ) ;
     const  setSearchResults =  useStoreActions( (actions) =>  actions.setSearchResults ) ;
     
-  // use the defined useEffect from the context file to use it inside the related useEffect hook function - due we can not use any hook it inside the redux -  :
-    useEffect(() => {
-
+  // [ Moved from the context file to be used here , and NOT being used inside the Store due to it is a hook ] use the defined useEffect from the context file to use it inside the related useEffect hook function - due we can not use any hook it inside the redux -  :
+  useEffect(() => {
     // a- Define a variable of filtered posts according to the inserted value in the search box with including both of lowercase and uppercase text : 
     const filteredResults = posts.filter(post =>
       ((post.title).toLowerCase()).includes(search.toLowerCase())

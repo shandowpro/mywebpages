@@ -9,41 +9,65 @@
   - [return] : Conditional rendering of the filtered single detailed Item [post -> according to defined id of this inner router page ] into the main script of the functional component + including [deletion button] for this post 
                OR displaying custom Error message with link into the main home page -> using the defined [Link] react hook   
 
+  - [states management method ] : Redux  [easy-peasy]                
+
 */
+   
+// A] [Importings] section : 
 
-// a- public importings    : 
+  // 1] public importings : 
   import React, { Fragment } from 'react';
-  import { Link, useParams } from 'react-router-dom';
-
-// b-  importing the DataContext file to be used in this component :
-  import  DataContext  from './context/DataContext';
+  import { Link, useParams , useHistory } from 'react-router-dom';
 
 
-// importing requrired hook to use the imported DataContext flie :
-  import {useContext} from 'react' ;
+  // 2] import required importitng for [store method] :
+  import { useStoreState , useStoreActions  }  from 'easy-peasy' ;     
 
 //----------------------------------------------------------------- 
 
 
 const PostPage = () => {
-
-  // Define the main object of using props to be called from imported DataContext file [define all props in one object] :
-    const { posts, handleDelete} = useContext(DataContext);   
-      
-
-  // Define dynamic parameter for [id] as sub router for this inner page Router  :
+  // B] [Definiton before the return]  section   : 
+  
+  // 1] Public Defines :   
+    // a- Define the [id] extracted from the [useParams] hook :   
     const { id } = useParams();
 
-  // Define the [Single Post object  value] item from [posts] array datasource -> according to defined [{id} sub router]  + and filtering [Posts] array datasource :
-    const post = posts.find(post => (post.id).toString() === id);    // Assign the element [post] in the main array of the posts  that fulfill the condition of [if this post string id is equall to the defined id of Sub router using the useParams()  ] 
+    // b- Define the [history] :  
+    const history = useHistory() ;
 
 
+  // 2] Redux Store Defines : 
+    // a- Define and pull [deletePost] action method  from the [Store] file    : 
+    const deletePost = useStoreActions( (actions) => actions.deletePost) ;       
+    
+    // b- Define and pull [ getPostById ] state from the [Store] file    :
+    const getPostById = useStoreState( (state) => state.getPostById) ;       
+    
+
+    // c- Define the [post] varaible  by using [getPostById]  upper defined state , and assigning the upper defined varialbe [id]  as the  pamranter of the  getPostById    :
+    const post = getPostById(id) ;    // Assign the element [post] in the main array of the posts  that fulfill the condition of [if this post string id is equall to the defined id of Sub router using the useParams()  ] 
+ 
+
+    /* d- Bring the [handleDelete] here , and pull it from the [store file] , with some modifications :
+      1- we can delete the [async] keyword from {handleDelete} function -> because use it inside the define the [handleDelete] action 
+      2- we used call and use the new defined method {deletePost} inside the store file with assin the (id) paramater  
+      3- we remove the [try-catch] from the [handleDelete] basic syntax from here ,due we used it when define the [deletePost]       
+    */
+    const handleDelete = (id) => {
+      deletePost(id);
+      history.push('/');
+    }
+ 
+
+  // C] [Inside the comopnent's return]  section   : 
   return (
     <main className='postPage'>
 
       <article className='post'>
 
         {/*  plugging in  the defined variable of the find {post} element   => incase of obtained data from datasource {posts} prop [post is existed and obaitned]     */}
+        
         {
           post &&
           <Fragment>
