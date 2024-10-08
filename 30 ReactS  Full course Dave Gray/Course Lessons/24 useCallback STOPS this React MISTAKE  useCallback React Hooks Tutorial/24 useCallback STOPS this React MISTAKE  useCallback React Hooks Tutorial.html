@@ -402,8 +402,8 @@
     <!-- About Section  -->
     <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
         <div class="container">
-          <h2 class="h1" class="hidden-xs"> About Section =>  ReactJS Course solving react mistake of using {useCallback}     <span><strong>     </strong> </span> </h2>
-          <h3 class="visible-xs"> About Section => This lesson  about <strong>   solving react mistake of using {useCallback}   </strong> </span> </h3> 
+          <h2 class="h1" class="hidden-xs"> About Section =>  ReactJS Course solving react mistake of using {useCallback}  <span><strong>   Endless re-rendering      </strong> </span> </h2>
+          <h3 class="visible-xs"> About Section => This lesson  about <strong>   solving react mistake of using {useCallback} of Endless re-rendering  </strong> </span> </h3> 
         </div>
     </section>
     <!-- ---------------------------------------- -->
@@ -1289,13 +1289,15 @@
                 <p> &gt; Main Subjects in this lesson contain the  following : </p>
  
                 <ol type="A">
-                    <li> Main points of this lesson ,  solving problem an advise   to   : <br>
+                    <li> Main points of this lesson , {useCallback} hook & advises to  solving endliess re-rendering problem   : <br>
                          <ol>
-                          <li> A] main concept and requriments of    </li>
+                          <li> A] main concept of Endless {Re-rendering} & {useCallback}   </li>
+
+                          <li> B] main benefits and when to use the {useCallback} hook  </li>
                            
-                          <l>  B] main steps to setup and  use both of the free  hosting websites  </li>
+                          <l>  C] main syntax and steps to use the {useCallback}  </li>
                            
-                          <li> C] main differences between each method {plusses and minusses}   </li> 
+                          <li> D] Vip notes about {useCallback}   </li> 
                             
                         </ol>
                      </li> <br> <br>
@@ -1310,207 +1312,87 @@
                 <h3> 24 useCallback STOPS this React MISTAKE  useCallback React Hooks Tutorial concept : </h3>
             </header>
             
-            <h1>  A] main concept & reqs of uploading and deploying the react applciton on to  a host dealing with react application  {Netlify} & {github pages} :    </h1> <br>
-              <p> To deploy the react app [within development stage] => we used  a special server  [json server] to be act as an alternartive server to deal with the assigned api and database </p> 
-              <p> To deploy the react app [wihtin productoin stage] => we should use a server dealing  wiht [SPA] single page web app type [as {github pages} & {Netlify} free hosting  ]       </p> 
-              <p> To deploy the react app [wihtin productoin stage] => we should assign a deploy source to be  read from the the server that hosting the web applicaiotn          </p> 
-   
-              <p> B] Main requirements of using the both of methods   : <br>
-                <ol>
-                  <li> (a) Preperation claean step: <br> 
-                    <p> Cleanning the application file from the unecceessary  installed packages , such as  : <br>
-                      <ol> 
-                        <li>  [ @testing-library/jest-dom  ]     </li>     
-                        <li>  [ @testing-library/react ]     </li>     
-                        <li>  [ @testing-library/user-event ]     </li>     
-                        <li>  [ web-vitals ]     </li>     
-                      </ol>
-                    </p>
-                  </li>
-                  
-                  <li> (b) Deployment source  => usually is github repo   : <br> 
-                    <p> including the following steps :  <br>
-                       <ol>   
-                          <li> Having an account inside the github , and a repo => [used as a source code deployment to be linked with the Host server  ]      </li>
-                          <li> Adding and Comiting all files of tbe project on this repo </li>
-                          <li> Initiating the git system inside the project to be deployed     </li>
-                          <li> Setting this repo with the following settings  : <br> 
-                              <ul>
-                                <li> Setitng  the Public repo [while creating in the browser ]   </li>
-                                <li> Addign the remote fo the repo according to the given codes of the  github while creating the repo    </li>
-                                <li> Assign the 'main' as repo branch   </li> 
-                              </ul>
-                          </li>
-                       </ol>                      
-                      </p>   
-                  </li>   <br> 
-
-                  <li> (c)  Certain configuration settings inside the project files  {pacakge.json}  : <br>
-                      <p> Which is differes from a method to another => is usually when using the [gh-pages] , but using [netlify] not need to extra confitgurtions     </p> 
-                  </li>  <br>
- 
-                  <li> (d) Certain configurations settings inside the server provider   : <br>
-                    <p> Which is differes from a method to another => is usually when using the [netlify] , but using [gh-pages] not need to extra confitgurtions in the github browser     </p>
-  
-                  </li>
-                </ol> <br>  
-              </p>
- 
-            <br> <hr> <br>
- 
-        <!-- -------------------------------------------------------------- -->
-         
-            <h1> B]  Main steps to setup and  use both of the free  hosting websites  :  </h1>  <br>
-                <ol> 
-                  <li> First method  {Netlify} =>  including the next steps  :   <br> 
-                      <ul> 
-                        <li> 1- Clean up project from unnecccesrary packages , by using the next code [cmd] :  <br>
-                          <code>
-                              <span class="one"></span>  { npm uninstall @testing-library/jest-dom  @testing-library/react @testing-library/user-event web-vitals  }     <br>
-                          </code>   
-                        </li>  <br> 
-                        
-                        <li>  2- Initiating the [git] system on the inside current project , by using next code [cmd]  : <br>
-                          <code>
-                              <span class="one"></span>  {  git init  }     <br>
-                            </code>                
-                          </li> <br>                    
-                          
-                          <li>  3-  Adding & Commiting  all project files into the initiated git folder , by using next code [cmd] :  <br>
-                            <code>
-                              <span class="one"></span>  {  git add . }     <br>
-                              <span class="one"></span>  {  git commit -m "new push " }     <br>
-                          </code>                
-                        </li>   <br>                  
-                      
-                        <li>  4- Creating a new repo  [react-app-netlify] on the github to be used as project deployment   :  <br>
-                          <ul> 
-                              <li> your repositories  -> new -> add new repo name + public   </li>
-                              <li> create repo  -> copy the generated codes of the  git settings and paste it inside  the  project cmd   -> one by one or all and R.click , and shall include the next codes  :  <br>
-                                <code> 
-                                    // adding the a new remote of the new  created repo onto the current git file :   <br> 
-                                    <span  class="one"></span> { git remote add origin https://github.com/shandowpro/react-deploy-netlify.git }  <br> 
-
-                                    //  Switching the branch to be used to push files [main ]  :   <br> 
-                                    <span  class="one"></span> { git branch -M main   }  <br> 
-
-                                    //  Pushing the project files of created remote[origin] -> onto the assigned branch [origin ] with using -u flag :   <br> 
-                                    <span  class="one"></span> { git  push origin -u main  }  <br> 
-                                </code>
-                              </li>
-                          </ul>
-                        </li>   <br>                  
-                      
-                        <li> 5-  Steps on the Hostitng service provider [netlify]  :  <br>
-                            <ol> 
-                              <li> Create a new account on the netlify , by using github account   </li>
-                              <li> [Choose create a new site from git] button   </li>
-                              <li> Choose contious Deployment -> and choose github -> and select the created repo to be used as  the propject deplpoy source  </li>
-                              <li> assign the site settings by the next settings  : <br>  
-                                  <ol> 
-                                    <li> Branch for deploy -> main {default} </li>
-                                    <li> npm run build    </li>
-                                    <li> Publish Directory  -> build       </li>
-                                  </ol>
-                              </li>
-
-                              <li> Click on  [Deploy site] button -> will display site overvie of the my new project , which will display the deploywment status [starting up , bulding , published ]       </li>
-                              <li> After whle of being builing and deployment => the generated link of the project will be activated to be able to preview         </li>
-                            </ol>
-                        </li>
-                      </ul>                                
-                  </li>
-                      <!-- -------------------------------------------------------- -->
-                  
-                  
-                    <li> Second method  {gh-pages} =>  including the next steps  :   <br> 
-                      <ul> 
-                        <li> 1- Clean up project from unnecccesrary packages , by using the next code [cmd] :  <br>
-                          <code>
-                              <span class="one"></span>  { npm uninstall @testing-library/jest-dom  @testing-library/react @testing-library/user-event web-vitals  }     <br>
-                          </code>   
-                        </li>  <br> 
-                        
-                        <li>  2- Initiating the [git] system on the inside current project , by using next code [cmd]  : <br>
-                          <code>
-                              <span class="one"></span>  {  git init  }     <br>
-                            </code>                
-                          </li> <br>                    
-                          
-                          <li>  3-  Adding & Commiting  all project files into the initiated git folder , by using next code [cmd] :  <br>
-                            <code>
-                              <span class="one"></span>  {  git add . }     <br>
-                              <span class="one"></span>  {  git commit -m "new push " }     <br>
-                          </code>                
-                        </li>   <br>                  
-          
-                      
-                        <li>  4- Creating a new repo  on the github to be used as project deployment   :  <br>
-                          <ul> 
-                              <li> your repositories  -> new -> add new repo name + public   </li>
-                              <li> create repo [react-app-ghpages]  -> copy the generated codes of the  git settings and paste it inside  the  project cmd   -> one by one or all and R.click , and shall include the next codes  :  <br>
-                                <code> 
-                                    // adding the a new remote of the new  created repo onto the current git file :   <br> 
-                                    <span  class="one"></span> { git remote add origin https://github.com/shandowpro/react-deploy-ghpages.git }  <br> 
-
-                                    //  Switching the branch to be used to push files [main ]  :   <br> 
-                                    <span  class="one"></span> { git branch -M main   }  <br> 
-
-                                    //  Pushing the project files of created remote[origin] -> onto the assigned branch [origin ] with using -u flag :   <br> 
-                                    <span  class="one"></span> { git  push origin -u main  }  <br> 
-                                </code>
-                              </li>
-                          </ul>
-                        </li>   <br>                  
-                      
-                      
-                        <li> 5- Extra Steps on the inner  project  [incase of using {gh-pages} ]  :  <br>
-                            <ol> 
-                              <li> a- Download and install  the [gh-pages] library on {DevDependencies} , as next : <br>    
-                                  <code>  
-                                       <span class-="one "></span>  {  npm i gh-pages -D  } <br>
-                                  </code> 
-                                </li>  <br>
-
-                              <li> b- Adding the next modifications on the {package.json} files : <br>
-                                <code>
-                                    // 1- modificatoins on the [public] section :  <br> 
-                                    <span class=one></span> "name" : "no changes ", <br>  
-                                    <span class=one> </span> "version" : "no changes ", <br>  
-                                    <span class=one></span> "hamepage": "https://shandowpro.github.io/react-deploy-ghpages.git" , => [new addition :  "Adding the desired name of project domain"  <br>  
-                                    
-                                    // 2- modificatoins on the [scripts] section   :  <br> 
-                                    <span class=one></span> "predeploy" : "npm run build  ", <br>  
-                                    <span class=one> </span> "deploy" : "gh-pages -d build ", <br>  
-                                </code>   
-                              </li>
-
-                              
-                              <li> c- running command of building of the project :    <br>
-                                  <code>
-                                      // 1- Building and deployment project by using one  comnand of both building and deploywent -> on the assigned  "homepage"  value f the {package.json} :  <br> 
-                                      <span class=one></span>  { npn run deploy  } <br>  
-                                  </code>    
-                              </li>
-                               
-                              <li>  d- checking  the link of "homepage"  value as "https://shandowpro.github.io/react-deploy-ghpages.git"      </li>
-                            </ol>
-                        </li>
-                      </ul>                                
-                  </li>
-             
-              </ol>              
+            <h1>  A]  main concept of Endless {Re-rendering} & {useCallback}   :    </h1> <br>
+              <p>  it is a common mistake or Error that will be issued when using a defind variable or array  as useEffect ependency or any other hook  that has a depedency </p>
+              <p>  the cause of this mistake is changing the defined state of a defind variable is causing a Re-rendeirng of  whole compomt                </p>
+              <p>  When using the defiend state of primitve returned value will cause an [endless loop issue] , but the react is clever enough to figure it out , but when using  a defined array ,  an actual error [endless loop] will happended         </p>
+              <p> The best solution to fix this issue is to use {useCallback} hook wrappig when define this variable is being used as a dependency    </p>
             <br>   <hr> <br>
-        <!-- ------------------------------------------------------------- -->
-            <h1> C]  Practical steps about using  {Redux} & {easy-peasy} method to manage state of current project {react-router[react blog]} application  , by [[Re-factoring]] the whole application    :  </h1>  <br>
-              <p>  as the in the  project files .....     </p>
-            <hr> <br>  <hr> <br>            
-              
-         <!--  --------------------------------------------------------  -->
-   
-             <h1> D]  VIP Notes  about using [context] method   :   </h1>              
+           <!-- ------------------------------------------------------------- -->
+  
+           <h1>  B]  main benefits and  when  to use   {useCallback} hook :    </h1> <br>
+              <p>  {useCallback} hook  => it is call back function hook used  to memorize value inside to prevent Re-rendering when this varialbe is become a depency of another deinfed hook     </p>
+              <p>  {useCallback} hook  =>  is being used in the next cases :  <br>
+                <ol> 
+                    <li> when the defiend functional varailbe is being used as hook call back function's  dependencies      </li>
+                    <li> when the defined functional varialbe  will be passed thorugh a onther component     </li>
+                </ol> 
+              </p> 
+            <br>   <hr> <br>
+           <!-- ------------------------------------------------------------- -->
+             
+           <h1>  C]  main syntax  anid  steps to use the {useCallback}  :    </h1> <br>
+              <p>  {useCallback} hook  => it is call back function hook that has dependencies , and being imported an used as wrapper , with the following syntax :  <br>  
                 <ul>
-                   <li> When defining [actions method] inisde the store using the {thunk} with [async-await]  => we CAN remove [async-await]  when define/calling and pulling it inside the user Component </li>
+                  <li> a- use the  {useCallback} hook within define  a functional varialbe with that return primitve value : <br>
+                    <code>    
+                        <span class="one"></span>  //  1- importing the {useCallback} hook +  anthoer to be used  from the 'react' :   <br>    
+                        <span class="one"></span>  import {useCallback} from  'react' ;      <br>    
+    
+                        <span class="one"></span>  // 2- define (2) variables states  to be used in deifned function of the next functioal varialbe    :   <br>    
+                          <span class="two "></span>    const [num1] = useState(6) ;    <br>    
+                          <span class="two "></span>    const [num2] = useState(5) ;    <br> <br>
+    
+                        <span class="one"></span>   //  3- define a functional variable using the {useCallback} as wrapper and assgin dependencies of the previous defiend  variables [to be re calculated when one ofhtem is being changed     :   <br>    
+                        <span class="one"></span>  const var1 = useCallback(() => {  <br>
+                          <span class="two"></span> num1 + num2    <br>  
+                        <span class="one"></span> }, [num1 , num2] ) ; <br>  <br>    
+      
+      
+                        <span class="one"></span>   //  4- define a  useEffect  that using the  defined functional variable using the {useCallback} as wapper and assgin dependenciess of the previous defiend  variables    :   <br>    
+                        <span class="one"></span>  useEffect( () => {  <br>
+                          <span class="two"></span>  // printing the defined functional variable [var1()] by calling it inside a the console :   <br>  
+                          <span class="two"></span>  console.log(`The functional variable = ${var1()}`) ;   <br>  
+                        <span class="one"></span> }, [var1] ) ;    <br>    
+    
+                    </code>               
+                  </li>  
+                
+                  <li> b- use the  {useCallback} hook within define a functional varialbe with that return array value : <br>
+                    <code>    
+                        <span class="one"></span>  //  1- importing the {useCallback} hook +  anthoer to be used  from the 'react' :   <br>    
+                        <span class="one"></span>  import {useCallback} from  'react' ;      <br>    
+    
+                        <span class="one"></span>  // 2- define (2) variables states  to be used in deifned function of the next functioal varialbe    :   <br>    
+                          <span class="two "></span>    const [num1] = useState(6) ;    <br>    
+                          <span class="two "></span>    const [num2] = useState(5) ;    <br> <br>
+    
+                        <span class="one"></span>   //  3- define a functional variable using the {useCallback} as wrapper and assgin dependencies of the previous defiend  variables [to be re calculated when one ofhtem is being changed     :   <br>    
+                        <span class="one"></span>  const arr1 = useCallback(() => {  <br>
+                          <span class="two"></span> [num1 , num2]    <br>  
+                        <span class="one"></span> }, [num1 , num2] ) ; <br>  <br>    
+      
+      
+                        <span class="one"></span>   //  4- define a useEffect  that using the defined functional variable using the {useCallback} as wrapper and assign dependencies of the previous defiend variables [arr1()] :  <br>    
+                        <span class="one"></span>  useEffect( () => {  <br>
+                          <span class="two"></span>  // printing the defined functional variable [aar1()] by calling it inside a the console :   <br>  
+                          <span class="two"></span>  console.log(`The functional variable = ${aar1()}`) ;   <br>  
+                        <span class="one"></span> }, [arr1] ) ;    <br>    
+    
+                    </code>               
+                  </li>  
+                
+                </ul>
+                
+                
+              </p>
+            <br>   <hr> <br>
+           <!-- ------------------------------------------------------------- -->
+             
+             <h1> D]  VIP Notes about using [useCallback}] hook    :   </h1>              
+                <ul>
+                   <li> by using the {useCallback} hook in defineing  the whether  a functional varaible with primitive reutnred value  || functional variable with array reutnred value it will solve the rendless re-renderning issue when this variable is being used  inside any hook's depedencies        </li>
+                   <li>   </li>
                 </ul>
             <!--  --------------------------------------------------------  -->
 
