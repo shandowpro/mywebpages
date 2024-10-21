@@ -13,11 +13,11 @@
       <!-- First Mobile Meta -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <meta content="Learning ReactJS Course" description="This is Lesson 30 useLayoutEffect vs useEffect  React Hooks Tutorial ">
+      <meta content="Learning ReactJS Course" description="This is Lesson 31 useImperativeHandle Explained with an Example  React Hooks Tutorial ">
 
-      <title> 30 useLayoutEffect vs useEffect  React Hooks Tutorial </title>
+      <title> 31 useImperativeHandle Explained with an Example  React Hooks Tutorial </title>
 
-      <link rel="stylesheet" href="30 useLayoutEffect vs useEffect  React Hooks Tutorial.css" media="all">
+      <link rel="stylesheet" href="31 useImperativeHandle Explained with an Example  React Hooks Tutorial.css" media="all">
 
       <link rel="stylesheet" href="css/bootstrap.min.css" media="all">
 
@@ -240,7 +240,7 @@
 
       -<!-------------------------------------------------------------------------------------------------------->
       <header id="Main" class="Main wow fadeInDown" data-wow-duration="1s">
-          30 useLayoutEffect vs useEffect  React Hooks Tutorial  [Dave Gray]   
+          31 useImperativeHandle Explained with an Example  React Hooks Tutorial  [Dave Gray]   
       </header>
 
       <!-------------------------------------------------------------------------------------------------------->
@@ -278,7 +278,7 @@
                               Hot Links <span class="caret"></span>
                           </a>
                           <ul class="dropdown-menu">
-                              <li><a href="#30 useLayoutEffect vs useEffect  React Hooks TutorialSection" target="_self" class="30 useLayoutEffect vs useEffect  React Hooks TutorialLink"> Lesson 30 useLayoutEffect vs useEffect  React Hooks Tutorial </a></li>
+                              <li><a href="#31 useImperativeHandle Explained with an Example  React Hooks TutorialSection" target="_self" class="31 useImperativeHandle Explained with an Example  React Hooks TutorialLink"> Lesson 31 useImperativeHandle Explained with an Example  React Hooks Tutorial </a></li>
 
                               <li role="separator" class="divider"></li>
 
@@ -328,7 +328,7 @@
       <!-- The following Tag can be as <main> Tag, but the Editor is old for HTML5-->
       <main class="Welcome container text-center center-block wow bounceInDown" data-wow-duration="2s">
           <span> Welcome to  ReactJS  full  Course  [Dave Gray]   | </span> <br>
-          30 useLayoutEffect vs useEffect  React Hooks Tutorial
+          31 useImperativeHandle Explained with an Example  React Hooks Tutorial
       </main>
       <!-- ---------------------------------------------------------------------------------------------------- -->
       <!-- Options Tool box -->
@@ -402,8 +402,8 @@
       <!-- About Section  -->
       <section class="about text-center wow bounceInLeft" data-wow-duration="2s" id="about">
           <div class="container">
-            <h2 class="h1" class="hidden-xs"> About Section =>  ReactJS Course  using the {useLayoutEffect} instead of using {useEffect} hook  <span><stron> main concept , differnces and applied example    </strong> </span> </h2>
-            <h3 class="visible-xs"> About Section => This lesson  about <strong>     using the {useLayoutEffect} instead of using {useEffect} hook  concept , differnces and applied example    </strong> </span> </h3>
+            <h2 class="h1" class="hidden-xs"> About Section =>  ReactJS Course  using the {useImperaciveHandle}  explained by practical app    <span><stron> main concept and  applied example    </strong> </span> </h2>
+            <h3 class="visible-xs"> About Section => This lesson  about <strong>   using the {useImperaciveHandle} hook concept and applied example    </strong> </span> </h3>
           </div>
       </section>
       <!-- ---------------------------------------- -->
@@ -1282,20 +1282,20 @@
       <div class="Post" id=post>
           <Section id="MainC" class="MainC">
               <header>
-                30 useLayoutEffect vs useEffect  React Hooks Tutorial   : <br>
+                31 useImperativeHandle Explained with an Example  React Hooks Tutorial   : <br>
               </header>
 
               <article>
                   <p> &gt; Main Subjects in this lesson contain the  following : </p>
   
                   <ol type="A">
-                      <li> Main points of this lesson , using {useLayoutEffect} hook instead of using {useEffect} hook   : <br>
+                      <li> Main points of this lesson , using {useImperaciveHandle} hook   : <br>
                           <ol>
-                            <li> A] main concept {useLayoutEffect} React Hook   </li>
+                            <li> A] main concept and when  to use  {useImperativeHandle} React Hook   </li>
                             
-                            <li> B] main differences between {useLayoutEffect} & {useEffect} React  Hook  [concept  ,  properteis , syntax]       </li>
+                            <li> B] main syntax of {useImperativeHandle} hook       </li>
                             
-                            <li> C] Vip notes about {useLayoutEffect} and when to use  </li> 
+                            <li> C] Vip notes about {useImperativeHandle}  hook    </li> 
                               
                           </ol>
                       </li> <br> <br>
@@ -1307,35 +1307,61 @@
           <!------------------------------------------------------------------------------>
           <section class="JSDOMCon" id="JSDOMCon">
               <header>
-                  <h3> 30 useLayoutEffect vs useEffect  React Hooks Tutorial concept : </h3>
+                  <h3> 31 useImperativeHandle Explained with an Example  React Hooks Tutorial concept : </h3>
               </header>
               
-              <h1>  A]  main concept {useLayoutEffect} React Hook :    </h1> <br>
-                <p> the  {useLayoutEffect} react hook is not common to use as the {useEffect} , and limited to used in  certain purpose  of synchronous functionality </p>  
-                <p> the  {useLayoutEffect} react hook  is indentically the same of the of the {useEffect} even  in the syntax  and  functinality , but has some  sthe  differnces in it's  properties 
-                </p>  
-                
+              <h1>  A] main concept and when  to use  {useImperativeHandle} React Hook:    </h1> <br>
+                <p> the {useImperativeHandle} react hook is not common to use , and it is being used to break the rule of define fuuction in parent compenent  and call it fopm inside the child  component , and implement the oppisite </p>  
+                <p> the {useImperativeHandle}  used to  define the function inside the child comp , and use some other hooks to  able to call and use  inside the  parent com                    </p>  
+                <p> the main requriments of using this hook  is next  :   <br>      
+                   <ul>
+                      <li> inside [parent component] :  <br> 
+                        <ol> 
+                          <li>  use the  {useRef} to  define a referential variable to used and passed inside the {ref} attriubte of the called child component   </li>
+                          <li>  define a function that  including calling and handling the function -that is being defiend inside the child component- as extracted from the  (.current) method of te defined referencial variable     </li>
+                        </ol>
+                      </li>  <br>  
+                      
+                      <li> inside [child  component] :  <br> 
+                        <ol> 
+                          <li>   Imoporting both of the  [forwardRef , useImperativeHandle] to be used as next  :  <br>
+                            <ul> 
+                              <li> [forwardRef] :  used as wrapper  of the exported child    </li>
+                              <li> [useImperativeHandle]  : used as hook required to define the function that including all functions to be used and called inside the parent component  </li>
+                            </ul>
+                          </li>
+
+                          <li> Define a functional component including (2) kinds of parameters (props , ref ) , by next usings   :
+                            <ol> 
+                              <li> [props]  : public props       </li>  
+                              <li> [ref]  : custom  prop  to be assinged  by calling the child  component insdie the  parent component     </li>  
+                            </ol>  
+                          
+                          </li>
+
+                        </ol>
+                      </li> 
+                   </ul>  
+                </p>
                 <br>   <hr> <br>
                 <!-- ------------------------------------------------------------- -->
                 
-              <h1> B]  main differences between {useLayoutEffect} & {useEffect} React  Hook  [concept  ,  properties , syntax]  :  </h1> <br>
-                  <p>   both have the same syntax , but differ in the next one point : <br>    
-                    <ul>
-                      <li> Asynchrounous & Synchrounous mechanism  :   <br> 
-                          <p>  the {useEffect}    =>  is built as Asynchronous callback function , which means that when is being activated  => it will wait until the browser is updating the [Dom]            </p>  
-                          <p>  the {useLayoutEffect}    =>  is built as Synchronous callback function , which means that when is being activated => it will NOT wait until the browser is updating the [Dom]  , and inner codes will be implemented directly              </p>  
-                      </li> 
-                      <br> <hr> <br> 
-                      <!-- ----------------------------------------------- -->
-                       
-                    </ul> 
+              <h1> B]  main syntax of {useImperativeHandle} hook  :  </h1> <br>
+                  <p>  the syntax , as following   : <br>    
+                      <code>  
+                         <span  class="one"> </span>  useImperativeHandle( ref , ( () => {
+                          <span  class="two"> </span>  funcName1: () => //codes   ,  <br> 
+                          <span  class="two"> </span>  funcName2: () => //codes   ,   <br> 
+                          <span  class="two"> </span>  funcName3: () => //codes     <br> 
+                        <span  class="one"> </span> })  )   <br>   
+                      </code> 
                   </p>             
                 </p> <br>     
               <!-- ------------------------------------------------------------- -->
             
-              <h1> C]   Vip notes about {useLayoutEffect} and when to use    :   </h1>              
+              <h1> C]   Vip notes about {useImperativeHandle} and when to use    :   </h1>              
                 <ul>
-                    <li> We will have to use  the  {useLayoutEffect} when it is matter to execute it's inner codes inside it before the  browser is updating dom - which will be visible to the user   -        </li>  
+                    <li>  {useImperativeHandle} is not being commonly used  , except in  certain limited  cases of calling poping ups from children components  and display inside the main Component  </li>  
                 </ul>
               <!--  --------------------------------------------------------  -->
 
@@ -1476,7 +1502,7 @@
 
           <section class="JSDOMImp" id="JSDOMImp">
               <header>
-                  <h3> [30 useLayoutEffect vs useEffect  React Hooks Tutorial] Importance & Benefits : </h3>
+                  <h3> [31 useImperativeHandle Explained with an Example  React Hooks Tutorial] Importance & Benefits : </h3>
               </header>
               <ul>
 
@@ -1487,7 +1513,7 @@
 
           <section class="JSDOMSyntx" id="JSDOMSyntx">
               <header>
-                  <h3> [30 useLayoutEffect vs useEffect  React Hooks Tutorial] Syntax & Methods: </h3>
+                  <h3> [31 useImperativeHandle Explained with an Example  React Hooks Tutorial] Syntax & Methods: </h3>
               </header>
 
               <p> =&gt; Scenario Procedures : </p>
@@ -1498,7 +1524,7 @@
           <!------------------------------------------------------------------------------------------------------>
           <section class="JSDOMPract container" id="JSDOMPract">
               <header>
-                  <h3> CMD [30 useLayoutEffect vs useEffect  React Hooks Tutorial] => {this lesson can be accessed through the github repo [webpages] } </h3>
+                  <h3> CMD [31 useImperativeHandle Explained with an Example  React Hooks Tutorial] => {this lesson can be accessed through the github repo [webpages] } </h3>
               </header>
 
 
@@ -1563,7 +1589,7 @@
       </section>
 
       <script>
-          alert("Welcome to 30 useLayoutEffect vs useEffect  React Hooks Tutorial");
+          alert("Welcome to 31 useImperativeHandle Explained with an Example  React Hooks Tutorial");
       </script>
 
       <!-- Resources files -->
